@@ -6,9 +6,27 @@
       "url": "https://alleninstitute.org/"
     },
     {
+      "organizationId": "als-therapy-alliance",
+      "name": "ALS Therapy Alliance",
+      "url": "https://alstherapyalliance.org/",
+      "shortName": "ATA"
+    },
+    {
+      "organizationId": "alzheimers-disease-neuroimaging-initiative",
+      "name": "Alzheimer's Disease Neuroimaging Initiative",
+      "url": "http://adni.loni.usc.edu/",
+      "shortName": "ADNI"
+    },
+    {
       "organizationId": "apple-health",
       "name": "Apple Health",
       "url": "https://www.hca.wa.gov/health-care-services-supports/apple-health-medicaid-coverage"
+    },
+    {
+      "organizationId": "apollo-network",
+      "name": "Applied Proteogenomics Organizational Learning and Outcomes network",
+      "url": "https://proteomics.cancer.gov/programs/apollo-network",
+      "shortName": "APOLLO"
     },
     {
       "organizationId": "arthritis-internet-registry",
@@ -24,6 +42,24 @@
       "organizationId": "autodesk",
       "name": "Autodesk",
       "url": "https://www.autodesk.com/"
+    },
+    {
+      "organizationId": "bc-cancer-research-centre",
+      "name": "BC Cancer Research Centre",
+      "url": "https://www.bccrc.ca/",
+      "shortName": "BCCRC"
+    },
+    {
+      "organizationId": "bellvitge-institute-for-biomedical-research",
+      "name": "Bellvitge Institute for Biomedical Research",
+      "url": "https://www.ub.edu/web/ub/en/recerca_innovacio/recerca_a_la_UB/instituts/institutsparticipats/idibell.html",
+      "shortName": "IDIBELL"
+    },
+    {
+      "organizationId": "breast-cancer-surveillance-consortium",
+      "name": "Breast Cancer Surveillance Consortium",
+      "url": "https://www.bcsc-research.org/",
+      "shortName": "BCSC"
     },
     {
       "organizationId": "brigham-and-womens-hospital",
@@ -56,6 +92,17 @@
       "shortName": "Caltech"
     },
     {
+      "organizationId": "cancer-imaging-archive",
+      "name": "Cancer Imaging Archive",
+      "url": "https://www.cancerimagingarchive.net/",
+      "shortName": "TCIA"
+    },
+    {
+      "organizationId": "cancer-research-uk",
+      "name": "Cancer Research UK",
+      "url": "https://www.cancerresearchuk.org/"
+    },
+    {
       "organizationId": "cancer-target-discovery-and-development",
       "name": "Cancer Target Discovery And Development",
       "url": "https://ocg.cancer.gov/programs/ctd2",
@@ -72,6 +119,18 @@
       "url": "https://crc.nd.edu/"
     },
     {
+      "organizationId": "cincinnati-childrens-hospital-medical-center",
+      "name": "Cincinnati Children's Hospital Medical Center",
+      "url": "https://www.cincinnatichildrens.org/",
+      "shortName": "CCHMC"
+    },
+    {
+      "organizationId": "clinical-proteomic-tumor-analysis-consortium",
+      "name": "Clinical Proteomic Tumor Analysis Consortium",
+      "url": "https://proteomics.cancer.gov/programs/cptac",
+      "shortName": "CPTAC"
+    },
+    {
       "organizationId": "columbia-university",
       "name": "Columbia University",
       "url": "https://www.columbia.edu/",
@@ -82,6 +141,12 @@
       "name": "Consejo Superior de Investigaciones Cientificas",
       "url": "https://www.csic.es/",
       "shortName": "CSIC"
+    },
+    {
+      "organizationId": "corevitas",
+      "name": "CorEvitas",
+      "url": "https://www.corevitas.com/",
+      "shortName": "Corrona"
     },
     {
       "organizationId": "corrona",
@@ -117,6 +182,11 @@
       "url": "https://www.durham.va.gov/"
     },
     {
+      "organizationId": "durham-va-medical-center",
+      "name": "Durham VA Medical Center",
+      "url": "https://www.durham.va.gov/"
+    },
+    {
       "organizationId": "early-signal-foundation",
       "name": "Early Signal Foundation",
       "url": "http://www.earlysignal.org",
@@ -126,6 +196,12 @@
       "organizationId": "eck-institute-for-global-health",
       "name": "Eck Institute for Global Health",
       "url": "https://globalhealth.nd.edu/"
+    },
+    {
+      "organizationId": "encyclopedia-of-dna-elements-data-coordinating-center",
+      "name": "Encyclopedia of DNA Elements Data Coordinating Center",
+      "url": "https://www.encodeproject.org/",
+      "shortName": "ENCODE"
     },
     {
       "organizationId": "eth-zurich",
@@ -175,6 +251,12 @@
       "shortName": "GA4GH"
     },
     {
+      "organizationId": "h-lee-moffitt-cancer-center-and-research-institute",
+      "name": "H. Lee Moffitt Cancer Center and Research Institute",
+      "url": "https://moffitt.org/",
+      "shortName": "Moffitt"
+    },
+    {
       "organizationId": "h3abionet",
       "name": "H3ABioNet",
       "url": "https://h3abionet.org/"
@@ -219,6 +301,12 @@
       "shortName": "MSSM"
     },
     {
+      "organizationId": "innovative-medicines-initiative",
+      "name": "Innovative Medicines Initiative",
+      "url": "http://www.imi.europa.eu/",
+      "shortName": "IMI"
+    },
+    {
       "organizationId": "institut-curie",
       "name": "Institut Curie",
       "url": "https://institut-curie.org/"
@@ -228,6 +316,18 @@
       "name": "Institute for Molecular Medicine Finland",
       "url": "https://www.fimm.fi/en/",
       "shortName": "FIMM"
+    },
+    {
+      "organizationId": "international-cancer-genome-consortium",
+      "name": "International Cancer Genome Consortium",
+      "url": "https://dcc.icgc.org/",
+      "shortName": "ICGC"
+    },
+    {
+      "organizationId": "international-genome-sample-resource",
+      "name": "International Genome Sample Resource",
+      "url": "https://www.internationalgenome.org/home",
+      "shortName": "IGSR"
     },
     {
       "organizationId": "kaiser-permanente-washington-health-research-institute",
@@ -242,10 +342,21 @@
       "shortName": "KCL"
     },
     {
+      "organizationId": "knoweng",
+      "name": "KnowEnG",
+      "url": "https://knoweng.org/"
+    },
+    {
       "organizationId": "lausanne-university-hospital",
       "name": "Lausanne University Hospital",
       "url": "https://www.lausanneuniversityhospital.com/home",
       "shortName": "CHUV"
+    },
+    {
+      "organizationId": "leukemia-and-lymphoma-society",
+      "name": "Leukemia and Lymphoma Society",
+      "url": "https://www.lls.org/",
+      "shortName": "LLS"
     },
     {
       "organizationId": "ligue-nationale-contre-le-cancer",
@@ -263,6 +374,17 @@
       "name": "Ludwig Maximilian University of Munich",
       "url": "https://www.en.uni-muenchen.de/index.html",
       "shortName": "LMU Munich"
+    },
+    {
+      "organizationId": "mahidol-oxford-tropical-medicine-research-unit",
+      "name": "Mahidol Oxford Tropical Medicine Research Unit",
+      "url": "https://www.tropmedres.ac/",
+      "shortName": "MORU"
+    },
+    {
+      "organizationId": "march-of-dimes",
+      "name": "March of Dimes",
+      "url": "https://www.marchofdimes.org/"
     },
     {
       "organizationId": "massachusetts-general-hospital",
@@ -286,6 +408,12 @@
       "organizationId": "md-anderson-cancer-center",
       "name": "MD Anderson Cancer Center",
       "url": "https://www.mdanderson.org/"
+    },
+    {
+      "organizationId": "medical-research-council",
+      "name": "Medical Research Council",
+      "url": "https://mrc.ukri.org/",
+      "shortName": "MRC"
     },
     {
       "organizationId": "memorial-sloan-kettering-cancer-center",
@@ -352,10 +480,22 @@
       "shortName": "NIH"
     },
     {
+      "organizationId": "neurological-clinical-research-institute",
+      "name": "Neurological Clinical Research Institute",
+      "url": "https://www.massgeneral.org/ncri",
+      "shortName": "NCRI"
+    },
+    {
       "organizationId": "new-york-university",
       "name": "New York University",
       "url": "https://www.nyu.edu/",
       "shortName": "NYC"
+    },
+    {
+      "organizationId": "northeast-als-consortium",
+      "name": "Northeast ALS Consortium",
+      "url": "https://www.neals.org/",
+      "shortName": "NEALS"
     },
     {
       "organizationId": "northwestern-university",
@@ -381,10 +521,15 @@
       "shortName": "OICR"
     },
     {
-      "organizationId": "oregon-health-science-university",
-      "name": "Oregon Health & Science University",
+      "organizationId": "oregon-health-and-science-university",
+      "name": "Oregon Health and Science University",
       "url": "https://www.ohsu.edu/",
       "shortName": "OHSU"
+    },
+    {
+      "organizationId": "oslo-university-hospital",
+      "name": "Oslo University Hospital",
+      "url": "https://oslo-universitetssykehus.no/oslo-university-hospital"
     },
     {
       "organizationId": "pacific-northwest-national-laboratory",
@@ -421,8 +566,8 @@
       "shortName": "Queen's"
     },
     {
-      "organizationId": "radboud-university-medical-center",
-      "name": "Radboud University Medical Center",
+      "organizationId": "radboud-university",
+      "name": "Radboud University",
       "url": "https://www.radboudumc.nl/en/research",
       "shortName": "Radboudumc"
     },
@@ -440,7 +585,14 @@
     {
       "organizationId": "rockefeller-university",
       "name": "Rockefeller University",
-      "url": "https://www.rockefeller.edu/"
+      "url": "https://www.rockefeller.edu/",
+      "shortName": "Rockefeller"
+    },
+    {
+      "organizationId": "rush-university-medical-center",
+      "name": "Rush University Medical Center",
+      "url": "https://www.rush.edu/",
+      "shortName": "RUSH"
     },
     {
       "organizationId": "rwth-aachen-university",
@@ -453,6 +605,11 @@
       "name": "Sage Bionetworks",
       "url": "https://sagebionetworks.org/",
       "shortName": "Sage"
+    },
+    {
+      "organizationId": "sanofi",
+      "name": "Sanofi",
+      "url": "https://www.sanofi.com/"
     },
     {
       "organizationId": "seattle-cancer-care-alliance",
@@ -470,6 +627,11 @@
       "name": "Stanford University",
       "url": "https://www.stanford.edu/",
       "shortName": "Stanford"
+    },
+    {
+      "organizationId": "texas-biomedical-research-institute",
+      "name": "Texas Biomedical Research Institute",
+      "url": "https://www.txbiomed.org/"
     },
     {
       "organizationId": "trinity-college-institute-of-neuroscience",
@@ -490,10 +652,27 @@
       "shortName": "FDA"
     },
     {
+      "organizationId": "unc-eshelman-school-of-pharmacy",
+      "name": "UNC Eshelman School of Pharmacy",
+      "url": "https://pharmacy.unc.edu/"
+    },
+    {
+      "organizationId": "university-of-alabama",
+      "name": "University of Alabama",
+      "url": "https://www.ua.edu/",
+      "shortName": "UA"
+    },
+    {
       "organizationId": "university-of-alabama-at-birmingham",
       "name": "University of Alabama at Birmingham",
       "url": "https://www.uab.edu/home/",
       "shortName": "UAB"
+    },
+    {
+      "organizationId": "university-of-arkansas-for-medical-sciences",
+      "name": "University of Arkansas for Medical Sciences",
+      "url": "https://www.uams.edu/",
+      "shortName": "UAMS"
     },
     {
       "organizationId": "university-of-california-san-diego",
@@ -514,10 +693,22 @@
       "shortName": "UCSC"
     },
     {
+      "organizationId": "university-of-cincinnati",
+      "name": "University of Cincinnati",
+      "url": "https://www.uc.edu/",
+      "shortName": "UC"
+    },
+    {
       "organizationId": "university-of-colorado-anschutz-medical-campus",
       "name": "University of Colorado Anschutz Medical Campus",
       "url": "https://www.cuanschutz.edu/",
       "shortName": "CU Anschutz"
+    },
+    {
+      "organizationId": "university-of-illinois-urbana-champaign",
+      "name": "University of Illinois Urbana-Champaign",
+      "url": "https://illinois.edu/",
+      "shortName": "UIUC"
     },
     {
       "organizationId": "university-of-kentucky",
@@ -561,13 +752,13 @@
       "shortName": "Notre Dame"
     },
     {
-      "organizationId": "university-of-rochester-medical-center",
-      "name": "University of Rochester Medical Center",
+      "organizationId": "university-of-rochester",
+      "name": "University of Rochester",
       "url": "https://www.urmedicine.org/"
     },
     {
-      "organizationId": "university-of-texas-southwestern-medical-center",
-      "name": "University of Texas Southwestern Medical Center",
+      "organizationId": "university-of-texas-southwestern",
+      "name": "University of Texas Southwestern",
       "url": "https://www.utsouthwestern.edu/",
       "shortName": "UTSW"
     },
@@ -625,7 +816,8 @@
     {
       "organizationId": "wellcome-sanger-institute",
       "name": "Wellcome Sanger Institute",
-      "url": "https://www.sanger.ac.uk/"
+      "url": "https://www.sanger.ac.uk/",
+      "shortName": "Sanger"
     }
   ]
 }
