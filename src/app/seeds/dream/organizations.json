@@ -554,8 +554,8 @@
       "shortName": "PCF"
     },
     {
-      "organizationId": "providence-health-services",
-      "name": "Providence Health & Services",
+      "organizationId": "providence-health-and-services",
+      "name": "Providence Health and Services",
       "url": "https://www.providence.org/en",
       "shortName": "Providence"
     },
@@ -646,8 +646,8 @@
       "shortName": "Tulane"
     },
     {
-      "organizationId": "us-food-drug-administration",
-      "name": "U.S. Food & Drug Administration",
+      "organizationId": "us-food-and-drug-administration",
+      "name": "U.S. Food and Drug Administration",
       "url": "https://www.fda.gov/home",
       "shortName": "FDA"
     },
