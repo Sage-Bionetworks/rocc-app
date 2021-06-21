@@ -10,6 +10,7 @@ import {
 import { Tag } from '@sage-bionetworks/rocc-client-angular';
 import tagList from '../../seeds/dream/tags.json';
 import orgList from '../../seeds/dream/organizations.json';
+
 @Component({
   selector: 'rocc-database-seed',
   templateUrl: './database-seed.component.html',
@@ -32,12 +33,13 @@ export class DatabaseSeedComponent implements OnInit {
       this.tagService.deleteAllTags(),
     ]);
 
-    // const tags: Tag[] = tagList.tags;
-    const tags = tagList.tags; // TODO: replace by above line when Tag.tagId is no longer optional
+    const tags: Tag[] = tagList.tags;
     const organizations = orgList.organizations;
 
     const addTags$ = forkJoin(
-      tags.map(tag => this.tagService.createTag(tag.tagId, {}))
+      tags.map(tag => this.tagService.createTag(tag.id, {
+        description: tag.description
+      }))
     );
 
     const addOrganizations$ = forkJoin(
@@ -54,8 +56,8 @@ export class DatabaseSeedComponent implements OnInit {
       .pipe(
         mergeMap(() => addTags$),
         tap(console.log),
-        mergeMap(() => addOrganizations$),
-        tap(console.log),
+        // mergeMap(() => addOrganizations$),
+        // tap(console.log),
       )
       .subscribe(res => {
         console.log('done');
