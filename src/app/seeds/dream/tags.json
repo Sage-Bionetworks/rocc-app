@@ -1,151 +1,200 @@
 {
   "tags": [
     {
-      "tagId": "drug"
+      "id": "drug",
+      "description": ""
     },
     {
-      "tagId": "toxicogenenetics"
+      "id": "toxicogenenetics",
+      "description": ""
     },
     {
-      "tagId": "whole-cell-parameter"
+      "id": "whole-cell-parameter",
+      "description": ""
     },
     {
-      "tagId": "cancer"
+      "id": "cancer",
+      "description": ""
     },
     {
-      "tagId": "breast-cancer"
+      "id": "breast-cancer",
+      "description": ""
     },
     {
-      "tagId": "network-inference"
+      "id": "network-inference",
+      "description": ""
     },
     {
-      "tagId": "signaling"
+      "id": "signaling",
+      "description": ""
     },
     {
-      "tagId": "arthritis"
+      "id": "arthritis",
+      "description": ""
     },
     {
-      "tagId": "rheumatoid-arthritis"
+      "id": "rheumatoid-arthritis",
+      "description": ""
     },
     {
-      "tagId": "mutation-calling"
+      "id": "mutation-calling",
+      "description": ""
     },
     {
-      "tagId": "aml"
+      "id": "aml",
+      "description": ""
     },
     {
-      "tagId": "targeted-cancer-therapy"
+      "id": "targeted-cancer-therapy",
+      "description": ""
     },
     {
-      "tagId": "alzheimers"
+      "id": "alzheimers",
+      "description": ""
     },
     {
-      "tagId": "olfaction"
+      "id": "olfaction",
+      "description": ""
     },
     {
-      "tagId": "prostate-cancer"
+      "id": "prostate-cancer",
+      "description": ""
     },
     {
-      "tagId": "als"
+      "id": "als",
+      "description": ""
     },
     {
-      "tagId": "drug-synergy"
+      "id": "drug-synergy",
+      "description": ""
     },
     {
-      "tagId": "somatic-mutation-calling"
+      "id": "somatic-mutation-calling",
+      "description": ""
     },
     {
-      "tagId": "tumor-heterogeneity"
+      "id": "tumor-heterogeneity",
+      "description": ""
     },
     {
-      "tagId": "viral"
+      "id": "viral",
+      "description": ""
     },
     {
-      "tagId": "respiratory-viral"
+      "id": "respiratory-viral",
+      "description": ""
     },
     {
-      "tagId": "module-identification"
+      "id": "module-identification",
+      "description": ""
     },
     {
-      "tagId": "transcription-factor"
+      "id": "transcription-factor",
+      "description": ""
     },
     {
-      "tagId": "proposals"
+      "id": "proposals",
+      "description": ""
     },
     {
-      "tagId": "human-health"
+      "id": "human-health",
+      "description": ""
     },
     {
-      "tagId": "mammography"
+      "id": "mammography",
+      "description": ""
     },
     {
-      "tagId": "myeloma"
+      "id": "myeloma",
+      "description": ""
     },
     {
-      "tagId": "workflow-execution"
+      "id": "workflow-execution",
+      "description": ""
     },
     {
-      "tagId": "parkinsons"
+      "id": "parkinsons",
+      "description": ""
     },
     {
-      "tagId": "proteogenomics"
+      "id": "proteogenomics",
+      "description": ""
     },
     {
-      "tagId": "multi-targeting-drug"
+      "id": "multi-targeting-drug",
+      "description": ""
     },
     {
-      "tagId": "transcriptomics"
+      "id": "transcriptomics",
+      "description": ""
     },
     {
-      "tagId": "single-cell"
+      "id": "single-cell",
+      "description": ""
     },
     {
-      "tagId": "drug-kinase-binding"
+      "id": "drug-kinase-binding",
+      "description": ""
     },
     {
-      "tagId": "malaria"
+      "id": "malaria",
+      "description": ""
     },
     {
-      "tagId": "preterm-birth"
+      "id": "preterm-birth",
+      "description": ""
     },
     {
-      "tagId": "ehr"
+      "id": "ehr",
+      "description": ""
     },
     {
-      "tagId": "nlp"
+      "id": "nlp",
+      "description": ""
     },
     {
-      "tagId": "crispr"
+      "id": "crispr",
+      "description": ""
     },
     {
-      "tagId": "cell-lineage"
+      "id": "cell-lineage",
+      "description": ""
     },
     {
-      "tagId": "tumor-deconvolution"
+      "id": "tumor-deconvolution",
+      "description": ""
     },
     {
-      "tagId": "panacea"
+      "id": "panacea",
+      "description": ""
     },
     {
-      "tagId": "metadata"
+      "id": "metadata",
+      "description": ""
     },
     {
-      "tagId": "covid"
+      "id": "covid",
+      "description": ""
     },
     {
-      "tagId": "pd1"
+      "id": "pd1",
+      "description": ""
     },
     {
-      "tagId": "network-topology"
+      "id": "network-topology",
+      "description": ""
     },
     {
-      "tagId": "parameter-inference"
+      "id": "parameter-inference",
+      "description": ""
     },
     {
-      "tagId": "breast"
+      "id": "breast",
+      "description": ""
     },
     {
-      "tagId": "drug-sensitivity"
+      "id": "drug-sensitivity",
+      "description": ""
     }
   ]
 }
