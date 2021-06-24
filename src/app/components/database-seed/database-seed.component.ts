@@ -24,7 +24,7 @@ export class DatabaseSeedComponent implements OnInit {
     private challengeService: ChallengeService,
     private organizationService: OrganizationService,
     private personService: PersonService,
-    private tagService: TagService,
+    private tagService: TagService
   ) {}
 
   ngOnInit(): void {
@@ -41,8 +41,8 @@ export class DatabaseSeedComponent implements OnInit {
 
     const addTags$ = forkJoin(
       tags.map(tag => this.tagService.createTag(tag.id, {
-        description: tag.description}
-      ))
+        description: tag.description
+      }))
     );
 
     const addOrganizations$ = forkJoin(
