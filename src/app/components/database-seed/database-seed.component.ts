@@ -105,7 +105,7 @@ export class DatabaseSeedComponent implements OnInit {
         mergeMap(() => addOrganizations$),
         tap(() => console.log('Seeding persons >>>>>>>>>>>>')),
         mergeMap(() => addOrganizers$),
-        tap(console.log),
+        // tap(console.log),
         mergeMap(allPersonRes => {  // iterate all person create responses each challenges
           return forkJoin(
             allPersonRes.map(
