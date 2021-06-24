@@ -1,7 +1,35 @@
 {
   "tags": [
     {
+      "id": "network-topology",
+      "description": ""
+    },
+    {
+      "id": "parameter-inference",
+      "description": ""
+    },
+    {
+      "id": "breast",
+      "description": ""
+    },
+    {
+      "id": "cancer",
+      "description": ""
+    },
+    {
+      "id": "als",
+      "description": ""
+    },
+    {
       "id": "drug",
+      "description": ""
+    },
+    {
+      "id": "drug-sensitivity",
+      "description": ""
+    },
+    {
+      "id": "drug-synergy",
       "description": ""
     },
     {
@@ -10,10 +38,6 @@
     },
     {
       "id": "whole-cell-parameter",
-      "description": ""
-    },
-    {
-      "id": "cancer",
       "description": ""
     },
     {
@@ -58,14 +82,6 @@
     },
     {
       "id": "prostate-cancer",
-      "description": ""
-    },
-    {
-      "id": "als",
-      "description": ""
-    },
-    {
-      "id": "drug-synergy",
       "description": ""
     },
     {
@@ -178,22 +194,6 @@
     },
     {
       "id": "pd1",
-      "description": ""
-    },
-    {
-      "id": "network-topology",
-      "description": ""
-    },
-    {
-      "id": "parameter-inference",
-      "description": ""
-    },
-    {
-      "id": "breast",
-      "description": ""
-    },
-    {
-      "id": "drug-sensitivity",
       "description": ""
     }
   ]
