@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { forkJoin, of } from 'rxjs';
-import { mergeMap, tap } from 'rxjs/operators';
+import { forkJoin, of, pipe } from 'rxjs';
+import { mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
 import {
   ChallengeService,
   GrantService,
@@ -10,11 +10,13 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import {
   Organization,
+  PersonCreateRequest,
   Tag
 } from '@sage-bionetworks/rocc-client-angular';
 import tagList from '../../seeds/dream/tags.json';
 import orgList from '../../seeds/dream/organizations.json';
 import challengeList from '../../seeds/dream/challenges.json';
+import { getCurrencySymbol } from '@angular/common';
 
 @Component({
   selector: 'rocc-database-seed',
@@ -41,25 +43,73 @@ export class DatabaseSeedComponent implements OnInit {
       this.tagService.deleteAllTags(),
     ]);
 
+    // Objects with pre-defined IDs
     const tags: Tag[] = tagList.tags;
     const organizations: Organization[] = orgList.organizations;
-    const challenges: any = challengeList.challenges;
+    // Objects
+    const rawChallenges: any = challengeList.challenges;
 
-    const addTags$ = forkJoin(
-      tags.map(tag => this.tagService.createTag(tag.id, {
-        description: tag.description
-      }))
+    const addTags$ = pipe(
+      tap(() => console.log('Creating tags')),
+      mergeMap(() => forkJoin(
+        tags.map(tag => this.tagService.createTag(tag.id, {
+          description: tag.description
+        }))
+      )),
+      tap(() => console.log('Tags created', tags))
     );
 
-    // const addOrganizations$ = forkJoin(
-    //   organizations.map(org => this.organizationService.createOrganization(
-    //     org.organizationId, {
-    //       name: org.name,
-    //       url: org.url,
-    //       shortName: org.shortName
-    //     }
-    //   ))
-    // );
+    const addOrganizations$ = pipe(
+      tap(() => console.log('Creating organizations')),
+      mergeMap(() => forkJoin(
+        organizations.map(org => this.organizationService.createOrganization(
+          org.id, {
+            name: org.name,
+            url: org.url,
+            shortName: org.shortName
+          }
+        ))
+      )),
+      tap(() => console.log('Organizations created', organizations))
+    );
+
+    const addChallenges$ = pipe(
+      tap(() => console.log('Creating challenges')),
+      mergeMap(() => forkJoin(
+        rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
+          tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
+          mergeMap(() => forkJoin(
+            rawchallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson(
+              {
+                firstName: rawOrganizer.firstName,
+                lastName: rawOrganizer.lastName,
+                organizationIds: rawOrganizer.organizationIds
+              }
+            ))
+          )),
+        )),
+          // tap(() => console.log("")),
+          // mergeMap(() => forkJoin(
+          //   rawchallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson(
+          //     {
+          //       firstName: rawOrganizer.firstName,
+          //       lastName: rawOrganizer.lastName,
+          //       organizationIds: rawOrganizer.organizationIds
+          //     }
+          //   ))
+          // )),
+        //   switchMap(() => of(null))
+        // ))
+      )),
+      tap(challenges => console.log('Challenge created', challenges))
+    );
+
+
+
+
+
+
+
 
     // const addOrganizers$ = forkJoin(
     //   challenges.map((dream: any) => {
@@ -102,31 +152,34 @@ export class DatabaseSeedComponent implements OnInit {
     //     }
     //   );
 
-    // console.log('Clean up database >>>>>>>>>>>>');
-    // removeDocuments$
-    //   .pipe(
-    //     tap(() => console.log('Seeding tags >>>>>>>>>>>>')),
-    //     mergeMap(() => addTags$),
-    //     tap(() => console.log('Seeding organization >>>>>>>>>>>>')),
-    //     mergeMap(() => addOrganizations$),
-    //     tap(() => console.log('Seeding persons >>>>>>>>>>>>')),
-    //     mergeMap(() => addOrganizers$),
-    //     // tap(console.log),
-    //     mergeMap(allPersonRes => {  // iterate all person create responses each challenges
-    //       return forkJoin(
-    //         allPersonRes.map(
-    //           (personIdObs: any) => {  // iterate each person create responses in one challenge
-    //             const inx = allPersonRes.indexOf(personIdObs);  // save inx of challenge
-    //             // save each personId from response to an array
-    //             const personIds: string[] = [];
-    //             personIdObs.map((personId: any) => personIds.push(personId.id));
-    //             console.log('Seeding challenge: ', challenges[inx].name, '>>>>>>>>>>>>');
-    //             return addChallenges$(inx, personIds);
-    //           })
-    //         );
-    //     })
-    //   ).subscribe(() => {
-    //     console.log('Done seeding of all challenges !!!');
-    //   }, err => console.log(err));
+    console.log('Removing DB documents');
+    removeDocuments$
+      .pipe(
+        addTags$,
+        addOrganizations$,
+        addChallenges$
+        // tap(() => console.log('Seeding tags')),
+        // mergeMap(() => addTags$),
+        // tap(() => console.log('Seeding organizations')),
+        // mergeMap(() => addOrganizations$),
+        // tap(() => console.log('Seeding persons >>>>>>>>>>>>')),
+        // mergeMap(() => addOrganizers$),
+        // // tap(console.log),
+        // mergeMap(allPersonRes => {  // iterate all person create responses each challenges
+        //   return forkJoin(
+        //     allPersonRes.map(
+        //       (personIdObs: any) => {  // iterate each person create responses in one challenge
+        //         const inx = allPersonRes.indexOf(personIdObs);  // save inx of challenge
+        //         // save each personId from response to an array
+        //         const personIds: string[] = [];
+        //         personIdObs.map((personId: any) => personIds.push(personId.id));
+        //         console.log('Seeding challenge: ', challenges[inx].name, '>>>>>>>>>>>>');
+        //         return addChallenges$(inx, personIds);
+        //       })
+        //     );
+        // })
+      ).subscribe(() => {
+        console.log('The seeding of the DB successfully completed');
+      }, err => console.log(err));
   }
 }
