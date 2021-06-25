@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  width: 60%;
+  height: 100vh;
+  left: 30%;
+}
+
+.mat-card {
+  position: relative;
+  margin: 20px 80px;
+}
+
+.tags-box {
+  display: inline-table;
+}
+
+.tags {
+  background-color: #8e92de;
+  color: #fff;
+  border-radius: 25px;
+  margin: 8px 8px 8px 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .intro {
+    flex-basis: 70%;
+  }
+
+  .dates {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

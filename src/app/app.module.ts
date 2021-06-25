@@ -11,6 +11,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
 import { environment } from '../environments/environment';
+import { PreviewCardComponent } from './components/preview-card/preview-card.component';
+import { MatCardModule} from '@angular/material/card'; 
+import {MatButtonModule} from '@angular/material/button' 
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -21,7 +24,8 @@ export function apiConfigFactory(): Configuration {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PreviewCardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ export function apiConfigFactory(): Configuration {
     NavbarModule,
     FooterModule,
     ApiModule.forRoot(apiConfigFactory),
-    DatabaseSeedModule
+    DatabaseSeedModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [
     { provide: BASE_PATH, useValue: environment.apiBasePath }
