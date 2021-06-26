@@ -12,6 +12,7 @@ import {
 import {
   ChallengeCreateResponse,
   ChallengeStatus,
+  Grant,
   Organization,
   PersonCreateRequest,
   Tag,
@@ -72,6 +73,7 @@ export class DatabaseSeedComponent implements OnInit {
     // Objects with IDs defined by the API service
     const rawChallenges = challengeList.challenges;
     const rawGrants = grantList.grants;
+    let grants: Grant[] = [];
 
 
 
@@ -111,7 +113,8 @@ export class DatabaseSeedComponent implements OnInit {
         )),
         concurreny
       )),
-      map(res => _merge(res, rawGrants)),
+      map(grantIds => <Grant[]>(_merge(grantIds, rawGrants))),
+      tap(grants_ => grants = grants_),
       tap(res => console.log('Grants created', res))
     );
 
