@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, defer, forkJoin, of, pipe, Observable } from 'rxjs';
 import { last, map, mapTo, mergeAll, mergeMap, switchMap, tap } from 'rxjs/operators';
-import { map as _map } from 'lodash';
+import { map as _map, merge as _merge } from 'lodash';
 import {
   ChallengeService,
   GrantService,
@@ -20,6 +20,8 @@ import {
 import tagList from '../../seeds/dream/tags.json';
 import orgList from '../../seeds/dream/organizations.json';
 import challengeList from '../../seeds/dream/challenges.json';
+import grantList from '../../seeds/dream/grants.json';
+
 import { getCurrencySymbol } from '@angular/common';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 
@@ -67,12 +69,13 @@ export class DatabaseSeedComponent implements OnInit {
     // Objects with pre-defined IDs
     const tags: Tag[] = tagList.tags;
     const organizations: Organization[] = orgList.organizations;
-    // Objects
+    // Objects with IDs defined by the API service
     const rawChallenges = challengeList.challenges;
+    const rawGrants = grantList.grants;
 
 
 
-    const addTags$ = pipe(
+    const createTags$ = pipe(
       tap(() => console.log('Creating tags')),
       mergeMap(() => forkJoinConcurrent(
         tags.map(tag => this.tagService.createTag(tag.id, {
@@ -83,7 +86,7 @@ export class DatabaseSeedComponent implements OnInit {
       tap(() => console.log('Tags created', tags))
     );
 
-    const addOrganizations$ = pipe(
+    const createOrganizations$ = pipe(
       tap(() => console.log('Creating organizations')),
       mergeMap(() => forkJoinConcurrent(
         organizations.map(org => this.organizationService.createOrganization(
@@ -98,13 +101,29 @@ export class DatabaseSeedComponent implements OnInit {
       tap(() => console.log('Organizations created', organizations))
     );
 
+    const createGrants$ = pipe(
+      tap(() => console.log('Creating grants')),
+      mergeMap(() => forkJoinConcurrent(
+        rawGrants.map(rawGrant => this.grantService.createGrant({
+            name: rawGrant.name,
+            description: rawGrant.description
+          }
+        )),
+        concurreny
+      )),
+      map(res => _merge(res, rawGrants)),
+      tap(res => console.log('Grants created', res))
+    );
+
+
     const createChallengeOrganizers = (rawChallenge: any): Observable<string[]> => {
       return forkJoinConcurrent(
           rawChallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
               firstName: rawOrganizer.firstName,
               lastName: rawOrganizer.lastName,
               organizationIds: rawOrganizer.organizationIds
-          })),
+            }
+          )),
           1
         ).pipe(
           map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
@@ -112,7 +131,6 @@ export class DatabaseSeedComponent implements OnInit {
     };
 
     const createChallenge = (rawChallenge: any, organizerIds: string[]): Observable<ChallengeCreateResponse> => {
-      console.log("raw challenge", rawChallenge);
       return this.challengeService.createChallenge({
         name: rawChallenge.name,
         description: rawChallenge.description,
@@ -154,9 +172,10 @@ export class DatabaseSeedComponent implements OnInit {
     console.log('Removing DB documents');
     removeDocuments$
       .pipe(
-        addTags$,
-        addOrganizations$,
-        addChallenges$
+        // createTags$,
+        // createOrganizations$,
+        createGrants$,
+        // addChallenges$
       ).subscribe(() => {
         console.log('The seeding of the DB successfully completed');
       }, err => console.log(err));
@@ -249,13 +268,13 @@ export class DatabaseSeedComponent implements OnInit {
     // console.log('Removing DB documents');
     // removeDocuments$
     //   .pipe(
-    //     addTags$,
-    //     // addOrganizations$,
+    //     createTags$,
+    //     // createOrganizations$,
     //     // addChallenges$
     //     // tap(() => console.log('Seeding tags')),
-    //     // mergeMap(() => addTags$),
+    //     // mergeMap(() => createTags$),
     //     // tap(() => console.log('Seeding organizations')),
-    //     // mergeMap(() => addOrganizations$),
+    //     // mergeMap(() => createOrganizations$),
     //     // tap(() => console.log('Seeding persons >>>>>>>>>>>>')),
     //     // mergeMap(() => addOrganizers$),
     //     // // tap(console.log),
