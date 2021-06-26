@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, defer, forkJoin, of, pipe, Observable } from 'rxjs';
-import { last, mapTo, mergeAll, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { last, map, mapTo, mergeAll, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { map as _map } from 'lodash';
 import {
   ChallengeService,
   GrantService,
@@ -79,11 +80,31 @@ export class DatabaseSeedComponent implements OnInit {
       tap(() => console.log('Organizations created', organizations))
     );
 
+    const addChallenges$ = pipe(
+      tap(() => console.log('Creating challenges')),
+      mergeMap(() => forkJoin(
+        rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
+          tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
+          mergeMap(() => forkJoinConcurrent(
+            rawchallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
+                firstName: rawOrganizer.firstName,
+                lastName: rawOrganizer.lastName,
+                organizationIds: rawOrganizer.organizationIds
+            })),
+            1
+          )),
+          map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
+        )),
+      )),
+      tap(challenges => console.log('Challenge created', challenges))
+    );
+
     console.log('Removing DB documents');
     removeDocuments$
       .pipe(
         addTags$,
-        addOrganizations$
+        addOrganizations$,
+        addChallenges$
       ).subscribe(() => {
         console.log('The seeding of the DB successfully completed');
       }, err => console.log(err));
