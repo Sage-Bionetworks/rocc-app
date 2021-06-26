@@ -85,6 +85,7 @@ export class DatabaseSeedComponent implements OnInit {
         })),
         concurreny
       )),
+      mapTo(tags),
       tap(() => console.log('Tags created', tags))
     );
 
@@ -100,6 +101,7 @@ export class DatabaseSeedComponent implements OnInit {
         )),
         concurreny
       )),
+      mapTo(organizations),
       tap(() => console.log('Organizations created', organizations))
     );
 
@@ -175,6 +177,10 @@ export class DatabaseSeedComponent implements OnInit {
     console.log('Removing DB documents');
     removeDocuments$
       .pipe(
+        // mergeMap(() => forkJoin([
+        //   createTags$,
+        // ])),
+        // tap(res => console.log('Checkpoint', res)),
         // createTags$,
         // createOrganizations$,
         createGrants$,
