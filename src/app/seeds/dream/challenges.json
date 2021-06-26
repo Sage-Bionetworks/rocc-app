@@ -8,7 +8,7 @@
       "endDate": "0012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2821735",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "network-topology",
         "parameter-inference"
       ],
@@ -30,7 +30,7 @@
       "endDate": "0012-10-15",
       "url": "https://www.synapse.org/#!Synapse:syn2813426",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "breast",
         "cancer"
       ],
@@ -58,7 +58,7 @@
       "endDate": "0012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2826267",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "als"
       ],
       "organizerIds": [
@@ -82,7 +82,7 @@
       "endDate": "0012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2785778",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "drug-sensitivity",
         "drug-synergy"
@@ -110,7 +110,7 @@
       "endDate": "0013-09-15",
       "url": "https://www.synapse.org/#!Synapse:syn1761567",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "toxicogenenetics"
       ],
@@ -132,7 +132,7 @@
       "endDate": "0013-09-23",
       "url": "https://www.synapse.org/#!Synapse:syn1876068",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "whole-cell-parameter"
       ],
       "organizerIds": [
@@ -288,7 +288,7 @@
       "endDate": "0013-09-16",
       "url": "https://www.synapse.org/#!Synapse:syn1720047",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "breast-cancer",
         "network-inference",
@@ -398,7 +398,7 @@
       "endDate": "0014-06-04",
       "url": "https://www.synapse.org/#!Synapse:syn1734172",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "arthritis",
         "rheumatoid-arthritis"
       ],
@@ -526,7 +526,7 @@
       "endDate": "0016-04-22",
       "url": "https://www.synapse.org/#!Synapse:syn312572",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "mutation-calling"
       ],
@@ -600,7 +600,7 @@
       "endDate": "0014-09-15",
       "url": "https://www.synapse.org/#!Synapse:syn2455683",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "aml"
       ],
@@ -763,7 +763,7 @@
       "endDate": "0014-09-29",
       "url": "https://www.synapse.org/#!Synapse:syn2384331",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "targeted-cancer-therapy"
       ],
@@ -902,7 +902,7 @@
       "endDate": "0014-10-17",
       "url": "https://www.synapse.org/#!Synapse:syn2290704",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "alzheimers"
       ],
       "organizerIds": [
@@ -1045,7 +1045,7 @@
       "endDate": "0015-05-01",
       "url": "https://www.synapse.org/#!Synapse:syn2811262",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "olfaction"
       ],
       "organizerIds": [
@@ -1144,7 +1144,7 @@
       "endDate": "0015-07-27",
       "url": "https://www.synapse.org/#!Synapse:syn2813558",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "prostate-cancer"
       ],
@@ -1169,7 +1169,7 @@
       "endDate": "0015-10-04",
       "url": "https://www.synapse.org/#!Synapse:syn2873386",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "als"
       ],
       "organizerIds": [
@@ -1256,7 +1256,7 @@
       "endDate": "0016-03-14",
       "url": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "drug-synergy"
       ],
@@ -1325,7 +1325,7 @@
       "endDate": "0016-04-10",
       "url": "https://www.synapse.org/#!Synapse:syn4588939",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "somatic-mutation-calling"
       ],
@@ -1383,7 +1383,7 @@
       "endDate": "0016-06-30",
       "url": "https://www.synapse.org/#!Synapse:syn2813581",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "somatic-mutation-calling",
         "tumor-heterogeneity"
@@ -1472,7 +1472,7 @@
       "endDate": "0016-09-28",
       "url": "https://www.synapse.org/#!Synapse:syn5647810",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "viral",
         "respiratory-viral"
       ],
@@ -1494,7 +1494,7 @@
       "endDate": "0016-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn6156761",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "module-identification"
       ],
       "organizerIds": [
@@ -1595,7 +1595,7 @@
       "endDate": "0017-01-11",
       "url": "https://www.synapse.org/#!Synapse:syn6131484",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "transcription-factor"
       ],
       "organizerIds": [
@@ -1680,7 +1680,7 @@
       "endDate": "0017-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn5659209",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "proposals",
         "human-health"
       ],
@@ -1741,7 +1741,7 @@
       "endDate": "0017-05-02",
       "url": "https://www.synapse.org/#!Synapse:syn2813589",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "somatic-mutation-calling"
       ],
@@ -1822,7 +1822,7 @@
       "endDate": "0017-05-16",
       "url": "https://www.synapse.org/#!Synapse:syn4224222",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "breast-cancer",
         "mammography"
@@ -1846,7 +1846,7 @@
       "endDate": "0017-11-08",
       "url": "https://www.synapse.org/#!Synapse:syn6187098",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "myeloma"
       ],
@@ -1872,7 +1872,7 @@
       "endDate": "0017-12-31",
       "url": "https://www.synapse.org/#!Synapse:syn8507133",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "workflow-execution"
       ],
       "organizerIds": [
@@ -1946,7 +1946,7 @@
       "endDate": "0017-11-10",
       "url": "https://www.synapse.org/#!Synapse:syn8717496",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "parkinsons"
       ],
       "organizerIds": [
@@ -2065,7 +2065,7 @@
       "endDate": "0017-11-20",
       "url": "https://www.synapse.org/#!Synapse:syn8228304",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "proteogenomics"
       ],
       "organizerIds": [
@@ -2179,7 +2179,7 @@
       "endDate": "0018-02-26",
       "url": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "multi-targeting-drug"
       ],
@@ -2260,7 +2260,7 @@
       "endDate": "0018-11-21",
       "url": "https://www.synapse.org/#!Synapse:syn15665609",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "transcriptomics",
         "single-cell"
       ],
@@ -2340,7 +2340,7 @@
       "endDate": "0019-04-18",
       "url": "https://www.synapse.org/#!Synapse:syn15667962",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "drug-kinase-binding"
       ],
@@ -2432,7 +2432,7 @@
       "endDate": "0019-08-15",
       "url": "https://www.synapse.org/#!Synapse:syn16924919",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "malaria"
       ],
       "organizerIds": [
@@ -2540,7 +2540,7 @@
       "endDate": "0019-12-05",
       "url": "https://www.synapse.org/#!Synapse:syn18380862",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "preterm-birth"
       ],
       "organizerIds": [
@@ -2603,7 +2603,6 @@
         }
       ],
       "dataProviderIds": [
-        "eunice-kennedy-shriver-national-institute-of-child-health-and-human-development",
         "wayne-state-university",
         "march-of-dimes"
       ],
@@ -2619,7 +2618,7 @@
       "endDate": "0019-11-15",
       "url": "https://www.synapse.org/#!Synapse:syn20366914",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "single-cell",
         "signaling",
         "cancer",
@@ -2702,7 +2701,7 @@
       "endDate": "0020-01-23",
       "url": "https://www.synapse.org/#!Synapse:syn18405991",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "ehr",
         "nlp"
       ],
@@ -2773,7 +2772,7 @@
       "endDate": "0020-02-06",
       "url": "https://www.synapse.org/#!Synapse:syn20692755",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "crispr",
         "cell-lineage"
       ],
@@ -2901,7 +2900,7 @@
       "endDate": "0020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn15589870",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "tumor-deconvolution"
       ],
@@ -2927,7 +2926,7 @@
       "endDate": "0020-02-13",
       "url": "https://www.synapse.org/#!Synapse:syn20968331",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "panacea",
         "drug",
         "cancer"
@@ -3045,7 +3044,7 @@
       "endDate": "0020-04-28",
       "url": "https://www.synapse.org/#!Synapse:syn20940518",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "aml"
       ],
@@ -3176,7 +3175,7 @@
       "endDate": "0020-06-02",
       "url": "https://www.synapse.org/#!Synapse:syn18065891",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "metadata"
       ],
       "organizerIds": [
@@ -3266,7 +3265,6 @@
         }
       ],
       "dataProviderIds": [
-        "applied-proteogenomics-organizational-learning-and-outcomes-network",
         "cancer-imaging-archive"
       ],
       "grantIds": [
@@ -3281,7 +3279,7 @@
       "endDate": "0020-05-21",
       "url": "https://www.synapse.org/#!Synapse:syn20545111",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "arthritis",
         "rheumatoid-arthritis"
       ],
@@ -3373,7 +3371,7 @@
       "endDate": "0020-05-13",
       "url": "https://www.synapse.org/#!Synapse:syn20825169",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "parkinsons"
       ],
       "organizerIds": [
@@ -3475,7 +3473,7 @@
       "endDate": "0020-07-27",
       "url": "https://www.synapse.org/#!Synapse:syn21763589",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "panacea",
         "drug",
         "cancer"
@@ -3581,7 +3579,7 @@
       "startDate": "0020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "open",
-      "tagsIds": [
+      "tagIds": [
         "covid",
         "ehr"
       ],
@@ -3667,7 +3665,7 @@
       "endDate": "0021-02-25",
       "url": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "drug",
         "pd1"
@@ -3806,7 +3804,7 @@
       "summary": "A critical bottleneck in translational and clinical research is access to large volumes of high-quality clinical data. While structured data exist in medical EHR systems, a large portion of patient information including patient status, treatments, and outcomes is contained in unstructured text fields. Research in Natural Language Processing (NLP) aims to unlock this hidden and often inaccessible information. However, numerous challenges exist in developing and evaluating NLP methods, much of it centered on having “gold-standard” metrics for evaluation, and access to data that may contain personal health information (PHI).\n \n This DREAM Challenge will focus on the development and evaluation of of NLP algorithms that can improve clinical trial matching and recruitment.",
       "url": "https://www.synapse.org/#!Synapse:syn18361217",
       "status": "upcoming",
-      "tagsIds": [
+      "tagIds": [
         "ehr",
         "nlp"
       ],

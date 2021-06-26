@@ -10,6 +10,8 @@ import {
   TagService
 } from '@sage-bionetworks/rocc-client-angular';
 import {
+  ChallengeCreateResponse,
+  ChallengeStatus,
   Organization,
   PersonCreateRequest,
   Tag,
@@ -48,11 +50,27 @@ export class DatabaseSeedComponent implements OnInit {
 
     const concurreny = 5;
 
+    // interface RawChallenge {
+    //   name: string,
+    //   description: string,
+    //   summary?: string,
+    //   startDate?: string,
+    //   endDate?: string,
+    //   url: string,
+    //   status: ChallengeStatus,
+    //   tagIds: Array<string>,
+    //   organizerIds: Array<string>,
+    //   dataProviderIds: Array<string>,
+    //   grantIds: Array<string>
+    // }
+
     // Objects with pre-defined IDs
     const tags: Tag[] = tagList.tags;
     const organizations: Organization[] = orgList.organizations;
     // Objects
-    const rawChallenges: any = challengeList.challenges;
+    const rawChallenges = challengeList.challenges;
+
+
 
     const addTags$ = pipe(
       tap(() => console.log('Creating tags')),
@@ -80,20 +98,54 @@ export class DatabaseSeedComponent implements OnInit {
       tap(() => console.log('Organizations created', organizations))
     );
 
+    const createChallengeOrganizers = (rawChallenge: any): Observable<string[]> => {
+      return forkJoinConcurrent(
+          rawChallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
+              firstName: rawOrganizer.firstName,
+              lastName: rawOrganizer.lastName,
+              organizationIds: rawOrganizer.organizationIds
+          })),
+          1
+        ).pipe(
+          map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
+        );
+    };
+
+    const createChallenge = (rawChallenge: any, organizerIds: string[]): Observable<ChallengeCreateResponse> => {
+      console.log("raw challenge", rawChallenge);
+      return this.challengeService.createChallenge({
+        name: rawChallenge.name,
+        description: rawChallenge.description,
+        url: rawChallenge.url,
+        status: rawChallenge.status,
+        tagIds: rawChallenge.tagIds,
+        organizerIds: organizerIds,
+        dataProviderIds: rawChallenge.dataProviderIds,
+        grantIds: []
+      });
+    };
+
+    // const createChallengeOrganizers$ = pipe(
+    //   mergeMap((rowChallenge: any) => forkJoinConcurrent(
+    //     rowChallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
+    //         firstName: rawOrganizer.firstName,
+    //         lastName: rawOrganizer.lastName,
+    //         organizationIds: rawOrganizer.organizationIds
+    //     })),
+    //     1
+    //   )),
+    //   map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
+    // )
+
     const addChallenges$ = pipe(
       tap(() => console.log('Creating challenges')),
       mergeMap(() => forkJoin(
         rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
           tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
-          mergeMap(() => forkJoinConcurrent(
-            rawchallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
-                firstName: rawOrganizer.firstName,
-                lastName: rawOrganizer.lastName,
-                organizationIds: rawOrganizer.organizationIds
-            })),
-            1
-          )),
-          map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
+          mergeMap(() => forkJoin({
+            organizerIds: createChallengeOrganizers(rawchallenge)
+          })),
+          mergeMap(res => createChallenge(rawchallenge, res.organizerIds))
         )),
       )),
       tap(challenges => console.log('Challenge created', challenges))
