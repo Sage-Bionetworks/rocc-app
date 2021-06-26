@@ -2307,7 +2307,7 @@
         }
       ],
       "dataProvider": [
-        "eunice-kennedy-shriver-national-institute-of-child-health-and-human-development",
+        "org-b",
         "wayne-state-university",
         "march-of-dimes"
       ],
@@ -2882,7 +2882,7 @@
         }
       ],
       "dataProvider": [
-        "applied-proteogenomics-organizational-learning-and-outcomes-network",
+        "org123",
         "cancer-imaging-archive"
       ],
       "grantIds": [
