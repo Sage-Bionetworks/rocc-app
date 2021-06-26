@@ -64,19 +64,26 @@ export class DatabaseSeedComponent implements OnInit {
       tap(() => console.log('Tags created', tags))
     );
 
-    // const addTags$ = pipe(
-    //   tap(() => console.log('Creating tags')),
-    //   mergeMap(() => forkJoin(
-    //     tags.map(tag => pushTag(tag))
-    //   )),
-    //   tap(() => console.log('Tags created', tags))
-    // );
-
+    const addOrganizations$ = pipe(
+      tap(() => console.log('Creating organizations')),
+      mergeMap(() => forkJoinConcurrent(
+        organizations.map(org => this.organizationService.createOrganization(
+          org.id, {
+            name: org.name,
+            url: org.url,
+            shortName: org.shortName
+          }
+        )),
+        concurreny
+      )),
+      tap(() => console.log('Organizations created', organizations))
+    );
 
     console.log('Removing DB documents');
     removeDocuments$
       .pipe(
         addTags$,
+        addOrganizations$
       ).subscribe(() => {
         console.log('The seeding of the DB successfully completed');
       }, err => console.log(err));
@@ -85,19 +92,7 @@ export class DatabaseSeedComponent implements OnInit {
 
 
 
-    // const addOrganizations$ = pipe(
-    //   tap(() => console.log('Creating organizations')),
-    //   mergeMap(() => forkJoin(
-    //     organizations.map(org => this.organizationService.createOrganization(
-    //       org.id, {
-    //         name: org.name,
-    //         url: org.url,
-    //         shortName: org.shortName
-    //       }
-    //     ))
-    //   )),
-    //   tap(() => console.log('Organizations created', organizations))
-    // );
+
 
     // const addChallenges$ = pipe(
     //   tap(() => console.log('Creating challenges')),
