@@ -51,7 +51,7 @@ export class DatabaseSeedComponent implements OnInit {
       this.tagService.deleteAllTags(),
     ]);
 
-    const concurreny = 5;
+    const concurrency = 5;
 
     // interface RawChallenge {
     //   name: string,
@@ -75,50 +75,51 @@ export class DatabaseSeedComponent implements OnInit {
     const rawGrants = grantList.grants;
     let grants: Grant[] = [];
 
-
-
-    const createTags$ = pipe(
-      tap(() => console.log('Creating tags')),
-      mergeMap(() => forkJoinConcurrent(
-        tags.map(tag => this.tagService.createTag(tag.id, {
-          description: tag.description
-        })),
-        concurreny
-      )),
-      mapTo(tags),
-      tap(() => console.log('Tags created', tags))
-    );
-
-    const createOrganizations$ = pipe(
-      tap(() => console.log('Creating organizations')),
-      mergeMap(() => forkJoinConcurrent(
-        organizations.map(org => this.organizationService.createOrganization(
-          org.id, {
-            name: org.name,
-            url: org.url,
-            shortName: org.shortName
-          }
+    const createTags$: Observable<Tag[]> = of(tags)
+      .pipe(
+        tap(() => console.log('Creating tags')),
+        mergeMap(tags => forkJoinConcurrent(
+          tags.map(tag => this.tagService.createTag(tag.id, {
+            description: tag.description
+          })),
+          concurrency
         )),
-        concurreny
-      )),
-      mapTo(organizations),
-      tap(() => console.log('Organizations created', organizations))
-    );
+        mapTo(tags),
+        tap(() => console.log('Tags created', tags))
+      );
 
-    const createGrants$ = pipe(
-      tap(() => console.log('Creating grants')),
-      mergeMap(() => forkJoinConcurrent(
-        rawGrants.map(rawGrant => this.grantService.createGrant({
-            name: rawGrant.name,
-            description: rawGrant.description
-          }
+    const createOrganizations$: Observable<Organization[]> = of(organizations)
+      .pipe(
+        tap(() => console.log('Creating organizations')),
+        mergeMap(organizations => forkJoinConcurrent(
+          organizations.map(org => this.organizationService.createOrganization(
+            org.id, {
+              name: org.name,
+              url: org.url,
+              shortName: org.shortName
+            }
+          )),
+          concurrency
         )),
-        concurreny
-      )),
-      map(grantIds => <Grant[]>(_merge(grantIds, rawGrants))),
-      tap(grants_ => grants = grants_),
-      tap(res => console.log('Grants created', res))
-    );
+        mapTo(organizations),
+        tap(() => console.log('Organizations created', organizations))
+      );
+
+    const createGrants$: Observable<Grant[]> = of(rawGrants)
+      .pipe(
+        tap(() => console.log('Creating grants')),
+        mergeMap(rawGrants => forkJoinConcurrent(
+          rawGrants.map(rawGrant => this.grantService.createGrant({
+              name: rawGrant.name,
+              description: rawGrant.description
+            }
+          )),
+          concurrency
+        )),
+        map(grantIds => <Grant[]>(_merge(grantIds, rawGrants))),
+        tap(grants_ => grants = grants_),
+        tap(res => console.log('Grants created', res))
+      );
 
 
     const createChallengeOrganizers = (rawChallenge: any): Observable<string[]> => {
@@ -160,30 +161,55 @@ export class DatabaseSeedComponent implements OnInit {
     //   map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
     // )
 
-    const addChallenges$ = pipe(
-      tap(() => console.log('Creating challenges')),
-      mergeMap(() => forkJoin(
-        rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
-          tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
-          mergeMap(() => forkJoin({
-            organizerIds: createChallengeOrganizers(rawchallenge)
-          })),
-          mergeMap(res => createChallenge(rawchallenge, res.organizerIds))
+    // const createChallenges = pipe(
+    //     tap(() => console.log('Creating challenges')),
+    //     mergeMap(rawChallenges => forkJoin(
+    //       rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
+    //         tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
+    //         mergeMap(() => forkJoin({
+    //           organizerIds: createChallengeOrganizers(rawchallenge)
+    //         })),
+    //         mergeMap(res => createChallenge(rawchallenge, res.organizerIds))
+    //       )),
+    //     )),
+    //     tap(challenges => console.log('Challenge created', challenges))
+    //   );
+
+    const createChallenges = (rawChallenges: any[], grants: Grant[]): any => {
+      return of(rawChallenges).pipe(
+        tap(() => console.log('Creating challenges')),
+        mergeMap(rawChallenges => forkJoin(
+          rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
+            tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
+            mergeMap(() => forkJoin({
+              organizerIds: createChallengeOrganizers(rawchallenge)
+            })),
+            mergeMap(res => createChallenge(rawchallenge, res.organizerIds))
+          )),
         )),
-      )),
-      tap(challenges => console.log('Challenge created', challenges))
-    );
+        tap(challenges => console.log('Challenge created', challenges))
+      );
+    };
 
     console.log('Removing DB documents');
     removeDocuments$
       .pipe(
-        // mergeMap(() => forkJoin([
-        //   createTags$,
-        // ])),
+        mergeMap(() => forkJoinConcurrent([
+          createTags$,
+          createOrganizations$,
+          createGrants$
+        ], 1)),
+        switchMap(res => createChallenges(rawChallenges, res[2])),
+        tap(res => console.log("RES", res)),
+        // mergeMap(res => {
+        //   let grants = res[2];
+        //   return createChallenges()
+        // })
+
         // tap(res => console.log('Checkpoint', res)),
         // createTags$,
         // createOrganizations$,
-        createGrants$,
+        // createGrants$,
         // addChallenges$
       ).subscribe(() => {
         console.log('The seeding of the DB successfully completed');

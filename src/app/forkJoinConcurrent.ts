@@ -2,10 +2,10 @@ import { from, Observable } from "rxjs";
 import { last, map, mergeMap, toArray } from "rxjs/operators";
 
 // Source: https://stackoverflow.com/a/54247150
-export function forkJoinConcurrent<T>(
-  observables: Observable<T>[],
+export function forkJoinConcurrent(
+  observables: Observable<any>[],
   concurrent: number
-): Observable<T[]> {
+): Observable<any[]> {
   // Convert the array of observables to a higher-order observable:
   return from(observables).pipe(
     // Merge each of the observables in the higher-order observable
