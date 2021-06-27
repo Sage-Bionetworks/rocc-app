@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import challengeList from '../../seeds/dream/challenges.json';
+import challengeList from '../../seeds/dream/challenges-tmp.json';
 
 @Component({
   selector: 'rocc-preview-card',
@@ -8,7 +8,7 @@ import challengeList from '../../seeds/dream/challenges.json';
 })
 
 export class PreviewCardComponent implements OnInit {
-  
+
   // TODO: change challenges type to Challenge[] when we pull data from database
   rawChallenges: any;
   newChallenges: any;
