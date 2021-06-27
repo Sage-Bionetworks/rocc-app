@@ -69,10 +69,10 @@ export class DatabaseSeedComponent implements OnInit {
     //   grantIds: Array<string>
     // }
 
-    // Objects with pre-defined IDs
+    // Objects with pre-defined Ids
     const tags: Tag[] = tagList.tags;
     const organizations: Organization[] = orgList.organizations;
-    // Objects with IDs defined by the API service
+    // Objects with Ids defined by the API service
     const rawChallenges = challengeList.challenges;
     const rawGrants = grantList.grants;
     let grants: Grant[] = [];
@@ -138,15 +138,28 @@ export class DatabaseSeedComponent implements OnInit {
         );
     };
 
+    // TODO Consider using custom model for grants that include tmpId or give
+    // grant Ids lookup table as input
+    const getGrantIds = (rawChallenge: ChallengeCreateRequest, grants: any[]): Observable<string[]> => {
+      return of(rawChallenge)
+        .pipe(
+          // Map Challenge.tmpGrantIds to Grant Ids (grant order not conserved)
+          map(rawChallenge => grants
+            .filter(grant => rawChallenge.grantIds.includes(grant.tmpId))
+            .map(grant => grant.id)
+          )
+        );
+    };
+
     // Creates a challenge.
-    const createChallenge = (rawChallenge: ChallengeCreateRequest, organizerIds: string[]): Observable<Challenge> => {
+    const createChallenge = (rawChallenge: ChallengeCreateRequest): Observable<Challenge> => {
       return this.challengeService.createChallenge({
         name: rawChallenge.name,
         description: rawChallenge.description,
         url: rawChallenge.url,
         status: rawChallenge.status,
         tagIds: rawChallenge.tagIds,
-        organizerIds: organizerIds,
+        organizerIds: rawChallenge.organizerIds,
         dataProviderIds: rawChallenge.dataProviderIds,
         grantIds: []
       }).pipe(
@@ -154,44 +167,24 @@ export class DatabaseSeedComponent implements OnInit {
       );
     };
 
-    // const createChallengeOrganizers$ = pipe(
-    //   mergeMap((rowChallenge: any) => forkJoinConcurrent(
-    //     rowChallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
-    //         firstName: rawOrganizer.firstName,
-    //         lastName: rawOrganizer.lastName,
-    //         organizationIds: rawOrganizer.organizationIds
-    //     })),
-    //     1
-    //   )),
-    //   map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
-    // )
-
-    // const createChallenges = pipe(
-    //     tap(() => console.log('Creating challenges')),
-    //     mergeMap(rawChallenges => forkJoin(
-    //       rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
-    //         tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
-    //         mergeMap(() => forkJoin({
-    //           organizerIds: createChallengeOrganizers(rawchallenge)
-    //         })),
-    //         mergeMap(res => createChallenge(rawchallenge, res.organizerIds))
-    //       )),
-    //     )),
-    //     tap(challenges => console.log('Challenge created', challenges))
-    //   );
-
     // Creates all the challenges.
     const createChallenges = (rawChallenges: any[], grants: Grant[]): any => {
       return of(rawChallenges).pipe(
         tap(() => console.log('Creating challenges')),
         mergeMap(rawChallenges => forkJoin(
-          rawChallenges.map((rawchallenge: any) => of(rawchallenge)
+          rawChallenges.map((rawchallenge: ChallengeCreateRequest) => of(rawchallenge)
             .pipe(
               tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
               mergeMap(() => forkJoin({
-                organizerIds: createChallengeOrganizers(rawchallenge)
+                organizerIds: createChallengeOrganizers(rawchallenge),
+                grantIds: getGrantIds(rawchallenge, grants)
               })),
-              mergeMap(res => createChallenge(rawchallenge, res.organizerIds))
+              mergeMap(res => {
+                // TODO use _merge
+                rawchallenge.organizerIds = res.organizerIds;
+                rawchallenge.grantIds = res.grantIds;
+                return createChallenge(rawchallenge)
+              })
             )),
         )),
         tap(challenges => console.log('Challenge created', challenges))
