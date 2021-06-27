@@ -1,5 +1,5 @@
-import { from, Observable } from "rxjs";
-import { last, map, mergeMap, toArray } from "rxjs/operators";
+import { from, Observable } from 'rxjs';
+import { last, map, mergeMap, toArray } from 'rxjs/operators';
 
 // Source: https://stackoverflow.com/a/54247150
 export function forkJoinConcurrent(
