@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, defer, forkJoin, of, pipe, Observable } from 'rxjs';
-import { last, map, mapTo, mergeAll, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { forkJoin, Observable, of } from 'rxjs';
+import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { map as _map, merge as _merge } from 'lodash';
 import {
   ChallengeService,
@@ -12,20 +12,15 @@ import {
 import {
   Challenge,
   ChallengeCreateRequest,
-  ChallengeCreateResponse,
-  ChallengeStatus,
   Grant,
   Organization,
   PersonCreateRequest,
-  Tag,
-  TagCreateResponse
+  Tag
 } from '@sage-bionetworks/rocc-client-angular';
 import tagList from '../../seeds/dream/tags.json';
 import organizationList from '../../seeds/dream/organizations.json';
 import challengeList from '../../seeds/dream/challenges.json';
 import grantList from '../../seeds/dream/grants.json';
-
-import { getCurrencySymbol } from '@angular/common';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 
 @Component({
