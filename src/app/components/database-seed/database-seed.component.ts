@@ -55,27 +55,12 @@ export class DatabaseSeedComponent implements OnInit {
 
     const concurrency = 5;
 
-    // interface RawChallenge {
-    //   name: string,
-    //   description: string,
-    //   summary?: string,
-    //   startDate?: string,
-    //   endDate?: string,
-    //   url: string,
-    //   status: ChallengeStatus,
-    //   tagIds: Array<string>,
-    //   organizerIds: Array<string>,
-    //   dataProviderIds: Array<string>,
-    //   grantIds: Array<string>
-    // }
-
     // Objects with pre-defined Ids
     const tags: Tag[] = tagList.tags;
     const organizations: Organization[] = orgList.organizations;
     // Objects with Ids defined by the API service
     const rawChallenges = challengeList.challenges;
     const rawGrants = grantList.grants;
-    let grants: Grant[] = [];
 
     const createTags$: Observable<Tag[]> = of(tags)
       .pipe(
@@ -112,14 +97,12 @@ export class DatabaseSeedComponent implements OnInit {
         tap(() => console.log('Creating grants')),
         mergeMap(rawGrants => forkJoinConcurrent(
           rawGrants.map(rawGrant => this.grantService.createGrant({
-              name: rawGrant.name,
-              description: rawGrant.description
-            }
-          )),
+            name: rawGrant.name,
+            description: rawGrant.description
+          })),
           concurrency
         )),
         map(grantIds => <Grant[]>(_merge(grantIds, rawGrants))),
-        tap(grants_ => grants = grants_),
         tap(res => console.log('Grants created', res))
       );
 
@@ -180,9 +163,7 @@ export class DatabaseSeedComponent implements OnInit {
                 grantIds: getGrantIds(rawchallenge, grants)
               })),
               mergeMap(res => {
-                // TODO use _merge
-                rawchallenge.organizerIds = res.organizerIds;
-                rawchallenge.grantIds = res.grantIds;
+                _merge(rawchallenge, res);
                 return createChallenge(rawchallenge)
               })
             )),
