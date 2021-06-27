@@ -126,11 +126,9 @@ export class DatabaseSeedComponent implements OnInit {
     const getGrantIds = (rawChallenge: ChallengeCreateRequest, grants: any[]): Observable<string[]> => {
       return of(rawChallenge)
         .pipe(
-          // Map Challenge.tmpGrantIds to Grant Ids (grant order not conserved)
-          map(rawChallenge => grants
-            .filter(grant => rawChallenge.grantIds.includes(grant.tmpId))
-            .map(grant => grant.id)
-          )
+          map(rawChallenge => rawChallenge.grantIds
+            .map(grantId => grants.find(grant => grant.tmpId === grantId).id
+          ))
         );
     };
 
