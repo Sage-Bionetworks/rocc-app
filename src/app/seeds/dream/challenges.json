@@ -15,7 +15,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
 
       ],
       "grantIds": [
@@ -37,7 +37,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "bc-cancer-research-centre",
         "cancer-research-uk",
         "oslo-university-hospital"
@@ -60,7 +60,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "prize4life",
         "massachusetts-general-hospital",
         "als-therapy-alliance",
@@ -86,7 +86,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "oregon-health-and-science-university",
         "columbia-university"
       ],
@@ -109,7 +109,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "international-genome-sample-resource"
       ],
       "grantIds": [
@@ -131,115 +131,115 @@
         {
           "firstName": "Brandon",
           "lastName": "Allgood",
-          "organizations": "Numerate"
+          "organizationIds": "numerate"
         },
         {
           "firstName": "Christian",
           "lastName": "Basile",
-          "organizations": "Urban Green Energy"
+          "organizationIds": "urban-green-energy"
         },
         {
           "firstName": "Brian",
           "lastName": "Bot",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Deepak",
           "lastName": "Chandran",
-          "organizations": "Autodesk"
+          "organizationIds": "autodesk"
         },
         {
           "firstName": "Thomas",
           "lastName": "Cokelaer",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Markus",
           "lastName": "Covert",
-          "organizations": "Stanford University"
+          "organizationIds": "stanford-university"
         },
         {
           "firstName": "Bruce",
           "lastName": "Hoff",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Jay",
           "lastName": "Hodgson",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Jonathan",
           "lastName": "Karr",
-          "organizations": "Stanford University"
+          "organizationIds": "stanford-university"
         },
         {
           "firstName": "Mike",
           "lastName": "Kellen",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Po-Ru",
           "lastName": "Loh",
-          "organizations": "Massachusetts Institute of Technology"
+          "organizationIds": "massachusetts-institute-of-technology"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Kahn",
           "lastName": "Rhrissorrakrai",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Pablo",
           "lastName": "Meyer",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Alejandro",
           "lastName": "Villaverde",
-          "organizations": "Consejo Superior de Investigaciones Cientificas"
+          "organizationIds": "consejo-superior-de-investigaciones-cientificas"
         },
         {
           "firstName": "Simon",
           "lastName": "Wilkinson",
-          "organizations": "Numerate"
+          "organizationIds": "numerate"
         },
         {
           "firstName": "Jessen",
           "lastName": "Yu",
-          "organizations": "Numerate"
+          "organizationIds": "numerate"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
 
       ],
       "grantIds": [
@@ -264,80 +264,80 @@
         {
           "firstName": "Laura",
           "lastName": "Heiser",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Heinz",
           "lastName": "Koeppl",
-          "organizations": "ETH Zurich"
+          "organizationIds": "eth-zurich"
         },
         {
           "firstName": "Michael",
           "lastName": "Unger",
-          "organizations": "ETH Zurich"
+          "organizationIds": "eth-zurich"
         },
         {
           "firstName": "Sach",
           "lastName": "Mukherjee",
-          "organizations": "Nathan S. Kline Institute for Psychiatric Research"
+          "organizationIds": "nathan-s-kline-institute-for-psychiatric-research"
         },
         {
           "firstName": "Steven",
           "lastName": "Hill",
-          "organizations": "Nathan S. Kline Institute for Psychiatric Research"
+          "organizationIds": "nathan-s-kline-institute-for-psychiatric-research"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Bruce",
           "lastName": "Hoff",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Jay",
           "lastName": "Hodgson",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Mike",
           "lastName": "Kellen",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Thomas",
           "lastName": "Cokelaer",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
 
       ],
       "grantIds": [
@@ -360,90 +360,90 @@
         {
           "firstName": "Lara",
           "lastName": "Mangravite",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Solly",
           "lastName": "Sieberts",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Abhi",
           "lastName": "Pratap",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Christine",
           "lastName": "Suver",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Bruce",
           "lastName": "Hoff",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Eli",
           "lastName": "Stahl",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Jing",
           "lastName": "Cui",
-          "organizations": "Brigham And Women's Hospital"
+          "organizationIds": "brigham-and-womens-hospital"
         },
         {
           "firstName": "Andre",
           "lastName": "Falcao",
-          "organizations": "University of Lisbon"
+          "organizationIds": "university-of-lisbon"
         },
         {
           "firstName": "Robert",
           "lastName": "Plenge",
-          "organizations": "Merck Co."
+          "organizationIds": "merck-co"
         },
         {
           "firstName": "Peter",
           "lastName": "Gregersen",
-          "organizations": "Feinstein Institutes for Medical Research"
+          "organizationIds": "feinstein-institutes-for-medical-research"
         },
         {
           "firstName": "Jeff",
           "lastName": "Greenberg",
-          "organizations": "Corrona"
+          "organizationIds": "corrona"
         },
         {
           "firstName": "Kaleb",
           "lastName": "Michaud",
-          "organizations": "Arthritis Internet Registry"
+          "organizationIds": "arthritis-internet-registry"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "corevitas"
       ],
       "grantIds": [
@@ -466,60 +466,60 @@
         {
           "firstName": "Paul C.",
           "lastName": "Boutros",
-          "organizations": "Ontario Institute for Cancer Research"
+          "organizationIds": "ontario-institute-for-cancer-research"
         },
         {
           "firstName": "Lincoln D.",
           "lastName": "Stein",
-          "organizations": "Ontario Institute for Cancer Research"
+          "organizationIds": "ontario-institute-for-cancer-research"
         },
         {
           "firstName": "Josh",
           "lastName": "Stuart",
-          "organizations": "University of California Santa Cruz"
+          "organizationIds": "university-of-california-santa-cruz"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "international-cancer-genome-consortium"
       ],
       "grantIds": [
@@ -542,115 +542,115 @@
         {
           "firstName": "Steven M.",
           "lastName": "Kornblau",
-          "organizations": "MD Anderson Cancer Center"
+          "organizationIds": "md-anderson-cancer-center"
         },
         {
           "firstName": "Amina Ann",
           "lastName": "Qutub",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "David",
           "lastName": "Noren",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Bryon",
           "lastName": "Long",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Alex",
           "lastName": "Bisberg",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Chenyue",
           "lastName": "Hu",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Erik",
           "lastName": "Engquist",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Andre",
           "lastName": "Schultz",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Lisa",
           "lastName": "Geda",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Ramy",
           "lastName": "Sweidan",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Ka Wai",
           "lastName": "Lin",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Tien",
           "lastName": "Tang",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Arun",
           "lastName": "Mahadevan",
-          "organizations": "Rice University"
+          "organizationIds": "rice-university"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Raquel",
           "lastName": "Norel",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Kahn",
           "lastName": "Rhrissorrakrai",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Bruce",
           "lastName": "Hoff",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Christine",
           "lastName": "Suver",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "md-anderson-cancer-center"
       ],
       "grantIds": [
@@ -673,110 +673,110 @@
         {
           "firstName": "Mehmet",
           "lastName": "Gonen",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Barbara",
           "lastName": "Weir",
-          "organizations": "Broad Institute"
+          "organizationIds": "broad-institute"
         },
         {
           "firstName": "Aviad",
           "lastName": "Tsherniak",
-          "organizations": "Broad Institute"
+          "organizationIds": "broad-institute"
         },
         {
           "firstName": "Daniel",
           "lastName": "Marbach",
-          "organizations": "University of Lausanne"
+          "organizationIds": "university-of-lausanne"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Bruce",
           "lastName": "Hoff",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Christine",
           "lastName": "Suver",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Shannon",
           "lastName": "Carter",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Sara",
           "lastName": "Howell",
-          "organizations": "Broad Institute"
+          "organizationIds": "broad-institute"
         },
         {
           "firstName": "Paquita",
           "lastName": "Vazquez",
-          "organizations": "Broad Institute"
+          "organizationIds": "broad-institute"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Bill",
           "lastName": "Hahn",
-          "organizations": "Broad Institute"
+          "organizationIds": "broad-institute"
         },
         {
           "firstName": "Jesse",
           "lastName": "Boehm",
-          "organizations": "Broad Institute"
+          "organizationIds": "broad-institute"
         },
         {
           "firstName": "Todd",
           "lastName": "Golub",
-          "organizations": "Broad Institute"
+          "organizationIds": "broad-institute"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         },
         {
           "firstName": "Bill",
           "lastName": "Hahn",
-          "organizations": "Dana-Farber Cancer Institute"
+          "organizationIds": "dana-farber-cancer-institute"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "broad-institute",
         "dana-farber-cancer-institute"
       ],
@@ -799,100 +799,100 @@
         {
           "firstName": "Andy",
           "lastName": "Simmons",
-          "organizations": "King's College London"
+          "organizationIds": "kings-college-london"
         },
         {
           "firstName": "Arno",
           "lastName": "Klein",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Benjamin",
           "lastName": "Logsdon",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "David",
           "lastName": "Fardo",
-          "organizations": "University of Kentucky"
+          "organizationIds": "university-of-kentucky"
         },
         {
           "firstName": "Christine",
           "lastName": "Suver",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Christopher",
           "lastName": "Bare",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "John 'Keoni'",
           "lastName": "Kauwe",
-          "organizations": "Brigham Young University"
+          "organizationIds": "brigham-young-university"
         },
         {
           "firstName": "Lara",
           "lastName": "Mangravite",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Mette",
           "lastName": "Peters",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Nicholas",
           "lastName": "Tustison",
-          "organizations": "University of Virginia"
+          "organizationIds": "university-of-virginia"
         },
         {
           "firstName": "Richard",
           "lastName": "Dobson",
-          "organizations": "King's College London"
+          "organizationIds": "kings-college-london"
         },
         {
           "firstName": "Satrajit",
           "lastName": "Ghosh",
-          "organizations": "Massachusetts Institute of Technology"
+          "organizationIds": "massachusetts-institute-of-technology"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Stephen",
           "lastName": "Newhouse",
-          "organizations": "King's College London"
+          "organizationIds": "kings-college-london"
         },
         {
           "firstName": "Taylor",
           "lastName": "Maxwell",
-          "organizations": "George Washington University"
+          "organizationIds": "george-washington-university"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "rush-university-medical-center",
         "alzheimers-disease-neuroimaging-initiative",
         "innovative-medicines-initiative"
@@ -916,70 +916,70 @@
         {
           "firstName": "Andreas",
           "lastName": "Keller",
-          "organizations": "Rockefeller University"
+          "organizationIds": "rockefeller-university"
         },
         {
           "firstName": "Leslie",
           "lastName": "Vosshall",
-          "organizations": "Rockefeller University"
+          "organizationIds": "rockefeller-university"
         },
         {
           "firstName": "Pablo",
           "lastName": "Meyer",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Guillermo",
           "lastName": "Cecchi",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Andre",
           "lastName": "Falcao",
-          "organizations": "University of Lisbon"
+          "organizationIds": "university-of-lisbon"
         },
         {
           "firstName": "Raquel",
           "lastName": "Norel",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Bruce",
           "lastName": "Hoff",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Christine",
           "lastName": "Suver",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "rockefeller-university"
       ],
       "grantIds": [
@@ -1001,7 +1001,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "astrazeneca",
         "celgene",
         "sanofi",
@@ -1026,60 +1026,60 @@
         {
           "firstName": "Robert",
           "lastName": "Kuffner",
-          "organizations": "Ludwig Maximilian University of Munich"
+          "organizationIds": "ludwig-maximilian-university-of-munich"
         },
         {
           "firstName": "Kely",
           "lastName": "Norel",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Lara",
           "lastName": "Mangravite",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Merit",
           "lastName": "Cudkowicz",
-          "organizations": "Massachusetts General Hospital"
+          "organizationIds": "massachusetts-general-hospital"
         },
         {
           "firstName": "Orla",
           "lastName": "Hardiman",
-          "organizations": "Trinity College Institute of Neuroscience"
+          "organizationIds": "trinity-college-institute-of-neuroscience"
         },
         {
           "firstName": "Neta",
           "lastName": "Zach",
-          "organizations": "Prize4Life"
+          "organizationIds": "prize4life"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "prize4life",
         "neurological-clinical-research-institute",
         "northeast-als-consortium"
@@ -1104,55 +1104,55 @@
         {
           "firstName": "Jonathan",
           "lastName": "Dry",
-          "organizations": "AstraZeneca"
+          "organizationIds": "astrazeneca"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "astrazeneca",
         "wellcome-sanger-institute",
         "bellvitge-institute-for-biomedical-research"
@@ -1177,40 +1177,40 @@
         {
           "firstName": "Paul C.",
           "lastName": "Boutros",
-          "organizations": "Ontario Institute for Cancer Research"
+          "organizationIds": "ontario-institute-for-cancer-research"
         },
         {
           "firstName": "Josh",
           "lastName": "Stuart",
-          "organizations": "University of California Santa Cruz"
+          "organizationIds": "university-of-california-santa-cruz"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "international-cancer-genome-consortium"
       ],
       "grantIds": [
@@ -1234,60 +1234,60 @@
         {
           "firstName": "Quaid D.",
           "lastName": "Morris",
-          "organizations": "University of Toronto"
+          "organizationIds": "university-of-toronto"
         },
         {
           "firstName": "Paul C.",
           "lastName": "Boutros",
-          "organizations": "Ontario Institute for Cancer Research"
+          "organizationIds": "ontario-institute-for-cancer-research"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Joshua M.",
           "lastName": "Stuart",
-          "organizations": "University of California Santa Cruz"
+          "organizationIds": "university-of-california-santa-cruz"
         },
         {
           "firstName": "Kyle",
           "lastName": "Ellrott",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "David",
           "lastName": "Wedge",
-          "organizations": "Wellcome Sanger Institute"
+          "organizationIds": "wellcome-sanger-institute"
         },
         {
           "firstName": "Peter Van",
           "lastName": "Loo",
-          "organizations": "Francis Crick Institute"
+          "organizationIds": "francis-crick-institute"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "ontario-institute-for-cancer-research",
         "international-cancer-genome-consortium",
         "ontario-institute-for-cancer-research"
@@ -1311,7 +1311,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
 
       ],
       "grantIds": [
@@ -1333,80 +1333,80 @@
         {
           "firstName": "Daniel",
           "lastName": "Marbach",
-          "organizations": "University of Lausanne"
+          "organizationIds": "university-of-lausanne"
         },
         {
           "firstName": "Sarvenaz",
           "lastName": "Choobdar",
-          "organizations": "University of Lausanne"
+          "organizationIds": "university-of-lausanne"
         },
         {
           "firstName": "Sven",
           "lastName": "Bergmann",
-          "organizations": "University of Lausanne"
+          "organizationIds": "university-of-lausanne"
         },
         {
           "firstName": "David",
           "lastName": "Lamparter",
-          "organizations": "University of Lausanne"
+          "organizationIds": "university-of-lausanne"
         },
         {
           "firstName": "Zoltan",
           "lastName": "Kutalik",
-          "organizations": "Lausanne University Hospital"
+          "organizationIds": "lausanne-university-hospital"
         },
         {
           "firstName": "Kasper",
           "lastName": "Lage",
-          "organizations": "Massachusetts General Hospital"
+          "organizationIds": "massachusetts-general-hospital"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Christine",
           "lastName": "Suver",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "university-of-lausanne"
       ],
       "grantIds": [
@@ -1428,60 +1428,60 @@
         {
           "firstName": "Anshul",
           "lastName": "Kundaje",
-          "organizations": "Stanford University"
+          "organizationIds": "stanford-university"
         },
         {
           "firstName": "Nathan",
           "lastName": "Boley",
-          "organizations": "Stanford University"
+          "organizationIds": "stanford-university"
         },
         {
           "firstName": "Robert",
           "lastName": "Kuffner",
-          "organizations": "Ludwig Maximilian University of Munich"
+          "organizationIds": "ludwig-maximilian-university-of-munich"
         },
         {
           "firstName": "Laura",
           "lastName": "Heiser",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "James",
           "lastName": "Costello",
-          "organizations": "University of Colorado Anschutz Medical Campus"
+          "organizationIds": "university-of-colorado-anschutz-medical-campus"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Bruce",
           "lastName": "Hoff",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "encyclopedia-of-dna-elements-data-coordinating-center"
       ],
       "grantIds": [
@@ -1504,50 +1504,50 @@
         {
           "firstName": "Chloe-Agathe",
           "lastName": "Azencott",
-          "organizations": "MINES ParisTech"
+          "organizationIds": "mines-paristech"
         },
         {
           "firstName": "Anna",
           "lastName": "Goldenberg",
-          "organizations": "University of Toronto"
+          "organizationIds": "university-of-toronto"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Chloe-Agathe",
           "lastName": "Azencott",
-          "organizations": "Institut Curie"
+          "organizationIds": "institut-curie"
         },
         {
           "firstName": "Anna",
           "lastName": "Goldenberg",
-          "organizations": "Hospital for Sick Children"
+          "organizationIds": "hospital-for-sick-children"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "duke-university",
         "durham-va-medical-center"
       ],
@@ -1571,55 +1571,55 @@
         {
           "firstName": "Kyle",
           "lastName": "Ellrott",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Josh",
           "lastName": "Stuart",
-          "organizations": "University of California Santa Cruz"
+          "organizationIds": "university-of-california-santa-cruz"
         },
         {
           "firstName": "Paul C.",
           "lastName": "Boutros",
-          "organizations": "Ontario Institute for Cancer Research"
+          "organizationIds": "ontario-institute-for-cancer-research"
         },
         {
           "firstName": "Paul",
           "lastName": "Spellman",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Christopher",
           "lastName": "Maher",
-          "organizations": "Washington University in St. Louis"
+          "organizationIds": "washington-university-in-st-louis"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thea",
           "lastName": "Norman",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Stephen",
           "lastName": "Friend",
-          "organizations": "Apple Health"
+          "organizationIds": "apple-health"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "international-cancer-genome-consortium",
         "national-cancer-institute",
         "ontario-institute-for-cancer-research"
@@ -1644,7 +1644,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "breast-cancer-surveillance-consortium",
         "icahn-school-of-medicine-at-mount-sinai"
       ],
@@ -1667,7 +1667,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "university-of-arkansas-for-medical-sciences",
         "dana-farber-cancer-institute",
         "h-lee-moffitt-cancer-center-and-research-institute",
@@ -1693,50 +1693,50 @@
         {
           "firstName": "Brian",
           "lastName": "O'Connor",
-          "organizations": "Global Alliance for Genomics and Health"
+          "organizationIds": "global-alliance-for-genomics-and-health"
         },
         {
           "firstName": "Kevin",
           "lastName": "Osborn",
-          "organizations": "Global Alliance for Genomics and Health"
+          "organizationIds": "global-alliance-for-genomics-and-health"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "James",
           "lastName": "Eddy",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Denis",
           "lastName": "Yuen",
-          "organizations": "Dockstore"
+          "organizationIds": "dockstore"
         },
         {
           "firstName": "Brian",
           "lastName": "O'Connor",
-          "organizations": "University of California Santa Cruz"
+          "organizationIds": "university-of-california-santa-cruz"
         },
         {
           "firstName": "Kevin",
           "lastName": "Osborn",
-          "organizations": "University of California Santa Cruz"
+          "organizationIds": "university-of-california-santa-cruz"
         },
         {
           "firstName": "Denis",
           "lastName": "Yuen",
-          "organizations": "Ontario Institute for Cancer Research"
+          "organizationIds": "ontario-institute-for-cancer-research"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "national-cancer-institute",
         "harvard-university",
         "stanford-university",
@@ -1767,75 +1767,75 @@
         {
           "firstName": "Udi",
           "lastName": "Rubin",
-          "organizations": "Early Signal Foundation"
+          "organizationIds": "early-signal-foundation"
         },
         {
           "firstName": "Daniela",
           "lastName": "Brunner",
-          "organizations": "Early Signal Foundation"
+          "organizationIds": "early-signal-foundation"
         },
         {
           "firstName": "Paolo",
           "lastName": "Bonato",
-          "organizations": "Harvard University"
+          "organizationIds": "harvard-university"
         },
         {
           "firstName": "Federico",
           "lastName": "Parisi",
-          "organizations": "Harvard University"
+          "organizationIds": "harvard-university"
         },
         {
           "firstName": "Daisy",
           "lastName": "Daeschler",
-          "organizations": "Michael J. Fox Foundation"
+          "organizationIds": "michael-j-fox-foundation"
         },
         {
           "firstName": "Lauren",
           "lastName": "Bataille",
-          "organizations": "Michael J. Fox Foundation"
+          "organizationIds": "michael-j-fox-foundation"
         },
         {
           "firstName": "Larsson",
           "lastName": "Omberg",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Lara",
           "lastName": "Mangravite",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Solly",
           "lastName": "Sieberts",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Peter",
           "lastName": "Banda",
-          "organizations": "University of Luxembourg"
+          "organizationIds": "university-of-luxembourg"
         },
         {
           "firstName": "Ray",
           "lastName": "Dorsey",
-          "organizations": "University of Rochester"
+          "organizationIds": "university-of-rochester"
         },
         {
           "firstName": "Patrick",
           "lastName": "Aubin",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         },
         {
           "firstName": "Erin",
           "lastName": "Soderberg",
-          "organizations": "Verily"
+          "organizationIds": "verily"
         },
         {
           "firstName": "William",
           "lastName": "Marks",
-          "organizations": "Verily"
+          "organizationIds": "verily"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "michael-j-fox-foundation",
         "sage-bionetworks"
       ],
@@ -1858,85 +1858,85 @@
         {
           "firstName": "Mi",
           "lastName": "Yang",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         },
         {
           "firstName": "Zhi",
           "lastName": "Li",
-          "organizations": "New York University"
+          "organizationIds": "new-york-university"
         },
         {
           "firstName": "Francesca",
           "lastName": "Petralia",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Pei",
           "lastName": "Wang",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Xiaoyu",
           "lastName": "Song",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Reza",
           "lastName": "Ghanadan",
-          "organizations": "Defense Advanced Research Projects Agency"
+          "organizationIds": "defense-advanced-research-projects-agency"
         },
         {
           "firstName": "Henry",
           "lastName": "Rodriguez",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Samuel",
           "lastName": "Payne",
-          "organizations": "Pacific Northwest National Laboratory"
+          "organizationIds": "pacific-northwest-national-laboratory"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Paul C.",
           "lastName": "Boutros",
-          "organizations": "Ontario Institute for Cancer Research"
+          "organizationIds": "ontario-institute-for-cancer-research"
         },
         {
           "firstName": "David",
           "lastName": "Fenyo",
-          "organizations": "New York University"
+          "organizationIds": "new-york-university"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "clinical-proteomic-tumor-analysis-consortium"
       ],
       "grantIds": [
@@ -1959,45 +1959,45 @@
         {
           "firstName": "Ross",
           "lastName": "Cagan",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         },
         {
           "firstName": "Avner",
           "lastName": "Schlessinger",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         },
         {
           "firstName": "Heather",
           "lastName": "Carlson",
-          "organizations": "University of Michigan"
+          "organizationIds": "university-of-michigan"
         },
         {
           "firstName": "Ruben",
           "lastName": "Abagyan",
-          "organizations": "University of California San Diego"
+          "organizationIds": "university-of-california-san-diego"
         },
         {
           "firstName": "Alex",
           "lastName": "Tropsha",
-          "organizations": "University of North Carolina at Chapel Hill"
+          "organizationIds": "university-of-north-carolina-at-chapel-hill"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Kristen",
           "lastName": "Dang",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Robert",
           "lastName": "Allaway",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "icahn-school-of-medicine-at-mount-sinai"
       ],
       "grantIds": [
@@ -2020,60 +2020,60 @@
         {
           "firstName": "Pablo",
           "lastName": "Meyer",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Nikos",
           "lastName": "Karaiskos",
-          "organizations": "Max Delbruck Center for Molecular Medicine"
+          "organizationIds": "max-delbruck-center-for-molecular-medicine"
         },
         {
           "firstName": "Nikolaus",
           "lastName": "Rajewsky",
-          "organizations": "Max Delbruck Center for Molecular Medicine"
+          "organizationIds": "max-delbruck-center-for-molecular-medicine"
         },
         {
           "firstName": "Attila",
           "lastName": "Gabor",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Jovan",
           "lastName": "Tanevski",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "max-delbruck-center-for-molecular-medicine"
       ],
       "grantIds": [
@@ -2096,60 +2096,60 @@
         {
           "firstName": "Tero",
           "lastName": "Aittokallio",
-          "organizations": "Institute for Molecular Medicine Finland"
+          "organizationIds": "institute-for-molecular-medicine-finland"
         },
         {
           "firstName": "Anna",
           "lastName": "Cichonska",
-          "organizations": "Institute for Molecular Medicine Finland"
+          "organizationIds": "institute-for-molecular-medicine-finland"
         },
         {
           "firstName": "Balaguru",
           "lastName": "Ravikumar",
-          "organizations": "Institute for Molecular Medicine Finland"
+          "organizationIds": "institute-for-molecular-medicine-finland"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Kristen",
           "lastName": "Dang",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Robert",
           "lastName": "Allaway",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Andrew",
           "lastName": "Lamb",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Stockard",
           "lastName": "Simon",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Amy",
           "lastName": "Truong",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "unc-eshelman-school-of-pharmacy"
       ],
       "grantIds": [
@@ -2171,75 +2171,75 @@
         {
           "firstName": "Michael T.",
           "lastName": "Ferdig",
-          "organizations": "Eck Institute for Global Health"
+          "organizationIds": "eck-institute-for-global-health"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Geoffrey",
           "lastName": "Siwo",
-          "organizations": "Center for Research Computing"
+          "organizationIds": "center-for-research-computing"
         },
         {
           "firstName": "Sage",
           "lastName": "Davis",
-          "organizations": "Eck Institute for Global Health"
+          "organizationIds": "eck-institute-for-global-health"
         },
         {
           "firstName": "Katrina",
           "lastName": "Button-Simons",
-          "organizations": "Eck Institute for Global Health"
+          "organizationIds": "eck-institute-for-global-health"
         },
         {
           "firstName": "Pablo",
           "lastName": "Meyer",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Nicola",
           "lastName": "Mulder",
-          "organizations": "H3ABioNet"
+          "organizationIds": "h3abionet"
         },
         {
           "firstName": "Amel",
           "lastName": "Ghouila",
-          "organizations": "H3ABioNet"
+          "organizationIds": "h3abionet"
         },
         {
           "firstName": "Sumir",
           "lastName": "Panji",
-          "organizations": "H3ABioNet"
+          "organizationIds": "h3abionet"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julie",
           "lastName": "Bletz",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Michael",
           "lastName": "Mason",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Geoffrey",
           "lastName": "Siwo",
-          "organizations": "Eck Institute for Global Health"
+          "organizationIds": "eck-institute-for-global-health"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "texas-biomedical-research-institute",
         "mahidol-oxford-tropical-medicine-research-unit",
         "national-institutes-of-health"
@@ -2263,51 +2263,51 @@
         {
           "firstName": "Adi L.",
           "lastName": "Tarca",
-          "organizations": "Wayne State University"
+          "organizationIds": "wayne-state-university"
         },
         {
           "firstName": "Marina",
           "lastName": "Sirota",
-          "organizations": "University of California San Francisco"
+          "organizationIds": "university-of-california-san-francisco"
         },
         {
           "firstName": "Roberto",
           "lastName": "Romero",
-          "organizations": "Eunice Kennedy Shriver National Institute of Child Health and Human Development"
+          "organizationIds": "eunice-kennedy-shriver-national-institute"
         },
         {
           "firstName": "Bogdan",
           "lastName": "Done",
-          "organizations": "Wayne State University"
+          "organizationIds": "wayne-state-university"
         },
         {
           "firstName": "Gaia",
           "lastName": "Andreoletti",
-          "organizations": "University of California San Francisco"
+          "organizationIds": "university-of-california-san-francisco"
         },
         {
           "firstName": "Nima",
           "lastName": "Aghaeepour",
-          "organizations": "Stanford University"
+          "organizationIds": "stanford-university"
         },
         {
           "firstName": "James",
           "lastName": "Costello",
-          "organizations": "University of Colorado Anschutz Medical Campus"
+          "organizationIds": "university-of-colorado-anschutz-medical-campus"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         }
       ],
-      "dataProvider": [
-        "eunice-kennedy-shriver-national-institute-of-child-health-and-human-development",
+      "dataProviders": [
+        "eunice-kennedy-shriver-national-institute",
         "wayne-state-university",
         "march-of-dimes"
       ],
@@ -2333,60 +2333,60 @@
         {
           "firstName": "Marco",
           "lastName": "Tognetti",
-          "organizations": "ETH Zurich"
+          "organizationIds": "eth-zurich"
         },
         {
           "firstName": "Bernd",
           "lastName": "Bodenmiller",
-          "organizations": "University of Zurich"
+          "organizationIds": "university-of-zurich"
         },
         {
           "firstName": "Attila",
           "lastName": "Gabor",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Paola",
           "lastName": "Picotti",
-          "organizations": "ETH Zurich"
+          "organizationIds": "eth-zurich"
         },
         {
           "firstName": "Verena",
           "lastName": "Chung",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julie",
           "lastName": "Bletz",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Marco",
           "lastName": "Tognetti",
-          "organizations": "University of Zurich"
+          "organizationIds": "university-of-zurich"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "university-of-zurich",
         "eth-zurich"
       ],
@@ -2410,45 +2410,45 @@
         {
           "firstName": "Tim",
           "lastName": "Bergquist",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Schaffter",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Prosser",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Yao",
           "lastName": "Yan",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Sean",
           "lastName": "Mooney",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         },
         {
           "firstName": "Tim",
           "lastName": "Bergquist",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "university-of-washington"
       ],
       "grantIds": [
@@ -2471,80 +2471,80 @@
         {
           "firstName": "Pablo",
           "lastName": "Meyer",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Jay",
           "lastName": "Shendure",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         },
         {
           "firstName": "Michael",
           "lastName": "Elowitz",
-          "organizations": "California Institute of Technology"
+          "organizationIds": "california-institute-of-technology"
         },
         {
           "firstName": "Max",
           "lastName": "Telford",
-          "organizations": "London's Global University"
+          "organizationIds": "londons-global-university"
         },
         {
           "firstName": "Ehud",
           "lastName": "Shapiro",
-          "organizations": "Weizmann Institute of Science"
+          "organizationIds": "weizmann-institute-of-science"
         },
         {
           "firstName": "Alejandro",
           "lastName": "Granados",
-          "organizations": "California Institute of Technology"
+          "organizationIds": "california-institute-of-technology"
         },
         {
           "firstName": "Irepan",
           "lastName": "Salvador",
-          "organizations": "London's Global University"
+          "organizationIds": "londons-global-university"
         },
         {
           "firstName": "Ofir",
           "lastName": "Raz",
-          "organizations": "Weizmann Institute of Science"
+          "organizationIds": "weizmann-institute-of-science"
         },
         {
           "firstName": "Nicole",
           "lastName": "Huber",
-          "organizations": "Allen Institute"
+          "organizationIds": "allen-institute"
         },
         {
           "firstName": "Kathryn",
           "lastName": "Richmond",
-          "organizations": "Allen Institute"
+          "organizationIds": "allen-institute"
         },
         {
           "firstName": "Verena",
           "lastName": "Chung",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julie",
           "lastName": "Bletz",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Michael",
           "lastName": "Mason",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Amy",
           "lastName": "Truong",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "california-institute-of-technology",
         "londons-global-university",
         "weizmann-institute-of-science"
@@ -2568,7 +2568,7 @@
       "organizerIds": [
 
       ],
-      "dataProvider": [
+      "dataProviders": [
         "allen-institute",
         "weizmann-institute-of-science",
         "londons-global-university",
@@ -2596,95 +2596,95 @@
         {
           "firstName": "Andrea",
           "lastName": "Califano",
-          "organizations": "Columbia University"
+          "organizationIds": "columbia-university"
         },
         {
           "firstName": "Eugene",
           "lastName": "Douglass",
-          "organizations": "Columbia University"
+          "organizationIds": "columbia-university"
         },
         {
           "firstName": "Mahalaxmi",
           "lastName": "Aburi",
-          "organizations": "Columbia University"
+          "organizationIds": "columbia-university"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "National Institutes of Health"
+          "organizationIds": "national-institutes-of-health"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Bence",
           "lastName": "Szalai",
-          "organizations": "Semmelweis University"
+          "organizationIds": "semmelweis-university"
         },
         {
           "firstName": "Robert",
           "lastName": "Allaway",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julie",
           "lastName": "Bletz",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Verena",
           "lastName": "Chung",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Amy",
           "lastName": "Truong",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "European Bioinformatics Institute"
+          "organizationIds": "european-bioinformatics-institute"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "Cancer Target Discovery And Development"
+          "organizationIds": "cancer-target-discovery-and-development"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "RWTH Aachen University"
+          "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "columbia-university"
       ],
       "grantIds": [
@@ -2707,100 +2707,100 @@
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Brian",
           "lastName": "White",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Michael",
           "lastName": "Mason",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Jacob",
           "lastName": "Roberts",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         },
         {
           "firstName": "Jeffrey",
           "lastName": "Tyner",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Charles",
           "lastName": "Goldthwaite",
-          "organizations": "National Institutes of Health"
+          "organizationIds": "national-institutes-of-health"
         },
         {
           "firstName": "Cindy",
           "lastName": "Deleon",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "National Institutes of Health"
+          "organizationIds": "national-institutes-of-health"
         },
         {
           "firstName": "Krystal",
           "lastName": "Rivers",
-          "organizations": "National Institutes of Health"
+          "organizationIds": "national-institutes-of-health"
         },
         {
           "firstName": "Julie",
           "lastName": "Bletz",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Pamela",
           "lastName": "Birriel",
-          "organizations": "National Institutes of Health"
+          "organizationIds": "national-institutes-of-health"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Verena",
           "lastName": "Chung",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Amy",
           "lastName": "Truong",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Adam",
           "lastName": "Margolin",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "Cancer Target Discovery And Development"
+          "organizationIds": "cancer-target-discovery-and-development"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "leukemia-and-lymphoma-society",
         "oregon-health-and-science-university"
       ],
@@ -2823,66 +2823,66 @@
         {
           "firstName": "Eric",
           "lastName": "Johnson",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Bron",
           "lastName": "Kisler",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "James",
           "lastName": "Eddy",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Schaffter",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gilberto",
           "lastName": "Fragoso",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Denise",
           "lastName": "Warzel",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Sherri De",
           "lastName": "Coronado",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Verena",
           "lastName": "Chung",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Jennifer",
           "lastName": "Couch",
-          "organizations": "National Cancer Institute"
+          "organizationIds": "national-cancer-institute"
         },
         {
           "firstName": "Melissa",
           "lastName": "Haendel",
-          "organizations": "Oregon Health and Science University"
+          "organizationIds": "oregon-health-and-science-university"
         }
       ],
-      "dataProvider": [
-        "applied-proteogenomics-organizational-learning-and-outcomes-network",
+      "dataProviders": [
+        "apollo-network",
         "cancer-imaging-archive"
       ],
       "grantIds": [
@@ -2905,60 +2905,60 @@
         {
           "firstName": "S. Louis Bridges",
           "lastName": "Jr.",
-          "organizations": "University of Alabama at Birmingham"
+          "organizationIds": "university-of-alabama-at-birmingham"
         },
         {
           "firstName": "Jake Y.",
           "lastName": "Chen",
-          "organizations": "University of Alabama at Birmingham"
+          "organizationIds": "university-of-alabama-at-birmingham"
         },
         {
           "firstName": "Dongmei",
           "lastName": "Sun",
-          "organizations": "University of Alabama at Birmingham"
+          "organizationIds": "university-of-alabama-at-birmingham"
         },
         {
           "firstName": "Mason",
           "lastName": "Frazier",
-          "organizations": "University of Alabama at Birmingham"
+          "organizationIds": "university-of-alabama-at-birmingham"
         },
         {
           "firstName": "Percio S.",
           "lastName": "Gulko",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Mount Sinai"
+          "organizationIds": "mount-sinai"
         },
         {
           "firstName": "James",
           "lastName": "Costello",
-          "organizations": "University of Colorado Anschutz Medical Campus"
+          "organizationIds": "university-of-colorado-anschutz-medical-campus"
         },
         {
           "firstName": "Jelai",
           "lastName": "Wang",
-          "organizations": "University of Alabama at Birmingham"
+          "organizationIds": "university-of-alabama-at-birmingham"
         },
         {
           "firstName": "Robert",
           "lastName": "Allaway",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "IBM Research"
+          "organizationIds": "ibm-research"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "university-of-alabama-at-birmingham"
       ],
       "grantIds": [
@@ -2980,60 +2980,60 @@
         {
           "firstName": "Luca",
           "lastName": "Foschini",
-          "organizations": "Evidation Health"
+          "organizationIds": "evidation-health"
         },
         {
           "firstName": "David",
           "lastName": "Alonso",
-          "organizations": "Michael J. Fox Foundation"
+          "organizationIds": "michael-j-fox-foundation"
         },
         {
           "firstName": "Mark",
           "lastName": "Frasier",
-          "organizations": "Michael J. Fox Foundation"
+          "organizationIds": "michael-j-fox-foundation"
         },
         {
           "firstName": "Julia",
           "lastName": "Keefe",
-          "organizations": "Michael J. Fox Foundation"
+          "organizationIds": "michael-j-fox-foundation"
         },
         {
           "firstName": "Luba",
           "lastName": "Smolensky",
-          "organizations": "Michael J. Fox Foundation"
+          "organizationIds": "michael-j-fox-foundation"
         },
         {
           "firstName": "Arun",
           "lastName": "Jayaraman",
-          "organizations": "Northwestern University"
+          "organizationIds": "northwestern-university"
         },
         {
           "firstName": "Nicholas",
           "lastName": "Shawen",
-          "organizations": "Northwestern University"
+          "organizationIds": "northwestern-university"
         },
         {
           "firstName": "Alex",
           "lastName": "Mariakakis",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Larsson",
           "lastName": "Omberg",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Solly",
           "lastName": "Sieberts",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Phil",
           "lastName": "Snyder",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "michael-j-fox-foundation",
         "northwestern-university",
         "university-of-rochester",
@@ -3062,70 +3062,70 @@
         {
           "firstName": "Andrea",
           "lastName": "Califano",
-          "organizations": "Columbia University"
+          "organizationIds": "columbia-university"
         },
         {
           "firstName": "Eugene",
           "lastName": "Douglass",
-          "organizations": "Columbia University"
+          "organizationIds": "columbia-university"
         },
         {
           "firstName": "Cristina",
           "lastName": "Caescu",
-          "organizations": "Columbia University"
+          "organizationIds": "columbia-university"
         },
         {
           "firstName": "Gustavo",
           "lastName": "Stolovitzky",
-          "organizations": "Icahn School of Medicine at Mount Sinai"
+          "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "National Institutes of Health"
+          "organizationIds": "national-institutes-of-health"
         },
         {
           "firstName": "Julio",
           "lastName": "Saez-Rodriguez",
-          "organizations": "Heidelberg University"
+          "organizationIds": "heidelberg-university"
         },
         {
           "firstName": "Bence",
           "lastName": "Szalai",
-          "organizations": "Semmelweis University"
+          "organizationIds": "semmelweis-university"
         },
         {
           "firstName": "Robert",
           "lastName": "Allaway",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Julie",
           "lastName": "Bletz",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Verena",
           "lastName": "Chung",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Amy",
           "lastName": "Truong",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Daniela",
           "lastName": "Gerhard",
-          "organizations": "Cancer Target Discovery And Development"
+          "organizationIds": "cancer-target-discovery-and-development"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "columbia-university"
       ],
       "grantIds": [
@@ -3147,60 +3147,60 @@
         {
           "firstName": "Thomas",
           "lastName": "Schaffter",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Tom",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Micheal",
           "lastName": "Mason",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Yooree",
           "lastName": "Chae",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Tim",
           "lastName": "Bergquist",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Yao",
           "lastName": "Yan",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Justin",
           "lastName": "Prosser",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         },
         {
           "firstName": "Sean",
           "lastName": "Mooney",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         },
         {
           "firstName": "Tim",
           "lastName": "Bergquist",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         },
         {
           "firstName": "Yao",
           "lastName": "Yan",
-          "organizations": "University of Washington"
+          "organizationIds": "university-of-washington"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "university-of-washington"
       ],
       "grantIds": [
@@ -3224,90 +3224,90 @@
         {
           "firstName": "David",
           "lastName": "Carbone",
-          "organizations": "Ohio State University"
+          "organizationIds": "ohio-state-university"
         },
         {
           "firstName": "Benjamin",
           "lastName": "Vincent",
-          "organizations": "University of North Carolina at Chapel Hill"
+          "organizationIds": "university-of-north-carolina-at-chapel-hill"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Michael",
           "lastName": "Mason",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Thomas",
           "lastName": "Yu",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Verena",
           "lastName": "Chung",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Rong",
           "lastName": "Chai",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         },
         {
           "firstName": "Han",
           "lastName": "Chang",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Scott",
           "lastName": "Chasalow",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Parul",
           "lastName": "Doshi",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "William",
           "lastName": "Geese",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Daniel",
           "lastName": "Huston",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Oleg",
           "lastName": "Moiseyenko",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Jenine",
           "lastName": "Sanzari",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Mohammad",
           "lastName": "Shaikh",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Joseph",
           "lastName": "Szustakowski",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         },
         {
           "firstName": "Doreen",
           "lastName": "Valentine",
-          "organizations": "Bristol Myers Squibb"
+          "organizationIds": "bristol-myers-squibb"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
         "bristol-myers-squibb"
       ],
       "grantIds": [
@@ -3328,15 +3328,15 @@
         {
           "firstName": "Doug",
           "lastName": "Bassett",
-          "organizations": "Celgene"
+          "organizationIds": "celgene"
         },
         {
           "firstName": "Justin",
           "lastName": "Guinney",
-          "organizations": "Sage Bionetworks"
+          "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProvider": [
+      "dataProviders": [
 
       ],
       "grantIds": [

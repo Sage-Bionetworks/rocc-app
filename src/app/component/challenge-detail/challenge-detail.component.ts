@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { Challenge } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({

@@ -1,55 +1,22 @@
-<div class= "container">
-  <span>Challenge Preview Box</span>
-<mat-card *ngFor="let c of challenges">
-  <mat-card-header>
-    <mat-card-title>{{c.name}}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <div class = "tags-box">
-      <button mat-raised-button class = "tags" *ngFor="let tag of c.tagsIds">{{tag}}</button>
-    </div>
-    <div class = "info">
-      <div class = "intro">{{c.description}}</div>
-      <div fxLayoutAlign="center center" class = "dates">
-        <span><strong>Start Date</strong>: {{c.startDate}}</span>
-        <span><strong>End Date</strong>:   {{c.endDate}}</span>
-      </div>
-    </div>  
-  </mat-card-content>
-</mat-card>  
-
-
-
-
-
-</div>
-<!-- <mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card> -->
-<!-- <div class="container">
-<div *ngFor="let c of challenges">
-    <label >
-        <span> {{c.name}} </span>
-    </label>
-    <div>
-        <label *ngFor="let tag of c.tagsIds">
-        <span>{{tag}} </span>
-    </label>
-    </div>
-</div> -->
+<mat-tab-group (selectedTabChange)="tabMonitor($event)" animationDuration="0ms">
+  <mat-tab *ngFor="let tabName of tabLabelList" label="{{tabName}}">
+    <mat-card *ngFor="let c of newChallenges">
+      <div mat-card-avatar class="synapse-icon"></div>
+      <mat-card-header>
+        <mat-card-title>{{c.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="tags-box">
+          <button mat-raised-button class="tags" *ngFor="let tag of c.tagsIds">{{tag}}</button>
+        </div>
+        <div class="info">
+          <div class="intros">{{c.description}}</div>
+          <div class="dates">
+            <span><b>Start Date</b>{{c.startDate}}</span>
+            <span><b>End Date</b>{{c.endDate}}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { ExploreComponent } from './explore.component';
+import { PreviewCardModule } from 'src/app/components/preview-card/preview-card.module';
 
 const routes: Routes = [
   { path: '', component: ExploreComponent }
@@ -13,7 +14,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    FooterModule
+    FooterModule,
+    PreviewCardModule
   ],
   exports: [ExploreComponent]
 })
