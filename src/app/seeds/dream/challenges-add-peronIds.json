@@ -1,0 +1,1492 @@
+{
+  "challenges": [
+    {
+      "name": "Network Topology and Parameter Inference",
+      "description": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and\npredict outcomes of perturbations in Systems Biology models.",
+      "summary": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and\npredict outcomes of perturbations in Systems Biology models.",
+      "startDate": "2012-06-01",
+      "endDate": "2012-10-01",
+      "url": "https://www.synapse.org/#!Synapse:syn2821735",
+      "status": "closed",
+      "tagIds": [
+        "network-topology",
+        "parameter-inference"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Breast Cancer Prognosis",
+      "description": "The goal of the breast cancer prognosis Challenge is to assess the accuracy of computational models designed to predict breast cancer survival, based on clinical information about the patient's tumor as well as genome-wide molecular profiling data including gene expression an ...",
+      "summary": "The goal of the breast cancer prognosis Challenge is to assess the accuracy of computational models designed to predict breast cancer survival, based on clinical information about the patient's tumor as well as genome-wide molecular profiling data including gene expression and copy number profiles.",
+      "startDate": "2012-07-12",
+      "endDate": "2012-10-15",
+      "url": "https://www.synapse.org/#!Synapse:syn2813426",
+      "status": "closed",
+      "tagIds": [
+        "breast",
+        "cancer"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "bc-cancer-research-centre",
+        "cancer-research-uk",
+        "oslo-university-hospital"
+      ],
+      "grantIds": [
+        "Integrating cancer datasets for predictive model development and training"
+      ]
+    },
+    {
+      "name": "Phil Bowen ALS Prediction Prize4Life",
+      "description": "Amyotrophic Lateral Sclerosis (ALS)–also known as Lou Gehrig’s disease (in the US) or Motor Neurone disease (outside the US)–is a fatal neurological disease causing death of the nerve cells in the brain and spinal cord which control voluntary muscle movements. This leaves pat ...",
+      "summary": "Amyotrophic Lateral Sclerosis (ALS)–also known as Lou Gehrig’s disease (in the US) or Motor Neurone disease (outside the US)–is a fatal neurological disease causing death of the nerve cells in the brain and spinal cord which control voluntary muscle movements. This leaves patients struggling with a progressive loss of motor function while leaving cognitive functions intact. Symptoms usually do not manifest until the age of 50 but can start earlier. At any given time, approximately five out of every 100,000 people worldwide suffer from ALS, though there would be a higher prevalence if the disease did not progress so rapidly, leading to the death of the patient.\n\nThere are no known risk factors for developing ALS other than having a family member who has a hereditary form of the disease, which accounts for about 5-10% of ALS patients. There is also no known cure for ALS. The only FDA-approved drug for the disease is Riluzole, which has been shown to prolong the life span of someone with ALS by a few months.\n\nThe average life span of an ALS patient is 2-5 years; however, approximately 10% of patients live significantly longer with a much slower disease progression. An example of the latter is astrophysicist Stephen Hawking, who has lived with ALS for the last 49 years.\n\nThe DREAM-Phil Bowen ALS Prediction Prize4Life (or “ALS Prediction Prize” for short) is based on the PRO-ACT database, which upon completion will contain clinical data for over 7,500 ALS patients from completed clinical trials. The entire PRO-ACT database will be available for research purposes in December 2012, and the ALS Prediction Prize will use a subset of this data. The challenge is being run by Prize4Life in collaboration with DREAM. Prize4Life is a non-profit organization whose mission is to accelerate the discovery of treatments and a cure for ALS by using powerful incentives to attract new people and drive innovation. Prize4Life is developing the PRO-ACT database in collaboration with the Northeast ALS Consortium (NEALS) with funding from the ALS Therapy Alliance, and with generous data donations from both biopharma companies and academicians. Prize4Life shares DREAM’s vision of scientific advancement through collaboration and open access challenges. Since it’s founding in 2006, Prize4Life has run several ALS related challenges with prizes of up to a million dollars. For more information on Prize4Life please visit Prize4Life.org.",
+      "startDate": "2012-06-01",
+      "endDate": "2012-10-01",
+      "url": "https://www.synapse.org/#!Synapse:syn2826267",
+      "status": "closed",
+      "tagIds": [
+        "als"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "prize4life",
+        "massachusetts-general-hospital",
+        "als-therapy-alliance",
+        "northeast-als-consortium"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Drug Sensitivity and Drug Synergy Prediction",
+      "description": "Development of new cancer therapeutics currently requires a long and protracted process of experimentation and testing. Human cancer cell lines represent a good model to help identify associations between molecular subtypes, pathways, and drug response. In recent years there  ...",
+      "summary": "Development of new cancer therapeutics currently requires a long and protracted process of experimentation and testing. Human cancer cell lines represent a good model to help identify associations between molecular subtypes, pathways, and drug response. In recent years there have been several efforts to generate genomic profiles of collections of cell lines and to determine their response to panels of candidate therapeutic compounds. These data provide the basis for the development of in silico models of sensitivity based either on the unperturbed genetic potential of a cancer cell, or by using perturbation data to incorporate knowledge of actual cell response. Making predictions from either of these data profiles will be beneficial in identifying single and combinatorial chemotherapeutic response in patients. To that end, the present challenge seeks computational methods, derived from the molecular profiling of cell lines both in a static state and in response to perturbation of a specific drug, that predict the sensitivity of the same or similar compounds in different cell lines. Methodology invoked in this challenge will be useful not only in therapeutic decision-making but also understanding the basic mechanisms of drug mode of action and drug-drug interaction.",
+      "startDate": "2012-06-01",
+      "endDate": "2012-10-01",
+      "url": "https://www.synapse.org/#!Synapse:syn2785778",
+      "status": "closed",
+      "tagIds": [
+        "drug",
+        "drug-sensitivity",
+        "drug-synergy"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "oregon-health-and-science-university",
+        "columbia-university"
+      ],
+      "grantIds": [
+        "Multiscale Analysis of Genomic and Cellular Networks"
+      ]
+    },
+    {
+      "name": "NIEHS-NCATS-UNC Toxicogenetics",
+      "description": "This challenge is designed to build predictive models of cytotoxicity as mediated by exposure to environmental toxicants and drugs. To approach this question, we will provide a dataset containing cytotoxicity estimates as measured in lymphoblastoid cell lines derived from 884 ...",
+      "summary": "This challenge is designed to build predictive models of cytotoxicity as mediated by exposure to environmental toxicants and drugs. To approach this question, we will provide a dataset containing cytotoxicity estimates as measured in lymphoblastoid cell lines derived from 884 individuals following in vitro exposure to 156 chemical compounds. In subchallenge 1, participants will be asked to model interindividual variability in cytotoxicity based on genomic profiles in order to predict cytotoxicity in unknown individuals. In subchallenge 2, participants will be asked to predict population-level parameters of cytotoxicity across chemicals based on structural attributes of compounds in order to predict median cytotoxicity and mean variance in toxicity for unknown compounds.",
+      "startDate": "2013-06-10",
+      "endDate": "2013-09-15",
+      "url": "https://www.synapse.org/#!Synapse:syn1761567",
+      "status": "closed",
+      "tagIds": [
+        "drug",
+        "toxicogenenetics"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "international-genome-sample-resource"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Whole-Cell Parameter Estimation",
+      "description": "The goal of this challenge is to explore and compare innovative approaches to parameter estimation of large, heterogeneous computational models. Participants are encouraged to develop and/or apply optimization methods, including the selection of the most informative experimen ...",
+      "summary": "The goal of this challenge is to explore and compare innovative approaches to parameter estimation of large, heterogeneous computational models. Participants are encouraged to develop and/or apply optimization methods, including the selection of the most informative experiments. The organizers encourage participants to form teams to collaboratively solve the challenge.",
+      "startDate": "2013-06-10",
+      "endDate": "2013-09-23",
+      "url": "https://www.synapse.org/#!Synapse:syn1876068",
+      "status": "closed",
+      "tagIds": [
+        "whole-cell-parameter"
+      ],
+      "organizerIds": [
+        "tv6ivdui6mhgib1q9dwaflr3",
+        "8ej7ks3rbxn0fn9n5jdjt5ac",
+        "szty13edb0jatt1gy2qr0b3y",
+        "45bgrr2xyrbeliy1lal6padj",
+        "tnxskw4zd4c8f1dx2goivcat",
+        "z0zjberik50jf1q57ye4j8w5",
+        "u4npsnzd8xpijf32424461m0",
+        "8gp1t3ci9ynid3tkqzelkwp6",
+        "ti5wt90nfppxu61mwuussuf7",
+        "og1r6h58ur7jcg2eq4r89948",
+        "uj3dgkqtfgkl4bm7gvtj9eso",
+        "ufbf4yvo57l59dku68x49bdx",
+        "1drtveeh6cp7ng7yaerb0kcw",
+        "8j1q1093fbcwt1slhuscebqx",
+        "1ug4wedvw6o66av3bdzhgp36",
+        "yel1fnzcvhcnl1s26gjnlq6x",
+        "mykkzhpzqkilj9d4jex0io7c",
+        "37f76oexc3szvr879hmmrew4",
+        "i96z5rr0m2ywq8fwpkvcjm54",
+        "dbvsjdfrk3tkq9sm5qvw73n9",
+        "wehyf5kcbddgdt2zg06zpu1o",
+        "32f0w8h0rwz0byk9thuq0aci"
+      ],
+      "dataProviderIds": [
+
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "HPN-DREAM Breast Cancer Network Inference",
+      "description": "The overall goal of the Heritage-DREAM breast cancer network inference challenge is to quickly and effectively advance our ability to infer causal signaling networks and predict protein phosphorylation dynamics in cancer. We provide extensive training data from experiments on ...",
+      "summary": "The overall goal of the Heritage-DREAM breast cancer network inference challenge is to quickly and effectively advance our ability to infer causal signaling networks and predict protein phosphorylation dynamics in cancer. We provide extensive training data from experiments on four breast cancer cell lines stimulated with various ligands. The data comprise protein abundance time-courses under inhibitor perturbations.",
+      "startDate": "2013-06-10",
+      "endDate": "2013-09-16",
+      "url": "https://www.synapse.org/#!Synapse:syn1720047",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "breast-cancer",
+        "network-inference",
+        "signaling"
+      ],
+      "organizerIds": [
+        "nl0xfx8g7yxg9m75ob1gvf00",
+        "aueyixdk0bp0joh7izalk70u",
+        "8rtqcy7s393wy2mdepvi8db5",
+        "tp4fl9ep6aribxa2ocb2yvkq",
+        "qrbun91bjaxijs9opeab55w9",
+        "hczea5nbem26m3hs7pi4kntb",
+        "4fo794m8muyiuqbz0qyzyncb",
+        "cx1vjxvvfc58l6c0vs9fkqzk",
+        "it7wb1fhvitt8iv65brbg05o",
+        "vp9mtg356hjvssd1rsfe2ivo",
+        "tgd3so0qgitrfrt4lm1qijll",
+        "ob0178gfjyoimrhgwrwrcsrl",
+        "v8d4fw1hf6sd05svw6o6h2ef",
+        "9ovmaksq9ko14miqh973agfa",
+        "cg5vgwyks9alf4vurr1zmhn2"
+      ],
+      "dataProviderIds": [
+
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Rheumatoid Arthritis Responder",
+      "description": "The goal of this project is to use a crowd-based competition framework to develop a validated molecular predictor of anti-TNF response in RA. There is an increasing need for predictors of response to therapy in inflammatory disease driven by the observation that most clinical ...",
+      "summary": "The goal of this project is to use a crowd-based competition framework to develop a validated molecular predictor of anti-TNF response in RA. There is an increasing need for predictors of response to therapy in inflammatory disease driven by the observation that most clinically defined diseases show variable response and the growing availability of alternative therapies. Anti-TNF drugs in Rheumatoid Arthritis represent a prototypical example of this opportunity. A number of studies have tried, over the past decade, to develop a robust predictor of response. We believe the time is right to try a different approach to developing such a biomarker with a crowd-sourced collaborative competition. This is based on DREAM and Sage Bionetworks' experience with running competitions and the availability of new unpublished large-scale data relating to RA treatment response.THIS CHALLENGE RAN FROM FEBRUARY TO OCTOBER 2014 AND IS NOW CLOSED.",
+      "startDate": "2014-02-10",
+      "endDate": "2014-06-04",
+      "url": "https://www.synapse.org/#!Synapse:syn1734172",
+      "status": "closed",
+      "tagIds": [
+        "arthritis",
+        "rheumatoid-arthritis"
+      ],
+      "organizerIds": [
+        "8dtdaj37k9t8khcri2a5q5sv",
+        "2qrh3q9au21ecrixqmgw0952",
+        "cu1qdebzydq69rqolrvko94g",
+        "ina3kkf4z3iom43b20n93kjm",
+        "82yaq900f05680wx0526mznu",
+        "yafgqua8zosvxt4rrtzx28kh",
+        "6sxa121i1o2m58n3e9rux5b2",
+        "p7sndg4608qjb2up0qqzemdj",
+        "n6d1rzb2excm7suz2go4mkl3",
+        "867kkro33d50i5p48zs88qpt",
+        "ljy65t6b8vf6ch9ea7c97icc",
+        "bustonti1z3wfd0zecl6zpup",
+        "7ndmouqlmb51ictt3a6dyer8",
+        "h898ogimf2lp3intzw8mdytq",
+        "iss0nb9ou1kwrpwj59f43u40",
+        "paaklkazfvupzkvbqurppakb",
+        "4oq23udxbewo0930fjh01ar5"
+      ],
+      "dataProviderIds": [
+        "corevitas"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "ICGC-TCGA DREAM Genomic Mutation Calling",
+      "description": "The ICGC-TCGA DREAM Genomic Mutation Calling Challenge (herein, The Challenge) is an international effort to improve standard methods for identifying cancer-associated mutations and rearrangements in whole-genome sequencing (WGS) data. Leaders of the International Cancer Geno ...",
+      "summary": "The ICGC-TCGA DREAM Genomic Mutation Calling Challenge (herein, The Challenge) is an international effort to improve standard methods for identifying cancer-associated mutations and rearrangements in whole-genome sequencing (WGS) data. Leaders of the International Cancer Genome Consortium (ICGC) and The Cancer Genome Atlas (TCGA) cancer genomics projects are joining with Sage Bionetworks and IBM-DREAM to initiate this innovative open crowd-sourced Challenge [1-3].",
+      "startDate": "2013-12-14",
+      "endDate": "2016-04-22",
+      "url": "https://www.synapse.org/#!Synapse:syn312572",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "mutation-calling"
+      ],
+      "organizerIds": [
+        "qdaspkyyqf010mc8an0pn87p",
+        "nmcl38os1evp83n57l91j0sy",
+        "3yg9ptlfctq81pquocebr03s",
+        "19u3verwd0m5taoigp4skub9",
+        "h9z8tvtdeh68aktiae8nmo0d",
+        "tbrkutto8wnu77uwnfop674j",
+        "6gsuok1hlgeamkzddo80588r",
+        "k0tjs96tih8a1y32aglf0od9",
+        "ayh01al6l2kqk0q3y8ye3qqm",
+        "803qx78ha589j1wvxe7wsbg7",
+        "p8w8qqzltk6jifh7n8cpgi8b"
+      ],
+      "dataProviderIds": [
+        "international-cancer-genome-consortium"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Acute Myeloid Leukemia Outcome Prediction",
+      "description": "The AML Outcome Prediction Challenge provides a unique opportunity to access and interpret a rich dataset for AML patients that includes clinical covariates, select gene mutation status and proteomic data. Capitalizing on a unique AML reverse phase protein array (RPPA) datase ...",
+      "summary": "The AML Outcome Prediction Challenge provides a unique opportunity to access and interpret a rich dataset for AML patients that includes clinical covariates, select gene mutation status and proteomic data. Capitalizing on a unique AML reverse phase protein array (RPPA) dataset obtained at M.D. Anderson Cancer Center that captures 271 measurements for each patient, participants of the DREAM 9 Challenge will help uncover what drives AML. Outcomes of this Challenge have the potential to be used immediately to tailor therapies for newly diagnosed leukemia patients and to accelerate the development of new drugs for leukemia.",
+      "startDate": "2014-06-02",
+      "endDate": "2014-09-15",
+      "url": "https://www.synapse.org/#!Synapse:syn2455683",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "aml"
+      ],
+      "organizerIds": [
+        "sqomgqik4cclgeh3pdk4mqpo",
+        "z8nvdysjgrhiochao4a7gxgg",
+        "02hddtzyvnx5nv1ylilek0eh",
+        "y7b34uhsd0g1287fjjb8wfjp",
+        "l1xwkhw4bmfuagqb5nea20e4",
+        "z8lytdsxiphgmrz3gdz3xu5f",
+        "10jh5kob5gwamk7pgnisfnkc",
+        "pardvsp1rudpc4jy3zzwmt2u",
+        "jvg08gbpyykebg3a4p7glsov",
+        "770t909prcpz6w7vluwz9l1f",
+        "xhymeh1h6l8tqyqz3c1l0e6d",
+        "l86cc3rxng82ha6mey4n2kn8",
+        "fl2wj6ui1ho1lhl7dcpz49zy",
+        "095irgsqanll6afirs08eahg",
+        "9eyl8kmjh6t27lu5y5qi1h3n",
+        "vy4ny4nyb4149j278bjy9019",
+        "8vuv8lgwp01u754658e9c9my",
+        "1t7ojt1md3iplo0f06mfnum5",
+        "96nj7zq592bvrdtnaw0xr7zt",
+        "fsagfdpszwy0dpbzcrma6wy3",
+        "nytc1b4hikcebilz82vajfos",
+        "5kzlsdcwk4e3s72vdu1goy1i"
+      ],
+      "dataProviderIds": [
+        "md-anderson-cancer-center"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Broad-DREAM Gene Essentiality Prediction",
+      "description": "The goal of this project is to use a crowd-based competition to develop predictive models that can infer gene dependency scores in cancer cells (genes that are essential to cancer cell viability when suppressed) using features of those cell lines. An additional goal is to fin ...",
+      "summary": "The goal of this project is to use a crowd-based competition to develop predictive models that can infer gene dependency scores in cancer cells (genes that are essential to cancer cell viability when suppressed) using features of those cell lines. An additional goal is to find a small set of biomarkers (gene expression, copy number, and mutation features) that can best predict a single gene or set of genes.",
+      "startDate": "2014-06-02",
+      "endDate": "2014-09-29",
+      "url": "https://www.synapse.org/#!Synapse:syn2384331",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "targeted-cancer-therapy"
+      ],
+      "organizerIds": [
+        "t56e14dqnzi29tgf8opjog8t",
+        "kuhqybuu748r6lkmbkjjuhxv",
+        "qae66669grp05ojsvmxjxcuf",
+        "fii57rcn0m46a6hvp8pjrz2s",
+        "1xzhxufgqdcjewcoy539wdle",
+        "2jrhf1mphf6zrftz9mfxi49j",
+        "vze2hbndj6aa8dng0o8yivof",
+        "7gs6qahhwr462pvypiaatuka",
+        "do9wdc3x7rz9k26xhs3yqob3",
+        "mzwq3ohqand88eydhal4eavh",
+        "thsdsze6pq7lsy6s9wp5fn4g",
+        "l82b5gqsi4u1ygcb8jdah1ev",
+        "u97h6mw00ne2li0teq3bloes",
+        "914nvxrw535yapdc86nja0r5",
+        "nv0f3z9ujoop245pm1kltzgt",
+        "duer9c37ssxbbqtq4czodiog",
+        "5wcrv2c0c5l2c425059l3l26",
+        "s6e5gevpf8hieasgi94ydaz5",
+        "4dswmz3m0yyheyy6fb0hlvby",
+        "53k31ku3g8kmkvu7kkww0p0x",
+        "jnkxts88k2isqhft7m6a4qni"
+      ],
+      "dataProviderIds": [
+        "broad-institute",
+        "dana-farber-cancer-institute"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Alzheimer's Disease Big Data",
+      "description": "The goal of the Alzheimer's Disease Big Data DREAM Challenge #1 (AD#1) was to apply an open science approach to rapidly identify accurate predictive AD biomarkers that can be used by the scientific, industrial and regulatory communities to improve AD diagnosis and treatment.  ...",
+      "summary": "The goal of the Alzheimer's Disease Big Data DREAM Challenge #1 (AD#1) was to apply an open science approach to rapidly identify accurate predictive AD biomarkers that can be used by the scientific, industrial and regulatory communities to improve AD diagnosis and treatment. AD#1 will be the first in a series of AD Data Challenges to leverage genetics and brain imaging in combination with cognitive assessments, biomarkers and demographic information from cohorts ranging from cognitively normal to mild cognitively impaired to individuals with AD.",
+      "startDate": "2014-06-02",
+      "endDate": "2014-10-17",
+      "url": "https://www.synapse.org/#!Synapse:syn2290704",
+      "status": "closed",
+      "tagIds": [
+        "alzheimers"
+      ],
+      "organizerIds": [
+        "zndqltchwtq7kf2odayksxda",
+        "vpcqjzzd9b3fcftbn6y0nqov",
+        "ruqjqtzomohnhmsbaayzatty",
+        "lv3qsxhpcq6kh2unw07rzrol",
+        "p2s8dktk7zq99uzi2v2v1tvi",
+        "0ur1odf41wob9vuiqexrd33m",
+        "0jo6h3nxg5qdj35d8ihuev0j",
+        "dg4c6bp3vuoc4wwveuy3hxmn",
+        "zxtyjhnkhknjuffu2ek7doxv",
+        "78hrrrs9ftxtgbsu5kxet1qg",
+        "417orgpd7p13lm0382e4cu6b",
+        "pas0li387pv61pmf3r2i2pky",
+        "02sw3x9ppqx81oz1durqxy8d",
+        "kc3793o6qzk1n2re9p5lr0jv",
+        "jymsk77mlrg0j9ztb4p0i4bp",
+        "zujw9ezcxmw6sfb3f0m5kqdo",
+        "v5ktq9lg73s5xbfk0gkdlzog",
+        "4r29wd1uaamb4fjgqo2r5dnw",
+        "jabtn2vfals6pwxqe90xaybc"
+      ],
+      "dataProviderIds": [
+        "rush-university-medical-center",
+        "alzheimers-disease-neuroimaging-initiative",
+        "innovative-medicines-initiative"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "DREAM Olfaction Prediction",
+      "description": "The goal of the DREAM Olfaction Prediction Challenge is to find models that can predict how a molecule smells from its physical and chemical features. A model that allows us to predict a smell from a molecule will provide fundamental insights into how odor chemicals are trans ...",
+      "summary": "The goal of the DREAM Olfaction Prediction Challenge is to find models that can predict how a molecule smells from its physical and chemical features. A model that allows us to predict a smell from a molecule will provide fundamental insights into how odor chemicals are transformed into a smell percept in the brain. Further, being able to predict how a chemical smells will greatly accelerate the design of new molecules to be used as fragrances. Currently, fragrance chemists synthesize many molecules to obtain a new ingredient, but most of these will not have the desired qualities.",
+      "startDate": "2015-01-15",
+      "endDate": "2015-05-01",
+      "url": "https://www.synapse.org/#!Synapse:syn2811262",
+      "status": "closed",
+      "tagIds": [
+        "olfaction"
+      ],
+      "organizerIds": [
+        "7for0bxa912nue2p7t07f7mg",
+        "y89idnlsdh983dbo9is0z41i",
+        "x3t5umwj72dkttsb55hbx0vr",
+        "rlex8z28ux8cnli75qwonp2w",
+        "3qsli40d982zj278ifr3jwze",
+        "3aafno4rlcrkr2u4f0yspeci",
+        "6zo121spw4mtbowbyfum7h4b",
+        "siaux68gta576x7nt6gc8rvv",
+        "l3fanf3p66famlee9l2t0lqn",
+        "2mew5ztwfg19801yttutuwlv",
+        "jvybztfmfflu9nds9ykq0asa",
+        "fg7c9oegbizfuyd15xw93d85",
+        "25ehqna4w03ahet03i7usof2"
+      ],
+      "dataProviderIds": [
+        "rockefeller-university"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Prostate Cancer",
+      "description": "This challenge will attempt to improve the prediction of survival and toxicity of docetaxel treatment in patients with metastatic castration-resistant prostate cancer (mCRPC). The primary benefit of this Challenge will be to establish new quantitative benchmarks for prognosti ...",
+      "summary": "This challenge will attempt to improve the prediction of survival and toxicity of docetaxel treatment in patients with metastatic castration-resistant prostate cancer (mCRPC). The primary benefit of this Challenge will be to establish new quantitative benchmarks for prognostic modeling in mCRPC, with a potential impact for clinical decision making and ultimately understanding the mechanism of disease progression. Participating teams will be asked to submit predictive models based on clinical variables from the comparator arms of four phase III clinical trials with over 2,000 mCRPC patients treated with first-line docetaxel. The comparator arm of a clinical trial represents the patients that receive a treatment that is considered to be effective. This arm of the clinical trial is used to evaluate the effectiveness of the new therapy being tested.",
+      "startDate": "2015-03-16",
+      "endDate": "2015-07-27",
+      "url": "https://www.synapse.org/#!Synapse:syn2813558",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "prostate-cancer"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "astrazeneca",
+        "celgene",
+        "sanofi",
+        "memorial-sloan-kettering-cancer-center"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "ALS Stratification Prize4Life",
+      "description": "As illustrated by the overview figure below, (a) Challenge Data includes data from ALS clinical trials and ALS registries. ALS clinical trials consist of patients from clinical trials available open access on the PRO-ACT database and patients from 6 clinical trials not yet ad ...",
+      "summary": "As illustrated by the overview figure below, (a) Challenge Data includes data from ALS clinical trials and ALS registries. ALS clinical trials consist of patients from clinical trials available open access on the PRO-ACT database and patients from 6 clinical trials not yet added into the database. Data from ALS registries was collected from patients in national ALS registries. (b) Data is divided into three subsets: training data provided to solvers in full, leaderboard, and validation data that is available only to the organizers and is reserved for the scoring of the challenge. (c) The goal of this challenge is then to predict the Clinical Targets, i.e. the disease progression as ALSFRS slope as well as survival. (d) For Building the Models, participants create two algorithms - one that selects features and one that predicts outcomes. To perform predictions, data from a given patient (1) is fed into the selector (2). The selector selects 6 features and a cluster/model ID (3), e.g. from a stratification of training set patients into clusters c1, c2 and c3. Selected features and cluster ID are read by the predictor in order to predict ALSFRS slope or survival (4). Finally, the participants' algorithms are tested by the organizers on the validation dataset for each subchallenge.",
+      "startDate": "2015-06-22",
+      "endDate": "2015-10-04",
+      "url": "https://www.synapse.org/#!Synapse:syn2873386",
+      "status": "closed",
+      "tagIds": [
+        "als"
+      ],
+      "organizerIds": [
+        "cs7e77gyir5ifpxn062lltzk",
+        "5c7x6tq93e5nxr9w85zva74h",
+        "kidp795qatj74y3mcdn7cr8s",
+        "e0ifsrp5o8pvgmbufzybv5cg",
+        "pcx43x584ntdqkv1puoptckn",
+        "8pzvfqe756vms275xq292pbi",
+        "i9qwn3vhycpalm26zdcyx6il",
+        "xsr7zkujx9lb75v3gc97ofmk",
+        "amilp7p6wkpojrkrh6a7cmf2",
+        "tbalpc125g69inr1i3opy00w",
+        "jp647fxnilal6b8e4hzimul0"
+      ],
+      "dataProviderIds": [
+        "prize4life",
+        "neurological-clinical-research-institute",
+        "northeast-als-consortium"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "AstraZeneca-Sanger Drug Combination Prediction",
+      "description": "To accelerate the understanding of drug synergy, AstraZeneca has partnered with the European Bioinformatic Institute, the Sanger Institute, Sage Bionetworks, and the distributed DREAM community to launch the AstraZeneca-Sanger Drug Combination Prediction DREAM Challenge. This ...",
+      "summary": "To accelerate the understanding of drug synergy, AstraZeneca has partnered with the European Bioinformatic Institute, the Sanger Institute, Sage Bionetworks, and the distributed DREAM community to launch the AstraZeneca-Sanger Drug Combination Prediction DREAM Challenge. This Challenge is designed to explore fundamental traits that underlie effective combination treatments and synergistic drug behavior using baseline genomic data, i.e. data collected pretreatment. As the basis of the Challenge, AstraZeneca is releasing ~11.5k experimentally tested drug combinations measuring cell viability over 118 drugs and 85 cancer cell lines (primarily colon, lung, and breast), and monotherapy drug response data for each drug and cell line. Moreover, in coordination with the Genomics of Drug Sensitivity in Cancer and COSMIC teams at the Sanger Institute, genomic data including gene expression, mutations (whole exome), copy-number alterations, and methylation data will be released into the public domain and made accessible for Challenge participants through the Challenge data repository.",
+      "startDate": "2015-09-03",
+      "endDate": "2016-03-14",
+      "url": "https://www.synapse.org/#!Synapse:syn4231880",
+      "status": "closed",
+      "tagIds": [
+        "drug",
+        "drug-synergy"
+      ],
+      "organizerIds": [
+        "t5f71cbw0h5ve6yb77bsoehk",
+        "b34hthmcyeku8m91t6jnts8p",
+        "e4ehg8g3k2fst1mdrjcvh5nx",
+        "8m9tgbq0sajhvl90sa1ze3r9",
+        "84tx8nl9cln74r9u6tb8717b",
+        "cq3kkoryfzpp8eeletyhgt3f",
+        "gns8cwmjpd51rpwe7qvilg2e",
+        "u9q2cz730x96i4kgwb8rxlln",
+        "g1gw3ug2w549vv6so0cm921k",
+        "t595lzkv5ozwlu8vlfmd8gd2"
+      ],
+      "dataProviderIds": [
+        "astrazeneca",
+        "wellcome-sanger-institute",
+        "bellvitge-institute-for-biomedical-research"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "SMC-DNA Meta",
+      "description": "The goal of this Challenge is to identify the most accurate meta-pipeline for somatic mutation detection, and establish the state-of-the-art. The algorithms in this Challenge must use as input mutations predicted by one or more variant callers and output mutation calls associ ...",
+      "summary": "The goal of this Challenge is to identify the most accurate meta-pipeline for somatic mutation detection, and establish the state-of-the-art. The algorithms in this Challenge must use as input mutations predicted by one or more variant callers and output mutation calls associated with cancer. An additional goal is to highlight the complementarity of the calling algorithms and help understand their individual advantages/deficiencies.",
+      "startDate": "2015-08-17",
+      "endDate": "2016-04-10",
+      "url": "https://www.synapse.org/#!Synapse:syn4588939",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "somatic-mutation-calling"
+      ],
+      "organizerIds": [
+        "q7c3bytmz0g7f4a9dfjmlrlr",
+        "09ftl26hu3stvly54gab7tyz",
+        "1amme07bbtvq8ubh8h4d6eet",
+        "h9sjrp8mitpndgubdscrjpw6",
+        "qywxu8bj7j6wf7ej253n5z1a",
+        "q4feohuwjdzo4zfke2mchvyi",
+        "r33d3ttuwwgr9r4lekrdweu2"
+      ],
+      "dataProviderIds": [
+        "international-cancer-genome-consortium"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "SMC-Het",
+      "description": "The ICGC-TCGA DREAM Somatic Mutation Calling - Tumour Heterogeneity Challenge (SMC-Het) is an international effort to improve standard methods for subclonal reconstruction: to quantify and genotype each individual cell population present within a tumor. Leaders of the Interna ...",
+      "summary": "The ICGC-TCGA DREAM Somatic Mutation Calling - Tumour Heterogeneity Challenge (SMC-Het) is an international effort to improve standard methods for subclonal reconstruction: to quantify and genotype each individual cell population present within a tumor. Leaders of the International Cancer Genome Consortium (ICGC) and The Cancer Genome Atlas (TCGA) cancer genomics projects are joining with Sage Bionetworks and IBM-DREAM to initiate this innovative open crowd-sourced Challenge [1-3].",
+      "startDate": "2015-11-16",
+      "endDate": "2016-06-30",
+      "url": "https://www.synapse.org/#!Synapse:syn2813581",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "somatic-mutation-calling",
+        "tumor-heterogeneity"
+      ],
+      "organizerIds": [
+        "dblyfraeem6jvvma1tic6c7j",
+        "4y056qkflgkecs33fkbydz01",
+        "azfap1r25c7n6d4h16zbc4qg",
+        "vzembx07io68urlnybcla0l3",
+        "xhmwh45fty0qii84ije1hdiu",
+        "p4qd78ldngvsus8y4m8us5mg",
+        "na8tap7h53s2zmynpqbrv478",
+        "pyrxtdgxpwsfupqdu2z1j125",
+        "lrbaohlsswd78qmdrbjj5l0z",
+        "hlfyz20uski8gbzi4wxb131y",
+        "xuki6xa6khp6ich0rxg39xy5"
+      ],
+      "dataProviderIds": [
+        "ontario-institute-for-cancer-research",
+        "international-cancer-genome-consortium",
+        "ontario-institute-for-cancer-research"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Respiratory Viral",
+      "description": "Respiratory viruses are highly infectious and cause acute illness in millions of people every year. However, there is wide variation in the physiologic response to exposure at the individual level. Some people that are exposed to virus are able to completely avoid infection.  ...",
+      "summary": "Respiratory viruses are highly infectious and cause acute illness in millions of people every year. However, there is wide variation in the physiologic response to exposure at the individual level. Some people that are exposed to virus are able to completely avoid infection. Others contract virus but are able to fight it off without exhibiting any symptoms of illness such as coughing, sneezing, sore throat or fever. It is not well understood what characteristics may protect individuals from respiratory viral infection. These individual responses are likely influenced by multiple processes including both the basal state of the human host upon exposure and the dynamics of host immune response in the early hours immediately following exposure. Many of these processes play out in the peripheral blood through activation and recruitment of circulating immune cells. Global gene expression patterns measured in peripheral blood at the time of symptom onset - several days after viral exposure - are highly correlated with symptomatic manifestation of illness. However, these later-stage observations do not necessarily reflect the spectrum of early time point immune processes that predict eventual infection. Because signal amplitude is small at these early time points, the ability to detect early predictors of viral response has not yet been possible in any individual study. By combining data collected across 7 studies and leveraging the state-of-the-art in analytical algorithms, this Challenge aims to develop early predictors of susceptibility and contagiousness based on expression profiles that were collected prior to and at early time points prior to, and following viral exposure.",
+      "startDate": "2016-05-16",
+      "endDate": "2016-09-28",
+      "url": "https://www.synapse.org/#!Synapse:syn5647810",
+      "status": "closed",
+      "tagIds": [
+        "viral",
+        "respiratory-viral"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Disease Module Identification",
+      "description": "The Disease Module Identification DREAM Challenge is an open community effort to systematically assess module identification methods on a panel of state-of-the-art genomic networks and leverage the “wisdom of crowds” to discover novel modules and pathways underlying complex d ...",
+      "summary": "The Disease Module Identification DREAM Challenge is an open community effort to systematically assess module identification methods on a panel of state-of-the-art genomic networks and leverage the “wisdom of crowds” to discover novel modules and pathways underlying complex diseases.",
+      "startDate": "2016-06-24",
+      "endDate": "2016-10-01",
+      "url": "https://www.synapse.org/#!Synapse:syn6156761",
+      "status": "closed",
+      "tagIds": [
+        "module-identification"
+      ],
+      "organizerIds": [
+        "4mx0zwv0iavsgyi6ycof6mbd",
+        "4k7v5e0smpakkleux88kecqh",
+        "1zh9n2uln1mbocjq6a1qmobc",
+        "zrn3fx6l0lvgm6jb6h7zrpxj",
+        "nth9fhvqwtfmiia3r28q6nqc",
+        "6l78o8aiip2cwkyekjc0i9w5",
+        "6h7yrkhzu0f449czb63qkdqr",
+        "35rgpfzvdpu8ruo8kjzboyf8",
+        "kqylw908vmgzjqpjpa178gtt",
+        "3t4o5b980hdt1odgkl7xn8eh",
+        "yaexk7b8rmkg2mzb4s64yf16",
+        "uj1zotz4b90ju3tpupgrmss6",
+        "o24grdkl7j56yu307rw25ah4",
+        "kdd70eraqkgud39amvh9wl54",
+        "nqn7ps0cmc7s76bprpqa079v"
+      ],
+      "dataProviderIds": [
+        "university-of-lausanne"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "ENCODE",
+      "description": "Transcription factors (TFs) are regulatory proteins that bind specific DNA sequence patterns (motifs) in the genome and affect transcription rates of target genes. Binding sites of TFs differ across cell types and experimental conditions. Chromatin immunoprecipitation followe ...",
+      "summary": "Transcription factors (TFs) are regulatory proteins that bind specific DNA sequence patterns (motifs) in the genome and affect transcription rates of target genes. Binding sites of TFs differ across cell types and experimental conditions. Chromatin immunoprecipitation followed by sequencing (ChIP-seq) is an experimental method that is commonly used to obtain the genome-wide binding profile of a TF of interest in a specific cell type/condition. However, profiling the binding landscape of every TF in every cell type/condition is infeasible due to constraints on cost, material and effort. Hence, accurate computational prediction of in vivo TF binding sites is critical to complement experimental results.",
+      "startDate": "2016-07-07",
+      "endDate": "2017-01-11",
+      "url": "https://www.synapse.org/#!Synapse:syn6131484",
+      "status": "closed",
+      "tagIds": [
+        "transcription-factor"
+      ],
+      "organizerIds": [
+        "tst3wg4lxsks4xj5ioqkugz3",
+        "1iu2q585g38r9ypr88votswo",
+        "a3br050j8ddqdstg16ro1a6n",
+        "51rgf2ioj9grz6iuutxkp3er",
+        "o4l3n8shcawl67o7kozzjs34",
+        "jz859lqvec2cf91qw7thwuj7",
+        "3punld6set9qsjj2uh0gsq5w",
+        "70rd1sasz788079zeezar93c",
+        "k3qtigq9crms243pl4sk0k89",
+        "lzd6mxy6rk12vku9fdtbydjh",
+        "jwh718n2p81z17jxs8hz2ie4"
+      ],
+      "dataProviderIds": [
+        "encyclopedia-of-dna-elements-data-coordinating-center"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Idea",
+      "description": "The DREAM Idea Challenge is designed to collaboratively shape and enable the solution of a question fundamental to improving human health. In the process, all proposals and their evaluation will be made publicly available for the explicit purpose of connecting modelers and ex ...",
+      "summary": "The DREAM Idea Challenge is designed to collaboratively shape and enable the solution of a question fundamental to improving human health. In the process, all proposals and their evaluation will be made publicly available for the explicit purpose of connecting modelers and experimentalists who want to address the same question. This Wall of Models will enable new collaborations, and help turn every good modeling idea into a success story. It will further serve as a basis for new DREAM challenges.",
+      "startDate": "2016-06-15",
+      "endDate": "2017-04-30",
+      "url": "https://www.synapse.org/#!Synapse:syn5659209",
+      "status": "closed",
+      "tagIds": [
+        "proposals",
+        "human-health"
+      ],
+      "organizerIds": [
+        "pbz3oqsxv053wrj97x60m0j8",
+        "choen5vy1dxwdjgwpvuen0j2",
+        "vc73gyjy2hkjas667i1xbvj1",
+        "zvnhbttpzpbrandtgl855o3n",
+        "gq0tkot1x1l2f62rabfao1ce",
+        "nc0gaawrieg9zgg1k02r53co",
+        "92h1vifzon9ymo9bl0w176ov",
+        "1nzuchn414ueqkho15ydy1ow",
+        "ki7b3lzm49hltdl4vt0okq4o"
+      ],
+      "dataProviderIds": [
+        "duke-university",
+        "durham-va-medical-center"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "SMC-RNA",
+      "description": "The ICGC-TCGA DREAM Somatic Mutation Calling - RNA Challenge (SMC-RNA) is an international effort to improve standard methods for identifying cancer-associated rearrangements in RNA sequencing (RNA-seq) data. Leaders of the International Cancer Genome Consortium (ICGC) and Th ...",
+      "summary": "The ICGC-TCGA DREAM Somatic Mutation Calling - RNA Challenge (SMC-RNA) is an international effort to improve standard methods for identifying cancer-associated rearrangements in RNA sequencing (RNA-seq) data. Leaders of the International Cancer Genome Consortium (ICGC) and The Cancer Genome Atlas (TCGA) cancer genomics projects are joining with Sage Bionetworks and IBM-DREAM to initiate this innovative open crowd-sourced Challenge [1-3].",
+      "startDate": "2016-06-29",
+      "endDate": "2017-05-02",
+      "url": "https://www.synapse.org/#!Synapse:syn2813589",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "somatic-mutation-calling"
+      ],
+      "organizerIds": [
+        "gdr50vzbglqvrq4gf5jwkvwg",
+        "7tpauzpv39iuai961qlrmfox",
+        "fg7pdv4jv0pnpcb40uvrg40h",
+        "a5xmdhuv1yuywfg934oltspu",
+        "zcoz4a3fcarkbw1l54h715n8",
+        "cuoyiy058jqtaq3spe06aqbp",
+        "m7xw251b9kkcotln47hqkjzj",
+        "dlilz3qzwt1tyafp8fmishgh",
+        "col488x2abr76vb644v1nry7",
+        "5o2wkmtlfrjdcugqw4kc41p9"
+      ],
+      "dataProviderIds": [
+        "international-cancer-genome-consortium",
+        "national-cancer-institute",
+        "ontario-institute-for-cancer-research"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Digital Mammography",
+      "description": "The Digital Mammography DREAM Challenge will attempt to improve the predictive accuracy of digital mammography for the early detection of breast cancer. The primary benefit of this Challenge will be to establish new quantitative tools - machine learning, deep learning or othe ...",
+      "summary": "The Digital Mammography DREAM Challenge will attempt to improve the predictive accuracy of digital mammography for the early detection of breast cancer. The primary benefit of this Challenge will be to establish new quantitative tools - machine learning, deep learning or other - that can help decrease the recall rate of screening mammography, with a potential impact on shifting the balance of routine breast cancer screening towards more benefit and less harm. Participating teams will be asked to submit predictive models based on over 640,000 de-identified digital mammography images from over 86000 subjects, with corresponding clinical variables.",
+      "startDate": "2016-11-18",
+      "endDate": "2017-05-16",
+      "url": "https://www.synapse.org/#!Synapse:syn4224222",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "breast-cancer",
+        "mammography"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "breast-cancer-surveillance-consortium",
+        "icahn-school-of-medicine-at-mount-sinai"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Multiple Myeloma",
+      "description": "Multiple myeloma (MM) is a cancer of the plasma cells in the bone marrow, with about 25,000 newly diagnosed patients per year in the United States alone. The disease's clinical course depends on a complex interplay of clinical traits and molecular characteristics of the plasm ...",
+      "summary": "Multiple myeloma (MM) is a cancer of the plasma cells in the bone marrow, with about 25,000 newly diagnosed patients per year in the United States alone. The disease's clinical course depends on a complex interplay of clinical traits and molecular characteristics of the plasma cells.1 Since risk-adapted therapy is becoming standard of care, there is an urgent need for a precise risk stratification model to assist in therapeutic decision-making and research. While progress has been made, there remains a significant opportunity to improve patient stratification to optimize treatment and to develop new therapies for high-risk patients. A DREAM Challenge represents a chance not only to integrate available data and analytical approaches to tackle this important problem, but also provides the ability to benchmark potential methods to identify those with the greatest potential to yield patient care benefits in the future.",
+      "startDate": "2017-06-30",
+      "endDate": "2017-11-08",
+      "url": "https://www.synapse.org/#!Synapse:syn6187098",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "myeloma"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "university-of-arkansas-for-medical-sciences",
+        "dana-farber-cancer-institute",
+        "h-lee-moffitt-cancer-center-and-research-institute",
+        "heidelberg-university",
+        "medical-research-council"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "GA4GH/DREAM Workflow Execution",
+      "description": "The highly distributed and disparate nature of genomic and clinical data generated around the world presents an enormous challenge for those scientists who wish to integrate and analyze these data. The sheer volume of data often exceeds the capacity for storage at any one sit ...",
+      "summary": "The highly distributed and disparate nature of genomic and clinical data generated around the world presents an enormous challenge for those scientists who wish to integrate and analyze these data. The sheer volume of data often exceeds the capacity for storage at any one site and prohibits the efficient transfer between sites. To address this challenge, researchers must bring their computation to the data. Numerous groups are now developing technologies and best practice methodologies for running portable and reproducible genomic analysis pipelines as well as tools and APIs for discovering genomic analysis resources. Software development, deployment, and sharing efforts in these groups commonly rely on the use of modular workflow pipelines and virtualization based on Docker containers and related tools.",
+      "startDate": "2017-07-21",
+      "endDate": "2017-12-31",
+      "url": "https://www.synapse.org/#!Synapse:syn8507133",
+      "status": "closed",
+      "tagIds": [
+        "workflow-execution"
+      ],
+      "organizerIds": [
+        "59hh5x7t5sy1r7hjhd9eacg5",
+        "dyzongpwwtwkc140e4ngwyu2",
+        "i114q6weygnjeqttsycpu7k3",
+        "k8v0gespjnbg2tu3nqwsi6sa",
+        "qw25hi4y2h2ez0nhr6d2k647",
+        "hbqkbik3v4srr28w6a5vqt8y",
+        "ofwltdabkj5oow1wn6761mbe",
+        "icl4oxfvsbwu64ccd6v6tgks",
+        "7qv7bg01x62cfkonei3c1spp"
+      ],
+      "dataProviderIds": [
+        "national-cancer-institute",
+        "harvard-university",
+        "stanford-university",
+        "cincinnati-childrens-hospital-medical-center",
+        "knoweng",
+        "university-of-illinois-urbana-champaign",
+        "university-of-california-santa-cruz",
+        "ontario-institute-for-cancer-research",
+        "international-cancer-genome-consortium",
+        "broad-institute"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Parkinsons Disease Digital Biomarker",
+      "description": "The Parkinson’s Disease Digital Biomarker DREAM Challenge is a first of it's kind challenge, designed to benchmark methods for the processing of sensor data for development of digital signatures reflective of Parkinson's Disease. Participants will be provided with raw sensor  ...",
+      "summary": "The Parkinson’s Disease Digital Biomarker DREAM Challenge is a first of it's kind challenge, designed to benchmark methods for the processing of sensor data for development of digital signatures reflective of Parkinson's Disease. Participants will be provided with raw sensor (accelerometer, gyroscope, and magnetometer) time series data recorded during the performance of pre-specified motor tasks, and will be asked to extract data features which are predictive of PD pathology. In contrast to traditional DREAM challenges, this one will focus on feature extraction rather than predictive modeling, and submissions will be evaluated based on their ability to predict disease phenotype using an array of standard machine learning algorithms.",
+      "startDate": "2017-07-06",
+      "endDate": "2017-11-10",
+      "url": "https://www.synapse.org/#!Synapse:syn8717496",
+      "status": "closed",
+      "tagIds": [
+        "parkinsons"
+      ],
+      "organizerIds": [
+        "npcotyyhm9fo0q6yjv7ummjk",
+        "9413p4q55zgdp7j5a162g2zv",
+        "qviss9t1ibmti0k52q4s7cd6",
+        "0tn3bdxbdoh12rnnvtxloc1b",
+        "2bmib7eyg56c7k02kpsbg4rd",
+        "8zgowb2bbupi3wtuj5n6gqhx",
+        "z1ustz2rmv44am65s8rbkky7",
+        "6ovgezms29sv9arivfaqwwcu",
+        "cybsybnmurznmetd275cdl3m",
+        "00pgtxd4ru2ce7oi601dh3xq",
+        "0tubcy0jdgj11vxb7e56imyp",
+        "vvbg7b1981mkk3jvmnvvnq57",
+        "p7ags2l8cgx8cjqxwvsmg3u4",
+        "wn0s4k4hypz6nub5l1f3fgg8"
+      ],
+      "dataProviderIds": [
+        "michael-j-fox-foundation",
+        "sage-bionetworks"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "NCI-CPTAC Proteogenomics",
+      "description": "Cancer is driven by aberrations in the genome [1,2], and these alterations manifest themselves largely in the changes in the structure and abundance of proteins, the main functional gene products. Hence, characterization and analyses of alterations in the proteome has the pro ...",
+      "summary": "Cancer is driven by aberrations in the genome [1,2], and these alterations manifest themselves largely in the changes in the structure and abundance of proteins, the main functional gene products. Hence, characterization and analyses of alterations in the proteome has the promise to shed light into cancer development and may improve development of both biomarkers and therapeutics. Measuring the proteome is very challenging, but recent rapid technology developments in mass spectrometry are enabling deep proteomics analysis [3]. Multiple initiatives have been launched to take advantage of this development to characterize the proteome of tumours, such as the Clinical Proteomic Tumor Analysis Consortium (CPTAC). These efforts hold the promise to revolutionize cancer research, but this will only be possible if the community develops computational tools powerful enough to extract the most information from the proteome, and to understand the association between genome, transcriptome and proteome in tumors.\n  \n To address this issue we have created a community-based collaborative competition: The NCI-CPTAC DREAM Proteogenomics Challenge. The challenge will use public and novel proteogenomic data generated by the CPTAC to try to answer fundamental questions about how different levels of biological signal relate to one another. In particular, we focus on understanding:\n \n Can one impute missing values in proteomics data given observed proteins?\n Can one predict abundance of any given protein from mRNA and genetic data?\n Can one predict the phosphoproteomic data, using proteomic, mRNA and genetic data?",
+      "startDate": "2017-06-26",
+      "endDate": "2017-11-20",
+      "url": "https://www.synapse.org/#!Synapse:syn8228304",
+      "status": "closed",
+      "tagIds": [
+        "proteogenomics"
+      ],
+      "organizerIds": [
+        "p7td8rtjomgd3vb9rfe6ks8h",
+        "4w6wji1066bx7cije44egw18",
+        "ua6ojuh0z5hi5edlrvaghdx2",
+        "ckang2mztr98mpwxob8kyr2r",
+        "7irtsnfjmvjtzd1zrinyao1m",
+        "leayj3a3oftv881wb7q4v4g2",
+        "w2evdls228td63cj1m2k468c",
+        "wcmt3r690q6m6o9wbl2lbeqn",
+        "z9yj4xm81esezgkmp2nzxzdh",
+        "o88nv60q0u8umx68ugglfnja",
+        "7s64g2mc7tbjeyulpxqyzbpg",
+        "xypzjbrzldv711bxxld56drn",
+        "1l0t3nthl60tivtdfcvseo8e",
+        "3b48z6d7zf3kv326s2n4h5n9",
+        "dt8s4xnfave9mwpvgbghb4z7",
+        "t2pepq9toqih1315dkqita9j"
+      ],
+      "dataProviderIds": [
+        "clinical-proteomic-tumor-analysis-consortium"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Multi-Targeting Drug",
+      "description": "The objective of this challenge is to incentivize development of methods for predicting compounds that bind to multiple targets. In particular, methods that are generalizable to multiple prediction problems are sought. To achieve this, participants will be asked to predict 2  ...",
+      "summary": "The objective of this challenge is to incentivize development of methods for predicting compounds that bind to multiple targets. In particular, methods that are generalizable to multiple prediction problems are sought. To achieve this, participants will be asked to predict 2 separate compounds, each having specific targets to which they should bind, and a list of anti-targets to avoid. Participants should use the same methods to produce answers for questions 1 and 2.",
+      "startDate": "2017-10-05",
+      "endDate": "2018-02-26",
+      "url": "https://www.synapse.org/#!Synapse:syn8404040",
+      "status": "closed",
+      "tagIds": [
+        "drug",
+        "multi-targeting-drug"
+      ],
+      "organizerIds": [
+        "1hamui49zxga0azz0l1hhotq",
+        "iibc6ytc81ihjjascrknhqwd",
+        "bkn045ufa99erfyz8mh2yca4",
+        "3hgwjcnzlnu6ocp54j4oip63",
+        "hv6zaqsv5o74j845eqx9c394",
+        "js7rwjb5tvekeuvkm63lhtax",
+        "zd5xqdrdspiqr3w1brdcny0i",
+        "b397fa06sohp3bm342t8ru82"
+      ],
+      "dataProviderIds": [
+        "icahn-school-of-medicine-at-mount-sinai"
+      ],
+      "grantIds": [
+        "A New Disease Platform Leveraging Complex Drosophila and Mammalian Models"
+      ]
+    },
+    {
+      "name": "Single Cell Transcriptomics",
+      "description": "In this Challenge on Single-Cell Transcriptomics, participants will reconstruct the location of single cells in the Drosophila embryo using single-cell transcriptomic data. Data will be made available in late August and participating challenge teams can work on the data and s ...",
+      "summary": "In this Challenge on Single-Cell Transcriptomics, participants will reconstruct the location of single cells in the Drosophila embryo using single-cell transcriptomic data. Data will be made available in late August and participating challenge teams can work on the data and submit their results previous to the DREAM Conference. The best performers will be announced at the DREAM conference on Dec 8.",
+      "startDate": "2018-09-04",
+      "endDate": "2018-11-21",
+      "url": "https://www.synapse.org/#!Synapse:syn15665609",
+      "status": "closed",
+      "tagIds": [
+        "transcriptomics",
+        "single-cell"
+      ],
+      "organizerIds": [
+        "h3oj11ri3tkfcnx74b8ltw8a",
+        "ijif0n8p087bwcg8088bul87",
+        "cipcd8jl1gcnl9zo8n1mkosd",
+        "kgrnsnrqqau3vsy0lek6qu4b",
+        "tx8zec3l9t6dsd2tuun16z4o",
+        "dp03a51wwgw3zi8nqzzcmn6h",
+        "5j7vhb6uw94oiwc0dkw14pi1",
+        "t4rlgt4y5x5c7n5d1xmbrnnj",
+        "gblo3u9i6k9pfwn3nxg2qd89",
+        "hiqy8q5pf2wv1sy6zt6e2s1p",
+        "hen8hkq2estr8b1g9js8xqms"
+      ],
+      "dataProviderIds": [
+        "max-delbruck-center-for-molecular-medicine"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "IDG Drug-Kinase Binding",
+      "description": "This IDG-DREAM Drug-Kinase Binding Prediction Challenge seeks to evaluate the power of statistical and machine learning models as a systematic and cost-effective means for catalyzing compound-target interaction mapping efforts by prioritizing most potent interactions for furt ...",
+      "summary": "This IDG-DREAM Drug-Kinase Binding Prediction Challenge seeks to evaluate the power of statistical and machine learning models as a systematic and cost-effective means for catalyzing compound-target interaction mapping efforts by prioritizing most potent interactions for further experimental evaluation. The Challenge will focus on kinase inhibitors, due to their clinical importance [2], and will be implemented in a screening-based, pre-competitive drug discovery project in collaboration with theIlluminating the Druggable Genome (IDG) Kinase-focused Data and Resource Generation Center, consortium, with the aim to establish kinome-wide target profiles of small-molecule agents, with the goal of extending the druggability of the human kinome space.",
+      "startDate": "2018-10-01",
+      "endDate": "2019-04-18",
+      "url": "https://www.synapse.org/#!Synapse:syn15667962",
+      "status": "closed",
+      "tagIds": [
+        "drug",
+        "drug-kinase-binding"
+      ],
+      "organizerIds": [
+        "r2dz08c8c8xgnmppctvjulhl",
+        "nea7vw6oowe97sxfk8u0l9bn",
+        "ei76zk0900ihvwcw54z51jhl",
+        "r5wv0iqm5869sk1qwqyaqmf2",
+        "9nz7sf1fk989j8qlui7x2l8g",
+        "e5d7vjt1xvoqxxu0hbwopo3q",
+        "5kq8jgjyacnk7fmx97nrtcwo",
+        "qvh8zvegd6dextyywas33bg1",
+        "gg7vml81fbgp9lyzuh33sykc",
+        "lokju7szher2o8ejkqndlaiy",
+        "fisydzrahyq390ft54yh5kmf"
+      ],
+      "dataProviderIds": [
+        "unc-eshelman-school-of-pharmacy"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Malaria",
+      "description": "The Malaria DREAM Challenge is open to anyone interested in contributing to the development of computational models that address important problems in advancing the fight against malaria. The overall goal of the first Malaria DREAM Challenge is to predict Artemisinin (Art) dr ...",
+      "summary": "The Malaria DREAM Challenge is open to anyone interested in contributing to the development of computational models that address important problems in advancing the fight against malaria. The overall goal of the first Malaria DREAM Challenge is to predict Artemisinin (Art) drug resistance level of a test set of malaria parasites using their in vitro transcription data and a training set consisting of published in vivo and unpublished in vitrotranscriptomes. The in vivodataset consists of ~1000 transcription samples from various geographic locations covering a wide range of life cycles and resistance levels, with other accompanying data such as patient age, geographic location, Art combination therapy used, etc [Mok et al (2015) Science]. The in vitro transcription dataset consists of 55 isolates, with transcription collected at two timepoints (6 and 24 hours post-invasion), in the absence or presence of an Art perturbation, for two biological replicates using a custom microarray at the Ferdig lab. Using these transcription datasets, participants will be asked to predict three different resistance states of a subset of the 55 in vitro isolate samples; 50% inhibitory concentration values (IC50), patient clearance half-life (PC1/2), and categorical resistance state (resistant/sensitive).",
+      "startDate": "2019-04-30",
+      "endDate": "2019-08-15",
+      "url": "https://www.synapse.org/#!Synapse:syn16924919",
+      "status": "closed",
+      "tagIds": [
+        "malaria"
+      ],
+      "organizerIds": [
+        "rewqtu8qtyx730c224vxw7hs",
+        "1j6whpp4euwu46xqvhdf36wk",
+        "xid5s724jfss88vhcez4pvjg",
+        "a9zxgbbcjyx14a53syn773zl",
+        "laiwy1q5uz2ympbwqvv3qvqp",
+        "lhp1lbyzsny8javndoun8qvg",
+        "g7n6tggsh6p2ujglt2f6guse",
+        "wmkszjj06ir4s1fdj05kksos",
+        "jhnlj2nlp9xr107lc3si0ymb",
+        "c4irr8nkudxj8slrsja6t3v1",
+        "k55yfacn1ou7jyn04o4ztm1c",
+        "2c6lwsoj3ts01wub1da02nzt",
+        "9sn94oeugzxk7zwsz9gbufzz",
+        "f1syo318lk1ai7zqsjouw1vm"
+      ],
+      "dataProviderIds": [
+        "texas-biomedical-research-institute",
+        "mahidol-oxford-tropical-medicine-research-unit",
+        "national-institutes-of-health"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Preterm Birth Prediction Challenge, Transcriptomics",
+      "description": "A basic need in pregnancy care is to establish gestational age, and inaccurate estimates may lead to unnecessary interventions and sub-optimal patient management. Current approaches to establish gestational age rely on patient’s recollection of her last menstrual period and/o ...",
+      "summary": "A basic need in pregnancy care is to establish gestational age, and inaccurate estimates may lead to unnecessary interventions and sub-optimal patient management. Current approaches to establish gestational age rely on patient’s recollection of her last menstrual period and/or ultrasound, with the latter being not only costly but also less accurate if not performed during the first trimester of pregnancy. Therefore development of an inexpensive and accurate molecular clock of pregnancy would be of benefit to patients and health care systems. Participants in sub-challenge 1 (Prediction of gestational age) will be given whole blood gene expression data collected from pregnant women to develop prediction models for the gestational age at blood draw.\n \n Another challenge in obstetrics, in both low and high-income countries, is identification and treatment of women at risk of developing the ‘great obstetrical syndromes‘. Of these, preterm birth (PTB), defined as giving birth prior to completion of 37 weeks of gestation, is the leading cause of newborn deaths and long-term complications including motor, cognitive, and behavioral impairment. Participants in sub-challenge 2 (Prediction of preterm birth) will be given whole blood gene expression data collected from pregnant women to develop prediction models to determine the risk preterm birth.",
+      "startDate": "2019-05-04",
+      "endDate": "2019-12-05",
+      "url": "https://www.synapse.org/#!Synapse:syn18380862",
+      "status": "closed",
+      "tagIds": [
+        "preterm-birth"
+      ],
+      "organizerIds": [
+        "bc6y99nvcxtxl679ehodi4im",
+        "vaphcgsx9wb3cghw6zuvtrbs",
+        "7y2exv1bd30tczynu0bk6n6i",
+        "oin4zyf0j0ka93cjj0ckys94",
+        "0bdvkqv5oe5stxo4am9tnvgh",
+        "h3pes241a1aj6jzucf8pdgef",
+        "h679xis6a9k7z9h0mioj2jgq",
+        "n581fuyyptpyk1e3hyz68rid",
+        "tx0jt3jeqvzjfw4w1hu3pwgs"
+      ],
+      "dataProviderIds": [
+        "eunice-kennedy-shriver-national-institute",
+        "wayne-state-university",
+        "march-of-dimes"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Single Cell Signaling in Breast Cancer",
+      "description": "Signaling underlines nearly every cellular event. Individual cells, even if genetically identical, respond to perturbation in different ways. This underscores the relevance of cellular heterogeneity, in particular in how cells respond to drugs. This is of high relevance since ...",
+      "summary": "Signaling underlines nearly every cellular event. Individual cells, even if genetically identical, respond to perturbation in different ways. This underscores the relevance of cellular heterogeneity, in particular in how cells respond to drugs. This is of high relevance since the fact that a subset of cells do not respond (or only weakly) to drugs can render this drug an ineffective treatment. In spite of its relevance to many diseases, comprehensive studies on the heterogeneous signaling in single cells are still lacking.\n \n We have generated the, to our knowledge, currently largest single cell signaling dataset on a panel of 67 well-characterized breast cancer cell lines by mass cytometry (3’015 conditions, ~80 mio single cells, 38 markers; Bandura et al. 2009; Bendall et al., 2011; Bodenmiller et al., 2012; Lun et al., 2017; Lun et al., 2019). These cell lines are, among others, also characterized at the genomic, transcriptomic, and proteomic level (Marcotte et al., 2016).\n \n We ask the community to use these measurements to predict the signaling responses of the cell lines to drug treatment at the single-cell level. Firstly, we ask to predict certain markers in specific single cells. Secondly, we ask to predict the time-dependent response of single cells upon treatment with drugs. Finally, we aim to predict the time-dependent response of cell lines for which only static, unperturbed data is given.\n The methods developed to answer these questions will allow us to better understand the determinants that control single-cell signaling, the heterogeneity in drug response of cancer cells, and to push the limits of signaling modeling.",
+      "startDate": "2018-08-20",
+      "endDate": "2019-11-15",
+      "url": "https://www.synapse.org/#!Synapse:syn20366914",
+      "status": "closed",
+      "tagIds": [
+        "single-cell",
+        "signaling",
+        "cancer",
+        "breast-cancer"
+      ],
+      "organizerIds": [
+        "kvs1061lozry6ds1hssxd8x4",
+        "no96x4psvt69q4qqfhxmio3s",
+        "squemlbsn6blmreqjtwirwp8",
+        "hq6m5kp4m2on72tb1zjzb4y2",
+        "e7tw268ihl3lcesyh7p1x033",
+        "fvgpcjtat6g0as523bekyth9",
+        "3bycdg2t39lx2biea37hwisa",
+        "wcwymn8x41liftlucjqtb54k",
+        "tl08bilemcowy090985by4vj",
+        "2vm6twc5ui5q4w8xwx0fhaz7",
+        "7wc6b9p1ukfvcvg98zrsy77d"
+      ],
+      "dataProviderIds": [
+        "university-of-zurich",
+        "eth-zurich"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "EHR Mortality Prediction",
+      "description": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution ( ...",
+      "summary": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution (see image from McKenna et al Science 2016).\n \n To date, however, no lineage reconstruction algorithms have been rigorously examined for their performance/robustness across diverse molecular tools, datasets, and number of cells/size of lineage trees. It also remains unclear whether new Machine-Learning algorithms that go beyond the classical ones developed for reconstructing phylogenetic trees, could consistently reconstruct cell lineages to a high degree of accuracy. The challenge - a partnership between The Allen Institute and DREAM - will comprise 3 subchallenges that consist of reconstructing cell lineage trees of different sizes and nature. In subchallenge 1, participants will be given experimental molecular data to reconstruct in vitro cell lineages of less than 100 cells. The ground truth is obtained from video-microscopy data. In subchallenge 2, participants will have to reconstruct an in silico generated tree of 1,000 cells from molecular data and using reconstructed lineages from surrogate trees of 100 cells. Finally for subchallenge 3, participants will have to reconstruct an in silico generated tree of 10,000 cells from molecular data and reconstructed cell lineages of around 1000 cells in size. Through the usage for training purposes of experimental and in silico generated data sets, the goal of this challenge is to mobilize a larger community for evaluating new optimal tree-building methods.",
+      "startDate": "2019-09-09",
+      "endDate": "2020-01-23",
+      "url": "https://www.synapse.org/#!Synapse:syn18405991",
+      "status": "closed",
+      "tagIds": [
+        "ehr",
+        "nlp"
+      ],
+      "organizerIds": [
+        "sxnlqsv49no8he5ad2ceitqe",
+        "g3bl7npg8t44k7yeaawovxxo",
+        "yvhu0l4rewjnhz3jg0jh2xu8",
+        "ec06ul8ey6gffa3r0qjh53n5",
+        "coogkwpeay6bodo2spnzozz7",
+        "e6tww3y2ro821nmx4trp5kjx",
+        "gfzve8jxv7ht00g8w9p8q5o4",
+        "hbhv5gm05ew3248rtvasggg2"
+      ],
+      "dataProviderIds": [
+        "university-of-washington"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Allen Institute Cell Lineage Reconstruction",
+      "description": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution.\n ...",
+      "summary": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution.\nTo date, however, no lineage reconstruction algorithms have been rigorously examined for their performance/robustness across diverse molecular tools, datasets, and number of cells/size of lineage trees. It also remains unclear whether new Machine-Learning algorithms that go beyond the classical ones developed for reconstructing phylogenetic trees, could consistently reconstruct cell lineages to a high degree of accuracy. The challenge - a partnership between The Allen Institute and DREAM - will comprise 3 subchallenges that consist of reconstructing cell lineage trees of different sizes and nature. In subchallenge 1, participants will be given experimental molecular data to reconstruct in vitro cell lineages of less than 100 cells. The ground truth is obtained from video-microscopy data. In subchallenge 2, participants will have to reconstruct an in silico generated tree of 1,000 cells from molecular data and using reconstructed lineages from surrogate trees of 100 cells. Finally for subchallenge 3, participants will have to reconstruct an in silico generated tree of 10,000 cells from molecular data and reconstructed cell lineages of around 1000 cells in size. Through the usage for training purposes of experimental and in silico generated data sets, the goal of this challenge is to mobilize a larger community for evaluating new optimal tree-building methods.",
+      "startDate": "2019-10-15",
+      "endDate": "2020-02-06",
+      "url": "https://www.synapse.org/#!Synapse:syn20692755",
+      "status": "closed",
+      "tagIds": [
+        "crispr",
+        "cell-lineage"
+      ],
+      "organizerIds": [
+        "pt5b3z6be9waz00t2qsepn5a",
+        "8srr4fqluj9gy8ewgujyepow",
+        "8vnxxwiuy136n9mt28nksmw6",
+        "l5myc16a9e03bx99wwm7rvqg",
+        "q7tuj5r6kd93zgisyuzr6xy6",
+        "c08ng7gas95rhxeual6ir9iz",
+        "awmt7zrwnz3n9rudwabpc0s7",
+        "611b6s11cl6fc7i7r5x50a6o",
+        "3ajginkk6vqzc0x4b1jpb908",
+        "0z0mbvwb31fjo51tvp39eoc8",
+        "0aecv258mwz0khotu0opa8lg",
+        "1f9463hi3ehvr012vdr10tia",
+        "mnx9ezxxmo1wjqrfez6cfvcc",
+        "jfkfrp60f1msh45aa27e592y",
+        "887jc789qbzjxylglqhi4y9j"
+      ],
+      "dataProviderIds": [
+        "california-institute-of-technology",
+        "londons-global-university",
+        "weizmann-institute-of-science"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Tumor Deconvolution",
+      "description": "The extent of stromal and immune cell infiltration within solid tumors has prognostic and predictive significance. Unfortunately, expression profiling of tumors has, until very recently, largely been undertaken using bulk techniques (e.g., microarray and RNA-seq). Unlike sing ...",
+      "summary": "The extent of stromal and immune cell infiltration within solid tumors has prognostic and predictive significance. Unfortunately, expression profiling of tumors has, until very recently, largely been undertaken using bulk techniques (e.g., microarray and RNA-seq). Unlike single-cell methods (e.g., single-cell RNA-seq, FACS, mass cytometry, or immunohistochemistry), bulk approaches average expression across all cells (cancer, stromal, and immune) within the sample and, hence, do not directly quantitate tumor infiltration. This information can be recovered by computational tumor deconvolution methods, which would thus allow interrogation of immune subpopulations across the large collection of public bulk expression datasets.\n \n The goal of this Challenge is to evaluate the ability of computational methods to deconvolve bulk expression data, reflecting a mixture of cell types, into individual immune components. Methods will be assessed based on in vitro and in silico admixtures specifically generated for this Challenge.",
+      "startDate": "2019-06-26",
+      "endDate": "2020-04-30",
+      "url": "https://www.synapse.org/#!Synapse:syn15589870",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "tumor-deconvolution"
+      ],
+      "organizerIds": [
+
+      ],
+      "dataProviderIds": [
+        "allen-institute",
+        "weizmann-institute-of-science",
+        "londons-global-university",
+        "california-institute-of-technology",
+        "sage-bionetworks"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "CTD2 Pancancer Drug Activity",
+      "description": "NCI Genomic Data Commons,Harvard Chan School, Blue Collar Bioinformatics,ENCODE DCC, Stanford,CCHMC, Barski Lab,KnowEnG, UIUC,UCSC,OICR, ICGC,Broad Institute, GATK",
+      "summary": "NCI Genomic Data Commons,Harvard Chan School, Blue Collar Bioinformatics,ENCODE DCC, Stanford,CCHMC, Barski Lab,KnowEnG, UIUC,UCSC,OICR, ICGC,Broad Institute, GATK",
+      "startDate": "2019-12-02",
+      "endDate": "2020-02-13",
+      "url": "https://www.synapse.org/#!Synapse:syn20968331",
+      "status": "closed",
+      "tagIds": [
+        "panacea",
+        "drug",
+        "cancer"
+      ],
+      "organizerIds": [
+        "k6xk9tlhqjdzaycccmaw8g24",
+        "539syde5v41kod3rvgdwxban",
+        "w1lprs73wz0ufbnwf6utu8rb",
+        "ej6ef61e1j277ue4ek0kzn7s",
+        "y715813tavje71fdectq4faq",
+        "myqm3zft7vj5bs3xwfz8lrov",
+        "4f4s2wsx2bxrdtldssxdi09v",
+        "vecffy9raaofxs0t31dpfwzh",
+        "f7aj6cxy290o508k788z2zbt",
+        "ue44yv2jqu7gstme40bbzlcf",
+        "yawuxbkvlv1j9oery69gpre6",
+        "sr0581r7mh8jevceaqogx7zj",
+        "k20czfwcf9yc1k2vj3qlk6i9",
+        "ewpsk2nnb52b3szn2e822mu4",
+        "pcxjbo74dzl0e3gy44wrvhru",
+        "l55igrvfbq51ujake2ved6u1",
+        "ay39htrnx3dmcnn2vhupp6tr",
+        "h2hxpaingekvr7gal5iyy612"
+      ],
+      "dataProviderIds": [
+        "columbia-university"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "CTD2 BeatAML",
+      "description": "In the era of precision medicine, AML patients have few therapeutic options, with “7 + 3” induction chemotherapy having been the standard for decades (Bertoli et al. 2017). While several agents targeting the myeloid marker CD33 or alterations in FLT3 or IDH2 have demonstrated ...",
+      "summary": "In the era of precision medicine, AML patients have few therapeutic options, with “7 + 3” induction chemotherapy having been the standard for decades (Bertoli et al. 2017). While several agents targeting the myeloid marker CD33 or alterations in FLT3 or IDH2 have demonstrated efficacy in patients (Wei and Tiong 2017), responses are uncertain in some populations (Castaigne et al. 2012) and relapse remains prevalent (Stone et al. 2017). These drugs highlight both the promise of targeted therapies in AML and the urgent need for additional treatment options that are tailored to more refined patient subpopulations in order to achieve durable responses.\n \n The BeatAML initiative was launched as a comprehensive study of the relationship between molecular alterations and ex-vivo drug sensitivity in patients with AML. One of the primary goals of this multi-center study was to develop a discovery cohort that could yield new drug target hypotheses and predictive biomarkers of therapeutic response. Patient samples were subjected to whole-exome sequencing (WES), transcriptomic sequencing (RNA-seq), and ex-vivo functional drug sensitivity screens (Tyner et al. 2018)(www.vizome.org). This rich resource should enable the discovery of molecular correlates of drug response and putative patient populations most likely to respond to targeted agents. Indeed, analysis of these data has already revealed numerous correlations of drug sensitivity or resistance with a variety of mutational subsets of disease as well as numerous gene expression signatures that correlated with drug sensitivity/resistance (Tyner et al. 2018).\n \n The goal of this challenge is to define patient subpopulations tailored to individual treatments by discovering (genomic and transcriptomic) biomarkers of drug sensitivity, as evaluated on an unpublished cohort of patients from the BeatAML project.",
+      "startDate": "2019-12-19",
+      "endDate": "2020-04-28",
+      "url": "https://www.synapse.org/#!Synapse:syn20940518",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "aml"
+      ],
+      "organizerIds": [
+        "56gbfvakyz5dlujmqnr86oo0",
+        "npcnsw0bsocaxaletij84ih5",
+        "8r82930mpvuefs0j8wwiqlqm",
+        "va5s4dw1eikoxyv5gnbwo6k4",
+        "e95vpovut4pzfgqizshlgzpd",
+        "6gxgqj83hc1ojycm5l70it4j",
+        "b2jqzptxd4st9vis9hjic4j9",
+        "amj286gjelypkkcm36cg7u3e",
+        "9d9jp4pesfj0tgll9wqtuwqk",
+        "se9hicivfh8r02nbcnm7llp7",
+        "nqxwp1w8fdbiienmwj6rkpgm",
+        "jpcfh7t8zv7u6bfzrhnmm1vx",
+        "npfph1hseyq47bodq7dwctqq",
+        "jsuo847bqfyijaxb5zr0nynx",
+        "dsx27j7tdg5n4j2gjwhysghz",
+        "m3pasj3wfmv1krx0dq3ts3cx",
+        "vqbbyl7iclb4oqea7ypmt6k2",
+        "1of3ykqvz3urta0tb7eajkkv",
+        "jisnvw9q3l6z4139swpbftz5"
+      ],
+      "dataProviderIds": [
+        "leukemia-and-lymphoma-society",
+        "oregon-health-and-science-university"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Metadata Automation",
+      "description": "The Cancer Research Data Commons (CRDC) will collate data across diverse groups of cancer researchers, each collecting biomedical data in different formats. This means the data must be retrospectively harmonized and transformed to enable this data to be submitted. In addition ...",
+      "summary": "The Cancer Research Data Commons (CRDC) will collate data across diverse groups of cancer researchers, each collecting biomedical data in different formats. This means the data must be retrospectively harmonized and transformed to enable this data to be submitted. In addition, to be findable by the broader scientific community, coherent information (metadata) is necessary about the data fields and values. Coherent metadata annotation of the data fields and their values can enable computational data transformation, query, and analysis. Creation of this type of descriptive metadata can require biomedical expertise to determine the best annotations and thus is a time-consuming and manual task which is both an obstacle and a bottleneck in data sharing and submissions.\n \n Goal: Using structured biomedical data files, challenge participants will develop tools to semi-automate annotation of metadata fields and values, using available research data annotations (e.g. caDSR CDEs) as well as established terminologies and ontologies (e.g. NCIt, LOINC, Mondo, ICD).\n \n Motivation: We aim to significantly lower the burden of adding these annotations across the data ecosystem to streamline and enable both retrospective harmonization as well as data query, discovery and interpretation. This challenge addresses this time-consuming task with semi-automated metadata annotation of structured data.",
+      "startDate": "2020-01-14",
+      "endDate": "2020-06-02",
+      "url": "https://www.synapse.org/#!Synapse:syn18065891",
+      "status": "closed",
+      "tagIds": [
+        "metadata"
+      ],
+      "organizerIds": [
+        "nytrt6bvde5adizo72vp1gab",
+        "xa5oeqyuio3qhdciqemdn32j",
+        "xca3glt85f88muhnb24tagx0",
+        "9fjy3dxd2ka97c43ddz9n0ht",
+        "ypgbmd04qot5756rgtu73jps",
+        "r2htwvqg11qx2k3go0ttjll2",
+        "ek60hc32y757gj50apin8pp0",
+        "7ys6mtwjlcwtxunj31g9f05e",
+        "wrab5solbmyys9hunoaewsgv",
+        "g9njuklaem72q36cw0w1aeu4",
+        "i51vrj8zabdykbu67u4eav8o",
+        "tu9z9sj9cr8cuyptan1iu4oy"
+      ],
+      "dataProviderIds": [
+        "apollo-network",
+        "cancer-imaging-archive"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Automated Scoring of Radiographic Joint Damage",
+      "description": "The purpose of the RA2-DREAM Challenge is to develop an automated method to quickly and accurately quantify the degree of joint damage associated with rheumatoid arthritis (RA). Based on radiographs of the hands and feet, a novel, automated scoring method could be applied bro ...",
+      "summary": "The purpose of the RA2-DREAM Challenge is to develop an automated method to quickly and accurately quantify the degree of joint damage associated with rheumatoid arthritis (RA). Based on radiographs of the hands and feet, a novel, automated scoring method could be applied broadly for patient care and research. We challenge participants to develop algorithms to automatically assess joint space narrowing and erosions using a large set of existing radiographs with damage scores generated by visual assessment of images by trained readers using standard protocols. The end result will be a generalizable, publicly available, automated method to generate accurate, reproducible and unbiased RA damage scores to replace the current tedious, expensive, and non-scalable method of scoring by human visual inspection.",
+      "startDate": "2019-11-04",
+      "endDate": "2020-05-21",
+      "url": "https://www.synapse.org/#!Synapse:syn20545111",
+      "status": "closed",
+      "tagIds": [
+        "arthritis",
+        "rheumatoid-arthritis"
+      ],
+      "organizerIds": [
+        "d1tx9b2l6vexcf0wurq05ime",
+        "z8ex2j08116s4yy1uamcr08h",
+        "wklbwy2cf10qf7k9xyxt0smq",
+        "h1r72zghgvkxj2j7v0r98i4w",
+        "ylt800jtrwef9ligzq5ccxmo",
+        "14akk2pnbcy5asa4kmpqv81p",
+        "if5jcs4bhlvlrgmngne27pbs",
+        "zz5c58gyu6a6xnbtnl5m833l",
+        "fofb96iv9vwu9ionwvzgybqr",
+        "9sgu1yl8xb7baddb276umw8r",
+        "fv7r5ti2jr0rsefl4r4uuhfc"
+      ],
+      "dataProviderIds": [
+        "university-of-alabama-at-birmingham"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "BEAT-PD",
+      "description": "Recent advances in mobile health have demonstrated great potential to leverage sensor-based technologies for quantitative, remote monitoring of health and disease - particularly for diseases affecting motor function such as Parkinson’s disease. Such approaches have been rolle ...",
+      "summary": "Recent advances in mobile health have demonstrated great potential to leverage sensor-based technologies for quantitative, remote monitoring of health and disease - particularly for diseases affecting motor function such as Parkinson’s disease. Such approaches have been rolled out using research-grade wearable sensors and, increasingly, through the use of smartphones and consumer wearables, such as smart watches and fitness trackers. These devices not only provide the ability to measure much more detailed disease phenotypes but also provide the ability to follow patients longitudinally with much higher frequency than is possible through clinical exams. However, the conversion of sensor-based data streams into digital biomarkers is complex and no methodological standards have yet evolved to guide this process.\n\nParkinson’s disease (PD) is a neurodegenerative disease that primarily affects the motor system but also exhibits other symptoms. Typical motor symptoms of the disease include tremors, slowness (bradykinesia), posture and walking perturbations, muscle rigidity and speech perturbations. Additionally, patients may experience side effects from their medication in the form of dyskinesia (involuntary movement). In the clinic, symptoms and side-effects are evaluated using physician observation and patient reports, however this infrequent assessment may not reflect a patient's typical state on an average day. Mobile sensor (accelerometers) may be useful for tracking a patient's symptom severity and response to medication, and have the potential to provide more detailed information that patients and physicians can use to make care decisions.\n\nWhile much work in this field has been done to predict symptom severity using sensor feeds during the completion of specific tasks, very little work has focused on information available from sensors worn during the course of daily living. The Biomarker and Endpoint Assessment to Track Parkinson's Disease (BEAT-PD) Challenge is a first of it's kind challenge, designed to benchmark methods for the processing of unstructured (free-living) sensor data, in order to be predictive of Parkinson's Disease severity. Participants will be provided with raw sensor (accelerometer and gyroscope) time series data recorded during the course of daily living, and will be asked to predict individuals' medication state and symptom severity.",
+      "startDate": "2020-01-13",
+      "endDate": "2020-05-13",
+      "url": "https://www.synapse.org/#!Synapse:syn20825169",
+      "status": "closed",
+      "tagIds": [
+        "parkinsons"
+      ],
+      "organizerIds": [
+        "bdma8kq41b45gx1wq7bcxfjs",
+        "ya5u6mnt67g8mszealjofuqg",
+        "6ax2vcak05ylrizfksp2gwos",
+        "14o99envln86zu0733mk640m",
+        "hdae5z2fkqzquvvfeig7d7nf",
+        "9dez000gf3819iii01hztuo8",
+        "0d483w93porrbye6r9ixzlqf",
+        "3wvebbr6lagqgl8l1y4yj7mj",
+        "mnu917pbxf5p5jsjtvphc0tq",
+        "r9mid0hmm2q94sbrbpynpc71",
+        "xeehs9yzepauius3mwsc9r8h"
+      ],
+      "dataProviderIds": [
+        "michael-j-fox-foundation",
+        "northwestern-university",
+        "university-of-rochester",
+        "university-of-alabama",
+        "university-of-cincinnati",
+        "radboud-university"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "CTD2 Pancancer Chemosensitivity",
+      "description": "Over the last two years, the Columbia CTD2 Center developed PANACEA (Pancancer Analysis of Chemical Entity Activity), a comprehensive repertoire of dose response curves and molecular profiles representative of cellular responses to drug perturbations. PANACEA covers a broad s ...",
+      "summary": "Over the last two years, the Columbia CTD2 Center developed PANACEA (Pancancer Analysis of Chemical Entity Activity), a comprehensive repertoire of dose response curves and molecular profiles representative of cellular responses to drug perturbations. PANACEA covers a broad spectrum of cellular contexts representative of poor outcome malignancies, including rare ones such as GIST sarcoma and gastroenteropancreatic neuroendocrine tumors (GEP-NETs). PANACEA is uniquely suited to support DREAM Challenges related to the elucidation of drug mechanism of action (MOA), drug sensitivity, and drug synergy.\n\nThe goal of this Challenge is to foster development and benchmarking of algorithms to predict the sensitivity, as measured by the area under the dose-response curve, of a cell line to a compound based on the baseline transcriptional profiles of the cell line.\n\nThe drug perturbational RNAseq profiles of 11 cell lines for 30 chosen compounds will be provided to challenge participants, without revealing the identity of the drugs. These profiles will be removed from any public dataset and added back only after the challenge is completed.\n\nIn addition, RNAseq and mRNA-dependency data will be provided for 515 cell-lines from the Cancer Cell-Line Encyclopedia (CCLE) and Achilles databases respectively. This challenge asks participants to combine these three datasets to predict drug-sensitivity for the 30 anonymized drugs across 515 cell-lines given the fact:\n\nPANACEA drug-perturbed RNAseq links each drug to differential-mRNA. (drug -> mRNA-change)\nAchilles data links differential-mRNA to a viability across all 515 cell-lines (mRNA-change -> viability)\nCCLE RNAseq gives the basal mRNA-expression across across all 515 cell-lines\nIn addition, we are encouraging participants to utilize large public databases in the development or training of algorithms (Subramanian et al. 2017; Barretina et al. 2012; Iorio et al. 2016), as well as insights and models developed from previous DREAM Challenges (Bansal et al. 2014; Costello et al. 2014; Menden et al. 2019). Participants will be asked to use the provided post-treatment transcriptional data to predict drug sensitivity for 30 drugs across 515 cell-lines.",
+      "startDate": "2020-04-28",
+      "endDate": "2020-07-27",
+      "url": "https://www.synapse.org/#!Synapse:syn21763589",
+      "status": "closed",
+      "tagIds": [
+        "panacea",
+        "drug",
+        "cancer"
+      ],
+      "organizerIds": [
+        "8tnjl402zeo4onic13crmklo",
+        "bk868c93cu75r8y0oys12str",
+        "u4mud7ov6i4sls3wlrq65vs4",
+        "z90om1l4ifn5m3y1dj2xjphg",
+        "tguqmjov333jsifffvgagxsr",
+        "1cwvkuhh5p361r4xtvaayd9c",
+        "aqxbt2xig5l8m1a8byu54y5i",
+        "m6pati192ivb93cn7phkblis",
+        "qc6haqqk3wwldq6hnocx30qk",
+        "iwg8vkq16ttvk9a4gh53bh1a",
+        "c3xzatxl9nwgg9pca5usa4rh",
+        "kl5ogoxqdslojczi9u7evvlp",
+        "d0a2ydhrc29jjpanfj4cyic8"
+      ],
+      "dataProviderIds": [
+        "columbia-university"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "EHR COVID-19",
+      "description": "The rapid rise of COVID-19 has challenged healthcare globally. The underlying risks and outcomes of infection are still incompletely characterized even as the world surpasses 4 million infections. Due to the importance and emergent need for better understanding of the conditi ...",
+      "summary": "The rapid rise of COVID-19 has challenged healthcare globally. The underlying risks and outcomes of infection are still incompletely characterized even as the world surpasses 4 million infections. Due to the importance and emergent need for better understanding of the condition and the development of patient specific clinical risk scores and early warning tools, we have developed a platform to support testing analytic and machine learning hypotheses on clinical data without data sharing as a platform to rapidly discover and implement approaches for care. We have previously applied this approach in the successful EHR DREAM Challenge focusing on Patient Mortality Prediction with UW Medicine.\n\nWe have the goal of incorporating machine learning and predictive algorithms into clinical care and COVID-19 is an important and highly urgent challenge. In our first iteration, we will facilitate understanding risk factors that lead to a positive test utilizing electronic health recorded data mapped to the OMOP Common Data Model. Initially, UW Medicine clinical data sets will be used. If successful, we expect to expand this benchmarking effort to include methods for predicting trajectory and mortality as well as data from additional sites.",
+      "startDate": "2020-04-30",
+      "url": "https://www.synapse.org/#!Synapse:syn21849255",
+      "status": "open",
+      "tagIds": [
+        "covid",
+        "ehr"
+      ],
+      "organizerIds": [
+        "c827lc7y2weubtbb5zh0o9he",
+        "j7vufwjih2mq7jilqo3z0bi9",
+        "4ag836zaxop4op57b9ledoib",
+        "ks5jeaa6u560ocahvd8svhvy",
+        "kdx5eiw801mgwohw4ivik5e4",
+        "pn460lix0wb4o4xvkna7cjmt",
+        "4r3tz3veeyeatf3bvceirn1t",
+        "c85plz8kh2o2ni7c70op2sed",
+        "5kxzadgj3xl3fcwg22vui16e",
+        "ew09cg7ztt12cd3n26tmx1ho",
+        "m0hy0v38fwgunzcdfnavk4b8"
+      ],
+      "dataProviderIds": [
+        "university-of-washington"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Anti-PD1 Response Prediction",
+      "description": "While durable responses and prolonged survival have been demonstrated in some lung cancer patients treated with immuno-oncology (I-O) anti-PD-1 therapy, there remains a need to improve the ability to predict which patients are more likely to receive benefit from treatment wit ...",
+      "summary": "While durable responses and prolonged survival have been demonstrated in some lung cancer patients treated with immuno-oncology (I-O) anti-PD-1 therapy, there remains a need to improve the ability to predict which patients are more likely to receive benefit from treatment with I-O. The goal of this challenge is to leverage clinical and biomarker data to develop predictive models of response to I-O therapy in lung cancer and ultimately gain insights that may facilitate potential novel monotherapies or combinations with I-O.",
+      "startDate": "2020-11-17",
+      "endDate": "2021-02-25",
+      "url": "https://www.synapse.org/#!Synapse:syn18404605",
+      "status": "closed",
+      "tagIds": [
+        "cancer",
+        "drug",
+        "pd1"
+      ],
+      "organizerIds": [
+        "cv416vemxwbxwb88ruzbgglz",
+        "3dvz7g1c20kdkdx6j9gwgkn8",
+        "d3wayg99oumc1m9fe1spc0nt",
+        "dmmylakdxz9puhs2uypavagv",
+        "inr513roy4iqzejbayd24qtj",
+        "lv6ltbsnjh7hhmllfgo1arum",
+        "4mwqu1rmxs8aldtyii46ip65",
+        "3i6mvqln3o42k0y5ry0endir",
+        "8lb8x5xni7pcg8i0auta9fh1",
+        "k5o65ekwb08yknxcjzqllhn9",
+        "9gddmoixxo72gkp4n0056uz2",
+        "higkmj272sz7lvkep5rlcami",
+        "z3i3jtw2irb9u9thgba04ujc",
+        "cgrego7glw8so4d5r08dzyw6",
+        "j7ul7pnrhqvgkgkrnmu5ipa9",
+        "4e1oleauzd6yxud6l5m0o4r0",
+        "06v2xd11jud777vjiat4bjot"
+      ],
+      "dataProviderIds": [
+        "bristol-myers-squibb"
+      ],
+      "grantIds": [
+
+      ]
+    },
+    {
+      "name": "Cancer Data Registry NLP",
+      "description": "A critical bottleneck in translational and clinical research is access to large volumes of high-quality clinical data. While structured data exist in medical EHR systems, a large portion of patient information including patient status, treatments, and outcomes is contained in ...",
+      "summary": "A critical bottleneck in translational and clinical research is access to large volumes of high-quality clinical data. While structured data exist in medical EHR systems, a large portion of patient information including patient status, treatments, and outcomes is contained in unstructured text fields. Research in Natural Language Processing (NLP) aims to unlock this hidden and often inaccessible information. However, numerous challenges exist in developing and evaluating NLP methods, much of it centered on having “gold-standard” metrics for evaluation, and access to data that may contain personal health information (PHI).\n \n This DREAM Challenge will focus on the development and evaluation of of NLP algorithms that can improve clinical trial matching and recruitment.",
+      "url": "https://www.synapse.org/#!Synapse:syn18361217",
+      "status": "upcoming",
+      "tagIds": [
+        "ehr",
+        "nlp"
+      ],
+      "organizerIds": [
+        "5il3uss8pk4y2vp9gk59moq6",
+        "mdryrphav74dq6bz480pp2ol"
+      ],
+      "dataProviderIds": [
+
+      ],
+      "grantIds": [
+
+      ]
+    }
+  ]
+}
+
