@@ -8,14 +8,14 @@
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2821735",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "network-topology",
         "parameter-inference"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
 
       ],
       "grantIds": [
@@ -30,14 +30,14 @@
       "endDate": "2012-10-15",
       "url": "https://www.synapse.org/#!Synapse:syn2813426",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "breast",
         "cancer"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "bc-cancer-research-centre",
         "cancer-research-uk",
         "oslo-university-hospital"
@@ -54,13 +54,13 @@
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2826267",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "als"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "prize4life",
         "massachusetts-general-hospital",
         "als-therapy-alliance",
@@ -78,15 +78,15 @@
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2785778",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "drug-sensitivity",
         "drug-synergy"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "oregon-health-and-science-university",
         "columbia-university"
       ],
@@ -102,14 +102,14 @@
       "endDate": "2013-09-15",
       "url": "https://www.synapse.org/#!Synapse:syn1761567",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "toxicogenenetics"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "international-genome-sample-resource"
       ],
       "grantIds": [
@@ -124,10 +124,10 @@
       "endDate": "2013-09-23",
       "url": "https://www.synapse.org/#!Synapse:syn1876068",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "whole-cell-parameter"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Brandon",
           "lastName": "Allgood",
@@ -239,7 +239,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
 
       ],
       "grantIds": [
@@ -254,13 +254,13 @@
       "endDate": "2013-09-16",
       "url": "https://www.synapse.org/#!Synapse:syn1720047",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "breast-cancer",
         "network-inference",
         "signaling"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Laura",
           "lastName": "Heiser",
@@ -337,7 +337,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
 
       ],
       "grantIds": [
@@ -352,11 +352,11 @@
       "endDate": "2014-06-04",
       "url": "https://www.synapse.org/#!Synapse:syn1734172",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "arthritis",
         "rheumatoid-arthritis"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Lara",
           "lastName": "Mangravite",
@@ -443,7 +443,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "corevitas"
       ],
       "grantIds": [
@@ -458,11 +458,11 @@
       "endDate": "2016-04-22",
       "url": "https://www.synapse.org/#!Synapse:syn312572",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "mutation-calling"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Paul C.",
           "lastName": "Boutros",
@@ -519,7 +519,7 @@
           "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "international-cancer-genome-consortium"
       ],
       "grantIds": [
@@ -534,11 +534,11 @@
       "endDate": "2014-09-15",
       "url": "https://www.synapse.org/#!Synapse:syn2455683",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "aml"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Steven M.",
           "lastName": "Kornblau",
@@ -650,7 +650,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "md-anderson-cancer-center"
       ],
       "grantIds": [
@@ -665,11 +665,11 @@
       "endDate": "2014-09-29",
       "url": "https://www.synapse.org/#!Synapse:syn2384331",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "targeted-cancer-therapy"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Mehmet",
           "lastName": "Gonen",
@@ -776,7 +776,7 @@
           "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "broad-institute",
         "dana-farber-cancer-institute"
       ],
@@ -792,10 +792,10 @@
       "endDate": "2014-10-17",
       "url": "https://www.synapse.org/#!Synapse:syn2290704",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "alzheimers"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Andy",
           "lastName": "Simmons",
@@ -892,7 +892,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "rush-university-medical-center",
         "alzheimers-disease-neuroimaging-initiative",
         "innovative-medicines-initiative"
@@ -909,10 +909,10 @@
       "endDate": "2015-05-01",
       "url": "https://www.synapse.org/#!Synapse:syn2811262",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "olfaction"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Andreas",
           "lastName": "Keller",
@@ -979,7 +979,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "rockefeller-university"
       ],
       "grantIds": [
@@ -994,14 +994,14 @@
       "endDate": "2015-07-27",
       "url": "https://www.synapse.org/#!Synapse:syn2813558",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "prostate-cancer"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "astrazeneca",
         "celgene",
         "sanofi",
@@ -1019,10 +1019,10 @@
       "endDate": "2015-10-04",
       "url": "https://www.synapse.org/#!Synapse:syn2873386",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "als"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Robert",
           "lastName": "Kuffner",
@@ -1079,7 +1079,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "prize4life",
         "neurological-clinical-research-institute",
         "northeast-als-consortium"
@@ -1096,11 +1096,11 @@
       "endDate": "2016-03-14",
       "url": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "drug-synergy"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Jonathan",
           "lastName": "Dry",
@@ -1152,7 +1152,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "astrazeneca",
         "wellcome-sanger-institute",
         "bellvitge-institute-for-biomedical-research"
@@ -1169,11 +1169,11 @@
       "endDate": "2016-04-10",
       "url": "https://www.synapse.org/#!Synapse:syn4588939",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "somatic-mutation-calling"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Paul C.",
           "lastName": "Boutros",
@@ -1210,7 +1210,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "international-cancer-genome-consortium"
       ],
       "grantIds": [
@@ -1225,12 +1225,12 @@
       "endDate": "2016-06-30",
       "url": "https://www.synapse.org/#!Synapse:syn2813581",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "somatic-mutation-calling",
         "tumor-heterogeneity"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Quaid D.",
           "lastName": "Morris",
@@ -1287,7 +1287,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "ontario-institute-for-cancer-research",
         "international-cancer-genome-consortium",
         "ontario-institute-for-cancer-research"
@@ -1304,14 +1304,14 @@
       "endDate": "2016-09-28",
       "url": "https://www.synapse.org/#!Synapse:syn5647810",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "viral",
         "respiratory-viral"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
 
       ],
       "grantIds": [
@@ -1326,10 +1326,10 @@
       "endDate": "2016-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn6156761",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "module-identification"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Daniel",
           "lastName": "Marbach",
@@ -1406,7 +1406,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "university-of-lausanne"
       ],
       "grantIds": [
@@ -1421,10 +1421,10 @@
       "endDate": "2017-01-11",
       "url": "https://www.synapse.org/#!Synapse:syn6131484",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "transcription-factor"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Anshul",
           "lastName": "Kundaje",
@@ -1481,7 +1481,7 @@
           "organizationIds": "apple-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "encyclopedia-of-dna-elements-data-coordinating-center"
       ],
       "grantIds": [
@@ -1496,11 +1496,11 @@
       "endDate": "2017-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn5659209",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "proposals",
         "human-health"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Chloe-Agathe",
           "lastName": "Azencott",
@@ -1547,7 +1547,7 @@
           "organizationIds": "ibm-research"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "duke-university",
         "durham-va-medical-center"
       ],
@@ -1563,11 +1563,11 @@
       "endDate": "2017-05-02",
       "url": "https://www.synapse.org/#!Synapse:syn2813589",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "somatic-mutation-calling"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Kyle",
           "lastName": "Ellrott",
@@ -1619,7 +1619,7 @@
           "organizationIds": "ibm-research"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "international-cancer-genome-consortium",
         "national-cancer-institute",
         "ontario-institute-for-cancer-research"
@@ -1636,15 +1636,15 @@
       "endDate": "2017-05-16",
       "url": "https://www.synapse.org/#!Synapse:syn4224222",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "breast-cancer",
         "mammography"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "breast-cancer-surveillance-consortium",
         "icahn-school-of-medicine-at-mount-sinai"
       ],
@@ -1660,14 +1660,14 @@
       "endDate": "2017-11-08",
       "url": "https://www.synapse.org/#!Synapse:syn6187098",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "myeloma"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "university-of-arkansas-for-medical-sciences",
         "dana-farber-cancer-institute",
         "h-lee-moffitt-cancer-center-and-research-institute",
@@ -1686,10 +1686,10 @@
       "endDate": "2017-12-31",
       "url": "https://www.synapse.org/#!Synapse:syn8507133",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "workflow-execution"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Brian",
           "lastName": "O'Connor",
@@ -1736,7 +1736,7 @@
           "organizationIds": "ontario-institute-for-cancer-research"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "national-cancer-institute",
         "harvard-university",
         "stanford-university",
@@ -1760,10 +1760,10 @@
       "endDate": "2017-11-10",
       "url": "https://www.synapse.org/#!Synapse:syn8717496",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "parkinsons"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Udi",
           "lastName": "Rubin",
@@ -1835,7 +1835,7 @@
           "organizationIds": "verily"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "michael-j-fox-foundation",
         "sage-bionetworks"
       ],
@@ -1851,10 +1851,10 @@
       "endDate": "2017-11-20",
       "url": "https://www.synapse.org/#!Synapse:syn8228304",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "proteogenomics"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Mi",
           "lastName": "Yang",
@@ -1936,7 +1936,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "clinical-proteomic-tumor-analysis-consortium"
       ],
       "grantIds": [
@@ -1951,11 +1951,11 @@
       "endDate": "2018-02-26",
       "url": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "multi-targeting-drug"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Ross",
           "lastName": "Cagan",
@@ -1997,7 +1997,7 @@
           "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "icahn-school-of-medicine-at-mount-sinai"
       ],
       "grantIds": [
@@ -2012,11 +2012,11 @@
       "endDate": "2018-11-21",
       "url": "https://www.synapse.org/#!Synapse:syn15665609",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "transcriptomics",
         "single-cell"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Pablo",
           "lastName": "Meyer",
@@ -2073,7 +2073,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "max-delbruck-center-for-molecular-medicine"
       ],
       "grantIds": [
@@ -2088,11 +2088,11 @@
       "endDate": "2019-04-18",
       "url": "https://www.synapse.org/#!Synapse:syn15667962",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "drug",
         "drug-kinase-binding"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Tero",
           "lastName": "Aittokallio",
@@ -2149,7 +2149,7 @@
           "organizationIds": "ibm-research"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "unc-eshelman-school-of-pharmacy"
       ],
       "grantIds": [
@@ -2164,10 +2164,10 @@
       "endDate": "2019-08-15",
       "url": "https://www.synapse.org/#!Synapse:syn16924919",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "malaria"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Michael T.",
           "lastName": "Ferdig",
@@ -2239,7 +2239,7 @@
           "organizationIds": "eck-institute-for-global-health"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "texas-biomedical-research-institute",
         "mahidol-oxford-tropical-medicine-research-unit",
         "national-institutes-of-health"
@@ -2256,10 +2256,10 @@
       "endDate": "2019-12-05",
       "url": "https://www.synapse.org/#!Synapse:syn18380862",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "preterm-birth"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Adi L.",
           "lastName": "Tarca",
@@ -2306,7 +2306,7 @@
           "organizationIds": "ibm-research"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "eunice-kennedy-shriver-national-institute",
         "wayne-state-university",
         "march-of-dimes"
@@ -2323,13 +2323,13 @@
       "endDate": "2019-11-15",
       "url": "https://www.synapse.org/#!Synapse:syn20366914",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "single-cell",
         "signaling",
         "cancer",
         "breast-cancer"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Marco",
           "lastName": "Tognetti",
@@ -2386,7 +2386,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "university-of-zurich",
         "eth-zurich"
       ],
@@ -2402,11 +2402,11 @@
       "endDate": "2020-01-23",
       "url": "https://www.synapse.org/#!Synapse:syn18405991",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "ehr",
         "nlp"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Tim",
           "lastName": "Bergquist",
@@ -2448,7 +2448,7 @@
           "organizationIds": "university-of-washington"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "university-of-washington"
       ],
       "grantIds": [
@@ -2463,11 +2463,11 @@
       "endDate": "2020-02-06",
       "url": "https://www.synapse.org/#!Synapse:syn20692755",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "crispr",
         "cell-lineage"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Pablo",
           "lastName": "Meyer",
@@ -2544,7 +2544,7 @@
           "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "california-institute-of-technology",
         "londons-global-university",
         "weizmann-institute-of-science"
@@ -2561,14 +2561,14 @@
       "endDate": "2020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn15589870",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "tumor-deconvolution"
       ],
-      "organizerIds": [
+      "organizers": [
 
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "allen-institute",
         "weizmann-institute-of-science",
         "londons-global-university",
@@ -2587,12 +2587,12 @@
       "endDate": "2020-02-13",
       "url": "https://www.synapse.org/#!Synapse:syn20968331",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "panacea",
         "drug",
         "cancer"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Andrea",
           "lastName": "Califano",
@@ -2684,7 +2684,7 @@
           "organizationIds": "rwth-aachen-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "columbia-university"
       ],
       "grantIds": [
@@ -2699,11 +2699,11 @@
       "endDate": "2020-04-28",
       "url": "https://www.synapse.org/#!Synapse:syn20940518",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "aml"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Adam",
           "lastName": "Margolin",
@@ -2800,7 +2800,7 @@
           "organizationIds": "cancer-target-discovery-and-development"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "leukemia-and-lymphoma-society",
         "oregon-health-and-science-university"
       ],
@@ -2816,10 +2816,10 @@
       "endDate": "2020-06-02",
       "url": "https://www.synapse.org/#!Synapse:syn18065891",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "metadata"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Eric",
           "lastName": "Johnson",
@@ -2881,7 +2881,7 @@
           "organizationIds": "oregon-health-and-science-university"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "apollo-network",
         "cancer-imaging-archive"
       ],
@@ -2897,11 +2897,11 @@
       "endDate": "2020-05-21",
       "url": "https://www.synapse.org/#!Synapse:syn20545111",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "arthritis",
         "rheumatoid-arthritis"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "S. Louis Bridges",
           "lastName": "Jr.",
@@ -2958,7 +2958,7 @@
           "organizationIds": "ibm-research"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "university-of-alabama-at-birmingham"
       ],
       "grantIds": [
@@ -2973,10 +2973,10 @@
       "endDate": "2020-05-13",
       "url": "https://www.synapse.org/#!Synapse:syn20825169",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "parkinsons"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Luca",
           "lastName": "Foschini",
@@ -3033,7 +3033,7 @@
           "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "michael-j-fox-foundation",
         "northwestern-university",
         "university-of-rochester",
@@ -3053,12 +3053,12 @@
       "endDate": "2020-07-27",
       "url": "https://www.synapse.org/#!Synapse:syn21763589",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "panacea",
         "drug",
         "cancer"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Andrea",
           "lastName": "Califano",
@@ -3125,7 +3125,7 @@
           "organizationIds": "cancer-target-discovery-and-development"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "columbia-university"
       ],
       "grantIds": [
@@ -3139,11 +3139,11 @@
       "startDate": "2020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "open",
-      "tagsIds": [
+      "tagIds": [
         "covid",
         "ehr"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Thomas",
           "lastName": "Schaffter",
@@ -3200,7 +3200,7 @@
           "organizationIds": "university-of-washington"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "university-of-washington"
       ],
       "grantIds": [
@@ -3215,12 +3215,12 @@
       "endDate": "2021-02-25",
       "url": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "closed",
-      "tagsIds": [
+      "tagIds": [
         "cancer",
         "drug",
         "pd1"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "David",
           "lastName": "Carbone",
@@ -3307,7 +3307,7 @@
           "organizationIds": "bristol-myers-squibb"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
         "bristol-myers-squibb"
       ],
       "grantIds": [
@@ -3320,11 +3320,11 @@
       "summary": "A critical bottleneck in translational and clinical research is access to large volumes of high-quality clinical data. While structured data exist in medical EHR systems, a large portion of patient information including patient status, treatments, and outcomes is contained in unstructured text fields. Research in Natural Language Processing (NLP) aims to unlock this hidden and often inaccessible information. However, numerous challenges exist in developing and evaluating NLP methods, much of it centered on having “gold-standard” metrics for evaluation, and access to data that may contain personal health information (PHI).\n \n This DREAM Challenge will focus on the development and evaluation of of NLP algorithms that can improve clinical trial matching and recruitment.",
       "url": "https://www.synapse.org/#!Synapse:syn18361217",
       "status": "upcoming",
-      "tagsIds": [
+      "tagIds": [
         "ehr",
         "nlp"
       ],
-      "organizerIds": [
+      "organizers": [
         {
           "firstName": "Doug",
           "lastName": "Bassett",
@@ -3336,7 +3336,7 @@
           "organizationIds": "sage-bionetworks"
         }
       ],
-      "dataProviders": [
+      "dataProviderIds": [
 
       ],
       "grantIds": [

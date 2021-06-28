@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import challengeList from '../../seeds/dream/challenges-tmp.json';
+import challengeList from '../../seeds/dream/challenges-fix.json';
 
 @Component({
   selector: 'rocc-preview-card',
