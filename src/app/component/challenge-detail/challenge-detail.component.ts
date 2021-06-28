@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Challenge } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({
@@ -9,7 +10,7 @@ import { Challenge } from '@sage-bionetworks/rocc-client-angular';
 export class ChallengeDetailComponent implements OnInit {
     @Input() challenge?: Challenge;
 
-    constructor() {}
+    constructor() { }
 
-    ngOnInit(): void {}
+    ngOnInit(): void { }
 }
