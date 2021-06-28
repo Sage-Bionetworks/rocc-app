@@ -10,7 +10,7 @@ import { Challenge } from '@sage-bionetworks/rocc-client-angular';
 export class ChallengeDetailComponent implements OnInit {
     @Input() challenge?: Challenge;
 
-    constructor() { }
+    constructor() {}
 
-    ngOnInit(): void { }
+    ngOnInit(): void {}
 }
