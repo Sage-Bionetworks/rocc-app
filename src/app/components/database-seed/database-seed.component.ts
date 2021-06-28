@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { forkJoin, of, pipe } from 'rxjs';
-import { mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { forkJoin, Observable, of } from 'rxjs';
+import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { map as _map, merge as _merge } from 'lodash';
 import {
   ChallengeService,
   GrantService,
@@ -9,14 +10,18 @@ import {
   TagService
 } from '@sage-bionetworks/rocc-client-angular';
 import {
+  Challenge,
+  ChallengeCreateRequest,
+  Grant,
   Organization,
   PersonCreateRequest,
   Tag
 } from '@sage-bionetworks/rocc-client-angular';
 import tagList from '../../seeds/dream/tags.json';
-import orgList from '../../seeds/dream/organizations.json';
+import organizationList from '../../seeds/dream/organizations.json';
 import challengeList from '../../seeds/dream/challenges.json';
-import { getCurrencySymbol } from '@angular/common';
+import grantList from '../../seeds/dream/grants.json';
+import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 
 @Component({
   selector: 'rocc-database-seed',
@@ -35,6 +40,11 @@ export class DatabaseSeedComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+
+    // Maximum number of concurrent requests sent to the ROCC API service
+    // TODO: Add to configuration file
+    const concurrency = 5;
+
     const removeDocuments$ = forkJoin([
       this.challengeService.deleteAllChallenges(),
       this.grantService.deleteAllGrants(),
@@ -43,143 +53,130 @@ export class DatabaseSeedComponent implements OnInit {
       this.tagService.deleteAllTags(),
     ]);
 
-    // Objects with pre-defined IDs
-    const tags: Tag[] = tagList.tags;
-    const organizations: Organization[] = orgList.organizations;
-    // Objects
-    const rawChallenges: any = challengeList.challenges;
-
-    const addTags$ = pipe(
-      tap(() => console.log('Creating tags')),
-      mergeMap(() => forkJoin(
-        tags.map(tag => this.tagService.createTag(tag.id, {
-          description: tag.description
-        }))
-      )),
-      tap(() => console.log('Tags created', tags))
-    );
-
-    const addOrganizations$ = pipe(
-      tap(() => console.log('Creating organizations')),
-      mergeMap(() => forkJoin(
-        organizations.map(org => this.organizationService.createOrganization(
-          org.id, {
-            name: org.name,
-            url: org.url,
-            shortName: org.shortName
-          }
-        ))
-      )),
-      tap(() => console.log('Organizations created', organizations))
-    );
-
-    const addChallenges$ = pipe(
-      tap(() => console.log('Creating challenges')),
-      mergeMap(() => forkJoin(
-        rawChallenges.map((rawchallenge: any) => of(rawchallenge).pipe(
-          tap(() => console.log("Creating organizers for challenge " + rawchallenge.name)),
-          mergeMap(() => forkJoin(
-            rawchallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson(
-              {
-                firstName: rawOrganizer.firstName,
-                lastName: rawOrganizer.lastName,
-                organizationIds: rawOrganizer.organizationIds
-              }
-            ))
-          )),
+    // Creates Tags (id pre-defined)
+    const createTags$: Observable<Tag[]> = of(tagList.tags as Tag[])
+      .pipe(
+        tap(() => console.log('Creating tags')),
+        mergeMap(tags => forkJoinConcurrent(
+          tags.map(tag => this.tagService.createTag(tag.id, {
+            description: tag.description
+          })),
+          concurrency
         )),
-          // tap(() => console.log("")),
-          // mergeMap(() => forkJoin(
-          //   rawchallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson(
-          //     {
-          //       firstName: rawOrganizer.firstName,
-          //       lastName: rawOrganizer.lastName,
-          //       organizationIds: rawOrganizer.organizationIds
-          //     }
-          //   ))
-          // )),
-        //   switchMap(() => of(null))
-        // ))
-      )),
-      tap(challenges => console.log('Challenge created', challenges))
-    );
+        mapTo(tagList.tags as Tag[]),
+        tap(tags => console.log('Tags created', tags))
+      );
 
+    // Creates Organizations (id pre-defined)
+    const createOrganizations$: Observable<Organization[]> = of(organizationList.organizations as Organization[])
+      .pipe(
+        tap(() => console.log('Creating organizations')),
+        mergeMap(organizations => forkJoinConcurrent(
+          organizations.map(org => this.organizationService.createOrganization(
+            org.id, {
+              name: org.name,
+              url: org.url,
+              shortName: org.shortName
+            }
+          )),
+          concurrency
+        )),
+        mapTo(organizationList.organizations as Organization[]),
+        tap(organizations => console.log('Organizations created', organizations))
+      );
 
+    // Creates Grants (id defined by the API service)
+    const createGrants$: Observable<Grant[]> = of(grantList.grants)
+      .pipe(
+        tap(rawGrants => console.log('Creating grants')),
+        mergeMap(rawGrants => forkJoinConcurrent(
+          rawGrants.map(rawGrant => this.grantService.createGrant({
+            name: rawGrant.name,
+            description: rawGrant.description
+          })),
+          concurrency
+        )),
+        map(grantIds => _merge(grantIds, grantList.grants) as Grant[]),
+        tap(res => console.log('Grants created', res))
+      );
 
+    // Creates the challenge organizers and returns their Person ids.
+    const createChallengeOrganizers = (rawChallenge: any): Observable<string[]> => {
+      return forkJoinConcurrent(
+          rawChallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
+              firstName: rawOrganizer.firstName,
+              lastName: rawOrganizer.lastName,
+              organizationIds: rawOrganizer.organizationIds
+            }
+          )),
+          1
+        ).pipe(
+          map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
+        );
+    };
 
+    // Returns the Grant ids for a challenge from Challenge.tmpGrantIds.
+    // TODO Consider using custom model for grants that include tmpId or give
+    // grant Ids lookup table as input
+    const getGrantIds = (challengeCreateRequest: ChallengeCreateRequest, grants: any[]): Observable<string[]> => {
+      return of(challengeCreateRequest)
+        .pipe(
+          map(rawChallenge => rawChallenge.grantIds
+            .map(grantId => grants.find(grant => grant.tmpId === grantId).id
+          ))
+        );
+    };
 
+    // Creates a Challenge.
+    const createChallenge = (rawChallenge: ChallengeCreateRequest): Observable<Challenge> => {
+      return this.challengeService.createChallenge({
+        name: rawChallenge.name,
+        description: rawChallenge.description,
+        url: rawChallenge.url,
+        status: rawChallenge.status,
+        tagIds: rawChallenge.tagIds,
+        organizerIds: rawChallenge.organizerIds,
+        dataProviderIds: rawChallenge.dataProviderIds,
+        grantIds: rawChallenge.grantIds
+      }).pipe(
+        map(res => _merge(res, rawChallenge) as Challenge),
+      );
+    };
 
-
-
-    // const addOrganizers$ = forkJoin(
-    //   challenges.map((dream: any) => {
-    //     if (dream.organizerIds.length === 0) {
-    //       return of([]); // return [] obs if a challenge does not have organizers info
-    //     } else {
-    //       return forkJoin(
-    //         dream.organizerIds.map((person: any) => {
-    //           return this.personService.createPerson(
-    //             {
-    //               firstName: person.firstName,
-    //               lastName: person.lastName,
-    //               organizationIds: person.organizationIds
-    //             }
-    //           );
-    //         })
-    //       );
-    //     }
-    //   })
-    // );
-
-    // // take inx of challenges and array of personIds
-    // const addChallenges$ = (inx: number, personIds: string[]) =>
-    //   this.challengeService.createChallenge(
-    //     {
-    //     // TODO: let latest schema allow empty array
-    //     // have not successfully test seeding challenges function
-    //     // some challenges have no `startDate`, `endDate`, `organizerIds` or `dataProviderIds` or `grantIds`
-    //     name: challenges[inx].name,
-    //     description: challenges[inx].description,
-    //     url : challenges[inx].url,
-    //     // have not tested this yet for optional start/end date
-    //     startDate: challenges[inx].startDate ? challenges[inx].startDate : null,
-    //     endDate: challenges[inx].endDate ? challenges[inx].endDate : null,
-    //     status: challenges[inx].status,
-    //     tagIds: challenges[inx].tagIds,
-    //     organizerIds: personIds,
-    //     dataProviderIds: challenges[inx].dataProviderIds,
-    //     grantIds: []
-    //     }
-    //   );
+    // Creates Challenges.
+    // TODO: Replace type any
+    const createChallenges = (challengeCreateRequests: any[], grants: Grant[]): any => {
+      return of(challengeCreateRequests)
+        .pipe(
+          tap(() => console.log('Creating challenges')),
+          mergeMap(rawChallenges => forkJoin(
+            rawChallenges.map((rawchallenge: ChallengeCreateRequest) => of(rawchallenge)
+              .pipe(
+                mergeMap(() => forkJoin({
+                  organizerIds: createChallengeOrganizers(rawchallenge),
+                  grantIds: getGrantIds(rawchallenge, grants)
+                })),
+                mergeMap(res => {
+                  rawchallenge = _merge(rawchallenge, res);
+                  return createChallenge(rawchallenge);
+                })
+              )),
+          )),
+          tap(challenges => console.log('Challenge created', challenges))
+        );
+    };
 
     console.log('Removing DB documents');
     removeDocuments$
       .pipe(
-        addTags$,
-        addOrganizations$,
-        addChallenges$
-        // tap(() => console.log('Seeding tags')),
-        // mergeMap(() => addTags$),
-        // tap(() => console.log('Seeding organizations')),
-        // mergeMap(() => addOrganizations$),
-        // tap(() => console.log('Seeding persons >>>>>>>>>>>>')),
-        // mergeMap(() => addOrganizers$),
-        // // tap(console.log),
-        // mergeMap(allPersonRes => {  // iterate all person create responses each challenges
-        //   return forkJoin(
-        //     allPersonRes.map(
-        //       (personIdObs: any) => {  // iterate each person create responses in one challenge
-        //         const inx = allPersonRes.indexOf(personIdObs);  // save inx of challenge
-        //         // save each personId from response to an array
-        //         const personIds: string[] = [];
-        //         personIdObs.map((personId: any) => personIds.push(personId.id));
-        //         console.log('Seeding challenge: ', challenges[inx].name, '>>>>>>>>>>>>');
-        //         return addChallenges$(inx, personIds);
-        //       })
-        //     );
-        // })
+        mergeMap(() => forkJoinConcurrent([
+          createTags$,
+          createOrganizations$,
+          createGrants$
+        ], 1)),
+        switchMap(res => createChallenges(challengeList.challenges, res[2])),
       ).subscribe(() => {
-        console.log('The seeding of the DB successfully completed');
+        console.log('DB seeding completed');
       }, err => console.log(err));
   }
 }
