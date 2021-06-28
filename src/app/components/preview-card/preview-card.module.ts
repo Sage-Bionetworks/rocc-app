@@ -12,4 +12,4 @@ import { MaterialsModule } from 'src/app/materials/materials.module';
   exports: [PreviewCardComponent],
   providers: []
 })
-export class PreviewCardModule {}
+export class PreviewCardModule { }
