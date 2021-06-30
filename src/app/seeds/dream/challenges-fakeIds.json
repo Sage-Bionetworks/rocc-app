@@ -2,8 +2,8 @@
   "challenges": [
     {
       "name": "Network Topology and Parameter Inference",
-      "description": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and\npredict outcomes of perturbations in Systems Biology models.",
-      "summary": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and\npredict outcomes of perturbations in Systems Biology models.",
+      "description": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
+      "summary": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
       "startDate": "2012-06-01",
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2821735",
@@ -43,13 +43,13 @@
         "oslo-university-hospital"
       ],
       "grantIds": [
-        "Integrating cancer datasets for predictive model development and training"
+        "7135747a766a79666f326465"
       ]
     },
     {
       "name": "Phil Bowen ALS Prediction Prize4Life",
       "description": "Amyotrophic Lateral Sclerosis (ALS)–also known as Lou Gehrig’s disease (in the US) or Motor Neurone disease (outside the US)–is a fatal neurological disease causing death of the nerve cells in the brain and spinal cord which control voluntary muscle movements. This leaves pat ...",
-      "summary": "Amyotrophic Lateral Sclerosis (ALS)–also known as Lou Gehrig’s disease (in the US) or Motor Neurone disease (outside the US)–is a fatal neurological disease causing death of the nerve cells in the brain and spinal cord which control voluntary muscle movements. This leaves patients struggling with a progressive loss of motor function while leaving cognitive functions intact. Symptoms usually do not manifest until the age of 50 but can start earlier. At any given time, approximately five out of every 100,000 people worldwide suffer from ALS, though there would be a higher prevalence if the disease did not progress so rapidly, leading to the death of the patient.\n\nThere are no known risk factors for developing ALS other than having a family member who has a hereditary form of the disease, which accounts for about 5-10% of ALS patients. There is also no known cure for ALS. The only FDA-approved drug for the disease is Riluzole, which has been shown to prolong the life span of someone with ALS by a few months.\n\nThe average life span of an ALS patient is 2-5 years; however, approximately 10% of patients live significantly longer with a much slower disease progression. An example of the latter is astrophysicist Stephen Hawking, who has lived with ALS for the last 49 years.\n\nThe DREAM-Phil Bowen ALS Prediction Prize4Life (or “ALS Prediction Prize” for short) is based on the PRO-ACT database, which upon completion will contain clinical data for over 7,500 ALS patients from completed clinical trials. The entire PRO-ACT database will be available for research purposes in December 2012, and the ALS Prediction Prize will use a subset of this data. The challenge is being run by Prize4Life in collaboration with DREAM. Prize4Life is a non-profit organization whose mission is to accelerate the discovery of treatments and a cure for ALS by using powerful incentives to attract new people and drive innovation. Prize4Life is developing the PRO-ACT database in collaboration with the Northeast ALS Consortium (NEALS) with funding from the ALS Therapy Alliance, and with generous data donations from both biopharma companies and academicians. Prize4Life shares DREAM’s vision of scientific advancement through collaboration and open access challenges. Since it’s founding in 2006, Prize4Life has run several ALS related challenges with prizes of up to a million dollars. For more information on Prize4Life please visit Prize4Life.org.",
+      "summary": "Amyotrophic Lateral Sclerosis (ALS)–also known as Lou Gehrig’s disease (in the US) or Motor Neurone disease (outside the US)–is a fatal neurological disease causing death of the nerve cells in the brain and spinal cord which control voluntary muscle movements. This leaves patients struggling with a progressive loss of motor function while leaving cognitive functions intact. Symptoms usually do not manifest until the age of 50 but can start earlier. At any given time, approximately five out of every 100,000 people worldwide suffer from ALS, though there would be a higher prevalence if the disease did not progress so rapidly, leading to the death of the patient.  There are no known risk factors for developing ALS other than having a family member who has a hereditary form of the disease, which accounts for about 5-10% of ALS patients. There is also no known cure for ALS. The only FDA-approved drug for the disease is Riluzole, which has been shown to prolong the life span of someone with ALS by a few months.  The average life span of an ALS patient is 2-5 years; however, approximately 10% of patients live significantly longer with a much slower disease progression. An example of the latter is astrophysicist Stephen Hawking, who has lived with ALS for the last 49 years.  The DREAM-Phil Bowen ALS Prediction Prize4Life (or “ALS Prediction Prize” for short) is based on the PRO-ACT database, which upon completion will contain clinical data for over 7,500 ALS patients from completed clinical trials. The entire PRO-ACT database will be available for research purposes in December 2012, and the ALS Prediction Prize will use a subset of this data. The challenge is being run by Prize4Life in collaboration with DREAM. Prize4Life is a non-profit organization whose mission is to accelerate the discovery of treatments and a cure for ALS by using powerful incentives to attract new people and drive innovation. Prize4Life is developing the PRO-ACT database in collaboration with the Northeast ALS Consortium (NEALS) with funding from the ALS Therapy Alliance, and with generous data donations from both biopharma companies and academicians. Prize4Life shares DREAM’s vision of scientific advancement through collaboration and open access challenges. Since it’s founding in 2006, Prize4Life has run several ALS related challenges with prizes of up to a million dollars. For more information on Prize4Life please visit Prize4Life.org.",
       "startDate": "2012-06-01",
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2826267",
@@ -91,7 +91,7 @@
         "columbia-university"
       ],
       "grantIds": [
-        "Multiscale Analysis of Genomic and Cellular Networks"
+        "31716767736e647961653835"
       ]
     },
     {
@@ -128,28 +128,28 @@
         "whole-cell-parameter"
       ],
       "organizerIds": [
-        "tv6ivdui6mhgib1q9dwaflr3",
-        "8ej7ks3rbxn0fn9n5jdjt5ac",
-        "szty13edb0jatt1gy2qr0b3y",
-        "45bgrr2xyrbeliy1lal6padj",
-        "tnxskw4zd4c8f1dx2goivcat",
-        "z0zjberik50jf1q57ye4j8w5",
-        "u4npsnzd8xpijf32424461m0",
-        "8gp1t3ci9ynid3tkqzelkwp6",
-        "ti5wt90nfppxu61mwuussuf7",
-        "og1r6h58ur7jcg2eq4r89948",
-        "uj3dgkqtfgkl4bm7gvtj9eso",
-        "ufbf4yvo57l59dku68x49bdx",
-        "1drtveeh6cp7ng7yaerb0kcw",
-        "8j1q1093fbcwt1slhuscebqx",
-        "1ug4wedvw6o66av3bdzhgp36",
-        "yel1fnzcvhcnl1s26gjnlq6x",
-        "mykkzhpzqkilj9d4jex0io7c",
-        "37f76oexc3szvr879hmmrew4",
-        "i96z5rr0m2ywq8fwpkvcjm54",
-        "dbvsjdfrk3tkq9sm5qvw73n9",
-        "wehyf5kcbddgdt2zg06zpu1o",
-        "32f0w8h0rwz0byk9thuq0aci"
+        "3062756e3077366364677274",
+        "6e64686b6971656864713067",
+        "6e3974313267706c71697533",
+        "6c73346a7a67673075767435",
+        "6a62386f6a77336e6c327261",
+        "357572613173763872707170",
+        "61616e6b647936706462706a",
+        "387074387a31323434316b31",
+        "7136786332376e3469366333",
+        "3131396e6a6e706a76307479",
+        "6371757864617679767a7638",
+        "326d623670616b6774727135",
+        "65686671397a6b7365643274",
+        "64726e3468756b37346c3175",
+        "666b71667234643468756b70",
+        "6f7a6873386a657734676e67",
+        "676a787565347238767a3572",
+        "68647130377876646b686b69",
+        "6c756c72723371766e726762",
+        "637a35377178726368687735",
+        "36626f666f6c386f73737363",
+        "6c3877733138653369676579"
       ],
       "dataProviderIds": [
 
@@ -173,21 +173,21 @@
         "signaling"
       ],
       "organizerIds": [
-        "nl0xfx8g7yxg9m75ob1gvf00",
-        "aueyixdk0bp0joh7izalk70u",
-        "8rtqcy7s393wy2mdepvi8db5",
-        "tp4fl9ep6aribxa2ocb2yvkq",
-        "qrbun91bjaxijs9opeab55w9",
-        "hczea5nbem26m3hs7pi4kntb",
-        "4fo794m8muyiuqbz0qyzyncb",
-        "cx1vjxvvfc58l6c0vs9fkqzk",
-        "it7wb1fhvitt8iv65brbg05o",
-        "vp9mtg356hjvssd1rsfe2ivo",
-        "tgd3so0qgitrfrt4lm1qijll",
-        "ob0178gfjyoimrhgwrwrcsrl",
-        "v8d4fw1hf6sd05svw6o6h2ef",
-        "9ovmaksq9ko14miqh973agfa",
-        "cg5vgwyks9alf4vurr1zmhn2"
+        "6568646268306b716c6d3030",
+        "7469396e327a616263307732",
+        "6c676171366366646b653877",
+        "6b66696f7633663577733166",
+        "6b616466776e647961783766",
+        "656936706471617633396839",
+        "64677078676a65327a613274",
+        "7a757a793839376e756f6277",
+        "757a66616175306535786230",
+        "78786f6d63327a3864683334",
+        "6e6b7274346b723035706572",
+        "6f7a697a6e666a636d346f6b",
+        "6268346e787561396234736a",
+        "73373870623567746b693034",
+        "79676338777575797670796b"
       ],
       "dataProviderIds": [
 
@@ -209,23 +209,23 @@
         "rheumatoid-arthritis"
       ],
       "organizerIds": [
-        "8dtdaj37k9t8khcri2a5q5sv",
-        "2qrh3q9au21ecrixqmgw0952",
-        "cu1qdebzydq69rqolrvko94g",
-        "ina3kkf4z3iom43b20n93kjm",
-        "82yaq900f05680wx0526mznu",
-        "yafgqua8zosvxt4rrtzx28kh",
-        "6sxa121i1o2m58n3e9rux5b2",
-        "p7sndg4608qjb2up0qqzemdj",
-        "n6d1rzb2excm7suz2go4mkl3",
-        "867kkro33d50i5p48zs88qpt",
-        "ljy65t6b8vf6ch9ea7c97icc",
-        "bustonti1z3wfd0zecl6zpup",
-        "7ndmouqlmb51ictt3a6dyer8",
-        "h898ogimf2lp3intzw8mdytq",
-        "iss0nb9ou1kwrpwj59f43u40",
-        "paaklkazfvupzkvbqurppakb",
-        "4oq23udxbewo0930fjh01ar5"
+        "77306a706e3264357a306c33",
+        "3779796a7a39323571387a6d",
+        "3465327a6f37396f79693537",
+        "6f737337636f6f6168746537",
+        "67343438706f7a7235636537",
+        "377a73777271336465766738",
+        "396970736a6f753273653431",
+        "7532706f3566707261797365",
+        "31796535786e7a62376b796b",
+        "366a6d7431706c3574643337",
+        "6e706e6866746e6f61747072",
+        "75346273377a31743576656f",
+        "39673779356d647731753436",
+        "707a307a6733336c6c326b61",
+        "7771797977396e3831627234",
+        "773565363567637766697733",
+        "7131756e6a3965796d317a69"
       ],
       "dataProviderIds": [
         "corevitas"
@@ -247,17 +247,17 @@
         "mutation-calling"
       ],
       "organizerIds": [
-        "qdaspkyyqf010mc8an0pn87p",
-        "nmcl38os1evp83n57l91j0sy",
-        "3yg9ptlfctq81pquocebr03s",
-        "19u3verwd0m5taoigp4skub9",
-        "h9z8tvtdeh68aktiae8nmo0d",
-        "tbrkutto8wnu77uwnfop674j",
-        "6gsuok1hlgeamkzddo80588r",
-        "k0tjs96tih8a1y32aglf0od9",
-        "ayh01al6l2kqk0q3y8ye3qqm",
-        "803qx78ha589j1wvxe7wsbg7",
-        "p8w8qqzltk6jifh7n8cpgi8b"
+        "7331697530676c7763717779",
+        "6538366e6e776a676f6f3965",
+        "6734693861397a3538397763",
+        "72716d646b36357272326d72",
+        "653031743074786968347861",
+        "6e68367879366267766e696b",
+        "3062753761667a71796e7268",
+        "77376e3034676e3363616561",
+        "79746139676d646970356171",
+        "7a677563316e687a3662657a",
+        "383231776b6e6137776d336b"
       ],
       "dataProviderIds": [
         "international-cancer-genome-consortium"
@@ -279,28 +279,28 @@
         "aml"
       ],
       "organizerIds": [
-        "sqomgqik4cclgeh3pdk4mqpo",
-        "z8nvdysjgrhiochao4a7gxgg",
-        "02hddtzyvnx5nv1ylilek0eh",
-        "y7b34uhsd0g1287fjjb8wfjp",
-        "l1xwkhw4bmfuagqb5nea20e4",
-        "z8lytdsxiphgmrz3gdz3xu5f",
-        "10jh5kob5gwamk7pgnisfnkc",
-        "pardvsp1rudpc4jy3zzwmt2u",
-        "jvg08gbpyykebg3a4p7glsov",
-        "770t909prcpz6w7vluwz9l1f",
-        "xhymeh1h6l8tqyqz3c1l0e6d",
-        "l86cc3rxng82ha6mey4n2kn8",
-        "fl2wj6ui1ho1lhl7dcpz49zy",
-        "095irgsqanll6afirs08eahg",
-        "9eyl8kmjh6t27lu5y5qi1h3n",
-        "vy4ny4nyb4149j278bjy9019",
-        "8vuv8lgwp01u754658e9c9my",
-        "1t7ojt1md3iplo0f06mfnum5",
-        "96nj7zq592bvrdtnaw0xr7zt",
-        "fsagfdpszwy0dpbzcrma6wy3",
-        "nytc1b4hikcebilz82vajfos",
-        "5kzlsdcwk4e3s72vdu1goy1i"
+        "376d7a6c397734716d367175",
+        "7a616d79737366626a7a6671",
+        "39346b6e777777746a746265",
+        "61626d686e7a776c66357767",
+        "367264386a7364673671386d",
+        "316a656f67726f6239746862",
+        "7a756268703731316861796d",
+        "6d63383764346f64646b3532",
+        "7a7736796b75323139786466",
+        "6176726876666f64736c6b6d",
+        "7061713877687237316b6773",
+        "74796f326b76316c31613331",
+        "7477316a306f6e306f70666a",
+        "30656d346a336a6d6f357776",
+        "74317a32316564346e736c30",
+        "75676b3670376d73646e346a",
+        "766d3378716d6e3338337832",
+        "75323579676e713530736679",
+        "3338326676377a6d35646f78",
+        "666461653063716167706e79",
+        "677664347572743078707838",
+        "756267733175793378716d64"
       ],
       "dataProviderIds": [
         "md-anderson-cancer-center"
@@ -322,27 +322,27 @@
         "targeted-cancer-therapy"
       ],
       "organizerIds": [
-        "t56e14dqnzi29tgf8opjog8t",
-        "kuhqybuu748r6lkmbkjjuhxv",
-        "qae66669grp05ojsvmxjxcuf",
-        "fii57rcn0m46a6hvp8pjrz2s",
-        "1xzhxufgqdcjewcoy539wdle",
-        "2jrhf1mphf6zrftz9mfxi49j",
-        "vze2hbndj6aa8dng0o8yivof",
-        "7gs6qahhwr462pvypiaatuka",
-        "do9wdc3x7rz9k26xhs3yqob3",
-        "mzwq3ohqand88eydhal4eavh",
-        "thsdsze6pq7lsy6s9wp5fn4g",
-        "l82b5gqsi4u1ygcb8jdah1ev",
-        "u97h6mw00ne2li0teq3bloes",
-        "914nvxrw535yapdc86nja0r5",
-        "nv0f3z9ujoop245pm1kltzgt",
-        "duer9c37ssxbbqtq4czodiog",
-        "5wcrv2c0c5l2c425059l3l26",
-        "s6e5gevpf8hieasgi94ydaz5",
-        "4dswmz3m0yyheyy6fb0hlvby",
-        "53k31ku3g8kmkvu7kkww0p0x",
-        "jnkxts88k2isqhft7m6a4qni"
+        "716467306b6a6f39376a3379",
+        "39746d743066657961396773",
+        "34363862796334636a626469",
+        "747130716876667479386d6e",
+        "356679616139367a696f6664",
+        "766338676a6468357a693474",
+        "7567676d6e637a3434687078",
+        "6a7974656f3971746773656e",
+        "6a69716c3378346e75306739",
+        "656e6e6832307765776f6374",
+        "67767a377966786b68676d6c",
+        "727366616775703166616f38",
+        "776c73333370393935656771",
+        "63327568647878317277306b",
+        "776b65386e76636c38753678",
+        "357579747a723973786c7765",
+        "6d6675737331776164387268",
+        "6f6e61347331703675327975",
+        "69307477626a6c64796a7338",
+        "686c317168337032396d6c6c",
+        "6e6c6367633734706d7a6265"
       ],
       "dataProviderIds": [
         "broad-institute",
@@ -364,25 +364,25 @@
         "alzheimers"
       ],
       "organizerIds": [
-        "zndqltchwtq7kf2odayksxda",
-        "vpcqjzzd9b3fcftbn6y0nqov",
-        "ruqjqtzomohnhmsbaayzatty",
-        "lv3qsxhpcq6kh2unw07rzrol",
-        "p2s8dktk7zq99uzi2v2v1tvi",
-        "0ur1odf41wob9vuiqexrd33m",
-        "0jo6h3nxg5qdj35d8ihuev0j",
-        "dg4c6bp3vuoc4wwveuy3hxmn",
-        "zxtyjhnkhknjuffu2ek7doxv",
-        "78hrrrs9ftxtgbsu5kxet1qg",
-        "417orgpd7p13lm0382e4cu6b",
-        "pas0li387pv61pmf3r2i2pky",
-        "02sw3x9ppqx81oz1durqxy8d",
-        "kc3793o6qzk1n2re9p5lr0jv",
-        "jymsk77mlrg0j9ztb4p0i4bp",
-        "zujw9ezcxmw6sfb3f0m5kqdo",
-        "v5ktq9lg73s5xbfk0gkdlzog",
-        "4r29wd1uaamb4fjgqo2r5dnw",
-        "jabtn2vfals6pwxqe90xaybc"
+        "6a6b63716969647772326d77",
+        "6b696e65317962716a78646a",
+        "6b6d6c636b643877766b7a39",
+        "70696861366e766171717637",
+        "793378743168633674396276",
+        "7a7771796b776e6271626632",
+        "79633674696c656e74343475",
+        "6c70366a673437777866336f",
+        "613734303430727777663461",
+        "79677a31636b756b7a733835",
+        "72367761397874707a783379",
+        "627362773770357370376636",
+        "386b7a72367362766674736a",
+        "697a6a636c613537326d6234",
+        "376f636730666b3233357074",
+        "31766d643370727937373765",
+        "3376736f716a697378327671",
+        "756c6b65356d6e3272387036",
+        "33727a676871726b6a75786e"
       ],
       "dataProviderIds": [
         "rush-university-medical-center",
@@ -405,19 +405,19 @@
         "olfaction"
       ],
       "organizerIds": [
-        "7for0bxa912nue2p7t07f7mg",
-        "y89idnlsdh983dbo9is0z41i",
-        "x3t5umwj72dkttsb55hbx0vr",
-        "rlex8z28ux8cnli75qwonp2w",
-        "3qsli40d982zj278ifr3jwze",
-        "3aafno4rlcrkr2u4f0yspeci",
-        "6zo121spw4mtbowbyfum7h4b",
-        "siaux68gta576x7nt6gc8rvv",
-        "l3fanf3p66famlee9l2t0lqn",
-        "2mew5ztwfg19801yttutuwlv",
-        "jvybztfmfflu9nds9ykq0asa",
-        "fg7c9oegbizfuyd15xw93d85",
-        "25ehqna4w03ahet03i7usof2"
+        "7934357768646a727a6f6a6d",
+        "3231356274326c6978783468",
+        "646b3838706c627034613872",
+        "6636627366346a777a387934",
+        "377575736b6161656b6f6d6c",
+        "73653532693275793374746d",
+        "6670733072736c716e73316d",
+        "356b727376346a626d397773",
+        "7a74646b71666277676d6369",
+        "32726f797564657037666161",
+        "7478327030347a6164616974",
+        "6732697a7135387339786b66",
+        "736531396e77363678327374"
       ],
       "dataProviderIds": [
         "rockefeller-university"
@@ -463,17 +463,17 @@
         "als"
       ],
       "organizerIds": [
-        "cs7e77gyir5ifpxn062lltzk",
-        "5c7x6tq93e5nxr9w85zva74h",
-        "kidp795qatj74y3mcdn7cr8s",
-        "e0ifsrp5o8pvgmbufzybv5cg",
-        "pcx43x584ntdqkv1puoptckn",
-        "8pzvfqe756vms275xq292pbi",
-        "i9qwn3vhycpalm26zdcyx6il",
-        "xsr7zkujx9lb75v3gc97ofmk",
-        "amilp7p6wkpojrkrh6a7cmf2",
-        "tbalpc125g69inr1i3opy00w",
-        "jp647fxnilal6b8e4hzimul0"
+        "687139716e37353870307569",
+        "357064323537356d63646832",
+        "377230347161737667703668",
+        "766871326f6d75717a626a63",
+        "717971317a6f623462787270",
+        "786e707233646b3130736238",
+        "676f677132757162326b6971",
+        "6462726c78616a6c30766c30",
+        "783272646e62707571703930",
+        "316866617862723135753135",
+        "6f3132693676306a71766f7a"
       ],
       "dataProviderIds": [
         "prize4life",
@@ -497,16 +497,16 @@
         "drug-synergy"
       ],
       "organizerIds": [
-        "t5f71cbw0h5ve6yb77bsoehk",
-        "b34hthmcyeku8m91t6jnts8p",
-        "e4ehg8g3k2fst1mdrjcvh5nx",
-        "8m9tgbq0sajhvl90sa1ze3r9",
-        "84tx8nl9cln74r9u6tb8717b",
-        "cq3kkoryfzpp8eeletyhgt3f",
-        "gns8cwmjpd51rpwe7qvilg2e",
-        "u9q2cz730x96i4kgwb8rxlln",
-        "g1gw3ug2w549vv6so0cm921k",
-        "t595lzkv5ozwlu8vlfmd8gd2"
+        "793934747034686772337a71",
+        "76787461306a6d3070717a70",
+        "78396d64686d686a34693567",
+        "6f6974766378677469676738",
+        "676d6d35687a757073756462",
+        "686b39746f69716c30617169",
+        "6e79776a7270683865617567",
+        "68303639393230646b616836",
+        "367966796675726278377873",
+        "6c6f6b687732687977773579"
       ],
       "dataProviderIds": [
         "astrazeneca",
@@ -530,13 +530,13 @@
         "somatic-mutation-calling"
       ],
       "organizerIds": [
-        "q7c3bytmz0g7f4a9dfjmlrlr",
-        "09ftl26hu3stvly54gab7tyz",
-        "1amme07bbtvq8ubh8h4d6eet",
-        "h9sjrp8mitpndgubdscrjpw6",
-        "qywxu8bj7j6wf7ej253n5z1a",
-        "q4feohuwjdzo4zfke2mchvyi",
-        "r33d3ttuwwgr9r4lekrdweu2"
+        "3675766a617570693038776c",
+        "30397a356536706f6b746134",
+        "657538366c377a3733736a6a",
+        "357665367a707371326a6d32",
+        "7838706e766a346d36723274",
+        "33627a666866666e76397331",
+        "6778626c3030746f6632736c"
       ],
       "dataProviderIds": [
         "international-cancer-genome-consortium"
@@ -559,17 +559,17 @@
         "tumor-heterogeneity"
       ],
       "organizerIds": [
-        "dblyfraeem6jvvma1tic6c7j",
-        "4y056qkflgkecs33fkbydz01",
-        "azfap1r25c7n6d4h16zbc4qg",
-        "vzembx07io68urlnybcla0l3",
-        "xhmwh45fty0qii84ije1hdiu",
-        "p4qd78ldngvsus8y4m8us5mg",
-        "na8tap7h53s2zmynpqbrv478",
-        "pyrxtdgxpwsfupqdu2z1j125",
-        "lrbaohlsswd78qmdrbjj5l0z",
-        "hlfyz20uski8gbzi4wxb131y",
-        "xuki6xa6khp6ich0rxg39xy5"
+        "6d3871617079786a766d3236",
+        "686338666766627071306264",
+        "397a346e6761776a6e777139",
+        "35366c7074796d7233303871",
+        "6472373965316b763832656f",
+        "75736c357a79646d35703767",
+        "687138746466616178703773",
+        "74747230786a726d75626332",
+        "616c73623763317074726e6c",
+        "72336d693031303763777876",
+        "36346937617878796f336c30"
       ],
       "dataProviderIds": [
         "ontario-institute-for-cancer-research",
@@ -614,21 +614,21 @@
         "module-identification"
       ],
       "organizerIds": [
-        "4mx0zwv0iavsgyi6ycof6mbd",
-        "4k7v5e0smpakkleux88kecqh",
-        "1zh9n2uln1mbocjq6a1qmobc",
-        "zrn3fx6l0lvgm6jb6h7zrpxj",
-        "nth9fhvqwtfmiia3r28q6nqc",
-        "6l78o8aiip2cwkyekjc0i9w5",
-        "6h7yrkhzu0f449czb63qkdqr",
-        "35rgpfzvdpu8ruo8kjzboyf8",
-        "kqylw908vmgzjqpjpa178gtt",
-        "3t4o5b980hdt1odgkl7xn8eh",
-        "yaexk7b8rmkg2mzb4s64yf16",
-        "uj1zotz4b90ju3tpupgrmss6",
-        "o24grdkl7j56yu307rw25ah4",
-        "kdd70eraqkgud39amvh9wl54",
-        "nqn7ps0cmc7s76bprpqa079v"
+        "7637686a356a6b6438776c31",
+        "6532697472753879316e707a",
+        "6c6d366d3069767833746367",
+        "766f6975646c6d6a6a636761",
+        "7a67326737396c3876357864",
+        "37757238636c3239336b6e36",
+        "39377466736f69346b69687a",
+        "646a38316d6c357978626b37",
+        "67356e347979653576676c68",
+        "6e35786a7462367374716d73",
+        "727478347a37376e79637535",
+        "3733716c3272733673697877",
+        "773675617863706b30387373",
+        "627470327732393034676679",
+        "6d717973667536786e743432"
       ],
       "dataProviderIds": [
         "university-of-lausanne"
@@ -649,17 +649,17 @@
         "transcription-factor"
       ],
       "organizerIds": [
-        "tst3wg4lxsks4xj5ioqkugz3",
-        "1iu2q585g38r9ypr88votswo",
-        "a3br050j8ddqdstg16ro1a6n",
-        "51rgf2ioj9grz6iuutxkp3er",
-        "o4l3n8shcawl67o7kozzjs34",
-        "jz859lqvec2cf91qw7thwuj7",
-        "3punld6set9qsjj2uh0gsq5w",
-        "70rd1sasz788079zeezar93c",
-        "k3qtigq9crms243pl4sk0k89",
-        "lzd6mxy6rk12vku9fdtbydjh",
-        "jwh718n2p81z17jxs8hz2ie4"
+        "3073706474626e367a75656b",
+        "6278747a6f7179317737736a",
+        "7179377a6570746f6431656a",
+        "71687531746d657a77797637",
+        "6d616b3865336c7876683068",
+        "35666b717130743974306868",
+        "616772647261396f6f373070",
+        "7a35696976337472726d3939",
+        "6a7777777176306d34786531",
+        "696179747964703831613433",
+        "347635633271366d39627836"
       ],
       "dataProviderIds": [
         "encyclopedia-of-dna-elements-data-coordinating-center"
@@ -681,15 +681,15 @@
         "human-health"
       ],
       "organizerIds": [
-        "pbz3oqsxv053wrj97x60m0j8",
-        "choen5vy1dxwdjgwpvuen0j2",
-        "vc73gyjy2hkjas667i1xbvj1",
-        "zvnhbttpzpbrandtgl855o3n",
-        "gq0tkot1x1l2f62rabfao1ce",
-        "nc0gaawrieg9zgg1k02r53co",
-        "92h1vifzon9ymo9bl0w176ov",
-        "1nzuchn414ueqkho15ydy1ow",
-        "ki7b3lzm49hltdl4vt0okq4o"
+        "3161796d62377a3635746b62",
+        "766e726970327863736c6a6c",
+        "67667a34646978677a303076",
+        "61647337316e71726335676f",
+        "396433326c6b7a3779677574",
+        "6a66633236746f6c7230356f",
+        "68636170356771656d623467",
+        "696c667374797a3369796d73",
+        "643136726833697978316d64"
       ],
       "dataProviderIds": [
         "duke-university",
@@ -712,16 +712,16 @@
         "somatic-mutation-calling"
       ],
       "organizerIds": [
-        "gdr50vzbglqvrq4gf5jwkvwg",
-        "7tpauzpv39iuai961qlrmfox",
-        "fg7pdv4jv0pnpcb40uvrg40h",
-        "a5xmdhuv1yuywfg934oltspu",
-        "zcoz4a3fcarkbw1l54h715n8",
-        "cuoyiy058jqtaq3spe06aqbp",
-        "m7xw251b9kkcotln47hqkjzj",
-        "dlilz3qzwt1tyafp8fmishgh",
-        "col488x2abr76vb644v1nry7",
-        "5o2wkmtlfrjdcugqw4kc41p9"
+        "3637703933323964746c6d63",
+        "676c7964676c34346962786e",
+        "38643670636c6b6862366a61",
+        "643667653739757533793479",
+        "75626f37797635676f676c31",
+        "7a3466306a6d766a35706437",
+        "6172766a6f666876376b6e65",
+        "7a7a6538753164613873666a",
+        "6f696d67337472346b327175",
+        "6d716c656734366266386b34"
       ],
       "dataProviderIds": [
         "international-cancer-genome-consortium",
@@ -794,15 +794,15 @@
         "workflow-execution"
       ],
       "organizerIds": [
-        "59hh5x7t5sy1r7hjhd9eacg5",
-        "dyzongpwwtwkc140e4ngwyu2",
-        "i114q6weygnjeqttsycpu7k3",
-        "k8v0gespjnbg2tu3nqwsi6sa",
-        "qw25hi4y2h2ez0nhr6d2k647",
-        "hbqkbik3v4srr28w6a5vqt8y",
-        "ofwltdabkj5oow1wn6761mbe",
-        "icl4oxfvsbwu64ccd6v6tgks",
-        "7qv7bg01x62cfkonei3c1spp"
+        "76696b75796a323572616939",
+        "6c3172347571613674397478",
+        "656931666b7532676138646c",
+        "6376633030733874756d797a",
+        "707639703963366667356c72",
+        "32756d316e32647866353464",
+        "6c35397a32646b6e35346b79",
+        "6d6977633431676879687478",
+        "326c6a773732346830356338"
       ],
       "dataProviderIds": [
         "national-cancer-institute",
@@ -832,20 +832,20 @@
         "parkinsons"
       ],
       "organizerIds": [
-        "npcotyyhm9fo0q6yjv7ummjk",
-        "9413p4q55zgdp7j5a162g2zv",
-        "qviss9t1ibmti0k52q4s7cd6",
-        "0tn3bdxbdoh12rnnvtxloc1b",
-        "2bmib7eyg56c7k02kpsbg4rd",
-        "8zgowb2bbupi3wtuj5n6gqhx",
-        "z1ustz2rmv44am65s8rbkky7",
-        "6ovgezms29sv9arivfaqwwcu",
-        "cybsybnmurznmetd275cdl3m",
-        "00pgtxd4ru2ce7oi601dh3xq",
-        "0tubcy0jdgj11vxb7e56imyp",
-        "vvbg7b1981mkk3jvmnvvnq57",
-        "p7ags2l8cgx8cjqxwvsmg3u4",
-        "wn0s4k4hypz6nub5l1f3fgg8"
+        "777738756336693472617461",
+        "356d6f716879687035327a6f",
+        "616375646e686e6c6c716f69",
+        "713530616d73317874653166",
+        "706b6c39357977656c7a3667",
+        "34686b666b79383161373371",
+        "3877647a6836626f7a666861",
+        "65363839766c706e76767977",
+        "7461326d783778386c70646b",
+        "64386b726277787a68797033",
+        "74786b786c64637975327567",
+        "3871336d6e386f3378763467",
+        "6830327779326a6c79326b6d",
+        "68676c6d786b613975356166"
       ],
       "dataProviderIds": [
         "michael-j-fox-foundation",
@@ -858,7 +858,7 @@
     {
       "name": "NCI-CPTAC Proteogenomics",
       "description": "Cancer is driven by aberrations in the genome [1,2], and these alterations manifest themselves largely in the changes in the structure and abundance of proteins, the main functional gene products. Hence, characterization and analyses of alterations in the proteome has the pro ...",
-      "summary": "Cancer is driven by aberrations in the genome [1,2], and these alterations manifest themselves largely in the changes in the structure and abundance of proteins, the main functional gene products. Hence, characterization and analyses of alterations in the proteome has the promise to shed light into cancer development and may improve development of both biomarkers and therapeutics. Measuring the proteome is very challenging, but recent rapid technology developments in mass spectrometry are enabling deep proteomics analysis [3]. Multiple initiatives have been launched to take advantage of this development to characterize the proteome of tumours, such as the Clinical Proteomic Tumor Analysis Consortium (CPTAC). These efforts hold the promise to revolutionize cancer research, but this will only be possible if the community develops computational tools powerful enough to extract the most information from the proteome, and to understand the association between genome, transcriptome and proteome in tumors.\n  \n To address this issue we have created a community-based collaborative competition: The NCI-CPTAC DREAM Proteogenomics Challenge. The challenge will use public and novel proteogenomic data generated by the CPTAC to try to answer fundamental questions about how different levels of biological signal relate to one another. In particular, we focus on understanding:\n \n Can one impute missing values in proteomics data given observed proteins?\n Can one predict abundance of any given protein from mRNA and genetic data?\n Can one predict the phosphoproteomic data, using proteomic, mRNA and genetic data?",
+      "summary": "Cancer is driven by aberrations in the genome [1,2], and these alterations manifest themselves largely in the changes in the structure and abundance of proteins, the main functional gene products. Hence, characterization and analyses of alterations in the proteome has the promise to shed light into cancer development and may improve development of both biomarkers and therapeutics. Measuring the proteome is very challenging, but recent rapid technology developments in mass spectrometry are enabling deep proteomics analysis [3]. Multiple initiatives have been launched to take advantage of this development to characterize the proteome of tumours, such as the Clinical Proteomic Tumor Analysis Consortium (CPTAC). These efforts hold the promise to revolutionize cancer research, but this will only be possible if the community develops computational tools powerful enough to extract the most information from the proteome, and to understand the association between genome, transcriptome and proteome in tumors.     To address this issue we have created a community-based collaborative competition: The NCI-CPTAC DREAM Proteogenomics Challenge. The challenge will use public and novel proteogenomic data generated by the CPTAC to try to answer fundamental questions about how different levels of biological signal relate to one another. In particular, we focus on understanding:    Can one impute missing values in proteomics data given observed proteins?  Can one predict abundance of any given protein from mRNA and genetic data?  Can one predict the phosphoproteomic data, using proteomic, mRNA and genetic data?",
       "startDate": "2017-06-26",
       "endDate": "2017-11-20",
       "url": "https://www.synapse.org/#!Synapse:syn8228304",
@@ -867,22 +867,22 @@
         "proteogenomics"
       ],
       "organizerIds": [
-        "p7td8rtjomgd3vb9rfe6ks8h",
-        "4w6wji1066bx7cije44egw18",
-        "ua6ojuh0z5hi5edlrvaghdx2",
-        "ckang2mztr98mpwxob8kyr2r",
-        "7irtsnfjmvjtzd1zrinyao1m",
-        "leayj3a3oftv881wb7q4v4g2",
-        "w2evdls228td63cj1m2k468c",
-        "wcmt3r690q6m6o9wbl2lbeqn",
-        "z9yj4xm81esezgkmp2nzxzdh",
-        "o88nv60q0u8umx68ugglfnja",
-        "7s64g2mc7tbjeyulpxqyzbpg",
-        "xypzjbrzldv711bxxld56drn",
-        "1l0t3nthl60tivtdfcvseo8e",
-        "3b48z6d7zf3kv326s2n4h5n9",
-        "dt8s4xnfave9mwpvgbghb4z7",
-        "t2pepq9toqih1315dkqita9j"
+        "73796e69723776626a38756c",
+        "363773716d7a787a666d7778",
+        "6e617932667a726239696571",
+        "67706a6630336c63326b7731",
+        "617264767373306539747663",
+        "77386d636737613870617a74",
+        "31346c707333796262683531",
+        "636d696467316c3969703271",
+        "327938396b30723578677965",
+        "32367531356f6e3361677370",
+        "3062673539306a79646c6273",
+        "313234356830683477757931",
+        "646574366c3566726f396b74",
+        "766d6f377862723677383634",
+        "31646d63396a696e6b666576",
+        "336c72626634736966333673"
       ],
       "dataProviderIds": [
         "clinical-proteomic-tumor-analysis-consortium"
@@ -904,20 +904,20 @@
         "multi-targeting-drug"
       ],
       "organizerIds": [
-        "1hamui49zxga0azz0l1hhotq",
-        "iibc6ytc81ihjjascrknhqwd",
-        "bkn045ufa99erfyz8mh2yca4",
-        "3hgwjcnzlnu6ocp54j4oip63",
-        "hv6zaqsv5o74j845eqx9c394",
-        "js7rwjb5tvekeuvkm63lhtax",
-        "zd5xqdrdspiqr3w1brdcny0i",
-        "b397fa06sohp3bm342t8ru82"
+        "32726a6b7931646362707165",
+        "6a777a6d326130747765316e",
+        "667a61717a6e3066616c6937",
+        "307639397273366230653867",
+        "763163663174786b66747438",
+        "316270707675687577346b6c",
+        "7165686d7865687271383861",
+        "6635677a3332747734707632"
       ],
       "dataProviderIds": [
         "icahn-school-of-medicine-at-mount-sinai"
       ],
       "grantIds": [
-        "A New Disease Platform Leveraging Complex Drosophila and Mammalian Models"
+        "7135747a766a79666f326465"
       ]
     },
     {
@@ -933,17 +933,17 @@
         "single-cell"
       ],
       "organizerIds": [
-        "h3oj11ri3tkfcnx74b8ltw8a",
-        "ijif0n8p087bwcg8088bul87",
-        "cipcd8jl1gcnl9zo8n1mkosd",
-        "kgrnsnrqqau3vsy0lek6qu4b",
-        "tx8zec3l9t6dsd2tuun16z4o",
-        "dp03a51wwgw3zi8nqzzcmn6h",
-        "5j7vhb6uw94oiwc0dkw14pi1",
-        "t4rlgt4y5x5c7n5d1xmbrnnj",
-        "gblo3u9i6k9pfwn3nxg2qd89",
-        "hiqy8q5pf2wv1sy6zt6e2s1p",
-        "hen8hkq2estr8b1g9js8xqms"
+        "786432316c37637739667473",
+        "3238776d666674377a6c366d",
+        "75723579393379716735346c",
+        "6f3961347369317238667173",
+        "766730766e78657633616230",
+        "617a6871346a6270397a7861",
+        "34373175736d306b7a6d7662",
+        "336876793674657974753434",
+        "736c36786238773274693439",
+        "6e316c727975786466353733",
+        "64623335746e776334616c70"
       ],
       "dataProviderIds": [
         "max-delbruck-center-for-molecular-medicine"
@@ -965,17 +965,17 @@
         "drug-kinase-binding"
       ],
       "organizerIds": [
-        "r2dz08c8c8xgnmppctvjulhl",
-        "nea7vw6oowe97sxfk8u0l9bn",
-        "ei76zk0900ihvwcw54z51jhl",
-        "r5wv0iqm5869sk1qwqyaqmf2",
-        "9nz7sf1fk989j8qlui7x2l8g",
-        "e5d7vjt1xvoqxxu0hbwopo3q",
-        "5kq8jgjyacnk7fmx97nrtcwo",
-        "qvh8zvegd6dextyywas33bg1",
-        "gg7vml81fbgp9lyzuh33sykc",
-        "lokju7szher2o8ejkqndlaiy",
-        "fisydzrahyq390ft54yh5kmf"
+        "6363646475636b666e6c6334",
+        "347961616979746f67693738",
+        "633134626731306d75773675",
+        "63376435696d38726e6a7930",
+        "6d7972647765336d337a6576",
+        "6d76696e64316233716c7377",
+        "6d6a78697871746a6463746f",
+        "796f73787a357866666f7333",
+        "7572676535746a7768673863",
+        "6b66396237323032376e7579",
+        "6339653778366465776d7566"
       ],
       "dataProviderIds": [
         "unc-eshelman-school-of-pharmacy"
@@ -996,20 +996,20 @@
         "malaria"
       ],
       "organizerIds": [
-        "rewqtu8qtyx730c224vxw7hs",
-        "1j6whpp4euwu46xqvhdf36wk",
-        "xid5s724jfss88vhcez4pvjg",
-        "a9zxgbbcjyx14a53syn773zl",
-        "laiwy1q5uz2ympbwqvv3qvqp",
-        "lhp1lbyzsny8javndoun8qvg",
-        "g7n6tggsh6p2ujglt2f6guse",
-        "wmkszjj06ir4s1fdj05kksos",
-        "jhnlj2nlp9xr107lc3si0ymb",
-        "c4irr8nkudxj8slrsja6t3v1",
-        "k55yfacn1ou7jyn04o4ztm1c",
-        "2c6lwsoj3ts01wub1da02nzt",
-        "9sn94oeugzxk7zwsz9gbufzz",
-        "f1syo318lk1ai7zqsjouw1vm"
+        "38326961383868736a697838",
+        "6e716a626e746f3478746f61",
+        "3633786c3477386a74747638",
+        "717a33653435616a6f34736a",
+        "677a6e77686a6f7938716f33",
+        "6b3532393265737a72757530",
+        "676f77717539357168737770",
+        "6a316874357770666d347879",
+        "76683764357936656671636f",
+        "3770656f37326b7231706363",
+        "663431667233336f34303239",
+        "696679736f3379387a6a6561",
+        "656d74633234646c717a7730",
+        "6566643132716e6e73687736"
       ],
       "dataProviderIds": [
         "texas-biomedical-research-institute",
@@ -1023,7 +1023,7 @@
     {
       "name": "Preterm Birth Prediction Challenge, Transcriptomics",
       "description": "A basic need in pregnancy care is to establish gestational age, and inaccurate estimates may lead to unnecessary interventions and sub-optimal patient management. Current approaches to establish gestational age rely on patient’s recollection of her last menstrual period and/o ...",
-      "summary": "A basic need in pregnancy care is to establish gestational age, and inaccurate estimates may lead to unnecessary interventions and sub-optimal patient management. Current approaches to establish gestational age rely on patient’s recollection of her last menstrual period and/or ultrasound, with the latter being not only costly but also less accurate if not performed during the first trimester of pregnancy. Therefore development of an inexpensive and accurate molecular clock of pregnancy would be of benefit to patients and health care systems. Participants in sub-challenge 1 (Prediction of gestational age) will be given whole blood gene expression data collected from pregnant women to develop prediction models for the gestational age at blood draw.\n \n Another challenge in obstetrics, in both low and high-income countries, is identification and treatment of women at risk of developing the ‘great obstetrical syndromes‘. Of these, preterm birth (PTB), defined as giving birth prior to completion of 37 weeks of gestation, is the leading cause of newborn deaths and long-term complications including motor, cognitive, and behavioral impairment. Participants in sub-challenge 2 (Prediction of preterm birth) will be given whole blood gene expression data collected from pregnant women to develop prediction models to determine the risk preterm birth.",
+      "summary": "A basic need in pregnancy care is to establish gestational age, and inaccurate estimates may lead to unnecessary interventions and sub-optimal patient management. Current approaches to establish gestational age rely on patient’s recollection of her last menstrual period and/or ultrasound, with the latter being not only costly but also less accurate if not performed during the first trimester of pregnancy. Therefore development of an inexpensive and accurate molecular clock of pregnancy would be of benefit to patients and health care systems. Participants in sub-challenge 1 (Prediction of gestational age) will be given whole blood gene expression data collected from pregnant women to develop prediction models for the gestational age at blood draw.    Another challenge in obstetrics, in both low and high-income countries, is identification and treatment of women at risk of developing the ‘great obstetrical syndromes‘. Of these, preterm birth (PTB), defined as giving birth prior to completion of 37 weeks of gestation, is the leading cause of newborn deaths and long-term complications including motor, cognitive, and behavioral impairment. Participants in sub-challenge 2 (Prediction of preterm birth) will be given whole blood gene expression data collected from pregnant women to develop prediction models to determine the risk preterm birth.",
       "startDate": "2019-05-04",
       "endDate": "2019-12-05",
       "url": "https://www.synapse.org/#!Synapse:syn18380862",
@@ -1032,15 +1032,15 @@
         "preterm-birth"
       ],
       "organizerIds": [
-        "bc6y99nvcxtxl679ehodi4im",
-        "vaphcgsx9wb3cghw6zuvtrbs",
-        "7y2exv1bd30tczynu0bk6n6i",
-        "oin4zyf0j0ka93cjj0ckys94",
-        "0bdvkqv5oe5stxo4am9tnvgh",
-        "h3pes241a1aj6jzucf8pdgef",
-        "h679xis6a9k7z9h0mioj2jgq",
-        "n581fuyyptpyk1e3hyz68rid",
-        "tx0jt3jeqvzjfw4w1hu3pwgs"
+        "6d77387334623871377a7464",
+        "32317461687a663032316861",
+        "37677667776977666c797a6a",
+        "746b33747776696e677a6a33",
+        "66677079636c756b6434366e",
+        "6e706134316e77357a68666d",
+        "737033356d70646878383369",
+        "7a727569713971327337776b",
+        "76386e7a6f666f666e6c7078"
       ],
       "dataProviderIds": [
         "eunice-kennedy-shriver-national-institute",
@@ -1054,7 +1054,7 @@
     {
       "name": "Single Cell Signaling in Breast Cancer",
       "description": "Signaling underlines nearly every cellular event. Individual cells, even if genetically identical, respond to perturbation in different ways. This underscores the relevance of cellular heterogeneity, in particular in how cells respond to drugs. This is of high relevance since ...",
-      "summary": "Signaling underlines nearly every cellular event. Individual cells, even if genetically identical, respond to perturbation in different ways. This underscores the relevance of cellular heterogeneity, in particular in how cells respond to drugs. This is of high relevance since the fact that a subset of cells do not respond (or only weakly) to drugs can render this drug an ineffective treatment. In spite of its relevance to many diseases, comprehensive studies on the heterogeneous signaling in single cells are still lacking.\n \n We have generated the, to our knowledge, currently largest single cell signaling dataset on a panel of 67 well-characterized breast cancer cell lines by mass cytometry (3’015 conditions, ~80 mio single cells, 38 markers; Bandura et al. 2009; Bendall et al., 2011; Bodenmiller et al., 2012; Lun et al., 2017; Lun et al., 2019). These cell lines are, among others, also characterized at the genomic, transcriptomic, and proteomic level (Marcotte et al., 2016).\n \n We ask the community to use these measurements to predict the signaling responses of the cell lines to drug treatment at the single-cell level. Firstly, we ask to predict certain markers in specific single cells. Secondly, we ask to predict the time-dependent response of single cells upon treatment with drugs. Finally, we aim to predict the time-dependent response of cell lines for which only static, unperturbed data is given.\n The methods developed to answer these questions will allow us to better understand the determinants that control single-cell signaling, the heterogeneity in drug response of cancer cells, and to push the limits of signaling modeling.",
+      "summary": "Signaling underlines nearly every cellular event. Individual cells, even if genetically identical, respond to perturbation in different ways. This underscores the relevance of cellular heterogeneity, in particular in how cells respond to drugs. This is of high relevance since the fact that a subset of cells do not respond (or only weakly) to drugs can render this drug an ineffective treatment. In spite of its relevance to many diseases, comprehensive studies on the heterogeneous signaling in single cells are still lacking.    We have generated the, to our knowledge, currently largest single cell signaling dataset on a panel of 67 well-characterized breast cancer cell lines by mass cytometry (3’015 conditions, ~80 mio single cells, 38 markers; Bandura et al. 2009; Bendall et al., 2011; Bodenmiller et al., 2012; Lun et al., 2017; Lun et al., 2019). These cell lines are, among others, also characterized at the genomic, transcriptomic, and proteomic level (Marcotte et al., 2016).    We ask the community to use these measurements to predict the signaling responses of the cell lines to drug treatment at the single-cell level. Firstly, we ask to predict certain markers in specific single cells. Secondly, we ask to predict the time-dependent response of single cells upon treatment with drugs. Finally, we aim to predict the time-dependent response of cell lines for which only static, unperturbed data is given.  The methods developed to answer these questions will allow us to better understand the determinants that control single-cell signaling, the heterogeneity in drug response of cancer cells, and to push the limits of signaling modeling.",
       "startDate": "2018-08-20",
       "endDate": "2019-11-15",
       "url": "https://www.synapse.org/#!Synapse:syn20366914",
@@ -1066,17 +1066,17 @@
         "breast-cancer"
       ],
       "organizerIds": [
-        "kvs1061lozry6ds1hssxd8x4",
-        "no96x4psvt69q4qqfhxmio3s",
-        "squemlbsn6blmreqjtwirwp8",
-        "hq6m5kp4m2on72tb1zjzb4y2",
-        "e7tw268ihl3lcesyh7p1x033",
-        "fvgpcjtat6g0as523bekyth9",
-        "3bycdg2t39lx2biea37hwisa",
-        "wcwymn8x41liftlucjqtb54k",
-        "tl08bilemcowy090985by4vj",
-        "2vm6twc5ui5q4w8xwx0fhaz7",
-        "7wc6b9p1ukfvcvg98zrsy77d"
+        "376b3476346b777932753068",
+        "3765326c6732356739637a78",
+        "33676661707a346f67756137",
+        "6e6c69346a746f353130676c",
+        "77726f6974366b7a31617679",
+        "6d6b3574326e693237636d6a",
+        "6b7071306678766d616b6777",
+        "69617867367772736c737a36",
+        "6b6e62776e6e7a62766f6467",
+        "7236746a306d6d646577656f",
+        "31766f716376747233737178"
       ],
       "dataProviderIds": [
         "university-of-zurich",
@@ -1089,7 +1089,7 @@
     {
       "name": "EHR Mortality Prediction",
       "description": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution ( ...",
-      "summary": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution (see image from McKenna et al Science 2016).\n \n To date, however, no lineage reconstruction algorithms have been rigorously examined for their performance/robustness across diverse molecular tools, datasets, and number of cells/size of lineage trees. It also remains unclear whether new Machine-Learning algorithms that go beyond the classical ones developed for reconstructing phylogenetic trees, could consistently reconstruct cell lineages to a high degree of accuracy. The challenge - a partnership between The Allen Institute and DREAM - will comprise 3 subchallenges that consist of reconstructing cell lineage trees of different sizes and nature. In subchallenge 1, participants will be given experimental molecular data to reconstruct in vitro cell lineages of less than 100 cells. The ground truth is obtained from video-microscopy data. In subchallenge 2, participants will have to reconstruct an in silico generated tree of 1,000 cells from molecular data and using reconstructed lineages from surrogate trees of 100 cells. Finally for subchallenge 3, participants will have to reconstruct an in silico generated tree of 10,000 cells from molecular data and reconstructed cell lineages of around 1000 cells in size. Through the usage for training purposes of experimental and in silico generated data sets, the goal of this challenge is to mobilize a larger community for evaluating new optimal tree-building methods.",
+      "summary": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution (see image from McKenna et al Science 2016).    To date, however, no lineage reconstruction algorithms have been rigorously examined for their performance/robustness across diverse molecular tools, datasets, and number of cells/size of lineage trees. It also remains unclear whether new Machine-Learning algorithms that go beyond the classical ones developed for reconstructing phylogenetic trees, could consistently reconstruct cell lineages to a high degree of accuracy. The challenge - a partnership between The Allen Institute and DREAM - will comprise 3 subchallenges that consist of reconstructing cell lineage trees of different sizes and nature. In subchallenge 1, participants will be given experimental molecular data to reconstruct in vitro cell lineages of less than 100 cells. The ground truth is obtained from video-microscopy data. In subchallenge 2, participants will have to reconstruct an in silico generated tree of 1,000 cells from molecular data and using reconstructed lineages from surrogate trees of 100 cells. Finally for subchallenge 3, participants will have to reconstruct an in silico generated tree of 10,000 cells from molecular data and reconstructed cell lineages of around 1000 cells in size. Through the usage for training purposes of experimental and in silico generated data sets, the goal of this challenge is to mobilize a larger community for evaluating new optimal tree-building methods.",
       "startDate": "2019-09-09",
       "endDate": "2020-01-23",
       "url": "https://www.synapse.org/#!Synapse:syn18405991",
@@ -1099,14 +1099,14 @@
         "nlp"
       ],
       "organizerIds": [
-        "sxnlqsv49no8he5ad2ceitqe",
-        "g3bl7npg8t44k7yeaawovxxo",
-        "yvhu0l4rewjnhz3jg0jh2xu8",
-        "ec06ul8ey6gffa3r0qjh53n5",
-        "coogkwpeay6bodo2spnzozz7",
-        "e6tww3y2ro821nmx4trp5kjx",
-        "gfzve8jxv7ht00g8w9p8q5o4",
-        "hbhv5gm05ew3248rtvasggg2"
+        "367a766c666c666a35346d71",
+        "747870323166366937723974",
+        "676877383334727278333870",
+        "6e6f3436796132796964786e",
+        "376a6634387571777933776c",
+        "62797531666b6f32796b796e",
+        "37393271326d35646b397464",
+        "333277773574367934667176"
       ],
       "dataProviderIds": [
         "university-of-washington"
@@ -1117,8 +1117,8 @@
     },
     {
       "name": "Allen Institute Cell Lineage Reconstruction",
-      "description": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution.\n ...",
-      "summary": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution.\nTo date, however, no lineage reconstruction algorithms have been rigorously examined for their performance/robustness across diverse molecular tools, datasets, and number of cells/size of lineage trees. It also remains unclear whether new Machine-Learning algorithms that go beyond the classical ones developed for reconstructing phylogenetic trees, could consistently reconstruct cell lineages to a high degree of accuracy. The challenge - a partnership between The Allen Institute and DREAM - will comprise 3 subchallenges that consist of reconstructing cell lineage trees of different sizes and nature. In subchallenge 1, participants will be given experimental molecular data to reconstruct in vitro cell lineages of less than 100 cells. The ground truth is obtained from video-microscopy data. In subchallenge 2, participants will have to reconstruct an in silico generated tree of 1,000 cells from molecular data and using reconstructed lineages from surrogate trees of 100 cells. Finally for subchallenge 3, participants will have to reconstruct an in silico generated tree of 10,000 cells from molecular data and reconstructed cell lineages of around 1000 cells in size. Through the usage for training purposes of experimental and in silico generated data sets, the goal of this challenge is to mobilize a larger community for evaluating new optimal tree-building methods.",
+      "description": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution.  ...",
+      "summary": "The recent advent of new CRISPR-based molecular tools allows the reconstruction of cell lineages based on the phylogenetical analysis of DNA mutations induced by CRISPR during development and promises to solve the lineage of complex model organisms at single-cell resolution. To date, however, no lineage reconstruction algorithms have been rigorously examined for their performance/robustness across diverse molecular tools, datasets, and number of cells/size of lineage trees. It also remains unclear whether new Machine-Learning algorithms that go beyond the classical ones developed for reconstructing phylogenetic trees, could consistently reconstruct cell lineages to a high degree of accuracy. The challenge - a partnership between The Allen Institute and DREAM - will comprise 3 subchallenges that consist of reconstructing cell lineage trees of different sizes and nature. In subchallenge 1, participants will be given experimental molecular data to reconstruct in vitro cell lineages of less than 100 cells. The ground truth is obtained from video-microscopy data. In subchallenge 2, participants will have to reconstruct an in silico generated tree of 1,000 cells from molecular data and using reconstructed lineages from surrogate trees of 100 cells. Finally for subchallenge 3, participants will have to reconstruct an in silico generated tree of 10,000 cells from molecular data and reconstructed cell lineages of around 1000 cells in size. Through the usage for training purposes of experimental and in silico generated data sets, the goal of this challenge is to mobilize a larger community for evaluating new optimal tree-building methods.",
       "startDate": "2019-10-15",
       "endDate": "2020-02-06",
       "url": "https://www.synapse.org/#!Synapse:syn20692755",
@@ -1128,21 +1128,21 @@
         "cell-lineage"
       ],
       "organizerIds": [
-        "pt5b3z6be9waz00t2qsepn5a",
-        "8srr4fqluj9gy8ewgujyepow",
-        "8vnxxwiuy136n9mt28nksmw6",
-        "l5myc16a9e03bx99wwm7rvqg",
-        "q7tuj5r6kd93zgisyuzr6xy6",
-        "c08ng7gas95rhxeual6ir9iz",
-        "awmt7zrwnz3n9rudwabpc0s7",
-        "611b6s11cl6fc7i7r5x50a6o",
-        "3ajginkk6vqzc0x4b1jpb908",
-        "0z0mbvwb31fjo51tvp39eoc8",
-        "0aecv258mwz0khotu0opa8lg",
-        "1f9463hi3ehvr012vdr10tia",
-        "mnx9ezxxmo1wjqrfez6cfvcc",
-        "jfkfrp60f1msh45aa27e592y",
-        "887jc789qbzjxylglqhi4y9j"
+        "757461367273797574306c62",
+        "65743476306a726965343839",
+        "696b6662377266356a6a7263",
+        "616f32766d7576356d39716c",
+        "68676f307a70696c67786d6a",
+        "63376a6d3738396e68767473",
+        "617971646b73677532627871",
+        "7939707863677a36637a6265",
+        "30623662776632346a737265",
+        "6b787635686e67306b627374",
+        "307a7663716a676b39687033",
+        "73726f6d726578383039676a",
+        "7233636d386b6675687a7174",
+        "31723361377863316b317933",
+        "36667a386833766931303172"
       ],
       "dataProviderIds": [
         "california-institute-of-technology",
@@ -1156,7 +1156,7 @@
     {
       "name": "Tumor Deconvolution",
       "description": "The extent of stromal and immune cell infiltration within solid tumors has prognostic and predictive significance. Unfortunately, expression profiling of tumors has, until very recently, largely been undertaken using bulk techniques (e.g., microarray and RNA-seq). Unlike sing ...",
-      "summary": "The extent of stromal and immune cell infiltration within solid tumors has prognostic and predictive significance. Unfortunately, expression profiling of tumors has, until very recently, largely been undertaken using bulk techniques (e.g., microarray and RNA-seq). Unlike single-cell methods (e.g., single-cell RNA-seq, FACS, mass cytometry, or immunohistochemistry), bulk approaches average expression across all cells (cancer, stromal, and immune) within the sample and, hence, do not directly quantitate tumor infiltration. This information can be recovered by computational tumor deconvolution methods, which would thus allow interrogation of immune subpopulations across the large collection of public bulk expression datasets.\n \n The goal of this Challenge is to evaluate the ability of computational methods to deconvolve bulk expression data, reflecting a mixture of cell types, into individual immune components. Methods will be assessed based on in vitro and in silico admixtures specifically generated for this Challenge.",
+      "summary": "The extent of stromal and immune cell infiltration within solid tumors has prognostic and predictive significance. Unfortunately, expression profiling of tumors has, until very recently, largely been undertaken using bulk techniques (e.g., microarray and RNA-seq). Unlike single-cell methods (e.g., single-cell RNA-seq, FACS, mass cytometry, or immunohistochemistry), bulk approaches average expression across all cells (cancer, stromal, and immune) within the sample and, hence, do not directly quantitate tumor infiltration. This information can be recovered by computational tumor deconvolution methods, which would thus allow interrogation of immune subpopulations across the large collection of public bulk expression datasets.    The goal of this Challenge is to evaluate the ability of computational methods to deconvolve bulk expression data, reflecting a mixture of cell types, into individual immune components. Methods will be assessed based on in vitro and in silico admixtures specifically generated for this Challenge.",
       "startDate": "2019-06-26",
       "endDate": "2020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn15589870",
@@ -1193,24 +1193,24 @@
         "cancer"
       ],
       "organizerIds": [
-        "k6xk9tlhqjdzaycccmaw8g24",
-        "539syde5v41kod3rvgdwxban",
-        "w1lprs73wz0ufbnwf6utu8rb",
-        "ej6ef61e1j277ue4ek0kzn7s",
-        "y715813tavje71fdectq4faq",
-        "myqm3zft7vj5bs3xwfz8lrov",
-        "4f4s2wsx2bxrdtldssxdi09v",
-        "vecffy9raaofxs0t31dpfwzh",
-        "f7aj6cxy290o508k788z2zbt",
-        "ue44yv2jqu7gstme40bbzlcf",
-        "yawuxbkvlv1j9oery69gpre6",
-        "sr0581r7mh8jevceaqogx7zj",
-        "k20czfwcf9yc1k2vj3qlk6i9",
-        "ewpsk2nnb52b3szn2e822mu4",
-        "pcxjbo74dzl0e3gy44wrvhru",
-        "l55igrvfbq51ujake2ved6u1",
-        "ay39htrnx3dmcnn2vhupp6tr",
-        "h2hxpaingekvr7gal5iyy612"
+        "6463766d637a767532347762",
+        "3164736e3367767468353764",
+        "633535396173633678356b74",
+        "633436397468636436753568",
+        "7833346134676f6c64746667",
+        "677865366b357037716a7838",
+        "3161366c316f393476666b70",
+        "647664686e6c617031396762",
+        "77617a307367646d76697365",
+        "71636d6c3666747572317338",
+        "6f6839376b726d6165363479",
+        "39616a63706e613931767a6e",
+        "6d6d61627461707a36307a39",
+        "65687a68777577756c743534",
+        "3035716165306a3778767267",
+        "6d7378747064373077613676",
+        "6333756f6766796e6d6b7777",
+        "6a73346b627971696e777979"
       ],
       "dataProviderIds": [
         "columbia-university"
@@ -1222,7 +1222,7 @@
     {
       "name": "CTD2 BeatAML",
       "description": "In the era of precision medicine, AML patients have few therapeutic options, with “7 + 3” induction chemotherapy having been the standard for decades (Bertoli et al. 2017). While several agents targeting the myeloid marker CD33 or alterations in FLT3 or IDH2 have demonstrated ...",
-      "summary": "In the era of precision medicine, AML patients have few therapeutic options, with “7 + 3” induction chemotherapy having been the standard for decades (Bertoli et al. 2017). While several agents targeting the myeloid marker CD33 or alterations in FLT3 or IDH2 have demonstrated efficacy in patients (Wei and Tiong 2017), responses are uncertain in some populations (Castaigne et al. 2012) and relapse remains prevalent (Stone et al. 2017). These drugs highlight both the promise of targeted therapies in AML and the urgent need for additional treatment options that are tailored to more refined patient subpopulations in order to achieve durable responses.\n \n The BeatAML initiative was launched as a comprehensive study of the relationship between molecular alterations and ex-vivo drug sensitivity in patients with AML. One of the primary goals of this multi-center study was to develop a discovery cohort that could yield new drug target hypotheses and predictive biomarkers of therapeutic response. Patient samples were subjected to whole-exome sequencing (WES), transcriptomic sequencing (RNA-seq), and ex-vivo functional drug sensitivity screens (Tyner et al. 2018)(www.vizome.org). This rich resource should enable the discovery of molecular correlates of drug response and putative patient populations most likely to respond to targeted agents. Indeed, analysis of these data has already revealed numerous correlations of drug sensitivity or resistance with a variety of mutational subsets of disease as well as numerous gene expression signatures that correlated with drug sensitivity/resistance (Tyner et al. 2018).\n \n The goal of this challenge is to define patient subpopulations tailored to individual treatments by discovering (genomic and transcriptomic) biomarkers of drug sensitivity, as evaluated on an unpublished cohort of patients from the BeatAML project.",
+      "summary": "In the era of precision medicine, AML patients have few therapeutic options, with “7 + 3” induction chemotherapy having been the standard for decades (Bertoli et al. 2017). While several agents targeting the myeloid marker CD33 or alterations in FLT3 or IDH2 have demonstrated efficacy in patients (Wei and Tiong 2017), responses are uncertain in some populations (Castaigne et al. 2012) and relapse remains prevalent (Stone et al. 2017). These drugs highlight both the promise of targeted therapies in AML and the urgent need for additional treatment options that are tailored to more refined patient subpopulations in order to achieve durable responses.    The BeatAML initiative was launched as a comprehensive study of the relationship between molecular alterations and ex-vivo drug sensitivity in patients with AML. One of the primary goals of this multi-center study was to develop a discovery cohort that could yield new drug target hypotheses and predictive biomarkers of therapeutic response. Patient samples were subjected to whole-exome sequencing (WES), transcriptomic sequencing (RNA-seq), and ex-vivo functional drug sensitivity screens (Tyner et al. 2018)(www.vizome.org). This rich resource should enable the discovery of molecular correlates of drug response and putative patient populations most likely to respond to targeted agents. Indeed, analysis of these data has already revealed numerous correlations of drug sensitivity or resistance with a variety of mutational subsets of disease as well as numerous gene expression signatures that correlated with drug sensitivity/resistance (Tyner et al. 2018).    The goal of this challenge is to define patient subpopulations tailored to individual treatments by discovering (genomic and transcriptomic) biomarkers of drug sensitivity, as evaluated on an unpublished cohort of patients from the BeatAML project.",
       "startDate": "2019-12-19",
       "endDate": "2020-04-28",
       "url": "https://www.synapse.org/#!Synapse:syn20940518",
@@ -1232,25 +1232,25 @@
         "aml"
       ],
       "organizerIds": [
-        "56gbfvakyz5dlujmqnr86oo0",
-        "npcnsw0bsocaxaletij84ih5",
-        "8r82930mpvuefs0j8wwiqlqm",
-        "va5s4dw1eikoxyv5gnbwo6k4",
-        "e95vpovut4pzfgqizshlgzpd",
-        "6gxgqj83hc1ojycm5l70it4j",
-        "b2jqzptxd4st9vis9hjic4j9",
-        "amj286gjelypkkcm36cg7u3e",
-        "9d9jp4pesfj0tgll9wqtuwqk",
-        "se9hicivfh8r02nbcnm7llp7",
-        "nqxwp1w8fdbiienmwj6rkpgm",
-        "jpcfh7t8zv7u6bfzrhnmm1vx",
-        "npfph1hseyq47bodq7dwctqq",
-        "jsuo847bqfyijaxb5zr0nynx",
-        "dsx27j7tdg5n4j2gjwhysghz",
-        "m3pasj3wfmv1krx0dq3ts3cx",
-        "vqbbyl7iclb4oqea7ypmt6k2",
-        "1of3ykqvz3urta0tb7eajkkv",
-        "jisnvw9q3l6z4139swpbftz5"
+        "3133386873616c6d66617130",
+        "336862797730716a73733132",
+        "74367a337a6b357777683667",
+        "316f747a387863676c777733",
+        "3471336d317a6b7832336b38",
+        "757665376769646d6579726e",
+        "6138657767717531617a6a62",
+        "336b6f6d6565317064766578",
+        "626c6b633763323334626176",
+        "386a71676a34717879323870",
+        "39367132666379656c723961",
+        "306c666c37687173657a7136",
+        "777671646665696967767a70",
+        "6c6863373878776c6e697564",
+        "6e72656877316178357a637a",
+        "36336230666969676e386c33",
+        "78386735377065366d69636f",
+        "6d6762336c7530366e6e7969",
+        "636765706e636e3071667678"
       ],
       "dataProviderIds": [
         "leukemia-and-lymphoma-society",
@@ -1263,7 +1263,7 @@
     {
       "name": "Metadata Automation",
       "description": "The Cancer Research Data Commons (CRDC) will collate data across diverse groups of cancer researchers, each collecting biomedical data in different formats. This means the data must be retrospectively harmonized and transformed to enable this data to be submitted. In addition ...",
-      "summary": "The Cancer Research Data Commons (CRDC) will collate data across diverse groups of cancer researchers, each collecting biomedical data in different formats. This means the data must be retrospectively harmonized and transformed to enable this data to be submitted. In addition, to be findable by the broader scientific community, coherent information (metadata) is necessary about the data fields and values. Coherent metadata annotation of the data fields and their values can enable computational data transformation, query, and analysis. Creation of this type of descriptive metadata can require biomedical expertise to determine the best annotations and thus is a time-consuming and manual task which is both an obstacle and a bottleneck in data sharing and submissions.\n \n Goal: Using structured biomedical data files, challenge participants will develop tools to semi-automate annotation of metadata fields and values, using available research data annotations (e.g. caDSR CDEs) as well as established terminologies and ontologies (e.g. NCIt, LOINC, Mondo, ICD).\n \n Motivation: We aim to significantly lower the burden of adding these annotations across the data ecosystem to streamline and enable both retrospective harmonization as well as data query, discovery and interpretation. This challenge addresses this time-consuming task with semi-automated metadata annotation of structured data.",
+      "summary": "The Cancer Research Data Commons (CRDC) will collate data across diverse groups of cancer researchers, each collecting biomedical data in different formats. This means the data must be retrospectively harmonized and transformed to enable this data to be submitted. In addition, to be findable by the broader scientific community, coherent information (metadata) is necessary about the data fields and values. Coherent metadata annotation of the data fields and their values can enable computational data transformation, query, and analysis. Creation of this type of descriptive metadata can require biomedical expertise to determine the best annotations and thus is a time-consuming and manual task which is both an obstacle and a bottleneck in data sharing and submissions.    Goal: Using structured biomedical data files, challenge participants will develop tools to semi-automate annotation of metadata fields and values, using available research data annotations (e.g. caDSR CDEs) as well as established terminologies and ontologies (e.g. NCIt, LOINC, Mondo, ICD).    Motivation: We aim to significantly lower the burden of adding these annotations across the data ecosystem to streamline and enable both retrospective harmonization as well as data query, discovery and interpretation. This challenge addresses this time-consuming task with semi-automated metadata annotation of structured data.",
       "startDate": "2020-01-14",
       "endDate": "2020-06-02",
       "url": "https://www.synapse.org/#!Synapse:syn18065891",
@@ -1272,18 +1272,18 @@
         "metadata"
       ],
       "organizerIds": [
-        "nytrt6bvde5adizo72vp1gab",
-        "xa5oeqyuio3qhdciqemdn32j",
-        "xca3glt85f88muhnb24tagx0",
-        "9fjy3dxd2ka97c43ddz9n0ht",
-        "ypgbmd04qot5756rgtu73jps",
-        "r2htwvqg11qx2k3go0ttjll2",
-        "ek60hc32y757gj50apin8pp0",
-        "7ys6mtwjlcwtxunj31g9f05e",
-        "wrab5solbmyys9hunoaewsgv",
-        "g9njuklaem72q36cw0w1aeu4",
-        "i51vrj8zabdykbu67u4eav8o",
-        "tu9z9sj9cr8cuyptan1iu4oy"
+        "636f6f39393463776a777339",
+        "7a32616a6d6231786e686c30",
+        "7538366c676f66746d343479",
+        "717632736939636838336974",
+        "303165366671613367697268",
+        "6534366d6b346d3873667567",
+        "66756364616c6d3778713031",
+        "6a7730673074347133727673",
+        "72793675366272796d33796f",
+        "373139306a6e7375616f6339",
+        "346771653932367075653877",
+        "696772697565676734386977"
       ],
       "dataProviderIds": [
         "apollo-network",
@@ -1306,17 +1306,17 @@
         "rheumatoid-arthritis"
       ],
       "organizerIds": [
-        "d1tx9b2l6vexcf0wurq05ime",
-        "z8ex2j08116s4yy1uamcr08h",
-        "wklbwy2cf10qf7k9xyxt0smq",
-        "h1r72zghgvkxj2j7v0r98i4w",
-        "ylt800jtrwef9ligzq5ccxmo",
-        "14akk2pnbcy5asa4kmpqv81p",
-        "if5jcs4bhlvlrgmngne27pbs",
-        "zz5c58gyu6a6xnbtnl5m833l",
-        "fofb96iv9vwu9ionwvzgybqr",
-        "9sgu1yl8xb7baddb276umw8r",
-        "fv7r5ti2jr0rsefl4r4uuhfc"
+        "34316433376637736c6f7565",
+        "367569327230736b37793263",
+        "34656c616a6e306773666773",
+        "376b676d72683832356e7130",
+        "686375356630783679686862",
+        "3339346d3134307471323039",
+        "327136736c78627172323634",
+        "3077757730306f6531646877",
+        "35347163646b67616978716d",
+        "6a317767383861356830736a",
+        "66723831336b74396d793131"
       ],
       "dataProviderIds": [
         "university-of-alabama-at-birmingham"
@@ -1328,7 +1328,7 @@
     {
       "name": "BEAT-PD",
       "description": "Recent advances in mobile health have demonstrated great potential to leverage sensor-based technologies for quantitative, remote monitoring of health and disease - particularly for diseases affecting motor function such as Parkinson’s disease. Such approaches have been rolle ...",
-      "summary": "Recent advances in mobile health have demonstrated great potential to leverage sensor-based technologies for quantitative, remote monitoring of health and disease - particularly for diseases affecting motor function such as Parkinson’s disease. Such approaches have been rolled out using research-grade wearable sensors and, increasingly, through the use of smartphones and consumer wearables, such as smart watches and fitness trackers. These devices not only provide the ability to measure much more detailed disease phenotypes but also provide the ability to follow patients longitudinally with much higher frequency than is possible through clinical exams. However, the conversion of sensor-based data streams into digital biomarkers is complex and no methodological standards have yet evolved to guide this process.\n\nParkinson’s disease (PD) is a neurodegenerative disease that primarily affects the motor system but also exhibits other symptoms. Typical motor symptoms of the disease include tremors, slowness (bradykinesia), posture and walking perturbations, muscle rigidity and speech perturbations. Additionally, patients may experience side effects from their medication in the form of dyskinesia (involuntary movement). In the clinic, symptoms and side-effects are evaluated using physician observation and patient reports, however this infrequent assessment may not reflect a patient's typical state on an average day. Mobile sensor (accelerometers) may be useful for tracking a patient's symptom severity and response to medication, and have the potential to provide more detailed information that patients and physicians can use to make care decisions.\n\nWhile much work in this field has been done to predict symptom severity using sensor feeds during the completion of specific tasks, very little work has focused on information available from sensors worn during the course of daily living. The Biomarker and Endpoint Assessment to Track Parkinson's Disease (BEAT-PD) Challenge is a first of it's kind challenge, designed to benchmark methods for the processing of unstructured (free-living) sensor data, in order to be predictive of Parkinson's Disease severity. Participants will be provided with raw sensor (accelerometer and gyroscope) time series data recorded during the course of daily living, and will be asked to predict individuals' medication state and symptom severity.",
+      "summary": "Recent advances in mobile health have demonstrated great potential to leverage sensor-based technologies for quantitative, remote monitoring of health and disease - particularly for diseases affecting motor function such as Parkinson’s disease. Such approaches have been rolled out using research-grade wearable sensors and, increasingly, through the use of smartphones and consumer wearables, such as smart watches and fitness trackers. These devices not only provide the ability to measure much more detailed disease phenotypes but also provide the ability to follow patients longitudinally with much higher frequency than is possible through clinical exams. However, the conversion of sensor-based data streams into digital biomarkers is complex and no methodological standards have yet evolved to guide this process.  Parkinson’s disease (PD) is a neurodegenerative disease that primarily affects the motor system but also exhibits other symptoms. Typical motor symptoms of the disease include tremors, slowness (bradykinesia), posture and walking perturbations, muscle rigidity and speech perturbations. Additionally, patients may experience side effects from their medication in the form of dyskinesia (involuntary movement). In the clinic, symptoms and side-effects are evaluated using physician observation and patient reports, however this infrequent assessment may not reflect a patient's typical state on an average day. Mobile sensor (accelerometers) may be useful for tracking a patient's symptom severity and response to medication, and have the potential to provide more detailed information that patients and physicians can use to make care decisions.  While much work in this field has been done to predict symptom severity using sensor feeds during the completion of specific tasks, very little work has focused on information available from sensors worn during the course of daily living. The Biomarker and Endpoint Assessment to Track Parkinson's Disease (BEAT-PD) Challenge is a first of it's kind challenge, designed to benchmark methods for the processing of unstructured (free-living) sensor data, in order to be predictive of Parkinson's Disease severity. Participants will be provided with raw sensor (accelerometer and gyroscope) time series data recorded during the course of daily living, and will be asked to predict individuals' medication state and symptom severity.",
       "startDate": "2020-01-13",
       "endDate": "2020-05-13",
       "url": "https://www.synapse.org/#!Synapse:syn20825169",
@@ -1337,17 +1337,17 @@
         "parkinsons"
       ],
       "organizerIds": [
-        "bdma8kq41b45gx1wq7bcxfjs",
-        "ya5u6mnt67g8mszealjofuqg",
-        "6ax2vcak05ylrizfksp2gwos",
-        "14o99envln86zu0733mk640m",
-        "hdae5z2fkqzquvvfeig7d7nf",
-        "9dez000gf3819iii01hztuo8",
-        "0d483w93porrbye6r9ixzlqf",
-        "3wvebbr6lagqgl8l1y4yj7mj",
-        "mnu917pbxf5p5jsjtvphc0tq",
-        "r9mid0hmm2q94sbrbpynpc71",
-        "xeehs9yzepauius3mwsc9r8h"
+        "6f6a3269796872696d383134",
+        "34326d347574377373376b6b",
+        "3738627062716a377530667a",
+        "387178747a6a657739317978",
+        "6238786e7765613568733564",
+        "763061363074776770717a36",
+        "6f7663666236347574747535",
+        "736165677374696871397978",
+        "6e616f6669346e3975736e78",
+        "6e313271727970346d656e75",
+        "38676b646562676a6c727139"
       ],
       "dataProviderIds": [
         "michael-j-fox-foundation",
@@ -1364,7 +1364,7 @@
     {
       "name": "CTD2 Pancancer Chemosensitivity",
       "description": "Over the last two years, the Columbia CTD2 Center developed PANACEA (Pancancer Analysis of Chemical Entity Activity), a comprehensive repertoire of dose response curves and molecular profiles representative of cellular responses to drug perturbations. PANACEA covers a broad s ...",
-      "summary": "Over the last two years, the Columbia CTD2 Center developed PANACEA (Pancancer Analysis of Chemical Entity Activity), a comprehensive repertoire of dose response curves and molecular profiles representative of cellular responses to drug perturbations. PANACEA covers a broad spectrum of cellular contexts representative of poor outcome malignancies, including rare ones such as GIST sarcoma and gastroenteropancreatic neuroendocrine tumors (GEP-NETs). PANACEA is uniquely suited to support DREAM Challenges related to the elucidation of drug mechanism of action (MOA), drug sensitivity, and drug synergy.\n\nThe goal of this Challenge is to foster development and benchmarking of algorithms to predict the sensitivity, as measured by the area under the dose-response curve, of a cell line to a compound based on the baseline transcriptional profiles of the cell line.\n\nThe drug perturbational RNAseq profiles of 11 cell lines for 30 chosen compounds will be provided to challenge participants, without revealing the identity of the drugs. These profiles will be removed from any public dataset and added back only after the challenge is completed.\n\nIn addition, RNAseq and mRNA-dependency data will be provided for 515 cell-lines from the Cancer Cell-Line Encyclopedia (CCLE) and Achilles databases respectively. This challenge asks participants to combine these three datasets to predict drug-sensitivity for the 30 anonymized drugs across 515 cell-lines given the fact:\n\nPANACEA drug-perturbed RNAseq links each drug to differential-mRNA. (drug -> mRNA-change)\nAchilles data links differential-mRNA to a viability across all 515 cell-lines (mRNA-change -> viability)\nCCLE RNAseq gives the basal mRNA-expression across across all 515 cell-lines\nIn addition, we are encouraging participants to utilize large public databases in the development or training of algorithms (Subramanian et al. 2017; Barretina et al. 2012; Iorio et al. 2016), as well as insights and models developed from previous DREAM Challenges (Bansal et al. 2014; Costello et al. 2014; Menden et al. 2019). Participants will be asked to use the provided post-treatment transcriptional data to predict drug sensitivity for 30 drugs across 515 cell-lines.",
+      "summary": "Over the last two years, the Columbia CTD2 Center developed PANACEA (Pancancer Analysis of Chemical Entity Activity), a comprehensive repertoire of dose response curves and molecular profiles representative of cellular responses to drug perturbations. PANACEA covers a broad spectrum of cellular contexts representative of poor outcome malignancies, including rare ones such as GIST sarcoma and gastroenteropancreatic neuroendocrine tumors (GEP-NETs). PANACEA is uniquely suited to support DREAM Challenges related to the elucidation of drug mechanism of action (MOA), drug sensitivity, and drug synergy.  The goal of this Challenge is to foster development and benchmarking of algorithms to predict the sensitivity, as measured by the area under the dose-response curve, of a cell line to a compound based on the baseline transcriptional profiles of the cell line.  The drug perturbational RNAseq profiles of 11 cell lines for 30 chosen compounds will be provided to challenge participants, without revealing the identity of the drugs. These profiles will be removed from any public dataset and added back only after the challenge is completed.  In addition, RNAseq and mRNA-dependency data will be provided for 515 cell-lines from the Cancer Cell-Line Encyclopedia (CCLE) and Achilles databases respectively. This challenge asks participants to combine these three datasets to predict drug-sensitivity for the 30 anonymized drugs across 515 cell-lines given the fact:  PANACEA drug-perturbed RNAseq links each drug to differential-mRNA. (drug -> mRNA-change) Achilles data links differential-mRNA to a viability across all 515 cell-lines (mRNA-change -> viability) CCLE RNAseq gives the basal mRNA-expression across across all 515 cell-lines In addition, we are encouraging participants to utilize large public databases in the development or training of algorithms (Subramanian et al. 2017; Barretina et al. 2012; Iorio et al. 2016), as well as insights and models developed from previous DREAM Challenges (Bansal et al. 2014; Costello et al. 2014; Menden et al. 2019). Participants will be asked to use the provided post-treatment transcriptional data to predict drug sensitivity for 30 drugs across 515 cell-lines.",
       "startDate": "2020-04-28",
       "endDate": "2020-07-27",
       "url": "https://www.synapse.org/#!Synapse:syn21763589",
@@ -1375,19 +1375,19 @@
         "cancer"
       ],
       "organizerIds": [
-        "8tnjl402zeo4onic13crmklo",
-        "bk868c93cu75r8y0oys12str",
-        "u4mud7ov6i4sls3wlrq65vs4",
-        "z90om1l4ifn5m3y1dj2xjphg",
-        "tguqmjov333jsifffvgagxsr",
-        "1cwvkuhh5p361r4xtvaayd9c",
-        "aqxbt2xig5l8m1a8byu54y5i",
-        "m6pati192ivb93cn7phkblis",
-        "qc6haqqk3wwldq6hnocx30qk",
-        "iwg8vkq16ttvk9a4gh53bh1a",
-        "c3xzatxl9nwgg9pca5usa4rh",
-        "kl5ogoxqdslojczi9u7evvlp",
-        "d0a2ydhrc29jjpanfj4cyic8"
+        "776a626a3538767a39376d75",
+        "6c676e757938767a3233666f",
+        "676b353532696e6f3473306d",
+        "71377834376f383167327966",
+        "6d6e6464767a31306f703979",
+        "626f7664376e303276797a35",
+        "307a677877756836346e697a",
+        "6b6f63676b34626539306a7a",
+        "627836693336306771326574",
+        "7176656c756834376136747a",
+        "353373736d78657767783472",
+        "343837767767746e7333676c",
+        "35616333307162676e763630"
       ],
       "dataProviderIds": [
         "columbia-university"
@@ -1399,7 +1399,7 @@
     {
       "name": "EHR COVID-19",
       "description": "The rapid rise of COVID-19 has challenged healthcare globally. The underlying risks and outcomes of infection are still incompletely characterized even as the world surpasses 4 million infections. Due to the importance and emergent need for better understanding of the conditi ...",
-      "summary": "The rapid rise of COVID-19 has challenged healthcare globally. The underlying risks and outcomes of infection are still incompletely characterized even as the world surpasses 4 million infections. Due to the importance and emergent need for better understanding of the condition and the development of patient specific clinical risk scores and early warning tools, we have developed a platform to support testing analytic and machine learning hypotheses on clinical data without data sharing as a platform to rapidly discover and implement approaches for care. We have previously applied this approach in the successful EHR DREAM Challenge focusing on Patient Mortality Prediction with UW Medicine.\n\nWe have the goal of incorporating machine learning and predictive algorithms into clinical care and COVID-19 is an important and highly urgent challenge. In our first iteration, we will facilitate understanding risk factors that lead to a positive test utilizing electronic health recorded data mapped to the OMOP Common Data Model. Initially, UW Medicine clinical data sets will be used. If successful, we expect to expand this benchmarking effort to include methods for predicting trajectory and mortality as well as data from additional sites.",
+      "summary": "The rapid rise of COVID-19 has challenged healthcare globally. The underlying risks and outcomes of infection are still incompletely characterized even as the world surpasses 4 million infections. Due to the importance and emergent need for better understanding of the condition and the development of patient specific clinical risk scores and early warning tools, we have developed a platform to support testing analytic and machine learning hypotheses on clinical data without data sharing as a platform to rapidly discover and implement approaches for care. We have previously applied this approach in the successful EHR DREAM Challenge focusing on Patient Mortality Prediction with UW Medicine.  We have the goal of incorporating machine learning and predictive algorithms into clinical care and COVID-19 is an important and highly urgent challenge. In our first iteration, we will facilitate understanding risk factors that lead to a positive test utilizing electronic health recorded data mapped to the OMOP Common Data Model. Initially, UW Medicine clinical data sets will be used. If successful, we expect to expand this benchmarking effort to include methods for predicting trajectory and mortality as well as data from additional sites.",
       "startDate": "2020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "open",
@@ -1408,17 +1408,17 @@
         "ehr"
       ],
       "organizerIds": [
-        "c827lc7y2weubtbb5zh0o9he",
-        "j7vufwjih2mq7jilqo3z0bi9",
-        "4ag836zaxop4op57b9ledoib",
-        "ks5jeaa6u560ocahvd8svhvy",
-        "kdx5eiw801mgwohw4ivik5e4",
-        "pn460lix0wb4o4xvkna7cjmt",
-        "4r3tz3veeyeatf3bvceirn1t",
-        "c85plz8kh2o2ni7c70op2sed",
-        "5kxzadgj3xl3fcwg22vui16e",
-        "ew09cg7ztt12cd3n26tmx1ho",
-        "m0hy0v38fwgunzcdfnavk4b8"
+        "396c666b713030327a696c6c",
+        "303638376530736c35623475",
+        "767232646574347331676c74",
+        "733831337672773575756a63",
+        "723835367167346466347179",
+        "673071376834743573643133",
+        "7879726a696a326d6f677237",
+        "326f303634397a316c6a3432",
+        "34793467653972386a733933",
+        "363839746a66726864793366",
+        "38616e723239686c73656b74"
       ],
       "dataProviderIds": [
         "university-of-washington"
@@ -1441,23 +1441,23 @@
         "pd1"
       ],
       "organizerIds": [
-        "cv416vemxwbxwb88ruzbgglz",
-        "3dvz7g1c20kdkdx6j9gwgkn8",
-        "d3wayg99oumc1m9fe1spc0nt",
-        "dmmylakdxz9puhs2uypavagv",
-        "inr513roy4iqzejbayd24qtj",
-        "lv6ltbsnjh7hhmllfgo1arum",
-        "4mwqu1rmxs8aldtyii46ip65",
-        "3i6mvqln3o42k0y5ry0endir",
-        "8lb8x5xni7pcg8i0auta9fh1",
-        "k5o65ekwb08yknxcjzqllhn9",
-        "9gddmoixxo72gkp4n0056uz2",
-        "higkmj272sz7lvkep5rlcami",
-        "z3i3jtw2irb9u9thgba04ujc",
-        "cgrego7glw8so4d5r08dzyw6",
-        "j7ul7pnrhqvgkgkrnmu5ipa9",
-        "4e1oleauzd6yxud6l5m0o4r0",
-        "06v2xd11jud777vjiat4bjot"
+        "67706431696e6678366c3630",
+        "3567716c6534323970756164",
+        "3866723667623039656b6137",
+        "7a3772786a39627338756d64",
+        "7a7338703375393973316d74",
+        "796d68627370706f75353634",
+        "6f666d3935796f61356a3434",
+        "746b3066317176713532696f",
+        "62687465746a646273756772",
+        "6a6a70336f7570733138696d",
+        "6b6d7a723679773637683338",
+        "7533726a6a6b657a3877337a",
+        "7368666e6c7365786e7a6c6b",
+        "357764657138617761707673",
+        "6e7866346e7635766f387873",
+        "376631646c36747233696664",
+        "726b7461356c756333396879"
       ],
       "dataProviderIds": [
         "bristol-myers-squibb"
@@ -1469,7 +1469,7 @@
     {
       "name": "Cancer Data Registry NLP",
       "description": "A critical bottleneck in translational and clinical research is access to large volumes of high-quality clinical data. While structured data exist in medical EHR systems, a large portion of patient information including patient status, treatments, and outcomes is contained in ...",
-      "summary": "A critical bottleneck in translational and clinical research is access to large volumes of high-quality clinical data. While structured data exist in medical EHR systems, a large portion of patient information including patient status, treatments, and outcomes is contained in unstructured text fields. Research in Natural Language Processing (NLP) aims to unlock this hidden and often inaccessible information. However, numerous challenges exist in developing and evaluating NLP methods, much of it centered on having “gold-standard” metrics for evaluation, and access to data that may contain personal health information (PHI).\n \n This DREAM Challenge will focus on the development and evaluation of of NLP algorithms that can improve clinical trial matching and recruitment.",
+      "summary": "A critical bottleneck in translational and clinical research is access to large volumes of high-quality clinical data. While structured data exist in medical EHR systems, a large portion of patient information including patient status, treatments, and outcomes is contained in unstructured text fields. Research in Natural Language Processing (NLP) aims to unlock this hidden and often inaccessible information. However, numerous challenges exist in developing and evaluating NLP methods, much of it centered on having “gold-standard” metrics for evaluation, and access to data that may contain personal health information (PHI).    This DREAM Challenge will focus on the development and evaluation of of NLP algorithms that can improve clinical trial matching and recruitment.",
       "url": "https://www.synapse.org/#!Synapse:syn18361217",
       "status": "upcoming",
       "tagIds": [
@@ -1477,8 +1477,8 @@
         "nlp"
       ],
       "organizerIds": [
-        "5il3uss8pk4y2vp9gk59moq6",
-        "mdryrphav74dq6bz480pp2ol"
+        "306f6d6c6e636e793532776d",
+        "36636c76343672346378356a"
       ],
       "dataProviderIds": [
 

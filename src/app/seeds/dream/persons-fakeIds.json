@@ -1,2321 +1,2785 @@
 {
   "persons": [
     {
+      "organizerId": "3062756e3077366364677274",
       "firstName": "Brandon",
       "lastName": "Allgood",
       "organizationIds": "numerate"
     },
     {
+      "organizerId": "6e64686b6971656864713067",
       "firstName": "Christian",
       "lastName": "Basile",
       "organizationIds": "urban-green-energy"
     },
     {
+      "organizerId": "6e3974313267706c71697533",
       "firstName": "Brian",
       "lastName": "Bot",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6c73346a7a67673075767435",
       "firstName": "Deepak",
       "lastName": "Chandran",
       "organizationIds": "autodesk"
     },
     {
+      "organizerId": "6a62386f6a77336e6c327261",
       "firstName": "Thomas",
       "lastName": "Cokelaer",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "357572613173763872707170",
       "firstName": "Markus",
       "lastName": "Covert",
       "organizationIds": "stanford-university"
     },
     {
+      "organizerId": "61616e6b647936706462706a",
       "firstName": "Bruce",
       "lastName": "Hoff",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "387074387a31323434316b31",
       "firstName": "Jay",
       "lastName": "Hodgson",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7136786332376e3469366333",
       "firstName": "Jonathan",
       "lastName": "Karr",
       "organizationIds": "stanford-university"
     },
     {
+      "organizerId": "3131396e6a6e706a76307479",
       "firstName": "Mike",
       "lastName": "Kellen",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6371757864617679767a7638",
       "firstName": "Po-Ru",
       "lastName": "Loh",
       "organizationIds": "massachusetts-institute-of-technology"
     },
     {
+      "organizerId": "326d623670616b6774727135",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "65686671397a6b7365643274",
       "firstName": "Kahn",
       "lastName": "Rhrissorrakrai",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "64726e3468756b37346c3175",
       "firstName": "Pablo",
       "lastName": "Meyer",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "666b71667234643468756b70",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "6f7a6873386a657734676e67",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "676a787565347238767a3572",
       "firstName": "Alejandro",
       "lastName": "Villaverde",
       "organizationIds": "consejo-superior-de-investigaciones-cientificas"
     },
     {
+      "organizerId": "68647130377876646b686b69",
       "firstName": "Simon",
       "lastName": "Wilkinson",
       "organizationIds": "numerate"
     },
     {
+      "organizerId": "6c756c72723371766e726762",
       "firstName": "Jessen",
       "lastName": "Yu",
       "organizationIds": "numerate"
     },
     {
+      "organizerId": "637a35377178726368687735",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "36626f666f6c386f73737363",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "6c3877733138653369676579",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "6568646268306b716c6d3030",
       "firstName": "Laura",
       "lastName": "Heiser",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "7469396e327a616263307732",
       "firstName": "Heinz",
       "lastName": "Koeppl",
       "organizationIds": "eth-zurich"
     },
     {
+      "organizerId": "6c676171366366646b653877",
       "firstName": "Michael",
       "lastName": "Unger",
       "organizationIds": "eth-zurich"
     },
     {
+      "organizerId": "6b66696f7633663577733166",
       "firstName": "Sach",
       "lastName": "Mukherjee",
       "organizationIds": "nathan-s-kline-institute-for-psychiatric-research"
     },
     {
+      "organizerId": "6b616466776e647961783766",
       "firstName": "Steven",
       "lastName": "Hill",
       "organizationIds": "nathan-s-kline-institute-for-psychiatric-research"
     },
     {
+      "organizerId": "656936706471617633396839",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "64677078676a65327a613274",
       "firstName": "Bruce",
       "lastName": "Hoff",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7a757a793839376e756f6277",
       "firstName": "Jay",
       "lastName": "Hodgson",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "757a66616175306535786230",
       "firstName": "Mike",
       "lastName": "Kellen",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "78786f6d63327a3864683334",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "6e6b7274346b723035706572",
       "firstName": "Thomas",
       "lastName": "Cokelaer",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "6f7a697a6e666a636d346f6b",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "6268346e787561396234736a",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "73373870623567746b693034",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "79676338777575797670796b",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "77306a706e3264357a306c33",
       "firstName": "Lara",
       "lastName": "Mangravite",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "3779796a7a39323571387a6d",
       "firstName": "Solly",
       "lastName": "Sieberts",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "3465327a6f37396f79693537",
       "firstName": "Abhi",
       "lastName": "Pratap",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6f737337636f6f6168746537",
       "firstName": "Christine",
       "lastName": "Suver",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "67343438706f7a7235636537",
       "firstName": "Bruce",
       "lastName": "Hoff",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "377a73777271336465766738",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "396970736a6f753273653431",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "7532706f3566707261797365",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "31796535786e7a62376b796b",
       "firstName": "Eli",
       "lastName": "Stahl",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "366a6d7431706c3574643337",
       "firstName": "Jing",
       "lastName": "Cui",
       "organizationIds": "brigham-and-womens-hospital"
     },
     {
+      "organizerId": "6e706e6866746e6f61747072",
       "firstName": "Andre",
       "lastName": "Falcao",
       "organizationIds": "university-of-lisbon"
     },
     {
+      "organizerId": "75346273377a31743576656f",
       "firstName": "Robert",
       "lastName": "Plenge",
       "organizationIds": "merck-co"
     },
     {
+      "organizerId": "39673779356d647731753436",
       "firstName": "Peter",
       "lastName": "Gregersen",
       "organizationIds": "feinstein-institutes-for-medical-research"
     },
     {
+      "organizerId": "707a307a6733336c6c326b61",
       "firstName": "Jeff",
       "lastName": "Greenberg",
       "organizationIds": "corrona"
     },
     {
+      "organizerId": "7771797977396e3831627234",
       "firstName": "Kaleb",
       "lastName": "Michaud",
       "organizationIds": "arthritis-internet-registry"
     },
     {
+      "organizerId": "773565363567637766697733",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "7131756e6a3965796d317a69",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "7331697530676c7763717779",
       "firstName": "Paul C.",
       "lastName": "Boutros",
       "organizationIds": "ontario-institute-for-cancer-research"
     },
     {
+      "organizerId": "6538366e6e776a676f6f3965",
       "firstName": "Lincoln D.",
       "lastName": "Stein",
       "organizationIds": "ontario-institute-for-cancer-research"
     },
     {
+      "organizerId": "6734693861397a3538397763",
       "firstName": "Josh",
       "lastName": "Stuart",
       "organizationIds": "university-of-california-santa-cruz"
     },
     {
+      "organizerId": "72716d646b36357272326d72",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "653031743074786968347861",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6e68367879366267766e696b",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "3062753761667a71796e7268",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "77376e3034676e3363616561",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "79746139676d646970356171",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "7a677563316e687a3662657a",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "383231776b6e6137776d336b",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "376d7a6c397734716d367175",
       "firstName": "Steven M.",
       "lastName": "Kornblau",
       "organizationIds": "md-anderson-cancer-center"
     },
     {
+      "organizerId": "7a616d79737366626a7a6671",
       "firstName": "Amina Ann",
       "lastName": "Qutub",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "39346b6e777777746a746265",
       "firstName": "David",
       "lastName": "Noren",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "61626d686e7a776c66357767",
       "firstName": "Bryon",
       "lastName": "Long",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "367264386a7364673671386d",
       "firstName": "Alex",
       "lastName": "Bisberg",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "316a656f67726f6239746862",
       "firstName": "Chenyue",
       "lastName": "Hu",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "7a756268703731316861796d",
       "firstName": "Erik",
       "lastName": "Engquist",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "6d63383764346f64646b3532",
       "firstName": "Andre",
       "lastName": "Schultz",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "7a7736796b75323139786466",
       "firstName": "Lisa",
       "lastName": "Geda",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "6176726876666f64736c6b6d",
       "firstName": "Ramy",
       "lastName": "Sweidan",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "7061713877687237316b6773",
       "firstName": "Ka Wai",
       "lastName": "Lin",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "74796f326b76316c31613331",
       "firstName": "Tien",
       "lastName": "Tang",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "7477316a306f6e306f70666a",
       "firstName": "Arun",
       "lastName": "Mahadevan",
       "organizationIds": "rice-university"
     },
     {
+      "organizerId": "30656d346a336a6d6f357776",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "74317a32316564346e736c30",
       "firstName": "Raquel",
       "lastName": "Norel",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "75676b3670376d73646e346a",
       "firstName": "Kahn",
       "lastName": "Rhrissorrakrai",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "766d3378716d6e3338337832",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "75323579676e713530736679",
       "firstName": "Bruce",
       "lastName": "Hoff",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "3338326676377a6d35646f78",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "666461653063716167706e79",
       "firstName": "Christine",
       "lastName": "Suver",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "677664347572743078707838",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "756267733175793378716d64",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "716467306b6a6f39376a3379",
       "firstName": "Mehmet",
       "lastName": "Gonen",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "39746d743066657961396773",
       "firstName": "Barbara",
       "lastName": "Weir",
       "organizationIds": "broad-institute"
     },
     {
+      "organizerId": "34363862796334636a626469",
       "firstName": "Aviad",
       "lastName": "Tsherniak",
       "organizationIds": "broad-institute"
     },
     {
+      "organizerId": "747130716876667479386d6e",
       "firstName": "Daniel",
       "lastName": "Marbach",
       "organizationIds": "university-of-lausanne"
     },
     {
+      "organizerId": "356679616139367a696f6664",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "766338676a6468357a693474",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "7567676d6e637a3434687078",
       "firstName": "Bruce",
       "lastName": "Hoff",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6a7974656f3971746773656e",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6a69716c3378346e75306739",
       "firstName": "Christine",
       "lastName": "Suver",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "656e6e6832307765776f6374",
       "firstName": "Shannon",
       "lastName": "Carter",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "67767a377966786b68676d6c",
       "firstName": "Sara",
       "lastName": "Howell",
       "organizationIds": "broad-institute"
     },
     {
+      "organizerId": "727366616775703166616f38",
       "firstName": "Paquita",
       "lastName": "Vazquez",
       "organizationIds": "broad-institute"
     },
     {
+      "organizerId": "776c73333370393935656771",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "63327568647878317277306b",
       "firstName": "Bill",
       "lastName": "Hahn",
       "organizationIds": "broad-institute"
     },
     {
+      "organizerId": "776b65386e76636c38753678",
       "firstName": "Jesse",
       "lastName": "Boehm",
       "organizationIds": "broad-institute"
     },
     {
+      "organizerId": "357579747a723973786c7765",
       "firstName": "Todd",
       "lastName": "Golub",
       "organizationIds": "broad-institute"
     },
     {
+      "organizerId": "6d6675737331776164387268",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "6f6e61347331703675327975",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "69307477626a6c64796a7338",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "686c317168337032396d6c6c",
       "firstName": "Bill",
       "lastName": "Hahn",
       "organizationIds": "dana-farber-cancer-institute"
     },
     {
+      "organizerId": "6e6c6367633734706d7a6265",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "6a6b63716969647772326d77",
       "firstName": "Andy",
       "lastName": "Simmons",
       "organizationIds": "kings-college-london"
     },
     {
+      "organizerId": "6b696e65317962716a78646a",
       "firstName": "Arno",
       "lastName": "Klein",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6b6d6c636b643877766b7a39",
       "firstName": "Benjamin",
       "lastName": "Logsdon",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "70696861366e766171717637",
       "firstName": "David",
       "lastName": "Fardo",
       "organizationIds": "university-of-kentucky"
     },
     {
+      "organizerId": "793378743168633674396276",
       "firstName": "Christine",
       "lastName": "Suver",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7a7771796b776e6271626632",
       "firstName": "Christopher",
       "lastName": "Bare",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "79633674696c656e74343475",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "6c70366a673437777866336f",
       "firstName": "John 'Keoni'",
       "lastName": "Kauwe",
       "organizationIds": "brigham-young-university"
     },
     {
+      "organizerId": "613734303430727777663461",
       "firstName": "Lara",
       "lastName": "Mangravite",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "79677a31636b756b7a733835",
       "firstName": "Mette",
       "lastName": "Peters",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "72367761397874707a783379",
       "firstName": "Nicholas",
       "lastName": "Tustison",
       "organizationIds": "university-of-virginia"
     },
     {
+      "organizerId": "627362773770357370376636",
       "firstName": "Richard",
       "lastName": "Dobson",
       "organizationIds": "kings-college-london"
     },
     {
+      "organizerId": "386b7a72367362766674736a",
       "firstName": "Satrajit",
       "lastName": "Ghosh",
       "organizationIds": "massachusetts-institute-of-technology"
     },
     {
+      "organizerId": "697a6a636c613537326d6234",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "376f636730666b3233357074",
       "firstName": "Stephen",
       "lastName": "Newhouse",
       "organizationIds": "kings-college-london"
     },
     {
+      "organizerId": "31766d643370727937373765",
       "firstName": "Taylor",
       "lastName": "Maxwell",
       "organizationIds": "george-washington-university"
     },
     {
+      "organizerId": "3376736f716a697378327671",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "756c6b65356d6e3272387036",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "33727a676871726b6a75786e",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "7934357768646a727a6f6a6d",
       "firstName": "Andreas",
       "lastName": "Keller",
       "organizationIds": "rockefeller-university"
     },
     {
+      "organizerId": "3231356274326c6978783468",
       "firstName": "Leslie",
       "lastName": "Vosshall",
       "organizationIds": "rockefeller-university"
     },
     {
+      "organizerId": "646b3838706c627034613872",
       "firstName": "Pablo",
       "lastName": "Meyer",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "6636627366346a777a387934",
       "firstName": "Guillermo",
       "lastName": "Cecchi",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "377575736b6161656b6f6d6c",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "73653532693275793374746d",
       "firstName": "Andre",
       "lastName": "Falcao",
       "organizationIds": "university-of-lisbon"
     },
     {
+      "organizerId": "6670733072736c716e73316d",
       "firstName": "Raquel",
       "lastName": "Norel",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "356b727376346a626d397773",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7a74646b71666277676d6369",
       "firstName": "Bruce",
       "lastName": "Hoff",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "32726f797564657037666161",
       "firstName": "Christine",
       "lastName": "Suver",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7478327030347a6164616974",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6732697a7135387339786b66",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "736531396e77363678327374",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "687139716e37353870307569",
       "firstName": "Robert",
       "lastName": "Kuffner",
       "organizationIds": "ludwig-maximilian-university-of-munich"
     },
     {
+      "organizerId": "357064323537356d63646832",
       "firstName": "Kely",
       "lastName": "Norel",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "377230347161737667703668",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "766871326f6d75717a626a63",
       "firstName": "Lara",
       "lastName": "Mangravite",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "717971317a6f623462787270",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "786e707233646b3130736238",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "676f677132757162326b6971",
       "firstName": "Merit",
       "lastName": "Cudkowicz",
       "organizationIds": "massachusetts-general-hospital"
     },
     {
+      "organizerId": "6462726c78616a6c30766c30",
       "firstName": "Orla",
       "lastName": "Hardiman",
       "organizationIds": "trinity-college-institute-of-neuroscience"
     },
     {
+      "organizerId": "783272646e62707571703930",
       "firstName": "Neta",
       "lastName": "Zach",
       "organizationIds": "prize4life"
     },
     {
+      "organizerId": "316866617862723135753135",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "6f3132693676306a71766f7a",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "793934747034686772337a71",
       "firstName": "Jonathan",
       "lastName": "Dry",
       "organizationIds": "astrazeneca"
     },
     {
+      "organizerId": "76787461306a6d3070717a70",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "78396d64686d686a34693567",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "6f6974766378677469676738",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "676d6d35687a757073756462",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "686b39746f69716c30617169",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6e79776a7270683865617567",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "68303639393230646b616836",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "367966796675726278377873",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "6c6f6b687732687977773579",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "3675766a617570693038776c",
       "firstName": "Paul C.",
       "lastName": "Boutros",
       "organizationIds": "ontario-institute-for-cancer-research"
     },
     {
+      "organizerId": "30397a356536706f6b746134",
       "firstName": "Josh",
       "lastName": "Stuart",
       "organizationIds": "university-of-california-santa-cruz"
     },
     {
+      "organizerId": "657538366c377a3733736a6a",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "357665367a707371326a6d32",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7838706e766a346d36723274",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "33627a666866666e76397331",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "6778626c3030746f6632736c",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "6d3871617079786a766d3236",
       "firstName": "Quaid D.",
       "lastName": "Morris",
       "organizationIds": "university-of-toronto"
     },
     {
+      "organizerId": "686338666766627071306264",
       "firstName": "Paul C.",
       "lastName": "Boutros",
       "organizationIds": "ontario-institute-for-cancer-research"
     },
     {
+      "organizerId": "397a346e6761776a6e777139",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "35366c7074796d7233303871",
       "firstName": "Joshua M.",
       "lastName": "Stuart",
       "organizationIds": "university-of-california-santa-cruz"
     },
     {
+      "organizerId": "6472373965316b763832656f",
       "firstName": "Kyle",
       "lastName": "Ellrott",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "75736c357a79646d35703767",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "687138746466616178703773",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "74747230786a726d75626332",
       "firstName": "David",
       "lastName": "Wedge",
       "organizationIds": "wellcome-sanger-institute"
     },
     {
+      "organizerId": "616c73623763317074726e6c",
       "firstName": "Peter Van",
       "lastName": "Loo",
       "organizationIds": "francis-crick-institute"
     },
     {
+      "organizerId": "72336d693031303763777876",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "36346937617878796f336c30",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "7637686a356a6b6438776c31",
       "firstName": "Daniel",
       "lastName": "Marbach",
       "organizationIds": "university-of-lausanne"
     },
     {
+      "organizerId": "6532697472753879316e707a",
       "firstName": "Sarvenaz",
       "lastName": "Choobdar",
       "organizationIds": "university-of-lausanne"
     },
     {
+      "organizerId": "6c6d366d3069767833746367",
       "firstName": "Sven",
       "lastName": "Bergmann",
       "organizationIds": "university-of-lausanne"
     },
     {
+      "organizerId": "766f6975646c6d6a6a636761",
       "firstName": "David",
       "lastName": "Lamparter",
       "organizationIds": "university-of-lausanne"
     },
     {
+      "organizerId": "7a67326737396c3876357864",
       "firstName": "Zoltan",
       "lastName": "Kutalik",
       "organizationIds": "lausanne-university-hospital"
     },
     {
+      "organizerId": "37757238636c3239336b6e36",
       "firstName": "Kasper",
       "lastName": "Lage",
       "organizationIds": "massachusetts-general-hospital"
     },
     {
+      "organizerId": "39377466736f69346b69687a",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "646a38316d6c357978626b37",
       "firstName": "Christine",
       "lastName": "Suver",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "67356e347979653576676c68",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6e35786a7462367374716d73",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "727478347a37376e79637535",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "3733716c3272733673697877",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "773675617863706b30387373",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "627470327732393034676679",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "6d717973667536786e743432",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "3073706474626e367a75656b",
       "firstName": "Anshul",
       "lastName": "Kundaje",
       "organizationIds": "stanford-university"
     },
     {
+      "organizerId": "6278747a6f7179317737736a",
       "firstName": "Nathan",
       "lastName": "Boley",
       "organizationIds": "stanford-university"
     },
     {
+      "organizerId": "7179377a6570746f6431656a",
       "firstName": "Robert",
       "lastName": "Kuffner",
       "organizationIds": "ludwig-maximilian-university-of-munich"
     },
     {
+      "organizerId": "71687531746d657a77797637",
       "firstName": "Laura",
       "lastName": "Heiser",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "6d616b3865336c7876683068",
       "firstName": "James",
       "lastName": "Costello",
       "organizationIds": "university-of-colorado-anschutz-medical-campus"
     },
     {
+      "organizerId": "35666b717130743974306868",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "616772647261396f6f373070",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7a35696976337472726d3939",
       "firstName": "Bruce",
       "lastName": "Hoff",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6a7777777176306d34786531",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "696179747964703831613433",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "347635633271366d39627836",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "3161796d62377a3635746b62",
       "firstName": "Chloe-Agathe",
       "lastName": "Azencott",
       "organizationIds": "mines-paristech"
     },
     {
+      "organizerId": "766e726970327863736c6a6c",
       "firstName": "Anna",
       "lastName": "Goldenberg",
       "organizationIds": "university-of-toronto"
     },
     {
+      "organizerId": "67667a34646978677a303076",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "61647337316e71726335676f",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "396433326c6b7a3779677574",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "6a66633236746f6c7230356f",
       "firstName": "Chloe-Agathe",
       "lastName": "Azencott",
       "organizationIds": "institut-curie"
     },
     {
+      "organizerId": "68636170356771656d623467",
       "firstName": "Anna",
       "lastName": "Goldenberg",
       "organizationIds": "hospital-for-sick-children"
     },
     {
+      "organizerId": "696c667374797a3369796d73",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "643136726833697978316d64",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "3637703933323964746c6d63",
       "firstName": "Kyle",
       "lastName": "Ellrott",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "676c7964676c34346962786e",
       "firstName": "Josh",
       "lastName": "Stuart",
       "organizationIds": "university-of-california-santa-cruz"
     },
     {
+      "organizerId": "38643670636c6b6862366a61",
       "firstName": "Paul C.",
       "lastName": "Boutros",
       "organizationIds": "ontario-institute-for-cancer-research"
     },
     {
+      "organizerId": "643667653739757533793479",
       "firstName": "Paul",
       "lastName": "Spellman",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "75626f37797635676f676c31",
       "firstName": "Christopher",
       "lastName": "Maher",
       "organizationIds": "washington-university-in-st-louis"
     },
     {
+      "organizerId": "7a3466306a6d766a35706437",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6172766a6f666876376b6e65",
       "firstName": "Thea",
       "lastName": "Norman",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7a7a6538753164613873666a",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "6f696d67337472346b327175",
       "firstName": "Stephen",
       "lastName": "Friend",
       "organizationIds": "apple-health"
     },
     {
+      "organizerId": "6d716c656734366266386b34",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "76696b75796a323572616939",
       "firstName": "Brian",
       "lastName": "O'Connor",
       "organizationIds": "global-alliance-for-genomics-and-health"
     },
     {
+      "organizerId": "6c3172347571613674397478",
       "firstName": "Kevin",
       "lastName": "Osborn",
       "organizationIds": "global-alliance-for-genomics-and-health"
     },
     {
+      "organizerId": "656931666b7532676138646c",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6376633030733874756d797a",
       "firstName": "James",
       "lastName": "Eddy",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "707639703963366667356c72",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "32756d316e32647866353464",
       "firstName": "Denis",
       "lastName": "Yuen",
       "organizationIds": "dockstore"
     },
     {
+      "organizerId": "6c35397a32646b6e35346b79",
       "firstName": "Brian",
       "lastName": "O'Connor",
       "organizationIds": "university-of-california-santa-cruz"
     },
     {
+      "organizerId": "6d6977633431676879687478",
       "firstName": "Kevin",
       "lastName": "Osborn",
       "organizationIds": "university-of-california-santa-cruz"
     },
     {
+      "organizerId": "326c6a773732346830356338",
       "firstName": "Denis",
       "lastName": "Yuen",
       "organizationIds": "ontario-institute-for-cancer-research"
     },
     {
+      "organizerId": "777738756336693472617461",
       "firstName": "Udi",
       "lastName": "Rubin",
       "organizationIds": "early-signal-foundation"
     },
     {
+      "organizerId": "356d6f716879687035327a6f",
       "firstName": "Daniela",
       "lastName": "Brunner",
       "organizationIds": "early-signal-foundation"
     },
     {
+      "organizerId": "616375646e686e6c6c716f69",
       "firstName": "Paolo",
       "lastName": "Bonato",
       "organizationIds": "harvard-university"
     },
     {
+      "organizerId": "713530616d73317874653166",
       "firstName": "Federico",
       "lastName": "Parisi",
       "organizationIds": "harvard-university"
     },
     {
+      "organizerId": "706b6c39357977656c7a3667",
       "firstName": "Daisy",
       "lastName": "Daeschler",
       "organizationIds": "michael-j-fox-foundation"
     },
     {
+      "organizerId": "34686b666b79383161373371",
       "firstName": "Lauren",
       "lastName": "Bataille",
       "organizationIds": "michael-j-fox-foundation"
     },
     {
+      "organizerId": "3877647a6836626f7a666861",
       "firstName": "Larsson",
       "lastName": "Omberg",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "65363839766c706e76767977",
       "firstName": "Lara",
       "lastName": "Mangravite",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7461326d783778386c70646b",
       "firstName": "Solly",
       "lastName": "Sieberts",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "64386b726277787a68797033",
       "firstName": "Peter",
       "lastName": "Banda",
       "organizationIds": "university-of-luxembourg"
     },
     {
+      "organizerId": "74786b786c64637975327567",
       "firstName": "Ray",
       "lastName": "Dorsey",
       "organizationIds": "university-of-rochester"
     },
     {
+      "organizerId": "3871336d6e386f3378763467",
       "firstName": "Patrick",
       "lastName": "Aubin",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "6830327779326a6c79326b6d",
       "firstName": "Erin",
       "lastName": "Soderberg",
       "organizationIds": "verily"
     },
     {
+      "organizerId": "68676c6d786b613975356166",
       "firstName": "William",
       "lastName": "Marks",
       "organizationIds": "verily"
     },
     {
+      "organizerId": "73796e69723776626a38756c",
       "firstName": "Mi",
       "lastName": "Yang",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "363773716d7a787a666d7778",
       "firstName": "Zhi",
       "lastName": "Li",
       "organizationIds": "new-york-university"
     },
     {
+      "organizerId": "6e617932667a726239696571",
       "firstName": "Francesca",
       "lastName": "Petralia",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "67706a6630336c63326b7731",
       "firstName": "Pei",
       "lastName": "Wang",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "617264767373306539747663",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "77386d636737613870617a74",
       "firstName": "Xiaoyu",
       "lastName": "Song",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "31346c707333796262683531",
       "firstName": "Reza",
       "lastName": "Ghanadan",
       "organizationIds": "defense-advanced-research-projects-agency"
     },
     {
+      "organizerId": "636d696467316c3969703271",
       "firstName": "Henry",
       "lastName": "Rodriguez",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "327938396b30723578677965",
       "firstName": "Samuel",
       "lastName": "Payne",
       "organizationIds": "pacific-northwest-national-laboratory"
     },
     {
+      "organizerId": "32367531356f6e3361677370",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "3062673539306a79646c6273",
       "firstName": "Paul C.",
       "lastName": "Boutros",
       "organizationIds": "ontario-institute-for-cancer-research"
     },
     {
+      "organizerId": "313234356830683477757931",
       "firstName": "David",
       "lastName": "Fenyo",
       "organizationIds": "new-york-university"
     },
     {
+      "organizerId": "646574366c3566726f396b74",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "766d6f377862723677383634",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "31646d63396a696e6b666576",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "336c72626634736966333673",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "32726a6b7931646362707165",
       "firstName": "Ross",
       "lastName": "Cagan",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "6a777a6d326130747765316e",
       "firstName": "Avner",
       "lastName": "Schlessinger",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "667a61717a6e3066616c6937",
       "firstName": "Heather",
       "lastName": "Carlson",
       "organizationIds": "university-of-michigan"
     },
     {
+      "organizerId": "307639397273366230653867",
       "firstName": "Ruben",
       "lastName": "Abagyan",
       "organizationIds": "university-of-california-san-diego"
     },
     {
+      "organizerId": "763163663174786b66747438",
       "firstName": "Alex",
       "lastName": "Tropsha",
       "organizationIds": "university-of-north-carolina-at-chapel-hill"
     },
     {
+      "organizerId": "316270707675687577346b6c",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7165686d7865687271383861",
       "firstName": "Kristen",
       "lastName": "Dang",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6635677a3332747734707632",
       "firstName": "Robert",
       "lastName": "Allaway",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "786432316c37637739667473",
       "firstName": "Pablo",
       "lastName": "Meyer",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "3238776d666674377a6c366d",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "75723579393379716735346c",
       "firstName": "Nikos",
       "lastName": "Karaiskos",
       "organizationIds": "max-delbruck-center-for-molecular-medicine"
     },
     {
+      "organizerId": "6f3961347369317238667173",
       "firstName": "Nikolaus",
       "lastName": "Rajewsky",
       "organizationIds": "max-delbruck-center-for-molecular-medicine"
     },
     {
+      "organizerId": "766730766e78657633616230",
       "firstName": "Attila",
       "lastName": "Gabor",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "617a6871346a6270397a7861",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "34373175736d306b7a6d7662",
       "firstName": "Jovan",
       "lastName": "Tanevski",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "336876793674657974753434",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "736c36786238773274693439",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "6e316c727975786466353733",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "64623335746e776334616c70",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "6363646475636b666e6c6334",
       "firstName": "Tero",
       "lastName": "Aittokallio",
       "organizationIds": "institute-for-molecular-medicine-finland"
     },
     {
+      "organizerId": "347961616979746f67693738",
       "firstName": "Anna",
       "lastName": "Cichonska",
       "organizationIds": "institute-for-molecular-medicine-finland"
     },
     {
+      "organizerId": "633134626731306d75773675",
       "firstName": "Balaguru",
       "lastName": "Ravikumar",
       "organizationIds": "institute-for-molecular-medicine-finland"
     },
     {
+      "organizerId": "63376435696d38726e6a7930",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6d7972647765336d337a6576",
       "firstName": "Kristen",
       "lastName": "Dang",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6d76696e64316233716c7377",
       "firstName": "Robert",
       "lastName": "Allaway",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6d6a78697871746a6463746f",
       "firstName": "Andrew",
       "lastName": "Lamb",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "796f73787a357866666f7333",
       "firstName": "Stockard",
       "lastName": "Simon",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7572676535746a7768673863",
       "firstName": "Amy",
       "lastName": "Truong",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6b66396237323032376e7579",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "6339653778366465776d7566",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "38326961383868736a697838",
       "firstName": "Michael T.",
       "lastName": "Ferdig",
       "organizationIds": "eck-institute-for-global-health"
     },
     {
+      "organizerId": "6e716a626e746f3478746f61",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "3633786c3477386a74747638",
       "firstName": "Geoffrey",
       "lastName": "Siwo",
       "organizationIds": "center-for-research-computing"
     },
     {
+      "organizerId": "717a33653435616a6f34736a",
       "firstName": "Sage",
       "lastName": "Davis",
       "organizationIds": "eck-institute-for-global-health"
     },
     {
+      "organizerId": "677a6e77686a6f7938716f33",
       "firstName": "Katrina",
       "lastName": "Button-Simons",
       "organizationIds": "eck-institute-for-global-health"
     },
     {
+      "organizerId": "6b3532393265737a72757530",
       "firstName": "Pablo",
       "lastName": "Meyer",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "676f77717539357168737770",
       "firstName": "Nicola",
       "lastName": "Mulder",
       "organizationIds": "h3abionet"
     },
     {
+      "organizerId": "6a316874357770666d347879",
       "firstName": "Amel",
       "lastName": "Ghouila",
       "organizationIds": "h3abionet"
     },
     {
+      "organizerId": "76683764357936656671636f",
       "firstName": "Sumir",
       "lastName": "Panji",
       "organizationIds": "h3abionet"
     },
     {
+      "organizerId": "3770656f37326b7231706363",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "663431667233336f34303239",
       "firstName": "Julie",
       "lastName": "Bletz",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "696679736f3379387a6a6561",
       "firstName": "Michael",
       "lastName": "Mason",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "656d74633234646c717a7730",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "6566643132716e6e73687736",
       "firstName": "Geoffrey",
       "lastName": "Siwo",
       "organizationIds": "eck-institute-for-global-health"
     },
     {
+      "organizerId": "6d77387334623871377a7464",
       "firstName": "Adi L.",
       "lastName": "Tarca",
       "organizationIds": "wayne-state-university"
     },
     {
+      "organizerId": "32317461687a663032316861",
       "firstName": "Marina",
       "lastName": "Sirota",
       "organizationIds": "university-of-california-san-francisco"
     },
     {
+      "organizerId": "37677667776977666c797a6a",
       "firstName": "Roberto",
       "lastName": "Romero",
       "organizationIds": "eunice-kennedy-shriver-national-institute"
     },
     {
+      "organizerId": "746b33747776696e677a6a33",
       "firstName": "Bogdan",
       "lastName": "Done",
       "organizationIds": "wayne-state-university"
     },
     {
+      "organizerId": "66677079636c756b6434366e",
       "firstName": "Gaia",
       "lastName": "Andreoletti",
       "organizationIds": "university-of-california-san-francisco"
     },
     {
+      "organizerId": "6e706134316e77357a68666d",
       "firstName": "Nima",
       "lastName": "Aghaeepour",
       "organizationIds": "stanford-university"
     },
     {
+      "organizerId": "737033356d70646878383369",
       "firstName": "James",
       "lastName": "Costello",
       "organizationIds": "university-of-colorado-anschutz-medical-campus"
     },
     {
+      "organizerId": "7a727569713971327337776b",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "76386e7a6f666f666e6c7078",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "376b3476346b777932753068",
       "firstName": "Marco",
       "lastName": "Tognetti",
       "organizationIds": "eth-zurich"
     },
     {
+      "organizerId": "3765326c6732356739637a78",
       "firstName": "Bernd",
       "lastName": "Bodenmiller",
       "organizationIds": "university-of-zurich"
     },
     {
+      "organizerId": "33676661707a346f67756137",
       "firstName": "Attila",
       "lastName": "Gabor",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "6e6c69346a746f353130676c",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "77726f6974366b7a31617679",
       "firstName": "Paola",
       "lastName": "Picotti",
       "organizationIds": "eth-zurich"
     },
     {
+      "organizerId": "6d6b3574326e693237636d6a",
       "firstName": "Verena",
       "lastName": "Chung",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6b7071306678766d616b6777",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "69617867367772736c737a36",
       "firstName": "Julie",
       "lastName": "Bletz",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6b6e62776e6e7a62766f6467",
       "firstName": "Marco",
       "lastName": "Tognetti",
       "organizationIds": "university-of-zurich"
     },
     {
+      "organizerId": "7236746a306d6d646577656f",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "31766f716376747233737178",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "367a766c666c666a35346d71",
       "firstName": "Tim",
       "lastName": "Bergquist",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "747870323166366937723974",
       "firstName": "Thomas",
       "lastName": "Schaffter",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "676877383334727278333870",
       "firstName": "Justin",
       "lastName": "Prosser",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "6e6f3436796132796964786e",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "376a6634387571777933776c",
       "firstName": "Yao",
       "lastName": "Yan",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "62797531666b6f32796b796e",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "37393271326d35646b397464",
       "firstName": "Sean",
       "lastName": "Mooney",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "333277773574367934667176",
       "firstName": "Tim",
       "lastName": "Bergquist",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "757461367273797574306c62",
       "firstName": "Pablo",
       "lastName": "Meyer",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "65743476306a726965343839",
       "firstName": "Jay",
       "lastName": "Shendure",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "696b6662377266356a6a7263",
       "firstName": "Michael",
       "lastName": "Elowitz",
       "organizationIds": "california-institute-of-technology"
     },
     {
+      "organizerId": "616f32766d7576356d39716c",
       "firstName": "Max",
       "lastName": "Telford",
       "organizationIds": "londons-global-university"
     },
     {
+      "organizerId": "68676f307a70696c67786d6a",
       "firstName": "Ehud",
       "lastName": "Shapiro",
       "organizationIds": "weizmann-institute-of-science"
     },
     {
+      "organizerId": "63376a6d3738396e68767473",
       "firstName": "Alejandro",
       "lastName": "Granados",
       "organizationIds": "california-institute-of-technology"
     },
     {
+      "organizerId": "617971646b73677532627871",
       "firstName": "Irepan",
       "lastName": "Salvador",
       "organizationIds": "londons-global-university"
     },
     {
+      "organizerId": "7939707863677a36637a6265",
       "firstName": "Ofir",
       "lastName": "Raz",
       "organizationIds": "weizmann-institute-of-science"
     },
     {
+      "organizerId": "30623662776632346a737265",
       "firstName": "Nicole",
       "lastName": "Huber",
       "organizationIds": "allen-institute"
     },
     {
+      "organizerId": "6b787635686e67306b627374",
       "firstName": "Kathryn",
       "lastName": "Richmond",
       "organizationIds": "allen-institute"
     },
     {
+      "organizerId": "307a7663716a676b39687033",
       "firstName": "Verena",
       "lastName": "Chung",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "73726f6d726578383039676a",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7233636d386b6675687a7174",
       "firstName": "Julie",
       "lastName": "Bletz",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "31723361377863316b317933",
       "firstName": "Michael",
       "lastName": "Mason",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "36667a386833766931303172",
       "firstName": "Amy",
       "lastName": "Truong",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6463766d637a767532347762",
       "firstName": "Andrea",
       "lastName": "Califano",
       "organizationIds": "columbia-university"
     },
     {
+      "organizerId": "3164736e3367767468353764",
       "firstName": "Eugene",
       "lastName": "Douglass",
       "organizationIds": "columbia-university"
     },
     {
+      "organizerId": "633535396173633678356b74",
       "firstName": "Mahalaxmi",
       "lastName": "Aburi",
       "organizationIds": "columbia-university"
     },
     {
+      "organizerId": "633436397468636436753568",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "7833346134676f6c64746667",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "national-institutes-of-health"
     },
     {
+      "organizerId": "677865366b357037716a7838",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "3161366c316f393476666b70",
       "firstName": "Bence",
       "lastName": "Szalai",
       "organizationIds": "semmelweis-university"
     },
     {
+      "organizerId": "647664686e6c617031396762",
       "firstName": "Robert",
       "lastName": "Allaway",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "77617a307367646d76697365",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "71636d6c3666747572317338",
       "firstName": "Julie",
       "lastName": "Bletz",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6f6839376b726d6165363479",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "39616a63706e613931767a6e",
       "firstName": "Verena",
       "lastName": "Chung",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6d6d61627461707a36307a39",
       "firstName": "Amy",
       "lastName": "Truong",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "65687a68777577756c743534",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "3035716165306a3778767267",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "6d7378747064373077613676",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "european-bioinformatics-institute"
     },
     {
+      "organizerId": "6333756f6766796e6d6b7777",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "cancer-target-discovery-and-development"
     },
     {
+      "organizerId": "6a73346b627971696e777979",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "rwth-aachen-university"
     },
     {
+      "organizerId": "3133386873616c6d66617130",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "336862797730716a73733132",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "74367a337a6b357777683667",
       "firstName": "Brian",
       "lastName": "White",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "316f747a387863676c777733",
       "firstName": "Michael",
       "lastName": "Mason",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "3471336d317a6b7832336b38",
       "firstName": "Jacob",
       "lastName": "Roberts",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "757665376769646d6579726e",
       "firstName": "Jeffrey",
       "lastName": "Tyner",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "6138657767717531617a6a62",
       "firstName": "Charles",
       "lastName": "Goldthwaite",
       "organizationIds": "national-institutes-of-health"
     },
     {
+      "organizerId": "336b6f6d6565317064766578",
       "firstName": "Cindy",
       "lastName": "Deleon",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "626c6b633763323334626176",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "national-institutes-of-health"
     },
     {
+      "organizerId": "386a71676a34717879323870",
       "firstName": "Krystal",
       "lastName": "Rivers",
       "organizationIds": "national-institutes-of-health"
     },
     {
+      "organizerId": "39367132666379656c723961",
       "firstName": "Julie",
       "lastName": "Bletz",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "306c666c37687173657a7136",
       "firstName": "Pamela",
       "lastName": "Birriel",
       "organizationIds": "national-institutes-of-health"
     },
     {
+      "organizerId": "777671646665696967767a70",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6c6863373878776c6e697564",
       "firstName": "Verena",
       "lastName": "Chung",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6e72656877316178357a637a",
       "firstName": "Amy",
       "lastName": "Truong",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "36336230666969676e386c33",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "78386735377065366d69636f",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "6d6762336c7530366e6e7969",
       "firstName": "Adam",
       "lastName": "Margolin",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "636765706e636e3071667678",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "cancer-target-discovery-and-development"
     },
     {
+      "organizerId": "636f6f39393463776a777339",
       "firstName": "Eric",
       "lastName": "Johnson",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "7a32616a6d6231786e686c30",
       "firstName": "Bron",
       "lastName": "Kisler",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "7538366c676f66746d343479",
       "firstName": "James",
       "lastName": "Eddy",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "717632736939636838336974",
       "firstName": "Thomas",
       "lastName": "Schaffter",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "303165366671613367697268",
       "firstName": "Gilberto",
       "lastName": "Fragoso",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "6534366d6b346d3873667567",
       "firstName": "Denise",
       "lastName": "Warzel",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "66756364616c6d3778713031",
       "firstName": "Sherri De",
       "lastName": "Coronado",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "6a7730673074347133727673",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "72793675366272796d33796f",
       "firstName": "Verena",
       "lastName": "Chung",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "373139306a6e7375616f6339",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "346771653932367075653877",
       "firstName": "Jennifer",
       "lastName": "Couch",
       "organizationIds": "national-cancer-institute"
     },
     {
+      "organizerId": "696772697565676734386977",
       "firstName": "Melissa",
       "lastName": "Haendel",
       "organizationIds": "oregon-health-and-science-university"
     },
     {
+      "organizerId": "34316433376637736c6f7565",
       "firstName": "S. Louis Bridges",
       "lastName": "Jr.",
       "organizationIds": "university-of-alabama-at-birmingham"
     },
     {
+      "organizerId": "367569327230736b37793263",
       "firstName": "Jake Y.",
       "lastName": "Chen",
       "organizationIds": "university-of-alabama-at-birmingham"
     },
     {
+      "organizerId": "34656c616a6e306773666773",
       "firstName": "Dongmei",
       "lastName": "Sun",
       "organizationIds": "university-of-alabama-at-birmingham"
     },
     {
+      "organizerId": "376b676d72683832356e7130",
       "firstName": "Mason",
       "lastName": "Frazier",
       "organizationIds": "university-of-alabama-at-birmingham"
     },
     {
+      "organizerId": "686375356630783679686862",
       "firstName": "Percio S.",
       "lastName": "Gulko",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "3339346d3134307471323039",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "mount-sinai"
     },
     {
+      "organizerId": "327136736c78627172323634",
       "firstName": "James",
       "lastName": "Costello",
       "organizationIds": "university-of-colorado-anschutz-medical-campus"
     },
     {
+      "organizerId": "3077757730306f6531646877",
       "firstName": "Jelai",
       "lastName": "Wang",
       "organizationIds": "university-of-alabama-at-birmingham"
     },
     {
+      "organizerId": "35347163646b67616978716d",
       "firstName": "Robert",
       "lastName": "Allaway",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6a317767383861356830736a",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "66723831336b74396d793131",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "ibm-research"
     },
     {
+      "organizerId": "6f6a3269796872696d383134",
       "firstName": "Luca",
       "lastName": "Foschini",
       "organizationIds": "evidation-health"
     },
     {
+      "organizerId": "34326d347574377373376b6b",
       "firstName": "David",
       "lastName": "Alonso",
       "organizationIds": "michael-j-fox-foundation"
     },
     {
+      "organizerId": "3738627062716a377530667a",
       "firstName": "Mark",
       "lastName": "Frasier",
       "organizationIds": "michael-j-fox-foundation"
     },
     {
+      "organizerId": "387178747a6a657739317978",
       "firstName": "Julia",
       "lastName": "Keefe",
       "organizationIds": "michael-j-fox-foundation"
     },
     {
+      "organizerId": "6238786e7765613568733564",
       "firstName": "Luba",
       "lastName": "Smolensky",
       "organizationIds": "michael-j-fox-foundation"
     },
     {
+      "organizerId": "763061363074776770717a36",
       "firstName": "Arun",
       "lastName": "Jayaraman",
       "organizationIds": "northwestern-university"
     },
     {
+      "organizerId": "6f7663666236347574747535",
       "firstName": "Nicholas",
       "lastName": "Shawen",
       "organizationIds": "northwestern-university"
     },
     {
+      "organizerId": "736165677374696871397978",
       "firstName": "Alex",
       "lastName": "Mariakakis",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6e616f6669346e3975736e78",
       "firstName": "Larsson",
       "lastName": "Omberg",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6e313271727970346d656e75",
       "firstName": "Solly",
       "lastName": "Sieberts",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "38676b646562676a6c727139",
       "firstName": "Phil",
       "lastName": "Snyder",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "776a626a3538767a39376d75",
       "firstName": "Andrea",
       "lastName": "Califano",
       "organizationIds": "columbia-university"
     },
     {
+      "organizerId": "6c676e757938767a3233666f",
       "firstName": "Eugene",
       "lastName": "Douglass",
       "organizationIds": "columbia-university"
     },
     {
+      "organizerId": "676b353532696e6f3473306d",
       "firstName": "Cristina",
       "lastName": "Caescu",
       "organizationIds": "columbia-university"
     },
     {
+      "organizerId": "71377834376f383167327966",
       "firstName": "Gustavo",
       "lastName": "Stolovitzky",
       "organizationIds": "icahn-school-of-medicine-at-mount-sinai"
     },
     {
+      "organizerId": "6d6e6464767a31306f703979",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "national-institutes-of-health"
     },
     {
+      "organizerId": "626f7664376e303276797a35",
       "firstName": "Julio",
       "lastName": "Saez-Rodriguez",
       "organizationIds": "heidelberg-university"
     },
     {
+      "organizerId": "307a677877756836346e697a",
       "firstName": "Bence",
       "lastName": "Szalai",
       "organizationIds": "semmelweis-university"
     },
     {
+      "organizerId": "6b6f63676b34626539306a7a",
       "firstName": "Robert",
       "lastName": "Allaway",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "627836693336306771326574",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7176656c756834376136747a",
       "firstName": "Julie",
       "lastName": "Bletz",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "353373736d78657767783472",
       "firstName": "Verena",
       "lastName": "Chung",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "343837767767746e7333676c",
       "firstName": "Amy",
       "lastName": "Truong",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "35616333307162676e763630",
       "firstName": "Daniela",
       "lastName": "Gerhard",
       "organizationIds": "cancer-target-discovery-and-development"
     },
     {
+      "organizerId": "396c666b713030327a696c6c",
       "firstName": "Thomas",
       "lastName": "Schaffter",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "303638376530736c35623475",
       "firstName": "Tom",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "767232646574347331676c74",
       "firstName": "Micheal",
       "lastName": "Mason",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "733831337672773575756a63",
       "firstName": "Yooree",
       "lastName": "Chae",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "723835367167346466347179",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "673071376834743573643133",
       "firstName": "Tim",
       "lastName": "Bergquist",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7879726a696a326d6f677237",
       "firstName": "Yao",
       "lastName": "Yan",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "326f303634397a316c6a3432",
       "firstName": "Justin",
       "lastName": "Prosser",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "34793467653972386a733933",
       "firstName": "Sean",
       "lastName": "Mooney",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "363839746a66726864793366",
       "firstName": "Tim",
       "lastName": "Bergquist",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "38616e723239686c73656b74",
       "firstName": "Yao",
       "lastName": "Yan",
       "organizationIds": "university-of-washington"
     },
     {
+      "organizerId": "67706431696e6678366c3630",
       "firstName": "David",
       "lastName": "Carbone",
       "organizationIds": "ohio-state-university"
     },
     {
+      "organizerId": "3567716c6534323970756164",
       "firstName": "Benjamin",
       "lastName": "Vincent",
       "organizationIds": "university-of-north-carolina-at-chapel-hill"
     },
     {
+      "organizerId": "3866723667623039656b6137",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7a3772786a39627338756d64",
       "firstName": "Michael",
       "lastName": "Mason",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "7a7338703375393973316d74",
       "firstName": "Thomas",
       "lastName": "Yu",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "796d68627370706f75353634",
       "firstName": "Verena",
       "lastName": "Chung",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "6f666d3935796f61356a3434",
       "firstName": "Rong",
       "lastName": "Chai",
       "organizationIds": "sage-bionetworks"
     },
     {
+      "organizerId": "746b3066317176713532696f",
       "firstName": "Han",
       "lastName": "Chang",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "62687465746a646273756772",
       "firstName": "Scott",
       "lastName": "Chasalow",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "6a6a70336f7570733138696d",
       "firstName": "Parul",
       "lastName": "Doshi",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "6b6d7a723679773637683338",
       "firstName": "William",
       "lastName": "Geese",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "7533726a6a6b657a3877337a",
       "firstName": "Daniel",
       "lastName": "Huston",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "7368666e6c7365786e7a6c6b",
       "firstName": "Oleg",
       "lastName": "Moiseyenko",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "357764657138617761707673",
       "firstName": "Jenine",
       "lastName": "Sanzari",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "6e7866346e7635766f387873",
       "firstName": "Mohammad",
       "lastName": "Shaikh",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "376631646c36747233696664",
       "firstName": "Joseph",
       "lastName": "Szustakowski",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "726b7461356c756333396879",
       "firstName": "Doreen",
       "lastName": "Valentine",
       "organizationIds": "bristol-myers-squibb"
     },
     {
+      "organizerId": "306f6d6c6e636e793532776d",
       "firstName": "Doug",
       "lastName": "Bassett",
       "organizationIds": "celgene"
     },
     {
+      "organizerId": "36636c76343672346378356a",
       "firstName": "Justin",
       "lastName": "Guinney",
       "organizationIds": "sage-bionetworks"
