@@ -14,14 +14,17 @@ import {
   ChallengeCreateRequest,
   Grant,
   Organization,
+  Person,
   PersonCreateRequest,
   Tag
 } from '@sage-bionetworks/rocc-client-angular';
-import tagList from '../../seeds/dream/tags.json';
-import organizationList from '../../seeds/dream/organizations.json';
+import { forkJoinConcurrent } from '../../forkJoinConcurrent';
+
 import challengeList from '../../seeds/dream/challenges.json';
 import grantList from '../../seeds/dream/grants.json';
-import { forkJoinConcurrent } from '../../forkJoinConcurrent';
+import organizationList from '../../seeds/dream/organizations.json';
+import personList from '../../seeds/dream/persons.json';
+import tagList from '../../seeds/dream/tags.json';
 
 @Component({
   selector: 'rocc-database-seed',
@@ -53,7 +56,7 @@ export class DatabaseSeedComponent implements OnInit {
       this.tagService.deleteAllTags(),
     ]);
 
-    // Creates Tags (id pre-defined)
+    // Creates Tags
     const createTags$: Observable<Tag[]> = of(tagList.tags as Tag[])
       .pipe(
         tap(() => console.log('Creating tags')),
@@ -67,7 +70,7 @@ export class DatabaseSeedComponent implements OnInit {
         tap(tags => console.log('Tags created', tags))
       );
 
-    // Creates Organizations (id pre-defined)
+    // Creates Organizations
     const createOrganizations$: Observable<Organization[]> = of(organizationList.organizations as Organization[])
       .pipe(
         tap(() => console.log('Creating organizations')),
@@ -85,7 +88,7 @@ export class DatabaseSeedComponent implements OnInit {
         tap(organizations => console.log('Organizations created', organizations))
       );
 
-    // Creates Grants (id defined by the API service)
+    // Creates Grants
     const createGrants$: Observable<Grant[]> = of(grantList.grants)
       .pipe(
         tap(rawGrants => console.log('Creating grants')),
@@ -98,6 +101,22 @@ export class DatabaseSeedComponent implements OnInit {
         )),
         map(grantIds => _merge(grantIds, grantList.grants) as Grant[]),
         tap(res => console.log('Grants created', res))
+      );
+
+    // Creates Persons
+    const createPersons$: Observable<Person[]> = of(personList.persons)
+      .pipe(
+        tap(rawPersons => console.log('Creating persons')),
+        mergeMap(rawPersons => forkJoinConcurrent(
+          rawPersons.map(rawPerson => this.personService.createPerson({
+            firstName: rawPerson.firstName,
+            lastName: rawPerson.lastName,
+            organizationIds: rawPerson.organizationIds
+          })),
+          concurrency
+        )),
+        map(personIds => _merge(personIds, personList.persons) as Person[]),
+        tap(res => console.log('Persons created', res))
       );
 
     // Creates the challenge organizers and returns their Person ids.
@@ -172,9 +191,10 @@ export class DatabaseSeedComponent implements OnInit {
         mergeMap(() => forkJoinConcurrent([
           createTags$,
           createOrganizations$,
-          createGrants$
+          createGrants$,
+          createPersons$
         ], 1)),
-        switchMap(res => createChallenges(challengeList.challenges, res[2])),
+        // switchMap(res => createChallenges(challengeList.challenges, res[2])),
       ).subscribe(() => {
         console.log('DB seeding completed');
       }, err => console.log(err));
