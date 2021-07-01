@@ -1,9 +1,9 @@
 interface IdMap {
-  tmpId: string,
-  id: string
-};
+  tmpId: string;
+  id: string;
+}
 
 export interface DocumentsCreateResult<T> {
-  documents: T[],
-  idMaps: IdMap[]
-};
+  documents: T[];
+  idMaps: IdMap[];
+}
