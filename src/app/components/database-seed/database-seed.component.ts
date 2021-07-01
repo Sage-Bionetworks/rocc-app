@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, Observable, of } from 'rxjs';
 import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
-import { map as _map, merge as _merge, pick as _pick, assign as _assign } from 'lodash';
+import { map as _map, merge as _merge, pick as _pick, assign as _assign, omit as _omit } from 'lodash';
 import {
   ChallengeService,
   GrantService,
@@ -62,9 +62,7 @@ export class DatabaseSeedComponent implements OnInit {
       .pipe(
         tap(() => console.log('Creating tags')),
         mergeMap(tags => forkJoinConcurrent(
-          tags.map(tag => this.tagService.createTag(tag.id, {
-            description: tag.description
-          })),
+          tags.map(tag => this.tagService.createTag(tag.id, _omit(tag, 'id'))),
           concurrency
         )),
         mapTo(tagList.tags as Tag[]),
@@ -77,11 +75,7 @@ export class DatabaseSeedComponent implements OnInit {
         tap(() => console.log('Creating organizations')),
         mergeMap(organizations => forkJoinConcurrent(
           organizations.map(org => this.organizationService.createOrganization(
-            org.id, {
-              name: org.name,
-              url: org.url,
-              shortName: org.shortName
-            }
+            org.id, _omit(org, 'id')
           )),
           concurrency
         )),
@@ -92,19 +86,16 @@ export class DatabaseSeedComponent implements OnInit {
     // Creates Grants.
     const createGrants$: Observable<DocumentsCreateResult<Grant>> = of(grantList.grants)
       .pipe(
-        tap(rawGrants => console.log('Creating grants')),
-        mergeMap(rawGrants => forkJoinConcurrent(
-          rawGrants.map(rawGrant => this.grantService.createGrant({
-            name: rawGrant.name,
-            description: rawGrant.description
-          })),
+        tap(grants => console.log('Creating grants')),
+        mergeMap(grants => forkJoinConcurrent(
+          grants.map(grant => this.grantService.createGrant(_omit(grant, 'id'))),
           concurrency
         )),
         map(grantCreateResponses => {
           return {
             documents: _merge([], grantList.grants, grantCreateResponses) as Grant[],
             idMaps: _merge([], grantCreateResponses, grantList.grants.map(
-              rawGrant => ({ tmpId: rawGrant.id })))
+              grant => ({ tmpId: grant.id })))
           } as DocumentsCreateResult<Grant>;
         }),
         tap(res => console.log('Grants created', res))
@@ -113,20 +104,16 @@ export class DatabaseSeedComponent implements OnInit {
     // Creates Persons.
     const createPersons$: Observable<DocumentsCreateResult<Person>> = of(personList.persons)
       .pipe(
-        tap(rawPersons => console.log('Creating persons')),
-        mergeMap(rawPersons => forkJoinConcurrent(
-          rawPersons.map(rawPerson => this.personService.createPerson({
-            firstName: rawPerson.firstName,
-            lastName: rawPerson.lastName,
-            organizationIds: rawPerson.organizationIds
-          })),
+        tap(persons => console.log('Creating persons')),
+        mergeMap(persons => forkJoinConcurrent(
+          persons.map(person => this.personService.createPerson(_omit(person, 'id'))),
           concurrency
         )),
         map(personCreateResponses => {
           return {
             documents: _merge([], personList.persons, personCreateResponses) as Person[],
             idMaps: _merge([], personCreateResponses, personList.persons.map(
-              rawPerson => ({ tmpId: rawPerson.id })))
+              person => ({ tmpId: person.id })))
           } as DocumentsCreateResult<Person>;
         }),
         tap(res => console.log('Persons created', res))
