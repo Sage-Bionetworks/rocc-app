@@ -13,8 +13,10 @@ import {
   Challenge,
   ChallengeCreateRequest,
   Grant,
+  GrantCreateResponse,
   Organization,
   Person,
+  PersonCreateResponse,
   Tag
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
@@ -99,9 +101,9 @@ export class DatabaseSeedComponent implements OnInit {
           ]))),
           concurrency
         )),
-        map(grantCreateResponses => {
+        map((grantCreateResponses: GrantCreateResponse[]) => {
           return {
-            documents: _merge([], grantList.grants, grantCreateResponses) as Grant[],
+            documents: _merge([], grantList.grants, grantCreateResponses),
             idMaps: _merge([], grantCreateResponses, grantList.grants.map(
               grant => ({ tmpId: grant.id })))
           } as DocumentsCreateResult<Grant>;
@@ -110,7 +112,7 @@ export class DatabaseSeedComponent implements OnInit {
       );
 
     // Creates Persons.
-    const createPersons$: Observable<DocumentsCreateResult<Person>> = of(personList.persons)
+    const createPersons$: Observable<DocumentsCreateResult<Person>> = of(personList.persons as Person[])
       .pipe(
         tap(persons => console.log('Creating persons')),
         mergeMap(persons => forkJoinConcurrent(
@@ -121,9 +123,9 @@ export class DatabaseSeedComponent implements OnInit {
           ]))),
           concurrency
         )),
-        map(personCreateResponses => {
+        map((personCreateResponses: PersonCreateResponse[]) => {
           return {
-            documents: _merge([], personList.persons, personCreateResponses) as Person[],
+            documents: _merge([], personList.persons, personCreateResponses),
             idMaps: _merge([], personCreateResponses, personList.persons.map(
               person => ({ tmpId: person.id })))
           } as DocumentsCreateResult<Person>;
