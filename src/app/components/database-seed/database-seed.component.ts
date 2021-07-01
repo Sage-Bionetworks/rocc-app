@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, Observable, of } from 'rxjs';
 import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
-import { map as _map, merge as _merge, pick as _pick, assign as _assign, omit as _omit } from 'lodash';
+import { merge as _merge, omit as _omit } from 'lodash';
 import {
   ChallengeService,
   GrantService,
@@ -15,7 +15,6 @@ import {
   Grant,
   Organization,
   Person,
-  PersonCreateRequest,
   Tag
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
@@ -120,7 +119,10 @@ export class DatabaseSeedComponent implements OnInit {
       );
 
     // Returns the Grant ids for a challenge.
-    const getGrantIds = (challengeCreateRequest: ChallengeCreateRequest, grantsCreateResult: DocumentsCreateResult<Grant>): Observable<string[]> => {
+    const getGrantIds = (
+      challengeCreateRequest: ChallengeCreateRequest,
+      grantsCreateResult: DocumentsCreateResult<Grant>
+    ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
           map(rawChallenge =>
@@ -137,7 +139,10 @@ export class DatabaseSeedComponent implements OnInit {
     };
 
     // Returns the Person ids for the organizers of a challenge.
-    const getOrganizerIds = (challengeCreateRequest: ChallengeCreateRequest, personsCreateResult: DocumentsCreateResult<Person>): Observable<string[]> => {
+    const getOrganizerIds = (
+      challengeCreateRequest: ChallengeCreateRequest,
+      personsCreateResult: DocumentsCreateResult<Person>
+    ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
           map(rawChallenge =>
@@ -161,7 +166,11 @@ export class DatabaseSeedComponent implements OnInit {
     };
 
     // Creates Challenges.
-    const createChallenges = (challengeCreateRequests: ChallengeCreateRequest[], grantsCreateResult: DocumentsCreateResult<Grant>, personsCreateResult: DocumentsCreateResult<Person>): Observable<Challenge[]> => {
+    const createChallenges = (
+      challengeCreateRequests: ChallengeCreateRequest[],
+      grantsCreateResult: DocumentsCreateResult<Grant>,
+      personsCreateResult: DocumentsCreateResult<Person>
+    ): Observable<Challenge[]> => {
       return of(challengeCreateRequests)
         .pipe(
           tap(() => console.log('Creating challenges')),
