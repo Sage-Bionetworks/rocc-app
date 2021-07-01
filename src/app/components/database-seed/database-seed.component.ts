@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, Observable, of } from 'rxjs';
 import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
-import { map as _map, merge as _merge } from 'lodash';
+import { map as _map, merge as _merge, pick as _pick, assign as _assign } from 'lodash';
 import {
   ChallengeService,
   GrantService,
@@ -19,6 +19,7 @@ import {
   Tag
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
+import { DocumentsCreateResult } from './documents-create-result';
 
 import challengeList from '../../seeds/dream/challenges.json';
 import grantList from '../../seeds/dream/grants.json';
@@ -56,7 +57,7 @@ export class DatabaseSeedComponent implements OnInit {
       this.tagService.deleteAllTags(),
     ]);
 
-    // Creates Tags
+    // Creates Tags.
     const createTags$: Observable<Tag[]> = of(tagList.tags as Tag[])
       .pipe(
         tap(() => console.log('Creating tags')),
@@ -70,7 +71,7 @@ export class DatabaseSeedComponent implements OnInit {
         tap(tags => console.log('Tags created', tags))
       );
 
-    // Creates Organizations
+    // Creates Organizations.
     const createOrganizations$: Observable<Organization[]> = of(organizationList.organizations as Organization[])
       .pipe(
         tap(() => console.log('Creating organizations')),
@@ -88,8 +89,8 @@ export class DatabaseSeedComponent implements OnInit {
         tap(organizations => console.log('Organizations created', organizations))
       );
 
-    // Creates Grants
-    const createGrants$: Observable<Grant[]> = of(grantList.grants)
+    // Creates Grants.
+    const createGrants$: Observable<DocumentsCreateResult<Grant>> = of(grantList.grants)
       .pipe(
         tap(rawGrants => console.log('Creating grants')),
         mergeMap(rawGrants => forkJoinConcurrent(
@@ -99,12 +100,18 @@ export class DatabaseSeedComponent implements OnInit {
           })),
           concurrency
         )),
-        map(grantIds => _merge(grantIds, grantList.grants) as Grant[]),
+        map(grantCreateResponses => {
+          return {
+            documents: _merge([], grantList.grants, grantCreateResponses) as Grant[],
+            idMaps: _merge([], grantCreateResponses, grantList.grants.map(
+              rawGrant => ({ tmpId: rawGrant.id })))
+          } as DocumentsCreateResult<Grant>;
+        }),
         tap(res => console.log('Grants created', res))
       );
 
-    // Creates Persons
-    const createPersons$: Observable<Person[]> = of(personList.persons)
+    // Creates Persons.
+    const createPersons$: Observable<DocumentsCreateResult<Person>> = of(personList.persons)
       .pipe(
         tap(rawPersons => console.log('Creating persons')),
         mergeMap(rawPersons => forkJoinConcurrent(
@@ -115,69 +122,70 @@ export class DatabaseSeedComponent implements OnInit {
           })),
           concurrency
         )),
-        map(personIds => _merge(personIds, personList.persons) as Person[]),
+        map(personCreateResponses => {
+          return {
+            documents: _merge([], personList.persons, personCreateResponses) as Person[],
+            idMaps: _merge([], personCreateResponses, personList.persons.map(
+              rawPerson => ({ tmpId: rawPerson.id })))
+          } as DocumentsCreateResult<Person>;
+        }),
         tap(res => console.log('Persons created', res))
       );
 
-    // Creates the challenge organizers and returns their Person ids.
-    const createChallengeOrganizers = (rawChallenge: any): Observable<string[]> => {
-      return forkJoinConcurrent(
-          rawChallenge.organizerIds.map((rawOrganizer: PersonCreateRequest) => this.personService.createPerson({
-              firstName: rawOrganizer.firstName,
-              lastName: rawOrganizer.lastName,
-              organizationIds: rawOrganizer.organizationIds
-            }
-          )),
-          1
-        ).pipe(
-          map(organizerCreateResponses => _map(organizerCreateResponses, 'id'))
+    // Returns the Grant ids for a challenge.
+    const getGrantIds = (challengeCreateRequest: ChallengeCreateRequest, grantsCreateResult: DocumentsCreateResult<Grant>): Observable<string[]> => {
+      return of(challengeCreateRequest)
+        .pipe(
+          map(rawChallenge =>
+            rawChallenge.grantIds
+            .map(grantId => {
+              let grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
+              if (grant === undefined)
+                throw new Error('Grant with id ' + grantId + ' not found');
+              return grant.id;
+            })
+          )
         );
     };
 
-    // Returns the Grant ids for a challenge from Challenge.tmpGrantIds.
-    // TODO Consider using custom model for grants that include tmpId or give
-    // grant Ids lookup table as input
-    const getGrantIds = (challengeCreateRequest: ChallengeCreateRequest, grants: any[]): Observable<string[]> => {
+    // Returns the Person ids for the organizers of a challenge.
+    const getOrganizerIds = (challengeCreateRequest: ChallengeCreateRequest, personsCreateResult: DocumentsCreateResult<Person>): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
-          map(rawChallenge => rawChallenge.grantIds
-            .map(grantId => grants.find(grant => grant.tmpId === grantId).id
-          ))
+          map(rawChallenge =>
+            rawChallenge.organizerIds
+            .map(organizerId => {
+              let person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
+              if (person === undefined)
+                throw new Error('Organizer with id ' + organizerId + ' not found');
+              return person.id;
+            })
+          )
         );
     };
 
     // Creates a Challenge.
     const createChallenge = (rawChallenge: ChallengeCreateRequest): Observable<Challenge> => {
-      return this.challengeService.createChallenge({
-        name: rawChallenge.name,
-        description: rawChallenge.description,
-        url: rawChallenge.url,
-        status: rawChallenge.status,
-        tagIds: rawChallenge.tagIds,
-        organizerIds: rawChallenge.organizerIds,
-        dataProviderIds: rawChallenge.dataProviderIds,
-        grantIds: rawChallenge.grantIds
-      }).pipe(
+      return this.challengeService.createChallenge(rawChallenge).pipe(
         map(res => _merge(res, rawChallenge) as Challenge),
       );
     };
 
     // Creates Challenges.
-    // TODO: Replace type any
-    const createChallenges = (challengeCreateRequests: any[], grants: Grant[]): any => {
+    const createChallenges = (challengeCreateRequests: ChallengeCreateRequest[], grantsCreateResult: DocumentsCreateResult<Grant>, personsCreateResult: DocumentsCreateResult<Person>): Observable<Challenge[]> => {
       return of(challengeCreateRequests)
         .pipe(
           tap(() => console.log('Creating challenges')),
           mergeMap(rawChallenges => forkJoin(
-            rawChallenges.map((rawchallenge: ChallengeCreateRequest) => of(rawchallenge)
+            rawChallenges.map((rawChallenge: ChallengeCreateRequest) => of(rawChallenge)
               .pipe(
                 mergeMap(() => forkJoin({
-                  organizerIds: createChallengeOrganizers(rawchallenge),
-                  grantIds: getGrantIds(rawchallenge, grants)
+                  grantIds: getGrantIds(rawChallenge, grantsCreateResult),
+                  organizerIds: getOrganizerIds(rawChallenge, personsCreateResult)
                 })),
                 mergeMap(res => {
-                  rawchallenge = _merge(rawchallenge, res);
-                  return createChallenge(rawchallenge);
+                  _merge(rawChallenge, res);
+                  return createChallenge(rawChallenge);
                 })
               )),
           )),
@@ -194,7 +202,13 @@ export class DatabaseSeedComponent implements OnInit {
           createGrants$,
           createPersons$
         ], 1)),
-        // switchMap(res => createChallenges(challengeList.challenges, res[2])),
+        switchMap(res => {
+          return createChallenges(
+            challengeList.challenges as ChallengeCreateRequest[],
+            res[2] as DocumentsCreateResult<Grant>,
+            res[3] as DocumentsCreateResult<Person>
+          );
+        }),
       ).subscribe(() => {
         console.log('DB seeding completed');
       }, err => console.log(err));
