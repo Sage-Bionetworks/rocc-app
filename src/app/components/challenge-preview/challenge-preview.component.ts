@@ -12,6 +12,7 @@ export class ChallengePreviewComponent implements OnInit {
   // TODO: change challenges type to Challenge[] when we pull data from database
   rawChallenges: any;
   newChallenges: any;
+  platform = 'synapse';
   tabLabelList = ['All', 'Open', 'Closed', 'Upcoming'];
 
   constructor() { }

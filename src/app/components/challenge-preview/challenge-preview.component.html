@@ -1,7 +1,7 @@
 <mat-tab-group (selectedTabChange)="tabMonitor($event)" animationDuration="0ms">
   <mat-tab *ngFor="let tabName of tabLabelList" label="{{tabName}}">
     <mat-card *ngFor="let challenge of newChallenges">
-      <div mat-card-avatar class="synapse-icon"></div>
+      <img class="logo" src="../../../assets/img/{{platform}}-logo.svg" alt="platform-logo">
       <mat-card-header>
         <mat-card-title>{{challenge.name}}</mat-card-title>
       </mat-card-header>

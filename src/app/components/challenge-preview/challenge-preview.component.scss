@@ -11,7 +11,7 @@
 }
 
 .mat-card-title {
-  margin-left: -16px; // align header tile with content (mat-card-text not responsible)
+  margin-left: -16px; // align header title with content
 }
 
 .tags-box {
@@ -49,12 +49,10 @@
   }
 }
 
-.synapse-icon {
+.logo {
   position: absolute;
-  background-image: url("https://www.synapse.org/images/logo.svg");
-  background-size: cover;
   right: 26px; // 16 + 10 align card
   top: 26px;
-  transform: scale(1.5);
+  height: 60px;
   z-index: 2;
 }
