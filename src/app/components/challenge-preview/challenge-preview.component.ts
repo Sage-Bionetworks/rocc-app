@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import challengeList from '../../seeds/dream/challenges-fix.json';
 
 @Component({
-  selector: 'rocc-preview-card',
-  templateUrl: './preview-card.component.html',
-  styleUrls: ['./preview-card.component.scss']
+  selector: 'rocc-challenge-preview',
+  templateUrl: './challenge-preview.component.html',
+  styleUrls: ['./challenge-preview.component.scss']
 })
 
-export class PreviewCardComponent implements OnInit {
+export class ChallengePreviewComponent implements OnInit {
 
   // TODO: change challenges type to Challenge[] when we pull data from database
   rawChallenges: any;
