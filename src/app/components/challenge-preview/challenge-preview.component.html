@@ -1,19 +1,25 @@
 <mat-tab-group (selectedTabChange)="tabMonitor($event)" animationDuration="0ms">
   <mat-tab *ngFor="let tabName of tabLabelList" label="{{tabName}}">
-    <mat-card *ngFor="let c of newChallenges">
+    <mat-card *ngFor="let challenge of newChallenges">
       <div mat-card-avatar class="synapse-icon"></div>
       <mat-card-header>
-        <mat-card-title>{{c.name}}</mat-card-title>
+        <mat-card-title>{{challenge.name}}</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div class="tags-box">
-          <button mat-raised-button class="tags" *ngFor="let tag of c.tagIds">{{tag}}</button>
+          <button mat-raised-button class="tags" *ngFor="let tag of challenge.tagIds">
+            {{tag}}
+          </button>
         </div>
         <div class="info">
-          <div class="intros">{{c.description}}</div>
+          <div class="intros">{{challenge.description}}</div>
           <div class="dates">
-            <span *ngIf="!!c.startDate"><b>Start Date :</b>{{c.startDate}}</span>
-            <span *ngIf="!!c.endDate"><b>End Date :</b>{{c.endDate}}</span>
+            <span *ngIf="!!challenge.startDate">
+              <b>Start Date :</b>{{challenge.startDate}}
+            </span>
+            <span *ngIf="!!challenge.endDate">
+              <b>End Date :</b>{{challenge.endDate}}
+            </span>
           </div>
         </div>
       </mat-card-content>
