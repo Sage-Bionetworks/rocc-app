@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
 import { environment } from '../environments/environment';
-import { ChallengesModule } from './challenges/challenges.module';
+import { ChallengesModule } from './pages/challenges/challenges.module';
 // import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 // import { ChallengeListComponent } from './pages/challenge-list/challenge-list.component';
 

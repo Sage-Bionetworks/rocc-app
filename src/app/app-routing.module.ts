@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'challenges',
-    loadChildren: () => import('./challenges').then(m => m.ChallengesModule)
+    loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
   },
   {
     path: 'organizations',

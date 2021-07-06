@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-@import './app/pages/explore/explore-theme';
+@import './app/pages/challenges/challenges-theme';
 @import './app/pages/homepage/homepage-theme';
 @import './app/pages/organizations/organizations-theme';
 @import './app/pages/signin/signin-theme';
@@ -37,7 +37,7 @@
   //   background: mat-color($next-theme, 900) !important;
   // }
 
-  @include explore-theme($theme);
+  @include challenges-theme($theme);
   @include homepage-theme($theme);
   @include organizations-theme($theme);
   @include signin-theme($theme);
