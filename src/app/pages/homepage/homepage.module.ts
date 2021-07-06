@@ -17,4 +17,4 @@ const routes: Routes = [
   ],
   exports: [HomepageComponent]
 })
-export class HomepageModule {}
+export class HomepageModule { }

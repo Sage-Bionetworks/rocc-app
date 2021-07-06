@@ -5,14 +5,6 @@ import { ChallengesComponent } from './challenges.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { ChallengesRoutingModule } from './challenges-routing.module';
 
-// export const routes: Routes = [
-//   {
-//     path: 'challenges',
-//     component: ChallengeListComponent,
-//     // canActivate: [AuthGuard],
-//   }
-// ];
-
 @NgModule({
   imports: [
     CommonModule,
