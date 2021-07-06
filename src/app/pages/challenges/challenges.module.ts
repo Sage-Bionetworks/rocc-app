@@ -4,6 +4,7 @@ import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { ChallengesComponent } from './challenges.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { ChallengesRoutingModule } from './challenges-routing.module';
+import { ChallengeDataService } from './challenge-data.service';
 
 @NgModule({
   imports: [
@@ -15,7 +16,9 @@ import { ChallengesRoutingModule } from './challenges-routing.module';
     ChallengesComponent,
     ChallengeListComponent
   ],
-  providers: [],
+  providers: [
+    ChallengeDataService
+  ],
   exports: []
 })
 export class ChallengesModule { }
