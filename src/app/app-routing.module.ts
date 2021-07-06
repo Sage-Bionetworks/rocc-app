@@ -8,8 +8,8 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
   },
   {
-    path: 'explore',
-    loadChildren: () => import('./pages/challenge-list').then(m => m.ChallengeListModule)
+    path: 'challenges',
+    loadChildren: () => import('./challenges').then(m => m.ChallengesModule)
   },
   {
     path: 'organizations',
@@ -52,7 +52,9 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

@@ -2,7 +2,7 @@
 import { Section } from '@sage-bionetworks/sage-angular/src/lib/navbar/section';
 
 export const SECTIONS: { [key: string]: Section } = {
-  explore: {
+  challenges: {
     name: 'Challenges',
     summary: 'Explore challenges.'
   },
