@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChallengePreviewComponent } from './challenge-preview.component';
+import { ChallengeListComponent } from './challenge-list.component';
 import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-  declarations: [ChallengePreviewComponent],
+  declarations: [ChallengeListComponent],
   imports: [
     CommonModule,
     MaterialModule
   ],
-  exports: [ChallengePreviewComponent],
+  exports: [ChallengeListComponent],
   providers: []
 })
-export class ChallengePreviewModule { }
+export class ChallengeListModule { }

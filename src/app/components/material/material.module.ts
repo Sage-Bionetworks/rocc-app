@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
@@ -18,4 +18,4 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTabsModule
   ]
 })
-export class MaterialsModule { }
+export class MaterialModule { }

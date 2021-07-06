@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'explore',
-    loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
+    loadChildren: () => import('./pages/challenge-list').then(m => m.ChallengeListModule)
   },
   {
     path: 'organizations',

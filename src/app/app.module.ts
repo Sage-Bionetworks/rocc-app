@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
 import { environment } from '../environments/environment';
+// import { ChallengeListComponent } from './pages/challenge-list/challenge-list.component';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -22,6 +23,7 @@ export function apiConfigFactory(): Configuration {
 @NgModule({
   declarations: [
     AppComponent
+    // ChallengeListComponent
   ],
   imports: [
     BrowserModule,
