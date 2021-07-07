@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   version = environment.appVersion;
   sections: { [key: string]: Section } = SECTIONS;
   seedDatabase = environment.seedDatabase;
+  hasData = false;
 
   constructor() {}
 

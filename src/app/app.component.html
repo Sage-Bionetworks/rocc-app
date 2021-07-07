@@ -2,8 +2,8 @@
   [title]="title"
   [sections]="sections"
 ></sage-navbar>
-<router-outlet></router-outlet>
-<rocc-database-seed *ngIf="seedDatabase"></rocc-database-seed>
+<rocc-database-seed *ngIf="seedDatabase" (finishedSeeding)="hasData = $event"></rocc-database-seed>
+<router-outlet *ngIf="hasData"></router-outlet>
 
 <!-- <nav class="toolbar" role="banner">
   <img width="40" alt="ROCC Logo"

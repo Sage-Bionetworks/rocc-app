@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import challengeList from '../../seeds/dream/challenges-fix.json';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ChallengeService, Challenge, ChallengeStatus, } from '@sage-bionetworks/rocc-client-angular';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'rocc-challenge-preview',
@@ -7,30 +8,43 @@ import challengeList from '../../seeds/dream/challenges-fix.json';
   styleUrls: ['./challenge-preview.component.scss']
 })
 
-export class ChallengePreviewComponent implements OnInit {
+export class ChallengePreviewComponent implements OnInit, OnDestroy {
 
-  // TODO: change challenges type to Challenge[] when we pull data from database
-  rawChallenges: any;
-  newChallenges: any;
+  rawChallenges: Challenge[] = [];
+  newChallenges: Challenge[] = [];
+  private challengeSub!: Subscription;
+
   platform = 'synapse';
   tabLabelList = ['All', 'Open', 'Closed', 'Upcoming'];
 
-  constructor() { }
+  constructor(private challengeService: ChallengeService) { }
 
   ngOnInit(): void {
-    this.rawChallenges = challengeList.challenges;
-    this.newChallenges = challengeList.challenges;
+    this.challengeSub = this.challengeService.listChallenges(100)
+      .subscribe(res => {
+        if (res.challenges) {
+          this.rawChallenges = res.challenges;
+          this.newChallenges = res.challenges;
+        }
+      },
+        err => console.error(err)
+      );
   }
 
   tabMonitor(event: any): void {
 
     if (event.index !== 0) {
-      const selectedTab = event.tab.textLabel.toLowerCase();
-      this.newChallenges = this.rawChallenges.filter((challenge: any) => {
+      // TODO: change to use @param filter in listChallenges
+      const selectedTab: ChallengeStatus = event.tab.textLabel.toLowerCase();
+      this.newChallenges = this.rawChallenges.filter((challenge: Challenge) => {
         return challenge.status === selectedTab;
       });
     } else {
       this.newChallenges = this.rawChallenges;
     }
+  }
+
+  ngOnDestroy(): void {
+    this.challengeSub.unsubscribe();
   }
 }

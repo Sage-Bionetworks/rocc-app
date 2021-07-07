@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { forkJoin, Observable, of } from 'rxjs';
 import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { merge as _merge } from 'lodash';
@@ -41,13 +41,15 @@ import tagList from '../../seeds/dream/tags.json';
 
 export class DatabaseSeedComponent implements OnInit {
 
+  @Output() finishedSeeding: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   constructor(
     private challengeService: ChallengeService,
     private grantService: GrantService,
     private organizationService: OrganizationService,
     private personService: PersonService,
     private tagService: TagService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
 
@@ -138,13 +140,13 @@ export class DatabaseSeedComponent implements OnInit {
         .pipe(
           map(rawChallenge =>
             rawChallenge.grantIds
-            .map(grantId => {
-              const grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
-              if (grant === undefined) {
-                throw new Error('Grant with id ' + grantId + ' not found');
-              }
-              return grant.id;
-            })
+              .map(grantId => {
+                const grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
+                if (grant === undefined) {
+                  throw new Error('Grant with id ' + grantId + ' not found');
+                }
+                return grant.id;
+              })
           )
         );
     };
@@ -158,13 +160,13 @@ export class DatabaseSeedComponent implements OnInit {
         .pipe(
           map(rawChallenge =>
             rawChallenge.organizerIds
-            .map(organizerId => {
-              const person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
-              if (person === undefined) {
-                throw new Error('Organizer with id ' + organizerId + ' not found');
-              }
-              return person.id;
-            })
+              .map(organizerId => {
+                const person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
+                if (person === undefined) {
+                  throw new Error('Organizer with id ' + organizerId + ' not found');
+                }
+                return person.id;
+              })
           )
         );
     };
@@ -220,6 +222,7 @@ export class DatabaseSeedComponent implements OnInit {
         }),
       ).subscribe(() => {
         console.log('DB seeding completed');
+        this.finishedSeeding.emit(true);
       }, err => console.log(err));
   }
 }
