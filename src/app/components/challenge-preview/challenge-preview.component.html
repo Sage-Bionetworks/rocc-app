@@ -15,10 +15,10 @@
           <div class="intros">{{challenge.description}}</div>
           <div class="dates">
             <span *ngIf="!!challenge.startDate">
-              <b>Start Date :</b>{{challenge.startDate}}
+              <b>Start Date :</b>{{challenge.startDate | date: "yyyy-MM-dd"}}
             </span>
             <span *ngIf="!!challenge.endDate">
-              <b>End Date :</b>{{challenge.endDate}}
+              <b>End Date :</b>{{challenge.endDate | date: "yyyy-MM-dd"}}
             </span>
           </div>
         </div>
