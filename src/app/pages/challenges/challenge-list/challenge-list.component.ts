@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./challenge-list.component.scss']
 })
 export class ChallengeListComponent implements OnInit {
+  private _searchResultsCount = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
+  get searchResultsCount(): number {
+    return this._searchResultsCount;
+  }
 }

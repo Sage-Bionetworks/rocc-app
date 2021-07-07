@@ -1,31 +1,65 @@
-$border_col: rgba(255, 255, 255, 0.1);
+// $border_col: rgba(255, 255, 255, 0.1);
 
 main {
   min-height: 100vh;
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
-  grid-gap: 2em;
-  padding: 20px;
+.rocc-challenge-list {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.filter-bar, .container, .news {
-  border: 1px solid $border_col;
-  border-radius: 20px;
-  box-shadow: 0px 0.0625em 0.0625em rgba(0, 0, 0, 0.25),
-  0px 0.125em 0.5em rgba(0, 0, 0, 0.25),
-  0px 0px 0px 1px inset $border_col;
+.rocc-challenge-list-filters {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 25px;
 }
 
-.filter-bar, .news {
-  position: sticky;
-  height: 80vh;
-  top: 20px;
-  left: 0;
-
-  p {
-    text-align: center;
-  }
+.rocc-challenge-list-content {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  margin: 20px 50px;
 }
+
+.rocc-challenge-list-content-results-count {
+  margin-bottom: 20px;
+}
+
+.rocc-challenge-list-content-results-list {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+// .rocc-challenge-list-more-results {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .content {
+//   display: grid;
+//   grid-template-columns: 1fr 6fr 1fr;
+//   grid-gap: 2em;
+//   padding: 20px;
+// }
+
+// .filter-bar, .container, .news {
+//   border: 1px solid $border_col;
+//   border-radius: 20px;
+//   box-shadow: 0px 0.0625em 0.0625em rgba(0, 0, 0, 0.25),
+//   0px 0.125em 0.5em rgba(0, 0, 0, 0.25),
+//   0px 0px 0px 1px inset $border_col;
+// }
+
+// .filter-bar, .news {
+//   position: sticky;
+//   height: 80vh;
+//   top: 20px;
+//   left: 0;
+
+//   p {
+//     text-align: center;
+//   }
+// }
