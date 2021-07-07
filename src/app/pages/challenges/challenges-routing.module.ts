@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChallengesComponent } from './challenges.component';
-import { ChallengeListComponent } from './challenge-list/challenge-list.component'
+import { ChallengeListComponent } from './challenge-list/challenge-list.component';
+import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 // import { BalanceComponent } from './balance.component';
 // import { CasualComponent } from './casual/casual.component';
 // import { EarnedComponent } from './earned/earned.component';
@@ -17,9 +18,9 @@ const routes: Routes = [
         path: '',
         component: ChallengeListComponent,
       },
-      //   {
-      //     path: 'earned', component: EarnedComponent
-      //   },
+      {
+        path: 'new', component: ChallengeNewComponent
+      },
       //   {
       //     path: '', redirectTo: 'casual', pathMatch: 'full'
       //   },

@@ -5,6 +5,7 @@ import { ChallengesComponent } from './challenges.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { ChallengesRoutingModule } from './challenges-routing.module';
 import { ChallengeDataService } from './challenge-data.service';
+import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ChallengeDataService } from './challenge-data.service';
   ],
   declarations: [
     ChallengesComponent,
-    ChallengeListComponent
+    ChallengeListComponent,
+    ChallengeNewComponent
   ],
   providers: [
     ChallengeDataService
