@@ -49,7 +49,7 @@ export class DatabaseSeedComponent implements OnInit {
     private organizationService: OrganizationService,
     private personService: PersonService,
     private tagService: TagService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
 

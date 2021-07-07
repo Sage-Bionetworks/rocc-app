@@ -34,7 +34,7 @@ export class ChallengePreviewComponent implements OnInit, OnDestroy {
   tabMonitor(event: any): void {
 
     if (event.index !== 0) {
-      // TODO: change to use @param filter in listChallenges
+      // TODO: consider to use @param filter directly from listChallenges
       const selectedTab: ChallengeStatus = event.tab.textLabel.toLowerCase();
       this.newChallenges = this.rawChallenges.filter((challenge: Challenge) => {
         return challenge.status === selectedTab;
