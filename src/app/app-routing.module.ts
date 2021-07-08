@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
+  // {
+  //   path: 'explore',
+  //   loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
+  // },
   {
-    path: 'explore',
-    loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
+    path: 'challenges',
+    loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
   },
   {
     path: 'organizations',

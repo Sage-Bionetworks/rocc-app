@@ -9,14 +9,14 @@ import { Challenge } from 'rocc-client-angular/rocc-client';
 export class ChallengeListItemComponent implements OnInit {
   @Input()
   challenge!: Challenge;
-
-  @Output() challengeClick: EventEmitter<Challenge> = new EventEmitter<Challenge>();
+  @Output()
+  challengeClick: EventEmitter<Challenge> = new EventEmitter<Challenge>();
 
   constructor() { }
 
   ngOnInit(): void { }
 
-  onEntityClick(): void {
-      this.challengeClick.emit(this.challenge);
+  onChallengeClick(): void {
+    this.challengeClick.emit(this.challenge);
   }
 }

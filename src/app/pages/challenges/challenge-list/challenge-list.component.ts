@@ -10,17 +10,17 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./challenge-list.component.scss'],
 })
 export class ChallengeListComponent implements OnInit {
-  private _challenges: Challenge[] | undefined = [];
+  private _challenges: Challenge[] = [];
   private _searchResultsCount = 0;
 
   constructor(private challengeService: ChallengeService) {}
 
   ngOnInit(): void {
-    this.challengeService.listChallenges()
+    this.challengeService.listChallenges()  // first page
       .subscribe(page => this._challenges = page.challenges);
   }
 
-  get challenges(): Challenge[] | undefined {
+  get challenges(): Challenge[] {
     return this._challenges;
   }
 
