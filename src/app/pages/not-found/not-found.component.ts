@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
   selector: 'rocc-not-found',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./not-found.component.scss']
 })
 export class NotFoundComponent implements OnInit {
+  @HostBinding('class.main-content') readonly mainContentClass = true;
 
   constructor() { }
 
