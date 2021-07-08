@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'rocc-homepage',
@@ -7,6 +7,11 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
+
+  // TODO: remove once login/user is implemented
+  @Input()
+  user = true;
+  username = 'rocc-user';
 
   constructor() {}
 

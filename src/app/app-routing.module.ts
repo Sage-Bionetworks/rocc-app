@@ -23,6 +23,10 @@ export const routes: Routes = [
     path: 'signup',
     loadChildren: () => import('./pages/signup').then(m => m.SignupModule)
   },
+  {
+    path: ':username',
+    loadChildren: () => import('./pages/profile').then(m => m.ProfileModule)
+  }
 //   {path: 'categories', redirectTo: '/components/categories'},
 //   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
 //   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
