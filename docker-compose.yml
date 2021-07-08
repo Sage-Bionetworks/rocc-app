@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  # backend
+  db:
+    image: sagebionetworks/mongo:4.4.4
+  # rocc-service
+  rocc-service:
+    image: sagebionetworks/rocc-service:0.2.1
+    depends_on: 
+      - db
+  # angular app
+  rocc-app:
+    build: '.'
+    ports: 
+      - 80:80
+    depends_on:
+      - db
+      - rocc-service
