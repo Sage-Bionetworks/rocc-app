@@ -2,21 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
-import { NotFoundComponent } from './not-found.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 import { MaterialsModule } from 'src/app/materials/materials.module';
 
 const routes: Routes = [
-  { path: '', component: NotFoundComponent }
+  { path: '', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  declarations: [NotFoundComponent],
+  declarations: [PageNotFoundComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     FooterModule,
     MaterialsModule
   ],
-  exports: [NotFoundComponent]
+  exports: [PageNotFoundComponent]
 })
-export class NotFoundModule {}
+export class PageNotFoundModule {}

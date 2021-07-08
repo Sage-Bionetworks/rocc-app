@@ -20,7 +20,7 @@ export const routes: Routes = [
   },
   {
     path: '404',
-    loadChildren: () => import('./pages/not-found').then(m => m.NotFoundModule)
+    loadChildren: () => import('./pages/page-not-found').then(m => m.PageNotFoundModule)
   },
   {
     path: '',

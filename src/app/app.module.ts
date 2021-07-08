@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
 import { environment } from '../environments/environment';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
