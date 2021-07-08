@@ -9,8 +9,8 @@ import { BASE_PATH } from '@sage-bionetworks/rocc-client-angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
 import { environment } from '../environments/environment';
+import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -20,9 +20,6 @@ export function apiConfigFactory(): Configuration {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -32,6 +29,9 @@ export function apiConfigFactory(): Configuration {
     FooterModule,
     ApiModule.forRoot(apiConfigFactory),
     DatabaseSeedModule
+  ],
+  declarations: [
+    AppComponent
   ],
   providers: [
     { provide: BASE_PATH, useValue: environment.apiBasePath }

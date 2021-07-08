@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
+import { MaterialModule } from 'src/app/components/material/material.module';
 import { PageNotFoundComponent } from './page-not-found.component';
-import { MaterialsModule } from 'src/app/materials/materials.module';
 
 const routes: Routes = [
   { path: '', component: PageNotFoundComponent }
@@ -15,7 +15,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     FooterModule,
-    MaterialsModule
+    MaterialModule
   ],
   exports: [PageNotFoundComponent]
 })
