@@ -5,9 +5,9 @@ import {
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: "rocc-challenge-list",
-  templateUrl: "./challenge-list.component.html",
-  styleUrls: ["./challenge-list.component.scss"],
+  selector: 'rocc-challenge-list',
+  templateUrl: './challenge-list.component.html',
+  styleUrls: ['./challenge-list.component.scss'],
 })
 export class ChallengeListComponent implements OnInit {
   private _challenges: Challenge[] | undefined = [];
@@ -29,7 +29,7 @@ export class ChallengeListComponent implements OnInit {
   }
 
   onChallengeClick(challenge: Challenge): void {
-    console.log("Challenge clicked");
+    console.log('Challenge clicked');
     // this.entityClick.emit(entity);
   }
 }
