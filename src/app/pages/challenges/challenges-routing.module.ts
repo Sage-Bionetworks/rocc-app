@@ -3,11 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChallengesComponent } from './challenges.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
-// import { BalanceComponent } from './balance.component';
-// import { CasualComponent } from './casual/casual.component';
-// import { EarnedComponent } from './earned/earned.component';
-// import { Page404balanceComponent } from './page404balance/page404balance.component';
-
+import { ChallengeViewComponent } from './challenge-view/challenge-view.component';
 
 const routes: Routes = [
   {
@@ -15,12 +11,16 @@ const routes: Routes = [
     component: ChallengesComponent,
     children: [
       {
-        path: '',
-        component: ChallengeListComponent,
-      },
-      {
         path: 'new', component: ChallengeNewComponent
       },
+      {
+        path: ':id',
+        component: ChallengeViewComponent,
+      },
+      {
+        path: '',
+        component: ChallengeListComponent,
+      }
       //   {
       //     path: '', redirectTo: 'casual', pathMatch: 'full'
       //   },
@@ -31,6 +31,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ChallengesRoutingModule { }
+export class ChallengesRoutingModule {}
