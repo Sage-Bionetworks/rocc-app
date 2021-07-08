@@ -88,6 +88,9 @@ MIT
 @angular/router
 MIT
 
+@sage-bionetworks/rocc-client-angular
+Unlicense
+
 @sage-bionetworks/sage-angular
 
 core-js
