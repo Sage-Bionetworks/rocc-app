@@ -1,19 +1,74 @@
 version: "3.8"
 
 services:
-  # backend
-  db:
+  # database
+  rocc-database:
     image: sagebionetworks/mongo:4.4.4
+    container_name: rocc-app-db
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+      - MONGO_INITDB_DATABASE
+      - MONGO_USERNAME
+      - MONGO_PASSWORD
+    networks: 
+      - rocc-networks
+
   # rocc-service
   rocc-service:
     image: sagebionetworks/rocc-service:0.2.1
+    container_name: rocc-app-service
+    restart: always
+    environment:
+      - SERVER_PROTOCOL
+      - SERVER_HOST
+      - SERVER_PORT=8080
+      - DB_PROTOCOL
+      - DB_DOMAIN=rocc-database
+      - DB_PORT
+      - DB_DATABASE
+      - DB_USERNAME
+      - DB_PASSWORD
+    networks: 
+      - rocc-networks
     depends_on: 
-      - db
+      - rocc-database
+
   # angular app
   rocc-app:
-    build: '.'
-    ports: 
-      - 80:80
+    image: rocc/rocc-app-client:latest
+    container_name: rocc-app-client
+    build: "."
+    restart: always
+    environment:
+      - SERVER_PORT=${SERVER_PORT}
+      - SERVER_PROTOCOL=${SERVER_PROTOCOL}
+      - SERVER_HOST=${SERVER_HOST}
+      - SERVER_API_PATH=${SERVER_API_PATH}
+    networks: 
+      - rocc-networks
     depends_on:
-      - db
       - rocc-service
+
+  nginx:
+    image: nginx:1.19.6-alpine
+    container_name: nginx
+    restart: always
+    environment:
+      - SERVER_HOST=rocc-service
+      - SERVER_PORT=8080
+      - CLIENT_HOST=rocc-app
+      - CLIENT_PORT=80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/templates:/etc/nginx/templates:ro
+    networks:
+      - rocc-networks
+    ports:
+      - "80:80"
+    depends_on:
+      - rocc-app
+    
+networks:
+  rocc-networks:
