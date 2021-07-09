@@ -2,14 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
+  // {
+  //   path: 'explore',
+  //   loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
+  // },
   {
-    path: '',
-    pathMatch: 'full',
-    loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
-  },
-  {
-    path: 'explore',
-    loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
+    path: 'challenges',
+    loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
   },
   {
     path: 'organizations',
@@ -24,9 +23,18 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/signup').then(m => m.SignupModule)
   },
   {
+    path: '404',
+    loadChildren: () => import('./pages/page-not-found').then(m => m.PageNotFoundModule)
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
+  },
+  {
     path: ':username',
     loadChildren: () => import('./pages/profile').then(m => m.ProfileModule)
-  }
+  },
 //   {path: 'categories', redirectTo: '/components/categories'},
 //   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
 //   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
@@ -52,11 +60,15 @@ export const routes: Routes = [
 //     loadChildren: () =>
 //       import('./pages/component-sidenav/component-sidenav').then(m => m.ComponentSidenavModule)
 //   },
-  // {path: '**', redirectTo: '/404'},
+  {
+    path: '**', redirectTo: '/404'
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
