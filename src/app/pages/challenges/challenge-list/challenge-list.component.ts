@@ -8,6 +8,7 @@ import { flow, keyBy, mapValues, capitalize, values, merge as mergeFp } from 'lo
 import { FiltersComponent } from 'src/app/components/filters/filters.component';
 import { ChallengeFilter } from '@sage-bionetworks/rocc-client-angular';
 import { Filter } from 'src/app/components/filters/filter.model';
+import { assign } from 'lodash';
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -17,6 +18,8 @@ import { Filter } from 'src/app/components/filters/filter.model';
 export class ChallengeListComponent implements OnInit, AfterViewInit {
   private _challenges: Challenge[] = [];
   searchResultsCount = 0;
+  limit = 10;
+  offset = 0;
 
   @ViewChildren(FiltersComponent) filters!: QueryList<FiltersComponent>;
 
@@ -61,8 +64,9 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       .subscribe(query => {
         console.log('Query', query)
           this._challenges = [];
-          // this.searchResultsCount = 0;
-          // this.page = 0;
+          query.limit = this.limit;
+          query.offset = this.offset = 0;
+          // this.resultsOffset = 0;
           this.query.next(query);
       });
 
@@ -76,7 +80,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
           //     status: 'open'
           //   }
           // ),
-          switchMap(query => this.challengeService.listChallenges(20, 0, query as ChallengeFilter))
+          switchMap(query => this.challengeService.listChallenges(query.limit, query.offset, query as ChallengeFilter))
       )
       .subscribe(res => {
           if (res) {
@@ -101,5 +105,15 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   onChallengeClick(challenge: Challenge): void {
     console.log('Challenge clicked');
     // this.entityClick.emit(entity);
+  }
+
+  showMoreResults(): void {
+    let query = assign(
+      this.query.getValue(), {
+        offset: this.offset + this.limit,
+        limit: this.limit
+      }
+    );
+    this.query.next(query);
   }
 }

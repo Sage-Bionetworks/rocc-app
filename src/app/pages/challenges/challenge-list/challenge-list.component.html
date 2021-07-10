@@ -20,6 +20,17 @@
           (challengeClick)="onChallengeClick($event)"
         ></rocc-challenge-list-item>
       </mat-nav-list>
+
+      <div class="rocc-challenge-list-more-results">
+        <a
+          *ngIf="searchResultsCount - challenges.length > 0"
+          mat-raised-button
+          class="rocc-challenge-list-more-results-btn"
+          color="primary"
+          (click)="showMoreResults()"
+        >More Results
+        </a>
+      </div>
     </div>
   </div>
 </div>
