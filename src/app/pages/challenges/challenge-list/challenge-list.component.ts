@@ -80,7 +80,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
           //     status: 'open'
           //   }
           // ),
-          switchMap(query => this.challengeService.listChallenges(query.limit, query.offset, query as ChallengeFilter))
+          switchMap(query => this.challengeService.listChallenges(query.limit, query.offset, query as ChallengeFilter))  // TODO: extract filter from query
       )
       .subscribe(res => {
           if (res) {
