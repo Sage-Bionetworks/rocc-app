@@ -32,14 +32,15 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.orderFilters = values({
-      RELEVANCE: {
-          value: 'relevance',
-          title: 'Relevance',
-          active: true,
-      },
+      // RELEVANCE: {
+      //     value: 'relevance',
+      //     title: 'Relevance',
+      //     active: true,
+      // },
       NEWEST: {
           value: '-createdAt',
           title: `Newest challenges`,
+          active: true
       },
       OLDEST: {
           value: 'createdAt',
@@ -55,39 +56,64 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     let selectedFilters = this.filters
       // .filter(f => f.group !== 'previewType')
-      .map(f => f.getSelectedFilter());
+      .map(filter => filter.getSelectedFilter());
 
     combineLatest(selectedFilters)
       .pipe(
-        map(myFilters => flow([keyBy('group'), mapValues('value')])(myFilters))
+        tap(filters => console.log('filter befofe flow', filter)),
+        map(filters => flow([keyBy('group'), mapValues('value')])(filters)),
+        tap(filters => console.log('filter after flow', filter)),
       )
       .subscribe(query => {
         console.log('Query', query)
-          this._challenges = [];
-          query.limit = this.limit;
-          query.offset = this.offset = 0;
-          // this.resultsOffset = 0;
-          this.query.next(query);
+        this._challenges = [];
+        query.limit = this.limit;
+        query.offset = this.offset = 0;
+        // this.resultsOffset = 0;
+        this.query.next(query);
       });
 
     this.query
       .pipe(
-          map(query => mergeFp(query, this.querySource)),
-          tap(query => console.log('query 2', query)),
-          // mapTo(
-          //   {
-          //     name: 'DREAM',
-          //     status: 'open'
-          //   }
-          // ),
-          switchMap(query => this.challengeService.listChallenges(query.limit, query.offset, query as ChallengeFilter))  // TODO: extract filter from query
+        map((query) => mergeFp(query, this.querySource)),
+        tap((query) => console.log("query 2", query)),
+        map((query) => {
+          let orderBy = query.orderBy;
+          query.sort = orderBy.substring(
+            ["+", "-"].includes(orderBy.substring(0, 1)) ? 1 : 0
+          );
+          query.direction = orderBy.substring(0, 1) == "-" ? "desc" : "asc";
+          query.filter = {
+            name: query.name,
+          };
+          return query;
+        }),
+        tap((query) => console.log("final query", query)),
+        // mapTo(
+        //   {
+        //     name: 'DREAM',
+        //     status: 'open'
+        //   }
+        // ),
+        switchMap((query) =>
+          this.challengeService.listChallenges(
+            query.limit,
+            query.offset,
+            query.filter as ChallengeFilter,
+            query.sort,
+            query.direction
+          )
+        ) // TODO: extract filter from query
       )
-      .subscribe(res => {
+      .subscribe(
+        (res) => {
           if (res) {
             this.searchResultsCount = res.totalResults ? res.totalResults : 0;
             this.challenges.push(...res.challenges);
           }
-      }, err => console.error(err));
+        },
+        (err) => console.error(err)
+      );
   }
 
   get challenges(): Challenge[] {

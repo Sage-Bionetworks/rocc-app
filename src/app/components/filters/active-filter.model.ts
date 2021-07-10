@@ -1,5 +1,6 @@
-// @flow
 export interface ActiveFilter {
-    value: number | string | (number | string)[];
-    group: string;
+  /* The name of the filter. */
+  group: string;
+  /* */
+  value: number | string | (number | string)[];
 }

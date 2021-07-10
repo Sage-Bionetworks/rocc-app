@@ -3,34 +3,37 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Filter } from './filter.model';
 import { ActiveFilter } from './active-filter.model';
 
-const emptyActiveFilter: ActiveFilter = {
-  value: '',
-  group: ''
+export const emptyActiveFilter: ActiveFilter = {
+  group: '',
+  value: ''
 };
 
 @Component({
   template: ''
 })
 export abstract class FiltersComponent {
-    @Input() group!: string;
-    _filters: Filter[] = [];
-    changeFilter = new BehaviorSubject<ActiveFilter>(emptyActiveFilter);
+  /* Filter name */
+  @Input() group: string = '';
+  /* The available value that the query parameter can takes */
+  private _filters: Filter[] = [];
+  /* Emits each time the selected filter value changes. */
+  changeFilter = new BehaviorSubject<ActiveFilter>(emptyActiveFilter);
 
-    constructor() { }
+  constructor() {}
 
-    getSelectedFilter(): Observable<ActiveFilter> {
-        return this.changeFilter.asObservable();
-    }
+  getSelectedFilter(): Observable<ActiveFilter> {
+    return this.changeFilter.asObservable();
+  }
 
-    get filters(): Filter[] {
-        return this._filters;
-    }
+  get filters(): Filter[] {
+    return this._filters;
+  }
 
-    @Input()
-    set filters(filters: Filter[]) {
-        this._filters = filters;
-        this.changeFilter.next(this.getSelection());
-    }
+  @Input()
+  set filters(filters: Filter[]) {
+    this._filters = filters;
+    this.changeFilter.next(this.getSelection());
+  }
 
-    protected abstract getSelection(): ActiveFilter;
+  protected abstract getSelection(): ActiveFilter;
 }
