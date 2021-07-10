@@ -7,7 +7,7 @@ import { MaterialModule } from "../material/material.module";
 // import { ButtonToggleFilterComponent } from "./button-toggle-filter/button-toggle-filter.component";
 // import { RadioButtonFilterComponent } from "./radio-button-filter/radio-button-filter.component";
 import { SearchFilterComponent } from "./search-filter/search-filter.component";
-// import { SelectFilterComponent } from "./select-filter/select-filter.component";
+import { SelectFilterComponent } from "./select-filter/select-filter.component";
 
 @NgModule({
   imports: [
@@ -20,13 +20,13 @@ import { SearchFilterComponent } from "./search-filter/search-filter.component";
     // ButtonToggleFilterComponent,
     // RadioButtonFilterComponent,
     SearchFilterComponent,
-    // SelectFilterComponent,
+    SelectFilterComponent,
   ],
   exports: [
     // ButtonToggleFilterComponent,
     // RadioButtonFilterComponent,
     SearchFilterComponent,
-    // SelectFilterComponent,
+    SelectFilterComponent,
   ],
 })
 export class FiltersModule {}
