@@ -16,7 +16,7 @@ import { Filter } from 'src/app/components/filters/filter.model';
 })
 export class ChallengeListComponent implements OnInit, AfterViewInit {
   private _challenges: Challenge[] = [];
-  private _searchResultsCount = 0;
+  searchResultsCount = 0;
 
   @ViewChildren(FiltersComponent) filters!: QueryList<FiltersComponent>;
 
@@ -80,8 +80,8 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       )
       .subscribe(res => {
           if (res) {
-              // this.searchResultsCount = res.count ? res.count : 0;
-              this.challenges.push(...res.challenges);
+            this.searchResultsCount = res.totalResults ? res.totalResults : 0;
+            this.challenges.push(...res.challenges);
           }
       }, err => console.error(err));
   }
@@ -90,9 +90,9 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
     return this._challenges;
   }
 
-  get searchResultsCount(): number {
-    return this._searchResultsCount;
-  }
+  // get searchResultsCount(): number {
+  //   return this._searchResultsCount;
+  // }
 
   get querySource(): any {
     return this._querySource;
