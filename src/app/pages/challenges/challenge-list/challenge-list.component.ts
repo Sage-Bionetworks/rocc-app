@@ -12,9 +12,9 @@ import {
 import { BehaviorSubject, combineLatest } from 'rxjs';
 import { filter, map, switchMap, tap } from 'rxjs/operators';
 import { flow, keyBy, mapValues, values, merge as mergeFp } from 'lodash/fp';
-import { FiltersComponent } from 'src/app/components/filters/filters.component';
+import { FilterComponent } from 'src/app/components/filters/filter.component';
 import { ChallengeFilter } from '@sage-bionetworks/rocc-client-angular';
-import { Filter } from 'src/app/components/filters/filter.model';
+import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
 
 @Component({
@@ -28,18 +28,18 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   limit = 10;
   offset = 0;
 
-  @ViewChildren(FiltersComponent) filters!: QueryList<FiltersComponent>;
+  @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
 
   private _querySource: any = {};
   private query: BehaviorSubject<any> = new BehaviorSubject<any>({});
 
-  orderFilters: Filter[] = [];
-  challengeTypeFilters: Filter[] = [];
+  orderByFilterValues: FilterValue[] = [];
+  challengeTypeFilterValues: FilterValue[] = [];
 
   constructor(private challengeService: ChallengeService) {}
 
   ngOnInit(): void {
-    this.orderFilters = values({
+    this.orderByFilterValues = values({
       // RELEVANCE: {
       //     value: 'relevance',
       //     title: 'Relevance',
@@ -56,7 +56,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       },
     });
 
-    this.challengeTypeFilters = values({
+    this.challengeTypeFilterValues = values({
       CHALLENGE: {
         value: 'challenge',
         title: 'Challenge',
@@ -80,7 +80,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
     combineLatest(selectedFilters)
       .pipe(
         tap((filters) => console.log('filter befofe flow', filter)),
-        map((filters) => flow([keyBy('group'), mapValues('value')])(filters)),
+        map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
         tap((filters) => console.log('filter after flow', filter))
       )
       .subscribe((query) => {

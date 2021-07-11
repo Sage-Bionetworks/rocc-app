@@ -1,6 +1,6 @@
 import { Component, forwardRef } from '@angular/core';
 import { FilterState } from '../filter-state.model';
-import { FiltersComponent } from '../filters.component';
+import { FilterComponent } from '../filter.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -8,17 +8,17 @@ import { OnInit } from '@angular/core';
 import { OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'search-filter',
+  selector: 'sage-search-filter',
   templateUrl: './search-filter.html',
   styleUrls: ['./search-filter.scss'],
   providers: [
     {
-      provide: FiltersComponent,
+      provide: FilterComponent,
       useExisting: forwardRef(() => SearchFilterComponent),
     },
   ],
 })
-export class SearchFilterComponent extends FiltersComponent implements OnInit, OnDestroy {
+export class SearchFilterComponent extends FilterComponent implements OnInit, OnDestroy {
   searchForm: FormGroup;
   private searchSub!: Subscription;
 
@@ -45,7 +45,7 @@ export class SearchFilterComponent extends FiltersComponent implements OnInit, O
 
   getState(): FilterState {
     return {
-      group: this.group,
+      name: this.name,
       value: this.searchForm.value.search,
     };
   }

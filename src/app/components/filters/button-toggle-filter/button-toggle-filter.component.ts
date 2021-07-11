@@ -1,14 +1,14 @@
 import { Component, forwardRef } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material';
-import { FiltersComponent } from '../filters.component';
+import { FilterComponent } from '../filter.component';
 
 @Component({
     selector: 'button-toggle-filter',
     templateUrl: './button-toggle-filter.html',
     styleUrls: ['./button-toggle-filter.scss'],
-    providers: [{ provide: FiltersComponent, useExisting: forwardRef(() => ButtonToggleFilterComponent) }],
+    providers: [{ provide: FilterComponent, useExisting: forwardRef(() => ButtonToggleFilterComponent) }],
 })
-export class ButtonToggleFilterComponent extends FiltersComponent {
+export class ButtonToggleFilterComponent extends FilterComponent {
     static parameters = [];
     constructor() {
         super();

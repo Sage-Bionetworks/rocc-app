@@ -1,4 +1,4 @@
-export interface Filter {
+export interface FilterValue {
   /* The value of the filter. */
   value: number | string;
   /* The display name of the filter value. */

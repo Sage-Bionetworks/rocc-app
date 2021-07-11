@@ -1,20 +1,20 @@
 import { Component, OnInit, ViewChild, forwardRef } from '@angular/core';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
-import { FiltersComponent } from '../filters.component';
+import { FilterComponent } from '../filter.component';
 import { FilterState } from '../filter-state.model';
 
 @Component({
-  selector: 'select-filter',
+  selector: 'sage-select-filter',
   templateUrl: './select-filter.html',
   styleUrls: ['./select-filter.scss'],
   providers: [
     {
-      provide: FiltersComponent,
+      provide: FilterComponent,
       useExisting: forwardRef(() => SelectFilterComponent),
     },
   ],
 })
-export class SelectFilterComponent extends FiltersComponent implements OnInit {
+export class SelectFilterComponent extends FilterComponent implements OnInit {
   @ViewChild(MatSelect, { static: true }) select!: MatSelect;
 
   constructor() {
@@ -22,23 +22,23 @@ export class SelectFilterComponent extends FiltersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const activeFilter = this.filters.find((filter) => filter.active);
-    if (activeFilter !== undefined) {
-      this.select.value = activeFilter.value;
+    const activeValue = this.values.find((value) => value.active);
+    if (activeValue !== undefined) {
+      this.select.value = activeValue.value;
       this.changeFilter.next(this.getState());
     }
   }
 
   emitState(event: MatSelectChange): void {
     this.changeFilter.next({
-      group: this.group,
+      name: this.name,
       value: event.value,
     });
   }
 
   getState(): FilterState {
     return {
-      group: this.group,
+      name: this.name,
       value: this.select.value,
     };
   }

@@ -1,7 +1,7 @@
-<mat-form-field class="select-filter-form-field">
-  <mat-select class="select-filter-select" (selectionChange)="emitState($event)">
-    <mat-option class="select-filter-option" *ngFor="let filter of filters" [value]="filter.value">
-      {{filter.title}}
+<mat-form-field class="sage-select-filter-form-field">
+  <mat-select class="sage-select-filter-select" (selectionChange)="emitState($event)">
+    <mat-option class="sage-select-filter-option" *ngFor="let value of values" [value]="value.value">
+      {{value.title}}
     </mat-option>
   </mat-select>
 </mat-form-field>
