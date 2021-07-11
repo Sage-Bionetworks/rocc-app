@@ -3,8 +3,8 @@ import {
   Challenge, ChallengeService
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
-import { filter, map, mapTo, switchMap, tap } from 'rxjs/operators';
-import { flow, keyBy, mapValues, capitalize, values, merge as mergeFp } from 'lodash/fp';
+import { filter, map, switchMap, tap } from 'rxjs/operators';
+import { flow, keyBy, mapValues, values, merge as mergeFp } from 'lodash/fp';
 import { FiltersComponent } from 'src/app/components/filters/filters.component';
 import { ChallengeFilter } from '@sage-bionetworks/rocc-client-angular';
 import { Filter } from 'src/app/components/filters/filter.model';
