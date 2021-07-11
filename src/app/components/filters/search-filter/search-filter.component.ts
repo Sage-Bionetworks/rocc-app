@@ -1,5 +1,5 @@
 import { Component, forwardRef } from '@angular/core';
-import { ActiveFilter } from '../active-filter.model';
+import { FilterState } from '../filter-state.model';
 import { FiltersComponent } from '../filters.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Subscription } from 'rxjs';
@@ -30,11 +30,11 @@ export class SearchFilterComponent extends FiltersComponent implements OnInit, O
   }
 
   ngOnInit(): void {
-    this.changeFilter.next(this.getSelection());
+    this.changeFilter.next(this.getState());
     this.searchSub = this.searchForm.controls.search.valueChanges
       .pipe(debounceTime(400), distinctUntilChanged())
       .subscribe(
-        (_term) => this.changeFilter.next(this.getSelection()),
+        (_term) => this.changeFilter.next(this.getState()),
         (err) => console.log(err)
       );
   }
@@ -43,14 +43,14 @@ export class SearchFilterComponent extends FiltersComponent implements OnInit, O
     this.searchSub.unsubscribe();
   }
 
-  getSelection(): ActiveFilter {
+  getState(): FilterState {
     return {
       group: this.group,
       value: this.searchForm.value.search,
     };
   }
 
-  emitSearchTerms(): void {
-    this.changeFilter.next(this.getSelection());
+  emitState(): void {
+    this.changeFilter.next(this.getState());
   }
 }

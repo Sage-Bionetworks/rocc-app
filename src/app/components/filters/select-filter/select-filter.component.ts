@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, forwardRef } from '@angular/core';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { FiltersComponent } from '../filters.component';
-import { ActiveFilter } from '../active-filter.model';
+import { FilterState } from '../filter-state.model';
 
 @Component({
   selector: 'select-filter',
@@ -25,18 +25,18 @@ export class SelectFilterComponent extends FiltersComponent implements OnInit {
     const activeFilter = this.filters.find((filter) => filter.active);
     if (activeFilter !== undefined) {
       this.select.value = activeFilter.value;
-      this.changeFilter.next(this.getSelection());
+      this.changeFilter.next(this.getState());
     }
   }
 
-  setSelection(event: MatSelectChange): void {
+  emitState(event: MatSelectChange): void {
     this.changeFilter.next({
       group: this.group,
       value: event.value,
     });
   }
 
-  getSelection(): ActiveFilter {
+  getState(): FilterState {
     return {
       group: this.group,
       value: this.select.value,

@@ -1,5 +1,5 @@
 <mat-form-field class="select-filter-form-field">
-  <mat-select class="select-filter-select" (selectionChange)="setSelection($event)">
+  <mat-select class="select-filter-select" (selectionChange)="emitState($event)">
     <mat-option class="select-filter-option" *ngFor="let filter of filters" [value]="filter.value">
       {{filter.title}}
     </mat-option>

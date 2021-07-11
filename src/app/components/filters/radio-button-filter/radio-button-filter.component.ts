@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import { Component, ViewChild, forwardRef } from '@angular/core';
 import { MatRadioChange, MatRadioGroup } from '@angular/material/radio';
-import { ActiveFilter } from '../active-filter.model';
+import { FilterState } from '../filter-state.model';
 import { FiltersComponent } from '../filters.component';
 
 @Component({
@@ -26,18 +26,18 @@ export class RadioButtonFilterComponent extends FiltersComponent implements OnIn
     const activeFilter = this.filters.find((filter) => filter.active);
     if (activeFilter !== undefined) {
       this.radioGroup.value = activeFilter.value;
-      this.changeFilter.next(this.getSelection());
+      this.changeFilter.next(this.getState());
     }
   }
 
-  select(event: MatRadioChange): void {
+  emitState(event: MatRadioChange): void {
     this.changeFilter.next({
       group: this.group,
       value: event.value,
     });
   }
 
-  getSelection(): ActiveFilter {
+  getState(): FilterState {
     return {
       group: this.group,
       value: this.radioGroup.value,
