@@ -1,6 +1,6 @@
-<ul>
+<ul *ngIf="!!values">
   <li *ngFor="let value of values">
-    <mat-checkbox [checked]="value.active !== undefined && value.active" (change)="emitState($event)">
+    <mat-checkbox [(ngModel)]="value.active" (change)="emitState()">
       {{value.title}}
     </mat-checkbox>
   </li>

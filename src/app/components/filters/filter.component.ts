@@ -15,7 +15,7 @@ export abstract class FilterComponent {
   /* Filter name */
   @Input() name: string = '';
   /* The available value that the query parameter can takes */
-  private _values: FilterValue[] = [];
+  protected _values: FilterValue[] = [];
   /* Emits each time the selected filter value changes. */
   protected state = new BehaviorSubject<FilterState>(emptyFilterState);
 
