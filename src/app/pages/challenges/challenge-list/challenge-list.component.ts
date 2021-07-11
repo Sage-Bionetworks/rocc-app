@@ -1,6 +1,13 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import {
-  Challenge, ChallengeService
+  AfterViewInit,
+  Component,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
+import {
+  Challenge,
+  ChallengeService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 import { filter, map, switchMap, tap } from 'rxjs/operators';
@@ -41,7 +48,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       NEWEST: {
         value: '-createdAt',
         title: `Newest challenges`,
-        active: true
+        active: true,
       },
       OLDEST: {
         value: 'createdAt',
@@ -53,12 +60,12 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       CHALLENGE: {
         value: 'challenge',
         title: 'Challenge',
-        active: true
+        active: true,
       },
       BENCHMARK: {
         value: 'benchmark',
-        title: 'Benchmark'
-      }
+        title: 'Benchmark',
+      },
     });
 
     // this.challengeService.listChallenges()  // first page
@@ -68,16 +75,16 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     let selectedFilters = this.filters
       // .filter(f => f.group !== 'previewType')
-      .map(filter => filter.getSelectedFilter());
+      .map((filter) => filter.getSelectedFilter());
 
     combineLatest(selectedFilters)
       .pipe(
-        tap(filters => console.log('filter befofe flow', filter)),
-        map(filters => flow([keyBy('group'), mapValues('value')])(filters)),
-        tap(filters => console.log('filter after flow', filter)),
+        tap((filters) => console.log('filter befofe flow', filter)),
+        map((filters) => flow([keyBy('group'), mapValues('value')])(filters)),
+        tap((filters) => console.log('filter after flow', filter))
       )
-      .subscribe(query => {
-        console.log('Query', query)
+      .subscribe((query) => {
+        console.log('Query', query);
         this._challenges = [];
         query.limit = this.limit;
         query.offset = this.offset = 0;
@@ -88,19 +95,19 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
     this.query
       .pipe(
         map((query) => mergeFp(query, this.querySource)),
-        tap((query) => console.log("query 2", query)),
+        tap((query) => console.log('query 2', query)),
         map((query) => {
           let orderBy = query.orderBy;
           query.sort = orderBy.substring(
-            ["+", "-"].includes(orderBy.substring(0, 1)) ? 1 : 0
+            ['+', '-'].includes(orderBy.substring(0, 1)) ? 1 : 0
           );
-          query.direction = orderBy.substring(0, 1) == "-" ? "desc" : "asc";
+          query.direction = orderBy.substring(0, 1) == '-' ? 'desc' : 'asc';
           query.filter = {
             name: query.name,
           };
           return query;
         }),
-        tap((query) => console.log("final query", query)),
+        tap((query) => console.log('final query', query)),
         // mapTo(
         //   {
         //     name: 'DREAM',
@@ -146,12 +153,10 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   }
 
   showMoreResults(): void {
-    let query = assign(
-      this.query.getValue(), {
-        offset: this.offset + this.limit,
-        limit: this.limit
-      }
-    );
+    let query = assign(this.query.getValue(), {
+      offset: this.offset + this.limit,
+      limit: this.limit,
+    });
     this.query.next(query);
   }
 }

@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild, forwardRef } from "@angular/core";
-import { MatSelect, MatSelectChange } from "@angular/material/select";
-import { FiltersComponent } from "../filters.component";
-import { ActiveFilter } from "../active-filter.model";
+import { Component, OnInit, ViewChild, forwardRef } from '@angular/core';
+import { MatSelect, MatSelectChange } from '@angular/material/select';
+import { FiltersComponent } from '../filters.component';
+import { ActiveFilter } from '../active-filter.model';
 
 @Component({
   selector: 'select-filter',
@@ -22,8 +22,8 @@ export class SelectFilterComponent extends FiltersComponent implements OnInit {
     super();
   }
 
-  ngOnInit() {
-    let activeFilter = this.filters.find(filter => filter.active);
+  ngOnInit(): void {
+    const activeFilter = this.filters.find((filter) => filter.active);
     if (activeFilter !== undefined) {
       this.mySelect.value = activeFilter.value;
       this.changeFilter.next(this.getSelection());

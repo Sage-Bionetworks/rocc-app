@@ -1,12 +1,13 @@
-import { Component, ViewChild, forwardRef } from "@angular/core";
+import { OnInit } from '@angular/core';
+import { Component, ViewChild, forwardRef } from '@angular/core';
 import { MatRadioChange, MatRadioGroup } from '@angular/material/radio';
-import { ActiveFilter } from "../active-filter.model";
-import { FiltersComponent } from "../filters.component";
+import { ActiveFilter } from '../active-filter.model';
+import { FiltersComponent } from '../filters.component';
 
 @Component({
-  selector: "radio-button-filter",
-  templateUrl: "./radio-button-filter.html",
-  styleUrls: ["./radio-button-filter.scss"],
+  selector: 'radio-button-filter',
+  templateUrl: './radio-button-filter.html',
+  styleUrls: ['./radio-button-filter.scss'],
   providers: [
     {
       provide: FiltersComponent,
@@ -14,15 +15,15 @@ import { FiltersComponent } from "../filters.component";
     },
   ],
 })
-export class RadioButtonFilterComponent extends FiltersComponent {
+export class RadioButtonFilterComponent extends FiltersComponent implements OnInit {
   @ViewChild(MatRadioGroup, { static: true }) radioGroup!: MatRadioGroup;
 
   constructor() {
     super();
   }
 
-  ngOnInit() {
-    let activeFilter = this.filters.find(filter => filter.active);
+  ngOnInit(): void {
+    const activeFilter = this.filters.find((filter) => filter.active);
     if (activeFilter !== undefined) {
       this.radioGroup.value = activeFilter.value;
       this.changeFilter.next(this.getSelection());
@@ -39,7 +40,7 @@ export class RadioButtonFilterComponent extends FiltersComponent {
   getSelection(): ActiveFilter {
     return {
       group: this.group,
-      value: this.radioGroup.value
+      value: this.radioGroup.value,
     };
   }
 }
