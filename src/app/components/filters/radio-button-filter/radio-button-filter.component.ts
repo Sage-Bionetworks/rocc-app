@@ -1,37 +1,45 @@
-import { Component, ViewChild, forwardRef } from '@angular/core';
-import { MatRadioChange } from '@angular/material';
-import { FiltersComponent } from '../filters.component';
+import { Component, ViewChild, forwardRef } from "@angular/core";
+import { MatRadioChange, MatRadioGroup } from '@angular/material/radio';
+import { ActiveFilter } from "../active-filter.model";
+import { FiltersComponent } from "../filters.component";
 
 @Component({
-    selector: 'radio-button-filter',
-    templateUrl: './radio-button-filter.html',
-    styleUrls: ['./radio-button-filter.scss'],
-    providers: [{ provide: FiltersComponent, useExisting: forwardRef(() => RadioButtonFilterComponent) }]
+  selector: "radio-button-filter",
+  templateUrl: "./radio-button-filter.html",
+  styleUrls: ["./radio-button-filter.scss"],
+  providers: [
+    {
+      provide: FiltersComponent,
+      useExisting: forwardRef(() => RadioButtonFilterComponent),
+    },
+  ],
 })
 export class RadioButtonFilterComponent extends FiltersComponent {
+  @ViewChild(MatRadioGroup, { static: true }) radioGroup!: MatRadioGroup;
 
-    static parameters = [];
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    ngOnInit() {
-        this.changeFilter.next(this.getSelection());
+  ngOnInit() {
+    let activeFilter = this.filters.find(filter => filter.active);
+    if (activeFilter !== undefined) {
+      this.radioGroup.value = activeFilter.value;
+      this.changeFilter.next(this.getSelection());
     }
+  }
 
-    select(event: MatRadioChange): void {
-        this.changeFilter.next({
-            group: this.group,
-            value: event.value
-        });
-    }
+  select(event: MatRadioChange): void {
+    this.changeFilter.next({
+      group: this.group,
+      value: event.value,
+    });
+  }
 
-    getSelection(): any {
-        return {
-            group: this.group,
-            value: Array.isArray(this.filters) && this.filters.length > 0
-                ? this.filters.find(f => f.active).value
-                : undefined
-        };
-    }
+  getSelection(): ActiveFilter {
+    return {
+      group: this.group,
+      value: this.radioGroup.value
+    };
+  }
 }

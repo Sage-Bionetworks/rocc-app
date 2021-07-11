@@ -5,7 +5,7 @@ import { RouterModule } from "@angular/router";
 // import { MaterialModule } from 'components/material/material.module';
 import { MaterialModule } from "../material/material.module";
 // import { ButtonToggleFilterComponent } from "./button-toggle-filter/button-toggle-filter.component";
-// import { RadioButtonFilterComponent } from "./radio-button-filter/radio-button-filter.component";
+import { RadioButtonFilterComponent } from "./radio-button-filter/radio-button-filter.component";
 import { SearchFilterComponent } from "./search-filter/search-filter.component";
 import { SelectFilterComponent } from "./select-filter/select-filter.component";
 
@@ -18,13 +18,13 @@ import { SelectFilterComponent } from "./select-filter/select-filter.component";
   ],
   declarations: [
     // ButtonToggleFilterComponent,
-    // RadioButtonFilterComponent,
+    RadioButtonFilterComponent,
     SearchFilterComponent,
     SelectFilterComponent,
   ],
   exports: [
     // ButtonToggleFilterComponent,
-    // RadioButtonFilterComponent,
+    RadioButtonFilterComponent,
     SearchFilterComponent,
     SelectFilterComponent,
   ],

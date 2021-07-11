@@ -15,6 +15,7 @@ import { ActiveFilter } from "../active-filter.model";
   ],
 })
 export class SelectFilterComponent extends FiltersComponent implements OnInit {
+  // TODO Rename variable (using prefix my is a bad practice: not descriptive)
   @ViewChild(MatSelect, { static: true }) mySelect!: MatSelect;
 
   constructor() {
@@ -22,7 +23,7 @@ export class SelectFilterComponent extends FiltersComponent implements OnInit {
   }
 
   ngOnInit() {
-    let activeFilter = this.filters.find((f) => f.active);
+    let activeFilter = this.filters.find(filter => filter.active);
     if (activeFilter !== undefined) {
       this.mySelect.value = activeFilter.value;
       this.changeFilter.next(this.getSelection());

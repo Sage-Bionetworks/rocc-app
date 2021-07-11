@@ -4,8 +4,11 @@
     <p>TODO: Add checkbox-filter</p>
     <h3>Order by</h3>
     <select-filter [filters]="orderFilters" group="orderBy"></select-filter>
-    <h3>Preview</h3>
-    <!-- <p>TODO: Add button-toogle-filter</p> -->
+    <h3>Challenge Type</h3>
+    <radio-button-filter
+      [filters]="challengeTypeFilters"
+      group="challengeType"
+    ></radio-button-filter>
   </div>
 
   <div class="rocc-challenge-list-content">

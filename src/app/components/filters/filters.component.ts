@@ -9,7 +9,7 @@ export const emptyActiveFilter: ActiveFilter = {
 };
 
 @Component({
-  template: ''
+  template: '',
 })
 export abstract class FiltersComponent {
   /* Filter name */

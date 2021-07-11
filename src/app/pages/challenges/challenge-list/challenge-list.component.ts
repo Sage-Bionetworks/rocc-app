@@ -27,6 +27,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   private query: BehaviorSubject<any> = new BehaviorSubject<any>({});
 
   orderFilters: Filter[] = [];
+  challengeTypeFilters: Filter[] = [];
 
   constructor(private challengeService: ChallengeService) {}
 
@@ -38,16 +39,27 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       //     active: true,
       // },
       NEWEST: {
-          value: '-createdAt',
-          title: `Newest challenges`,
-          active: true
+        value: '-createdAt',
+        title: `Newest challenges`,
+        active: true
       },
       OLDEST: {
-          value: 'createdAt',
-          title: `Oldest challenges`,
+        value: 'createdAt',
+        title: `Oldest challenges`,
       },
     });
 
+    this.challengeTypeFilters = values({
+      CHALLENGE: {
+        value: 'challenge',
+        title: 'Challenge',
+        active: true
+      },
+      BENCHMARK: {
+        value: 'benchmark',
+        title: 'Benchmark'
+      }
+    });
 
     // this.challengeService.listChallenges()  // first page
     //   .subscribe(page => this._challenges = page.challenges);
