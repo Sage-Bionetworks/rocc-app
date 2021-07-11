@@ -16,6 +16,7 @@ import { FilterComponent } from 'src/app/components/filters/filter.component';
 import { ChallengeFilter } from '@sage-bionetworks/rocc-client-angular';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
+import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -35,6 +36,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
   orderByFilterValues: FilterValue[] = [];
   challengeTypeFilterValues: FilterValue[] = [];
+  previewTypeFilterValues: ButtonToggleFilterValue[] = [];
 
   constructor(private challengeService: ChallengeService) {}
 
@@ -68,6 +70,20 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       },
     });
 
+    this.previewTypeFilterValues = values({
+      ARRAY: {
+          value: 'array',
+          title: 'Array',
+          icon: 'view_array',
+          active: true,
+      },
+      LIST: {
+          value: 'list',
+          title: 'List',
+          icon: 'view_list',
+      },
+    });
+
     // this.challengeService.listChallenges()  // first page
     //   .subscribe(page => this._challenges = page.challenges);
   }
@@ -75,7 +91,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     let selectedFilters = this.filters
       // .filter(f => f.group !== 'previewType')
-      .map((filter) => filter.getSelectedFilter());
+      .map((filter) => filter.getStateAsObservable());
 
     combineLatest(selectedFilters)
       .pipe(

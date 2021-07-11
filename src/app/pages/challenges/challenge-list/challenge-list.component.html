@@ -3,35 +3,34 @@
     <h3>Challenge Status</h3>
     <p>TODO: Add checkbox-filter</p>
     <h3>Order by</h3>
-    <sage-select-filter name="orderBy" [values]="orderByFilterValues"></sage-select-filter>
+    <sage-select-filter name="orderBy" [values]="orderByFilterValues">
+    </sage-select-filter>
     <h3>Challenge Type</h3>
-    <sage-radio-button-filter
-      name="challengeType"
-      [values]="challengeTypeFilterValues"
-    ></sage-radio-button-filter>
+    <sage-radio-button-filter name="challengeType"
+      [values]="challengeTypeFilterValues"></sage-radio-button-filter>
+    <h3>Preview</h3>
+    <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
+    </sage-button-toggle-filter>
   </div>
 
   <div class="rocc-challenge-list-content">
     <!-- <p>TODO: Add search-filter</p> -->
-    <sage-search-filter class="rocc-challenge-list-content-search-filter" name="name"></sage-search-filter>
-    <span class="rocc-challenge-list-content-results-count">{{searchResultsCount}} results</span>
+    <sage-search-filter class="rocc-challenge-list-content-search-filter"
+      name="name"></sage-search-filter>
+    <span
+      class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
+      results</span>
     <div class="rocc-challenge-list-content-results">
       <mat-nav-list class="rocc-challenge-list-content-results-list">
-        <rocc-challenge-list-item
-          *ngFor="let challenge of challenges"
-          [challenge]="challenge"
-          (challengeClick)="onChallengeClick($event)"
-        ></rocc-challenge-list-item>
+        <rocc-challenge-list-item *ngFor="let challenge of challenges"
+          [challenge]="challenge" (challengeClick)="onChallengeClick($event)">
+        </rocc-challenge-list-item>
       </mat-nav-list>
 
       <div class="rocc-challenge-list-more-results">
-        <a
-          *ngIf="searchResultsCount - challenges.length > 0"
-          mat-raised-button
-          class="rocc-challenge-list-more-results-btn"
-          color="primary"
-          (click)="showMoreResults()"
-        >More Results
+        <a *ngIf="searchResultsCount - challenges.length > 0" mat-raised-button
+          class="rocc-challenge-list-more-results-btn" color="primary"
+          (click)="showMoreResults()">More Results
         </a>
       </div>
     </div>

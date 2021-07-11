@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,6 +16,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   imports: [
     CommonModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
@@ -26,6 +28,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   ],
   exports: [
     MatButtonModule,
+    MatButtonToggleModule,
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,

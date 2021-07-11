@@ -25,12 +25,12 @@ export class SelectFilterComponent extends FilterComponent implements OnInit {
     const activeValue = this.values.find((value) => value.active);
     if (activeValue !== undefined) {
       this.select.value = activeValue.value;
-      this.changeFilter.next(this.getState());
+      this.state.next(this.getState());
     }
   }
 
   emitState(event: MatSelectChange): void {
-    this.changeFilter.next({
+    this.state.next({
       name: this.name,
       value: event.value,
     });

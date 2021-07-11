@@ -17,12 +17,12 @@ export abstract class FilterComponent {
   /* The available value that the query parameter can takes */
   private _values: FilterValue[] = [];
   /* Emits each time the selected filter value changes. */
-  changeFilter = new BehaviorSubject<FilterState>(emptyFilterState);
+  protected state = new BehaviorSubject<FilterState>(emptyFilterState);
 
   constructor() {}
 
-  getSelectedFilter(): Observable<FilterState> {
-    return this.changeFilter.asObservable();
+  getStateAsObservable(): Observable<FilterState> {
+    return this.state.asObservable();
   }
 
   get values(): FilterValue[] {
@@ -32,7 +32,7 @@ export abstract class FilterComponent {
   @Input()
   set values(values: FilterValue[]) {
     this._values = values;
-    this.changeFilter.next(this.getState());
+    this.state.next(this.getState());
   }
 
   protected abstract getState(): FilterState;

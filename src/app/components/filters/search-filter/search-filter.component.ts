@@ -30,11 +30,11 @@ export class SearchFilterComponent extends FilterComponent implements OnInit, On
   }
 
   ngOnInit(): void {
-    this.changeFilter.next(this.getState());
+    this.state.next(this.getState());
     this.searchSub = this.searchForm.controls.search.valueChanges
       .pipe(debounceTime(400), distinctUntilChanged())
       .subscribe(
-        (_term) => this.changeFilter.next(this.getState()),
+        (_term) => this.state.next(this.getState()),
         (err) => console.log(err)
       );
   }
@@ -51,6 +51,6 @@ export class SearchFilterComponent extends FilterComponent implements OnInit, On
   }
 
   emitState(): void {
-    this.changeFilter.next(this.getState());
+    this.state.next(this.getState());
   }
 }

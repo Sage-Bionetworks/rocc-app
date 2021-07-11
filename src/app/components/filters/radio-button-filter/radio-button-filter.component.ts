@@ -29,12 +29,12 @@ export class RadioButtonFilterComponent
     const activeValue = this.values.find((value) => value.active);
     if (activeValue !== undefined) {
       this.radioGroup.value = activeValue.value;
-      this.changeFilter.next(this.getState());
+      this.state.next(this.getState());
     }
   }
 
   emitState(event: MatRadioChange): void {
-    this.changeFilter.next({
+    this.state.next({
       name: this.name,
       value: event.value,
     });
