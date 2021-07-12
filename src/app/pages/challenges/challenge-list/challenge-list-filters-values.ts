@@ -1,4 +1,7 @@
-export const orderByFilterValues = [
+import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
+import { FilterValue } from 'src/app/components/filters/filter-value.model';
+
+export const orderByFilterValues: FilterValue[] = [
   {
     value: '-createdAt',
     title: `Newest challenges`,
@@ -11,7 +14,7 @@ export const orderByFilterValues = [
   },
 ];
 
-export const challengeTypeFilterValues = [
+export const challengeTypeFilterValues: FilterValue[] = [
   {
     value: 'challenge',
     title: 'Challenge',
@@ -24,7 +27,7 @@ export const challengeTypeFilterValues = [
   },
 ];
 
-export const previewTypeFilterValues = [
+export const previewTypeFilterValues: ButtonToggleFilterValue[] = [
   {
     value: 'array',
     title: 'Array',
