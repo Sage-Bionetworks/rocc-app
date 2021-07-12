@@ -4,5 +4,5 @@ export interface FilterValue {
   /* The display name of the filter value. */
   title: string;
   /* Whether this filter value is active. */
-  active?: boolean;
+  active: boolean;
 }

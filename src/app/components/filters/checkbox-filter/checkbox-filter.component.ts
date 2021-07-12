@@ -1,8 +1,6 @@
-import { Input, OnInit } from '@angular/core';
 import { Component, forwardRef } from '@angular/core';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
-import { CheckboxFilterValue } from './checkbox-filter-value';
 
 @Component({
   selector: 'sage-checkbox-filter',
@@ -15,12 +13,10 @@ import { CheckboxFilterValue } from './checkbox-filter-value';
     },
   ],
 })
-export class CheckboxFilterComponent extends FilterComponent implements OnInit {
+export class CheckboxFilterComponent extends FilterComponent {
   constructor() {
     super();
   }
-
-  ngOnInit(): void {}
 
   getState(): FilterState {
     return {
@@ -29,19 +25,5 @@ export class CheckboxFilterComponent extends FilterComponent implements OnInit {
         .filter((value) => value.active)
         .map((value) => value.value),
     };
-  }
-
-  @Input()
-  set values(values: CheckboxFilterValue[]) {
-    this._values = values;
-    this.emitState();
-  }
-
-  get values(): CheckboxFilterValue[] {
-    return this._values as CheckboxFilterValue[];
-  }
-
-  emitState(): void {
-    this.state.next(this.getState());
   }
 }

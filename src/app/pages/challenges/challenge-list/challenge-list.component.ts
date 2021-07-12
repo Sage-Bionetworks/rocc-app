@@ -17,7 +17,6 @@ import { ChallengeFilter } from '@sage-bionetworks/rocc-client-angular';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
 import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
-import { CheckboxFilterValue } from 'src/app/components/filters/checkbox-filter/checkbox-filter-value';
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -38,7 +37,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   orderByFilterValues: FilterValue[] = [];
   challengeTypeFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = [];
-  tagFilterValues: CheckboxFilterValue[] = [];
+  tagFilterValues: FilterValue[] = [];
 
   constructor(private challengeService: ChallengeService) {}
 
@@ -57,6 +56,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       OLDEST: {
         value: 'createdAt',
         title: `Oldest challenges`,
+        active: false,
       },
     });
 
@@ -69,6 +69,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       BENCHMARK: {
         value: 'benchmark',
         title: 'Benchmark',
+        active: false,
       },
     });
 
@@ -83,6 +84,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
         value: 'list',
         title: 'List',
         icon: 'view_list',
+        active: false,
       },
     });
 

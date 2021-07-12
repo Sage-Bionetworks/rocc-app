@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, forwardRef } from '@angular/core';
-import { MatSelect, MatSelectChange } from '@angular/material/select';
+import { Component, ViewChild, forwardRef } from '@angular/core';
+import { MatSelect } from '@angular/material/select';
 import { FilterComponent } from '../filter.component';
 import { FilterState } from '../filter-state.model';
 
@@ -14,7 +14,7 @@ import { FilterState } from '../filter-state.model';
     },
   ],
 })
-export class SelectFilterComponent extends FilterComponent implements OnInit {
+export class SelectFilterComponent extends FilterComponent {
   @ViewChild(MatSelect, { static: true }) select!: MatSelect;
 
   constructor() {
@@ -25,21 +25,21 @@ export class SelectFilterComponent extends FilterComponent implements OnInit {
     const activeValue = this.values.find((value) => value.active);
     if (activeValue !== undefined) {
       this.select.value = activeValue.value;
-      this.state.next(this.getState());
     }
   }
 
-  emitState(event: MatSelectChange): void {
-    this.state.next({
-      name: this.name,
-      value: event.value,
-    });
-  }
-
   getState(): FilterState {
+    const activeValue = this.values.find((value) => value.active);
     return {
       name: this.name,
-      value: this.select.value,
+      value: activeValue !== undefined ? activeValue.value : '',
     };
+  }
+
+  updateState(): void {
+    this._values.forEach((value) => {
+      value.active = value.value == this.select.value;
+    });
+    this.emitState();
   }
 }

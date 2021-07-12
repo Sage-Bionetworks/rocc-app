@@ -1,4 +1,3 @@
-import { OnInit } from '@angular/core';
 import { Component, forwardRef } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { FilterState } from '../filter-state.model';
@@ -17,32 +16,24 @@ import { ButtonToggleFilterValue } from './button-toggle-filter-value';
     },
   ],
 })
-export class ButtonToggleFilterComponent
-  extends FilterComponent
-  implements OnInit
-{
+export class ButtonToggleFilterComponent extends FilterComponent {
   constructor() {
     super();
   }
 
-  ngOnInit(): void {
-    this.state.next(this.getState());
-  }
-
-  emitState(event: MatButtonToggleChange): void {
-    this.state.next({
-      name: this.name,
-      value: event.value,
-    });
-  }
-
   getState(): FilterState {
+    const activeValue = this.values.find((value) => value.active);
     return {
       name: this.name,
-      value: this.values
-        .filter((value) => value.active)
-        .map((value) => value.value),
+      value: activeValue !== undefined ? activeValue.value : '',
     };
+  }
+
+  updateState(event: MatButtonToggleChange): void {
+    this._values.forEach((value) => {
+      value.active = value.value == event.value;
+    });
+    this.emitState();
   }
 
   getValueIcon(value: FilterValue): string {

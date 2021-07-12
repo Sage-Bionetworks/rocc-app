@@ -12,9 +12,9 @@ export const emptyFilterState: FilterState = {
   template: '',
 })
 export abstract class FilterComponent {
-  /* Filter name */
+  /* Filter name. */
   @Input() name: string = '';
-  /* The available value that the query parameter can takes */
+  /* The available value that the query parameter can takes. */
   protected _values: FilterValue[] = [];
   /* Emits each time the selected filter value changes. */
   protected state = new BehaviorSubject<FilterState>(emptyFilterState);
@@ -32,8 +32,12 @@ export abstract class FilterComponent {
   @Input()
   set values(values: FilterValue[]) {
     this._values = values;
-    this.state.next(this.getState());
+    this.emitState();
   }
 
   protected abstract getState(): FilterState;
+
+  emitState(): void {
+    this.state.next(this.getState());
+  }
 }
