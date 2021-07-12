@@ -17,22 +17,12 @@ import { CheckboxFilterValue } from './checkbox-filter-value';
     },
   ],
 })
-export class CheckboxFilterComponent
-  extends FilterComponent
-  implements OnInit
-{
+export class CheckboxFilterComponent extends FilterComponent implements OnInit {
   constructor() {
     super();
   }
 
-  ngOnInit(): void {
-    this.state.next(this.getState());
-  }
-
-  emitState(): void {
-    console.log('CHECKBOX', this.values);
-    this.state.next(this.getState());
-  }
+  ngOnInit(): void {}
 
   getState(): FilterState {
     return {
@@ -45,11 +35,15 @@ export class CheckboxFilterComponent
 
   @Input()
   set values(values: CheckboxFilterValue[]) {
-    console.log('SET CHECKBOX VALUES');
     this._values = values;
+    this.emitState();
   }
 
   get values(): CheckboxFilterValue[] {
     return this._values as CheckboxFilterValue[];
+  }
+
+  emitState(): void {
+    this.state.next(this.getState());
   }
 }

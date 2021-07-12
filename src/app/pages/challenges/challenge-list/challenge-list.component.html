@@ -11,6 +11,7 @@
     <h3>Tags</h3>
     <sage-checkbox-filter name="tags"
       [values]="tagFilterValues"></sage-checkbox-filter>
+    <button mat-raised-button (click)="checkAllTags()">Check all tags</button>
     <h3>Preview</h3>
     <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
     </sage-button-toggle-filter>

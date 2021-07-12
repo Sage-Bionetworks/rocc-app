@@ -74,15 +74,15 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
     this.previewTypeFilterValues = values({
       ARRAY: {
-          value: 'array',
-          title: 'Array',
-          icon: 'view_array',
-          active: true,
+        value: 'array',
+        title: 'Array',
+        icon: 'view_array',
+        active: true,
       },
       LIST: {
-          value: 'list',
-          title: 'List',
-          icon: 'view_list',
+        value: 'list',
+        title: 'List',
+        icon: 'view_list',
       },
     });
 
@@ -189,5 +189,15 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       limit: this.limit,
     });
     this.query.next(query);
+  }
+
+  checkAllTags(): void {
+    /* Mutating properties does not trigger the two-way binding change update. */
+    // this.tagFilterValues.forEach((value) => {
+    //   value.active = true;
+    // });
+
+    /* Setting the entire data triggers the two-way binding change update. */
+    this.tagFilterValues = this.tagFilterValues.map(value => ({...value, active: true}));
   }
 }
