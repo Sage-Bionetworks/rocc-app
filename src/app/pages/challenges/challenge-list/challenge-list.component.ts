@@ -17,6 +17,11 @@ import { ChallengeFilter } from '@sage-bionetworks/rocc-client-angular';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
 import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
+import {
+  challengeTypeFilterValues,
+  orderByFilterValues,
+  previewTypeFilterValues,
+} from './challenge-list-filters-values';
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -34,60 +39,14 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   private _querySource: any = {};
   private query: BehaviorSubject<any> = new BehaviorSubject<any>({});
 
-  orderByFilterValues: FilterValue[] = [];
-  challengeTypeFilterValues: FilterValue[] = [];
-  previewTypeFilterValues: ButtonToggleFilterValue[] = [];
+  orderByFilterValues: FilterValue[] = orderByFilterValues;
+  challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
+  previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   tagFilterValues: FilterValue[] = [];
 
   constructor(private challengeService: ChallengeService) {}
 
   ngOnInit(): void {
-    this.orderByFilterValues = values({
-      // RELEVANCE: {
-      //     value: 'relevance',
-      //     title: 'Relevance',
-      //     active: true,
-      // },
-      NEWEST: {
-        value: '-createdAt',
-        title: `Newest challenges`,
-        active: true,
-      },
-      OLDEST: {
-        value: 'createdAt',
-        title: `Oldest challenges`,
-        active: false,
-      },
-    });
-
-    this.challengeTypeFilterValues = values({
-      CHALLENGE: {
-        value: 'challenge',
-        title: 'Challenge',
-        active: true,
-      },
-      BENCHMARK: {
-        value: 'benchmark',
-        title: 'Benchmark',
-        active: false,
-      },
-    });
-
-    this.previewTypeFilterValues = values({
-      ARRAY: {
-        value: 'array',
-        title: 'Array',
-        icon: 'view_array',
-        active: true,
-      },
-      LIST: {
-        value: 'list',
-        title: 'List',
-        icon: 'view_list',
-        active: false,
-      },
-    });
-
     this.tagFilterValues = values({
       DIGITAL: {
         value: 'digital',
@@ -200,6 +159,9 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
     // });
 
     /* Setting the entire data triggers the two-way binding change update. */
-    this.tagFilterValues = this.tagFilterValues.map(value => ({...value, active: true}));
+    this.tagFilterValues = this.tagFilterValues.map((value) => ({
+      ...value,
+      active: true,
+    }));
   }
 }
