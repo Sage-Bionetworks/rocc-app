@@ -1,8 +1,6 @@
 import { Input, OnInit } from '@angular/core';
 import { Component, forwardRef } from '@angular/core';
-import { MatCheckboxChange } from '@angular/material/checkbox';
 import { FilterState } from '../filter-state.model';
-import { FilterValue } from '../filter-value.model';
 import { FilterComponent } from '../filter.component';
 import { CheckboxFilterValue } from './checkbox-filter-value';
 

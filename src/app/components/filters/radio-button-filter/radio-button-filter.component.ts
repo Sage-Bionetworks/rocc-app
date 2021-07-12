@@ -33,6 +33,13 @@ export class RadioButtonFilterComponent
     }
   }
 
+  getState(): FilterState {
+    return {
+      name: this.name,
+      value: this.radioGroup.value,
+    };
+  }
+
   emitState(event: MatRadioChange): void {
     this.state.next({
       name: this.name,
@@ -40,10 +47,5 @@ export class RadioButtonFilterComponent
     });
   }
 
-  getState(): FilterState {
-    return {
-      name: this.name,
-      value: this.radioGroup.value,
-    };
-  }
+
 }
