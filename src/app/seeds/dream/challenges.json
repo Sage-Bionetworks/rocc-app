@@ -1,6 +1,24 @@
 {
   "challenges": [
     {
+      "name": "Dummy Kaggle Challenge",
+      "description": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
+      "summary": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
+      "startDate": "2012-06-01",
+      "endDate": "2012-10-01",
+      "url": "https://www.synapse.org/#!Synapse:syn2821735",
+      "status": "closed",
+      "tagIds": [
+        "network-topology",
+        "parameter-inference"
+      ],
+      "organizerIds": [
+        "6d6b326c656b30696b797372"
+      ],
+      "dataProviderIds": [],
+      "grantIds": []
+    },
+    {
       "name": "Network Topology and Parameter Inference",
       "description": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
       "summary": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
