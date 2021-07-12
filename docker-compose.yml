@@ -6,6 +6,8 @@ services:
     image: sagebionetworks/mongo:4.4.4
     container_name: rocc-app-db
     restart: always
+    # volumes:
+    #   - database-data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME
       - MONGO_INITDB_ROOT_PASSWORD
@@ -22,7 +24,7 @@ services:
     restart: always
     environment:
       - SERVER_PROTOCOL
-      - SERVER_HOST
+      - SERVER_DOMAIN
       - SERVER_PORT=8080
       - DB_PROTOCOL
       - DB_DOMAIN=rocc-database
@@ -69,6 +71,9 @@ services:
       - "80:80"
     depends_on:
       - rocc-app
-    
+
+# volumes:
+#   database-data:
+
 networks:
   rocc-networks:
