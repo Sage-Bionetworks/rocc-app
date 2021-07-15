@@ -1,0 +1,71 @@
+name: Update ROCC client library
+
+on:
+  schedule:
+    # - cron: '0 10 * * *'  # everyday at 10am
+    - cron: '0 * * * *'  # every hour
+env:
+  node_version: 14.x
+
+jobs:
+  check-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get latest release version
+        uses: octokit/request-action@v2.x
+        id: get_latest_release
+        with:
+          route: GET /repos/{owner}/{repo}/releases/latest
+          owner: Sage-Bionetworks
+          repo: rocc-schemas
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get latest ROCC schemas version
+        run: |
+          new_version=${{ fromJson(steps.get_latest_release.outputs.data).tag_name }}
+          echo "new_version=$(echo $new_version)" >> $GITHUB_ENV
+
+      - name: Use Node.js ${{ env.node_version }}
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: ${{ env.node_version }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update client library for TypeScript-Angular
+        run: |
+          current_version=$(cat .rocc-version)
+          new_version=${{ env.new_version }}
+
+          # Rename client folder as we need to keep some of its files.
+          mv rocc-client rocc-client_tmp
+
+          # Remove server folder so that everything is recreated
+          rm -rf rocc-client
+          npm run generate:client:version --oas_version=${new_version}
+
+          # Restore files that are not automatically generated
+          mv rocc-client_tmp/ng-package.json rocc-client/.
+          mv rocc-client_tmp/package-lock.json rocc-client/.
+          mv rocc-client_tmp/package.json rocc-client/.
+
+          # Remove bkp folder
+          rm -fr rocc-client_tmp
+
+          # Escape dot characters so sed interprets them as literal dots
+          current_version="$(echo $current_version | sed 's/\./\\./g')"
+
+          for f in .rocc-version README.md; do
+            sed -i "s/${current_version}/${new_version}/g" "$f"
+          done
+
+      - name: Send pull request to update to new version
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Update to ROCC schemas ${{ env.new_version }}
+          title: Update to ROCC schemas ${{ env.new_version }}
+          delete-branch: true

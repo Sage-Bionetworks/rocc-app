@@ -1,0 +1,36 @@
+@import './styles/constants';
+@import './styles/general';
+@import '@sage-bionetworks/sage-angular/src/styles';
+
+@import 'app-theme';
+@import '@sage-bionetworks/sage-angular/src/lib-theme';
+
+// Include material core styles.
+@include mat-core();
+
+.rocc-light-theme {
+  $primary: mat-palette($mat-indigo);
+  $accent: mat-palette($mat-pink, A200, A100, A400);
+
+  $theme: mat-light-theme($primary, $accent);
+
+  @include angular-material-theme($theme);
+  @include sage-angular-theme($theme);
+  @include rocc-app-theme($theme);
+}
+
+.rocc-dark-theme {
+  $primary: mat-palette($mat-purple);
+  $accent: mat-palette($mat-green, A200, A100, A400);
+
+  $theme: mat-dark-theme($primary, $accent);
+
+  @include angular-material-theme($theme);
+  @include sage-angular-theme($theme);
+  @include rocc-app-theme($theme);
+}
+
+// Default theme.
+@include angular-material-theme($theme);
+@include sage-angular-theme($theme);
+@include rocc-app-theme($theme);
