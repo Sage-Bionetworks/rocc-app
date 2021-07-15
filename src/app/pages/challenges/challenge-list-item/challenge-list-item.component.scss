@@ -1,0 +1,60 @@
+@import 'src/styles/constants';
+
+.mat-card {
+  position: relative;
+  margin-bottom: 20px !important;
+  transition: 0.2s;
+  transition-property: box-shadow;
+
+  &:hover, &:focus {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.mat-card-title {
+  margin-left: -16px; // align header title with content
+}
+
+.rocc-challenge-tags-container {
+  display: inline-table;
+
+  .rocc-challenge-tags {
+    background-color: #e55a17; // #8e92de
+    color: #fff;
+    border-radius: 20px;
+    margin: 8px 8px 8px 0;
+  }
+}
+
+.rocc-challenge-texts-container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr; // use 2.5:1 to fit $small-breakpoint-width
+  grid-gap: 2em;
+  align-items: center;
+
+  .rocc-challenge-descriptions {
+    justify-self: left;
+  }
+
+  .rocc-challenge-dates {
+    justify-self: right;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    b {
+      text-align: right;
+      padding-right: 10px;
+    }
+  }
+}
+
+.rocc-challenge-platform-logo {
+  position: absolute;
+  right: 26px; // 16 + 10 align card
+  top: 26px;
+  height: 60px;
+  z-index: 2;
+}

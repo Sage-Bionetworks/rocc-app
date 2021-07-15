@@ -11,6 +11,8 @@ export class ChallengeListItemComponent implements OnInit {
   challenge!: Challenge;
   @Output()
   challengeClick: EventEmitter<Challenge> = new EventEmitter<Challenge>();
+  // TODO: delete this constant and replace with platform property in html
+  platform = 'kaggle';
 
   constructor() { }
 
