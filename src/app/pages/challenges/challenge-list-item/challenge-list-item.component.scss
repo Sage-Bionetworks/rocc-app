@@ -58,3 +58,20 @@
   height: 60px;
   z-index: 2;
 }
+
+@media (max-width: $small-breakpoint-width) {
+  .rocc-challenge-texts-container {
+    grid-template-columns: auto;
+  }
+
+  .rocc-challenge-platform-logo {
+    top: calc(100% - 60px - 16px);
+    left: 26px;
+  }
+}
+
+@media (max-width: $extra-small-breakpoint-width) {
+  .rocc-challenge-platform-logo {
+    display: none;
+  }
+}
