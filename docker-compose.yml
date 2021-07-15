@@ -4,10 +4,12 @@ services:
   # database
   rocc-database:
     image: sagebionetworks/mongo:4.4.4
-    container_name: rocc-app-db
+    container_name: rocc-db
     restart: always
     # volumes:
     #   - database-data:/data/db
+    ports:
+      - '27017:27017'
     environment:
       - MONGO_INITDB_ROOT_USERNAME
       - MONGO_INITDB_ROOT_PASSWORD
@@ -20,8 +22,10 @@ services:
   # rocc-service
   rocc-service:
     image: sagebionetworks/rocc-service:0.2.1
-    container_name: rocc-app-service
+    container_name: rocc-service
     restart: always
+    ports:
+      - '8080:8080'
     environment:
       - SERVER_PROTOCOL
       - SERVER_DOMAIN
@@ -39,10 +43,14 @@ services:
 
   # angular app
   rocc-app:
-    image: rocc/rocc-app-client:latest
-    container_name: rocc-app-client
-    build: "."
+    image: rocc/rocc-app:latest
+    container_name: rocc-app
+    build:
+      context: client
+      dockerfile: Dockerfile
     restart: always
+    # ports: 
+    #   - '80:80'
     environment:
       - SERVER_PORT=${SERVER_PORT}
       - SERVER_PROTOCOL=${SERVER_PROTOCOL}
