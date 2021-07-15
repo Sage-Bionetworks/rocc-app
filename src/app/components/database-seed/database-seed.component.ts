@@ -136,15 +136,14 @@ export class DatabaseSeedComponent implements OnInit {
     ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
-          map(rawChallenge =>
-            rawChallenge.grantIds
-              .map(grantId => {
-                const grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
-                if (grant === undefined) {
-                  throw new Error('Grant with id ' + grantId + ' not found');
-                }
-                return grant.id;
-              })
+          map(rawChallenge => rawChallenge.grantIds
+            .map(grantId => {
+              const grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
+              if (grant === undefined) {
+                throw new Error('Grant with id ' + grantId + ' not found');
+              }
+              return grant.id;
+            })
           )
         );
     };
@@ -156,15 +155,14 @@ export class DatabaseSeedComponent implements OnInit {
     ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
-          map(rawChallenge =>
-            rawChallenge.organizerIds
-              .map(organizerId => {
-                const person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
-                if (person === undefined) {
-                  throw new Error('Organizer with id ' + organizerId + ' not found');
-                }
-                return person.id;
-              })
+          map(rawChallenge => rawChallenge.organizerIds
+            .map(organizerId => {
+              const person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
+              if (person === undefined) {
+                throw new Error('Organizer with id ' + organizerId + ' not found');
+              }
+              return person.id;
+            })
           )
         );
     };
