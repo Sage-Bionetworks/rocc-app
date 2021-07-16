@@ -55,4 +55,4 @@ graph.png
 .DS_Store
 
 # environment variables.
-.env
+**/.env
