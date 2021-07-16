@@ -6,7 +6,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Running with Docker
 
-TBA
+1. git clone --recursive https://github.com/Sage-Bionetworks/rocc-app.git
+
+2. Create the configuration file.
+
+       cp .env.example .env
+
+3. Go to the [ROCC API service] and retrieve the service images
+
+       cp .env.example .env
+       docker compose pull
+
+4. Come back to this repo and start the ROCC app
+
+       docker compose up --build
 
 ### Running with Angular CLI
 
