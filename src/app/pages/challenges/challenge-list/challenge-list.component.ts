@@ -13,7 +13,7 @@ export class ChallengeListComponent implements OnInit {
   private _challenges: Challenge[] = [];
   private _searchResultsCount = 0;
 
-  constructor(private challengeService: ChallengeService) { }
+  constructor(private challengeService: ChallengeService) {}
 
   ngOnInit(): void {
     this.challengeService.listChallenges()  // first page
