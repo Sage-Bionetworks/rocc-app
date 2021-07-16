@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    apiBasePath: 'http://localhost:4200/api', // http://localhost:80/api/v1// see proxy.conf.json
+    apiBasePath: 'http://localhost:4200/api', // see proxy.conf.json
     appVersion: '0.1.0',
     seedDatabase: true
 };

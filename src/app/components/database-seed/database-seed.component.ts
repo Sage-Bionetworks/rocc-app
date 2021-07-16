@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {forkJoin, Observable, of} from 'rxjs';
-import {map, mapTo, mergeMap, switchMap, tap} from 'rxjs/operators';
-import {merge as _merge} from 'lodash';
+import { Component, OnInit } from '@angular/core';
+import { forkJoin, Observable, of } from 'rxjs';
+import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { merge as _merge } from 'lodash';
 import {
   ChallengeService,
   GrantService,
@@ -23,9 +23,9 @@ import {
   Tag,
   TagCreateRequest
 } from '@sage-bionetworks/rocc-client-angular';
-import {forkJoinConcurrent} from '../../forkJoinConcurrent';
-import {omit} from '../../omit';
-import {DocumentsCreateResult} from './documents-create-result';
+import { forkJoinConcurrent } from '../../forkJoinConcurrent';
+import { omit } from '../../omit';
+import { DocumentsCreateResult } from './documents-create-result';
 
 import challengeList from '../../seeds/dream/challenges.json';
 import grantList from '../../seeds/dream/grants.json';
@@ -47,7 +47,7 @@ export class DatabaseSeedComponent implements OnInit {
     private organizationService: OrganizationService,
     private personService: PersonService,
     private tagService: TagService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
 
@@ -103,7 +103,7 @@ export class DatabaseSeedComponent implements OnInit {
           return {
             documents: _merge([], grantList.grants, grantCreateResponses),
             idMaps: _merge([], grantCreateResponses, grantList.grants.map(
-              grant => ({tmpId: grant.id})))
+              grant => ({ tmpId: grant.id })))
           } as DocumentsCreateResult<Grant>;
         }),
         tap(res => console.log('Grants created', res))
@@ -123,7 +123,7 @@ export class DatabaseSeedComponent implements OnInit {
           return {
             documents: _merge([], personList.persons, personCreateResponses),
             idMaps: _merge([], personCreateResponses, personList.persons.map(
-              person => ({tmpId: person.id})))
+              person => ({ tmpId: person.id })))
           } as DocumentsCreateResult<Person>;
         }),
         tap(res => console.log('Persons created', res))
@@ -136,15 +136,14 @@ export class DatabaseSeedComponent implements OnInit {
     ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
-          map(rawChallenge =>
-            rawChallenge.grantIds
-              .map(grantId => {
-                const grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
-                if (grant === undefined) {
-                  throw new Error('Grant with id ' + grantId + ' not found');
-                }
-                return grant.id;
-              })
+          map(rawChallenge => rawChallenge.grantIds
+            .map(grantId => {
+              const grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
+              if (grant === undefined) {
+                throw new Error('Grant with id ' + grantId + ' not found');
+              }
+              return grant.id;
+            })
           )
         );
     };
@@ -156,15 +155,14 @@ export class DatabaseSeedComponent implements OnInit {
     ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
-          map(rawChallenge =>
-            rawChallenge.organizerIds
-              .map(organizerId => {
-                const person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
-                if (person === undefined) {
-                  throw new Error('Organizer with id ' + organizerId + ' not found');
-                }
-                return person.id;
-              })
+          map(rawChallenge => rawChallenge.organizerIds
+            .map(organizerId => {
+              const person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
+              if (person === undefined) {
+                throw new Error('Organizer with id ' + organizerId + ' not found');
+              }
+              return person.id;
+            })
           )
         );
     };

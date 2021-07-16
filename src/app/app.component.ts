@@ -15,14 +15,9 @@ export class AppComponent implements OnInit {
   title = 'ROCC';
   version = environment.appVersion;
   sections: { [key: string]: Section } = SECTIONS;
-  production = environment.production;
   seedDatabase = environment.seedDatabase;
-  apiBasePath = environment.apiBasePath
-  constructor() {
-    console.log(this.apiBasePath);  
-    console.log(this.production);
-    console.log(this.seedDatabase);
-  }
+
+  constructor() {}
 
   ngOnInit(): void {}
 }

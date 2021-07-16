@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   Challenge, ChallengeService
 } from '@sage-bionetworks/rocc-client-angular';
-import {filter} from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -17,11 +17,7 @@ export class ChallengeListComponent implements OnInit {
 
   ngOnInit(): void {
     this.challengeService.listChallenges()  // first page
-      .subscribe(page => {
-        if (page.challenges) {
-          this._challenges = page.challenges;
-        }
-      });
+      .subscribe(page => this._challenges = page.challenges);
   }
 
   get challenges(): Challenge[] {
