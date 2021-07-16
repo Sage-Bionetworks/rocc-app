@@ -49,12 +49,10 @@ services:
       context: client
       dockerfile: Dockerfile
     restart: always
-    # ports: 
-    #   - '80:80'
     environment:
-      - SERVER_PORT=${SERVER_PORT}
       - SERVER_PROTOCOL=${SERVER_PROTOCOL}
-      - SERVER_HOST=${SERVER_HOST}
+      - SERVER_DOMAIN=${SERVER_DOMAIN}
+      - SERVER_PORT=${SERVER_PORT}
       - SERVER_API_PATH=${SERVER_API_PATH}
     networks: 
       - rocc-networks

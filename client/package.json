@@ -2,10 +2,10 @@
   "name": "@sage-bionetworks/rocc-app",
   "version": "0.1.0",
   "scripts": {
-    "config": "ts-node ./src/setenv.ts",
+    "config": "ts-node ./src/environment/setenv.ts",
     "ng": "ng",
-    "start": "npm run config && ng serve",
-    "build": "ng build",
+    "start": "ng serve --proxy-config proxy.conf.json",
+    "build": "npm run config --env=false && ng build",
     "build:rocc-client-angular": "cd rocc-client-angular/rocc-client && npm ci && npm run build",
     "build:sage-angular": "cd sage-angular && npm ci && npm run build",
     "install:dependencies": "npm run build:rocc-client-angular && npm run build:sage-angular && npm ci",
