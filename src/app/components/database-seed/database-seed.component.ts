@@ -136,8 +136,7 @@ export class DatabaseSeedComponent implements OnInit {
     ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
-          map(rawChallenge =>
-            rawChallenge.grantIds
+          map(rawChallenge => rawChallenge.grantIds
             .map(grantId => {
               const grant = grantsCreateResult.idMaps.find(idMap => idMap.tmpId === grantId);
               if (grant === undefined) {
@@ -156,8 +155,7 @@ export class DatabaseSeedComponent implements OnInit {
     ): Observable<string[]> => {
       return of(challengeCreateRequest)
         .pipe(
-          map(rawChallenge =>
-            rawChallenge.organizerIds
+          map(rawChallenge => rawChallenge.organizerIds
             .map(organizerId => {
               const person = personsCreateResult.idMaps.find(idMap => idMap.tmpId === organizerId);
               if (person === undefined) {
@@ -185,7 +183,7 @@ export class DatabaseSeedComponent implements OnInit {
       return of(challengeCreateRequests)
         .pipe(
           tap(() => console.log('Creating challenges')),
-          mergeMap(rawChallenges => forkJoin(
+          mergeMap(rawChallenges => forkJoinConcurrent(
             rawChallenges.map((rawChallenge: ChallengeCreateRequest) => of(rawChallenge)
               .pipe(
                 mergeMap(() => forkJoin({
@@ -196,7 +194,7 @@ export class DatabaseSeedComponent implements OnInit {
                   _merge(rawChallenge, res);
                   return createChallenge(rawChallenge);
                 })
-              )),
+              )), 1
           )),
           tap(challenges => console.log('Challenge created', challenges))
         );
