@@ -17,9 +17,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
        cp .env.example .env
        docker compose pull
 
-4. Come back to this repo and start the ROCC app
-
+4. Come back to this repo and start the ROCC app.
+ 
        docker compose up --build
+
+   - access the app on http://localhost:80 by default
+   - access the swagger UI on http://localhost:8080/api/v1
 
 ### Running with Angular CLI
 
@@ -81,5 +84,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <!-- Links -->
 
-[ROCC API service]: https://github.com/Sage-Bionetworks/rocc
+[ROCC API service]: https://github.com/Sage-Bionetworks/rocc-service
 [Apache License 2.0]: https://github.com/Sage-Bionetworks/rocc-app/blob/develop/LICENSE
