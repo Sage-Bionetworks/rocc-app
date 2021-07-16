@@ -16,7 +16,8 @@
         "6d6b326c656b30696b797372"
       ],
       "dataProviderIds": [],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "kaggle"
     },
     {
       "name": "Network Topology and Parameter Inference",

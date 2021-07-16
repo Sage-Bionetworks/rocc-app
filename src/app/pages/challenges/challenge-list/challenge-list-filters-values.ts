@@ -41,3 +41,16 @@ export const previewTypeFilterValues: ButtonToggleFilterValue[] = [
     active: false,
   },
 ];
+
+export const platformFilterValues: FilterValue[] = [
+  {
+    value: 'synapse',
+    title: 'Synapse',
+    active: false,
+  },
+  {
+    value: 'kaggle',
+    title: 'Kaggle',
+    active: false,
+  },
+];

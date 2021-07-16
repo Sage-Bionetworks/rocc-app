@@ -20,6 +20,7 @@ import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggl
 import {
   challengeTypeFilterValues,
   orderByFilterValues,
+  platformFilterValues,
   previewTypeFilterValues,
 } from './challenge-list-filters-values';
 
@@ -43,6 +44,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   tagFilterValues: FilterValue[] = [];
+  platformFilterValues: FilterValue[] = platformFilterValues;
 
   constructor(private challengeService: ChallengeService) {}
 
