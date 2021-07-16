@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Challenge } from 'rocc-client-angular/rocc-client';
+import { Challenge } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({
   selector: 'rocc-challenge-list-item',
