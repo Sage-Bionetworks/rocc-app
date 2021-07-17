@@ -239,8 +239,8 @@ export class DatabaseSeedComponent implements OnInit {
         switchMap(res => {
           return createChallenges(
             challengeList.challenges as ChallengeCreateRequest[],
-            res[2] as DocumentsCreateResult<Grant>,
-            res[3] as DocumentsCreateResult<Person>
+            res[3] as DocumentsCreateResult<Grant>,
+            res[4] as DocumentsCreateResult<Person>
           );
         }),
       ).subscribe(() => {
