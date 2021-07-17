@@ -114,6 +114,11 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
           query.filter = {
             name: query.name,
           };
+
+          if (query.searchTerms === '') {
+            query.searchTerms = undefined;
+          }
+
           return query;
         }),
         tap((query) => console.log('final query', query)),
