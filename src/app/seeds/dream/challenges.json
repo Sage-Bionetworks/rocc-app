@@ -22,7 +22,8 @@
         "6d6a6771786c793273777778"
       ],
       "dataProviderIds": [],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Breast Cancer Prognosis",
@@ -56,7 +57,8 @@
       ],
       "grantIds": [
         "31716767736e647961653835"
-      ]
+      ],
+      "platformId": "synapse"
     },
     {
       "name": "Phil Bowen ALS Prediction Prize4Life",
@@ -84,7 +86,8 @@
         "als-therapy-alliance",
         "northeast-als-consortium"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Drug Sensitivity and Drug Synergy Prediction",
@@ -118,7 +121,8 @@
       ],
       "grantIds": [
         "7135747a766a79666f326465"
-      ]
+      ],
+      "platformId": "synapse"
     },
     {
       "name": "NIEHS-NCATS-UNC Toxicogenetics",
@@ -136,7 +140,8 @@
       "dataProviderIds": [
         "international-genome-sample-resource"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Whole-Cell Parameter Estimation",
@@ -171,7 +176,8 @@
         "693532663471323676686674"
       ],
       "dataProviderIds": [],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "HPN-DREAM Breast Cancer Network Inference",
@@ -202,7 +208,8 @@
         "326767686b787234657a6366"
       ],
       "dataProviderIds": [],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Rheumatoid Arthritis Responder",
@@ -236,7 +243,8 @@
       "dataProviderIds": [
         "corevitas"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "ICGC-TCGA DREAM Genomic Mutation Calling",
@@ -262,7 +270,8 @@
       "dataProviderIds": [
         "international-cancer-genome-consortium"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Acute Myeloid Leukemia Outcome Prediction",
@@ -301,7 +310,8 @@
       "dataProviderIds": [
         "md-anderson-cancer-center"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Broad-DREAM Gene Essentiality Prediction",
@@ -337,7 +347,8 @@
         "broad-institute",
         "dana-farber-cancer-institute"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Alzheimer's Disease Big Data",
@@ -374,7 +385,8 @@
         "alzheimers-disease-neuroimaging-initiative",
         "innovative-medicines-initiative"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "DREAM Olfaction Prediction",
@@ -403,7 +415,8 @@
       "dataProviderIds": [
         "rockefeller-university"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Prostate Cancer",
@@ -424,7 +437,8 @@
         "sanofi",
         "memorial-sloan-kettering-cancer-center"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "ALS Stratification Prize4Life",
@@ -453,7 +467,8 @@
         "neurological-clinical-research-institute",
         "northeast-als-consortium"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "AstraZeneca-Sanger Drug Combination Prediction",
@@ -480,7 +495,8 @@
         "wellcome-sanger-institute",
         "bellvitge-institute-for-biomedical-research"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "SMC-DNA Meta",
@@ -504,7 +520,8 @@
       "dataProviderIds": [
         "international-cancer-genome-consortium"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "SMC-Het",
@@ -535,7 +552,8 @@
         "international-cancer-genome-consortium",
         "ontario-institute-for-cancer-research"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Respiratory Viral",
@@ -551,7 +569,8 @@
       ],
       "organizerIds": [],
       "dataProviderIds": [],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Disease Module Identification",
@@ -580,7 +599,8 @@
       "dataProviderIds": [
         "university-of-lausanne"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "ENCODE",
@@ -607,7 +627,8 @@
       "dataProviderIds": [
         "encyclopedia-of-dna-elements-data-coordinating-center"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Idea",
@@ -632,7 +653,8 @@
         "duke-university",
         "durham-va-medical-center"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "SMC-RNA",
@@ -661,7 +683,8 @@
         "national-cancer-institute",
         "ontario-institute-for-cancer-research"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Digital Mammography",
@@ -681,7 +704,8 @@
         "breast-cancer-surveillance-consortium",
         "icahn-school-of-medicine-at-mount-sinai"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Multiple Myeloma",
@@ -703,7 +727,8 @@
         "heidelberg-university",
         "medical-research-council"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "GA4GH/DREAM Workflow Execution",
@@ -736,7 +761,8 @@
         "international-cancer-genome-consortium",
         "broad-institute"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Parkinsons Disease Digital Biomarker",
@@ -769,7 +795,8 @@
         "michael-j-fox-foundation",
         "sage-bionetworks"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "NCI-CPTAC Proteogenomics",
@@ -800,7 +827,8 @@
       "dataProviderIds": [
         "clinical-proteomic-tumor-analysis-consortium"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Multi-Targeting Drug",
@@ -829,7 +857,8 @@
       ],
       "grantIds": [
         "71636d767535673839667134"
-      ]
+      ],
+      "platformId": "synapse"
     },
     {
       "name": "Single Cell Transcriptomics",
@@ -856,7 +885,8 @@
       "dataProviderIds": [
         "max-delbruck-center-for-molecular-medicine"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "IDG Drug-Kinase Binding",
@@ -885,7 +915,8 @@
       "dataProviderIds": [
         "unc-eshelman-school-of-pharmacy"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Malaria",
@@ -917,7 +948,8 @@
         "mahidol-oxford-tropical-medicine-research-unit",
         "national-institutes-of-health"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Preterm Birth Prediction Challenge, Transcriptomics",
@@ -945,7 +977,8 @@
         "wayne-state-university",
         "march-of-dimes"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Single Cell Signaling in Breast Cancer",
@@ -975,7 +1008,8 @@
         "university-of-zurich",
         "eth-zurich"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "EHR Mortality Prediction",
@@ -1001,7 +1035,8 @@
       "dataProviderIds": [
         "university-of-washington"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Allen Institute Cell Lineage Reconstruction",
@@ -1037,7 +1072,8 @@
         "londons-global-university",
         "weizmann-institute-of-science"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Tumor Deconvolution",
@@ -1059,7 +1095,8 @@
         "california-institute-of-technology",
         "sage-bionetworks"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "CTD2 Pancancer Drug Activity",
@@ -1092,7 +1129,8 @@
       "dataProviderIds": [
         "columbia-university"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "CTD2 BeatAML",
@@ -1127,7 +1165,8 @@
         "leukemia-and-lymphoma-society",
         "oregon-health-and-science-university"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Metadata Automation",
@@ -1158,7 +1197,8 @@
         "apollo-network",
         "cancer-imaging-archive"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Automated Scoring of Radiographic Joint Damage",
@@ -1187,7 +1227,8 @@
       "dataProviderIds": [
         "university-of-alabama-at-birmingham"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "BEAT-PD",
@@ -1221,7 +1262,8 @@
         "university-of-cincinnati",
         "radboud-university"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "CTD2 Pancancer Chemosensitivity",
@@ -1253,7 +1295,8 @@
       "dataProviderIds": [
         "columbia-university"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "EHR COVID-19",
@@ -1280,7 +1323,8 @@
       "dataProviderIds": [
         "university-of-washington"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Anti-PD1 Response Prediction",
@@ -1317,7 +1361,8 @@
       "dataProviderIds": [
         "bristol-myers-squibb"
       ],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     },
     {
       "name": "Cancer Data Registry NLP",
@@ -1334,7 +1379,8 @@
         "6c686a306a727a717464756e"
       ],
       "dataProviderIds": [],
-      "grantIds": []
+      "grantIds": [],
+      "platformId": "synapse"
     }
   ]
 }

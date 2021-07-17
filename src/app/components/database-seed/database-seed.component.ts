@@ -4,6 +4,7 @@ import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { merge as _merge } from 'lodash';
 import {
   ChallengeService,
+  ChallengePlatformService,
   GrantService,
   OrganizationService,
   PersonService,
@@ -12,6 +13,8 @@ import {
 import {
   Challenge,
   ChallengeCreateRequest,
+  ChallengePlatform,
+  ChallengePlatformCreateRequest,
   Grant,
   GrantCreateRequest,
   GrantCreateResponse,
@@ -28,6 +31,7 @@ import { omit } from '../../omit';
 import { DocumentsCreateResult } from './documents-create-result';
 
 import challengeList from '../../seeds/dream/challenges.json';
+import challengePlatformList from '../../seeds/dream/challenge-platforms.json';
 import grantList from '../../seeds/dream/grants.json';
 import organizationList from '../../seeds/dream/organizations.json';
 import personList from '../../seeds/dream/persons.json';
@@ -43,6 +47,7 @@ export class DatabaseSeedComponent implements OnInit {
 
   constructor(
     private challengeService: ChallengeService,
+    private challengePlatformService: ChallengePlatformService,
     private grantService: GrantService,
     private organizationService: OrganizationService,
     private personService: PersonService,
@@ -57,6 +62,7 @@ export class DatabaseSeedComponent implements OnInit {
 
     const removeDocuments$ = forkJoin([
       this.challengeService.deleteAllChallenges(),
+      this.challengePlatformService.deleteAllChallengePlatforms(),
       this.grantService.deleteAllGrants(),
       this.organizationService.deleteAllOrganizations(),
       this.personService.deleteAllPersons(),
@@ -88,6 +94,26 @@ export class DatabaseSeedComponent implements OnInit {
         mapTo(organizationList.organizations as Organization[]),
         tap(organizations => console.log('Organizations created', organizations))
       );
+
+    // Creates Challenge Platforms.
+    const createChallengePlatforms$: Observable<ChallengePlatform[]> = of(
+      challengePlatformList.challengePlatforms as ChallengePlatform[]
+    ).pipe(
+      tap(() => console.log('Creating challenge platforms')),
+      mergeMap((platforms) =>
+        forkJoinConcurrent(
+          platforms.map((platform) =>
+            this.challengePlatformService.createChallengePlatform(
+              platform.id,
+              omit(platform, ['id']) as ChallengePlatformCreateRequest
+            )
+          ),
+          concurrency
+        )
+      ),
+      mapTo(challengePlatformList.challengePlatforms as ChallengePlatform[]),
+      tap((platforms) => console.log('Challenge platforms created', platforms))
+    );
 
     // Creates Grants.
     const createGrants$: Observable<DocumentsCreateResult<Grant>> = of(grantList.grants as Grant[])
@@ -206,14 +232,15 @@ export class DatabaseSeedComponent implements OnInit {
         mergeMap(() => forkJoinConcurrent([
           createTags$,
           createOrganizations$,
+          createChallengePlatforms$,
           createGrants$,
           createPersons$
         ], 1)),
         switchMap(res => {
           return createChallenges(
             challengeList.challenges as ChallengeCreateRequest[],
-            res[2] as DocumentsCreateResult<Grant>,
-            res[3] as DocumentsCreateResult<Person>
+            res[3] as DocumentsCreateResult<Grant>,
+            res[4] as DocumentsCreateResult<Person>
           );
         }),
       ).subscribe(() => {
