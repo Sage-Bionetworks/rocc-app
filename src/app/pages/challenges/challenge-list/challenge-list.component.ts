@@ -85,9 +85,9 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    let selectedFilters = this.filters
+    const selectedFilters = this.filters
       // .filter(f => f.group !== 'previewType')
-      .map((filter) => filter.getStateAsObservable());
+      .map((f) => f.getStateAsObservable());  // use f to prevent shadow name
 
     combineLatest(selectedFilters)
       .pipe(
@@ -109,11 +109,11 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
         map((query) => mergeFp(query, this.querySource)),
         tap((query) => console.log('query 2', query)),
         map((query) => {
-          let orderBy = query.orderBy;
+          const orderBy = query.orderBy;
           query.sort = orderBy.substring(
             ['+', '-'].includes(orderBy.substring(0, 1)) ? 1 : 0
           );
-          query.direction = orderBy.substring(0, 1) == '-' ? 'desc' : 'asc';
+          query.direction = orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
           query.filter = {
             name: query.name,
           };
@@ -169,7 +169,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   }
 
   showMoreResults(): void {
-    let query = assign(this.query.getValue(), {
+    const query = assign(this.query.getValue(), {
       offset: this.offset + this.limit,
       limit: this.limit,
     });

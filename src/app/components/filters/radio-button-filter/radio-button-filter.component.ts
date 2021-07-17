@@ -31,7 +31,7 @@ export class RadioButtonFilterComponent extends FilterComponent {
 
   updateState(event: MatRadioChange): void {
     this._values.forEach((value) => {
-      value.active = value.value == event.value;
+      value.active = value.value === event.value;
     });
     this.emitState();
   }

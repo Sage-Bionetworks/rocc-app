@@ -13,7 +13,7 @@ export const emptyFilterState: FilterState = {
 })
 export abstract class FilterComponent {
   /* Filter name. */
-  @Input() name: string = '';
+  @Input() name = '';
   /* The available value that the query parameter can takes. */
   protected _values: FilterValue[] = [];
   /* Emits each time the selected filter value changes. */

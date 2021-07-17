@@ -31,7 +31,7 @@ export class ButtonToggleFilterComponent extends FilterComponent {
 
   updateState(event: MatButtonToggleChange): void {
     this._values.forEach((value) => {
-      value.active = value.value == event.value;
+      value.active = value.value === event.value;
     });
     this.emitState();
   }
