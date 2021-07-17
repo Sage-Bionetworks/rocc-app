@@ -1,0 +1,7 @@
+<mat-button-toggle-group aria-label="Button toggle filter"
+  (change)="updateState($event)">
+  <mat-button-toggle *ngFor="let value of values" [value]="value.value"
+    [checked]="value.active" [matTooltip]="value.title">
+    <mat-icon>{{getValueIcon(value)}}</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>

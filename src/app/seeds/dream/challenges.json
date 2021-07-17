@@ -1,13 +1,32 @@
 {
   "challenges": [
     {
+      "name": "Dummy Kaggle Challenge",
+      "description": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
+      "summary": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
+      "startDate": "2012-06-01",
+      "endDate": "2012-10-01",
+      "url": "https://www.synapse.org/#!Synapse:syn2821735",
+      "status": "completed",
+      "tagIds": [
+        "network-topology",
+        "parameter-inference"
+      ],
+      "organizerIds": [
+        "6d6b326c656b30696b797372"
+      ],
+      "dataProviderIds": [],
+      "grantIds": [],
+      "platformId": "kaggle"
+    },
+    {
       "name": "Network Topology and Parameter Inference",
       "description": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
       "summary": "Participants are asked to develop and/or apply optimization methods, including the selection of the most informative experiments, to accurately estimate parameters and predict outcomes of perturbations in Systems Biology models.",
       "startDate": "2012-06-01",
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2821735",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "network-topology",
         "parameter-inference"
@@ -32,7 +51,7 @@
       "startDate": "2012-07-12",
       "endDate": "2012-10-15",
       "url": "https://www.synapse.org/#!Synapse:syn2813426",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "breast",
         "cancer"
@@ -67,7 +86,7 @@
       "startDate": "2012-06-01",
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2826267",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "als"
       ],
@@ -96,7 +115,7 @@
       "startDate": "2012-06-01",
       "endDate": "2012-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn2785778",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "drug",
         "drug-sensitivity",
@@ -131,7 +150,7 @@
       "startDate": "2013-06-10",
       "endDate": "2013-09-15",
       "url": "https://www.synapse.org/#!Synapse:syn1761567",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "drug",
         "toxicogenenetics"
@@ -150,7 +169,7 @@
       "startDate": "2013-06-10",
       "endDate": "2013-09-23",
       "url": "https://www.synapse.org/#!Synapse:syn1876068",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "whole-cell-parameter"
       ],
@@ -186,7 +205,7 @@
       "startDate": "2013-06-10",
       "endDate": "2013-09-16",
       "url": "https://www.synapse.org/#!Synapse:syn1720047",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "breast-cancer",
@@ -218,7 +237,7 @@
       "startDate": "2014-02-10",
       "endDate": "2014-06-04",
       "url": "https://www.synapse.org/#!Synapse:syn1734172",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "arthritis",
         "rheumatoid-arthritis"
@@ -253,7 +272,7 @@
       "startDate": "2013-12-14",
       "endDate": "2016-04-22",
       "url": "https://www.synapse.org/#!Synapse:syn312572",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "mutation-calling"
@@ -280,7 +299,7 @@
       "startDate": "2014-06-02",
       "endDate": "2014-09-15",
       "url": "https://www.synapse.org/#!Synapse:syn2455683",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "aml"
@@ -320,7 +339,7 @@
       "startDate": "2014-06-02",
       "endDate": "2014-09-29",
       "url": "https://www.synapse.org/#!Synapse:syn2384331",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "targeted-cancer-therapy"
@@ -357,7 +376,7 @@
       "startDate": "2014-06-02",
       "endDate": "2014-10-17",
       "url": "https://www.synapse.org/#!Synapse:syn2290704",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "alzheimers"
       ],
@@ -395,7 +414,7 @@
       "startDate": "2015-01-15",
       "endDate": "2015-05-01",
       "url": "https://www.synapse.org/#!Synapse:syn2811262",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "olfaction"
       ],
@@ -425,7 +444,7 @@
       "startDate": "2015-03-16",
       "endDate": "2015-07-27",
       "url": "https://www.synapse.org/#!Synapse:syn2813558",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "prostate-cancer"
@@ -447,7 +466,7 @@
       "startDate": "2015-06-22",
       "endDate": "2015-10-04",
       "url": "https://www.synapse.org/#!Synapse:syn2873386",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "als"
       ],
@@ -477,7 +496,7 @@
       "startDate": "2015-09-03",
       "endDate": "2016-03-14",
       "url": "https://www.synapse.org/#!Synapse:syn4231880",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "drug",
         "drug-synergy"
@@ -505,7 +524,7 @@
       "startDate": "2015-08-17",
       "endDate": "2016-04-10",
       "url": "https://www.synapse.org/#!Synapse:syn4588939",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "somatic-mutation-calling"
@@ -530,7 +549,7 @@
       "startDate": "2015-11-16",
       "endDate": "2016-06-30",
       "url": "https://www.synapse.org/#!Synapse:syn2813581",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "somatic-mutation-calling",
@@ -562,7 +581,7 @@
       "startDate": "2016-05-16",
       "endDate": "2016-09-28",
       "url": "https://www.synapse.org/#!Synapse:syn5647810",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "viral",
         "respiratory-viral"
@@ -579,7 +598,7 @@
       "startDate": "2016-06-24",
       "endDate": "2016-10-01",
       "url": "https://www.synapse.org/#!Synapse:syn6156761",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "module-identification"
       ],
@@ -609,7 +628,7 @@
       "startDate": "2016-07-07",
       "endDate": "2017-01-11",
       "url": "https://www.synapse.org/#!Synapse:syn6131484",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "transcription-factor"
       ],
@@ -637,7 +656,7 @@
       "startDate": "2016-06-15",
       "endDate": "2017-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn5659209",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "proposals",
         "human-health"
@@ -663,7 +682,7 @@
       "startDate": "2016-06-29",
       "endDate": "2017-05-02",
       "url": "https://www.synapse.org/#!Synapse:syn2813589",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "somatic-mutation-calling"
@@ -693,7 +712,7 @@
       "startDate": "2016-11-18",
       "endDate": "2017-05-16",
       "url": "https://www.synapse.org/#!Synapse:syn4224222",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "breast-cancer",
@@ -714,7 +733,7 @@
       "startDate": "2017-06-30",
       "endDate": "2017-11-08",
       "url": "https://www.synapse.org/#!Synapse:syn6187098",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "myeloma"
@@ -737,7 +756,7 @@
       "startDate": "2017-07-21",
       "endDate": "2017-12-31",
       "url": "https://www.synapse.org/#!Synapse:syn8507133",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "workflow-execution"
       ],
@@ -771,7 +790,7 @@
       "startDate": "2017-07-06",
       "endDate": "2017-11-10",
       "url": "https://www.synapse.org/#!Synapse:syn8717496",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "parkinsons"
       ],
@@ -805,7 +824,7 @@
       "startDate": "2017-06-26",
       "endDate": "2017-11-20",
       "url": "https://www.synapse.org/#!Synapse:syn8228304",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "proteogenomics"
       ],
@@ -837,7 +856,7 @@
       "startDate": "2017-10-05",
       "endDate": "2018-02-26",
       "url": "https://www.synapse.org/#!Synapse:syn8404040",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "drug",
         "multi-targeting-drug"
@@ -867,7 +886,7 @@
       "startDate": "2018-09-04",
       "endDate": "2018-11-21",
       "url": "https://www.synapse.org/#!Synapse:syn15665609",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "transcriptomics",
         "single-cell"
@@ -895,7 +914,7 @@
       "startDate": "2018-10-01",
       "endDate": "2019-04-18",
       "url": "https://www.synapse.org/#!Synapse:syn15667962",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "drug",
         "drug-kinase-binding"
@@ -925,7 +944,7 @@
       "startDate": "2019-04-30",
       "endDate": "2019-08-15",
       "url": "https://www.synapse.org/#!Synapse:syn16924919",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "malaria"
       ],
@@ -958,7 +977,7 @@
       "startDate": "2019-05-04",
       "endDate": "2019-12-05",
       "url": "https://www.synapse.org/#!Synapse:syn18380862",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "preterm-birth"
       ],
@@ -987,7 +1006,7 @@
       "startDate": "2018-08-20",
       "endDate": "2019-11-15",
       "url": "https://www.synapse.org/#!Synapse:syn20366914",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "single-cell",
         "signaling",
@@ -1018,7 +1037,7 @@
       "startDate": "2019-09-09",
       "endDate": "2020-01-23",
       "url": "https://www.synapse.org/#!Synapse:syn18405991",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "ehr",
         "nlp"
@@ -1045,7 +1064,7 @@
       "startDate": "2019-10-15",
       "endDate": "2020-02-06",
       "url": "https://www.synapse.org/#!Synapse:syn20692755",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "crispr",
         "cell-lineage"
@@ -1082,7 +1101,7 @@
       "startDate": "2019-06-26",
       "endDate": "2020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn15589870",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "tumor-deconvolution"
@@ -1105,7 +1124,7 @@
       "startDate": "2019-12-02",
       "endDate": "2020-02-13",
       "url": "https://www.synapse.org/#!Synapse:syn20968331",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "panacea",
         "drug",
@@ -1139,7 +1158,7 @@
       "startDate": "2019-12-19",
       "endDate": "2020-04-28",
       "url": "https://www.synapse.org/#!Synapse:syn20940518",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "aml"
@@ -1175,7 +1194,7 @@
       "startDate": "2020-01-14",
       "endDate": "2020-06-02",
       "url": "https://www.synapse.org/#!Synapse:syn18065891",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "metadata"
       ],
@@ -1207,7 +1226,7 @@
       "startDate": "2019-11-04",
       "endDate": "2020-05-21",
       "url": "https://www.synapse.org/#!Synapse:syn20545111",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "arthritis",
         "rheumatoid-arthritis"
@@ -1237,7 +1256,7 @@
       "startDate": "2020-01-13",
       "endDate": "2020-05-13",
       "url": "https://www.synapse.org/#!Synapse:syn20825169",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "parkinsons"
       ],
@@ -1272,7 +1291,7 @@
       "startDate": "2020-04-28",
       "endDate": "2020-07-27",
       "url": "https://www.synapse.org/#!Synapse:syn21763589",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "panacea",
         "drug",
@@ -1304,7 +1323,7 @@
       "summary": "The rapid rise of COVID-19 has challenged healthcare globally. The underlying risks and outcomes of infection are still incompletely characterized even as the world surpasses 4 million infections. Due to the importance and emergent need for better understanding of the condition and the development of patient specific clinical risk scores and early warning tools, we have developed a platform to support testing analytic and machine learning hypotheses on clinical data without data sharing as a platform to rapidly discover and implement approaches for care. We have previously applied this approach in the successful EHR DREAM Challenge focusing on Patient Mortality Prediction with UW Medicine.  We have the goal of incorporating machine learning and predictive algorithms into clinical care and COVID-19 is an important and highly urgent challenge. In our first iteration, we will facilitate understanding risk factors that lead to a positive test utilizing electronic health recorded data mapped to the OMOP Common Data Model. Initially, UW Medicine clinical data sets will be used. If successful, we expect to expand this benchmarking effort to include methods for predicting trajectory and mortality as well as data from additional sites.",
       "startDate": "2020-04-30",
       "url": "https://www.synapse.org/#!Synapse:syn21849255",
-      "status": "open",
+      "status": "active",
       "tagIds": [
         "covid",
         "ehr"
@@ -1333,7 +1352,7 @@
       "startDate": "2020-11-17",
       "endDate": "2021-02-25",
       "url": "https://www.synapse.org/#!Synapse:syn18404605",
-      "status": "closed",
+      "status": "completed",
       "tagIds": [
         "cancer",
         "drug",

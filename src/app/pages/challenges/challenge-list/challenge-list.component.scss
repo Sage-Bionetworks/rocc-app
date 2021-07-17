@@ -33,6 +33,16 @@ main {
   flex-flow: column nowrap;
 }
 
+.rocc-challenge-list-more-results {
+  display: flex;
+  justify-content: center;
+}
+
+.rocc-challenge-list-more-results-btn {
+  margin-top: 25px;
+  width: 400px;
+}
+
 // .rocc-challenge-list-more-results {
 //   display: flex;
 //   justify-content: center;

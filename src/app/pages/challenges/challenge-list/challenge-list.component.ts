@@ -1,35 +1,191 @@
-import { Component, OnInit } from '@angular/core';
 import {
-  Challenge, ChallengeService
+  AfterViewInit,
+  Component,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
+import {
+  Challenge,
+  ChallengeService,
+  ChallengePlatform,
+  ChallengePlatformService,
+  Tag,
+  TagService,
 } from '@sage-bionetworks/rocc-client-angular';
-import { filter } from 'rxjs/operators';
+import { BehaviorSubject, combineLatest } from 'rxjs';
+import { filter, map, switchMap, tap } from 'rxjs/operators';
+import { flow, keyBy, mapValues, values, merge as mergeFp } from 'lodash/fp';
+import { FilterComponent } from 'src/app/components/filters/filter.component';
+import { FilterValue } from 'src/app/components/filters/filter-value.model';
+import { assign } from 'lodash';
+import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
+import {
+  challengeStatusFilterValues,
+  challengeTypeFilterValues,
+  orderByFilterValues,
+  previewTypeFilterValues,
+} from './challenge-list-filters-values';
 
 @Component({
   selector: 'rocc-challenge-list',
   templateUrl: './challenge-list.component.html',
   styleUrls: ['./challenge-list.component.scss'],
 })
-export class ChallengeListComponent implements OnInit {
+export class ChallengeListComponent implements OnInit, AfterViewInit {
   private _challenges: Challenge[] = [];
-  private _searchResultsCount = 0;
+  searchResultsCount = 0;
+  limit = 10;
+  offset = 0;
 
-  constructor(private challengeService: ChallengeService) {}
+  @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
+
+  private _querySource: any = {};
+  private query: BehaviorSubject<any> = new BehaviorSubject<any>({});
+
+  orderByFilterValues: FilterValue[] = orderByFilterValues;
+  challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
+  previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
+  tagFilterValues: FilterValue[] = [];
+  challengePlatformFilterValues: FilterValue[] = [];
+  challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
+
+  constructor(
+    private challengeService: ChallengeService,
+    private challengePlatformService: ChallengePlatformService,
+    private tagService: TagService
+  ) {}
 
   ngOnInit(): void {
-    this.challengeService.listChallenges()  // first page
-      .subscribe(page => this._challenges = page.challenges);
+    // TODO: Get all pages
+    this.challengePlatformService
+      .listChallengePlatforms(100)
+      .subscribe((page) => {
+        this.challengePlatformFilterValues = page.challengePlatforms.map(
+          (platform) =>
+            ({
+              value: platform.id,
+              title: platform.name,
+              active: false,
+            } as FilterValue)
+        );
+      });
+
+    // TODO: Get all pages
+    this.tagService.listTags(100).subscribe((page) => {
+      this.tagFilterValues = page.tags.map(
+        (tag) =>
+          ({
+            value: tag.id,
+            title: tag.id,
+            active: false,
+          } as FilterValue)
+      );
+    });
+  }
+
+  ngAfterViewInit(): void {
+    const selectedFilters = this.filters
+      // .filter(f => f.group !== 'previewType')
+      .map((f) => f.getStateAsObservable());  // use f to prevent shadow name
+
+    combineLatest(selectedFilters)
+      .pipe(
+        tap((filters) => console.log('filter befofe flow', filter)),
+        map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
+        tap((filters) => console.log('filter after flow', filter))
+      )
+      .subscribe((query) => {
+        console.log('Query', query);
+        this._challenges = [];
+        query.limit = this.limit;
+        query.offset = this.offset = 0;
+        // this.resultsOffset = 0;
+        this.query.next(query);
+      });
+
+    this.query
+      .pipe(
+        map((query) => mergeFp(query, this.querySource)),
+        tap((query) => console.log('query 2', query)),
+        map((query) => {
+          const orderBy = query.orderBy;
+          query.sort = orderBy.substring(
+            ['+', '-'].includes(orderBy.substring(0, 1)) ? 1 : 0
+          );
+          query.direction = orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
+          query.filter = {
+            name: query.name,
+          };
+
+          if (query.searchTerms === '') {
+            query.searchTerms = undefined;
+          }
+
+          return query;
+        }),
+        tap((query) => console.log('final query', query)),
+        switchMap((query) =>
+          this.challengeService.listChallenges(
+            query.limit,
+            query.offset,
+            // query.filter as ChallengeFilter,
+            query.sort,
+            query.direction,
+            query.searchTerms,
+            query.tagIds,
+            query.status,
+            query.platformIds
+            // query.tagIds
+          )
+        ) // TODO: extract filter from query
+      )
+      .subscribe(
+        (res) => {
+          if (res) {
+            this.searchResultsCount = res.totalResults ? res.totalResults : 0;
+            this.challenges.push(...res.challenges);
+          }
+        },
+        (err) => console.error(err)
+      );
   }
 
   get challenges(): Challenge[] {
     return this._challenges;
   }
 
-  get searchResultsCount(): number {
-    return this._searchResultsCount;
+  // get searchResultsCount(): number {
+  //   return this._searchResultsCount;
+  // }
+
+  get querySource(): any {
+    return this._querySource;
   }
 
   onChallengeClick(challenge: Challenge): void {
     console.log('Challenge clicked');
     // this.entityClick.emit(entity);
+  }
+
+  showMoreResults(): void {
+    const query = assign(this.query.getValue(), {
+      offset: this.offset + this.limit,
+      limit: this.limit,
+    });
+    this.query.next(query);
+  }
+
+  checkAllTags(): void {
+    /* Mutating properties does not trigger the two-way binding change update. */
+    // this.tagFilterValues.forEach((value) => {
+    //   value.active = true;
+    // });
+
+    /* Setting the entire data triggers the two-way binding change update. */
+    this.tagFilterValues = this.tagFilterValues.map((value) => ({
+      ...value,
+      active: true,
+    }));
   }
 }
