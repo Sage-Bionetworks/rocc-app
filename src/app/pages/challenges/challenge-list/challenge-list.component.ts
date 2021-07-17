@@ -13,7 +13,6 @@ import { BehaviorSubject, combineLatest } from 'rxjs';
 import { filter, map, switchMap, tap } from 'rxjs/operators';
 import { flow, keyBy, mapValues, values, merge as mergeFp } from 'lodash/fp';
 import { FilterComponent } from 'src/app/components/filters/filter.component';
-import { ChallengeFilter } from '@sage-bionetworks/rocc-client-angular';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
 import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
@@ -112,7 +111,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
           this.challengeService.listChallenges(
             query.limit,
             query.offset,
-            query.filter as ChallengeFilter,
+            // query.filter as ChallengeFilter,
             query.sort,
             query.direction
           )
