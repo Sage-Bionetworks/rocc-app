@@ -21,6 +21,7 @@ import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
 import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
 import {
+  challengeStatusFilterValues,
   challengeTypeFilterValues,
   orderByFilterValues,
   previewTypeFilterValues,
@@ -47,6 +48,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   tagFilterValues: FilterValue[] = [];
   challengePlatformFilterValues: FilterValue[] = [];
+  challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
 
   constructor(
     private challengeService: ChallengeService,
@@ -123,12 +125,6 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
           return query;
         }),
         tap((query) => console.log('final query', query)),
-        // mapTo(
-        //   {
-        //     name: 'DREAM',
-        //     status: 'open'
-        //   }
-        // ),
         switchMap((query) =>
           this.challengeService.listChallenges(
             query.limit,
@@ -138,7 +134,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
             query.direction,
             query.searchTerms,
             query.tagIds,
-            undefined,
+            query.status,
             query.platformIds
             // query.tagIds
           )
