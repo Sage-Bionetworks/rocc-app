@@ -44,18 +44,18 @@ export const previewTypeFilterValues: ButtonToggleFilterValue[] = [
 
 export const challengeStatusFilterValues: FilterValue[] = [
   {
-    value: 'open',
-    title: `Open`,
-    active: true,
+    value: 'active',
+    title: `Active`,
+    active: false,
   },
   {
     value: 'upcoming',
     title: `Upcoming`,
-    active: true,
+    active: false,
   },
   {
-    value: 'closed',
-    title: `Closed`,
-    active: true,
+    value: 'completed',
+    title: `Completed`,
+    active: false,
   },
 ];
