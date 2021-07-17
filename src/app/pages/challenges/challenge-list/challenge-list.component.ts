@@ -8,6 +8,8 @@ import {
 import {
   Challenge,
   ChallengeService,
+  ChallengePlatform,
+  ChallengePlatformService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 import { filter, map, switchMap, tap } from 'rxjs/operators';
@@ -19,7 +21,6 @@ import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggl
 import {
   challengeTypeFilterValues,
   orderByFilterValues,
-  platformFilterValues,
   previewTypeFilterValues,
 } from './challenge-list-filters-values';
 
@@ -43,9 +44,13 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   tagFilterValues: FilterValue[] = [];
-  platformFilterValues: FilterValue[] = platformFilterValues;
 
-  constructor(private challengeService: ChallengeService) {}
+  challengePlatformFilterValues: FilterValue[] = [];
+
+  constructor(
+    private challengeService: ChallengeService,
+    private challengePlatformService: ChallengePlatformService
+  ) {}
 
   ngOnInit(): void {
     this.tagFilterValues = values({
@@ -61,8 +66,19 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       },
     });
 
-    // this.challengeService.listChallenges()  // first page
-    //   .subscribe(page => this._challenges = page.challenges);
+    // TODO: Get all pages
+    this.challengePlatformService
+      .listChallengePlatforms(100)
+      .subscribe((page) => {
+        this.challengePlatformFilterValues = page.challengePlatforms.map(
+          (platform) =>
+            ({
+              value: platform.id,
+              title: platform.name,
+              active: false,
+            } as FilterValue)
+        );
+      });
   }
 
   ngAfterViewInit(): void {
@@ -114,7 +130,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
             // query.filter as ChallengeFilter,
             query.sort,
             query.direction,
-            query.searchTerms,
+            query.searchTerms
             // query.tagIds
           )
         ) // TODO: extract filter from query
