@@ -3,6 +3,9 @@
     <h3>Challenge Status</h3>
     <sage-checkbox-filter name="status"
       [values]="challengeStatusFilterValues"></sage-checkbox-filter>
+    <h3>Challenge Type</h3>
+    <sage-date-range-filter name="startDateRange"
+      [values]="challengeTypeFilterValues"></sage-date-range-filter>
     <h3>Order by</h3>
     <sage-select-filter name="orderBy" [values]="orderByFilterValues">
     </sage-select-filter>
