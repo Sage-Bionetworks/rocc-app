@@ -1,0 +1,49 @@
+{
+    "challengePlatforms": [
+        {
+            "id": "biocreaative",
+            "name": "BioCreative",
+            "url": "https://biocreative.bioinformatics.udel.edu"
+        },
+        {
+            "id": "cafa",
+            "name": "CAFA",
+            "url": "https://www.biofunctionprediction.org/cafa"
+        },
+        {
+            "id": "cagi",
+            "name": "CAGI",
+            "url": "https://genomeinterpretation.org"
+        },
+        {
+            "id": "camda",
+            "name": "CAMDA",
+            "url": "http://camda.info"
+        },
+        {
+            "id": "casp",
+            "name": "CASP",
+            "url": "https://predictioncenter.org"
+        },
+        {
+            "id": "idash",
+            "name": "IDASH",
+            "url": "http://www.humangenomeprivacy.org/2021"
+        },
+        {
+            "id": "kaggle",
+            "name": "Kaggle",
+            "url": "https://www.kaggle.com"
+        },
+        {
+            "id": "precisionfda",
+            "name": "precisionFDA",
+            "url": "https://precision.fda.gov"
+        },
+        {
+            "id": "synapse",
+            "name": "Synapse",
+            "url": "https://www.synapse.org"
+        }
+    ]
+}
