@@ -57,31 +57,8 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    // TODO: Get all pages
-    this.challengePlatformService
-      .listChallengePlatforms(100)
-      .subscribe((page) => {
-        this.challengePlatformFilterValues = page.challengePlatforms.map(
-          (platform) =>
-            ({
-              value: platform.id,
-              title: platform.name,
-              active: false,
-            } as FilterValue)
-        );
-      });
-
-    // TODO: Get all pages
-    this.tagService.listTags(100).subscribe((page) => {
-      this.tagFilterValues = page.tags.map(
-        (tag) =>
-          ({
-            value: tag.id,
-            title: tag.id,
-            active: false,
-          } as FilterValue)
-      );
-    });
+    this.listTags(),
+    this.listChallengePlatforms();
   }
 
   ngAfterViewInit(): void {
@@ -187,5 +164,47 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       ...value,
       active: true,
     }));
+  }
+
+  private listTags(): void {
+    // TODO: Get all pages
+    this.tagService.listTags(100)
+    .pipe(
+      map((page) => page.tags),
+      map((tags) =>
+        tags.sort((a, b) => a.id.localeCompare(b.id))
+      )
+    ).subscribe((tags) => {
+      this.tagFilterValues = tags.map(
+        (tag) =>
+          ({
+            value: tag.id,
+            title: tag.id,
+            active: false,
+          } as FilterValue)
+      );
+    });
+  }
+
+  private listChallengePlatforms(): void {
+    // TODO: Get all pages
+    this.challengePlatformService
+    .listChallengePlatforms(100)
+    .pipe(
+      map((page) => page.challengePlatforms),
+      map((platforms) =>
+        platforms.sort((a, b) => a.name.localeCompare(b.name))
+      )
+    )
+    .subscribe((platforms) => {
+      this.challengePlatformFilterValues = platforms.map(
+        (platform) =>
+          ({
+            value: platform.id,
+            title: platform.name,
+            active: false,
+          } as FilterValue)
+      );
+    });
   }
 }
