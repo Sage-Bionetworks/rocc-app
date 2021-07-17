@@ -135,7 +135,10 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
             // query.filter as ChallengeFilter,
             query.sort,
             query.direction,
-            query.searchTerms
+            query.searchTerms,
+            undefined,
+            undefined,
+            query.platformIds
             // query.tagIds
           )
         ) // TODO: extract filter from query
