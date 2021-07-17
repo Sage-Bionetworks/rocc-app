@@ -10,6 +10,8 @@ import {
   ChallengeService,
   ChallengePlatform,
   ChallengePlatformService,
+  Tag,
+  TagService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 import { filter, map, switchMap, tap } from 'rxjs/operators';
@@ -44,28 +46,15 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   tagFilterValues: FilterValue[] = [];
-
   challengePlatformFilterValues: FilterValue[] = [];
 
   constructor(
     private challengeService: ChallengeService,
-    private challengePlatformService: ChallengePlatformService
+    private challengePlatformService: ChallengePlatformService,
+    private tagService: TagService
   ) {}
 
   ngOnInit(): void {
-    this.tagFilterValues = values({
-      DIGITAL: {
-        value: 'digital',
-        title: 'digital',
-        active: true,
-      },
-      GENE: {
-        value: 'gene',
-        title: 'gene',
-        active: true,
-      },
-    });
-
     // TODO: Get all pages
     this.challengePlatformService
       .listChallengePlatforms(100)
@@ -79,6 +68,18 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
             } as FilterValue)
         );
       });
+
+    // TODO: Get all pages
+    this.tagService.listTags(100).subscribe((page) => {
+      this.tagFilterValues = page.tags.map(
+        (tag) =>
+          ({
+            value: tag.id,
+            title: tag.id,
+            active: false,
+          } as FilterValue)
+      );
+    });
   }
 
   ngAfterViewInit(): void {
@@ -136,7 +137,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
             query.sort,
             query.direction,
             query.searchTerms,
-            undefined,
+            query.tagIds,
             undefined,
             query.platformIds
             // query.tagIds
