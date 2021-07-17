@@ -1,4 +1,5 @@
 import { Component, forwardRef } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
 
@@ -14,6 +15,11 @@ import { FilterComponent } from '../filter.component';
   ],
 })
 export class DateRangeFilterComponent extends FilterComponent {
+  range = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl()
+  });
+
   constructor() {
     super();
   }
