@@ -1,5 +1,7 @@
-import { Component, forwardRef } from '@angular/core';
+import { Component, forwardRef, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { combineLatest } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
 
@@ -14,23 +16,42 @@ import { FilterComponent } from '../filter.component';
     },
   ],
 })
-export class DateRangeFilterComponent extends FilterComponent {
+export class DateRangeFilterComponent
+  extends FilterComponent
+  implements OnInit
+{
   range = new FormGroup({
     start: new FormControl(),
-    end: new FormControl()
+    end: new FormControl(),
   });
 
   constructor() {
     super();
   }
 
+  ngOnInit(): void {
+    combineLatest([
+      this.range.controls.start.valueChanges,
+      this.range.controls.end.valueChanges,
+    ])
+      .pipe(debounceTime(400), distinctUntilChanged())
+      .subscribe((res) => console.log('DATE RANGE', res));
+  }
+
   getState(): FilterState {
+    this.values = [];
+    console.log('RANGE', this.range);
+
     return {
       name: this.name,
-      value: ''
+      value: '',
       // value: this.values
       //   .filter((value) => value.active)
       //   .map((value) => value.value),
     };
+  }
+
+  plop(event: any): void {
+    console.log('plop', event);
   }
 }
