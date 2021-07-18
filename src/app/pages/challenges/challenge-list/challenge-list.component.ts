@@ -57,14 +57,13 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.listTags(),
-    this.listChallengePlatforms();
+    this.listTags(), this.listChallengePlatforms();
   }
 
   ngAfterViewInit(): void {
     const selectedFilters = this.filters
       // .filter(f => f.group !== 'previewType')
-      .map((f) => f.getStateAsObservable());  // use f to prevent shadow name
+      .map((f) => f.getStateAsObservable()); // use f to prevent shadow name
 
     combineLatest(selectedFilters)
       .pipe(
@@ -86,14 +85,13 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
         map((query) => mergeFp(query, this.querySource)),
         tap((query) => console.log('query 2', query)),
         map((query) => {
-          const orderBy = query.orderBy;
-          query.sort = orderBy.substring(
-            ['+', '-'].includes(orderBy.substring(0, 1)) ? 1 : 0
-          );
-          query.direction = orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
-          query.filter = {
-            name: query.name,
-          };
+          if (query.orderBy !== undefined) {
+            query.sort = query.orderBy.substring(
+              ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
+            );
+            query.direction =
+              query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
+          }
 
           if (query.searchTerms === '') {
             query.searchTerms = undefined;
@@ -168,43 +166,43 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
   private listTags(): void {
     // TODO: Get all pages
-    this.tagService.listTags(100)
-    .pipe(
-      map((page) => page.tags),
-      map((tags) =>
-        tags.sort((a, b) => a.id.localeCompare(b.id))
+    this.tagService
+      .listTags(100)
+      .pipe(
+        map((page) => page.tags),
+        map((tags) => tags.sort((a, b) => a.id.localeCompare(b.id)))
       )
-    ).subscribe((tags) => {
-      this.tagFilterValues = tags.map(
-        (tag) =>
-          ({
-            value: tag.id,
-            title: tag.id,
-            active: false,
-          } as FilterValue)
-      );
-    });
+      .subscribe((tags) => {
+        this.tagFilterValues = tags.map(
+          (tag) =>
+            ({
+              value: tag.id,
+              title: tag.id,
+              active: false,
+            } as FilterValue)
+        );
+      });
   }
 
   private listChallengePlatforms(): void {
     // TODO: Get all pages
     this.challengePlatformService
-    .listChallengePlatforms(100)
-    .pipe(
-      map((page) => page.challengePlatforms),
-      map((platforms) =>
-        platforms.sort((a, b) => a.name.localeCompare(b.name))
+      .listChallengePlatforms(100)
+      .pipe(
+        map((page) => page.challengePlatforms),
+        map((platforms) =>
+          platforms.sort((a, b) => a.name.localeCompare(b.name))
+        )
       )
-    )
-    .subscribe((platforms) => {
-      this.challengePlatformFilterValues = platforms.map(
-        (platform) =>
-          ({
-            value: platform.id,
-            title: platform.name,
-            active: false,
-          } as FilterValue)
-      );
-    });
+      .subscribe((platforms) => {
+        this.challengePlatformFilterValues = platforms.map(
+          (platform) =>
+            ({
+              value: platform.id,
+              title: platform.name,
+              active: false,
+            } as FilterValue)
+        );
+      });
   }
 }
