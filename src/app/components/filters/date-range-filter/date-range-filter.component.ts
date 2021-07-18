@@ -30,28 +30,33 @@ export class DateRangeFilterComponent
   }
 
   ngOnInit(): void {
+    console.log('RANGE INIT', this.values);
+
     combineLatest([
       this.range.controls.start.valueChanges,
       this.range.controls.end.valueChanges,
     ])
       .pipe(debounceTime(400), distinctUntilChanged())
-      .subscribe((res) => console.log('DATE RANGE', res));
+      .subscribe(
+        (_term) => this.state.next(this.getState()),
+        (err) => console.log(err)
+      );
+    // .subscribe((res) => console.log('DATE RANGE', res));
   }
 
   getState(): FilterState {
-    this.values = [];
+    // this.values = [];
     console.log('RANGE', this.range);
 
     return {
       name: this.name,
-      value: '',
+      value: {
+        start: this.range.get('start')?.value,
+        end: this.range.get('end')?.value
+      },
       // value: this.values
       //   .filter((value) => value.active)
       //   .map((value) => value.value),
     };
-  }
-
-  plop(event: any): void {
-    console.log('plop', event);
   }
 }
