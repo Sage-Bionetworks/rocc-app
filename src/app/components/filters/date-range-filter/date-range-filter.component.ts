@@ -1,7 +1,12 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { combineLatest } from 'rxjs';
-import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  filter,
+  map,
+} from 'rxjs/operators';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
 import { DateRange } from './date-range';
@@ -17,6 +22,7 @@ import { DateRange } from './date-range';
     },
   ],
 })
+// TODO: Setting a different [values] programmatically should update the UI
 export class DateRangeFilterComponent
   extends FilterComponent
   implements OnInit
@@ -31,48 +37,41 @@ export class DateRangeFilterComponent
   }
 
   ngOnInit(): void {
-    console.log('RANGE INIT', this.values);
+    // TODO: Add validation
     const startDateRange = this.values[0].value as DateRange;
     this.range.get('start')?.setValue(startDateRange.start);
     this.range.get('end')?.setValue(startDateRange.end);
 
-
-    combineLatest(
+    combineLatest([
       this.range.controls.start.valueChanges,
       this.range.controls.end.valueChanges,
-      (start, end) => ({
-        start,
-        end
-      }) as DateRange
-    )
-      .pipe(debounceTime(400), distinctUntilChanged())
-      // .subscribe(dateRange => {
-
-      // });
-      .subscribe(console.log);
-      // .subscribe(
-      //   (start, end) => {
-      //     return `start proj: ${start},
-      //     end proj: ${end}`;
-      //   },
-      //   (err) => console.log(err)
-      // );
-    // .subscribe((res) => console.log('DATE RANGE', res));
+    ])
+      .pipe(
+        debounceTime(400),
+        distinctUntilChanged(),
+        map(
+          ([start, end]) =>
+            ({
+              start,
+              end,
+            } as DateRange)
+        ),
+        filter((range) => range.start !== null && range.end !== null)
+      )
+      .subscribe(
+        (range) => {
+          this.values[0].value = range;
+          this.emitState();
+        },
+        (err) => console.log(err)
+      );
   }
 
   getState(): FilterState {
-    // this.values = [];
-    console.log('RANGE', this.range);
-
+    const activeValue = this.values.find((value) => value.active);
     return {
       name: this.name,
-      // value: {
-      //   start: this.range.get('start')?.value,
-      //   end: this.range.get('end')?.value
-      // },
-      value: this.values
-        .filter((value) => value.active)
-        .map((value) => value.value),
+      value: activeValue !== undefined ? activeValue.value : '',
     };
   }
 }
