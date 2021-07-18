@@ -21,6 +21,7 @@ import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
 import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
 import {
+  challengeStartDateRangeFilterValues,
   challengeStatusFilterValues,
   challengeTypeFilterValues,
   orderByFilterValues,
@@ -49,6 +50,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   tagFilterValues: FilterValue[] = [];
   challengePlatformFilterValues: FilterValue[] = [];
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
+  challengeStartDateRangeFilterValues: FilterValue[] = challengeStartDateRangeFilterValues;
 
   constructor(
     private challengeService: ChallengeService,

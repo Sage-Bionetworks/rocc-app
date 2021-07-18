@@ -60,7 +60,7 @@ export const challengeStatusFilterValues: FilterValue[] = [
   },
 ];
 
-export const startDateRangeFilterValues: FilterValue[] = [
+export const challengeStartDateRangeFilterValues: FilterValue[] = [
   {
     value: {
       start: '2021-07-13T07:00:00.000Z',
