@@ -37,15 +37,26 @@ export class DateRangeFilterComponent
     this.range.get('end')?.setValue(startDateRange.end);
 
 
-    combineLatest([
+    combineLatest(
       this.range.controls.start.valueChanges,
       this.range.controls.end.valueChanges,
-    ])
+      (start, end) => ({
+        start,
+        end
+      }) as DateRange
+    )
       .pipe(debounceTime(400), distinctUntilChanged())
-      .subscribe(
-        (_term) => this.state.next(this.getState()),
-        (err) => console.log(err)
-      );
+      // .subscribe(dateRange => {
+
+      // });
+      .subscribe(console.log);
+      // .subscribe(
+      //   (start, end) => {
+      //     return `start proj: ${start},
+      //     end proj: ${end}`;
+      //   },
+      //   (err) => console.log(err)
+      // );
     // .subscribe((res) => console.log('DATE RANGE', res));
   }
 
@@ -55,13 +66,13 @@ export class DateRangeFilterComponent
 
     return {
       name: this.name,
-      value: {
-        start: this.range.get('start')?.value,
-        end: this.range.get('end')?.value
-      },
-      // value: this.values
-      //   .filter((value) => value.active)
-      //   .map((value) => value.value),
+      // value: {
+      //   start: this.range.get('start')?.value,
+      //   end: this.range.get('end')?.value
+      // },
+      value: this.values
+        .filter((value) => value.active)
+        .map((value) => value.value),
     };
   }
 }
