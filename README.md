@@ -24,7 +24,6 @@ TBA
 
 3. Go to the [ROCC API service] and retrieve the service images
 
-       cp .env.example .env
        docker compose pull
 
 4. Come back to this repo and start the ROCC app.
