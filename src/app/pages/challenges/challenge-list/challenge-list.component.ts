@@ -51,16 +51,19 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   tagFilterValues: FilterValue[] = [];
   challengePlatformFilterValues: FilterValue[] = [];
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
-  challengeStartDateRangeFilterValues: FilterValue[] = challengeStartDateRangeFilterValues;
+  challengeStartDateRangeFilterValues: FilterValue[] =
+    challengeStartDateRangeFilterValues;
 
   constructor(
-    private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
+    private challengeService: ChallengeService,
     private tagService: TagService
   ) {}
 
   ngOnInit(): void {
-    this.listTags(), this.listChallengePlatforms();
+    this.listTags();
+    this.listChallengePlatforms();
+    this._challenges = [];
   }
 
   ngAfterViewInit(): void {
@@ -70,13 +73,13 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
     combineLatest(selectedFilters)
       .pipe(
-        tap((filters) => console.log('filter befofe flow', filter)),
+        tap((filters) => console.log('filter befofe flow', filters)),
         map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
-        tap((filters) => console.log('filter after flow', filter))
+        tap((filters) => console.log('filter after flow', filters))
       )
       .subscribe((query) => {
         console.log('Query', query);
-        this._challenges = [];
+        // this._challenges = [];
         query.limit = this.limit;
         query.offset = this.offset = 0;
         // this.resultsOffset = 0;
@@ -121,7 +124,8 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
         (res) => {
           if (res) {
             this.searchResultsCount = res.totalResults ? res.totalResults : 0;
-            this.challenges.push(...res.challenges);
+            // this.challenges.push(...res.challenges);
+            this._challenges = res.challenges;
           }
         },
         (err) => console.error(err)
@@ -174,16 +178,20 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
         map((page) => page.tags),
         map((tags) => tags.sort((a, b) => a.id.localeCompare(b.id)))
       )
-      .subscribe((tags) => {
-        this.tagFilterValues = tags.map(
-          (tag) =>
-            ({
-              value: tag.id,
-              title: tag.id,
-              active: false,
-            } as FilterValue)
-        );
-      });
+      .subscribe(
+        (tags) => {
+          this.tagFilterValues = tags.map(
+            (tag) =>
+              ({
+                value: tag.id,
+                title: tag.id,
+                active: false,
+              } as FilterValue)
+          );
+        },
+        (err) => console.log,
+        () => console.log('Get tags complete')
+      );
   }
 
   private listChallengePlatforms(): void {
@@ -196,15 +204,19 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
           platforms.sort((a, b) => a.name.localeCompare(b.name))
         )
       )
-      .subscribe((platforms) => {
-        this.challengePlatformFilterValues = platforms.map(
-          (platform) =>
-            ({
-              value: platform.id,
-              title: platform.name,
-              active: false,
-            } as FilterValue)
-        );
-      });
+      .subscribe(
+        (platforms) => {
+          this.challengePlatformFilterValues = platforms.map(
+            (platform) =>
+              ({
+                value: platform.id,
+                title: platform.name,
+                active: false,
+              } as FilterValue)
+          );
+        },
+        (err) => console.log,
+        () => console.log('Get platforms complete')
+      );
   }
 }

@@ -1,7 +1,7 @@
-<ul *ngIf="!!values">
+<!-- *ngIf="!!values" -->
+<ul>
   <li *ngFor="let value of values">
-    <mat-checkbox [(ngModel)]="value.active" (ngModelChange)="emitState()"
-      (change)="emitState()">
+    <mat-checkbox [ngModel]="value.active">
       {{value.title}}
     </mat-checkbox>
   </li>

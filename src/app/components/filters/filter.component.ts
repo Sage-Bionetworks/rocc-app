@@ -31,6 +31,7 @@ export abstract class FilterComponent {
 
   @Input()
   set values(values: FilterValue[]) {
+    console.log('EMIT STATE');
     this._values = values;
     this.emitState();
   }
