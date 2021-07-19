@@ -15,7 +15,7 @@ import {
   TagService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
-import { filter, map, switchMap, tap } from 'rxjs/operators';
+import { distinctUntilChanged, distinctUntilKeyChanged, filter, map, switchMap, tap } from 'rxjs/operators';
 import { flow, keyBy, mapValues, values, merge as mergeFp } from 'lodash/fp';
 import { FilterComponent } from 'src/app/components/filters/filter.component';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
@@ -27,7 +27,10 @@ import {
   challengeTypeFilterValues,
   orderByFilterValues,
   previewTypeFilterValues,
+  tagFilterValues,
 } from './challenge-list-filters-values';
+// import { shallowEqual } from '../../../shallowEqual';
+import deepEqual from 'deep-equal';
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -48,7 +51,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   orderByFilterValues: FilterValue[] = orderByFilterValues;
   challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
-  tagFilterValues: FilterValue[] = [];
+  tagFilterValues: FilterValue[] = tagFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
@@ -62,7 +65,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.listTags();
-    this.listChallengePlatforms();
+    // this.listChallengePlatforms();
     this._challenges = [];
   }
 
@@ -75,11 +78,13 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       .pipe(
         tap((filters) => console.log('filter befofe flow', filters)),
         map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
-        tap((filters) => console.log('filter after flow', filters))
+        tap((filters) => console.log('filter after flow', filters)),
+        // distinctUntilChanged((prev, curr) => deepEqual(prev, curr, { strict: true })),
+        distinctUntilKeyChanged('offset')
       )
       .subscribe((query) => {
         console.log('Query', query);
-        // this._challenges = [];
+        this._challenges = [];
         query.limit = this.limit;
         query.offset = this.offset = 0;
         // this.resultsOffset = 0;
@@ -99,6 +104,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
               query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
           }
 
+          console.log('Search terms are', query.searchTerms);
           if (query.searchTerms === '') {
             query.searchTerms = undefined;
           }
@@ -124,8 +130,8 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
         (res) => {
           if (res) {
             this.searchResultsCount = res.totalResults ? res.totalResults : 0;
-            // this.challenges.push(...res.challenges);
-            this._challenges = res.challenges;
+            this.challenges.push(...res.challenges);
+            // this._challenges = res.challenges;
           }
         },
         (err) => console.error(err)

@@ -33,7 +33,7 @@ export class SearchFilterComponent extends FilterComponent implements OnInit, On
     this.searchSub = this.searchForm.controls.search.valueChanges
       .pipe(debounceTime(400), distinctUntilChanged())
       .subscribe(
-        (_term) => this.state.next(this.getState()),
+        (_term) => this.emitState(),
         (err) => console.log(err)
       );
   }

@@ -70,3 +70,16 @@ export const challengeStartDateRangeFilterValues: FilterValue[] = [
     active: true
   }
 ];
+
+export const tagFilterValues: FilterValue[] = [
+  {
+    value: 'a',
+    title: 'A',
+    active: false
+  },
+  {
+    value: 'b',
+    title: 'B',
+    active: false
+  }
+];
