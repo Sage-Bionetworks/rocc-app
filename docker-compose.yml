@@ -38,7 +38,7 @@ services:
   rocc-app:
     image: rocc/rocc-app:latest
     container_name: rocc-app
-    build: "."
+    build: .
     restart: always
     environment:
       - SERVER_PROTOCOL=${SERVER_PROTOCOL}
