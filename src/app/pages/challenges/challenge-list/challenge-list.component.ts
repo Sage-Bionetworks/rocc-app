@@ -10,6 +10,7 @@ import {
   ChallengeService,
   ChallengePlatform,
   ChallengePlatformService,
+  DateRange,
   Tag,
   TagService,
 } from '@sage-bionetworks/rocc-client-angular';
@@ -112,8 +113,8 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
             query.searchTerms,
             query.tagIds,
             query.status,
-            query.platformIds
-            // query.tagIds
+            query.platformIds,
+            query.startDateRange
           )
         ) // TODO: extract filter from query
       )
