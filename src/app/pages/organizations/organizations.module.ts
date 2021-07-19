@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
+import { MaterialModule } from 'src/app/components/material/material.module';
 import { OrganizationsComponent } from './organizations.component';
-
-const routes: Routes = [
-  { path: '', component: OrganizationsComponent }
-];
+import { OrganizationsRoutingModule } from './organizations-routing.module';
+import { OrganizationListComponent } from './organization-list/organization-list.component';
+import { OrganizationNewComponent } from './organization-new/organization-new.component';
+import { OrganizationViewComponent } from './organization-view/organization-view.component';
 
 @NgModule({
-  declarations: [OrganizationsComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
-    FooterModule
+    FooterModule,
+    MaterialModule,
+    OrganizationsRoutingModule
   ],
-  exports: [OrganizationsComponent]
+  declarations: [
+    OrganizationsComponent,
+    OrganizationListComponent,
+    OrganizationNewComponent,
+    OrganizationViewComponent
+  ],
+  providers: [],
+  exports: []
 })
 export class OrganizationsModule {}
