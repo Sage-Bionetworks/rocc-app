@@ -32,6 +32,7 @@ import {
 } from './challenge-list-filters-values';
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
+import { ChallengeListQuery } from './challenge-list-query';
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -79,16 +80,25 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
     combineLatest(selectedFilters)
       .pipe(
         tap((filters) => console.log('filter befofe flow', filters)),
-        map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
+        map((filters) => ({
+          limit: this.limit,
+          offset: (this.offset = 0),
+          ...flow([keyBy('name'), mapValues('value')])(filters)
+        }) as ChallengeListQuery),
         tap((filters) => console.log('filter after flow', filters)),
-        // distinctUntilChanged((prev, curr) => deepEqual(prev, curr, { strict: true })),
-        distinctUntilKeyChanged('offset')
+        distinctUntilChanged(deepEqual),
+        // distinctUntilChanged((prev, curr) => {
+        //   console.log('prev', prev);
+        //   console.log('curr', curr);
+        //   return prev == curr;
+        // }),
+        // distinctUntilKeyChanged('limit')
       )
-      .subscribe((query) => {
+      .subscribe((query: any) => {
         console.log('Query', query);
         this._challenges = [];
-        query.limit = this.limit;
-        query.offset = this.offset = 0;
+        // query.limit = this.limit;
+        // query.offset = this.offset = 0;
         // this.resultsOffset = 0;
         this.query.next(query);
       });
@@ -106,7 +116,6 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
               query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
           }
 
-          console.log('Search terms are', query.searchTerms);
           if (query.searchTerms === '') {
             query.searchTerms = undefined;
           }
