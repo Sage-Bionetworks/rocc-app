@@ -107,7 +107,6 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
           this.challengeService.listChallenges(
             query.limit,
             query.offset,
-            // query.filter as ChallengeFilter,
             query.sort,
             query.direction,
             query.searchTerms,

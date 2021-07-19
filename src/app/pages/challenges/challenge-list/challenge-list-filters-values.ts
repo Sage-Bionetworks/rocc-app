@@ -63,8 +63,8 @@ export const challengeStatusFilterValues: FilterValue[] = [
 export const challengeStartDateRangeFilterValues: FilterValue[] = [
   {
     value: {
-      start: '2021-07-13T07:00:00.000Z',
-      end: '2021-07-21T07:00:00.000Z'
+      start: '2021-07-13',
+      end: '2021-07-21'
     },
     title: '',
     active: true
