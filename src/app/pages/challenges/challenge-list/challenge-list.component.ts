@@ -28,6 +28,7 @@ import {
   orderByFilterValues,
   previewTypeFilterValues,
   tagFilterValues,
+  searchTermsFilterValues
 } from './challenge-list-filters-values';
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
@@ -56,6 +57,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
+  searchTermsFilterValues = searchTermsFilterValues;
 
   constructor(
     private challengePlatformService: ChallengePlatformService,

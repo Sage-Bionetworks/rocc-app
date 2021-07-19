@@ -12,9 +12,9 @@
     <!-- <h3>Type</h3>
     <sage-radio-button-filter name="challengeType"
       [values]="challengeTypeFilterValues"></sage-radio-button-filter> -->
-    <h3>Tags</h3>
+    <!-- <h3>Tags</h3>
     <sage-checkbox-filter name="tagIds"
-      [values]="tagFilterValues"></sage-checkbox-filter>
+      [values]="tagFilterValues"></sage-checkbox-filter> -->
     <!-- <button mat-raised-button (click)="checkAllTags()">Check all tags</button> -->
     <!-- <h3>Platforms</h3>
     <sage-checkbox-filter name="platformIds"
@@ -26,7 +26,7 @@
 
   <div class="rocc-challenge-list-content">
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
-      name="searchTerms"></sage-search-filter>
+      name="searchTerms" [values]="searchTermsFilterValues"></sage-search-filter>
     <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
       results</span>

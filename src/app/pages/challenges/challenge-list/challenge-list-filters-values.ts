@@ -83,3 +83,11 @@ export const tagFilterValues: FilterValue[] = [
     active: false
   }
 ];
+
+export const searchTermsFilterValues: FilterValue[] = [
+  {
+    value: '',
+    title: '',
+    active: true
+  },
+];
