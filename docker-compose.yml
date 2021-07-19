@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   rocc-database:
-    image: sagebionetworks/mongo:4.4.4
+    image: sagebionetworks/mongo:${DATABASE_VERSION}
     container_name: rocc-db
     restart: always
     environment:
@@ -15,7 +15,7 @@ services:
       - rocc-networks
 
   rocc-service:
-    image: sagebionetworks/rocc-service:0.2.1
+    image: sagebionetworks/rocc-service:${SERVICE_VERSION}
     container_name: rocc-service
     restart: always
     ports:
@@ -36,15 +36,10 @@ services:
       - rocc-database
 
   rocc-app:
-    image: sagebionetworks/rocc-app
+    image: sagebionetworks/rocc-app:${APP_VERSION}
     container_name: rocc-app
     build: .
     restart: always
-    environment:
-      - SERVER_PROTOCOL=${SERVER_PROTOCOL}
-      - SERVER_DOMAIN=${SERVER_DOMAIN}
-      - SERVER_PORT=${SERVER_PORT}
-      - SERVER_BASE_PATH=${SERVER_BASE_PATH}
     networks:
       - rocc-networks
     depends_on:
