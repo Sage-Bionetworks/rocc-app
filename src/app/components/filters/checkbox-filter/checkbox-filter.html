@@ -1,0 +1,8 @@
+<ul *ngIf="!!values">
+  <li *ngFor="let value of values">
+    <mat-checkbox [(ngModel)]="value.active" (ngModelChange)="emitState()"
+      (change)="emitState()">
+      {{value.title}}
+    </mat-checkbox>
+  </li>
+</ul>

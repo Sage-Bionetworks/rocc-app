@@ -1,0 +1,7 @@
+<mat-radio-group class="sage-radio-button-filter-radio-group"
+  aria-label="Radio button filter" (change)="updateState($event)">
+  <mat-radio-button class="sage-radio-button-filter-radio-button"
+    *ngFor="let value of values" [value]="value.value" [checked]="value.active">
+    {{value.title}}
+  </mat-radio-button>
+</mat-radio-group>

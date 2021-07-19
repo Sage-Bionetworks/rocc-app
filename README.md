@@ -1,6 +1,16 @@
 # ROCC Web Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+## Introduction
+
+TBA
+
+
+## Specification
+
+- ROCC schemas version: 0.1.7
+- ROCC app version: 0.1.0
+- Docker image: [sagebionetworks/rocc-app]
+
 
 ## Usage
 

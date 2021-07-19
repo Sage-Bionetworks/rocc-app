@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
+import { FiltersModule } from './components/filters/filters.module';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -28,7 +29,8 @@ export function apiConfigFactory(): Configuration {
     NavbarModule,
     FooterModule,
     ApiModule.forRoot(apiConfigFactory),
-    DatabaseSeedModule
+    DatabaseSeedModule,
+    FiltersModule
   ],
   declarations: [
     AppComponent
