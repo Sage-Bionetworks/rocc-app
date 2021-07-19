@@ -5,10 +5,10 @@ require('dotenv').config();
 
 // load environment variables
 const isProduction = argv.prod || false;
-const SERVER_PROTOCOL = process.env.SERVER_PROTOCOL || undefined;
-const SERVER_DOMAIN = process.env.SERVER_DOMAIN || undefined;
-const SERVER_PORT = process.env.SERVER_PORT || 80;
-const SERVER_BASE_PATH = process.env.SERVER_BASE_PATH || undefined;
+const SERVER_PROTOCOL = process.env.SERVER_PROTOCOL || 'http://';
+const SERVER_DOMAIN = process.env.SERVER_DOMAIN || 'localhost';
+const SERVER_PORT = process.env.SERVER_PORT || '4200';
+const SERVER_BASE_PATH = process.env.SERVER_BASE_PATH || '/api';
 
 // check whether app is running for prod; check package.json
 const targetPath = isProduction
