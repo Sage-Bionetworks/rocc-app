@@ -6,7 +6,6 @@
     "config": "ts-node ./src/environments/setenv.ts",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "npm run config --prod=false && ng build",
-    "build:prod": "npm run config --prod=true && ng build --prod",
     "build:rocc-client-angular": "cd rocc-client-angular && npm ci && npm run build",
     "build:sage-angular": "cd sage-angular && npm ci && npm run build",
     "install:dependencies": "npm run build:rocc-client-angular && npm run build:sage-angular && npm ci",
