@@ -1,4 +1,4 @@
 export interface DateRange {
-  start: string;
-  end: string;
+  start: string | null;
+  end: string | null;
 }

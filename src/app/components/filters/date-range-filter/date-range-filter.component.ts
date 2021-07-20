@@ -1,12 +1,7 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { combineLatest } from 'rxjs';
-import {
-  debounceTime,
-  distinctUntilChanged,
-  filter,
-  map,
-} from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
 import { DateRange } from './date-range';
@@ -55,8 +50,7 @@ export class DateRangeFilterComponent
               start,
               end,
             } as DateRange)
-        ),
-        filter((range) => range.start !== null && range.end !== null)
+        )
       )
       .subscribe(
         (range) => {

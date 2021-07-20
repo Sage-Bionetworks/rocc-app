@@ -8,22 +8,13 @@ import {
 import {
   Challenge,
   ChallengeService,
-  ChallengePlatform,
   ChallengePlatformService,
   DateRange,
-  Tag,
   TagService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
-import {
-  distinctUntilChanged,
-  distinctUntilKeyChanged,
-  filter,
-  map,
-  switchMap,
-  tap,
-} from 'rxjs/operators';
-import { flow, keyBy, mapValues, values, merge as mergeFp } from 'lodash/fp';
+import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
+import { flow, keyBy, mapValues } from 'lodash/fp';
 import { FilterComponent } from 'src/app/components/filters/filter.component';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
@@ -40,6 +31,19 @@ import {
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
 import { ChallengeListQuery } from './challenge-list-query';
+// import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
+
+const emptyChallengeListQuery: ChallengeListQuery = {
+  limit: 0,
+  offset: 0,
+  sort: 'createdAt',
+  direction: 'asc',
+  searchTerms: '',
+  tagIds: [],
+  status: [],
+  platformIds: [],
+  startDateRange: {} as DateRange,
+};
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -48,23 +52,22 @@ import { ChallengeListQuery } from './challenge-list-query';
 })
 export class ChallengeListComponent implements OnInit, AfterViewInit {
   challenges: Challenge[] = [];
-  searchResultsCount = 0;
+  @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
+  private query: BehaviorSubject<ChallengeListQuery> =
+    new BehaviorSubject<ChallengeListQuery>(emptyChallengeListQuery);
+
   limit = 10;
   offset = 0;
-
-  @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
-
-  private query: BehaviorSubject<any> = new BehaviorSubject<any>({});
-
   orderByFilterValues: FilterValue[] = orderByFilterValues;
   challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
-  tagFilterValues: FilterValue[] = tagFilterValues;
+  tagFilterValues: FilterValue[] = [];
   challengePlatformFilterValues: FilterValue[] = [];
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
+  searchResultsCount = 0;
 
   constructor(
     private challengePlatformService: ChallengePlatformService,
@@ -86,6 +89,8 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
       .pipe(
         map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
         map((query): ChallengeListQuery => {
+          query.sort = undefined;
+          query.direction = undefined;
           if (query.orderBy !== undefined) {
             query.sort = query.orderBy.substring(
               ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
@@ -128,10 +133,10 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
         )
       )
       .subscribe(
-        (res) => {
-          if (res) {
-            this.searchResultsCount = res.totalResults ? res.totalResults : 0;
-            this.challenges.push(...res.challenges);
+        (page) => {
+          if (page) {
+            this.searchResultsCount = page.totalResults ? page.totalResults : 0;
+            this.challenges.push(...page.challenges);
           }
         },
         (err) => console.log(err)
