@@ -18,7 +18,10 @@ import { OnDestroy } from '@angular/core';
     },
   ],
 })
-export class SearchFilterComponent extends FilterComponent implements OnInit, OnDestroy {
+export class SearchFilterComponent
+  extends FilterComponent
+  implements OnInit, OnDestroy
+{
   searchForm: FormGroup;
   private searchSub!: Subscription;
 
@@ -30,10 +33,17 @@ export class SearchFilterComponent extends FilterComponent implements OnInit, On
   }
 
   ngOnInit(): void {
+    // TODO: Add validation
+    const searchTerms = this.values[0].value as string;
+    this.searchForm.get('search')?.setValue(searchTerms);
+
     this.searchSub = this.searchForm.controls.search.valueChanges
       .pipe(debounceTime(400), distinctUntilChanged())
       .subscribe(
-        (_term) => this.state.next(this.getState()),
+        (term) => {
+          this.values[0].value = term;
+          this.emitState();
+        },
         (err) => console.log(err)
       );
   }
@@ -43,9 +53,10 @@ export class SearchFilterComponent extends FilterComponent implements OnInit, On
   }
 
   getState(): FilterState {
+    const activeValue = this.values.find((value) => value.active);
     return {
       name: this.name,
-      value: this.searchForm.value.search,
+      value: activeValue !== undefined ? activeValue.value : '',
     };
   }
 }

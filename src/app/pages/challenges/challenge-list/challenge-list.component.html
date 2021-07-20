@@ -1,31 +1,32 @@
 <div class="rocc-challenge-list">
   <div class="rocc-challenge-list-filters">
-    <h3>Challenge Status</h3>
+    <h3>Status</h3>
     <sage-checkbox-filter name="status"
       [values]="challengeStatusFilterValues"></sage-checkbox-filter>
+    <h3>Start Date</h3>
+    <sage-date-range-filter name="startDateRange"
+      [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
     <h3>Order by</h3>
     <sage-select-filter name="orderBy" [values]="orderByFilterValues">
     </sage-select-filter>
-    <h3>Challenge Type</h3>
+    <!-- <h3>Type</h3>
     <sage-radio-button-filter name="challengeType"
-      [values]="challengeTypeFilterValues"></sage-radio-button-filter>
+      [values]="challengeTypeFilterValues"></sage-radio-button-filter> -->
     <h3>Tags</h3>
     <sage-checkbox-filter name="tagIds"
       [values]="tagFilterValues"></sage-checkbox-filter>
+    <!-- <button mat-raised-button (click)="checkAllTags()">Check all tags</button> -->
     <h3>Platforms</h3>
     <sage-checkbox-filter name="platformIds"
       [values]="challengePlatformFilterValues"></sage-checkbox-filter>
-    <button mat-raised-button (click)="checkAllTags()">Check all tags</button>
-    <h3>Date Range</h3>
     <h3>Preview</h3>
     <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
     </sage-button-toggle-filter>
   </div>
 
   <div class="rocc-challenge-list-content">
-    <!-- <p>TODO: Add search-filter</p> -->
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
-      name="searchTerms"></sage-search-filter>
+      name="searchTerms" [values]="searchTermsFilterValues"></sage-search-filter>
     <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
       results</span>
