@@ -58,7 +58,7 @@ export class DatabaseSeedComponent implements OnInit {
 
     // Maximum number of concurrent requests sent to the ROCC API service
     // TODO: Add to configuration file
-    const concurrency = 5;
+    const concurrency = 1;
 
     const removeDocuments$ = forkJoin([
       this.challengeService.deleteAllChallenges(),

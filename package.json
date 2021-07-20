@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
+    "config": "ts-node ./src/environments/setenv.ts",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build",
+    "build": "npm run config --prod=false && ng build",
     "build:rocc-client-angular": "cd rocc-client-angular && npm ci && npm run build",
     "build:sage-angular": "cd sage-angular && npm ci && npm run build",
     "install:dependencies": "npm run build:rocc-client-angular && npm run build:sage-angular && npm ci",
@@ -32,6 +33,7 @@
     "@angular/router": "^12.1.1",
     "@sage-bionetworks/rocc-client-angular": "file:rocc-client-angular/dist/rocc-client",
     "@sage-bionetworks/sage-angular": "file:sage-angular/dist/sage-angular",
+    "dotenv": "^10.0.0",
     "deep-equal": "^1.1.1",
     "lodash": "^4.17.21",
     "rxjs": "^6.6.7",
