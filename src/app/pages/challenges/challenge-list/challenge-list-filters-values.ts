@@ -59,3 +59,35 @@ export const challengeStatusFilterValues: FilterValue[] = [
     active: false,
   },
 ];
+
+export const challengeStartDateRangeFilterValues: FilterValue[] = [
+  {
+    value: {
+      start: '2010-07-21',
+      end: '2030-07-21'
+    },
+    title: '',
+    active: true
+  }
+];
+
+export const tagFilterValues: FilterValue[] = [
+  {
+    value: 'a',
+    title: 'A',
+    active: false
+  },
+  {
+    value: 'b',
+    title: 'B',
+    active: false
+  }
+];
+
+export const searchTermsFilterValues: FilterValue[] = [
+  {
+    value: '',
+    title: '',
+    active: true
+  },
+];

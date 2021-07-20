@@ -8,24 +8,42 @@ import {
 import {
   Challenge,
   ChallengeService,
-  ChallengePlatform,
   ChallengePlatformService,
-  Tag,
+  DateRange,
   TagService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
-import { filter, map, switchMap, tap } from 'rxjs/operators';
-import { flow, keyBy, mapValues, values, merge as mergeFp } from 'lodash/fp';
+import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
+import { flow, keyBy, mapValues } from 'lodash/fp';
 import { FilterComponent } from 'src/app/components/filters/filter.component';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
 import { assign } from 'lodash';
 import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
 import {
+  challengeStartDateRangeFilterValues,
   challengeStatusFilterValues,
   challengeTypeFilterValues,
   orderByFilterValues,
   previewTypeFilterValues,
+  tagFilterValues,
+  searchTermsFilterValues,
 } from './challenge-list-filters-values';
+// import { shallowEqual } from '../../../shallowEqual';
+import deepEqual from 'deep-equal';
+import { ChallengeListQuery } from './challenge-list-query';
+// import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
+
+const emptyChallengeListQuery: ChallengeListQuery = {
+  limit: 0,
+  offset: 0,
+  sort: 'createdAt',
+  direction: 'asc',
+  searchTerms: '',
+  tagIds: [],
+  status: [],
+  platformIds: [],
+  startDateRange: {} as DateRange,
+};
 
 @Component({
   selector: 'rocc-challenge-list',
@@ -33,111 +51,96 @@ import {
   styleUrls: ['./challenge-list.component.scss'],
 })
 export class ChallengeListComponent implements OnInit, AfterViewInit {
-  private _challenges: Challenge[] = [];
-  searchResultsCount = 0;
+  challenges: Challenge[] = [];
+  @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
+  private query: BehaviorSubject<ChallengeListQuery> =
+    new BehaviorSubject<ChallengeListQuery>(emptyChallengeListQuery);
+
   limit = 10;
   offset = 0;
-
-  @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
-
-  private _querySource: any = {};
-  private query: BehaviorSubject<any> = new BehaviorSubject<any>({});
-
   orderByFilterValues: FilterValue[] = orderByFilterValues;
   challengeTypeFilterValues: FilterValue[] = challengeTypeFilterValues;
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   tagFilterValues: FilterValue[] = [];
   challengePlatformFilterValues: FilterValue[] = [];
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
+  challengeStartDateRangeFilterValues: FilterValue[] =
+    challengeStartDateRangeFilterValues;
+  searchTermsFilterValues = searchTermsFilterValues;
+  searchResultsCount = 0;
 
   constructor(
-    private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
+    private challengeService: ChallengeService,
     private tagService: TagService
   ) {}
 
   ngOnInit(): void {
-    this.listTags(),
+    this.listTags();
     this.listChallengePlatforms();
   }
 
   ngAfterViewInit(): void {
     const selectedFilters = this.filters
-      // .filter(f => f.group !== 'previewType')
-      .map((f) => f.getStateAsObservable());  // use f to prevent shadow name
+      .filter((f) => f.name !== 'previewType')
+      .map((f) => f.getStateAsObservable()); // use f to prevent shadow name
 
     combineLatest(selectedFilters)
       .pipe(
-        tap((filters) => console.log('filter befofe flow', filter)),
         map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
-        tap((filters) => console.log('filter after flow', filter))
+        map((query): ChallengeListQuery => {
+          query.sort = undefined;
+          query.direction = undefined;
+          if (query.orderBy !== undefined) {
+            query.sort = query.orderBy.substring(
+              ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
+            );
+            query.direction =
+              query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
+            delete query.orderBy;
+          }
+          if (query.searchTerms === '') {
+            query.searchTerms = undefined;
+          }
+          return {
+            limit: this.limit,
+            offset: (this.offset = 0),
+            ...query,
+          } as ChallengeListQuery;
+        }),
+        distinctUntilChanged(deepEqual)
       )
-      .subscribe((query) => {
-        console.log('Query', query);
-        this._challenges = [];
-        query.limit = this.limit;
-        query.offset = this.offset = 0;
-        // this.resultsOffset = 0;
+      .subscribe((query: ChallengeListQuery) => {
+        this.challenges = [];
         this.query.next(query);
       });
 
     this.query
       .pipe(
-        map((query) => mergeFp(query, this.querySource)),
-        tap((query) => console.log('query 2', query)),
-        map((query) => {
-          const orderBy = query.orderBy;
-          query.sort = orderBy.substring(
-            ['+', '-'].includes(orderBy.substring(0, 1)) ? 1 : 0
-          );
-          query.direction = orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
-          query.filter = {
-            name: query.name,
-          };
-
-          if (query.searchTerms === '') {
-            query.searchTerms = undefined;
-          }
-
-          return query;
-        }),
-        tap((query) => console.log('final query', query)),
+        tap((query) => console.log('List challenges', query)),
         switchMap((query) =>
           this.challengeService.listChallenges(
             query.limit,
             query.offset,
-            // query.filter as ChallengeFilter,
             query.sort,
             query.direction,
             query.searchTerms,
             query.tagIds,
             query.status,
-            query.platformIds
-            // query.tagIds
+            query.platformIds,
+            query.startDateRange
           )
-        ) // TODO: extract filter from query
+        )
       )
       .subscribe(
-        (res) => {
-          if (res) {
-            this.searchResultsCount = res.totalResults ? res.totalResults : 0;
-            this.challenges.push(...res.challenges);
+        (page) => {
+          if (page) {
+            this.searchResultsCount = page.totalResults ? page.totalResults : 0;
+            this.challenges.push(...page.challenges);
           }
         },
-        (err) => console.error(err)
+        (err) => console.log(err)
       );
-  }
-
-  get challenges(): Challenge[] {
-    return this._challenges;
-  }
-
-  // get searchResultsCount(): number {
-  //   return this._searchResultsCount;
-  // }
-
-  get querySource(): any {
-    return this._querySource;
   }
 
   onChallengeClick(challenge: Challenge): void {
@@ -154,12 +157,6 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   }
 
   checkAllTags(): void {
-    /* Mutating properties does not trigger the two-way binding change update. */
-    // this.tagFilterValues.forEach((value) => {
-    //   value.active = true;
-    // });
-
-    /* Setting the entire data triggers the two-way binding change update. */
     this.tagFilterValues = this.tagFilterValues.map((value) => ({
       ...value,
       active: true,
@@ -168,43 +165,51 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
   private listTags(): void {
     // TODO: Get all pages
-    this.tagService.listTags(100)
-    .pipe(
-      map((page) => page.tags),
-      map((tags) =>
-        tags.sort((a, b) => a.id.localeCompare(b.id))
+    this.tagService
+      .listTags(100)
+      .pipe(
+        map((page) => page.tags),
+        map((tags) => tags.sort((a, b) => a.id.localeCompare(b.id)))
       )
-    ).subscribe((tags) => {
-      this.tagFilterValues = tags.map(
-        (tag) =>
-          ({
-            value: tag.id,
-            title: tag.id,
-            active: false,
-          } as FilterValue)
+      .subscribe(
+        (tags) => {
+          this.tagFilterValues = tags.map(
+            (tag) =>
+              ({
+                value: tag.id,
+                title: tag.id,
+                active: false,
+              } as FilterValue)
+          );
+        },
+        (err) => console.log(err),
+        () => console.log('Get tags complete')
       );
-    });
   }
 
   private listChallengePlatforms(): void {
     // TODO: Get all pages
     this.challengePlatformService
-    .listChallengePlatforms(100)
-    .pipe(
-      map((page) => page.challengePlatforms),
-      map((platforms) =>
-        platforms.sort((a, b) => a.name.localeCompare(b.name))
+      .listChallengePlatforms(100)
+      .pipe(
+        map((page) => page.challengePlatforms),
+        map((platforms) =>
+          platforms.sort((a, b) => a.name.localeCompare(b.name))
+        )
       )
-    )
-    .subscribe((platforms) => {
-      this.challengePlatformFilterValues = platforms.map(
-        (platform) =>
-          ({
-            value: platform.id,
-            title: platform.name,
-            active: false,
-          } as FilterValue)
+      .subscribe(
+        (platforms) => {
+          this.challengePlatformFilterValues = platforms.map(
+            (platform) =>
+              ({
+                value: platform.id,
+                title: platform.name,
+                active: false,
+              } as FilterValue)
+          );
+        },
+        (err) => console.log(err),
+        () => console.log('Get platforms complete')
       );
-    });
   }
 }
