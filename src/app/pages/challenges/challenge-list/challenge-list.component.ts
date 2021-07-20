@@ -80,21 +80,38 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
     combineLatest(selectedFilters)
       .pipe(
         tap((filters) => console.log('filter befofe flow', filters)),
-        map((filters) => ({
-          limit: this.limit,
-          offset: (this.offset = 0),
-          ...flow([keyBy('name'), mapValues('value')])(filters)
-        }) as ChallengeListQuery),
+        map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
+        map((query) => {
+          if (query.orderBy !== undefined) {
+            query.sort = query.orderBy.substring(
+              ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
+            );
+            query.direction =
+              query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
+            delete query.orderBy;
+          }
+
+          if (query.searchTerms === '') {
+            query.searchTerms = undefined;
+          }
+
+          return {
+            limit: this.limit,
+            offset: (this.offset = 0),
+            ...query
+          } as ChallengeListQuery;
+        }),
         tap((filters) => console.log('filter after flow', filters)),
         distinctUntilChanged(deepEqual),
         // distinctUntilChanged((prev, curr) => {
         //   console.log('prev', prev);
         //   console.log('curr', curr);
-        //   return prev == curr;
+        //   return deepEqual(prev, curr);
+        //   // return prev.tagIds === curr.tagIds;
         // }),
         // distinctUntilKeyChanged('limit')
       )
-      .subscribe((query: any) => {
+      .subscribe((query) => {
         console.log('Query', query);
         this._challenges = [];
         // query.limit = this.limit;
@@ -105,7 +122,7 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
 
     this.query
       .pipe(
-        map((query) => mergeFp(query, this.querySource)),
+        // map((query) => mergeFp(query, this.querySource)),
         tap((query) => console.log('query 2', query)),
         map((query) => {
           if (query.orderBy !== undefined) {
