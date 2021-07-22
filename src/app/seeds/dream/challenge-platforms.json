@@ -1,7 +1,7 @@
 {
     "challengePlatforms": [
         {
-            "id": "biocreaative",
+            "id": "biocreative",
             "name": "BioCreative",
             "url": "https://biocreative.bioinformatics.udel.edu"
         },
