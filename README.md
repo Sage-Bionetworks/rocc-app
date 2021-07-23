@@ -8,7 +8,7 @@ TBA
 ## Specification
 
 - ROCC schemas version: 0.2.0
-- ROCC app version: 0.1.0
+- ROCC app version: 0.2.0
 - Docker image: [sagebionetworks/rocc-app]
 
 
@@ -40,28 +40,16 @@ app in development environment. After each step, you need to come back to the
 project root folder.
 
 1. git clone --recursive https://github.com/Sage-Bionetworks/rocc-app.git
-2. Build the Sage Bionetworks library for Angular
 
-       cd sage-angular/
-       npm ci
-       cd projects/sage-angular
-       npm build sage-angular
+2. Install the dependencies
 
-3. Build the ROCC client library for Angular
+       npm run install:dependencies
 
-       cd rocc-client-angular/rocc-client
-       npm ci
-       npm run build
+3. Start the [ROCC API service] on http://localhost:8080/api/v1
 
-4. Install the dependencies
+4. Start the web client (uses Angular CLI)
 
-       npm ci
-
-5. Start the [ROCC API service] on http://localhost:8080/api/v1
-
-6. Start the web client (uses Angular CLI)
-
-       npm run start
+       npm start
 
 ## Development server
 
