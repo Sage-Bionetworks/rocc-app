@@ -40,7 +40,8 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "preserveSymlinks": true
+            "preserveSymlinks": true,
+            "optimization": false
           },
           "configurations": {
             "production": {
