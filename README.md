@@ -83,3 +83,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [ROCC API service]: https://github.com/Sage-Bionetworks/rocc-service
 [Apache License 2.0]: https://github.com/Sage-Bionetworks/rocc-app/blob/develop/LICENSE
+[sagebionetworks/rocc-app]: https://hub.docker.com/repository/docker/sagebionetworks/rocc-app
