@@ -13,7 +13,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/rocc-app/stats.json"
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/rocc-app/stats.json",
+    "release": "release-it"
   },
   "engines": {
     "node": ">=14.16.1",
@@ -33,8 +34,8 @@
     "@angular/router": "^12.1.1",
     "@sage-bionetworks/rocc-client-angular": "file:rocc-client-angular/dist/rocc-client",
     "@sage-bionetworks/sage-angular": "file:sage-angular/dist/sage-angular",
-    "dotenv": "^10.0.0",
     "deep-equal": "^1.1.1",
+    "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
     "rxjs": "^6.6.7",
     "tslib": "^2.3.0",
@@ -57,6 +58,7 @@
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.6.0",
     "protractor": "~7.0.0",
+    "release-it": "^14.10.0",
     "ts-node": "~10.0.0",
     "tslint": "~6.1.0",
     "typescript": "~4.3.5",

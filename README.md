@@ -7,7 +7,7 @@ TBA
 
 ## Specification
 
-- ROCC schemas version: 0.1.7
+- ROCC schemas version: 0.2.0
 - ROCC app version: 0.1.0
 - Docker image: [sagebionetworks/rocc-app]
 
@@ -27,7 +27,7 @@ TBA
        docker compose pull
 
 4. Come back to this repo and start the ROCC app.
- 
+
        docker compose up --build
 
    - access the app on http://localhost:80 by default
