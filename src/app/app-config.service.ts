@@ -7,7 +7,7 @@ export class AppConfigService {
   private readonly appConfig!: AppConfig;
 
   constructor(@Inject(APP_CONFIG) private config: AppConfig) {
-    this.appConfig = config;
+    this.appConfig = this.config;
   }
 
   getAppConfig(): Observable<AppConfig> {
