@@ -3,7 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 // TODO: fix import from @sage-bionetworks/sage-angular
 import { Section } from '@sage-bionetworks/sage-angular/src/lib/navbar/section';
 import { SECTIONS } from './app-sections';
-import { environment } from '../environments/environment';
+// import { environment } from '../environments/environment';
 
 @Component({
     selector: 'rocc-app',
@@ -13,9 +13,9 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent implements OnInit {
   title = 'ROCC';
-  version = environment.appVersion;
+  version = 'x.y.z';  // environment.appVersion;
   sections: { [key: string]: Section } = SECTIONS;
-  seedDatabase = environment.seedDatabase;
+  seedDatabase = false;  // environment.seedDatabase;
 
   constructor() {}
 

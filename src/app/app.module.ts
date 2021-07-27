@@ -13,10 +13,10 @@ import { BASE_PATH } from '@sage-bionetworks/rocc-client-angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { environment } from '../environments/environment';
 import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
 import { FiltersModule } from './components/filters/filters.module';
-import { AppEnvironmentService } from './app-environment.service';
+import { AppConfigService } from './app-config.service';
+import { AppConfig, APP_CONFIG } from './app.config';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -39,14 +39,18 @@ export function apiConfigFactory(): Configuration {
   ],
   declarations: [AppComponent],
   providers: [
-    { provide: BASE_PATH, useValue: environment.apiBasePath },
     {
-      provide: APP_INITIALIZER,
-      useFactory: (appEnvironmentService: AppEnvironmentService) => () =>
-      appEnvironmentService.load().toPromise(),
-      deps: [AppEnvironmentService],
-      multi: true,
+      provide: BASE_PATH,
+      useFactory: (config: AppConfig) => config.apiUrl,
+      deps: [APP_CONFIG],
     },
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: (appConfigService: AppConfigService) => () =>
+    //     appConfigService.loadAppConfig().toPromise(),
+    //   deps: [AppConfigService, APP_CONFIG],
+    //   multi: true,
+    // },
   ],
   bootstrap: [AppComponent],
 })
