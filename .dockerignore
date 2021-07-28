@@ -1,1 +1,17 @@
+# compiled output
+**/dist
+
+# dependencies
 **/node_modules
+
+# The app configuration must be mounted as a volume
+src/config
+
+# misc
+/.github
+/e2e
+.env
+.env.example
+.gitignore
+.release-it.json
+docker-compose.yml

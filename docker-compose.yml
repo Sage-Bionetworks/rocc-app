@@ -40,6 +40,8 @@ services:
     container_name: rocc-app
     build: .
     restart: always
+    volumes:
+      - ./src/config/config.json:/usr/share/nginx/html/config/config.json:ro
     networks:
       - rocc-networks
     depends_on:
