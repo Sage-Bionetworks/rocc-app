@@ -40,8 +40,11 @@ services:
     container_name: rocc-app
     build: .
     restart: always
-    volumes:
-      - ./src/config/config.json:/usr/share/nginx/html/config/config.json:ro
+    environment:
+      - ENVIRONMENT=prod
+      - API_URL=http://localhost/api
+      - APP_VERSION=x.y.z
+      - SEED_DATABASE=true
     networks:
       - rocc-networks
     depends_on:

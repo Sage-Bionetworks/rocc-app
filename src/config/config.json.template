@@ -2,5 +2,5 @@
   "environment": "${ENVIRONMENT}",
   "apiUrl": "${API_URL}",
   "appVersion": "${APP_VERSION}",
-  "seedDatabase": "${SEED_DATABASE}"
+  "seedDatabase": ${SEED_DATABASE}
 }
