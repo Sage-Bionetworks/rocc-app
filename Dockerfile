@@ -12,7 +12,9 @@ RUN npm run install:dependencies \
 # Setup nginx
 FROM nginx:1.21.0-alpine
 COPY --from=build /app/dist/rocc-app /usr/share/nginx/html
-COPY nginx/nginx-client.conf /etc/nginx/conf.d/default.conf
+# COPY nginx/nginx-client.conf /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/templates /etc/nginx/templates
 
 # WORKDIR /
 COPY 10-envsubst-on-app-config-template.sh /docker-entrypoint.d/.
