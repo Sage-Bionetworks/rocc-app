@@ -3,6 +3,7 @@
     <div class="mat-display-2">Welcome back, {{ username }}!</div>
     <button mat-raised-button color="accent" class="btn" routerLink="explore">Explore Challenges</button>
     <button mat-raised-button class="btn" *ngIf="user" [routerLink]="[username]">Update Profile</button>
+    Configuration: {{appConfig | json}}
   </div>
 </main>
 
