@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, Observable, of } from 'rxjs';
 import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
-import { merge as _merge } from 'lodash';
+import { merge as _merge } from 'lodash-es';
 import {
   ChallengeService,
   ChallengePlatformService,
