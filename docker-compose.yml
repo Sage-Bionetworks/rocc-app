@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  rocc-database:
-    image: sagebionetworks/mongo:4.4.6
+  rocc-db:
+    image: sagebionetworks/mongo:4.4.8
     container_name: rocc-db
     restart: always
     environment:
@@ -23,7 +23,7 @@ services:
       - SERVER_DOMAIN
       - SERVER_PORT
       - DB_PROTOCOL
-      - DB_DOMAIN=rocc-database
+      - DB_DOMAIN=rocc-db
       - DB_PORT
       - DB_DATABASE
       - DB_USERNAME
