@@ -59,6 +59,7 @@ jobs:
         path: .github_env
 
   test:
+    needs: [configure]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
