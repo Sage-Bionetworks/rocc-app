@@ -1,1 +1,17 @@
+# compiled output
+**/dist
+
+# dependencies
 **/node_modules
+
+# misc
+**/.env
+**/.env.example
+**/.git
+**/.github
+**/.gitignore
+**/.release-it.json
+**/*.md
+**/docker-compose.yml
+**/Dockerfile
+**/e2e

@@ -14,10 +14,12 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
-import { flow, keyBy, mapValues } from 'lodash/fp';
+import flow from 'lodash/fp/flow';
+import keyBy from 'lodash/fp/keyBy';
+import mapValues from 'lodash/fp/mapValues';
 import { FilterComponent } from 'src/app/components/filters/filter.component';
 import { FilterValue } from 'src/app/components/filters/filter-value.model';
-import { assign } from 'lodash';
+import { assign } from 'lodash-es';
 import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
 import {
   challengeStartDateRangeFilterValues,
