@@ -1,4 +1,4 @@
-import { User } from './components/user-avatar/user';
+import { User } from './user';
 
 export const USER: User = {
   name: 'Awesome User',
