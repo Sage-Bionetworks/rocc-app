@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { HomepageComponent } from './homepage.component';
 import { MaterialModule } from 'src/app/components/material/material.module';
+import { AvatarModule } from 'src/app/components/avatar/avatar.module';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent }
@@ -15,7 +16,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     FooterModule,
-    MaterialModule
+    MaterialModule,
+    AvatarModule
   ],
   exports: [HomepageComponent]
 })
