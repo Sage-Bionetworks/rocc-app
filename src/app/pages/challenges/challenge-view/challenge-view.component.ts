@@ -15,6 +15,6 @@ export class ChallengeViewComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private challengeService: ChallengeService) {}
 
   ngOnInit(): void {
-    this.challenge$ = this.route.params.pipe(switchMap(res => this.challengeService.getChallenge(res.id)));
+    this.challenge$ = this.route.params.pipe(switchMap(params => this.challengeService.getChallenge(params.id)));
   }
 }

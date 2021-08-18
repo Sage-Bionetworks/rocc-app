@@ -33,7 +33,7 @@
     <div class="rocc-challenge-list-content-results">
       <mat-nav-list class="rocc-challenge-list-content-results-list">
         <rocc-challenge-list-item *ngFor="let challenge of challenges"
-          [challenge]="challenge" (challengeClick)="onChallengeClick($event)">
+          [challenge]="challenge" [routerLink]="['/challenges', challenge.id]">
         </rocc-challenge-list-item>
       </mat-nav-list>
 
