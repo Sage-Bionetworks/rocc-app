@@ -1,6 +1,11 @@
-import { UserProfile } from './components/user-avatar/user-profile';
+import { User } from './components/user-avatar/user';
 
-export const USER_PROFILE: UserProfile = {
-  picture: '',
-  username: 'Awesome User'
+export const USER: User = {
+  name: 'Awesome User',
+  avatarUrl: 'https://i.imgur.com/VeZfqCw.png',
+};
+
+export const EMPTY_USER = {
+  name: '',
+  avatarUrl: '',
 };

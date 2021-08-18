@@ -2,9 +2,9 @@ import { Component, HostBinding, OnInit, Input } from '@angular/core';
 import { AppConfigService } from 'src/app/app-config.service';
 import { AppConfig } from 'src/app/app.config';
 import { PageTitleService } from 'src/app/components/page-title/page-title.service';
-import { UserProfile } from 'src/app/components/user-avatar/user-profile';
+import { User } from 'src/app/components/user-avatar/user';
 // import { AppConfigService, AppC } from 'src/app/app-config.service';
-import { USER_PROFILE } from '../../mock-user';
+import { USER } from '../../mock-user';
 
 @Component({
   selector: 'rocc-homepage',
@@ -13,7 +13,7 @@ import { USER_PROFILE } from '../../mock-user';
 })
 export class HomepageComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
-  user: UserProfile = USER_PROFILE;
+  user: User = USER;
 
   appConfig!: AppConfig;
 

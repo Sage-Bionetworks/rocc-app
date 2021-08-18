@@ -1,8 +1,2 @@
-<picture *ngIf="user.picture; else letterAvatar">
-  <img [ngStyle]="getStyle()" [src]="user.picture" aria-label="User picture">
-</picture>
-<ng-template #letterAvatar>
-  <!-- <ngx-avatar [size]="size" background="#e87629" [name]="user.username"
-    [displayType]="'circle'"></ngx-avatar> -->
-  <ngx-avatar [name]="user.username"></ngx-avatar>
-</ng-template>
+<ngx-avatar [name]="name" [src]="avatarUrl" [size]="size">
+</ngx-avatar>

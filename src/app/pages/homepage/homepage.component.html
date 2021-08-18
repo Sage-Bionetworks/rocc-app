@@ -1,14 +1,14 @@
 <main>
   <div class="header">
     <div class="mat-display-2">Welcome back, {{ username }}!</div>
-    <button mat-raised-button color="accent" class="btn" routerLink="explore">Explore Challenges</button>
-    <button mat-raised-button class="btn" *ngIf="user" [routerLink]="[username]">Update Profile</button>
+    <button mat-raised-button color="accent" class="btn"
+      routerLink="explore">Explore Challenges</button>
+    <button mat-raised-button class="btn" *ngIf="user"
+      [routerLink]="[username]">Update Profile</button>
     Configuration: {{appConfig | json}}
 
-    <!-- <user-avatar class="app-thread-preview-contributor-avatar" [user]="thread.createdBy"
-    [size]="contributorAvatarSize"></user-avatar> -->
-    <sage-user-avatar class="app-thread-preview-contributor-avatar" [user]="user"></sage-user-avatar>
-
+    <sage-user-avatar [name]="user.name" [avatarUrl]="user.avatarUrl" [size]=100></sage-user-avatar>
+    <sage-user-avatar [name]="user.name" [size]=60></sage-user-avatar>
   </div>
 </main>
 

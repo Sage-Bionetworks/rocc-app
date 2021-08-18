@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UserAvatarComponent } from './user-avatar.component';
 
 describe('UserAvatarComponent', () => {
@@ -8,9 +7,8 @@ describe('UserAvatarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserAvatarComponent ]
-    })
-    .compileComponents();
+      declarations: [UserAvatarComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
