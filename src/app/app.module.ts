@@ -18,6 +18,7 @@ import { FiltersModule } from './components/filters/filters.module';
 import { AppConfigService } from './app-config.service';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { PageTitleModule } from './components/page-title/page-title.module';
+import { UserAvatarModule } from './components/user-avatar/user-avatar.module';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -37,7 +38,8 @@ export function apiConfigFactory(): Configuration {
     ApiModule.forRoot(apiConfigFactory),
     DatabaseSeedModule,
     FiltersModule,
-    PageTitleModule
+    PageTitleModule,
+    UserAvatarModule
   ],
   declarations: [AppComponent],
   providers: [
