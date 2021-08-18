@@ -17,6 +17,7 @@ import { DatabaseSeedModule } from './components/database-seed/database-seed.mod
 import { FiltersModule } from './components/filters/filters.module';
 import { AppConfigService } from './app-config.service';
 import { AppConfig, APP_CONFIG } from './app.config';
+import { PageTitleModule } from './components/page-title/page-title.module';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -36,6 +37,7 @@ export function apiConfigFactory(): Configuration {
     ApiModule.forRoot(apiConfigFactory),
     DatabaseSeedModule,
     FiltersModule,
+    PageTitleModule
   ],
   declarations: [AppComponent],
   providers: [

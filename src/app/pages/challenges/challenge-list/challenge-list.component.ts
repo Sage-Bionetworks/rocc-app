@@ -33,6 +33,7 @@ import {
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
 import { ChallengeListQuery } from './challenge-list-query';
+import { PageTitleService } from 'src/app/components/page-title/page-title.service';
 // import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
 
 const emptyChallengeListQuery: ChallengeListQuery = {
@@ -74,12 +75,14 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   constructor(
     private challengePlatformService: ChallengePlatformService,
     private challengeService: ChallengeService,
-    private tagService: TagService
+    private tagService: TagService,
+    private pageTitleService: PageTitleService
   ) {}
 
   ngOnInit(): void {
     this.listTags();
     this.listChallengePlatforms();
+    this.pageTitleService.setTitle('Challenges');
   }
 
   ngAfterViewInit(): void {
