@@ -3,13 +3,10 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 @Component({
   selector: 'rocc-challenges',
   templateUrl: './challenges.component.html',
-  styleUrls: ['./challenges.component.scss']
+  styleUrls: ['./challenges.component.scss'],
 })
-export class ChallengesComponent implements OnInit {
+export class ChallengesComponent {
   @HostBinding('class.main-content') readonly mainContentClass = true;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor() {}
 }

@@ -12,7 +12,7 @@ import { SECTIONS } from './app-sections';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'ROCC';
   sections: { [key: string]: Section } = SECTIONS;
   appVersion = 'x.y.z';
@@ -24,6 +24,4 @@ export class AppComponent implements OnInit {
       this.seedDatabase = config.seedDatabase;
     });
   }
-
-  ngOnInit(): void {}
 }
