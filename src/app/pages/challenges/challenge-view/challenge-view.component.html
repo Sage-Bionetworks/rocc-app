@@ -1,3 +1,43 @@
-<p>challenge-view works!</p>
+<!-- <p>challenge-view works!</p>
 
-<p>{{challenge$ | async | json}}</p>
+<p>{{challenge$ | async | json}}</p> -->
+<div *ngIf="challenge$ | async as challenge">
+  <div class="challenge-detail-container">
+    <div class="challenge-detail-header-container">
+      <!-- go back button placeholder-->
+      <div class="challenge-detail-header-top">
+        <h1>{{ challenge.name }}</h1>
+        <!-- platform placeholder-->
+        <!-- favorite button placeholder-->
+      </div>
+      <div class="challenge-detail-header-middile">
+        <h3>{{ challenge.status }}</h3>
+        <a href="" target="_blank">Go to challenge</a>
+      </div>
+      <div class="challenge-detail-header-bottom">
+        <!-- progress bar placeholder-->
+      </div>
+    </div>
+    <div class="challenge-detail-content-container">
+      <div class="challenge-detail-content-tags-container">
+      <!-- tags placeholder -->
+      </div>
+      <div class="challenge-detail-content-overview-container">
+        <p>{{ challenge.summary }}</p>
+      </div>
+      <div class="challenge-detail-content-organizers-container">
+        <!-- <div class="challenge-detail-content-organizer-box" *ngFor="let organizer of challenge.organizers"> -->
+          <!-- avator placeholder -->
+          <!-- <div>{{ organizer.firstName }} {{ organizer.lastName }}</div> -->
+        <!-- </div> -->
+      </div>
+      <div class="challenge-detail-content-organizations-container">
+        <!-- <div *ngFor="let organization of organizer.organizations">>{{ organization }}</div> -->
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+

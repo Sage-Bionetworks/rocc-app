@@ -32,4 +32,7 @@ export class ChallengeViewComponent implements OnInit {
       this.pageTitleService.setTitle(challenge.name);
     });
   }
+
+  // get organizers objects
+
 }
