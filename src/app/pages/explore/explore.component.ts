@@ -5,10 +5,8 @@ import { Component, HostBinding, OnInit } from '@angular/core';
   templateUrl: './explore.component.html',
   styleUrls: ['./explore.component.scss']
 })
-export class ExploreComponent implements OnInit {
+export class ExploreComponent {
   @HostBinding('class.main-content') readonly mainContentClass = true;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

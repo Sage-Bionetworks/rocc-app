@@ -6,13 +6,11 @@ import { Challenge } from '@sage-bionetworks/rocc-client-angular';
   templateUrl: './challenge-list-item.component.html',
   styleUrls: ['./challenge-list-item.component.scss'],
 })
-export class ChallengeListItemComponent implements OnInit {
+export class ChallengeListItemComponent {
   @Input()
   challenge!: Challenge;
   // TODO: delete this constant and replace with platform property in html
   platform = 'synapse';
 
   constructor() {}
-
-  ngOnInit(): void {}
 }
