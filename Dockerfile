@@ -5,7 +5,7 @@ COPY rocc-client-angular rocc-client-angular/
 COPY sage-angular sage-angular/
 COPY src src/
 COPY angular.json package.json package-lock.json tsconfig.app.json \
-    tsconfig.json tsconfig.spec.json tslint.json ./
+    tsconfig.json tsconfig.spec.json .eslintrc.json ./
 RUN npm run install:dependencies \
     && npm run build
 
