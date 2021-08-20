@@ -1,53 +1,58 @@
 
 <div *ngIf="challenge">
-  <div class="challenge-detail-container">
-    <div class="challenge-detail-header-container">
-      <!-- go back button placeholder-->
-      <div class="challenge-detail-header-top">
-        <h1>{{ challenge.name }}</h1>
-        <!-- platform placeholder-->
-        <!-- favorite button placeholder-->
+  <div class="rocc-challenge-detail-container">
+    <div class="rocc-challenge-detail-header-container">
+      <div class="rocc-challenge-detail-header-top">
+        <div class="rocc-challenge-detail-header-top-box-left">
+          <a class="button-go-back" routerLink="/challenges">Back</a>
+          <div>
+            <span class="rocc-challenge-detail-title">{{ challenge.name }}</span>
+            <mat-icon aria-hidden="false" aria-label="favorite icon">star_border</mat-icon>
+          </div>
+        </div>
+        <div class="rocc-challenge-detail-header-top-box-right">
+          <span>{{ challenge.platformId }}</span>
+        </div>
       </div>
-      <div class="challenge-detail-header-middile">
-        <h3>{{ challenge.status }}</h3>
-        <a href="" target="_blank">Go to challenge</a>
+      <div class="rocc-challenge-detail-header-middle">
+        <span>{{ challenge.status }}</span>
+        <a href="{{challenge.url}}" target="_blank">Go to challenge</a>
       </div>
-      <div class="challenge-detail-header-bottom">
-        <!-- progress bar placeholder-->
+      <div class="rocc-challenge-detail-header-bottom">
+        <div class="rocc-challenge-detail-header-bottom-box-top">
+          <!-- progress bar placeholder-->
+        </div>
+        <div class="rocc-challenge-detail-header-bottom-box-bottom">
+          <span *ngIf="!!challenge.startDate">
+            {{challenge.startDate | date: "yyyy-MM-dd"}}
+          </span>
+          <span *ngIf="!!challenge.endDate">
+            {{challenge.endDate | date: "yyyy-MM-dd"}}
+          </span>
+        </div>
       </div>
     </div>
-    <div class="challenge-detail-content-container">
-      <div class="challenge-detail-content-tags-container">
-      <!-- tags placeholder -->
+    <div class="rocc-challenge-detail-content-container">
+      <div class="rocc-challenge-detail-content-tags-container">
+          <button mat-raised-button class="rocc-challenge-tags" *ngFor="let tag of challenge.tagIds">
+            {{tag}}
+          </button>
       </div>
-      <div class="challenge-detail-content-overview-container">
+      <div class="rocc-challenge-detail-content-overview-container">
         <p>{{ challenge.summary }}</p>
       </div>
-      <div class="challenge-detail-content-organizers-container">
-        <div class="challenge-detail-content-organizer-box" *ngFor="let organizer of personList">
-          <!-- avator placeholder -->
+      <div class="rocc-challenge-detail-content-organizer-container">
+        <div class="rocc-challenge-organizer-box" *ngFor="let organizer of personList">
+          <!-- profile picture placeholder -->
           <div>{{ organizer.firstName }} {{ organizer.lastName }}</div>
-        <!-- </div> -->
+        </div>
       </div>
-      <div class="challenge-detail-content-organizations-container">
-        <div class="challenge-detail-content-organizer-box" *ngFor="let organization of orgList">
+      <div class="rocc-challenge-detail-content-organizations-container">
+        <div class="rocc-challenge-organization-box" *ngFor="let organization of orgList">
           {{ organization.name }}
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>
-<div *ngIf="challenge$">
-   <p>{{challenge$.name}}</p>
-   <br>
-   <div *ngFor="let person of personList">
-    {{person.firstName}}
-  </div>
-  <br>
-  <div *ngFor="let org of orgList">
-     {{org.name}}
-   </div>
-</div>
+
