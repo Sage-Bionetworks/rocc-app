@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { ExploreComponent } from './explore.component';
-import { ChallengePreviewModule } from 'src/app/components/challenge-preview/challenge-preview.module';
+import { ChallengePreviewModule } from '@shared/challenge-preview/challenge-preview.module';
 
 const routes: Routes = [
   { path: '', component: ExploreComponent }

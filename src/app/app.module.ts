@@ -1,8 +1,7 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { NavbarModule, FooterModule } from '@sage-bionetworks/sage-angular';
 import {
   ApiModule,
@@ -10,14 +9,12 @@ import {
   ConfigurationParameters,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BASE_PATH } from '@sage-bionetworks/rocc-client-angular';
-
+import { DatabaseSeedModule } from '@shared/database-seed/database-seed.module';
+import { FiltersModule } from '@shared/filters/filters.module';
+import { PageTitleModule } from '@shared/page-title/page-title.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
-import { FiltersModule } from './components/filters/filters.module';
-import { AppConfigService } from './app-config.service';
 import { AppConfig, APP_CONFIG } from './app.config';
-import { PageTitleModule } from './components/page-title/page-title.module';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
@@ -37,7 +34,7 @@ export function apiConfigFactory(): Configuration {
     ApiModule.forRoot(apiConfigFactory),
     DatabaseSeedModule,
     FiltersModule,
-    PageTitleModule
+    PageTitleModule,
   ],
   declarations: [AppComponent],
   providers: [
