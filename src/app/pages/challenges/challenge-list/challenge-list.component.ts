@@ -33,7 +33,7 @@ import {
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
 import { ChallengeListQuery } from './challenge-list-query';
-import { PageTitleService } from 'src/app/shared/page-title/page-title.service';
+import { PageTitleService } from '@shared/page-title/page-title.service';
 // import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
 
 const emptyChallengeListQuery: ChallengeListQuery = {
