@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PageTitleService } from 'src/app/shared/page-title/page-title.service';
+import { PageTitleService } from '@shared/page-title/page-title.service';
 
 @Component({
   selector: 'rocc-organization-list',

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Challenge } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({

@@ -1,5 +1,5 @@
-import { ButtonToggleFilterValue } from 'src/app/shared/filters/button-toggle-filter/button-toggle-filter-value';
-import { FilterValue } from 'src/app/shared/filters/filter-value.model';
+import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
+import { FilterValue } from '@shared/filters/filter-value.model';
 
 export const orderByFilterValues: FilterValue[] = [
   {

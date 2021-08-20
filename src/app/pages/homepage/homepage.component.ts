@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnInit, Input } from '@angular/core';
 import { AppConfigService } from 'src/app/app-config.service';
 import { AppConfig } from 'src/app/app.config';
-import { PageTitleService } from 'src/app/shared/page-title/page-title.service';
+import { PageTitleService } from '@shared/page-title/page-title.service';
 import { User } from 'src/app/user';
 // import { AppConfigService, AppC } from 'src/app/app-config.service';
 import { USER } from '../../mock-user';

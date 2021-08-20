@@ -17,10 +17,10 @@ import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
-import { FilterComponent } from 'src/app/shared/filters/filter.component';
-import { FilterValue } from 'src/app/shared/filters/filter-value.model';
+import { FilterComponent } from '@shared/filters/filter.component';
+import { FilterValue } from '@shared/filters/filter-value.model';
 import { assign } from 'lodash-es';
-import { ButtonToggleFilterValue } from 'src/app/shared/filters/button-toggle-filter/button-toggle-filter-value';
+import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
 import {
   challengeStartDateRangeFilterValues,
   challengeStatusFilterValues,
