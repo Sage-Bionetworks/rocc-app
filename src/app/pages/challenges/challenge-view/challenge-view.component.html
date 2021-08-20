@@ -23,6 +23,7 @@
           <!-- progress bar placeholder-->
         </div>
         <div class="rocc-challenge-detail-header-bottom-box-bottom">
+          <!-- TODO: Fix empty dates layout; replace with empty element-->
           <span *ngIf="!!challenge.startDate">
             {{challenge.startDate | date: "yyyy-MM-dd"}}
           </span>
@@ -33,25 +34,40 @@
       </div>
     </div>
     <div class="rocc-challenge-detail-content-container">
-      <div class="rocc-challenge-detail-content-tags-container">
-          <button mat-raised-button class="rocc-challenge-tags" *ngFor="let tag of challenge.tagIds">
-            {{tag}}
-          </button>
-      </div>
-      <div class="rocc-challenge-detail-content-overview-container">
-        <p>{{ challenge.summary }}</p>
-      </div>
-      <div class="rocc-challenge-detail-content-organizer-container">
-        <div class="rocc-challenge-organizer-box" *ngFor="let organizer of personList">
-          <!-- profile picture placeholder -->
-          <div>{{ organizer.firstName }} {{ organizer.lastName }}</div>
-        </div>
-      </div>
-      <div class="rocc-challenge-detail-content-organizations-container">
-        <div class="rocc-challenge-organization-box" *ngFor="let organization of orgList">
-          {{ organization.name }}
-        </div>
-      </div>
+      <mat-card class="rocc-challenge-detail-content-overview-container">
+        <mat-card-header>
+          <mat-card-title  class="rocc-challenge-overview-title">Overview</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ challenge.summary }}</p>
+          <div class="rocc-challenge-detail-content-tags-container">
+            <button mat-raised-button class="rocc-challenge-tags" *ngFor="let tag of challenge.tagIds">
+              {{tag}}
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="rocc-challenge-detail-content-organizer-container">
+        <mat-card-header>
+          <mat-card-title>Organizers</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="rocc-challenge-organizer-box" *ngFor="let organizer of personList">
+            <!-- TODO: Add profile picture -->
+            <span>{{ organizer.firstName }} {{ organizer.lastName }}</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="rocc-challenge-detail-content-organization-container">
+        <mat-card-header>
+          <mat-card-title>Organization</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="rocc-challenge-organization-box" *ngFor="let organization of orgList">
+            {{ organization.name }}
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>
