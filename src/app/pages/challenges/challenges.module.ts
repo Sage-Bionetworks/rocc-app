@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
-import { MaterialModule } from '../../components/material/material.module';
-import { FiltersModule } from '../../components/filters/filters.module';
+import { MaterialModule } from '../../shared/material/material.module';
+import { FiltersModule } from '../../shared/filters/filters.module';
 import { ChallengesComponent } from './challenges.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { ChallengeListItemComponent } from './challenge-list-item/challenge-list-item.component';

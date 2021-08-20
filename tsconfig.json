@@ -28,5 +28,9 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "paths": {
+    "@pages/*": ["./src/app/pages/*"],
+    "@shared/*": ["./src/app/shared/*"],
+  },
 }

@@ -13,11 +13,11 @@ import { BASE_PATH } from '@sage-bionetworks/rocc-client-angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DatabaseSeedModule } from './components/database-seed/database-seed.module';
-import { FiltersModule } from './components/filters/filters.module';
+import { DatabaseSeedModule } from './shared/database-seed/database-seed.module';
+import { FiltersModule } from './shared/filters/filters.module';
 import { AppConfigService } from './app-config.service';
 import { AppConfig, APP_CONFIG } from './app.config';
-import { PageTitleModule } from './components/page-title/page-title.module';
+import { PageTitleModule } from './shared/page-title/page-title.module';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {

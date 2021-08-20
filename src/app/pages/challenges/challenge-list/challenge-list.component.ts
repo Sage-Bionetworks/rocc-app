@@ -17,10 +17,10 @@ import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
-import { FilterComponent } from 'src/app/components/filters/filter.component';
-import { FilterValue } from 'src/app/components/filters/filter-value.model';
+import { FilterComponent } from 'src/app/shared/filters/filter.component';
+import { FilterValue } from 'src/app/shared/filters/filter-value.model';
 import { assign } from 'lodash-es';
-import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
+import { ButtonToggleFilterValue } from 'src/app/shared/filters/button-toggle-filter/button-toggle-filter-value';
 import {
   challengeStartDateRangeFilterValues,
   challengeStatusFilterValues,
@@ -33,7 +33,7 @@ import {
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
 import { ChallengeListQuery } from './challenge-list-query';
-import { PageTitleService } from 'src/app/components/page-title/page-title.service';
+import { PageTitleService } from 'src/app/shared/page-title/page-title.service';
 // import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
 
 const emptyChallengeListQuery: ChallengeListQuery = {
