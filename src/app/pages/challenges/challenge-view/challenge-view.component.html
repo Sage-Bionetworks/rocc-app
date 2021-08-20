@@ -1,7 +1,5 @@
-<!-- <p>challenge-view works!</p>
 
-<p>{{challenge$ | async | json}}</p> -->
-<div *ngIf="challenge$ | async as challenge">
+<div *ngIf="challenge">
   <div class="challenge-detail-container">
     <div class="challenge-detail-header-container">
       <!-- go back button placeholder-->
@@ -26,13 +24,15 @@
         <p>{{ challenge.summary }}</p>
       </div>
       <div class="challenge-detail-content-organizers-container">
-        <!-- <div class="challenge-detail-content-organizer-box" *ngFor="let organizer of challenge.organizers"> -->
+        <div class="challenge-detail-content-organizer-box" *ngFor="let organizer of personList">
           <!-- avator placeholder -->
-          <!-- <div>{{ organizer.firstName }} {{ organizer.lastName }}</div> -->
+          <div>{{ organizer.firstName }} {{ organizer.lastName }}</div>
         <!-- </div> -->
       </div>
       <div class="challenge-detail-content-organizations-container">
-        <!-- <div *ngFor="let organization of organizer.organizations">>{{ organization }}</div> -->
+        <div class="challenge-detail-content-organizer-box" *ngFor="let organization of orgList">
+          {{ organization.name }}
+        </div>
       </div>
     </div>
 
@@ -40,4 +40,14 @@
 
   </div>
 </div>
-
+<div *ngIf="challenge$">
+   <p>{{challenge$.name}}</p>
+   <br>
+   <div *ngFor="let person of personList">
+    {{person.firstName}}
+  </div>
+  <br>
+  <div *ngFor="let org of orgList">
+     {{org.name}}
+   </div>
+</div>

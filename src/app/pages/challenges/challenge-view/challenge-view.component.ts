@@ -1,38 +1,71 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import {
+  ChallengeService,
+  OrganizationService,
+  PersonService
+} from '@sage-bionetworks/rocc-client-angular';
 import {
   Challenge,
-  ChallengeService,
+  Organization,
+  Person
 } from '@sage-bionetworks/rocc-client-angular';
-import { switchMap } from 'rxjs/operators';
+import { forkJoin, Observable, of } from 'rxjs';
+import { switchMap, tap } from 'rxjs/operators';
 import { PageTitleService } from 'src/app/components/page-title/page-title.service';
-
 @Component({
   selector: 'rocc-challenge-view',
   templateUrl: './challenge-view.component.html',
   styleUrls: ['./challenge-view.component.scss'],
 })
 export class ChallengeViewComponent implements OnInit {
-  challenge$!: Observable<Challenge>;
+  // challenge$!: Observable<Challenge>;
+  challenge: any;
+  personList: Person[] = [];
+  orgList: Organization[] = [];
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private challengeService: ChallengeService,
+    private organizationService: OrganizationService,
+    private personService: PersonService,
     private pageTitleService: PageTitleService
   ) {}
 
+
   ngOnInit(): void {
-    this.challenge$ = this.route.params.pipe(
-      switchMap((params) => this.challengeService.getChallenge(params.id))
+    // this.challenge$ = this.route.params.pipe(
+    //   switchMap((params) => this.challengeService.getChallenge(params.id))
+    // );
+
+    this.route.params.pipe(
+      switchMap((params) => this.challengeService.getChallenge(params.id)),
+      tap(challengeRes => {
+        this.challenge = challengeRes;
+        this.pageTitleService.setTitle(challengeRes.name);
+      }),
+      switchMap(challenge => 
+        forkJoin(
+          challenge.organizerIds
+            .map(organizerId => this.personService.getPerson(organizerId))
+        )
+      ),
+      tap((persons)=> this.personList = persons),
+      switchMap((persons) => {
+        const orgIds = [...new Set(persons.flatMap(person => person.organizationIds))]
+        return  forkJoin(
+          orgIds
+            .map((orgId) => this.organizationService.getOrganization(orgId))
+        )
+      }),
+      tap(org => this.orgList = org)
+    ).subscribe(
+      () => console.log("done")
     );
-
-    this.challenge$.subscribe(challenge => {
-      this.pageTitleService.setTitle(challenge.name);
-    });
+    // this.challenge$.subscribe(challenge => {
+    //   this.pageTitleService.setTitle(challenge.name);
+    // });
   }
-
-  // get organizers objects
 
 }
