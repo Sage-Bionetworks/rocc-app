@@ -19,11 +19,14 @@
         <span>{{ challenge.status }}</span>
         <a href="{{ challenge.url }}" target="_blank">Go to challenge</a>
       </div>
-      <div class="rocc-challenge-detail-header-bottom">
-        <div class="rocc-challenge-detail-header-bottom-box-top">
-          <!-- progress bar placeholder-->
-        </div>
-        <div class="rocc-challenge-detail-header-bottom-box-bottom">
+      <div class="rocc-challenge-detail-header-bottom"
+        *ngIf="challenge.startDate !== undefined && challenge.endDate !== undefined">
+        <mat-progress-bar
+          mode="determinate"
+          color="accent"
+          value="{{ getProgress(challenge) }}">
+        </mat-progress-bar>
+        <div class="rocc-challenge-detail-dates-box">
           <!-- TODO: Fix empty dates layout; replace with empty element-->
           <span *ngIf="!!challenge.startDate">
             {{challenge.startDate | date: "yyyy-MM-dd"}}

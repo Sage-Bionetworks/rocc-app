@@ -68,4 +68,19 @@ export class ChallengeViewComponent implements OnInit {
     // });
   }
 
+  getProgress(challenge: Challenge): number {
+
+    if (challenge.status == "active") {
+      
+      const nowDate = new Date
+      const startTime = (typeof challenge.startDate !== "undefined") ? new Date(challenge.startDate) : 0;
+      const endTime = (typeof challenge.endDate !== "undefined") ? new Date(challenge.endDate) : 0;
+
+      return +endTime - +startTime/+nowDate - +startTime * 100
+      
+    } else {
+
+      return challenge.status == 'completed' ? 100 : 0
+    }
+  }
 }
