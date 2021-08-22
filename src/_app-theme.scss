@@ -1,10 +1,11 @@
 @import '~@angular/material/theming';
 
-@import './app/pages/challenges/challenges-theme';
-@import './app/pages/homepage/homepage-theme';
-@import './app/pages/organizations/organizations-theme';
-@import './app/pages/signin/signin-theme';
-@import './app/pages/signup/signup-theme';
+// Styles of the pages
+@import 'challenges/challenges-theme';
+@import 'homepage/homepage-theme';
+@import 'organizations/organizations-theme';
+@import 'signin/signin-theme';
+@import 'signup/signup-theme';
 
 // Styles for the docs app that are based on the current theme.
 @mixin rocc-app-theme($theme) {
