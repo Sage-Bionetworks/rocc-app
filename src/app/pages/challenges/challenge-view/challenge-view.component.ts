@@ -23,6 +23,7 @@ export class ChallengeViewComponent implements OnInit {
   challenge: any;
   personList: Person[] = [];
   orgList: Organization[] = [];
+  progressValue = 0;
 
   constructor(
     private router: Router,
@@ -71,16 +72,16 @@ export class ChallengeViewComponent implements OnInit {
   getProgress(challenge: Challenge): number {
 
     if (challenge.status == "active") {
-      
-      const nowDate = new Date
-      const startTime = (typeof challenge.startDate !== "undefined") ? new Date(challenge.startDate) : 0;
-      const endTime = (typeof challenge.endDate !== "undefined") ? new Date(challenge.endDate) : 0;
-
-      return +endTime - +startTime/+nowDate - +startTime * 100
-      
+      // if either of start/endDates not provided, still show progress bar, but return zero
+      if ((typeof challenge.startDate !== "undefined") && (typeof challenge.endDate !== "undefined")) {
+        const totalTime = +new Date(challenge.endDate) - +new Date(challenge.startDate)
+        const runTime = +new Date - +new Date(challenge.startDate)
+        this.progressValue = runTime/totalTime * 100
+      }
     } else {
-
-      return challenge.status == 'completed' ? 100 : 0
+      this.progressValue = challenge.status == 'completed' ? 100 : 0
     }
+
+    return this.progressValue
   }
 }
