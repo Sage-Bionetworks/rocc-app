@@ -10,7 +10,7 @@ import {
   Organization,
   Person
 } from '@sage-bionetworks/rocc-client-angular';
-import { forkJoin, Observable, of } from 'rxjs';
+import { forkJoin } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 import { PageTitleService } from '@shared/page-title/page-title.service';
 
@@ -25,7 +25,7 @@ export class ChallengeViewComponent implements OnInit {
   @Output() selectedChange = new EventEmitter<boolean>();
 
   // challenge$!: Observable<Challenge>;
-  challenge: any;
+  challenge!: Challenge;
   personList: Person[] = [];
   orgList: Organization[] = [];
   progressValue: number = 0;
@@ -44,7 +44,9 @@ export class ChallengeViewComponent implements OnInit {
     // this.challenge$ = this.route.params.pipe(
     //   switchMap((params) => this.challengeService.getChallenge(params.id))
     // );
-
+    // this.challenge$.subscribe(challenge => {
+    //   this.pageTitleService.setTitle(challenge.name);
+    // });
     this.route.params.pipe(
       switchMap((params) => this.challengeService.getChallenge(params.id)),
       tap(challengeRes => {
@@ -69,9 +71,6 @@ export class ChallengeViewComponent implements OnInit {
     ).subscribe(
       () => console.log("done")
     );
-    // this.challenge$.subscribe(challenge => {
-    //   this.pageTitleService.setTitle(challenge.name);
-    // });
   }
 
   getProgress(challenge: Challenge): number {
