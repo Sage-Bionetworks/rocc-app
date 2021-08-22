@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
   ChallengeService,
@@ -19,11 +19,15 @@ import { PageTitleService } from 'src/app/components/page-title/page-title.servi
   styleUrls: ['./challenge-view.component.scss'],
 })
 export class ChallengeViewComponent implements OnInit {
+
+  @Input() selected!: boolean;
+  @Output() selectedChange = new EventEmitter<boolean>();
+
   // challenge$!: Observable<Challenge>;
   challenge: any;
   personList: Person[] = [];
   orgList: Organization[] = [];
-  progressValue = 0;
+  progressValue: number = 0;
 
   constructor(
     private router: Router,
@@ -83,5 +87,10 @@ export class ChallengeViewComponent implements OnInit {
     }
 
     return this.progressValue
+  }
+
+  public toggleSelected() {
+    this.selected = !this.selected;
+    this.selectedChange.emit(this.selected);
   }
 }
