@@ -7,16 +7,17 @@
           <a class="button-go-back" routerLink="/challenges">Back</a>
           <div>
             <span class="rocc-challenge-detail-title">{{ challenge.name }}</span>
-            <!-- TODO: Complete favorite button -->
+            <!-- TODO: replace with favorite button component -->
             <mat-icon aria-hidden="false" aria-label="favorite icon">star_border</mat-icon>
           </div>
         </div>
         <div class="rocc-challenge-detail-header-top-box-right">
+          <img src="assets/img/logo/{{challenge.platformId}}.svg" alt="platform-logo">
           <span>{{ challenge.platformId }}</span>
         </div>
       </div>
       <div class="rocc-challenge-detail-header-middle">
-        <span>{{ challenge.status }}</span>
+        <span>{{ challenge.status | titlecase }}</span>
         <a href="{{ challenge.url }}" target="_blank">Go to challenge</a>
       </div>
       <div class="rocc-challenge-detail-header-bottom">

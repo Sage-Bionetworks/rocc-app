@@ -58,10 +58,20 @@ $progress-bar-col: #F178B6;
     }
 
     .rocc-challenge-detail-header-top-box-right {
+      display: flex;
+      flex-direction: column;
+      margin-right: 40px;
+      margin-top: 40px;
+      align-items: center;
+      
+      img {
+        height: 80px;
+        width: 80px;
+      }
 
       span {
-        margin-right: 40px;
-        font-size: 2.5em;
+        font-size: 1.5em;
+        margin-top: 5px;
       }
     }
   }
