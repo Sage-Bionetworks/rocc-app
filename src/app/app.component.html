@@ -1,7 +1,6 @@
-<sage-navbar class="mat-elevation-z6"
-  [title]="title"
-  [sections]="sections"
-></sage-navbar>
+<sage-navbar class="mat-elevation-z6" [title]="title" [sections]="sections"
+  [userAvatar]="userAvatar" [userMenuItems]="userMenuItems"
+  (userMenuItemSelected)="selectUserMenuItem($event)"></sage-navbar>
 <router-outlet></router-outlet>
 <rocc-database-seed *ngIf="seedDatabase"></rocc-database-seed>
 
