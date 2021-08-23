@@ -1,10 +1,14 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 // TODO: fix import from @sage-bionetworks/sage-angular
-import { Section, MenuItem, Avatar, MOCK_AVATAR_32 } from '@sage-bionetworks/sage-angular';
+import {
+  Section,
+  MenuItem,
+  Avatar,
+  MOCK_AVATAR_32,
+} from '@sage-bionetworks/sage-angular';
 import { AppConfigService } from './app-config.service';
 import { SECTIONS } from './app-sections';
-// import { environment } from '../environments/environment';
 
 @Component({
   selector: 'rocc-app',
@@ -17,7 +21,7 @@ export class AppComponent {
   sections: { [key: string]: Section } = SECTIONS;
   appVersion = 'x.y.z';
   seedDatabase = false;
-  avatar: Avatar = MOCK_AVATAR_32;
+  userAvatar: Avatar = MOCK_AVATAR_32;
   userMenuItems: MenuItem[] = [
     {
       name: 'Profile',
