@@ -5,7 +5,7 @@ export const USER: User = {
   avatarUrl: 'https://i.imgur.com/VeZfqCw.png',
 };
 
-export const EMPTY_USER = {
+export const EMPTY_USER: User = {
   name: '',
   avatarUrl: '',
 };
