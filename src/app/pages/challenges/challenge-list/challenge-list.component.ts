@@ -33,7 +33,7 @@ import {
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
 import { ChallengeListQuery } from './challenge-list-query';
-import { PageTitleService } from '@shared/page-title/page-title.service';
+import { PageTitleService } from 'sage-angular/dist/sage-angular';
 // import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
 
 const emptyChallengeListQuery: ChallengeListQuery = {

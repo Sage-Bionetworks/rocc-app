@@ -6,7 +6,7 @@ import {
   ChallengeService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { switchMap } from 'rxjs/operators';
-import { PageTitleService } from '@shared/page-title/page-title.service';
+import { PageTitleService } from 'sage-angular/dist/sage-angular';
 
 @Component({
   selector: 'rocc-challenge-view',
