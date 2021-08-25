@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 // TODO: fix import from @sage-bionetworks/sage-angular
 import {
@@ -33,7 +34,10 @@ export class AppComponent {
     },
   ];
 
-  constructor(private appConfigService: AppConfigService) {
+  constructor(
+    private router: Router,
+    private appConfigService: AppConfigService
+  ) {
     this.appConfigService.getAppConfig().subscribe((config) => {
       this.appVersion = config.appVersion;
       this.seedDatabase = config.seedDatabase;
@@ -42,5 +46,9 @@ export class AppComponent {
 
   selectUserMenuItem(menuItem: MenuItem): void {
     console.log('Navbar user menu item selected', menuItem);
+  }
+
+  clickNotificationButton(): void {
+    this.router.navigate(['notifications']);
   }
 }
