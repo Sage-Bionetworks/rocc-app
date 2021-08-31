@@ -33,13 +33,13 @@ export class SignupComponent implements OnInit {
     this.pageTitleService.setTitle('Join ROCC • ROCC');
 
     this.signupForm = this.formBuilder.group({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
+      email: new FormControl('awesome-user@example.org', [Validators.required, Validators.email]),
+      password: new FormControl('awesome-password', [
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(64),
       ]),
-      username: new FormControl('', [
+      username: new FormControl('awesome-user', [
         Validators.required,
         Validators.minLength(3),
         Validators.maxLength(25),
