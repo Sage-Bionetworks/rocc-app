@@ -7,7 +7,11 @@
       [routerLink]="[username]">Update Profile</button>
     Configuration: {{appConfig | json}}
 
-    <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100></sage-avatar>
+    <br>
+    <a mat-raised-button class="btn" routerLink="signup">Sign Up</a>
+
+    <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100>
+    </sage-avatar>
     <sage-avatar [name]="user.name" [size]=60></sage-avatar>
   </div>
 </main>
