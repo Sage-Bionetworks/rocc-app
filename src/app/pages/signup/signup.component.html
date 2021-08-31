@@ -8,14 +8,18 @@
     </mat-form-field>
 
     <mat-form-field>
+      <input matInput placeholder="Create a password" type="password"
+        formControlName="password">
+      <mat-error *ngIf="password?.invalid">{{getPasswordErrorMessage()}}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
       <input matInput placeholder="Enter a username" type="text"
         formControlName="username">
       <mat-error *ngIf="username?.invalid">{{getUsernameErrorMessage()}}
       </mat-error>
     </mat-form-field>
-
-
-
 
     <mat-error *ngIf="errors.other">
       ERROR: {{errors.other}}

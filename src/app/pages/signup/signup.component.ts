@@ -33,27 +33,49 @@ export class SignupComponent implements OnInit {
     this.pageTitleService.setTitle('Join ROCC • ROCC');
 
     this.signupForm = this.formBuilder.group({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(64),
+      ]),
       username: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
         Validators.maxLength(25),
         // forbiddenNameValidator(/bob/i) // <-- Here's how you pass in the custom
       ]),
-
-      email: ['', [Validators.required, Validators.email]],
-      // passwordGroup: formBuilder.group({
-      //   password: ['', [Validators.required]],
-      //   confirmPassword: ['', [Validators.required]],
-      // }), // , { validator: PasswordValidation.matchPassword }
     });
+  }
+
+  get email() {
+    return this.signupForm.get('email');
+  }
+
+  get password() {
+    return this.signupForm.get('password');
   }
 
   get username() {
     return this.signupForm.get('username');
   }
 
-  get email() {
-    return this.signupForm.get('email');
+  getEmailErrorMessage(): string {
+    if (this.email?.hasError('required') || this.email?.hasError('email')) {
+      return 'You must enter a valid email.';
+    }
+    return '';
+  }
+
+  getPasswordErrorMessage(): string {
+    if (
+      this.password?.hasError('required') ||
+      this.password?.hasError('minlength') ||
+      this.password?.hasError('maxlength')
+    ) {
+      return 'A password between 6 and 64 characters is required.';
+    }
+    return '';
   }
 
   getUsernameErrorMessage(): string {
@@ -62,14 +84,7 @@ export class SignupComponent implements OnInit {
       this.username?.hasError('minlength') ||
       this.username?.hasError('maxlength')
     ) {
-      return 'A username between 3 and 64 characters is required.';
-    }
-    return '';
-  }
-
-  getEmailErrorMessage(): string {
-    if (this.email?.hasError('required') || this.email?.hasError('email')) {
-      return 'You must enter a valid email';
+      return 'A username between 3 and 25 characters is required.';
     }
     return '';
   }
