@@ -1,5 +1,30 @@
 <main>
-  <p>signup works!</p>
+  <form class="form-container" [formGroup]="signupForm" novalidate>
+    <mat-form-field>
+      <input matInput placeholder="Enter your email" type="email"
+        formControlName="email">
+      <mat-error *ngIf="email?.invalid">{{getEmailErrorMessage()}}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Enter a username" type="text"
+        formControlName="username">
+      <mat-error *ngIf="username?.invalid">{{getUsernameErrorMessage()}}
+      </mat-error>
+    </mat-form-field>
+
+
+
+
+    <mat-error *ngIf="errors.other">
+      ERROR: {{errors.other}}
+    </mat-error>
+    <div class="form-button-container">
+      <button mat-raised-button color="primary" [disabled]="signupForm.invalid"
+        (click)="createUserAccount()">Register</button>
+    </div>
+  </form>
 </main>
 
 <sage-footer></sage-footer>
