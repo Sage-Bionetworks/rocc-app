@@ -6,9 +6,7 @@ import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { MaterialModule } from '@shared/material/material.module';
 import { SignupComponent } from './signup.component';
 
-const routes: Routes = [
-  { path: '', component: SignupComponent }
-];
+const routes: Routes = [{ path: '', component: SignupComponent }];
 
 @NgModule({
   imports: [
@@ -17,9 +15,9 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forChild(routes),
     FooterModule,
-    MaterialModule
+    MaterialModule,
   ],
   declarations: [SignupComponent],
-  exports: [SignupComponent]
+  exports: [SignupComponent],
 })
 export class SignupModule {}

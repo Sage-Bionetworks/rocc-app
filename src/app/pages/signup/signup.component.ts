@@ -8,6 +8,12 @@ import {
   Validators,
 } from '@angular/forms';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
+import {
+  UserService,
+  UserCreateRequest,
+  ModelError as RoccClientError,
+} from '@sage-bionetworks/rocc-client-angular';
+import { isRoccClientError } from '@shared/rocc-client-error';
 
 @Component({
   selector: 'rocc-signup',
@@ -19,21 +25,24 @@ export class SignupComponent implements OnInit {
 
   signupForm!: FormGroup;
   errors = {
-    email: undefined,
     other: undefined,
-  };
+  } as { other?: string };
   submitted = false;
 
   constructor(
     private formBuilder: FormBuilder,
+    private UserService: UserService,
     private pageTitleService: PageTitleService
   ) {}
 
   ngOnInit(): void {
-    this.pageTitleService.setTitle('Join ROCC • ROCC');
+    this.pageTitleService.setTitle('Join ROCC • ROCC'); // TODO Add to subscription array + destroy
 
     this.signupForm = this.formBuilder.group({
-      email: new FormControl('awesome-user@example.org', [Validators.required, Validators.email]),
+      email: new FormControl('awesome-user@example.org', [
+        Validators.required,
+        Validators.email,
+      ]),
       password: new FormControl('awesome-password', [
         Validators.required,
         Validators.minLength(6),
@@ -85,9 +94,40 @@ export class SignupComponent implements OnInit {
       this.username?.hasError('maxlength')
     ) {
       return 'A username between 3 and 25 characters is required.';
+    } else if (this.username?.hasError('alreadyExists')) {
+      return `Username ${this.username?.value} is not available.`;
     }
     return '';
   }
 
-  createUserAccount(): void {}
+  createUserAccount(): void {
+    if (this.signupForm.invalid) {
+      return;
+    }
+    this.submitted = true;
+    this.errors.other = undefined;
+
+    const userCreateRequest: UserCreateRequest = {
+      login: this.username?.value,
+      email: this.email?.value,
+    };
+
+    this.UserService.createUser(userCreateRequest).subscribe(
+      (res) => {
+        console.log('UserCreateResponse:', res);
+      },
+      (err) => {
+        const error = err.error as RoccClientError;
+        if (isRoccClientError(error)) {
+          if (error.status == 409) {
+            this.username?.setErrors({
+              alreadyExists: true,
+            });
+          } else {
+            this.errors.other = `Server error: ${error.title}`;
+          }
+        }
+      }
+    );
+  }
 }
