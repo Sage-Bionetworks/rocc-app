@@ -33,7 +33,7 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - rocc-database
+      - rocc-db
 
   rocc-app:
     image: sagebionetworks/rocc-app:0.3.0

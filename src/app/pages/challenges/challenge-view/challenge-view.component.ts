@@ -12,7 +12,8 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoin } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
-import { PageTitleService } from '@shared/page-title/page-title.service';
+import { switchMap } from 'rxjs/operators';
+import { PageTitleService } from 'sage-angular/dist/sage-angular';
 
 @Component({
   selector: 'rocc-challenge-view',
