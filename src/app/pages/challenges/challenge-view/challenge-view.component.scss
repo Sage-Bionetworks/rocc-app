@@ -41,7 +41,7 @@ $base_size: 14px;
         position: relative;
         margin-left: 10px;
         margin-bottom: 30px;
-        font-size: 18px;
+        font-size: 1.5em;
 
         &::before {
           // go back arrow
@@ -87,13 +87,13 @@ $base_size: 14px;
       align-items: center;
 
       img {
-        height: 8em;
-        width: 8em;
+        height: 6em;
+        width: 6em;
       }
 
       span {
         margin-top: 5px;
-        font-size: 1.5em;
+        font-size: 1.52em;
       }
     }
   }
@@ -101,7 +101,8 @@ $base_size: 14px;
   .rocc-challenge-detail-header-middle {
     display: flex;
     align-items: center;
-    font-size: 1.6em;
+    margin-top: -10px;
+    font-size: 1.5em;
 
     span {
       padding-right: 15px;
@@ -127,7 +128,7 @@ $base_size: 14px;
       align-items: center;
       justify-content: space-between;
       margin-top: 20px;
-      font-size: 1.6em;
+      font-size: 1.5em;
     }
   }
 }
@@ -154,8 +155,9 @@ $base_size: 14px;
     @extend .container-style;
 
     p {
-      font-size: 2em;
+      font-size: 1.5em;
       line-height: 1.4em;
+      margin-left: 16px;
     }
 
     .rocc-challenge-detail-content-tags-container {
