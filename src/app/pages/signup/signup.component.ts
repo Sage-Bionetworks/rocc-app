@@ -3,8 +3,6 @@ import {
   FormBuilder,
   FormControl,
   FormGroup,
-  FormGroupDirective,
-  NgForm,
   Validators,
 } from '@angular/forms';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
@@ -36,7 +34,7 @@ export class SignupComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.pageTitleService.setTitle('Join ROCC • ROCC'); // TODO Add to subscription array + destroy
+    this.pageTitleService.setTitle('Join ROCC • ROCC');
 
     this.signupForm = this.formBuilder.group({
       email: new FormControl('awesome-user@example.org', [
