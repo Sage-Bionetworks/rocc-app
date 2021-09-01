@@ -6,26 +6,6 @@ import { CanActivateUser } from './can-activate-user.guard';
 import { CanActivateOrg } from './can-activate-org.guard';
 
 export const routes: Routes = [
-  // {
-  //   path: 'explore',
-  //   loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
-  // },
-  // {
-  //   matcher: (url) => {
-  //     console.log('url', url);
-  //     if (url.length === 1 && url[0].path.match('awesome-user')) {  // /^@[\w]+$/gm
-  //       console.log('It is a match');
-  //       return {
-  //         consumed: url,
-  //         posParams: {
-  //           username: new UrlSegment(url[0].path.substr(1), {})
-  //         }
-  //       };
-  //     }
-  //     return null;
-  //   },
-  //   component: ProfileComponent
-  // },
   {
     path: 'challenges',
     loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
@@ -56,9 +36,8 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
   },
   {
-    path: ':username',
-    loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule),
-    // canActivate: [CanActivateOrg]
+    path: ':login',
+    loadChildren: () => import('./pages/account').then(m => m.AccountModule),
   },
   // {
   //   path: ':username',
