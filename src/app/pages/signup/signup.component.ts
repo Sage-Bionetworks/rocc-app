@@ -21,7 +21,7 @@ import { isRoccClientError } from '@shared/rocc-client-error';
 export class SignupComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
 
-  signupForm!: FormGroup;
+  newUserForm!: FormGroup;
   errors = {
     other: undefined,
   } as { other?: string };
@@ -36,7 +36,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.pageTitleService.setTitle('Join ROCC • ROCC');
 
-    this.signupForm = this.formBuilder.group({
+    this.newUserForm = this.formBuilder.group({
       email: new FormControl('awesome-user@example.org', [
         Validators.required,
         Validators.email,
@@ -56,15 +56,15 @@ export class SignupComponent implements OnInit {
   }
 
   get email() {
-    return this.signupForm.get('email');
+    return this.newUserForm.get('email');
   }
 
   get password() {
-    return this.signupForm.get('password');
+    return this.newUserForm.get('password');
   }
 
   get username() {
-    return this.signupForm.get('username');
+    return this.newUserForm.get('username');
   }
 
   getEmailErrorMessage(): string {
@@ -93,13 +93,13 @@ export class SignupComponent implements OnInit {
     ) {
       return 'A username between 3 and 25 characters is required.';
     } else if (this.username?.hasError('alreadyExists')) {
-      return `Username ${this.username?.value} is not available.`;
+      return `The username ${this.username?.value} is not available.`;
     }
     return '';
   }
 
   createUserAccount(): void {
-    if (this.signupForm.invalid) {
+    if (this.newUserForm.invalid) {
       return;
     }
     this.submitted = true;
