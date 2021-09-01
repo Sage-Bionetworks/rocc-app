@@ -1,10 +1,30 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlSegment } from '@angular/router';
+import { ProfileComponent } from './pages/profile';
+import { CanLoadUser } from './can-load-user.guard';
+import { CanActivateUser } from './can-activate-user.guard';
+import { CanActivateOrg } from './can-activate-org.guard';
 
 export const routes: Routes = [
   // {
   //   path: 'explore',
   //   loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
+  // },
+  // {
+  //   matcher: (url) => {
+  //     console.log('url', url);
+  //     if (url.length === 1 && url[0].path.match('awesome-user')) {  // /^@[\w]+$/gm
+  //       console.log('It is a match');
+  //       return {
+  //         consumed: url,
+  //         posParams: {
+  //           username: new UrlSegment(url[0].path.substr(1), {})
+  //         }
+  //       };
+  //     }
+  //     return null;
+  //   },
+  //   component: ProfileComponent
   // },
   {
     path: 'challenges',
@@ -37,8 +57,17 @@ export const routes: Routes = [
   },
   {
     path: ':username',
-    loadChildren: () => import('./pages/profile').then(m => m.ProfileModule)
+    loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule),
+    // canActivate: [CanActivateOrg]
   },
+  // {
+  //   path: ':username',
+  //   loadChildren: () => import('./pages/profile').then(m => m.ProfileModule),
+  //   // canActivate: [CanActivateUser]
+  // },
+
+
+
 //   {path: 'categories', redirectTo: '/components/categories'},
 //   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
 //   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
@@ -73,6 +102,8 @@ export const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes)
   ],
+  declarations: [],
+  providers: [CanActivateUser, CanActivateOrg],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

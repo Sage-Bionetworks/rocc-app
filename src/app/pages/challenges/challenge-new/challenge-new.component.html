@@ -1,1 +1,28 @@
-<p>New challenge</p>
+<main>
+  <mat-card class="container">
+    <mat-card-title class="title">Create a new challenge</mat-card-title>
+    <mat-card-content>
+      <form class="form-container" [formGroup]="newChallengeForm" novalidate>
+        <mat-form-field class="name">
+          <input matInput placeholder="Challenge name" type="text"
+            formControlName="name">
+          <mat-error *ngIf="name?.invalid">{{getNameErrorMessage()}}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="description">
+          <input matInput placeholder="Description" type="text"
+            formControlName="description">
+          <mat-error *ngIf="description?.invalid">{{getDescriptionErrorMessage()}}
+          </mat-error>
+        </mat-form-field>
+        <mat-error *ngIf="errors.other">{{errors.other}}</mat-error>
+        <div>
+          <button mat-raised-button color="primary"
+            [disabled]="newChallengeForm.invalid"
+            (click)="createChallenge()">Create challenge</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</main>
+<sage-footer></sage-footer>

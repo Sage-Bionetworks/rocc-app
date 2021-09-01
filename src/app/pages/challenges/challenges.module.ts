@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { MaterialModule } from '@shared/material/material.module';
 import { FiltersModule } from '@shared/filters/filters.module';
@@ -14,6 +15,8 @@ import { ChallengeViewComponent } from './challenge-view/challenge-view.componen
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     FooterModule,
     MaterialModule,
     FiltersModule,

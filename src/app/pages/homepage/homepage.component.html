@@ -7,8 +7,13 @@
       [routerLink]="[username]">Update Profile</button>
     Configuration: {{appConfig | json}}
 
-    <br>
-    <a mat-raised-button class="btn" routerLink="signup">Sign Up</a>
+    <div class="button-group">
+      <a mat-raised-button class="btn" routerLink="signup">Sign up</a>
+      <a mat-raised-button class="btn" routerLink="organizations/new">New organization</a>
+      <a mat-raised-button class="btn" routerLink="challenges/new">New challenge</a>
+      <a mat-raised-button class="btn" routerLink="awesome-user">Go to awesome-user profile</a>
+      <a mat-raised-button class="btn" routerLink="awesome-org">Go to awesome-org page</a>
+    </div>
 
     <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100>
     </sage-avatar>

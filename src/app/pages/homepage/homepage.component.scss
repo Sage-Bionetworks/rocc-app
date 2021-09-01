@@ -17,3 +17,9 @@ main {
   background-color: #052B38;
   color: #fff
 }
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
