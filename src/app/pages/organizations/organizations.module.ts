@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { MaterialModule } from '@shared/material/material.module';
 import { OrganizationsComponent } from './organizations.component';
@@ -11,6 +12,8 @@ import { OrganizationViewComponent } from './organization-view/organization-view
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     FooterModule,
     MaterialModule,
     OrganizationsRoutingModule

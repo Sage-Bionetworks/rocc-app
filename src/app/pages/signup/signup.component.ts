@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private UserService: UserService,
+    private userService: UserService,
     private pageTitleService: PageTitleService
   ) {}
 
@@ -110,7 +110,7 @@ export class SignupComponent implements OnInit {
       email: this.email?.value,
     };
 
-    this.UserService.createUser(userCreateRequest).subscribe(
+    this.userService.createUser(userCreateRequest).subscribe(
       (res) => {
         console.log('UserCreateResponse:', res);
       },
