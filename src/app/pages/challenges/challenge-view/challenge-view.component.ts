@@ -23,10 +23,8 @@ export class ChallengeViewComponent implements OnInit {
   @Input() selected!: boolean;
   @Output() selectedChange = new EventEmitter<boolean>();
 
-  // challenge$!: Observable<Challenge>;
   challenge!: Challenge;
   personList: Person[] = [];
-  orgList: Organization[] = [];
   progressValue: number = 0;
 
   constructor(
@@ -39,12 +37,6 @@ export class ChallengeViewComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.challenge$ = this.route.params.pipe(
-    //   switchMap((params) => this.challengeService.getChallenge(params.id))
-    // );
-    // this.challenge$.subscribe(challenge => {
-    //   this.pageTitleService.setTitle(challenge.name);
-    // });
     this.route.params
       .pipe(
         switchMap((params) => this.challengeService.getChallenge(params.id)),
@@ -59,20 +51,9 @@ export class ChallengeViewComponent implements OnInit {
             )
           )
         ),
-        tap((persons) => (this.personList = persons)),
-        switchMap((persons) => {
-          const orgIds = [
-            ...new Set(persons.flatMap((person) => person.organizationIds)),
-          ];
-          return forkJoin(
-            orgIds.map((orgId) =>
-              this.organizationService.getOrganization(orgId)
-            )
-          );
-        }),
-        tap((org) => (this.orgList = org))
+        tap((persons) => (this.personList = persons))
       )
-      .subscribe(() => console.log('done'));
+      .subscribe(() => console.log('Done challenge detail'));
   }
 
   getProgress(challenge: Challenge): number {
