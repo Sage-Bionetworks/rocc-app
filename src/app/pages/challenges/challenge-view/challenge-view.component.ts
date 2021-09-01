@@ -12,7 +12,6 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoin } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
-import { switchMap } from 'rxjs/operators';
 import { PageTitleService } from 'sage-angular/dist/sage-angular';
 
 @Component({
