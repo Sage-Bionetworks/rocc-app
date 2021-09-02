@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./user-account.component.scss'],
 })
 export class UserAccountComponent implements OnInit {
-  @Input() userId!: string;
+  @Input() accountId!: string;
   user$!: Observable<User>;
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.user$ = this.userService.getUser(this.userId);
+    this.user$ = this.userService.getUser(this.accountId);
   }
 }
