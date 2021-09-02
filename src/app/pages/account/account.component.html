@@ -1,6 +1,6 @@
 <main>
   <ng-container *ngIf="account$ | async as account" [ngSwitch]="account?.type">
-    <rocc-user-account *ngSwitchCase="'User'"></rocc-user-account>
+    <rocc-user-account *ngSwitchCase="'User'" [userId]="account.id"></rocc-user-account>
     <rocc-org-account *ngSwitchCase="'Organization'"></rocc-org-account>
   </ng-container>
   <rocc-not-found *ngIf="accountNotFound"></rocc-not-found>
