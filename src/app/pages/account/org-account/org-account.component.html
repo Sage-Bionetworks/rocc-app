@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container" *ngIf="org$ | async as org">
+  <rocc-org-header [org]="org"></rocc-org-header>
   <p>org-account works!</p>
-  <p>{{org$ | async | json}}</p>
+  <p>{{org | json}}</p>
 </div>
