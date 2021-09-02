@@ -26,10 +26,10 @@ export const routes: Routes = [
     path: 'notifications',
     loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule)
   },
-  {
-    path: '404',
-    loadChildren: () => import('./pages/page-not-found').then(m => m.PageNotFoundModule)
-  },
+  // {
+  //   path: '404',
+  //   loadChildren: () => import('./pages/page-not-found').then(m => m.PageNotFoundModule)
+  // },
   {
     path: '',
     pathMatch: 'full',

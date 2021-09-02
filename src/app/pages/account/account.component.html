@@ -1,5 +1,14 @@
 <main>
-  <p>account works!</p>
+  <ng-template [ngIf]="!!account" [ngIfElse]="notFound">
+    <ng-container [ngSwitch]="account.type">
+      <rocc-user-account *ngSwitchCase="'User'"></rocc-user-account>
+      <rocc-org-account *ngSwitchCase="'Organization'"></rocc-org-account>
+    </ng-container>
+  </ng-template>
+
+  <ng-template #notFound>
+    <rocc-not-found></rocc-not-found>
+  </ng-template>
 </main>
 
 <sage-footer></sage-footer>
