@@ -1,1 +1,9 @@
-<p>challenge works!</p>
+<main>
+  <div class="container" *ngIf="challenge$ | async as challenge">
+    <p>challenge works!</p>
+    <p>{{challenge | json}}</p>
+  </div>
+  <rocc-not-found *ngIf="challengeNotFound"></rocc-not-found>
+</main>
+
+<sage-footer></sage-footer>
