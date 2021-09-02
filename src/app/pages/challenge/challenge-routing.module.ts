@@ -10,12 +10,21 @@ const routes: Routes = [
     component: ChallengeComponent,
     children: [
       {
+        path: '',
+        component: ChallengeOverviewComponent,
+      },
+      {
         path: 'settings',
         component: ChallengeSettingsComponent,
       },
       {
-        path: '',
-        component: ChallengeOverviewComponent,
+        path: 'overview',
+        redirectTo: '',
+        pathMatch: 'full',
+      },
+      {
+        path: '**',
+        redirectTo: '',
       },
     ],
   },

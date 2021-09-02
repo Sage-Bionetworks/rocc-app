@@ -20,6 +20,17 @@ export class ChallengeComponent implements OnInit {
   challenge$!: Observable<Challenge | undefined>;
   challengeNotFound = false;
 
+  sections = [
+    {
+      label: 'Overview',
+      path: '.',
+    },
+    {
+      label: 'Settings',
+      path: 'settings',
+    },
+  ];
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,

@@ -1,21 +1,12 @@
 <main>
   <div class="container" *ngIf="challenge$ | async as challenge">
     <rocc-challenge-header [challenge]="challenge"></rocc-challenge-header>
-
-
-
-    <p>challenge works!</p>
-    <p>{{challenge | json}}</p>
-
-    <!-- <mat-tab-group animationDuration="0ms">
-      <mat-tab label="Overview">
-        Overview
-      </mat-tab>
-      <mat-tab label="Settings">
-        Settings
-      </mat-tab>
-    </mat-tab-group> -->
-
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let section of sections"
+        [routerLink]="section.path" routerLinkActive #rla="routerLinkActive"
+        [routerLinkActiveOptions]="{exact: true}"
+        [active]="rla.isActive">{{section.label}}</a>
+    </nav>
     <router-outlet></router-outlet>
   </div>
   <rocc-not-found *ngIf="challengeNotFound"></rocc-not-found>
