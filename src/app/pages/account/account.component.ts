@@ -1,9 +1,13 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError, switchMap } from 'rxjs/operators';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
-import { Account, AccountService, ModelError as RoccClientError } from '@sage-bionetworks/rocc-client-angular';
+import {
+  Account,
+  AccountService,
+  ModelError as RoccClientError,
+} from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
 
 @Component({
@@ -13,8 +17,8 @@ import { isRoccClientError } from '@shared/rocc-client-error';
 })
 export class AccountComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
-  account$!: Observable<Account>;
-  account!: Account;
+  account$!: Observable<Account | undefined>;
+  accountNotFound = false;
 
   constructor(
     private router: Router,
@@ -25,20 +29,22 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.account$ = this.route.params.pipe(
-      switchMap((params) => this.accountService.getAccount(params.login))
+      switchMap((params) => this.accountService.getAccount(params.login)),
+      catchError((err) => {
+        const error = err.error as RoccClientError;
+        if (isRoccClientError(error)) {
+          if (error.status == 404) {
+            return of(undefined);
+          }
+        }
+        return throwError(err);
+      })
     );
 
     this.account$.subscribe((account) => {
-      console.log('account', account);
-      this.account = account;
-      this.pageTitleService.setTitle(`${account.login}`);
-    }, (err) => {
-      const error = err.error as RoccClientError;
-      if (isRoccClientError(error)) {
-        if (error.status == 404) {
-
-        }
-      }
+      const pageTitle = account ? `${account.login}` : 'Page not found';
+      this.pageTitleService.setTitle(`${pageTitle} · ROCC`);
+      this.accountNotFound = !account;
     });
   }
 }
