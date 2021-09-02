@@ -11,8 +11,13 @@ const routes: Routes = [
     component: ChallengesComponent,
     children: [
       {
-        path: 'new', component: ChallengeNewComponent
+        path: 'new',
+        component: ChallengeNewComponent,
       },
+      // {
+      //   path: '',
+      //   component: ChallengeComponent,
+      // },
       // {
       //   path: ':id',
       //   component: ChallengeViewComponent,
@@ -20,7 +25,7 @@ const routes: Routes = [
       {
         path: '',
         component: ChallengeListComponent,
-      }
+      },
       //   {
       //     path: '', redirectTo: 'casual', pathMatch: 'full'
       //   },
