@@ -3,6 +3,12 @@
     <mat-card-title class="title">Create a new challenge</mat-card-title>
     <mat-card-content>
       <form class="form-container" [formGroup]="newChallengeForm" novalidate>
+        <mat-form-field class="accountName">
+          <input matInput placeholder="Account name" type="text"
+            formControlName="accountName">
+          <mat-error *ngIf="accountName?.invalid">{{getAccountNameErrorMessage()}}
+          </mat-error>
+        </mat-form-field>
         <mat-form-field class="name">
           <input matInput placeholder="Challenge name" type="text"
             formControlName="name">

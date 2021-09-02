@@ -15,6 +15,13 @@
       <a mat-raised-button class="btn" routerLink="awesome-org">Go to awesome-org page</a>
     </div>
 
+    <div class="button-group">
+      <h2>Challenge page</h2>
+      <a mat-raised-button class="btn" color="accent" routerLink="awesome-user/test">Go to awesome-user/test</a>
+      <a mat-raised-button class="btn" color="accent" routerLink="awesome-org/test">Go to awesome-org/test</a>
+      <a mat-raised-button class="btn" color="accent" routerLink="unknown-org/test">Go to unknown-org/test</a>
+    </div>
+
     <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100>
     </sage-avatar>
     <sage-avatar [name]="user.name" [size]=60></sage-avatar>

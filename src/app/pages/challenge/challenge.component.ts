@@ -1,4 +1,6 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'rocc-challenge',
@@ -8,7 +10,11 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 export class ChallengeComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
 
-  constructor() {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      console.log('params', params);
+    })
+  }
 }

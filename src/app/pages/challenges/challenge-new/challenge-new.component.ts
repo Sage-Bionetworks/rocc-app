@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -35,7 +36,9 @@ export class ChallengeNewComponent implements OnInit {
     this.pageTitleService.setTitle('Create a new challenge • ROCC');
 
     this.newChallengeForm = this.formBuilder.group({
-      name: new FormControl('awesome-challenge', [  // TODO validate against regex
+      accountName: new FormControl('awesome-org', [Validators.required]),
+      name: new FormControl('awesome-challenge', [
+        // TODO validate against regex
         Validators.required,
         Validators.minLength(3),
         Validators.maxLength(60),
@@ -48,12 +51,23 @@ export class ChallengeNewComponent implements OnInit {
     });
   }
 
-  get name() {
+  get accountName(): AbstractControl | null {
+    return this.newChallengeForm.get('accountName');
+  }
+
+  get name(): AbstractControl | null {
     return this.newChallengeForm.get('name');
   }
 
-  get description() {
+  get description(): AbstractControl | null {
     return this.newChallengeForm.get('description');
+  }
+
+  getAccountNameErrorMessage(): string {
+    if (this.accountName?.hasError('required')) {
+      return 'An account name is required.';
+    }
+    return '';
   }
 
   getNameErrorMessage(): string {
@@ -83,30 +97,30 @@ export class ChallengeNewComponent implements OnInit {
     this.submitted = true;
     this.errors.other = undefined;
 
+    const accountName = this.accountName?.value;
     const challengeCreateRequest: ChallengeCreateRequest = {
-      name: '',
-      displayName: '',
-      description: '',
-      websiteUrl: '',
-      status: 'active',
+      name: this.name?.value,
+      description: this.description?.value,
     };
 
-    this.challengeService.createChallenge(challengeCreateRequest).subscribe(
-      (res) => {
-        console.log('ChallengeCreateResponse:', res);
-      },
-      (err) => {
-        const error = err.error as RoccClientError;
-        if (isRoccClientError(error)) {
-          if (error.status == 409) {
-            // this.username?.setErrors({
-            //   alreadyExists: true,
-            // });
-          } else {
-            this.errors.other = `Server error: ${error.title}`;
+    this.challengeService
+      .createChallenge(accountName, challengeCreateRequest)
+      .subscribe(
+        (res) => {
+          console.log('ChallengeCreateResponse:', res);
+        },
+        (err) => {
+          const error = err.error as RoccClientError;
+          if (isRoccClientError(error)) {
+            if (error.status == 409) {
+              // this.username?.setErrors({
+              //   alreadyExists: true,
+              // });
+            } else {
+              this.errors.other = `Server error: ${error.title}`;
+            }
           }
         }
-      }
-    );
+      );
   }
 }
