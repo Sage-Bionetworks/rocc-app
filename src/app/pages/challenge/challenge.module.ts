@@ -6,6 +6,8 @@ import { ChallengeComponent } from './challenge.component';
 import { ChallengeRoutingModule } from './challenge-routing.module';
 import { NotFoundModule } from '@app/shared/not-found/not-found.module';
 import { ChallengeHeaderComponent } from './challenge-header/challenge-header.component';
+import { ChallengeOverviewComponent } from './challenge-overview/challenge-overview.component';
+import { ChallengeSettingsComponent } from './challenge-settings/challenge-settings.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,11 @@ import { ChallengeHeaderComponent } from './challenge-header/challenge-header.co
     MaterialModule,
     NotFoundModule,
   ],
-  declarations: [ChallengeComponent, ChallengeHeaderComponent],
+  declarations: [
+    ChallengeComponent,
+    ChallengeHeaderComponent,
+    ChallengeOverviewComponent,
+    ChallengeSettingsComponent
+  ],
 })
 export class ChallengeModule {}
