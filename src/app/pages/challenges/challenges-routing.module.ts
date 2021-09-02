@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChallengesComponent } from './challenges.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
-import { ChallengeViewComponent } from './challenge-view/challenge-view.component';
+// import { ChallengeViewComponent } from './challenge-view/challenge-view.component';
 
 const routes: Routes = [
   {
@@ -13,10 +13,10 @@ const routes: Routes = [
       {
         path: 'new', component: ChallengeNewComponent
       },
-      {
-        path: ':id',
-        component: ChallengeViewComponent,
-      },
+      // {
+      //   path: ':id',
+      //   component: ChallengeViewComponent,
+      // },
       {
         path: '',
         component: ChallengeListComponent,

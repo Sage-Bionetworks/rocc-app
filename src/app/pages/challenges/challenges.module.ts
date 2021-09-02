@@ -10,7 +10,7 @@ import { ChallengeListItemComponent } from './challenge-list-item/challenge-list
 import { ChallengesRoutingModule } from './challenges-routing.module';
 import { ChallengeDataService } from './challenge-data.service';
 import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
-import { ChallengeViewComponent } from './challenge-view/challenge-view.component';
+// import { ChallengeViewComponent } from './challenge-view/challenge-view.component';
 
 @NgModule({
   imports: [
@@ -27,7 +27,7 @@ import { ChallengeViewComponent } from './challenge-view/challenge-view.componen
     ChallengeListComponent,
     ChallengeListItemComponent,
     ChallengeNewComponent,
-    ChallengeViewComponent
+    // ChallengeViewComponent
   ],
   providers: [
     ChallengeDataService

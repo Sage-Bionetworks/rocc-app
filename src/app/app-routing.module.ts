@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, UrlSegment } from '@angular/router';
 import { ProfileComponent } from './pages/profile';
-import { CanLoadUser } from './can-load-user.guard';
-import { CanActivateUser } from './can-activate-user.guard';
-import { CanActivateOrg } from './can-activate-org.guard';
 
 export const routes: Routes = [
   {
@@ -82,7 +79,7 @@ export const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   declarations: [],
-  providers: [CanActivateUser, CanActivateOrg],
+  providers: [],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
