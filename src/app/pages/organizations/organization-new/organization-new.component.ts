@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'rocc-organization-new',
   templateUrl: './organization-new.component.html',
-  styleUrls: ['./organization-new.component.scss']
+  styleUrls: ['./organization-new.component.scss'],
 })
-export class OrganizationNewComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class OrganizationNewComponent {
+  constructor() {}
 }

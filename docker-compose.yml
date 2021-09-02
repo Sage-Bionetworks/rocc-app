@@ -15,7 +15,7 @@ services:
       - rocc-networks
 
   rocc-service:
-    image: sagebionetworks/rocc-service:0.3.0
+    image: sagebionetworks/rocc-service:0.4.0
     container_name: rocc-service
     restart: always
     environment:
@@ -33,7 +33,7 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - rocc-database
+      - rocc-db
 
   rocc-app:
     image: sagebionetworks/rocc-app:0.3.0

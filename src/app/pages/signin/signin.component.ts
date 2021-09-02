@@ -1,14 +1,12 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'rocc-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss']
+  styleUrls: ['./signin.component.scss'],
 })
-export class SigninComponent implements OnInit {
+export class SigninComponent {
   @HostBinding('class.main-content') readonly mainContentClass = true;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

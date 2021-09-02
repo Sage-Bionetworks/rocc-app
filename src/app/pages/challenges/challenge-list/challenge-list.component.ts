@@ -17,10 +17,10 @@ import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
-import { FilterComponent } from 'src/app/components/filters/filter.component';
-import { FilterValue } from 'src/app/components/filters/filter-value.model';
+import { FilterComponent } from '@shared/filters/filter.component';
+import { FilterValue } from '@shared/filters/filter-value.model';
 import { assign } from 'lodash-es';
-import { ButtonToggleFilterValue } from 'src/app/components/filters/button-toggle-filter/button-toggle-filter-value';
+import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
 import {
   challengeStartDateRangeFilterValues,
   challengeStatusFilterValues,
@@ -33,6 +33,7 @@ import {
 // import { shallowEqual } from '../../../shallowEqual';
 import deepEqual from 'deep-equal';
 import { ChallengeListQuery } from './challenge-list-query';
+import { PageTitleService } from 'sage-angular/dist/sage-angular';
 // import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
 
 const emptyChallengeListQuery: ChallengeListQuery = {
@@ -74,12 +75,14 @@ export class ChallengeListComponent implements OnInit, AfterViewInit {
   constructor(
     private challengePlatformService: ChallengePlatformService,
     private challengeService: ChallengeService,
-    private tagService: TagService
+    private tagService: TagService,
+    private pageTitleService: PageTitleService
   ) {}
 
   ngOnInit(): void {
     this.listTags();
     this.listChallengePlatforms();
+    this.pageTitleService.setTitle('Challenges');
   }
 
   ngAfterViewInit(): void {

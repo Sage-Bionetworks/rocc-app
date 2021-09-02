@@ -23,6 +23,10 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/signup').then(m => m.SignupModule)
   },
   {
+    path: 'notifications',
+    loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule)
+  },
+  {
     path: '404',
     loadChildren: () => import('./pages/page-not-found').then(m => m.PageNotFoundModule)
   },

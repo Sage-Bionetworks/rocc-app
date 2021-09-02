@@ -3,20 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { MaterialModule } from '@shared/material/material.module';
-import { PageNotFoundComponent } from './page-not-found.component';
+import { NotificationsComponent } from './notifications.component';
 
 const routes: Routes = [
-  { path: '', component: PageNotFoundComponent }
+  { path: '', component: NotificationsComponent }
 ];
 
 @NgModule({
-  declarations: [PageNotFoundComponent],
+  declarations: [NotificationsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     FooterModule,
     MaterialModule
   ],
-  exports: [PageNotFoundComponent]
+  exports: [NotificationsComponent]
 })
-export class PageNotFoundModule {}
+export class NotificationsModule { }

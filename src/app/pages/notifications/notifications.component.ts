@@ -1,11 +1,11 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'rocc-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss'],
+  selector: 'rocc-notifications',
+  templateUrl: './notifications.component.html',
+  styleUrls: ['./notifications.component.scss'],
 })
-export class ProfileComponent {
+export class NotificationsComponent {
   @HostBinding('class.main-content') readonly mainContentClass = true;
 
   constructor() {}
