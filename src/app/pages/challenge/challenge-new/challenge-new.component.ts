@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -20,6 +20,7 @@ import { isRoccClientError } from '@shared/rocc-client-error';
   styleUrls: ['./challenge-new.component.scss'],
 })
 export class ChallengeNewComponent implements OnInit {
+  @HostBinding('class.main-content') readonly mainContentClass = true;
   newChallengeForm!: FormGroup;
   errors = {
     other: undefined,

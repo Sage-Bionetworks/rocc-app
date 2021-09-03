@@ -19,6 +19,10 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/signup').then(m => m.SignupModule)
   },
   {
+    path: 'new',
+    loadChildren: () => import('./pages/challenge/challenge-new').then(m => m.ChallengeNewModule)
+  },
+  {
     path: 'notifications',
     loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule)
   },

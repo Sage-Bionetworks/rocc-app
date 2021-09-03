@@ -8,6 +8,7 @@ import { NotFoundModule } from '@app/shared/not-found/not-found.module';
 import { ChallengeHeaderComponent } from './challenge-header/challenge-header.component';
 import { ChallengeOverviewComponent } from './challenge-overview/challenge-overview.component';
 import { ChallengeSettingsComponent } from './challenge-settings/challenge-settings.component';
+import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { ChallengeSettingsComponent } from './challenge-settings/challenge-setti
     ChallengeComponent,
     ChallengeHeaderComponent,
     ChallengeOverviewComponent,
-    ChallengeSettingsComponent
+    ChallengeSettingsComponent,
   ],
 })
 export class ChallengeModule {}

@@ -9,6 +9,7 @@ import { NotFoundModule } from '@app/shared/not-found/not-found.module';
 import { OrgHeaderModule } from '../account/org-account/org-header/org-header.module';
 import { OrgPeopleComponent } from './org-people/org-people.component';
 import { OrgSettingsComponent } from './org-settings/org-settings.component';
+import { OrgNewModule } from './org-new/org-new.module';
 
 @NgModule({
   imports: [
@@ -18,7 +19,13 @@ import { OrgSettingsComponent } from './org-settings/org-settings.component';
     NotFoundModule,
     OrgHeaderModule,
     OrganizationRoutingModule,
+    OrgNewModule,
   ],
-  declarations: [OrganizationComponent, OrgChallengesComponent, OrgPeopleComponent, OrgSettingsComponent],
+  declarations: [
+    OrganizationComponent,
+    OrgChallengesComponent,
+    OrgPeopleComponent,
+    OrgSettingsComponent,
+  ],
 })
 export class OrganizationModule {}

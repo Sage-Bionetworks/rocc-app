@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OrgChallengesComponent } from './org-challenges/org-challenges.component';
+import { OrgNewComponent } from './org-new/org-new.component';
 import { OrgPeopleComponent } from './org-people/org-people.component';
 import { OrgSettingsComponent } from './org-settings/org-settings.component';
 import { OrganizationComponent } from './organization.component';
 // import { AccountComponent } from './account.component';
 
 const routes: Routes = [
+  {
+    path: 'new',
+    component: OrgNewComponent,
+  },
   {
     path: ':orgName',
     component: OrganizationComponent,
