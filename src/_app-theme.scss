@@ -3,7 +3,6 @@
 // Styles of the pages
 @import 'challenges/challenges-theme';
 @import 'homepage/homepage-theme';
-@import 'organizations/organizations-theme';
 @import 'signin/signin-theme';
 @import 'signup/signup-theme';
 
@@ -40,7 +39,6 @@
 
   @include challenges-theme($theme);
   @include homepage-theme($theme);
-  @include organizations-theme($theme);
   @include signin-theme($theme);
   @include signup-theme($theme);
 }

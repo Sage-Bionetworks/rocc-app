@@ -11,6 +11,7 @@ import { UserProfileOverviewComponent } from './user-account/user-profile-overvi
 import { UserProfileChallengesComponent } from './user-account/user-profile-challenges/user-profile-challenges.component';
 import { AccountRoutingModule } from './account-routing.module';
 import { OrgHeaderComponent } from './org-account/org-header/org-header.component';
+import { OrgHeaderModule } from './org-account/org-header/org-header.module';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { OrgHeaderComponent } from './org-account/org-header/org-header.componen
     FooterModule,
     MaterialModule,
     NotFoundModule,
-    AccountRoutingModule
+    AccountRoutingModule,
+    OrgHeaderModule
   ],
   declarations: [
     AccountComponent,
@@ -27,7 +29,6 @@ import { OrgHeaderComponent } from './org-account/org-header/org-header.componen
     UserProfileBarComponent,
     UserProfileOverviewComponent,
     UserProfileChallengesComponent,
-    OrgHeaderComponent,
   ],
 })
 export class AccountModule {}

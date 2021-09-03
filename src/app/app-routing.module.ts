@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, UrlSegment } from '@angular/router';
-import { ProfileComponent } from './pages/profile';
+import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
-  {
-    path: 'challenges',
-    loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
-  },
-  {
-    path: 'organizations',
-    loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule)
-  },
+  // {
+  //   path: 'challenges',
+  //   loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
+  // },
+  // {
+  //   path: 'organizations',
+  //   loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule)
+  // },
   {
     path: 'signin',
     loadChildren: () => import('./pages/signin').then(m => m.SigninModule)
@@ -22,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'notifications',
     loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule)
+  },
+  {
+    path: 'orgs',
+    loadChildren: () => import('./pages/organization').then(m => m.OrganizationModule)
   },
   // {
   //   path: '404',
