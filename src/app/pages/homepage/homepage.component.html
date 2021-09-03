@@ -2,8 +2,6 @@
   <div class="header">
     <div class="mat-display-2">Welcome back, {{ username }}!</div>
 
-    Configuration: {{appConfig | json}}
-
     <div class="button-group">
       <table class="GeneratedTable">
         <thead>
@@ -53,12 +51,11 @@
       </table>
     </div>
 
+    Configuration: {{appConfig | json}}
 
-
-
-    <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100>
+    <!-- <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100>
     </sage-avatar>
-    <sage-avatar [name]="user.name" [size]=60></sage-avatar>
+    <sage-avatar [name]="user.name" [size]=60></sage-avatar> -->
   </div>
 </main>
 
