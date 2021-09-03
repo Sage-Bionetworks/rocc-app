@@ -10,6 +10,7 @@ import {
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
+import { OrgDataService } from './org-data.service';
 
 @Component({
   selector: 'rocc-organization',
@@ -28,7 +29,8 @@ export class OrganizationComponent implements OnInit {
     private route: ActivatedRoute,
     private accountService: AccountService,
     private orgService: OrganizationService,
-    private pageTitleService: PageTitleService
+    private pageTitleService: PageTitleService,
+    private orgDataService: OrgDataService
   ) {}
 
   ngOnInit(): void {
@@ -50,7 +52,7 @@ export class OrganizationComponent implements OnInit {
       const pageTitle = org ? `${org.name}` : 'Page not found';
       this.pageTitleService.setTitle(`${pageTitle} · ROCC`);
       this.orgNotFound = !org;
-      // this.challengeDataService.setChallenge(challenge);
+      this.orgDataService.setOrg(org);
 
       this.sections = [
         {

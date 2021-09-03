@@ -12,6 +12,7 @@ import { UserProfileChallengesComponent } from './user-account/user-profile-chal
 import { AccountRoutingModule } from './account-routing.module';
 import { OrgHeaderComponent } from './org-account/org-header/org-header.component';
 import { OrgHeaderModule } from './org-account/org-header/org-header.module';
+import { OrgOverviewComponent } from './org-account/org-overview/org-overview.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { OrgHeaderModule } from './org-account/org-header/org-header.module';
     UserProfileBarComponent,
     UserProfileOverviewComponent,
     UserProfileChallengesComponent,
+    OrgOverviewComponent,
   ],
 })
 export class AccountModule {}

@@ -16,8 +16,7 @@ export class ChallengeDataService {
   }
 
   getChallenge(): Observable<Challenge | undefined> {
-    return this.challenge
-      .asObservable();
-      // .pipe(filter((challenge) => challenge !== undefined));
+    return this.challenge.asObservable();
+    // .pipe(filter((challenge) => challenge !== undefined));
   }
 }
