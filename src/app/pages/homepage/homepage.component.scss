@@ -17,3 +17,31 @@ main {
   background-color: #052B38;
   color: #fff
 }
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table.GeneratedTable {
+  width: 1200px;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #ffcc00;
+  border-style: solid;
+  color: #000000;
+}
+
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 2px;
+  border-color: #ffcc00;
+  border-style: solid;
+  padding: 3px;
+  text-align: left;
+}
+
+table.GeneratedTable thead {
+  background-color: #ffcc00;
+}

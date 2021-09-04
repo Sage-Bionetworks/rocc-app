@@ -1,14 +1,61 @@
 <main>
   <div class="header">
     <div class="mat-display-2">Welcome back, {{ username }}!</div>
-    <button mat-raised-button color="accent" class="btn"
-      routerLink="explore">Explore Challenges</button>
-    <button mat-raised-button class="btn" *ngIf="user"
-      [routerLink]="[username]">Update Profile</button>
+
+    <div class="button-group">
+      <table class="GeneratedTable">
+        <thead>
+          <tr>
+            <th>Page name</th>
+            <th>Description</th>
+            <th>Route</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sign Up</td>
+            <td>Create a User account.</td>
+            <td><a mat-raised-button class="btn" routerLink="signup">/signup</a></td>
+          </tr>
+          <tr>
+            <td>New Organization</td>
+            <td>Create an Org account.</td>
+            <td><a mat-raised-button class="btn" routerLink="orgs/new">/orgs/new</a></td>
+          </tr>
+          <tr>
+            <td>New Challenge</td>
+            <td>Create a Challenge.</td>
+            <td><a mat-raised-button class="btn" routerLink="new">/new</a></td>
+          </tr>
+          <tr>
+            <td>User Profile</td>
+            <td>View the profile of a ROCC User.</td>
+            <td><a mat-raised-button class="btn" color="primary" routerLink="awesome-user">/awesome-user</a></td>
+          </tr>
+          <tr>
+            <td>Organization Page</td>
+            <td>View the contributions and members of an Organization.</td>
+            <td><a mat-raised-button class="btn" color="primary" routerLink="awesome-org">/awesome-org</a></td>
+          </tr>
+          <tr>
+            <td>Challenge Page (Org)</td>
+            <td>View a challenge organized by an Organization.</td>
+            <td><a mat-raised-button class="btn" color="accent" routerLink="awesome-org/awesome-challenge">awesome-org/awesome-challenge</a></td>
+          </tr>
+          <tr>
+            <td>Challenge Page (User)</td>
+            <td>View a challenge hosted by a User.</td>
+            <td><a mat-raised-button class="btn" color="accent" routerLink="awesome-user/awesome-challenge">awesome-user/awesome-challenge</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     Configuration: {{appConfig | json}}
 
-    <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100></sage-avatar>
-    <sage-avatar [name]="user.name" [size]=60></sage-avatar>
+    <!-- <sage-avatar [name]="user.name" [src]="user.avatarUrl" [size]=100>
+    </sage-avatar>
+    <sage-avatar [name]="user.name" [size]=60></sage-avatar> -->
   </div>
 </main>
 

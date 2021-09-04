@@ -3,17 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   // {
-  //   path: 'explore',
-  //   loadChildren: () => import('./pages/explore').then(m => m.ExploreModule)
+  //   path: 'challenges',
+  //   loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
   // },
-  {
-    path: 'challenges',
-    loadChildren: () => import('./pages/challenges').then(m => m.ChallengesModule)
-  },
-  {
-    path: 'organizations',
-    loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule)
-  },
+  // {
+  //   path: 'organizations',
+  //   loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule)
+  // },
   {
     path: 'signin',
     loadChildren: () => import('./pages/signin').then(m => m.SigninModule)
@@ -23,22 +19,38 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/signup').then(m => m.SignupModule)
   },
   {
+    path: 'new',
+    loadChildren: () => import('./pages/challenge/challenge-new').then(m => m.ChallengeNewModule)
+  },
+  {
     path: 'notifications',
     loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule)
   },
   {
-    path: '404',
-    loadChildren: () => import('./pages/page-not-found').then(m => m.PageNotFoundModule)
+    path: 'orgs',
+    loadChildren: () => import('./pages/organization').then(m => m.OrganizationModule)
   },
+  // {
+  //   path: '404',
+  //   loadChildren: () => import('./pages/page-not-found').then(m => m.PageNotFoundModule)
+  // },
   {
     path: '',
     pathMatch: 'full',
     loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
   },
   {
-    path: ':username',
-    loadChildren: () => import('./pages/profile').then(m => m.ProfileModule)
+    path: ':login',
+    loadChildren: () => import('./pages/account').then(m => m.AccountModule),
   },
+  // {
+  //   path: ':username',
+  //   loadChildren: () => import('./pages/profile').then(m => m.ProfileModule),
+  //   // canActivate: [CanActivateUser]
+  // },
+
+
+
 //   {path: 'categories', redirectTo: '/components/categories'},
 //   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
 //   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
@@ -73,6 +85,8 @@ export const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes)
   ],
+  declarations: [],
+  providers: [],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

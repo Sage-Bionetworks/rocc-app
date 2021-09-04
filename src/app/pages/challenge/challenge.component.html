@@ -1,0 +1,15 @@
+<main>
+  <div class="container" *ngIf="challenge$ | async as challenge">
+    <rocc-challenge-header [challenge]="challenge"></rocc-challenge-header>
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let section of sections"
+        [routerLink]="section.path" routerLinkActive #rla="routerLinkActive"
+        [routerLinkActiveOptions]="{exact: true}"
+        [active]="rla.isActive">{{section.label}}</a>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+  <rocc-not-found *ngIf="challengeNotFound"></rocc-not-found>
+</main>
+
+<sage-footer></sage-footer>

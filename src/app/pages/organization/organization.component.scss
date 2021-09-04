@@ -1,0 +1,15 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 1200px;
+  height: 1000px;
+  background-color: rgb(216, 216, 216);
+
+  display: flex;
+  flex-direction: column;
+}
