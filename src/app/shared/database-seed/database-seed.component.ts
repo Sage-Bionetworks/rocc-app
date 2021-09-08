@@ -24,7 +24,10 @@ import {
   PersonCreateResponse,
   Tag,
   TagCreateRequest,
-  User
+  User,
+  UserCreateRequest,
+  UserCreateResponse,
+  OrganizationCreateResponse,
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
@@ -42,23 +45,20 @@ import tagList from '../../seeds/dream/tags.json';
 @Component({
   selector: 'rocc-database-seed',
   templateUrl: './database-seed.component.html',
-  styleUrls: ['./database-seed.component.scss']
+  styleUrls: ['./database-seed.component.scss'],
 })
-
 export class DatabaseSeedComponent implements OnInit {
-
   constructor(
     private userService: UserService,
-    private organizationService: OrganizationService,
-    // private challengeService: ChallengeService,
-    // private challengePlatformService: ChallengePlatformService,
-    // private grantService: GrantService,
-    // private personService: PersonService,
-    // private tagService: TagService
-  ) {}
+    private organizationService: OrganizationService
+  ) // private challengeService: ChallengeService,
+  // private challengePlatformService: ChallengePlatformService,
+  // private grantService: GrantService,
+  // private personService: PersonService,
+  // private tagService: TagService
+  {}
 
   ngOnInit(): void {
-
     // Maximum number of concurrent requests sent to the ROCC API service
     // TODO: Add to configuration file
     const concurrency = 1;
@@ -74,7 +74,57 @@ export class DatabaseSeedComponent implements OnInit {
       // this.tagService.deleteAllTags(),
     ]);
 
+    // Creates Users
+    const createUsers$: Observable<DocumentsCreateResult<User>> = of(
+      userList.users as User[]
+    ).pipe(
+      tap(() => console.log('Creating users')),
+      mergeMap((users) =>
+        forkJoinConcurrent(
+          users.map((user) =>
+            this.userService.createUser(omit(user, ['id']) as UserCreateRequest)
+          ),
+          10
+        )
+      ),
+      map((userCreateResponses: UserCreateResponse[]) => {
+        return {
+          documents: _merge([], userList.users, userCreateResponses),
+          idMaps: _merge(
+            [],
+            userCreateResponses,
+            userList.users.map((user) => ({ tmpId: user.id }))
+          ),
+        } as DocumentsCreateResult<User>;
+      }),
+      tap((res) => console.log('Users created', res))
+    );
 
+    // Creates Organizations
+    const createOrganizations$: Observable<DocumentsCreateResult<Organization>> = of(
+      organizationList.organizations as Organization[]
+    ).pipe(
+      tap(() => console.log('Creating organizations')),
+      mergeMap((orgs) =>
+        forkJoinConcurrent(
+          orgs.map((org) =>
+            this.organizationService.createOrganization(omit(org, ['id']) as OrganizationCreateRequest)
+          ),
+          10
+        )
+      ),
+      map((orgCreateResponses: OrganizationCreateResponse[]) => {
+        return {
+          documents: _merge([], organizationList.organizations, orgCreateResponses),
+          idMaps: _merge(
+            [],
+            orgCreateResponses,
+            organizationList.organizations.map((org) => ({ tmpId: org.id }))
+          ),
+        } as DocumentsCreateResult<Organization>;
+      }),
+      tap((res) => console.log('Organizations created', res))
+    );
 
     // // Creates Tags.
     // const createTags$: Observable<Tag[]> = of(tagList.tags as Tag[])
@@ -236,13 +286,20 @@ export class DatabaseSeedComponent implements OnInit {
     console.log('Removing DB documents');
     removeDocuments$
       .pipe(
-        // mergeMap(() => forkJoinConcurrent([
-        //   createTags$,
-        //   createOrganizations$,
-        //   createChallengePlatforms$,
-        //   createGrants$,
-        //   createPersons$
-        // ], 1)),
+        mergeMap(() =>
+          forkJoinConcurrent(
+            [
+              createUsers$,
+              createOrganizations$,
+              // createTags$,
+              // createOrganizations$,
+              // createChallengePlatforms$,
+              // createGrants$,
+              // createPersons$
+            ],
+            1
+          )
+        )
         // switchMap(res => {
         //   return createChallenges(
         //     challengeList.challenges as ChallengeCreateRequest[],
@@ -250,8 +307,12 @@ export class DatabaseSeedComponent implements OnInit {
         //     res[4] as DocumentsCreateResult<Person>
         //   );
         // }),
-      ).subscribe(() => {
-        console.log('DB seeding completed');
-      }, err => console.log(err));
+      )
+      .subscribe(
+        () => {
+          console.log('DB seeding completed');
+        },
+        (err) => console.log(err)
+      );
   }
 }
