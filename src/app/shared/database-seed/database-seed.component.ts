@@ -28,6 +28,7 @@ import {
   UserCreateRequest,
   UserCreateResponse,
   OrganizationCreateResponse,
+  ChallengePlatformCreateResponse,
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
@@ -35,6 +36,8 @@ import { DocumentsCreateResult } from './documents-create-result';
 
 import userList from '@app/seeds/development/users.json';
 import organizationList from '@app/seeds/development/organizations.json';
+import challengePlatformList from '@app/seeds/development/challenge-platforms.json';
+
 // import challengeList from '../../seeds/dream/challenges.json';
 // import challengePlatformList from '../../seeds/dream/challenge-platforms.json';
 // import grantList from '../../seeds/dream/grants.json';
@@ -50,7 +53,8 @@ import tagList from '../../seeds/dream/tags.json';
 export class DatabaseSeedComponent implements OnInit {
   constructor(
     private userService: UserService,
-    private organizationService: OrganizationService
+    private organizationService: OrganizationService,
+    private challengePlatformService: ChallengePlatformService
   ) // private challengeService: ChallengeService,
   // private challengePlatformService: ChallengePlatformService,
   // private grantService: GrantService,
@@ -66,10 +70,9 @@ export class DatabaseSeedComponent implements OnInit {
     const removeDocuments$ = forkJoin([
       this.userService.deleteAllUsers(),
       this.organizationService.deleteAllOrganizations(),
+      this.challengePlatformService.deleteAllChallengePlatforms(),
       // this.challengeService.deleteAllChallenges(),
-      // this.challengePlatformService.deleteAllChallengePlatforms(),
       // this.grantService.deleteAllGrants(),
-      // this.organizationService.deleteAllOrganizations(),
       // this.personService.deleteAllPersons(),
       // this.tagService.deleteAllTags(),
     ]);
@@ -124,6 +127,32 @@ export class DatabaseSeedComponent implements OnInit {
         } as DocumentsCreateResult<Organization>;
       }),
       tap((res) => console.log('Organizations created', res))
+    );
+
+    // Creates ChallengePlatforms
+    const createChallengePlatforms$: Observable<DocumentsCreateResult<ChallengePlatform>> = of(
+      challengePlatformList.challengePlatforms as ChallengePlatform[]
+    ).pipe(
+      tap(() => console.log('Creating challenge platforms')),
+      mergeMap((challengePlatforms) =>
+        forkJoinConcurrent(
+          challengePlatforms.map((challengePlatform) =>
+            this.challengePlatformService.createChallengePlatform(omit(challengePlatform, ['id']) as ChallengePlatformCreateRequest)
+          ),
+          10
+        )
+      ),
+      map((challengePlatformCreateResponses: ChallengePlatformCreateResponse[]) => {
+        return {
+          documents: _merge([], challengePlatformList.challengePlatforms, challengePlatformCreateResponses),
+          idMaps: _merge(
+            [],
+            challengePlatformCreateResponses,
+            challengePlatformList.challengePlatforms.map((challengePlatform) => ({ tmpId: challengePlatform.id }))
+          ),
+        } as DocumentsCreateResult<ChallengePlatform>;
+      }),
+      tap((res) => console.log('Challenge platforms created', res))
     );
 
     // // Creates Tags.
@@ -291,6 +320,7 @@ export class DatabaseSeedComponent implements OnInit {
             [
               createUsers$,
               createOrganizations$,
+              createChallengePlatforms$
               // createTags$,
               // createOrganizations$,
               // createChallengePlatforms$,

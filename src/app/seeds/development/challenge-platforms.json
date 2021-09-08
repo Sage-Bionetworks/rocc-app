@@ -2,12 +2,14 @@
   "challengePlatforms": [
     {
       "id": "61393be2ebf3a87e774058d9",
+      "avatarUrl": "https://via.placeholder.com/400x400",
       "displayName": "Synapse",
       "name": "synapse",
       "websiteUrl": "https://synapse.org"
     },
     {
       "id": "61393c9fb7acf212886c9b53",
+      "avatarUrl": "https://via.placeholder.com/400x400",
       "displayName": "Grand Challenge",
       "name": "grand-challenge",
       "websiteUrl": "https://grand-challenge.org"
