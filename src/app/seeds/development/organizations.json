@@ -1,0 +1,20 @@
+{
+  "organizations": [
+    {
+      "email": "contact@example.org",
+      "login": "awesome-org"
+    },
+    {
+      "email": "contact@example.org",
+      "login": "dream"
+    },
+    {
+      "email": "contact@example.org",
+      "login": "sage-bionetworks"
+    },
+    {
+      "email": "contact@example.org",
+      "login": "ibm"
+    }
+  ]
+}
