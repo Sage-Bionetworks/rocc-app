@@ -13,7 +13,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
@@ -33,7 +32,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatProgressBarModule,
     MatRadioModule,
     MatSelectModule,
-    MatSidenavModule,
     MatTabsModule,
     MatTooltipModule,
   ],
@@ -51,7 +49,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatProgressBarModule,
     MatRadioModule,
     MatSelectModule,
-    MatSidenavModule,
     MatTabsModule,
     MatTooltipModule,
   ],

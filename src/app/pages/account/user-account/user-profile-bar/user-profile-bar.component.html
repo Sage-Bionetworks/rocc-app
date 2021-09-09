@@ -5,10 +5,12 @@
 
 <div class="rocc-user-page-bar-container">
   <div class="user-info">
-    <img class="user-avatar" src="https://via.placeholder.com/200x200" />
-    <div>Awesome user</div>
+      <!-- {{this.userAvatar}} -->
+      <sage-avatar [avatar]= "userAvatar">
+      </sage-avatar>
+    <div>{{user.name}}</div>
     <div>
-      <div>@awesome-user</div>
+      <div>@{{user.login}}</div>
       <mat-icon>verified</mat-icon>
     </div>
   </div>
