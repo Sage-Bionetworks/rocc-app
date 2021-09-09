@@ -21,7 +21,7 @@ export class UserProfileBarComponent implements OnInit {
     this.userAvatar = {
       name: this.user.name as string,
       src: this.user.avatarUrl as string,
-      size: 150,
+      size: 160,
     };
   }
 }
