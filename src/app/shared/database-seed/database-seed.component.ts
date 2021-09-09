@@ -29,21 +29,17 @@ import {
   UserCreateResponse,
   OrganizationCreateResponse,
   ChallengePlatformCreateResponse,
+  OrgMembershipService
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
 import { DocumentsCreateResult } from './documents-create-result';
 
-import userList from '@app/seeds/development/users.json';
-import organizationList from '@app/seeds/development/organizations.json';
-import challengePlatformList from '@app/seeds/development/challenge-platforms.json';
 import challengeList from '@app/seeds/development/challenges.json';
-
-// import challengePlatformList from '../../seeds/dream/challenge-platforms.json';
-// import grantList from '../../seeds/dream/grants.json';
-// import organizationList from '../../seeds/dream/organizations.json';
-// import personList from '../../seeds/dream/persons.json';
-import tagList from '../../seeds/dream/tags.json';
+import challengePlatformList from '@app/seeds/development/challenge-platforms.json';
+import organizationList from '@app/seeds/development/organizations.json';
+import orgMembershipList from '@app/seeds/development/org-memberships.json';
+import userList from '@app/seeds/development/users.json';
 
 @Component({
   selector: 'rocc-database-seed',
@@ -52,12 +48,12 @@ import tagList from '../../seeds/dream/tags.json';
 })
 export class DatabaseSeedComponent implements OnInit {
   constructor(
-    private userService: UserService,
-    private organizationService: OrganizationService,
     private challengePlatformService: ChallengePlatformService,
-    private challengeService: ChallengeService // // private challengePlatformService: ChallengePlatformService, // private grantService: GrantService,
-  ) // private personService: PersonService,
-  // private tagService: TagService
+    private challengeService: ChallengeService,
+    private organizationService: OrganizationService,
+    private orgMembershipService: OrgMembershipService,
+    private userService: UserService,
+  )
   {}
 
   ngOnInit(): void {
@@ -66,13 +62,11 @@ export class DatabaseSeedComponent implements OnInit {
     const concurrency = 1;
 
     const removeDocuments$ = forkJoin([
-      this.userService.deleteAllUsers(),
-      this.organizationService.deleteAllOrganizations(),
-      this.challengePlatformService.deleteAllChallengePlatforms(),
       this.challengeService.deleteAllChallenges(),
-      // this.grantService.deleteAllGrants(),
-      // this.personService.deleteAllPersons(),
-      // this.tagService.deleteAllTags(),
+      this.challengePlatformService.deleteAllChallengePlatforms(),
+      this.organizationService.deleteAllOrganizations(),
+      this.orgMembershipService.deleteAllOrgMemberships(),
+      this.userService.deleteAllUsers(),
     ]);
 
     // Creates Users
