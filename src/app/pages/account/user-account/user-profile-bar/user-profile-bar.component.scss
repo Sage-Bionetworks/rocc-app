@@ -6,25 +6,25 @@
 
 .rocc-user-page-bar-content-container {
   position: sticky;
-  padding-top: 100px;
-  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 0;
   height: 50%;
+  top: 0;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 .rocc-user-page-bar-name {
-  font-size: 1.8em;
   margin: 20px 0;
+  font-size: 1.8em;
   font-weight: 900;
 }
 
 .rocc-user-page-bar-login-container {
   display: flex;
-  font-size: 1.2em;
   margin-bottom: 20px;
+  font-size: 1.2em;
 
   span {
     margin-right: 15px;
@@ -37,40 +37,41 @@
 
 .rocc-user-page-bar-detail-container {
   position: relative;
-  width: 90%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2em;
+  width: 90%;
   padding-top: 30px;
+  font-size: 1.2em;
+
   &:before {
+    position: absolute;
     content: '';
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    position: absolute;
     border-top: 1px solid;
   }
 
   .rocc-user-page-bar-organizations-container,
   .rocc-user-page-bar-favorites-container {
-    text-decoration: none;
     display: inline-flex;
     align-items: center;
     color: rgba(0, 0, 0, 0.54);
+    text-decoration: none;
 
     .mat-icon {
-      font-size: 20px;
       width: 20px;
       height: 20px;
       margin-right: 5px;
       color: #f1d07e;
+      font-size: 20px;
     }
   }
 
   .dot {
-    font-size: 2em;
     margin: 0 10px;
+    font-size: 2em;
   }
 }
 
