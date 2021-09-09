@@ -8,7 +8,7 @@
       "endDate": "2016-03-14",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "completed",
-      "platformId": "61391be069ed4bc6598ecd12"
+      "platformId": "613a0fc569ed4bc6598ecd2d"
     },
     {
       "name": "multi-targeting-drug",
@@ -18,7 +18,7 @@
       "endDate": "2018-02-26",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "completed",
-      "platformId": "61391be069ed4bc6598ecd12"
+      "platformId": "613a0fc569ed4bc6598ecd2d"
     },
     {
       "name": "anti-pd1-response-prediction",
@@ -28,7 +28,7 @@
       "endDate": "2021-02-25",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "completed",
-      "platformId": "61391be069ed4bc6598ecd12"
+      "platformId": "613a0fc569ed4bc6598ecd2d"
     },
     {
       "name": "ehr-covid-19",
@@ -37,7 +37,7 @@
       "startDate": "2020-04-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "active",
-      "platformId": "61391be069ed4bc6598ecd12"
+      "platformId": "613a0fc569ed4bc6598ecd2d"
     },
     {
       "name": "cagi5-sickkids-clinical-genomes",
@@ -47,7 +47,7 @@
       "endDate": "2018-04-26",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-sickkids5.html",
       "status": "completed",
-      "platformId": "61391c2569ed4bc6598ecd16"
+      "platformId": "613a0f7f69ed4bc6598ecd29"
     },
     {
       "name": "gagi6-annotate-all-missense",
@@ -57,7 +57,7 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-annotate-all-missense.html",
       "status": "active",
-      "platformId": "61391c2569ed4bc6598ecd16"
+      "platformId": "613a0f7f69ed4bc6598ecd29"
     },
     {
       "name": "camda18-metasub-forensics",
@@ -73,7 +73,7 @@
       "description": "",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#cmap_drug_safety_challenge",
       "status": "completed",
-      "platformId": "61391c1769ed4bc6598ecd15"
+      "platformId": "613a0f8c69ed4bc6598ecd2a"
     },
     {
       "name": "cafa-4",
@@ -83,7 +83,7 @@
       "endDate": "2020-02-12",
       "websiteUrl": "https://www.biofunctionprediction.org/cafa/",
       "status": "completed",
-      "platformId": "61391c4669ed4bc6598ecd18"
+      "platformId": "613a0f6a69ed4bc6598ecd28"
     },
     {
       "name": "casp13",
@@ -93,7 +93,7 @@
       "endDate": "2018-08-20",
       "websiteUrl": "https://predictioncenter.org/casp13/index.cgi",
       "status": "completed",
-      "platformId": "61391c0c69ed4bc6598ecd14"
+      "platformId": "613a0fa069ed4bc6598ecd2b"
     },
     {
       "name": "casp14",
@@ -103,7 +103,7 @@
       "endDate": "2020-09-07",
       "websiteUrl": "https://predictioncenter.org/casp14/index.cgi",
       "status": "completed",
-      "platformId": "61391c0c69ed4bc6598ecd14"
+      "platformId": "613a0fa069ed4bc6598ecd2b"
     },
     {
       "name": "cdrh-biothreat",
@@ -113,7 +113,7 @@
       "endDate": "2018-10-18",
       "websiteUrl": "https://precision.fda.gov/challenges/3",
       "status": "completed",
-      "platformId": "61391bff69ed4bc6598ecd13"
+      "platformId": "613a0fb269ed4bc6598ecd2c"
     },
     {
       "name": "brain-cancer-predictive-modeling-and-biomarker-discovery",
@@ -123,7 +123,7 @@
       "endDate": "2020-02-14",
       "websiteUrl": "https://precision.fda.gov/challenges/8/",
       "status": "completed",
-      "platformId": "61391bff69ed4bc6598ecd13"
+      "platformId": "613a0fb269ed4bc6598ecd2c"
     },
     {
       "name": "covid-19-precision-immunology-app-a-thon",
@@ -133,7 +133,7 @@
       "endDate": "2021-01-29",
       "websiteUrl": "https://precision.fda.gov/challenges/12/",
       "status": "completed",
-      "platformId": "61391bff69ed4bc6598ecd13"
+      "platformId": "613a0fb269ed4bc6598ecd2c"
     },
     {
       "name": "tumor-mutational-burden-challenge-phase-2",
@@ -143,7 +143,7 @@
       "endDate": "2021-09-13",
       "websiteUrl": "https://precision.fda.gov/challenges/18",
       "status": "completed",
-      "platformId": "61391bff69ed4bc6598ecd13"
+      "platformId": "613a0fb269ed4bc6598ecd2c"
     }
   ]
 }

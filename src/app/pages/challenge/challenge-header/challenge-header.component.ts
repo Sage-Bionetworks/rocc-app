@@ -1,24 +1,20 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Challenge } from '@sage-bionetworks/rocc-client-angular';
 @Component({
   selector: 'rocc-challenge-header',
   templateUrl: './challenge-header.component.html',
   styleUrls: ['./challenge-header.component.scss'],
 })
-export class ChallengeHeaderComponent implements OnInit {
+export class ChallengeHeaderComponent {
   @Input() challenge!: Challenge;
   @Input() selected!: boolean;
   @Output() selectedChange = new EventEmitter<boolean>();
 
   progressValue: number = 0;
-  // tmp for testing
-  platform = 'https://www.assets/img/logo/synapse.svg';
+  // placeholder for testing
+  platform = 'https://via.placeholder.com/400x400';
 
   constructor() {}
-
-  ngOnInit(): void {
-    this.platform = this.platform.replace('https://www.', '');
-  }
 
   getProgress(challenge: Challenge): number {
     if (challenge.status == 'active') {

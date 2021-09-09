@@ -5,9 +5,9 @@ import { catchError, switchMap } from 'rxjs/operators';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
   ChallengeService,
-  ChallengePlatformService,
+  // ChallengePlatformService,
   Challenge,
-  ChallengePlatform,
+  // ChallengePlatform,
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
@@ -21,7 +21,7 @@ import { ChallengeDataService } from './challenge-data.service';
 export class ChallengeComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
   challenge$!: Observable<Challenge | undefined>;
-  platform$!: Observable<ChallengePlatform | undefined>;
+  // platform$!: Observable<ChallengePlatform | undefined>;
   challengeNotFound = false;
 
   sections = [
@@ -39,7 +39,7 @@ export class ChallengeComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private challengeService: ChallengeService,
-    private challengePlatformService: ChallengePlatformService,
+    // private challengePlatformService: ChallengePlatformService,
     private pageTitleService: PageTitleService,
     private challengeDataService: ChallengeDataService
   ) {}
