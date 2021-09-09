@@ -1,0 +1,24 @@
+{
+  "organizations": [
+    {
+      "id": "613931b5ae0267da3f0275c7",
+      "email": "contact@example.org",
+      "login": "awesome-org"
+    },
+    {
+      "id": "613931c01193d6884a4e617a",
+      "email": "contact@example.org",
+      "login": "dream"
+    },
+    {
+      "id": "613931c6bef3ffc6e5091e4b",
+      "email": "contact@example.org",
+      "login": "sage-bionetworks"
+    },
+    {
+      "id": "613931cc566bf7138df32788",
+      "email": "contact@example.org",
+      "login": "ibm"
+    }
+  ]
+}
