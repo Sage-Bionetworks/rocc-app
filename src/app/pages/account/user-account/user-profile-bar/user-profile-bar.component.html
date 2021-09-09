@@ -1,29 +1,29 @@
-<!-- <div class="container">
-  <p>user-profile-bar works!</p>
-  <p>{{user | json}}</p>
-</div> -->
 
 <div class="rocc-user-page-bar-container">
-  <div class="user-info">
-      <!-- {{this.userAvatar}} -->
-      <sage-avatar [avatar]= "userAvatar">
-      </sage-avatar>
-    <div>{{user.name}}</div>
-    <div>
-      <div>@{{user.login}}</div>
-      <mat-icon>verified</mat-icon>
+  <div class="rocc-user-page-bar-content-container">
+    <sage-avatar [avatar]= "userAvatar"></sage-avatar>
+    <div class="rocc-user-page-bar-name">{{user.name}}</div>
+    <div class="rocc-user-page-bar-login-container">
+      <span>@{{user.login}}</span>
+      <mat-icon *ngIf="isVerified" inline=true>
+        verified
+      </mat-icon>
     </div>
+    <div class="rocc-user-page-bar-detail-container">
+      <a class="rocc-user-page-bar-organizations-container" routerLink="/{{user.login}}">
+        <mat-icon>home_work</mat-icon>
+        <span class="rocc-user-page-bar-organizations">
+          <strong>{{nOrg}}</strong>  organizations
+        </span>
+      </a>
+      <span class="dot"> · </span>
+      <a class="rocc-user-page-bar-favorites-container" routerLink="/{{user.login}}">
+        <mat-icon>star</mat-icon>
+        <span class="rocc-user-page-bar-favorites">
+          <strong>{{nFav}}</strong>
+        </span>
+      </a>
+    </div>
+    <button mat-raised-button>Edit your profile</button>
   </div>
-  <div class="user-content">
-    <div class="user-organizations">
-      <mat-icon>home_work</mat-icon>
-      <span>number organizations</span>
-    </div>
-    <div class="user-favorites">
-      <mat-icon>star</mat-icon>
-      <span>number favorites</span>
-    </div>
-  </div>
-
-  <button mat-raised-button>Edit your profile</button>
 </div>

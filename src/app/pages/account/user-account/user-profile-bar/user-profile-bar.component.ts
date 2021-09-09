@@ -9,6 +9,12 @@ import { Avatar } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 export class UserProfileBarComponent implements OnInit {
   @Input() user!: User;
   @Input() userAvatar!: Avatar;
+
+  // mock up summary data
+  isVerified = true;
+  nOrg = 3;
+  nFav = 10;
+
   constructor() {}
 
   ngOnInit(): void {
