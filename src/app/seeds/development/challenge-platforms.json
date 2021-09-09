@@ -1,18 +1,53 @@
 {
   "challengePlatforms": [
     {
-      "id": "61393be2ebf3a87e774058d9",
+      "id": "613a2d2b3084347fbc8efc03",
       "avatarUrl": "https://via.placeholder.com/400x400",
       "displayName": "Synapse",
       "name": "synapse",
       "websiteUrl": "https://synapse.org"
     },
     {
-      "id": "61393c9fb7acf212886c9b53",
+      "id": "613a2d413084347fbc8efc04",
       "avatarUrl": "https://via.placeholder.com/400x400",
       "displayName": "Grand Challenge",
       "name": "grand-challenge",
       "websiteUrl": "https://grand-challenge.org"
+    },
+    {
+      "name": "cafa",
+      "displayName": "CAFA",
+      "websiteUrl": "https://www.biofunctionprediction.org/cafa",
+      "avatarUrl": "https://via.placeholder.com/400x400",
+      "id": "613a2d6d3084347fbc8efc05"
+    },
+    {
+      "name": "cagi",
+      "displayName": "CAGI",
+      "websiteUrl": "https://genomeinterpretation.org",
+      "avatarUrl": "https://via.placeholder.com/400x400",
+      "id": "613a2d6d3084347fbc8efc06"
+    },
+    {
+      "name": "camda",
+      "displayName": "CAMDA",
+      "websiteUrl": "http://camda.info",
+      "avatarUrl": "https://via.placeholder.com/400x400",
+      "id": "613a2da13084347fbc8efc07"
+    },
+    {
+      "name": "casp",
+      "displayName": "CASP",
+      "websiteUrl": "https://predictioncenter.org",
+      "avatarUrl": "https://via.placeholder.com/400x400",
+      "id": "613a2db23084347fbc8efc08"
+    },
+    {
+      "name": "precisionfda",
+      "displayName": "precisionFDA",
+      "websiteUrl": "https://precision.fda.gov",
+      "avatarUrl": "https://via.placeholder.com/400x400",
+      "id": "613a2dbe3084347fbc8efc09"
     }
   ]
 }

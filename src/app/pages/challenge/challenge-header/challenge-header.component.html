@@ -14,9 +14,9 @@
         </button> 
       </div>
     </div>
-    <div class="rocc-challenge-detail-header-top-box-right">
-      <img src="{{platform}}" alt="platform-logo">
-      <span>platform name</span>
+    <div class="rocc-challenge-detail-header-top-box-right" *ngIf="platform$ | async as platform">
+      <img src="{{platform.avatarUrl}}" alt="platform-logo">
+      <span>{{platform.displayName}}</span>
     </div>
   </div>
   <div class="rocc-challenge-detail-header-middle">
