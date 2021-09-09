@@ -55,9 +55,8 @@ export class DatabaseSeedComponent implements OnInit {
     private userService: UserService,
     private organizationService: OrganizationService,
     private challengePlatformService: ChallengePlatformService,
-    private challengeService: ChallengeService // // private challengePlatformService: ChallengePlatformService,
-  ) // private grantService: GrantService,
-  // private personService: PersonService,
+    private challengeService: ChallengeService // // private challengePlatformService: ChallengePlatformService, // private grantService: GrantService,
+  ) // private personService: PersonService,
   // private tagService: TagService
   {}
 
@@ -174,24 +173,20 @@ export class DatabaseSeedComponent implements OnInit {
       tap((res) => console.log('Challenge platforms created', res))
     );
 
-    // Returns the ChallengePlatform id for a challenge.
-    const getChallengePlatformId = (
-      challengeCreateRequest: ChallengeCreateRequest,
-      challengePlatformsCreateResult: DocumentsCreateResult<ChallengePlatform>
+    // Returns the identifier of an object in the DB given its tmpId.
+    const getObjectIdFromTmpId = (
+      tmpObjectId: string | undefined,
+      objectsCreateResult: DocumentsCreateResult<any>
     ): Observable<string> => {
-      return of(challengeCreateRequest).pipe(
-        map((rawChallenge) => {
-          const platform = challengePlatformsCreateResult.idMaps.find(
-            (idMap) => idMap.tmpId === rawChallenge.platformId
+      return of(tmpObjectId).pipe(
+        map((tmpObjectId) => {
+          const object = objectsCreateResult.idMaps.find(
+            (idMap) => idMap.tmpId === tmpObjectId
           );
-          if (platform === undefined) {
-            throw new Error(
-              'ChallengePlatform with id ' +
-                rawChallenge.platformId +
-                ' not found'
-            );
+          if (object === undefined) {
+            throw new Error('Object with tmpId ' + tmpObjectId + ' not found');
           }
-          return platform.id;
+          return object.id;
         })
       );
     };
@@ -345,8 +340,8 @@ export class DatabaseSeedComponent implements OnInit {
               of(rawChallenge).pipe(
                 mergeMap(() =>
                   forkJoin({
-                    challengePlatformIds: getChallengePlatformId(
-                      rawChallenge,
+                    challengePlatformIds: getObjectIdFromTmpId(
+                      rawChallenge.platformId,
                       challengePlatformsCreateResult
                     ),
                     // grantIds: getGrantIds(rawChallenge, grantsCreateResult),
