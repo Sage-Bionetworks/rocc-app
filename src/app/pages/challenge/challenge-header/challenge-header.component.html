@@ -1,4 +1,41 @@
-<div class="container">
-  <p>challenge-header works!</p>
-  <p>{{challenge | json}}</p>
+<div class="rocc-challenge-detail-header-container">
+  <div class="rocc-challenge-detail-header-top">
+    <div class="rocc-challenge-detail-header-top-box-left">
+      <a class="button-go-back" routerLink="/explore">Back</a>
+      <div class="rocc-challenge-detail-title-container">
+        <span>{{challenge.displayName}}</span>
+        <button mat-icon-button (click)="toggleSelected()">
+          <mat-icon *ngIf="selected" class="rocc-challenge-favorite-icon" inline=true>
+            star
+          </mat-icon>
+          <mat-icon *ngIf="!selected" inline=true>
+            star_border
+          </mat-icon>
+        </button> 
+      </div>
+    </div>
+    <div class="rocc-challenge-detail-header-top-box-right">
+      <img src="{{platform}}" alt="platform-logo">
+      <span>platform name</span>
+    </div>
+  </div>
+  <div class="rocc-challenge-detail-header-middle">
+    <span>{{challenge.status | titlecase}}</span>
+    <a href="{{challenge.websiteUrl}}" target="_blank">Go to challenge</a>
+  </div>
+  <div class="rocc-challenge-detail-header-bottom">
+    <mat-progress-bar
+      mode="determinate"
+      color="accent"
+      value="{{getProgress(challenge)}}">
+    </mat-progress-bar>
+    <div class="rocc-challenge-detail-dates-box">
+      <span *ngIf="!!challenge.startDate">
+        {{challenge.startDate | date: "yyyy-MM-dd"}}
+      </span>
+      <span *ngIf="!!challenge.endDate">
+        {{challenge.endDate | date: "yyyy-MM-dd"}}
+      </span>
+    </div>
+  </div>
 </div>
