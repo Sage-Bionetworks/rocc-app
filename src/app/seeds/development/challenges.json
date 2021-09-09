@@ -4,6 +4,7 @@
       "id": "613a2d2b3084347fbc8efc03",
       "description": "This challenge is awesome.",
       "displayName": "Awesome Challenge",
+      "doi": "http://doi.org/10.5281/zenodo.3714971",
       "endDate": "2021-12-31",
       "name": "awesome-challenge",
       "platformId": "613a2d2b3084347fbc8efc03",
