@@ -1,0 +1,25 @@
+{
+  "orgMemberships": [
+    {
+      "id": "613a79c345b5ef8798cee3b4",
+      "state": "active",
+      "role": "admin",
+      "organizationId": "613931c01193d6884a4e617a",
+      "userId": "61391334790dbc2726b9d37f"
+    },
+    {
+      "id": "613a7a10184db75290f4fa25",
+      "state": "active",
+      "role": "admin",
+      "organizationId": "613931c6bef3ffc6e5091e4b",
+      "userId": "61391334790dbc2726b9d37f"
+    },
+    {
+      "id": "613a7a3a53d5980c7a2a9ef0",
+      "state": "active",
+      "role": "admin",
+      "organizationId": "613931b5ae0267da3f0275c7",
+      "userId": "613913256b8190e8cc02ed27"
+    }
+  ]
+}
