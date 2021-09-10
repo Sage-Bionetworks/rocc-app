@@ -343,7 +343,7 @@ export class DatabaseSeedComponent implements OnInit {
               of(rawChallenge).pipe(
                 mergeMap(() =>
                   forkJoin({
-                    challengePlatformIds: getObjectIdFromTmpId(
+                    platformId: getObjectIdFromTmpId(
                       rawChallenge.platformId,
                       challengePlatformsCreateResult
                     ),
@@ -426,9 +426,7 @@ export class DatabaseSeedComponent implements OnInit {
       map(([orgMembershipsCreateResult, docs]) => {
         return {
           orgMembershipsCreateResult: orgMembershipsCreateResult,
-          usersCreateResult: docs.usersCreateResult,
-          organizationsCreateResult: docs.organizationsCreateResult,
-          challengePlatformsCreateResult: docs.challengePlatformsCreateResult,
+          ...docs
         };
       }),
       share()
@@ -439,17 +437,12 @@ export class DatabaseSeedComponent implements OnInit {
         return createChallenges(
           challengeList.challenges as ChallengeCreateRequest[],
           docs.challengePlatformsCreateResult as DocumentsCreateResult<ChallengePlatform>
-          // res[3] as DocumentsCreateResult<Grant>,
-          // res[4] as DocumentsCreateResult<Person>
         );
       }),
       withLatestFrom(createOrgMemberships$),
       map(([challengesCreateResult, docs]) => {
         return {
-          orgMembershipsCreateResult: docs.orgMembershipsCreateResult,
-          usersCreateResult: docs.usersCreateResult,
-          organizationsCreateResult: docs.organizationsCreateResult,
-          challengePlatformsCreateResult: docs.challengePlatformsCreateResult,
+          ...docs,
           challengesCreateResult: challengesCreateResult,
         };
       })
