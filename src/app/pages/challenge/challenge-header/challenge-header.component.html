@@ -1,7 +1,12 @@
 <div class="rocc-challenge-detail-header-container">
   <div class="rocc-challenge-detail-header-top">
     <div class="rocc-challenge-detail-header-top-box-left">
-      <a class="button-go-back" routerLink="/{{accountName}}">Organizer</a>
+      <div class="rocc-challenge-detail-header-top-routerlink-container">
+        <mat-icon>share</mat-icon>
+        <a class="button-go-back" routerLink="/{{accountName}}">{{accountName}}</a>
+        <span>/</span>
+        <a class="button-go-back" routerLink="/{{accountName}}/{{challenge.name}}">{{challenge.name}}</a>
+      </div>
       <div class="rocc-challenge-detail-title-container">
         <span>{{challenge.displayName}}</span>
         <button mat-icon-button (click)="toggleSelected()">
