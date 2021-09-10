@@ -17,14 +17,12 @@ export class UserProfileBarComponent implements OnInit {
   @Input() user!: User;
   @Input() userAvatar!: Avatar;
   numOrgs$!: Observable<number>;
- 
+
   // mock up summary data
   isVerified = true;
-  nOrg = 3;
-  nFav = 10;
+  numFavs = 10;
 
   constructor(private orgMembershipService: OrgMembershipService) {}
-
 
   ngOnInit(): void {
     this.userAvatar = {
@@ -34,13 +32,13 @@ export class UserProfileBarComponent implements OnInit {
     };
 
     this.numOrgs$ = this.orgMembershipService
-    .listOrgMemberships(50, 0, undefined, this.user.id)
-    .pipe(
-      map((page) => page.orgMemberships),
-      map((orgMemberships) =>
-        _map(_uniqBy(orgMemberships, 'organizationId'), 'organizationId')
-      ),
-      map((orgIds) => (orgIds === undefined ? 0 : orgIds.length))
-    );
+      .listOrgMemberships(50, 0, undefined, this.user.id)
+      .pipe(
+        map((page) => page.orgMemberships),
+        map((orgMemberships) =>
+          _map(_uniqBy(orgMemberships, 'organizationId'), 'organizationId')
+        ),
+        map((orgIds) => (orgIds === undefined ? 0 : orgIds.length))
+      );
   }
 }

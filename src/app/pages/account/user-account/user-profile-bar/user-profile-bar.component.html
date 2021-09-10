@@ -12,14 +12,14 @@
       <a class="rocc-user-page-bar-organizations-container" routerLink="/{{user.login}}">
         <mat-icon>home_work</mat-icon>
         <span class="rocc-user-page-bar-organizations">
-          <strong>{{nOrg}}</strong>  organizations
+          <strong>{{numOrgs$ | async}}</strong>  organizations
         </span>
       </a>
       <span class="dot"> · </span>
       <a class="rocc-user-page-bar-favorites-container" routerLink="/{{user.login}}">
         <mat-icon>star</mat-icon>
         <span class="rocc-user-page-bar-favorites">
-          <strong>{{nFav}}</strong>
+          <strong>{{numFavs}}</strong>
         </span>
       </a>
     </div>
