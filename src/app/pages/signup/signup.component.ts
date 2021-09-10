@@ -12,6 +12,7 @@ import {
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'rocc-signup',
@@ -28,6 +29,7 @@ export class SignupComponent implements OnInit {
   submitted = false;
 
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
     private userService: UserService,
     private pageTitleService: PageTitleService
@@ -113,6 +115,7 @@ export class SignupComponent implements OnInit {
     this.userService.createUser(userCreateRequest).subscribe(
       (res) => {
         console.log('UserCreateResponse:', res);
+        this.router.navigate([userCreateRequest.login]);
       },
       (err) => {
         const error = err.error as RoccClientError;
