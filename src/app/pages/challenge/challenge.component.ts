@@ -20,6 +20,7 @@ export class ChallengeComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
   challenge$!: Observable<Challenge | undefined>;
   challengeNotFound = false;
+  login = '';
 
   sections = [
     {
@@ -42,9 +43,13 @@ export class ChallengeComponent implements OnInit {
 
   ngOnInit(): void {
     this.challenge$ = this.route.params.pipe(
-      switchMap((params) =>
-        this.challengeService.getChallenge(params.login, params.challengeName)
-      ),
+      switchMap((params) => {
+        this.login = params.login;
+        return this.challengeService.getChallenge(
+          params.login,
+          params.challengeName
+        );
+      }),
       catchError((err) => {
         const error = err.error as RoccClientError;
         if (isRoccClientError(error)) {

@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./challenge-header.component.scss'],
 })
 export class ChallengeHeaderComponent implements OnInit {
+  @Input() login = '';
   @Input() challenge!: Challenge;
   @Input() selected!: boolean;
   @Output() selectedChange = new EventEmitter<boolean>();
