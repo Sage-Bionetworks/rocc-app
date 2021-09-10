@@ -1,12 +1,13 @@
 {
   "challenges": [
     {
+      "id": "6139408e85e723a0a87fdbc7",
       "description": "This challenge is awesome.",
       "displayName": "Awesome Challenge",
       "doi": "http://doi.org/10.5281/zenodo.3714971",
       "endDate": "2021-12-31",
       "name": "awesome-challenge",
-      "platformId": "613a2d2b3084347fbc8efc03",
+      "platformId": "61393be2ebf3a87e774058d9",
       "startDate": "2020-11-10",
       "status": "active",
       "websiteUrl": "https://synapse.org/awesome-challenge"
@@ -19,7 +20,7 @@
       "endDate": "2016-03-14",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "completed",
-      "platformId": "613a2d2b3084347fbc8efc03"
+      "platformId": "61393be2ebf3a87e774058d9"
     },
     {
       "name": "multi-targeting-drug",
@@ -29,7 +30,7 @@
       "endDate": "2018-02-26",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "completed",
-      "platformId": "613a2d2b3084347fbc8efc03"
+      "platformId": "61393be2ebf3a87e774058d9"
     },
     {
       "name": "anti-pd1-response-prediction",
@@ -39,7 +40,7 @@
       "endDate": "2021-02-25",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "completed",
-      "platformId": "613a2d2b3084347fbc8efc03"
+      "platformId": "61393be2ebf3a87e774058d9"
     },
     {
       "name": "ehr-covid-19",
@@ -48,7 +49,7 @@
       "startDate": "2020-04-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "active",
-      "platformId": "613a2d2b3084347fbc8efc03"
+      "platformId": "61393be2ebf3a87e774058d9"
     },
     {
       "name": "cagi5-sickkids-clinical-genomes",
