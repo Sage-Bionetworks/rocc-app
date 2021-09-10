@@ -12,9 +12,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./challenge-header.component.scss'],
 })
 export class ChallengeHeaderComponent implements OnInit {
-  @Input() login = '';
+  @Input() accountName = '';
   @Input() challenge!: Challenge;
-  @Input() selected!: boolean;
+  @Input() isFavorite!: boolean;
   @Output() selectedChange = new EventEmitter<boolean>();
 
   progressValue: number = 0;
@@ -48,7 +48,7 @@ export class ChallengeHeaderComponent implements OnInit {
   }
 
   public toggleSelected() {
-    this.selected = !this.selected;
-    this.selectedChange.emit(this.selected);
+    this.isFavorite = !this.isFavorite;
+    this.selectedChange.emit(this.isFavorite);
   }
 }

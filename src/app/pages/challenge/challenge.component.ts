@@ -20,7 +20,7 @@ export class ChallengeComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
   challenge$!: Observable<Challenge | undefined>;
   challengeNotFound = false;
-  login = '';
+  accountName = '';
 
   sections = [
     {
@@ -44,7 +44,7 @@ export class ChallengeComponent implements OnInit {
   ngOnInit(): void {
     this.challenge$ = this.route.params.pipe(
       switchMap((params) => {
-        this.login = params.login;
+        this.accountName = params.login;
         return this.challengeService.getChallenge(
           params.login,
           params.challengeName

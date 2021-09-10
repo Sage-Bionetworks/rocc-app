@@ -1,14 +1,14 @@
 <div class="rocc-challenge-detail-header-container">
   <div class="rocc-challenge-detail-header-top">
     <div class="rocc-challenge-detail-header-top-box-left">
-      <a class="button-go-back" routerLink="/{{login}}">Back</a>
+      <a class="button-go-back" routerLink="/{{accountName}}">Organizer</a>
       <div class="rocc-challenge-detail-title-container">
         <span>{{challenge.displayName}}</span>
         <button mat-icon-button (click)="toggleSelected()">
-          <mat-icon *ngIf="selected" class="rocc-challenge-favorite-icon" inline=true>
+          <mat-icon *ngIf="isFavorite" class="rocc-challenge-favorite-icon" inline=true>
             star
           </mat-icon>
-          <mat-icon *ngIf="!selected" inline=true>
+          <mat-icon *ngIf="!isFavorite" inline=true>
             star_border
           </mat-icon>
         </button> 

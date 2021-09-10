@@ -1,6 +1,9 @@
 <main>
   <div class="container" *ngIf="challenge$ | async as challenge">
-    <rocc-challenge-header [challenge]="challenge" [login]="login"></rocc-challenge-header>
+    <rocc-challenge-header 
+      [challenge]="challenge" 
+      [accountName]="accountName">
+    </rocc-challenge-header>
     <nav mat-tab-nav-bar>
       <a mat-tab-link *ngFor="let section of sections"
         [routerLink]="section.path" routerLinkActive #rla="routerLinkActive"
