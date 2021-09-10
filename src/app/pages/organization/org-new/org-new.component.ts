@@ -12,6 +12,7 @@ import {
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'rocc-org-new',
@@ -28,6 +29,7 @@ export class OrgNewComponent implements OnInit {
   submitted = false;
 
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
     private orgService: OrganizationService,
     private pageTitleService: PageTitleService
@@ -107,6 +109,7 @@ export class OrgNewComponent implements OnInit {
     this.orgService.createOrganization(orgCreateRequest).subscribe(
       (res) => {
         console.log('OrgCreateResponse:', res);
+        this.router.navigate([orgCreateRequest.login]);
       },
       (err) => {
         const error = err.error as RoccClientError;
