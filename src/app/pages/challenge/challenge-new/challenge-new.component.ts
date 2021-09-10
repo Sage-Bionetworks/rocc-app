@@ -11,6 +11,8 @@ import {
   ChallengeCreateRequest,
   ChallengeService,
   ModelError as RoccClientError,
+  OrgMembership,
+  OrgMembershipService
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
 
@@ -26,11 +28,13 @@ export class ChallengeNewComponent implements OnInit {
     other: undefined,
   } as { other?: string };
   submitted = false;
+  orgMemberships: OrgMembership[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
     private challengeService: ChallengeService,
-    private pageTitleService: PageTitleService
+    private pageTitleService: PageTitleService,
+    private orgMembershipService: OrgMembershipService
   ) {}
 
   ngOnInit(): void {
