@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, Observable, of } from 'rxjs';
-import { map, mapTo, mergeMap, switchMap, tap } from 'rxjs/operators';
+import {
+  map,
+  mapTo,
+  mergeMap,
+  share,
+  switchMap,
+  tap,
+  withLatestFrom,
+} from 'rxjs/operators';
 import { merge as _merge } from 'lodash-es';
 import {
   ChallengeService,
@@ -29,21 +37,19 @@ import {
   UserCreateResponse,
   OrganizationCreateResponse,
   ChallengePlatformCreateResponse,
+  OrgMembershipService,
+  OrgMembershipCreateRequest,
+  OrgMembership,
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
 import { DocumentsCreateResult } from './documents-create-result';
 
-import userList from '@app/seeds/development/users.json';
-import organizationList from '@app/seeds/development/organizations.json';
-import challengePlatformList from '@app/seeds/development/challenge-platforms.json';
 import challengeList from '@app/seeds/development/challenges.json';
-
-// import challengePlatformList from '../../seeds/dream/challenge-platforms.json';
-// import grantList from '../../seeds/dream/grants.json';
-// import organizationList from '../../seeds/dream/organizations.json';
-// import personList from '../../seeds/dream/persons.json';
-import tagList from '../../seeds/dream/tags.json';
+import challengePlatformList from '@app/seeds/development/challenge-platforms.json';
+import organizationList from '@app/seeds/development/organizations.json';
+import orgMembershipList from '@app/seeds/development/org-memberships.json';
+import userList from '@app/seeds/development/users.json';
 
 @Component({
   selector: 'rocc-database-seed',
@@ -52,14 +58,12 @@ import tagList from '../../seeds/dream/tags.json';
 })
 export class DatabaseSeedComponent implements OnInit {
   constructor(
-    private userService: UserService,
-    private organizationService: OrganizationService,
     private challengePlatformService: ChallengePlatformService,
-    private challengeService: ChallengeService // // private challengePlatformService: ChallengePlatformService,
-  ) // private grantService: GrantService,
-  // private personService: PersonService,
-  // private tagService: TagService
-  {}
+    private challengeService: ChallengeService,
+    private organizationService: OrganizationService,
+    private orgMembershipService: OrgMembershipService,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     // Maximum number of concurrent requests sent to the ROCC API service
@@ -67,13 +71,11 @@ export class DatabaseSeedComponent implements OnInit {
     const concurrency = 1;
 
     const removeDocuments$ = forkJoin([
-      this.userService.deleteAllUsers(),
-      this.organizationService.deleteAllOrganizations(),
-      this.challengePlatformService.deleteAllChallengePlatforms(),
       this.challengeService.deleteAllChallenges(),
-      // this.grantService.deleteAllGrants(),
-      // this.personService.deleteAllPersons(),
-      // this.tagService.deleteAllTags(),
+      this.challengePlatformService.deleteAllChallengePlatforms(),
+      this.organizationService.deleteAllOrganizations(),
+      this.orgMembershipService.deleteAllOrgMemberships(),
+      this.userService.deleteAllUsers(),
     ]);
 
     // Creates Users
@@ -174,24 +176,20 @@ export class DatabaseSeedComponent implements OnInit {
       tap((res) => console.log('Challenge platforms created', res))
     );
 
-    // Returns the ChallengePlatform id for a challenge.
-    const getChallengePlatformId = (
-      challengeCreateRequest: ChallengeCreateRequest,
-      challengePlatformsCreateResult: DocumentsCreateResult<ChallengePlatform>
+    // Returns the identifier of an object in the DB given its tmpId.
+    const getObjectIdFromTmpId = (
+      tmpObjectId: string | undefined,
+      objectsCreateResult: DocumentsCreateResult<any>
     ): Observable<string> => {
-      return of(challengeCreateRequest).pipe(
-        map((rawChallenge) => {
-          const platform = challengePlatformsCreateResult.idMaps.find(
-            (idMap) => idMap.tmpId === rawChallenge.platformId
+      return of(tmpObjectId).pipe(
+        map((tmpObjectId) => {
+          const object = objectsCreateResult.idMaps.find(
+            (idMap) => idMap.tmpId === tmpObjectId
           );
-          if (platform === undefined) {
-            throw new Error(
-              'ChallengePlatform with id ' +
-                rawChallenge.platformId +
-                ' not found'
-            );
+          if (object === undefined) {
+            throw new Error('Object with tmpId ' + tmpObjectId + ' not found');
           }
-          return platform.id;
+          return object.id;
         })
       );
     };
@@ -345,8 +343,8 @@ export class DatabaseSeedComponent implements OnInit {
               of(rawChallenge).pipe(
                 mergeMap(() =>
                   forkJoin({
-                    challengePlatformIds: getChallengePlatformId(
-                      rawChallenge,
+                    challengePlatformIds: getObjectIdFromTmpId(
+                      rawChallenge.platformId,
                       challengePlatformsCreateResult
                     ),
                     // grantIds: getGrantIds(rawChallenge, grantsCreateResult),
@@ -366,38 +364,102 @@ export class DatabaseSeedComponent implements OnInit {
       );
     };
 
-    console.log('Removing DB documents');
-    removeDocuments$
-      .pipe(
-        mergeMap(() =>
+    const createOrgMemberships = (
+      orgMembershipCreateRequests: OrgMembershipCreateRequest[],
+      organizationsCreateResult: DocumentsCreateResult<Organization>,
+      usersCreateResult: DocumentsCreateResult<User>
+    ): Observable<OrgMembership[]> => {
+      return of(orgMembershipCreateRequests).pipe(
+        tap(() => console.log('Creating org memberships')),
+        mergeMap((rawOrgMemberships) =>
           forkJoinConcurrent(
-            [
-              createUsers$,
-              createOrganizations$,
-              createChallengePlatforms$,
-              // createTags$,
-              // createOrganizations$,
-              // createChallengePlatforms$,
-              // createGrants$,
-              // createPersons$
-            ],
+            rawOrgMemberships.map(
+              (rawOrgMembership: OrgMembershipCreateRequest) =>
+                of(rawOrgMembership).pipe(
+                  mergeMap(() =>
+                    forkJoin({
+                      organizationId: getObjectIdFromTmpId(
+                        rawOrgMembership.organizationId,
+                        organizationsCreateResult
+                      ),
+                      userId: getObjectIdFromTmpId(
+                        rawOrgMembership.userId,
+                        usersCreateResult
+                      ),
+                    })
+                  ),
+                  mergeMap((res) => {
+                    _merge(rawOrgMembership, res);
+                    return this.orgMembershipService.createOrgMembership(
+                      rawOrgMembership
+                    );
+                  })
+                )
+            ),
             1
           )
-        ),
-        switchMap((res) => {
-          return createChallenges(
-            challengeList.challenges as ChallengeCreateRequest[],
-            res[2] as DocumentsCreateResult<ChallengePlatform>
-            // res[3] as DocumentsCreateResult<Grant>,
-            // res[4] as DocumentsCreateResult<Person>
-          );
-        })
-      )
-      .subscribe(
-        () => {
-          console.log('DB seeding completed');
-        },
-        (err) => console.log(err)
+        )
       );
+    };
+
+    console.log('Removing DB documents');
+    const createIndependentDocuments$ = removeDocuments$.pipe(
+      mergeMap(() =>
+        forkJoin({
+          usersCreateResult: createUsers$,
+          organizationsCreateResult: createOrganizations$,
+          challengePlatformsCreateResult: createChallengePlatforms$,
+        })
+      ),
+      share()
+    );
+
+    const createOrgMemberships$ = createIndependentDocuments$.pipe(
+      mergeMap((docs) =>
+        createOrgMemberships(
+          orgMembershipList.orgMemberships as OrgMembershipCreateRequest[],
+          docs.organizationsCreateResult,
+          docs.usersCreateResult
+        )
+      ),
+      withLatestFrom(createIndependentDocuments$),
+      map(([orgMembershipsCreateResult, docs]) => {
+        return {
+          orgMembershipsCreateResult: orgMembershipsCreateResult,
+          usersCreateResult: docs.usersCreateResult,
+          organizationsCreateResult: docs.organizationsCreateResult,
+          challengePlatformsCreateResult: docs.challengePlatformsCreateResult,
+        };
+      }),
+      share()
+    );
+
+    const createChallenges$ = createOrgMemberships$.pipe(
+      mergeMap((docs) => {
+        return createChallenges(
+          challengeList.challenges as ChallengeCreateRequest[],
+          docs.challengePlatformsCreateResult as DocumentsCreateResult<ChallengePlatform>
+          // res[3] as DocumentsCreateResult<Grant>,
+          // res[4] as DocumentsCreateResult<Person>
+        );
+      }),
+      withLatestFrom(createOrgMemberships$),
+      map(([challengesCreateResult, docs]) => {
+        return {
+          orgMembershipsCreateResult: docs.orgMembershipsCreateResult,
+          usersCreateResult: docs.usersCreateResult,
+          organizationsCreateResult: docs.organizationsCreateResult,
+          challengePlatformsCreateResult: docs.challengePlatformsCreateResult,
+          challengesCreateResult: challengesCreateResult,
+        };
+      })
+    );
+
+    createChallenges$.subscribe(
+      () => {
+        console.log('DB seeding completed');
+      },
+      (err) => console.log(err)
+    );
   }
 }
