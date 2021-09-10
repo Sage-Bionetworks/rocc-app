@@ -1,4 +1,46 @@
-<div class="container">
-  <p>challenge-header works!</p>
-  <p>{{challenge | json}}</p>
+<div class="rocc-challenge-detail-header-container">
+  <div class="rocc-challenge-detail-header-top">
+    <div class="rocc-challenge-detail-header-top-box-left">
+      <div class="rocc-challenge-detail-header-top-routerlink-container">
+        <mat-icon>share</mat-icon>
+        <a class="button-go-back" routerLink="/{{accountName}}">{{accountName}}</a>
+        <span>/</span>
+        <a class="button-go-back" routerLink="/{{accountName}}/{{challenge.name}}">{{challenge.name}}</a>
+      </div>
+      <div class="rocc-challenge-detail-title-container">
+        <span>{{challenge.displayName}}</span>
+        <button mat-icon-button (click)="toggleSelected()">
+          <mat-icon *ngIf="isFavorite" class="rocc-challenge-favorite-icon" inline=true>
+            star
+          </mat-icon>
+          <mat-icon *ngIf="!isFavorite" inline=true>
+            star_border
+          </mat-icon>
+        </button> 
+      </div>
+    </div>
+    <div class="rocc-challenge-detail-header-top-box-right" *ngIf="platform$ | async as platform">
+      <img src="{{platform.avatarUrl}}" alt="platform-logo">
+      <span>{{platform.displayName}}</span>
+    </div>
+  </div>
+  <div class="rocc-challenge-detail-header-middle">
+    <span>{{challenge.status | titlecase}}</span>
+    <a href="{{challenge.websiteUrl}}" target="_blank">Go to challenge</a>
+  </div>
+  <div class="rocc-challenge-detail-header-bottom">
+    <mat-progress-bar
+      mode="determinate"
+      color="accent"
+      value="{{getProgress(challenge)}}">
+    </mat-progress-bar>
+    <div class="rocc-challenge-detail-dates-box">
+      <span *ngIf="!!challenge.startDate">
+        {{challenge.startDate | date: "yyyy-MM-dd"}}
+      </span>
+      <span *ngIf="!!challenge.endDate">
+        {{challenge.endDate | date: "yyyy-MM-dd"}}
+      </span>
+    </div>
+  </div>
 </div>

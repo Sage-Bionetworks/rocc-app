@@ -10,6 +10,7 @@ import { UserProfileBarComponent } from './user-account/user-profile-bar/user-pr
 import { UserProfileOverviewComponent } from './user-account/user-profile-overview/user-profile-overview.component';
 import { UserProfileChallengesComponent } from './user-account/user-profile-challenges/user-profile-challenges.component';
 import { AccountRoutingModule } from './account-routing.module';
+import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 import { OrgHeaderModule } from './org-account/org-header/org-header.module';
 import { OrgOverviewComponent } from './org-account/org-overview/org-overview.component';
 
@@ -20,7 +21,8 @@ import { OrgOverviewComponent } from './org-account/org-overview/org-overview.co
     MaterialModule,
     NotFoundModule,
     AccountRoutingModule,
-    OrgHeaderModule
+    OrgHeaderModule,
+    AvatarModule,
   ],
   declarations: [
     AccountComponent,
