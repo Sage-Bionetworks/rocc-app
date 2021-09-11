@@ -1,6 +1,6 @@
 {
   "environment": "prod",
   "apiUrl": "http://localhost:4200/api",
-  "appVersion": "0.3.0",
+  "appVersion": "0.4.0",
   "seedDatabase": false
 }
