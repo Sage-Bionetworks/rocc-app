@@ -9,12 +9,14 @@ import {
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
   ChallengeCreateRequest,
+  ChallengePlatformService,
   ChallengeService,
   ModelError as RoccClientError,
   OrgMembership,
-  OrgMembershipService
+  OrgMembershipService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'rocc-challenge-new',
@@ -30,9 +32,13 @@ export class ChallengeNewComponent implements OnInit {
   submitted = false;
   orgMemberships: OrgMembership[] = [];
 
+  platformId!: string;
+
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
     private challengeService: ChallengeService,
+    private challengePlatformService: ChallengePlatformService,
     private pageTitleService: PageTitleService,
     private orgMembershipService: OrgMembershipService
   ) {}
@@ -54,6 +60,12 @@ export class ChallengeNewComponent implements OnInit {
         Validators.maxLength(280),
       ]),
     });
+
+    this.challengePlatformService
+      .listChallengePlatforms()
+      .subscribe((platforms) => {
+        this.platformId = platforms.challengePlatforms[0].id;
+      });
   }
 
   get accountName(): AbstractControl | null {
@@ -106,6 +118,8 @@ export class ChallengeNewComponent implements OnInit {
     const challengeCreateRequest: ChallengeCreateRequest = {
       name: this.name?.value,
       description: this.description?.value,
+      platformId: this.platformId,  // TODO allow the user to pick
+      status: 'active'  // TODO no longer required
     };
 
     this.challengeService
@@ -113,6 +127,9 @@ export class ChallengeNewComponent implements OnInit {
       .subscribe(
         (res) => {
           console.log('ChallengeCreateResponse:', res);
+          this.router.navigate([
+            `${accountName}/${challengeCreateRequest.name}`,
+          ]);
         },
         (err) => {
           const error = err.error as RoccClientError;
