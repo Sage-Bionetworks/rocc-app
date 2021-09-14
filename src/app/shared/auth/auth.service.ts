@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import {
   AuthService as RoccAuthService,
   LocalAuthRequest,
   LocalAuthResponse,
   User,
-  UserService
+  UserService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { pipe } from 'rxjs';
-import { map, mergeMap, switchMap } from 'rxjs/operators';
+import { map, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { TokenService } from './token.service';
 
 // const _loginWithTokenResponse = (authService: AuthService) =>
@@ -18,7 +18,6 @@ import { TokenService } from './token.service';
 //       authService.getTokenService().setToken(token);
 //       return authService.getUserService().getAuthenticatedUser()
 //     })
-
 
 //     // map((user) => {
 //     //   authService.setAuthInfo(new AuthInfo(user));
@@ -34,48 +33,51 @@ import { TokenService } from './token.service';
   providedIn: 'root',
 })
 export class AuthService {
+  private user: BehaviorSubject<User | undefined> = new BehaviorSubject<
+    User | undefined
+  >(undefined);
+
+  // private loginUrl = '/login';
+  private redirectUrl = '/';
+
   constructor(
     private roccAuthService: RoccAuthService,
     private userService: UserService,
     private tokenService: TokenService
   ) {}
 
-  /**
-   * Authenticates user and save token.
-   *
-   * @param {Object} credentials Login info
-   * @return {Observable<User>}
-   */
   login(login: string, password: string): Observable<User> {
     const localAuthRequest: LocalAuthRequest = {
       login: login,
       password: password,
     };
 
-    return this.roccAuthService
-      .authLocal(localAuthRequest).pipe(
-        map((localAuthResponse: LocalAuthResponse) => localAuthResponse.token),
-        switchMap(token => {
-          this.tokenService.setToken(token);
-          return token;
-        }),
-        switchMap(() => this.userService.getAuthenticatedUser())
-      )
-      // .pipe(_loginWithTokenResponse(this));
-
-    // return this.httpClient
-    //   .post<TokenResponse>('/auth/local', {
-    //     email,
-    //     password,
-    //   })
-    //   .pipe(_loginWithTokenResponse(this));
+    return this.roccAuthService.authLocal(localAuthRequest).pipe(
+      map((localAuthResponse: LocalAuthResponse) => localAuthResponse.token),
+      switchMap((token) => {
+        this.tokenService.setToken(token);
+        return token;
+      }),
+      switchMap(() => this.userService.getAuthenticatedUser()),
+      tap(user => this.user.next(user))
+    );
   }
 
-  getTokenService(): TokenService {
-    return this.tokenService;
+  isSignedIn(): Observable<boolean> {
+    return this.user.pipe(
+      map(user => user !== undefined)
+    );
   }
 
-  getUserService(): UserService {
-    return this.userService;
+  getUser(): Observable<User | undefined> {
+    return this.user.asObservable();
+  }
+
+  getRedirectUrl(): string {
+    return this.redirectUrl;
+  }
+
+  setRedirectUrl(redirectUrl: string): void {
+    this.redirectUrl = redirectUrl;
   }
 }

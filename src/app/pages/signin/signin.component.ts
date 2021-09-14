@@ -93,32 +93,9 @@ export class SigninComponent implements OnInit {
 
     this.authService
       .login(this.username?.value, this.password?.value)
-      .subscribe((user) => {
-        console.log('Authenticated user', user);
+      .subscribe(() => {
+        this.router.navigate([this.authService.getRedirectUrl()]);
+        this.authService.setRedirectUrl('/');
       });
-
-    // const localAuthRequest: LocalAuthRequest = {
-    //   login: this.username?.value,
-    //   password: this.password?.value,
-    // };
-
-    // this.authService.authLocal(localAuthRequest).subscribe(
-    //   (res) => {
-    //     console.log('localAuthRequest:', res);
-    //     // this.router.navigate([userCreateRequest.login]);
-    //   },
-    //   (err) => {
-    //     const error = err.error as RoccClientError;
-    //     if (isRoccClientError(error)) {
-    //       if (error.status == 409) {
-    //         // this.username?.setErrors({
-    //         //   alreadyExists: true,
-    //         // });
-    //       } else {
-    //         this.errors.other = `Server error: ${error.title}`;
-    //       }
-    //     }
-    //   }
-    // );
   }
 }
