@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import {
   AuthService as RoccAuthService,
   LocalAuthRequest,
@@ -8,7 +8,7 @@ import {
   UserService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { pipe } from 'rxjs';
-import { map, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { map, mergeMap, subscribeOn, switchMap, tap } from 'rxjs/operators';
 import { TokenService } from './token.service';
 
 // const _loginWithTokenResponse = (authService: AuthService) =>
@@ -36,6 +36,7 @@ export class AuthService {
   private user: BehaviorSubject<User | undefined> = new BehaviorSubject<
     User | undefined
   >(undefined);
+  private initialized = false;
 
   // private loginUrl = '/login';
   private redirectUrl = '/';
@@ -45,6 +46,13 @@ export class AuthService {
     private userService: UserService,
     private tokenService: TokenService
   ) {}
+
+  initialize(): void {
+    this.userService.getAuthenticatedUser().subscribe((user) => {
+      this.user.next(user);
+      this.initialized = true;
+    });
+  }
 
   login(login: string, password: string): Observable<User> {
     const localAuthRequest: LocalAuthRequest = {
@@ -59,17 +67,27 @@ export class AuthService {
         return token;
       }),
       switchMap(() => this.userService.getAuthenticatedUser()),
-      tap(user => this.user.next(user))
+      tap((user) => this.user.next(user))
     );
+  }
+
+  logout(): Observable<null> {
+    this.tokenService.deleteToken();
+    this.user.next(undefined);
+    return of(null);
   }
 
   isSignedIn(): Observable<boolean> {
-    return this.user.pipe(
-      map(user => user !== undefined)
-    );
+    if (!this.initialized) {
+      this.initialize();
+    }
+    return this.user.pipe(map((user) => user !== undefined));
   }
 
   getUser(): Observable<User | undefined> {
+    if (!this.initialized) {
+      this.initialize();
+    }
     return this.user.asObservable();
   }
 

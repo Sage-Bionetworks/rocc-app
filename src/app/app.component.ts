@@ -63,6 +63,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   selectUserMenuItem(menuItem: MenuItem): void {
     console.log('Navbar user menu item selected', menuItem);
+    if (menuItem.name === 'Sign out') {  // TODO DRY
+      this.authService.logout();
+    }
   }
 
   clickNotificationButton(): void {

@@ -14,30 +14,29 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
 import { AuthService } from '@shared/auth/auth.service';
+import { OnDestroy } from 'rocc-client-angular/node_modules/@angular/core/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'rocc-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss'],
 })
-export class SigninComponent implements OnInit {
+export class SigninComponent implements OnInit, OnDestroy {
   @HostBinding('class.main-content') readonly mainContentClass = true;
   signinForm!: FormGroup;
   errors = {
     other: undefined,
   } as { other?: string };
   submitted = false;
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
     private pageTitleService: PageTitleService,
     private authService: AuthService
-  ) {}
-
-  ngOnInit(): void {
-    this.pageTitleService.setTitle('Sign in to ROCC • ROCC');
-
+  ) {
     this.signinForm = this.formBuilder.group({
       username: new FormControl('awesome-user', [
         Validators.required,
@@ -50,6 +49,21 @@ export class SigninComponent implements OnInit {
         Validators.maxLength(64),
       ]),
     });
+  }
+
+  ngOnInit(): void {
+    this.pageTitleService.setTitle('Sign in to ROCC • ROCC');
+
+    const signedInSub = this.authService.isSignedIn().subscribe((signedIn) => {
+      if (signedIn) {
+        this.router.navigate([this.authService.getRedirectUrl()]);
+      }
+    });
+    this.subscriptions.push(signedInSub);
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach((sub) => sub.unsubscribe());
   }
 
   get username() {
