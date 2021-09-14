@@ -93,9 +93,23 @@ export class SigninComponent implements OnInit {
 
     this.authService
       .login(this.username?.value, this.password?.value)
-      .subscribe(() => {
-        this.router.navigate([this.authService.getRedirectUrl()]);
-        this.authService.setRedirectUrl('/');
-      });
+      .subscribe(
+        () => {
+          this.router.navigate([this.authService.getRedirectUrl()]);
+          this.authService.setRedirectUrl('/');
+        },
+        (err) => {
+          const error = err.error as RoccClientError;
+          if (isRoccClientError(error)) {
+            if (error.status == 409) {
+              this.username?.setErrors({
+                alreadyExists: true,
+              });
+            } else {
+              this.errors.other = `Server error: ${error.title}`;
+            }
+          }
+        }
+      );
   }
 }
