@@ -24,6 +24,7 @@ export class SignupComponent implements OnInit {
 
   newUserForm!: FormGroup;
   errors = {
+    alreadyExists: false,
     other: undefined,
   } as { other?: string };
   submitted = false;
@@ -110,6 +111,7 @@ export class SignupComponent implements OnInit {
     const userCreateRequest: UserCreateRequest = {
       login: this.username?.value,
       email: this.email?.value,
+      password: this.password?.value,
     };
 
     this.userService.createUser(userCreateRequest).subscribe(
