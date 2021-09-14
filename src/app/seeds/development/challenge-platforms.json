@@ -5,7 +5,7 @@
       "avatarUrl": "https://via.placeholder.com/400x400",
       "displayName": "Synapse",
       "name": "synapse",
-      "websiteUrl": "https://synapse.org"
+      "websiteUrl": "https://raw.githubusercontent.com/Sage-Bionetworks/rocc-app/main/images/logo/synapse.svg"
     },
     {
       "id": "61393c9fb7acf212886c9b53",
@@ -19,7 +19,7 @@
       "name": "cafa",
       "displayName": "CAFA",
       "websiteUrl": "https://www.biofunctionprediction.org/cafa",
-      "avatarUrl": "https://via.placeholder.com/400x400"
+      "avatarUrl": "https://raw.githubusercontent.com/Sage-Bionetworks/rocc-app/main/images/logo/cafa.svg"
     },
     {
       "id": "613a2d6d3084347fbc8efc06",
@@ -33,7 +33,7 @@
       "name": "camda",
       "displayName": "CAMDA",
       "websiteUrl": "http://camda.info",
-      "avatarUrl": "https://via.placeholder.com/400x400"
+      "avatarUrl": "https://raw.githubusercontent.com/Sage-Bionetworks/rocc-app/main/images/logo/camda.svg"
     },
     {
       "id": "613a2db23084347fbc8efc08",
@@ -47,7 +47,7 @@
       "name": "precisionfda",
       "displayName": "precisionFDA",
       "websiteUrl": "https://precision.fda.gov",
-      "avatarUrl": "https://via.placeholder.com/400x400"
+      "avatarUrl": "https://raw.githubusercontent.com/Sage-Bionetworks/rocc-app/main/images/logo/precisionfda.svg"
     }
   ]
 }
