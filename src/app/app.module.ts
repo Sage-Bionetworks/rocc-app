@@ -46,24 +46,23 @@ import { TokenService } from '@shared/auth/token.service';
   ],
   declarations: [AppComponent],
   providers: [
-    {
-      provide: BASE_PATH,
-      useFactory: (config: AppConfig) => config.apiUrl,
-      deps: [APP_CONFIG],
-    },
+    // {
+    //   provide: BASE_PATH,
+    //   useFactory: (config: AppConfig) => config.apiUrl,
+    //   deps: [APP_CONFIG],
+    // },
     {
       provide: Configuration,
-      useFactory: (tokenService: TokenService) => new Configuration(
-        {
+      useFactory: (config: AppConfig, tokenService: TokenService) =>
+        new Configuration({
           credentials: {
-            BearerAuth: () => tokenService.getToken()
-          }
-          // basePath: environment.apiUrl,
-        }
-      ),
-      deps: [TokenService],
-      multi: false
-    }
+            BearerAuth: () => tokenService.getToken(),
+          },
+          basePath: config.apiUrl,
+        }),
+      deps: [APP_CONFIG, TokenService],
+      multi: false,
+    },
 
     // {
     //   provide: APP_INITIALIZER,
