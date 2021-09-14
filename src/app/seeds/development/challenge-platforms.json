@@ -2,10 +2,10 @@
   "challengePlatforms": [
     {
       "id": "61393be2ebf3a87e774058d9",
-      "avatarUrl": "https://via.placeholder.com/400x400",
+      "avatarUrl": "https://raw.githubusercontent.com/Sage-Bionetworks/rocc-app/main/images/logo/synapse.svg",
       "displayName": "Synapse",
       "name": "synapse",
-      "websiteUrl": "https://raw.githubusercontent.com/Sage-Bionetworks/rocc-app/main/images/logo/synapse.svg"
+      "websiteUrl": "https://synapse.org"
     },
     {
       "id": "61393c9fb7acf212886c9b53",
