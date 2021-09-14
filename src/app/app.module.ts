@@ -22,6 +22,9 @@ import { AppConfig, APP_CONFIG } from './app.config';
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
     // set configuration parameters here.
+    credentials: {
+      "BearerAuth": () => { return ""; }
+    }
   };
   return new Configuration(params);
 }
