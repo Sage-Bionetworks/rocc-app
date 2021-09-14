@@ -18,16 +18,17 @@ import { FiltersModule } from '@shared/filters/filters.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppConfig, APP_CONFIG } from './app.config';
+import { TokenService } from '@shared/auth/token.service';
 
-export function apiConfigFactory(): Configuration {
-  const params: ConfigurationParameters = {
-    // set configuration parameters here.
-    credentials: {
-      "BearerAuth": () => { return ""; }
-    }
-  };
-  return new Configuration(params);
-}
+// export function apiConfigFactory(): Configuration {
+//   const params: ConfigurationParameters = {
+//     // set configuration parameters here.
+//     credentials: {
+//       "BearerAuth": () =>
+//     }
+//   };
+//   return new Configuration(params);
+// }
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ export function apiConfigFactory(): Configuration {
     AppRoutingModule,
     NavbarModule,
     FooterModule,
-    ApiModule.forRoot(apiConfigFactory),
+    ApiModule,
+    // ApiModule.forRoot(apiConfigFactory),
     DatabaseSeedModule,
     FiltersModule,
     PageTitleModule,
@@ -49,6 +51,20 @@ export function apiConfigFactory(): Configuration {
       useFactory: (config: AppConfig) => config.apiUrl,
       deps: [APP_CONFIG],
     },
+    {
+      provide: Configuration,
+      useFactory: (tokenService: TokenService) => new Configuration(
+        {
+          credentials: {
+            BearerAuth: () => tokenService.getToken()
+          }
+          // basePath: environment.apiUrl,
+        }
+      ),
+      deps: [TokenService],
+      multi: false
+    }
+
     // {
     //   provide: APP_INITIALIZER,
     //   useFactory: (appConfigService: AppConfigService) => () =>

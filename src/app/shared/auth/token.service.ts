@@ -4,8 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TokenService {
-  public getToken(): string | null {
-    return localStorage.getItem('access_token');
+  public getToken(): string {
+    const token = localStorage.getItem('access_token')
+    return token === null ? '' : token;
   }
 
   public setToken(token: string): void {

@@ -8,11 +8,12 @@ import {
 import { Router } from '@angular/router';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
-  AuthService,
+  // AuthService,
   LocalAuthRequest,
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
+import { AuthService } from '@shared/auth/auth.service';
 
 @Component({
   selector: 'rocc-signin',
@@ -90,28 +91,34 @@ export class SigninComponent implements OnInit {
     this.submitted = true;
     this.errors.other = undefined;
 
-    const localAuthRequest: LocalAuthRequest = {
-      login: this.username?.value,
-      password: this.password?.value,
-    };
+    this.authService
+      .login(this.username?.value, this.password?.value)
+      .subscribe((user) => {
+        console.log('Authenticated user', user);
+      });
 
-    this.authService.authLocal(localAuthRequest).subscribe(
-      (res) => {
-        console.log('localAuthRequest:', res);
-        // this.router.navigate([userCreateRequest.login]);
-      },
-      (err) => {
-        const error = err.error as RoccClientError;
-        if (isRoccClientError(error)) {
-          if (error.status == 409) {
-            // this.username?.setErrors({
-            //   alreadyExists: true,
-            // });
-          } else {
-            this.errors.other = `Server error: ${error.title}`;
-          }
-        }
-      }
-    );
+    // const localAuthRequest: LocalAuthRequest = {
+    //   login: this.username?.value,
+    //   password: this.password?.value,
+    // };
+
+    // this.authService.authLocal(localAuthRequest).subscribe(
+    //   (res) => {
+    //     console.log('localAuthRequest:', res);
+    //     // this.router.navigate([userCreateRequest.login]);
+    //   },
+    //   (err) => {
+    //     const error = err.error as RoccClientError;
+    //     if (isRoccClientError(error)) {
+    //       if (error.status == 409) {
+    //         // this.username?.setErrors({
+    //         //   alreadyExists: true,
+    //         // });
+    //       } else {
+    //         this.errors.other = `Server error: ${error.title}`;
+    //       }
+    //     }
+    //   }
+    // );
   }
 }
