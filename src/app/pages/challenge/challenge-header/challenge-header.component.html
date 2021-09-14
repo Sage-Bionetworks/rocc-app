@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="rocc-challenge-detail-header-logo-container" *ngIf="platform$ | async as platform">
-      <img src="assets/img/logo/idash.svg" alt="platform-logo">
+      <img src="{{platform.avatarUrl}}" alt="platform-logo">
     </div>
   </div>
   <div class="rocc-challenge-detail-header-bottom">
