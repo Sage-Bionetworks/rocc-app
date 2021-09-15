@@ -44,7 +44,7 @@ export class SignupComponent implements OnInit {
         Validators.required,
         Validators.email,
       ]),
-      password: new FormControl('awesome-password', [
+      password: new FormControl('yourpassword', [
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(64),
@@ -112,6 +112,7 @@ export class SignupComponent implements OnInit {
       login: this.username?.value,
       email: this.email?.value,
       password: this.password?.value,
+      name: ''
     };
 
     this.userService.createUser(userCreateRequest).subscribe(

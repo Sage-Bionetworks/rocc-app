@@ -13,6 +13,7 @@ import { SECTIONS } from './app-sections';
 import { AuthService } from '@shared/auth/auth.service';
 import { Subscription } from 'rxjs';
 import { OnDestroy } from 'rocc-client-angular/node_modules/@angular/core/core';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'rocc-app',
@@ -55,15 +56,27 @@ export class AppComponent implements OnInit, OnDestroy {
       .isSignedIn()
       .subscribe((signedIn) => (this.signedIn = signedIn));
     this.subscriptions.push(signedInSub);
+
+    const userSub = this.authService.getUser().subscribe((user) => {
+      if (user) {
+        this.userAvatar.name = user.name ? user.name : user.login;
+        this.userAvatar.src = user.avatarUrl ? user.avatarUrl : '';
+      } else {
+        this.userAvatar.name = '';
+        this.userAvatar.src = '';
+      }
+    });
+    this.subscriptions.push(userSub);
   }
 
   ngOnDestroy(): void {
-    this.subscriptions.forEach(sub => sub.unsubscribe());
+    this.subscriptions.forEach((sub) => sub.unsubscribe());
   }
 
   selectUserMenuItem(menuItem: MenuItem): void {
     console.log('Navbar user menu item selected', menuItem);
-    if (menuItem.name === 'Sign out') {  // TODO DRY
+    if (menuItem.name === 'Sign out') {
+      // TODO DRY
       this.authService.signout();
     }
   }
