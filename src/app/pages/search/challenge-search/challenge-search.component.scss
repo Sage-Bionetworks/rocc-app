@@ -1,0 +1,14 @@
+.container {
+  width: 1200px;
+  height: 1000px;
+  background-color: rgb(216, 216, 216);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.search-bar-container {
+  width: 260px;
+  height: 100%;
+  background-color: #f3f3f3;
+}
