@@ -55,6 +55,12 @@ a {
       margin-left: 15px;
     }
   }
+
+  .rocc-org-header-dates-container {
+    span {
+      font-size: 1.5em;
+    }
+  }
 }
 
 .rocc-org-header-stats-container {
@@ -63,4 +69,8 @@ a {
   justify-content: space-evenly;
   height: 100%;
   margin-left: 40px;
+
+  span {
+    font-size: 1.5em;
+  }
 }
