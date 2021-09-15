@@ -26,11 +26,12 @@ export class UserProfileBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.userAvatar = {
-      name: this.user.name as string,
-      src: this.user.avatarUrl as string,
+      name: this.user.name
+        ? (this.user.name as string)
+        : this.user.login.replace(/-/g, ' '),
+      src: this.user.avatarUrl!,
       size: 160,
     };
-
     this.numOrgs$ = this.orgMembershipService
       .listOrgMemberships(50, 0, undefined, this.user.id)
       .pipe(
