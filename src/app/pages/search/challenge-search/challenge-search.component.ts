@@ -1,11 +1,17 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { FilterValue } from '@shared/filters/filter-value.model';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
-import { Challenge, DateRange } from '@sage-bionetworks/rocc-client-angular';
+import { Challenge, ChallengeService, DateRange } from '@sage-bionetworks/rocc-client-angular';
 import { challengeStatusFilterValues } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
-import { distinctUntilChanged, map } from 'rxjs/operators';
+import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
@@ -34,13 +40,17 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   challenges: Challenge[] = [];
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
   private query: BehaviorSubject<ChallengeSearchQuery> =
-  new BehaviorSubject<ChallengeSearchQuery>(defaultChallengeSearchQuery);
+    new BehaviorSubject<ChallengeSearchQuery>(defaultChallengeSearchQuery);
 
   limit = 10;
   offset = 0;
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
+  searchResultsCount = 0;
 
-  constructor(private pageTitleService: PageTitleService) {}
+  constructor(
+    private pageTitleService: PageTitleService,
+    private challengeService: ChallengeService
+  ) {}
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
@@ -77,9 +87,35 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
         distinctUntilChanged(deepEqual)
       )
       .subscribe((query: ChallengeSearchQuery) => {
-        console.log('query', query);
         this.challenges = [];
         this.query.next(query);
       });
+
+    this.query
+      .pipe(
+        tap((query) => console.log('List challenges', query)),
+        switchMap((query) =>
+          this.challengeService.listChallenges(
+            query.limit,
+            query.offset,
+            query.sort,
+            query.direction,
+            query.searchTerms,
+            query.tagIds,
+            query.status,
+            query.platformIds,
+            query.startDateRange
+          )
+        )
+      )
+      .subscribe(
+        (page) => {
+          if (page) {
+            this.searchResultsCount = page.totalResults ? page.totalResults : 0;
+            this.challenges.push(...page.challenges);
+          }
+        },
+        (err) => console.log(err)
+      );
   }
 }
