@@ -27,6 +27,10 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule)
   },
   {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings').then(m => m.SettingsModule)
+  },
+  {
     path: 'orgs',
     loadChildren: () => import('./pages/organization').then(m => m.OrganizationModule)
   },

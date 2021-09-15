@@ -38,7 +38,7 @@ export class AuthService {
   >(undefined);
   private initialized = false;
 
-  // private loginUrl = '/login';
+  private loginUrl = '/signin';
   private redirectUrl = '/';
 
   constructor(
@@ -54,7 +54,7 @@ export class AuthService {
     });
   }
 
-  login(login: string, password: string): Observable<User> {
+  signin(login: string, password: string): Observable<User> {
     const localAuthRequest: LocalAuthRequest = {
       login: login,
       password: password,
@@ -71,7 +71,7 @@ export class AuthService {
     );
   }
 
-  logout(): Observable<null> {
+  signout(): Observable<null> {
     this.tokenService.deleteToken();
     this.user.next(undefined);
     return of(null);
@@ -97,5 +97,9 @@ export class AuthService {
 
   setRedirectUrl(redirectUrl: string): void {
     this.redirectUrl = redirectUrl;
+  }
+
+  getSigninUrl(): string {
+    return this.loginUrl;
   }
 }
