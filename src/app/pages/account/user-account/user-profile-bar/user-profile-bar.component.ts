@@ -7,6 +7,7 @@ import {
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { map as _map, uniqBy as _uniqBy } from 'lodash-es';
+import { UserService } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({
   selector: 'rocc-user-profile-bar',
@@ -20,14 +21,19 @@ export class UserProfileBarComponent implements OnInit {
 
   // mock up summary data
   isVerified = true;
-  numFavs = 10;
+  numStarredChallenges$!: Observable<number>;
 
-  constructor(private orgMembershipService: OrgMembershipService) {}
+  constructor(
+    private orgMembershipService: OrgMembershipService,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     this.userAvatar = {
-      name: this.user.name as string,
-      src: this.user.avatarUrl as string,
+      name: this.user.name
+        ? (this.user.name as string)
+        : this.user.login.replace(/-/g, ' '),
+      src: this.user.avatarUrl!,
       size: 160,
     };
 
@@ -40,5 +46,9 @@ export class UserProfileBarComponent implements OnInit {
         ),
         map((orgIds) => (orgIds === undefined ? 0 : orgIds.length))
       );
+
+    this.numStarredChallenges$ = this.userService
+      .getUserStarredChallenges(this.user.id, 10, 0)
+      .pipe(map(page => page.totalResults));
   }
 }
