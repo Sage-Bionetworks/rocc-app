@@ -8,6 +8,14 @@ import { Organization } from '@sage-bionetworks/rocc-client-angular';
 })
 export class OrgHeaderComponent {
   @Input() org!: Organization;
+  // mock data
+  tmpOrg = {
+    id: '613931c6bef3ffc6e5091e4b',
+    email: 'contact@example.org',
+    login: 'sage-bionetworks',
+    name: 'Sage Bionetworks',
+    avatarUrl: 'assets/img/logo/sage-bionetworks.png',
+  };
 
   constructor() {}
 }

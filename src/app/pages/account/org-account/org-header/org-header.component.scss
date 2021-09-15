@@ -1,3 +1,5 @@
+$base_size: 12px;
+
 a {
   color: #fff;
   text-decoration: none;
@@ -13,9 +15,16 @@ a {
   align-items: center;
   width: auto;
   height: 200px;
+  padding: 15px 30px;
   color: #fff;
   background-image: url('~/src/assets/img/challenge-view-header-background.png');
   background-size: cover;
+  font-size: $base_size;
+
+  img {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .rocc-org-header-content-container {
@@ -38,7 +47,7 @@ a {
     width: 100%;
 
     .rocc-org-header-title {
-      font-size: 1.8em;
+      font-size: 3em;
       font-weight: 900;
     }
 
