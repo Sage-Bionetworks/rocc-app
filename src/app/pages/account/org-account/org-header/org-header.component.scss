@@ -1,8 +1,57 @@
-.container {
+a {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.rocc-org-header-container {
+  display: flex;
+  align-items: center;
   width: auto;
   height: 200px;
-  background-color: rgb(167, 129, 255);
+  color: #fff;
+  background-image: url('~/src/assets/img/challenge-view-header-background.png');
+  background-size: cover;
+}
 
+.rocc-org-header-content-container {
+  display: flex;
+  align-items: center;
+  // justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.rocc-org-header-left-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-left: 40px;
+
+  .rocc-org-header-title-container {
+    display: inline-flex;
+    width: 100%;
+
+    .rocc-org-header-title {
+      font-size: 1.8em;
+      font-weight: 900;
+    }
+
+    .mat-icon {
+      margin-left: 15px;
+    }
+  }
+}
+
+.rocc-org-header-stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-left: 40px;
 }
