@@ -19,7 +19,7 @@
       <a class="rocc-user-page-bar-favorites-container" routerLink="/{{user.login}}">
         <mat-icon>star</mat-icon>
         <span class="rocc-user-page-bar-favorites">
-          <strong>{{numFavs}}</strong>
+          <strong>{{numStarredChallenges$ | async}}</strong>
         </span>
       </a>
     </div>
