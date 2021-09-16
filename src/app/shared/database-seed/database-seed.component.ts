@@ -354,13 +354,15 @@ export class DatabaseSeedComponent implements OnInit {
                       rawChallenge.ownerId,
                       orgsCreateResult
                     ).pipe(
-                      switchMap(orgId => this.organizationService.getOrganization(orgId))
+                      switchMap((orgId) =>
+                        this.organizationService.getOrganization(orgId)
+                      )
                     ),
                   })
                 ),
                 mergeMap((res) => {
                   const org: Organization = res.org;
-                  _merge(rawChallenge, omit(res, ['org']) );
+                  _merge(rawChallenge, omit(res, ['org']));
                   return createChallenge(org.login, rawChallenge);
                 })
               )
