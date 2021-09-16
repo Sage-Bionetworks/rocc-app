@@ -28,49 +28,46 @@ a {
 }
 
 .rocc-org-header-content-container {
-  display: flex;
-  align-items: center;
-  // justify-content: space-around;
-  height: 100%;
-  width: 100%;
-}
-
-.rocc-org-header-left-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  margin-left: 40px;
+  width: 100%;
+  margin: 0 40px;
+}
 
-  .rocc-org-header-title-container {
-    display: inline-flex;
-    width: 100%;
+.rocc-org-header-title-container {
+  display: inline-flex;
 
-    .rocc-org-header-title {
-      font-size: 3em;
-      font-weight: 900;
-    }
-
-    .mat-icon {
-      margin-left: 15px;
-    }
+  .rocc-org-header-title {
+    font-size: 3em;
+    font-weight: 900;
   }
+
+  .mat-icon {
+    margin-left: 15px;
+  }
+}
+
+.rocc-org-header-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .rocc-org-header-dates-container {
     span {
       font-size: 1.5em;
     }
   }
-}
 
-.rocc-org-header-stats-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 100%;
-  margin-left: 40px;
+  .rocc-org-header-stats-container {
+    display: flex;
+    flex-direction: column;
 
-  span {
-    font-size: 1.5em;
+    span {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
   }
 }
