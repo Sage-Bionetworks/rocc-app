@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {
   OrgMembershipService,
-  Organization
+  Organization,
 } from '@sage-bionetworks/rocc-client-angular';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { map as _map, uniqBy as _uniqBy } from 'lodash-es';
 @Component({
   selector: 'rocc-org-header',
   templateUrl: './org-header.component.html',
-  styleUrls: ['./org-header.component.scss']
+  styleUrls: ['./org-header.component.scss'],
 })
 export class OrgHeaderComponent implements OnInit {
   @Input() org!: Organization;
@@ -25,14 +25,14 @@ export class OrgHeaderComponent implements OnInit {
     login: 'sage-bionetworks',
     name: 'Sage Bionetworks',
     avatarUrl: 'assets/img/sage-bionetworks.png',
-    websiteUrl: 'https://sagebionetworks.org/'
+    websiteUrl: 'https://sagebionetworks.org/',
   };
 
   constructor(private orgMembershipService: OrgMembershipService) {}
 
   ngOnInit(): void {
     this.numPeople$ = this.orgMembershipService
-      .listOrgMemberships(50, 0, undefined, this.org.id)
+      .listOrgMemberships(50, 0, this.org.id, undefined)
       .pipe(
         map((page) => page.orgMemberships),
         map((orgMemberships) =>
