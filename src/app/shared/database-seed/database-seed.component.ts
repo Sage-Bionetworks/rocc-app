@@ -7,10 +7,11 @@ import {
   share,
   switchMap,
   tap,
-  withLatestFrom
+  withLatestFrom,
 } from 'rxjs/operators';
 import { merge as _merge } from 'lodash-es';
 import {
+  AccountService,
   ChallengeService,
   ChallengePlatformService,
   GrantService,
@@ -39,7 +40,7 @@ import {
   ChallengePlatformCreateResponse,
   OrgMembershipService,
   OrgMembershipCreateRequest,
-  OrgMembership
+  OrgMembership,
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
@@ -54,10 +55,11 @@ import userList from '@app/seeds/development/users.json';
 @Component({
   selector: 'rocc-database-seed',
   templateUrl: './database-seed.component.html',
-  styleUrls: ['./database-seed.component.scss']
+  styleUrls: ['./database-seed.component.scss'],
 })
 export class DatabaseSeedComponent implements OnInit {
   constructor(
+    private accountService: AccountService,
     private challengePlatformService: ChallengePlatformService,
     private challengeService: ChallengeService,
     private organizationService: OrganizationService,
@@ -75,7 +77,7 @@ export class DatabaseSeedComponent implements OnInit {
       this.challengePlatformService.deleteAllChallengePlatforms(),
       this.organizationService.deleteAllOrganizations(),
       this.orgMembershipService.deleteAllOrgMemberships(),
-      this.userService.deleteAllUsers()
+      this.userService.deleteAllUsers(),
     ]);
 
     // Creates Users
@@ -100,7 +102,7 @@ export class DatabaseSeedComponent implements OnInit {
             [],
             userCreateResponses,
             userList.users.map((user) => ({ tmpId: user.id }))
-          )
+          ),
         } as DocumentsCreateResult<User>;
       }),
       tap((res) => console.log('Users created', res))
@@ -132,7 +134,7 @@ export class DatabaseSeedComponent implements OnInit {
             [],
             orgCreateResponses,
             organizationList.organizations.map((org) => ({ tmpId: org.id }))
-          )
+          ),
         } as DocumentsCreateResult<Organization>;
       }),
       tap((res) => console.log('Organizations created', res))
@@ -171,7 +173,7 @@ export class DatabaseSeedComponent implements OnInit {
               challengePlatformList.challengePlatforms.map(
                 (challengePlatform) => ({ tmpId: challengePlatform.id })
               )
-            )
+            ),
           } as DocumentsCreateResult<ChallengePlatform>;
         }
       ),
@@ -332,30 +334,34 @@ export class DatabaseSeedComponent implements OnInit {
 
     // Creates Challenges
     const createChallenges = (
-      challengeCreateRequests: ChallengeCreateRequest[],
-      challengePlatformsCreateResult: DocumentsCreateResult<ChallengePlatform>
-      // grantsCreateResult: DocumentsCreateResult<Grant>,
-      // personsCreateResult: DocumentsCreateResult<Person>
+      challengeCreateRequests: Challenge[],
+      challengePlatformsCreateResult: DocumentsCreateResult<ChallengePlatform>,
+      orgsCreateResult: DocumentsCreateResult<Organization>
     ): Observable<Challenge[]> => {
       return of(challengeCreateRequests).pipe(
         tap(() => console.log('Creating challenges')),
         mergeMap((rawChallenges) =>
           forkJoinConcurrent(
-            rawChallenges.map((rawChallenge: ChallengeCreateRequest) =>
+            rawChallenges.map((rawChallenge: Challenge) =>
               of(rawChallenge).pipe(
                 mergeMap(() =>
                   forkJoin({
                     platformId: getObjectIdFromTmpId(
                       rawChallenge.platformId,
                       challengePlatformsCreateResult
-                    )
-                    // grantIds: getGrantIds(rawChallenge, grantsCreateResult),
-                    // organizerIds: getOrganizerIds(rawChallenge, personsCreateResult)
+                    ),
+                    org: getObjectIdFromTmpId(
+                      rawChallenge.ownerId,
+                      orgsCreateResult
+                    ).pipe(
+                      switchMap(orgId => this.organizationService.getOrganization(orgId))
+                    ),
                   })
                 ),
                 mergeMap((res) => {
-                  _merge(rawChallenge, res);
-                  return createChallenge('awesome-org', rawChallenge); // TODO: don't use always awesome-org
+                  const org: Organization = res.org;
+                  _merge(rawChallenge, omit(res, ['org']) );
+                  return createChallenge(org.login, rawChallenge);
                 })
               )
             ),
@@ -387,7 +393,7 @@ export class DatabaseSeedComponent implements OnInit {
                       userId: getObjectIdFromTmpId(
                         rawOrgMembership.userId,
                         usersCreateResult
-                      )
+                      ),
                     })
                   ),
                   mergeMap((res) => {
@@ -410,7 +416,7 @@ export class DatabaseSeedComponent implements OnInit {
         forkJoin({
           usersCreateResult: createUsers$,
           organizationsCreateResult: createOrganizations$,
-          challengePlatformsCreateResult: createChallengePlatforms$
+          challengePlatformsCreateResult: createChallengePlatforms$,
         })
       ),
       share()
@@ -428,7 +434,7 @@ export class DatabaseSeedComponent implements OnInit {
       map(([orgMembershipsCreateResult, docs]) => {
         return {
           orgMembershipsCreateResult: orgMembershipsCreateResult,
-          ...docs
+          ...docs,
         };
       }),
       share()
@@ -437,15 +443,16 @@ export class DatabaseSeedComponent implements OnInit {
     const createChallenges$ = createOrgMemberships$.pipe(
       mergeMap((docs) => {
         return createChallenges(
-          challengeList.challenges as ChallengeCreateRequest[],
-          docs.challengePlatformsCreateResult as DocumentsCreateResult<ChallengePlatform>
+          challengeList.challenges as Challenge[],
+          docs.challengePlatformsCreateResult as DocumentsCreateResult<ChallengePlatform>,
+          docs.organizationsCreateResult as DocumentsCreateResult<Organization>
         );
       }),
       withLatestFrom(createOrgMemberships$),
       map(([challengesCreateResult, docs]) => {
         return {
           ...docs,
-          challengesCreateResult: challengesCreateResult
+          challengesCreateResult: challengesCreateResult,
         };
       })
     );
