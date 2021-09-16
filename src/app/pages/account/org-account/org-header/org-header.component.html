@@ -13,7 +13,7 @@
         <span>Joined: {{org.createdAt | date: "yyyy-MM-dd":"UTC"}}</span>
       </div>
       <div class="rocc-org-header-stats-container">
-        <span>Challenges: <strong>{{numChallenges}}</strong></span>
+        <span>Challenges: <strong>{{numChallenges$ | async}}</strong></span>
         <span>People: <strong>{{numPeople$ | async}}</strong></span>
       </div>
     </div>

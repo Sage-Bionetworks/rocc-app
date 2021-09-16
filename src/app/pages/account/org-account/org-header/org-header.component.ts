@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {
+  ChallengeService,
   OrgMembershipService,
   Organization,
 } from '@sage-bionetworks/rocc-client-angular';
@@ -14,11 +15,10 @@ import { map as _map, uniqBy as _uniqBy } from 'lodash-es';
 })
 export class OrgHeaderComponent implements OnInit {
   @Input() org!: Organization;
+  numChallenges$!: Observable<number>;
   numPeople$!: Observable<number>;
 
   // mock data
-  numChallenges = 10;
-
   tmpOrg = {
     id: '613931c6bef3ffc6e5091e4b',
     email: 'contact@example.org',
@@ -28,9 +28,16 @@ export class OrgHeaderComponent implements OnInit {
     websiteUrl: 'https://sagebionetworks.org/',
   };
 
-  constructor(private orgMembershipService: OrgMembershipService) {}
+  constructor(
+    private challengeService: ChallengeService,
+    private orgMembershipService: OrgMembershipService
+  ) {}
 
   ngOnInit(): void {
+    this.numChallenges$ = this.challengeService
+      .listAccountChallenges(this.org.login, 50, 0)
+      .pipe(map((page) => page.challenges.length));
+
     this.numPeople$ = this.orgMembershipService
       .listOrgMemberships(50, 0, this.org.id, undefined)
       .pipe(
