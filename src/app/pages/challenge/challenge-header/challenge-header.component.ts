@@ -18,7 +18,7 @@ export class ChallengeHeaderComponent implements OnInit {
   @Output() selectedChange = new EventEmitter<boolean>();
 
   progressValue!: number;
-  remainDays!: number;
+  remainDays!: number | undefined;
   platform$!: Observable<ChallengePlatform>;
 
   constructor(private challengePlatformService: ChallengePlatformService) {}
@@ -43,10 +43,10 @@ export class ChallengeHeaderComponent implements OnInit {
         ? 100
         : 0;
 
-    this.remainDays = this.calcDays(
-      new Date().toUTCString(),
-      this.challenge.endDate!
-    );
+    this.remainDays =
+      this.challenge.endDate !== undefined
+        ? this.calcDays(new Date().toUTCString(), this.challenge.endDate!)
+        : undefined;
   }
 
   calcDays(startDate: string, endDate: string): number {
