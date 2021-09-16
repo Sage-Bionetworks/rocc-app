@@ -10,7 +10,8 @@
       "platformId": "61393be2ebf3a87e774058d9",
       "startDate": "2020-11-10",
       "status": "active",
-      "websiteUrl": "https://synapse.org/awesome-challenge"
+      "websiteUrl": "https://synapse.org/awesome-challenge",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "astrazeneca-sanger-drug-combination-prediction",
@@ -20,7 +21,8 @@
       "endDate": "2016-03-14",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "completed",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "multi-targeting-drug",
@@ -30,7 +32,8 @@
       "endDate": "2018-02-26",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "completed",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "anti-pd1-response-prediction",
@@ -40,7 +43,8 @@
       "endDate": "2021-02-25",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "completed",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "ehr-covid-19",
@@ -49,7 +53,8 @@
       "startDate": "2020-04-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "active",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "cagi5-sickkids-clinical-genomes",
@@ -59,7 +64,8 @@
       "endDate": "2018-04-26",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-sickkids5.html",
       "status": "completed",
-      "platformId": "613a2d6d3084347fbc8efc06"
+      "platformId": "613a2d6d3084347fbc8efc06",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "gagi6-annotate-all-missense",
@@ -69,7 +75,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-annotate-all-missense.html",
       "status": "active",
-      "platformId": "613a2d6d3084347fbc8efc06"
+      "platformId": "613a2d6d3084347fbc8efc06",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "camda18-metasub-forensics",
@@ -77,7 +84,8 @@
       "description": "",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#metasub_forensics_challenge",
       "status": "completed",
-      "platformId": "613a2da13084347fbc8efc07"
+      "platformId": "613a2da13084347fbc8efc07",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "camda18-cmap-drug-safety",
@@ -85,7 +93,8 @@
       "description": "",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#cmap_drug_safety_challenge",
       "status": "completed",
-      "platformId": "613a2da13084347fbc8efc07"
+      "platformId": "613a2da13084347fbc8efc07",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "cafa-4",
@@ -95,7 +104,8 @@
       "endDate": "2020-02-12",
       "websiteUrl": "https://www.biofunctionprediction.org/cafa/",
       "status": "completed",
-      "platformId": "613a2d6d3084347fbc8efc05"
+      "platformId": "613a2d6d3084347fbc8efc05",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "casp13",
@@ -105,7 +115,8 @@
       "endDate": "2018-08-20",
       "websiteUrl": "https://predictioncenter.org/casp13/index.cgi",
       "status": "completed",
-      "platformId": "613a2db23084347fbc8efc08"
+      "platformId": "613a2db23084347fbc8efc08",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "casp14",
@@ -115,7 +126,8 @@
       "endDate": "2020-09-07",
       "websiteUrl": "https://predictioncenter.org/casp14/index.cgi",
       "status": "completed",
-      "platformId": "613a2db23084347fbc8efc08"
+      "platformId": "613a2db23084347fbc8efc08",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "cdrh-biothreat",
@@ -125,7 +137,8 @@
       "endDate": "2018-10-18",
       "websiteUrl": "https://precision.fda.gov/challenges/3",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "brain-cancer-predictive-modeling-and-biomarker-discovery",
@@ -135,7 +148,8 @@
       "endDate": "2020-02-14",
       "websiteUrl": "https://precision.fda.gov/challenges/8/",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "covid-19-precision-immunology-app-a-thon",
@@ -145,7 +159,8 @@
       "endDate": "2021-01-29",
       "websiteUrl": "https://precision.fda.gov/challenges/12/",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
       "name": "tumor-mutational-burden-challenge-phase-2",
@@ -155,7 +170,8 @@
       "endDate": "2021-09-13",
       "websiteUrl": "https://precision.fda.gov/challenges/18",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7"
     }
   ]
 }
