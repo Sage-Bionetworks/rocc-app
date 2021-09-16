@@ -1,20 +1,36 @@
 <main>
   <mat-card class="container">
-    <mat-card-title class="title">Create a new challenge</mat-card-title>
+    <mat-card-title class="title">Register a new challenge</mat-card-title>
     <mat-card-content>
       <form class="form-container" [formGroup]="newChallengeForm" novalidate>
-        <mat-form-field class="accountName">
+        <div class="challenge-full-name">
+          <mat-form-field appearance="fill">
+            <mat-label>Owner</mat-label>
+            <mat-select formControlName="accountName" required>
+              <mat-option *ngFor="let org of orgs" [value]="org.login">
+                <span class="owner-option">
+                  <!-- <sage-avatar [name]="org.name ? org.name : org.login" [size]="24"></sage-avatar> -->
+                  {{org.login}}
+                </span>
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <span class="challenge-owner-name-separator">/</span>
+          <mat-form-field class="name">
+            <input matInput placeholder="Challenge name" type="text"
+              formControlName="name">
+            <mat-error *ngIf="name?.invalid">{{getNameErrorMessage()}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- <mat-form-field class="accountName">
           <input matInput placeholder="Account name" type="text"
             formControlName="accountName">
           <mat-error *ngIf="accountName?.invalid">{{getAccountNameErrorMessage()}}
           </mat-error>
-        </mat-form-field>
-        <mat-form-field class="name">
-          <input matInput placeholder="Challenge name" type="text"
-            formControlName="name">
-          <mat-error *ngIf="name?.invalid">{{getNameErrorMessage()}}
-          </mat-error>
-        </mat-form-field>
+        </mat-form-field> -->
+
         <mat-form-field class="description">
           <input matInput placeholder="Description" type="text"
             formControlName="description">

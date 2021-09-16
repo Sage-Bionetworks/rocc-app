@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -12,25 +12,29 @@ import {
   ChallengePlatformService,
   ChallengeService,
   ModelError as RoccClientError,
-  OrgMembership,
-  OrgMembershipService,
+  Organization,
+  UserService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'rocc-challenge-new',
   templateUrl: './challenge-new.component.html',
   styleUrls: ['./challenge-new.component.scss'],
 })
-export class ChallengeNewComponent implements OnInit {
+export class ChallengeNewComponent implements OnInit, OnDestroy {
   @HostBinding('class.main-content') readonly mainContentClass = true;
   newChallengeForm!: FormGroup;
   errors = {
     other: undefined,
   } as { other?: string };
   submitted = false;
-  orgMemberships: OrgMembership[] = [];
+  orgs: Organization[] = [];
+  private subscriptions: Subscription[] = [];
 
   platformId!: string;
 
@@ -40,11 +44,17 @@ export class ChallengeNewComponent implements OnInit {
     private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
     private pageTitleService: PageTitleService,
-    private orgMembershipService: OrgMembershipService
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Create a new challenge • ROCC');
+
+    const orgsSub = this.userService
+      .listAuthenticatedUserOrganizations()
+      .pipe(map((page) => page.organizations))
+      .subscribe((orgs) => (this.orgs = orgs));
+    this.subscriptions.push(orgsSub);
 
     this.newChallengeForm = this.formBuilder.group({
       accountName: new FormControl('awesome-org', [Validators.required]),
@@ -66,6 +76,10 @@ export class ChallengeNewComponent implements OnInit {
       .subscribe((platforms) => {
         this.platformId = platforms.challengePlatforms[0].id;
       });
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
   get accountName(): AbstractControl | null {
@@ -118,8 +132,8 @@ export class ChallengeNewComponent implements OnInit {
     const challengeCreateRequest: ChallengeCreateRequest = {
       name: this.name?.value,
       description: this.description?.value,
-      platformId: this.platformId,  // TODO allow the user to pick
-      status: 'active'  // TODO no longer required
+      platformId: this.platformId, // TODO allow the user to pick
+      status: 'active', // TODO no longer required
     };
 
     this.challengeService
@@ -135,9 +149,9 @@ export class ChallengeNewComponent implements OnInit {
           const error = err.error as RoccClientError;
           if (isRoccClientError(error)) {
             if (error.status == 409) {
-              // this.username?.setErrors({
-              //   alreadyExists: true,
-              // });
+              this.name?.setErrors({
+                alreadyExists: true,
+              });
             } else {
               this.errors.other = `Server error: ${error.title}`;
             }
