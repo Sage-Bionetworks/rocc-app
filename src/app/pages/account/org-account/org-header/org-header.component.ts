@@ -26,6 +26,7 @@ export class OrgHeaderComponent implements OnInit {
     name: 'Sage Bionetworks',
     avatarUrl: 'assets/img/sage-bionetworks.png',
     websiteUrl: 'https://sagebionetworks.org/',
+    description: 'This challenge is awesome for short description',
   };
 
   constructor(
