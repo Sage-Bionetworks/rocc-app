@@ -4,10 +4,16 @@
     <div class="rocc-org-header-title-container">
       <span class="rocc-org-header-title">{{tmpOrg.name}}</span>
       <div class="rocc-org-header-link-container">
-        <a href="{{tmpOrg.websiteUrl}}" target="_blank">
+        <a 
+          href="{{tmpOrg.websiteUrl}}" 
+          target="_blank"
+          matTooltip="Go to {{tmpOrg.name}} website" 
+          matTooltipPosition="above">
           <mat-icon>travel_explore</mat-icon>
         </a>
-        <mat-icon>mail_outline</mat-icon>
+        <i matTooltip="{{tmpOrg.email}}" matTooltipPosition="above">
+          <mat-icon>mail_outline</mat-icon>
+        </i>
       </div>
     </div>
     <div class="rocc-org-header-info-container">
