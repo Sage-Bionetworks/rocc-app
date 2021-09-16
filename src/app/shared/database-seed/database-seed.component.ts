@@ -85,9 +85,11 @@ export class DatabaseSeedComponent implements OnInit {
       tap(() => console.log('Creating users')),
       mergeMap((users) =>
         forkJoinConcurrent(
-          users.map((user) =>
-            this.userService.createUser(omit(user, ['id']) as UserCreateRequest)
-          ),
+          users.map((user) => {
+            let userRequest = omit(user, ['id']) as UserCreateRequest;
+            userRequest.password = 'yourpassword';
+            return this.userService.createUser(userRequest);
+          }),
           10
         )
       ),
@@ -426,7 +428,7 @@ export class DatabaseSeedComponent implements OnInit {
       map(([orgMembershipsCreateResult, docs]) => {
         return {
           orgMembershipsCreateResult: orgMembershipsCreateResult,
-          ...docs
+          ...docs,
         };
       }),
       share()
