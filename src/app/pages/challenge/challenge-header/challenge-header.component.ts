@@ -17,7 +17,8 @@ export class ChallengeHeaderComponent implements OnInit {
   @Input() isFavorite!: boolean;
   @Output() selectedChange = new EventEmitter<boolean>();
 
-  progressValue: number = 0;
+  progressValue!: number;
+  remainDays!: number;
   platform$!: Observable<ChallengePlatform>;
 
   constructor(private challengePlatformService: ChallengePlatformService) {}
@@ -41,11 +42,16 @@ export class ChallengeHeaderComponent implements OnInit {
         : this.challenge.status == 'completed'
         ? 100
         : 0;
+
+    this.remainDays = this.calcDays(
+      new Date().toUTCString(),
+      this.challenge.endDate!
+    );
   }
 
   calcDays(startDate: string, endDate: string): number {
     let timeDiff = +new Date(endDate) - +new Date(startDate);
-    return timeDiff / (1000 * 60 * 60 * 24);
+    return Math.round(timeDiff / (1000 * 60 * 60 * 24));
   }
 
   calcProgress(today: string, startDate: string, endDate: string): number {
@@ -54,8 +60,6 @@ export class ChallengeHeaderComponent implements OnInit {
       100
     );
   }
-
-  calcRemainDays(today: string, endDate: string): void {}
 
   public toggleSelected() {
     this.isFavorite = !this.isFavorite;
