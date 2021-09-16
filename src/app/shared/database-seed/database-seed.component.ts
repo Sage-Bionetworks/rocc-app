@@ -7,7 +7,7 @@ import {
   share,
   switchMap,
   tap,
-  withLatestFrom,
+  withLatestFrom
 } from 'rxjs/operators';
 import { merge as _merge } from 'lodash-es';
 import {
@@ -39,7 +39,7 @@ import {
   ChallengePlatformCreateResponse,
   OrgMembershipService,
   OrgMembershipCreateRequest,
-  OrgMembership,
+  OrgMembership
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
@@ -54,7 +54,7 @@ import userList from '@app/seeds/development/users.json';
 @Component({
   selector: 'rocc-database-seed',
   templateUrl: './database-seed.component.html',
-  styleUrls: ['./database-seed.component.scss'],
+  styleUrls: ['./database-seed.component.scss']
 })
 export class DatabaseSeedComponent implements OnInit {
   constructor(
@@ -75,7 +75,7 @@ export class DatabaseSeedComponent implements OnInit {
       this.challengePlatformService.deleteAllChallengePlatforms(),
       this.organizationService.deleteAllOrganizations(),
       this.orgMembershipService.deleteAllOrgMemberships(),
-      this.userService.deleteAllUsers(),
+      this.userService.deleteAllUsers()
     ]);
 
     // Creates Users
@@ -100,7 +100,7 @@ export class DatabaseSeedComponent implements OnInit {
             [],
             userCreateResponses,
             userList.users.map((user) => ({ tmpId: user.id }))
-          ),
+          )
         } as DocumentsCreateResult<User>;
       }),
       tap((res) => console.log('Users created', res))
@@ -132,7 +132,7 @@ export class DatabaseSeedComponent implements OnInit {
             [],
             orgCreateResponses,
             organizationList.organizations.map((org) => ({ tmpId: org.id }))
-          ),
+          )
         } as DocumentsCreateResult<Organization>;
       }),
       tap((res) => console.log('Organizations created', res))
@@ -171,7 +171,7 @@ export class DatabaseSeedComponent implements OnInit {
               challengePlatformList.challengePlatforms.map(
                 (challengePlatform) => ({ tmpId: challengePlatform.id })
               )
-            ),
+            )
           } as DocumentsCreateResult<ChallengePlatform>;
         }
       ),
@@ -348,7 +348,7 @@ export class DatabaseSeedComponent implements OnInit {
                     platformId: getObjectIdFromTmpId(
                       rawChallenge.platformId,
                       challengePlatformsCreateResult
-                    ),
+                    )
                     // grantIds: getGrantIds(rawChallenge, grantsCreateResult),
                     // organizerIds: getOrganizerIds(rawChallenge, personsCreateResult)
                   })
@@ -387,7 +387,7 @@ export class DatabaseSeedComponent implements OnInit {
                       userId: getObjectIdFromTmpId(
                         rawOrgMembership.userId,
                         usersCreateResult
-                      ),
+                      )
                     })
                   ),
                   mergeMap((res) => {
@@ -410,7 +410,7 @@ export class DatabaseSeedComponent implements OnInit {
         forkJoin({
           usersCreateResult: createUsers$,
           organizationsCreateResult: createOrganizations$,
-          challengePlatformsCreateResult: createChallengePlatforms$,
+          challengePlatformsCreateResult: createChallengePlatforms$
         })
       ),
       share()
@@ -428,7 +428,7 @@ export class DatabaseSeedComponent implements OnInit {
       map(([orgMembershipsCreateResult, docs]) => {
         return {
           orgMembershipsCreateResult: orgMembershipsCreateResult,
-          ...docs,
+          ...docs
         };
       }),
       share()
@@ -445,7 +445,7 @@ export class DatabaseSeedComponent implements OnInit {
       map(([challengesCreateResult, docs]) => {
         return {
           ...docs,
-          challengesCreateResult: challengesCreateResult,
+          challengesCreateResult: challengesCreateResult
         };
       })
     );
