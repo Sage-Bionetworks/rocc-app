@@ -6,6 +6,7 @@ import { FiltersModule } from '@shared/filters/filters.module';
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 import { ChallengeSearchComponent } from './challenge-search/challenge-search.component';
+import { ChallengeCardComponent } from './challenge-search/challenge-card/challenge-card.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,10 @@ import { ChallengeSearchComponent } from './challenge-search/challenge-search.co
     FiltersModule,
     SearchRoutingModule,
   ],
-  declarations: [SearchComponent, ChallengeSearchComponent],
+  declarations: [
+    SearchComponent,
+    ChallengeSearchComponent,
+    ChallengeCardComponent,
+  ],
 })
 export class SearchModule {}

@@ -1,8 +1,15 @@
 <div class="container">
   <div class="search-bar-container">
     <h3>Status</h3>
-    <sage-checkbox-filter name="status"
-      [values]="challengeStatusFilterValues"></sage-checkbox-filter>
+    <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
+    </sage-checkbox-filter>
   </div>
-  <div class="search-content-container"></div>
+  <div class="search-content-container">
+
+    <mat-nav-list class="challenge-search-results">
+      <rocc-challenge-card *ngFor="let challenge of challenges"
+        [challenge]="challenge" [routerLink]="['/', challenge.fullName]">
+      </rocc-challenge-card>
+    </mat-nav-list>
+  </div>
 </div>
