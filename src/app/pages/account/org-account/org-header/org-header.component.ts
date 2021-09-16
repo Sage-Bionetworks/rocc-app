@@ -1,21 +1,44 @@
-import { Component, Input } from '@angular/core';
-import { Organization } from '@sage-bionetworks/rocc-client-angular';
+import { Component, Input, OnInit } from '@angular/core';
+import {
+  OrgMembershipService,
+  Organization,
+} from '@sage-bionetworks/rocc-client-angular';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { map as _map, uniqBy as _uniqBy } from 'lodash-es';
 
 @Component({
   selector: 'rocc-org-header',
   templateUrl: './org-header.component.html',
   styleUrls: ['./org-header.component.scss'],
 })
-export class OrgHeaderComponent {
+export class OrgHeaderComponent implements OnInit {
   @Input() org!: Organization;
+  numPeople$!: Observable<number>;
+
   // mock data
+  numChallenges = 10;
+
   tmpOrg = {
     id: '613931c6bef3ffc6e5091e4b',
     email: 'contact@example.org',
     login: 'sage-bionetworks',
     name: 'Sage Bionetworks',
     avatarUrl: 'assets/img/logo/sage-bionetworks.png',
+    websiteUrl: 'https://sagebionetworks.org/',
   };
 
-  constructor() {}
+  constructor(private orgMembershipService: OrgMembershipService) {}
+
+  ngOnInit(): void {
+    this.numPeople$ = this.orgMembershipService
+      .listOrgMemberships(50, 0, undefined, this.org.id)
+      .pipe(
+        map((page) => page.orgMemberships),
+        map((orgMemberships) =>
+          _map(_uniqBy(orgMemberships, 'userId'), 'userId')
+        ),
+        map((userIds) => (userIds === undefined ? 0 : userIds.length))
+      );
+  }
 }
