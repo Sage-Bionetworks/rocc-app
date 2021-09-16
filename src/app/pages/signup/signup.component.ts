@@ -118,7 +118,7 @@ export class SignupComponent implements OnInit {
     this.userService.createUser(userCreateRequest).subscribe(
       (res) => {
         console.log('UserCreateResponse:', res);
-        this.router.navigate([userCreateRequest.login]);
+        this.router.navigate(['signin']);
       },
       (err) => {
         const error = err.error as RoccClientError;
