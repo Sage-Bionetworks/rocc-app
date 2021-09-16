@@ -48,7 +48,7 @@ export class UserProfileBarComponent implements OnInit {
       );
 
     this.numStarredChallenges$ = this.userService
-      .getUserStarredChallenges(this.user.id, 10, 0)
+      .listUserStarredChallenges(this.user.id, 10, 0)
       .pipe(map(page => page.totalResults));
   }
 }
