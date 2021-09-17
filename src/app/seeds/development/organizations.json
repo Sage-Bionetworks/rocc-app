@@ -11,17 +11,17 @@
     },
     {
       "id": "613931c01193d6884a4e617a",
-      "name": "The Dialogue on Reverse Engineering Assessment and Methods (DREAM)",
+      "name": "The Dialogue on Reverse Engineering Assessment and Methods",
       "description": "This is an awesome organization",
       "email": "dream@sagebionetworks.org",
       "login": "dream",
       "websiteUrl": "https://dreamchallenges.org/",
-      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/dream.png"
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/update-org-header/images/logo/dream.png"
     },
     {
       "id": "613931c6bef3ffc6e5091e4b",
       "name": "Sage Bionetworks",
-      "description": "This is an awesome organization",
+      "description": "We help research communities develop reliable outcomes to advance our understanding of human health and to speed the translation of science into medicine.",
       "email": "info@sagebase.org",
       "login": "sage-bionetworks",
       "websiteUrl": "https://sagebionetworks.org/",
@@ -40,10 +40,10 @@
       "id": "613931cc566bf7138df32789",
       "name": "precision FDA",
       "description": "This is an awesome organization",
-      "email": "general-chairs@miccai2021.org",
+      "email": "precisionfda@fda.hhs.gov",
       "login": "precisionfda",
       "websiteUrl": "https://precision.fda.gov/",
-      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/prescisionfda.png"
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/precisionfda.png"
     },
     {
       "id": "613931cc566bf7138df32790",
@@ -51,7 +51,7 @@
       "description": "This is an awesome organization",
       "email": "cagi@genomeinterpretation.org",
       "login": "cagi",
-      "websiteUrl": "cagi@genomeinterpretation.org",
+      "websiteUrl": "https://genomeinterpretation.org/",
       "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/cagi.png"
     },
     {
