@@ -11,12 +11,13 @@
       </ng-container>
     </nav>
 
-    <rocc-user-profile-overview *ngIf="activeTab === tabs['overview']"
-      [user]="user" [orgs]="orgs"></rocc-user-profile-overview>
-    <rocc-user-profile-challenges *ngIf="activeTab === tabs['challenges']"
-      [userId]="accountId"></rocc-user-profile-challenges>
-    <rocc-user-profile-starred *ngIf="activeTab === tabs['starred']"
-      [user]="user">
-    </rocc-user-profile-starred>
+    <ng-container [ngSwitch]="activeTab">
+      <rocc-user-profile-overview *ngSwitchCase="tabs['overview']" [user]="user"
+        [orgs]="orgs"></rocc-user-profile-overview>
+      <rocc-user-profile-challenges *ngSwitchCase="tabs['challenges']"
+        [userId]="accountId"></rocc-user-profile-challenges>
+      <rocc-user-profile-starred *ngSwitchCase="tabs['starred']" [user]="user">
+      </rocc-user-profile-starred>
+    </ng-container>
   </div>
 </div>
