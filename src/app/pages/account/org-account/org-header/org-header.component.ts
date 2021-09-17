@@ -38,7 +38,7 @@ export class OrgHeaderComponent implements OnInit {
   ngOnInit(): void {
     this.numChallenges$ = this.challengeService
       .listAccountChallenges(this.org.login, 50, 0)
-      .pipe(map((page) => page.challenges.length));
+      .pipe(map((page) => page.totalResults));
 
     this.numPeople$ = this.orgMembershipService
       .listOrgMemberships(50, 0, this.org.id, undefined)
