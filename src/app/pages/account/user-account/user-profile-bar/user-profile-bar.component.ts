@@ -13,7 +13,7 @@ import { User, UserService } from '@sage-bionetworks/rocc-client-angular';
 export class UserProfileBarComponent implements OnInit {
   @Input() user!: User;
   @Input() userAvatar!: Avatar;
-  numOrgs$!: Observable<number>;
+  @Input() numOrgs = 0;
 
   // mock up summary data
   isVerified = true;
@@ -29,13 +29,6 @@ export class UserProfileBarComponent implements OnInit {
       src: this.user.avatarUrl!,
       size: 160,
     };
-
-    this.numOrgs$ = this.userService
-      .listUserOrganizations(this.user.id, 50, 0)
-      .pipe(
-        map((page) => page.organizations),
-        map((orgs) => (orgs === undefined ? 0 : orgs.length))
-      );
 
     this.numStarredChallenges$ = this.userService
       .listUserStarredChallenges(this.user.id, 10, 0)
