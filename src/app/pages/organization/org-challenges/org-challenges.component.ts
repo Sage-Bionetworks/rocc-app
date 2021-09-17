@@ -6,7 +6,7 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'rocc-org-challenges',
@@ -14,7 +14,8 @@ import { map, switchMap } from 'rxjs/operators';
   styleUrls: ['./org-challenges.component.scss'],
 })
 export class OrgChallengesComponent implements OnInit {
-  org!: Organization | undefined;
+  // org!: Organization | undefined;
+  accountName!: string;
   challenges$!: Observable<Challenge[] | []>;
 
   constructor(
@@ -24,6 +25,7 @@ export class OrgChallengesComponent implements OnInit {
 
   ngOnInit(): void {
     this.challenges$ = this.orgDataService.getOrg().pipe(
+      tap((org) => (this.accountName = org!.login)),
       switchMap((org) =>
         this.challengeService.listAccountChallenges(org!.login, 50, 0)
       ),

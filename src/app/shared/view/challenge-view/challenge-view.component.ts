@@ -7,11 +7,11 @@ import {
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'rocc-card-preview',
-  templateUrl: './card-preview.component.html',
-  styleUrls: ['./card-preview.component.scss'],
+  selector: 'rocc-challenge-view',
+  templateUrl: './challenge-view.component.html',
+  styleUrls: ['./challenge-view.component.scss'],
 })
-export class CardPreviewComponent implements OnInit {
+export class ChallengeViewComponent implements OnInit {
   @Input() challenge!: Challenge;
   platform$!: Observable<ChallengePlatform>;
   constructor(private challengePlatformService: ChallengePlatformService) {}
@@ -20,6 +20,5 @@ export class CardPreviewComponent implements OnInit {
     this.platform$ = this.challengePlatformService.getChallengePlatform(
       this.challenge!.platformId!
     );
-    this.platform$.subscribe(console.log);
   }
 }
