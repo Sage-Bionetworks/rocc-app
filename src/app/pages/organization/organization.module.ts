@@ -10,6 +10,7 @@ import { OrgHeaderModule } from '../account/org-account/org-header/org-header.mo
 import { OrgPeopleComponent } from './org-people/org-people.component';
 import { OrgSettingsComponent } from './org-settings/org-settings.component';
 import { OrgNewModule } from './org-new/org-new.module';
+import { CardPreviewModule } from '@app/shared/card-preview/card-preview.module';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { OrgNewModule } from './org-new/org-new.module';
     OrgHeaderModule,
     OrganizationRoutingModule,
     OrgNewModule,
+    CardPreviewModule,
   ],
   declarations: [
     OrganizationComponent,

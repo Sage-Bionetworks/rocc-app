@@ -19,6 +19,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { TokenService } from '@shared/auth/token.service';
+import { CardPreviewModule } from '@shared/card-preview/card-preview.module';
 
 // export function apiConfigFactory(): Configuration {
 //   const params: ConfigurationParameters = {
@@ -43,6 +44,7 @@ import { TokenService } from '@shared/auth/token.service';
     DatabaseSeedModule,
     FiltersModule,
     PageTitleModule,
+    CardPreviewModule,
   ],
   declarations: [AppComponent],
   providers: [

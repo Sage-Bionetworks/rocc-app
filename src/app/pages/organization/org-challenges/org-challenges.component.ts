@@ -7,8 +7,6 @@ import {
 import { OrgDataService } from '../org-data.service';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-import { map as _map, uniqBy as _uniqBy } from 'lodash-es';
-import { tap } from 'lodash';
 
 @Component({
   selector: 'rocc-org-challenges',
