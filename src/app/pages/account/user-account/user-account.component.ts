@@ -7,11 +7,8 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
-
-export interface Tab {
-  name: string;
-  visible: boolean;
-}
+import { Tab } from './tab.model';
+import { TABS } from './user-account-tabs';
 
 @Component({
   selector: 'rocc-user-account',
@@ -22,40 +19,16 @@ export class UserAccountComponent implements OnInit, OnDestroy {
   @Input() accountId!: string;
   user$!: Observable<User>;
   orgs: Organization[] = [];
+  tabs = TABS;
+  tabKeys: string[] = Object.keys(this.tabs);
+  activeTab: Tab = this.tabs['overview'];
   private subscriptions: Subscription[] = [];
-
-  links = ['overview', 'challenges'];
-
-  // tabs =
-  tabKeys: string[] = [];
-
-  tab$!: Observable<string | null>;
-
-  tabs: { [key: string]: Tab } = {
-    overview: {
-      name: 'Overview',
-      visible: true,
-    },
-    challenges: {
-      name: 'Challenges',
-      visible: true,
-    },
-    starred: {
-      name: 'Starred',
-      visible: false,
-    },
-  };
-
-  activeTab: Tab;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private userService: UserService
-  ) {
-    this.tabKeys = Object.keys(this.tabs);
-    this.activeTab = this.tabs['overview'];
-  }
+  ) {}
 
   ngOnInit(): void {
     this.user$ = this.userService.getUser(this.accountId);

@@ -15,7 +15,8 @@
       [user]="user" [orgs]="orgs"></rocc-user-profile-overview>
     <rocc-user-profile-challenges *ngIf="activeTab === tabs['challenges']"
       [userId]="accountId"></rocc-user-profile-challenges>
-    <rocc-user-profile-starred *ngIf="activeTab === tabs['starred']">
+    <rocc-user-profile-starred *ngIf="activeTab === tabs['starred']"
+      [user]="user">
     </rocc-user-profile-starred>
   </div>
 </div>
