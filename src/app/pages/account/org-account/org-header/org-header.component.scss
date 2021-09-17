@@ -5,7 +5,6 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
     cursor: pointer;
   }
 }
@@ -37,15 +36,31 @@ a {
 }
 
 .rocc-org-header-title-container {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
 
   .rocc-org-header-title {
     font-size: 3em;
     font-weight: 900;
   }
+  .rocc-org-header-link-container {
+    display: flex;
+    flex-direction: column;
 
-  .mat-icon {
-    margin-left: 15px;
+    a,
+    div {
+      display: inline-flex;
+      align-items: flex-end;
+
+      .mat-icon {
+        margin-left: 30px;
+        margin-right: 5px;
+      }
+    }
+
+    a {
+      margin-bottom: 5px;
+    }
   }
 }
 
