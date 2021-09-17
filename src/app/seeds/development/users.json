@@ -4,35 +4,40 @@
       "id": "613913256b8190e8cc02ed27",
       "email": "awesome-user@example.org",
       "login": "awesome-user",
-      "name": "Awesome User"
+      "name": "Awesome User",
+      "bio": "A great bio"
     },
     {
       "id": "61391334790dbc2726b9d37f",
       "avatarUrl": "https://avatars.githubusercontent.com/u/3056480",
       "email": "thomas.schaffter@sagebionetworks.org",
       "login": "tschaffter",
-      "name": "Thomas Schaffter"
+      "name": "Thomas Schaffter",
+      "bio": "A great bio"
     },
     {
       "id": "613913b20f2bccc6d225ceef",
       "avatarUrl": "https://avatars.githubusercontent.com/u/73901500",
       "email": "thomas.schaffter@sagebionetworks.org",
       "login": "rrchai",
-      "name": "Rongrong Chai"
+      "name": "Rongrong Chai",
+      "bio": "A great bio"
     },
     {
       "id": "61391449adff709da1c4248a",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9377970",
       "email": "verena.chung@sagebionetworks.org",
       "login": "vpchung",
-      "name": "Verena Chung"
+      "name": "Verena Chung",
+      "bio": "A great bio"
     },
     {
       "id": "6139146ba836320b7a3d063d",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5205872",
       "email": "jiaxin.zheng@sagebionetworks.org",
       "login": "jiaxinmachine88",
-      "name": "Jiaxin Zheng"
+      "name": "Jiaxin Zheng",
+      "bio": "A great bio"
     }
   ]
 }
