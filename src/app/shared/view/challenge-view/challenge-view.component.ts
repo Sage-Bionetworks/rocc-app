@@ -15,6 +15,10 @@ export class ChallengeViewComponent implements OnInit {
   @Input() challenge!: Challenge;
   platform$!: Observable<ChallengePlatform>;
 
+  // mock up data
+  numberSubmissions: number = 200;
+  numberRegistrants: number = 100;
+
   constructor(private challengePlatformService: ChallengePlatformService) {}
 
   ngOnInit(): void {

@@ -15,7 +15,7 @@ import { map, switchMap, tap } from 'rxjs/operators';
 })
 export class OrgChallengesComponent implements OnInit {
   // org!: Organization | undefined;
-  accountName!: string;
+  accountName: string = '';
   challenges$!: Observable<Challenge[] | []>;
 
   constructor(

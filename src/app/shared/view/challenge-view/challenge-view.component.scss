@@ -5,7 +5,7 @@
   justify-content: flex-start;
   min-height: 100px;
   margin-bottom: 20px;
-  padding: 30px 20px 10px 20px;
+  padding: 30px 20px 15px 20px;
   transition: 0.2s;
   transition-property: box-shadow;
 
@@ -45,13 +45,6 @@
     position: relative;
     height: 100%;
     width: 100%;
-
-    .rocc-challenge-stats-container {
-      position: absolute;
-      display: flex;
-      bottom: 0;
-      margin-top: 5px;
-    }
   }
 
   .rocc-challenge-dates-container {
@@ -59,7 +52,8 @@
     flex-direction: column;
     justify-self: right;
     width: 100%;
-    padding-top: 16px;
+    min-height: 60px;
+    padding-top: 20px;
     text-align: right;
 
     span {
@@ -73,6 +67,34 @@
   }
 }
 
+.rocc-challenge-stats-container {
+  position: absolute;
+  display: flex;
+  left: 0;
+  bottom: -5px;
+
+  div {
+    display: inline-flex;
+    align-items: center;
+
+    strong {
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.rocc-challenge-active {
+  color: green;
+}
+
+.rocc-challenge-upcoming {
+  color: yellow;
+}
+
+.rocc-challenge-completed {
+  color: grey;
+}
 .rocc-challenge-platform-logo {
   position: absolute;
   right: 40px;
