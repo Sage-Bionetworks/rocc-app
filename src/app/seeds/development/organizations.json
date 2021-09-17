@@ -3,22 +3,26 @@
     {
       "id": "613931b5ae0267da3f0275c7",
       "email": "contact@example.org",
-      "login": "awesome-org"
+      "login": "awesome-org",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/synapse.png"
     },
     {
       "id": "613931c01193d6884a4e617a",
       "email": "contact@example.org",
-      "login": "dream"
+      "login": "dream",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/synapse.png"
     },
     {
       "id": "613931c6bef3ffc6e5091e4b",
       "email": "contact@example.org",
-      "login": "sage-bionetworks"
+      "login": "sage-bionetworks",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/synapse.png"
     },
     {
       "id": "613931cc566bf7138df32788",
       "email": "contact@example.org",
-      "login": "ibm"
+      "login": "ibm",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/synapse.png"
     }
   ]
 }

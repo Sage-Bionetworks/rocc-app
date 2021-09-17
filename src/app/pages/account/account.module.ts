@@ -13,6 +13,7 @@ import { AccountRoutingModule } from './account-routing.module';
 import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 import { OrgHeaderModule } from './org-account/org-header/org-header.module';
 import { OrgOverviewComponent } from './org-account/org-overview/org-overview.component';
+import { UserProfileStarredComponent } from './user-account/user-profile-starred/user-profile-starred.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { OrgOverviewComponent } from './org-account/org-overview/org-overview.co
     UserProfileOverviewComponent,
     UserProfileChallengesComponent,
     OrgOverviewComponent,
+    UserProfileStarredComponent,
   ],
 })
 export class AccountModule {}

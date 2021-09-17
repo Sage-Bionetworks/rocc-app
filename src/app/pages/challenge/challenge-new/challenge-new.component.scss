@@ -21,3 +21,26 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+.owner-option {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.challenge-full-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  flex-grow: 1
+}
+
+.challenge-owner-name-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  font-size: large;
+}
