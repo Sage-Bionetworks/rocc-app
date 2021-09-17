@@ -32,35 +32,14 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
-  padding: 60px 40px 30px 40px;
+  margin-top: 50px;
+  padding-left: 30px;
 }
 
 .rocc-org-header-title-container {
-  display: flex;
-  align-items: center;
-
   .rocc-org-header-title {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 900;
-  }
-  .rocc-org-header-link-container {
-    display: flex;
-    flex-direction: column;
-
-    a,
-    div {
-      display: inline-flex;
-      align-items: flex-end;
-
-      .mat-icon {
-        margin-left: 30px;
-        margin-right: 5px;
-      }
-    }
-
-    a {
-      margin-bottom: 5px;
-    }
   }
 }
 
@@ -70,28 +49,50 @@ a {
   align-items: center;
 
   .rocc-org-header-info-left-container {
+    min-height: 100px;
+
+    .rocc-org-header-link-container {
+      margin: 10px 0;
+
+      a,
+      div {
+        display: inline-flex;
+        align-items: flex-end;
+        margin-right: 15px;
+      }
+      .mat-icon {
+        margin-right: 5px;
+      }
+    }
+
+    flex-direction: column;
     p {
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
   }
 
-  .rocc-org-header-info-right-container ul {
-    list-style: none;
-    display: table;
-    border-spacing: 10px;
+  .rocc-org-header-info-right-container {
+    min-width: 40ch;
 
-    li {
-      display: table-row;
-      font-size: 1.5em;
-    }
+    ul {
+      list-style: none;
+      display: table;
+      border-spacing: 10px;
+      margin-top: 0;
 
-    span {
-      display: table-cell;
-      padding-right: 5px;
-    }
+      li {
+        display: table-row;
+        font-size: 1.2em;
+      }
 
-    strong {
-      padding-left: 5px;
+      span {
+        display: table-cell;
+        padding-right: 5px;
+      }
+
+      strong {
+        padding-left: 5px;
+      }
     }
   }
 }
