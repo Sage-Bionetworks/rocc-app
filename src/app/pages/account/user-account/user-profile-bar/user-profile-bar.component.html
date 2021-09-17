@@ -9,19 +9,19 @@
       </mat-icon>
     </div>
     <div class="rocc-user-page-bar-detail-container">
-      <a class="rocc-user-page-bar-organizations-container" routerLink="/{{user.login}}">
+      <span class="rocc-user-page-bar-organizations-container">
         <mat-icon>home_work</mat-icon>
         <span class="rocc-user-page-bar-organizations">
-          <strong>{{numOrgs$ | async}}</strong>  organizations
+          <strong>{{numOrgs}}</strong> organizations
         </span>
-      </a>
+      </span>
       <span class="dot"> · </span>
-      <a class="rocc-user-page-bar-favorites-container" routerLink="/{{user.login}}">
+      <span class="rocc-user-page-bar-favorites-container">
         <mat-icon>star</mat-icon>
         <span class="rocc-user-page-bar-favorites">
           <strong>{{numStarredChallenges$ | async}}</strong>
         </span>
-      </a>
+      </span>
     </div>
     <button mat-raised-button>Edit your profile</button>
   </div>
