@@ -1,12 +1,21 @@
 <div class="container" *ngIf="user$ | async as user">
-  <rocc-user-profile-bar [user]="user" [numOrgs]="orgs.length" class="user-profile-sticky-bar">
+  <rocc-user-profile-bar [user]="user" [numOrgs]="orgs.length"
+    class="user-profile-sticky-bar">
   </rocc-user-profile-bar>
-  <mat-tab-group animationDuration="0ms">
-    <mat-tab label="Overview">
-      <rocc-user-profile-overview [user]="user" [orgs]="orgs"></rocc-user-profile-overview>
-    </mat-tab>
-    <mat-tab label="Challenges">
-      <rocc-user-profile-challenges [userId]="accountId"></rocc-user-profile-challenges>
-    </mat-tab>
-  </mat-tab-group>
+  <div class=main-container>
+    <nav mat-tab-nav-bar>
+      <ng-container *ngFor="let key of tabKeys">
+        <a mat-tab-link *ngIf="tabs[key].visible" routerLink="."
+          (click)="activeTab = tabs[key]" [active]="activeTab === tabs[key]"
+          [queryParams]="{tab: key}">{{tabs[key].name}}</a>
+      </ng-container>
+    </nav>
+
+    <rocc-user-profile-overview *ngIf="activeTab === tabs['overview']"
+      [user]="user" [orgs]="orgs"></rocc-user-profile-overview>
+    <rocc-user-profile-challenges *ngIf="activeTab === tabs['challenges']"
+      [userId]="accountId"></rocc-user-profile-challenges>
+    <rocc-user-profile-starred *ngIf="activeTab === tabs['starred']">
+    </rocc-user-profile-starred>
+  </div>
 </div>
