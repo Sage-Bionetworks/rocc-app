@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Organization } from '@sage-bionetworks/rocc-client-angular';
+import {
+  Organization,
+  ChallengeService,
+  Challenge,
+} from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
+import { Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
+import { map as _map, uniqBy as _uniqBy } from 'lodash-es';
+import { tap } from 'lodash';
 
 @Component({
   selector: 'rocc-org-challenges',
@@ -9,12 +17,19 @@ import { OrgDataService } from '../org-data.service';
 })
 export class OrgChallengesComponent implements OnInit {
   org!: Organization | undefined;
+  challenges$!: Observable<Challenge[] | []>;
 
-  constructor(private orgDataService: OrgDataService) {}
+  constructor(
+    private orgDataService: OrgDataService,
+    private challengeService: ChallengeService
+  ) {}
 
   ngOnInit(): void {
-    this.orgDataService.getOrg().subscribe((org) => {
-      this.org = org;
-    });
+    this.challenges$ = this.orgDataService.getOrg().pipe(
+      switchMap((org) =>
+        this.challengeService.listAccountChallenges(org!.login, 50, 0)
+      ),
+      map((page) => page.challenges)
+    );
   }
 }
