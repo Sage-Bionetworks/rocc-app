@@ -25,7 +25,7 @@ export class OrgChallengesComponent implements OnInit {
 
   ngOnInit(): void {
     this.challenges$ = this.orgDataService.getOrg().pipe(
-      tap((org) => (this.accountName = org!.login)),
+      tap((org) => (this.accountName = org ? org.login : '')),
       switchMap((org) =>
         this.challengeService.listAccountChallenges(org!.login, 50, 0)
       ),
