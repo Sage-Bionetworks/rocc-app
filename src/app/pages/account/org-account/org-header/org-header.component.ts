@@ -20,15 +20,15 @@ export class OrgHeaderComponent implements OnInit {
 
   // mock data
   // TODO: replace mock data with 'org' when needed properties can be retrieve
-  tmpOrg = {
-    id: '613931c6bef3ffc6e5091e4b',
-    email: 'contact@example.org',
-    login: 'sage-bionetworks',
-    name: 'Sage Bionetworks',
-    avatarUrl: 'assets/img/sage-bionetworks.png',
-    websiteUrl: 'https://sagebionetworks.org/',
-    description: 'This challenge is awesome for short description',
-  };
+  // tmpOrg = {
+  //   id: '613931c6bef3ffc6e5091e4b',
+  //   email: 'contact@example.org',
+  //   login: 'sage-bionetworks',
+  //   name: 'Sage Bionetworks',
+  //   avatarUrl: 'assets/img/sage-bionetworks.png',
+  //   websiteUrl: 'https://sagebionetworks.org/',
+  //   description: 'This challenge is awesome for short description',
+  // };
 
   constructor(
     private challengeService: ChallengeService,
