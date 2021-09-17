@@ -31,14 +31,15 @@
     <mat-progress-bar
       mode="determinate"
       color="accent"
-      value="{{getProgress(challenge)}}">
+      value="{{progressValue}}">
     </mat-progress-bar>
     <div class="rocc-challenge-detail-dates-box">
       <span *ngIf="!!challenge.startDate">
-        {{challenge.startDate | date: "yyyy-MM-dd"}}
+        {{challenge.startDate | date: "yyyy-MM-dd":"UTC"}}
       </span>
+      <span><strong>{{remainDays}}</strong> days left</span>
       <span *ngIf="!!challenge.endDate">
-        {{challenge.endDate | date: "yyyy-MM-dd"}}
+        {{challenge.endDate | date: "yyyy-MM-dd":"UTC"}}
       </span>
     </div>
   </div>
