@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 100px;
   margin-bottom: 20px;
   padding: 30px 20px 10px 20px;
@@ -17,7 +17,7 @@
 
   .mat-card-title {
     margin-left: -16px;
-    font-size: 1.8em;
+    font-size: 2em;
   }
 }
 
@@ -32,7 +32,7 @@
   }
 }
 
-.rocc-challenge-texts-container {
+.mat-card-content {
   position: relative;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
@@ -40,15 +40,26 @@
   align-items: center;
   font-size: 1.2em;
 
-  .rocc-challenge-descriptions {
+  .rocc-challenge-left-content-container {
     justify-self: left;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .rocc-challenge-stats-container {
+      position: absolute;
+      display: flex;
+      bottom: 0;
+      margin-top: 5px;
+    }
   }
 
-  .rocc-challenge-dates {
+  .rocc-challenge-dates-container {
     display: flex;
     flex-direction: column;
     justify-self: right;
     width: 100%;
+    padding-top: 16px;
     text-align: right;
 
     span {

@@ -14,11 +14,12 @@ import { Observable } from 'rxjs';
 export class ChallengeViewComponent implements OnInit {
   @Input() challenge!: Challenge;
   platform$!: Observable<ChallengePlatform>;
+
   constructor(private challengePlatformService: ChallengePlatformService) {}
 
   ngOnInit(): void {
     this.platform$ = this.challengePlatformService.getChallengePlatform(
-      this.challenge!.platformId!
+      this.challenge.platformId!
     );
   }
 }

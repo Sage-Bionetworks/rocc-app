@@ -10,16 +10,23 @@
         {{tag}}
       </button>
     </div> -->
-    <div class="rocc-challenge-texts-container">
+    <div class="rocc-challenge-left-content-container">
       <div class="rocc-challenge-descriptions">{{challenge.description}}</div>
-      <div class="rocc-challenge-dates">
-        <span *ngIf="!!challenge.startDate">
-          <b>Start Date :</b>{{challenge.startDate | date: "yyyy-MM-dd":"UTC"}}
-        </span>
-        <span *ngIf="!!challenge.endDate">
-          <b>End Date :</b>{{challenge.endDate | date: "yyyy-MM-dd":"UTC"}}
-        </span>
+      <div class="rocc-challenge-stats-container">
+        <div>stats1</div>
+        <div>stats2</div>
+        <div>stats3</div>
+        <div>stats4</div>
+        <div class="rocc-challenge-tags-container">lots of tags</div>
       </div>
+    </div>
+    <div class="rocc-challenge-dates-container">
+      <span *ngIf="!!challenge.startDate">
+        <b>Start Date :</b>{{challenge.startDate | date: "yyyy-MM-dd":"UTC"}}
+      </span>
+      <span *ngIf="!!challenge.endDate">
+        <b>End Date :</b>{{challenge.endDate | date: "yyyy-MM-dd":"UTC"}}
+      </span>
     </div>
   </mat-card-content> 
 </mat-card>
