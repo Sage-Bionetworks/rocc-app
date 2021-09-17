@@ -17,7 +17,8 @@ export class ChallengeHeaderComponent implements OnInit {
   @Input() isFavorite!: boolean;
   @Output() selectedChange = new EventEmitter<boolean>();
 
-  progressValue: number = 0;
+  progressValue!: number;
+  remainDays!: number | undefined;
   platform$!: Observable<ChallengePlatform>;
 
   constructor(private challengePlatformService: ChallengePlatformService) {}
@@ -26,25 +27,38 @@ export class ChallengeHeaderComponent implements OnInit {
     this.platform$ = this.challengePlatformService.getChallengePlatform(
       this.challenge?.platformId!
     );
+
+    this.progressValue =
+      this.challenge.status == 'active'
+        ? (this.progressValue =
+            this.challenge.startDate !== undefined &&
+            this.challenge.endDate !== undefined
+              ? this.calcProgress(
+                  new Date().toUTCString(),
+                  this.challenge.startDate!,
+                  this.challenge.endDate!
+                )
+              : 0)
+        : this.challenge.status == 'completed'
+        ? 100
+        : 0;
+
+    this.remainDays =
+      this.challenge.endDate !== undefined
+        ? this.calcDays(new Date().toUTCString(), this.challenge.endDate!)
+        : undefined;
   }
 
-  getProgress(challenge: Challenge): number {
-    if (challenge.status == 'active') {
-      // if either of start/endDates not provided, still show progress bar, but return zero
-      if (
-        typeof challenge.startDate !== 'undefined' &&
-        typeof challenge.endDate !== 'undefined'
-      ) {
-        const totalTime =
-          +new Date(challenge.endDate!) - +new Date(challenge.startDate!);
-        const runTime = +new Date() - +new Date(challenge.startDate!);
-        this.progressValue = (runTime / totalTime) * 100;
-      }
-    } else {
-      this.progressValue = challenge.status == 'completed' ? 100 : 0;
-    }
+  calcDays(startDate: string, endDate: string): number {
+    let timeDiff = +new Date(endDate) - +new Date(startDate);
+    return Math.round(timeDiff / (1000 * 60 * 60 * 24));
+  }
 
-    return this.progressValue;
+  calcProgress(today: string, startDate: string, endDate: string): number {
+    return (
+      (this.calcDays(startDate, today) / this.calcDays(startDate, endDate)) *
+      100
+    );
   }
 
   public toggleSelected() {

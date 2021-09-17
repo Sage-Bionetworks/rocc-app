@@ -1,6 +1,6 @@
 <div class="rocc-user-page-bar-container">
   <div class="rocc-user-page-bar-content-container">
-    <sage-avatar [avatar]= "userAvatar"></sage-avatar>
+    <sage-avatar [avatar]="userAvatar"></sage-avatar>
     <div class="rocc-user-page-bar-name">{{user.name}}</div>
     <div class="rocc-user-page-bar-login-container">
       <span>@{{user.login}}</span>
@@ -9,14 +9,15 @@
       </mat-icon>
     </div>
     <div class="rocc-user-page-bar-detail-container">
-      <a class="rocc-user-page-bar-organizations-container" routerLink="/{{user.login}}">
+      <span class="rocc-user-page-bar-organizations-container">
         <mat-icon>home_work</mat-icon>
         <span class="rocc-user-page-bar-organizations">
-          <strong>{{numOrgs$ | async}}</strong>  organizations
+          <strong>{{numOrgs}}</strong> organizations
         </span>
-      </a>
+      </span>
       <span class="dot"> · </span>
-      <a class="rocc-user-page-bar-favorites-container" routerLink="/{{user.login}}">
+      <a class="rocc-user-page-bar-favorites-container" routerLink="."
+        [queryParams]="{tab: 'starred'}">
         <mat-icon>star</mat-icon>
         <span class="rocc-user-page-bar-favorites">
           <strong>{{numStarredChallenges$ | async}}</strong>

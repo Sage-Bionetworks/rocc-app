@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { User } from '@sage-bionetworks/rocc-client-angular';
+import { Organization, User } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({
   selector: 'rocc-user-profile-overview',
@@ -8,6 +8,7 @@ import { User } from '@sage-bionetworks/rocc-client-angular';
 })
 export class UserProfileOverviewComponent {
   @Input() user!: User;
+  @Input() orgs: Organization[] = [];
 
   constructor() {}
 }

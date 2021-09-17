@@ -10,3 +10,8 @@
 :host ::ng-deep .mat-ink-bar {
   transition: none;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
