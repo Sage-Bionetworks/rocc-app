@@ -14,6 +14,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "61466846a88b82c714a8c140",
       "name": "astrazeneca-sanger-drug-combination-prediction",
       "displayName": "AstraZeneca-Sanger Drug Combination Prediction",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
@@ -25,6 +26,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146684d63800504219b6c59",
       "name": "multi-targeting-drug",
       "displayName": "Multi-Targeting Drug",
       "description": "",
@@ -36,6 +38,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146685339019791d4ed02c3",
       "name": "anti-pd1-response-prediction",
       "displayName": "Anti-PD1 Response Prediction",
       "description": "",
@@ -47,6 +50,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "61466862936797ac6aa4766f",
       "name": "ehr-covid-19",
       "displayName": "EHR COVID-19",
       "description": "",
@@ -57,6 +61,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146686700074606972e6160",
       "name": "cagi5-sickkids-clinical-genomes",
       "displayName": "CAGI5: SickKids clinical genomes",
       "description": "",
@@ -68,6 +73,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146686cac291ca180d619b5",
       "name": "gagi6-annotate-all-missense",
       "displayName": "GAGI6: Annotate All Missense",
       "description": "",
@@ -79,6 +85,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "61466873706dfe76a66d1718",
       "name": "camda18-metasub-forensics",
       "displayName": "CAMDA18: MetaSUB Forensics",
       "description": "",
@@ -88,6 +95,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "61466879791c026916a0e24c",
       "name": "camda18-cmap-drug-safety",
       "displayName": "CAMDA18: CMap Drug Safety",
       "description": "",
@@ -97,6 +105,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146687e64b6819871d04f3f",
       "name": "cafa-4",
       "displayName": "CAFA 4",
       "description": "",
@@ -108,6 +117,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "61466884bd04880366c3c940",
       "name": "casp13",
       "displayName": "CASP13",
       "description": "",
@@ -119,6 +129,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146688ab2b9d436e767614f",
       "name": "casp14",
       "displayName": "CASP14",
       "description": "",
@@ -130,6 +141,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146688e7018a9ad63dcfe92",
       "name": "cdrh-biothreat",
       "displayName": "CDRH Biothreat",
       "description": "",
@@ -141,6 +153,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "61466896b1af018b223901ee",
       "name": "brain-cancer-predictive-modeling-and-biomarker-discovery",
       "displayName": "Brain Cancer Predictive Modeling and Biomarker Discovery",
       "description": "",
@@ -152,6 +165,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "6146689cb4b7cd53a6669943",
       "name": "covid-19-precision-immunology-app-a-thon",
       "displayName": "COVID-19 Precision Immunology App-a-thon",
       "description": "",
@@ -163,6 +177,7 @@
       "ownerId": "613931b5ae0267da3f0275c7"
     },
     {
+      "id": "614668a2487ee5fd5cbeb335",
       "name": "tumor-mutational-burden-challenge-phase-2",
       "displayName": "Tumor Mutational Burden Challenge Phase 2",
       "description": "",
