@@ -6,7 +6,7 @@ import { User } from '@sage-bionetworks/rocc-client-angular';
   styleUrls: ['./people-view.component.scss'],
 })
 export class PeopleViewComponent implements OnInit {
-  @Input() user!: User;
+  @Input() person!: User;
 
   constructor() {}
 
