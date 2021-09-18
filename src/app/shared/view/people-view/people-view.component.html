@@ -5,7 +5,7 @@
     <mat-card-title>{{person.name}}</mat-card-title>
     <mat-card-subtitle>{{person.email}}</mat-card-subtitle>
   </mat-card-header>
-   {{person.avatarUrl}}
+  <sage-avatar [avatar]="userAvatar"></sage-avatar>
   <mat-card-content>
     <p>
       {{person.bio}}
