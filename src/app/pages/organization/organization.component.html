@@ -1,7 +1,7 @@
 <main>
   <div class="container" *ngIf="org$ | async as org">
     <rocc-org-header [org]="org"></rocc-org-header>
-    <p>organization works!</p>
+    <!-- <p>organization works!</p> -->
 
     <nav mat-tab-nav-bar>
       <a mat-tab-link *ngFor="let section of sections"
