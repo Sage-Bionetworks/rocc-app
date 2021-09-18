@@ -5,6 +5,7 @@ import {
   ChallengeService,
   ChallengeReadme,
 } from '@sage-bionetworks/rocc-client-angular';
+import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 import { filter, switchMap, tap } from 'rxjs/operators';
 import { ChallengeDataService } from '../challenge-data.service';
@@ -29,9 +30,12 @@ export class ChallengeOverviewComponent implements OnInit {
     });
 
     this.readme$ = this.challengeDataService.getReadme().pipe(
-      tap((readme) => {
+      tap(readme => console.log('PLOP')),
+      switchMap((readme) => {
         if (readme === null) {
-          this.challengeDataService.getChallenge().pipe(
+          console.log('README is null');
+          return this.challengeDataService.getChallenge().pipe(
+            tap(challenge => console.log('challenge is', challenge)),
             filter(isDefined),
             switchMap((challenge) =>
               this.challengeService
@@ -44,6 +48,8 @@ export class ChallengeOverviewComponent implements OnInit {
                 )
             )
           );
+        } else {
+          return of(readme)
         }
       })
     );
