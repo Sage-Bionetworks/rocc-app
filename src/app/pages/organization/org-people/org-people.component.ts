@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Organization } from '@sage-bionetworks/rocc-client-angular';
+import { Organization, User } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 
 @Component({
@@ -9,7 +9,16 @@ import { OrgDataService } from '../org-data.service';
 })
 export class OrgPeopleComponent implements OnInit {
   org!: Organization | undefined;
-
+  user: User = {
+    id: '',
+    email: 'awesome-user@example.org',
+    login: 'awesome-user',
+    name: 'Awesome User',
+    bio: 'A great bio',
+    type: 'active',
+    createdAt: '',
+    updatedAt: '',
+  };
   constructor(private orgDataService: OrgDataService) {}
 
   ngOnInit(): void {

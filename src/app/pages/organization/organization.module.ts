@@ -11,6 +11,7 @@ import { OrgPeopleComponent } from './org-people/org-people.component';
 import { OrgSettingsComponent } from './org-settings/org-settings.component';
 import { OrgNewModule } from './org-new/org-new.module';
 import { ChallengeViewModule } from '@shared/view/challenge-view/challenge-view.module';
+import { PeopleViewModule } from '@shared/view/people-view/people-view.module';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { ChallengeViewModule } from '@shared/view/challenge-view/challenge-view.
     OrganizationRoutingModule,
     OrgNewModule,
     ChallengeViewModule,
+    PeopleViewModule,
   ],
   declarations: [
     OrganizationComponent,

@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { TokenService } from '@shared/auth/token.service';
 import { ChallengeViewModule } from '@shared/view/challenge-view/challenge-view.module';
+import { PeopleViewModule } from '@shared/view/people-view/people-view.module';
 
 // export function apiConfigFactory(): Configuration {
 //   const params: ConfigurationParameters = {
@@ -45,6 +46,7 @@ import { ChallengeViewModule } from '@shared/view/challenge-view/challenge-view.
     FiltersModule,
     PageTitleModule,
     ChallengeViewModule,
+    PeopleViewModule,
   ],
   declarations: [AppComponent],
   providers: [
