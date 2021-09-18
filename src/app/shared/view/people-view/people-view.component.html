@@ -7,11 +7,11 @@
   </mat-card-header>
   <sage-avatar [avatar]="userAvatar"></sage-avatar>
   <mat-card-content>
-    <p>
-      {{person.bio}}
-    </p>
+    <p>{{person.bio}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>organization</button>
+   <span *ngFor="let org of orgs; let isLast=last">
+    {{org.name}}{{isLast ? '' : ', '}}
+  </span>
   </mat-card-actions>
 </mat-card>
