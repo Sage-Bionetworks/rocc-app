@@ -1,2 +1,8 @@
-<p>org-challenges works!</p>
-<p>{{org | json}}</p>
+<div class="rocc-org-challenges-container" *ngIf="challenges$ | async as challenges">
+  <div *ngFor="let challenge of challenges">
+    <rocc-challenge-view 
+      [challenge]="challenge" 
+      routerLink="/{{accountName}}/{{challenge.name}}">
+    </rocc-challenge-view>
+  </div>
+</div> 
