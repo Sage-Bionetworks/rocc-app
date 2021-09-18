@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Challenge } from '@sage-bionetworks/rocc-client-angular';
+import { isDefined } from '@app/type-guards';
+import {
+  Challenge,
+  ChallengeService,
+  ChallengeReadme,
+} from '@sage-bionetworks/rocc-client-angular';
+import { Observable } from 'rxjs';
+import { filter, switchMap, tap } from 'rxjs/operators';
 import { ChallengeDataService } from '../challenge-data.service';
 
 @Component({
@@ -9,12 +16,36 @@ import { ChallengeDataService } from '../challenge-data.service';
 })
 export class ChallengeOverviewComponent implements OnInit {
   challenge!: Challenge | undefined;
+  readme$!: Observable<ChallengeReadme | null>;
 
-  constructor(private challengeDataService: ChallengeDataService) {}
+  constructor(
+    private challengeService: ChallengeService,
+    private challengeDataService: ChallengeDataService
+  ) {}
 
   ngOnInit(): void {
     this.challengeDataService.getChallenge().subscribe((challenge) => {
       this.challenge = challenge;
     });
+
+    this.readme$ = this.challengeDataService.getReadme().pipe(
+      tap((readme) => {
+        if (readme === null) {
+          this.challengeDataService.getChallenge().pipe(
+            filter(isDefined),
+            switchMap((challenge) =>
+              this.challengeService
+                .getChallengeReadme(
+                  challenge.fullName.split('/')[0],
+                  challenge.name
+                )
+                .pipe(
+                  tap((readme_) => this.challengeDataService.setReadme(readme_))
+                )
+            )
+          );
+        }
+      })
+    );
   }
 }
