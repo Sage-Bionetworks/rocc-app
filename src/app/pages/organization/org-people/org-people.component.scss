@@ -1,3 +1,9 @@
 .rocc-org-persons-container {
-  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+
+  & > * {
+    flex: 1 1 20%;
+  }
 }
