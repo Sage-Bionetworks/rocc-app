@@ -43,6 +43,7 @@ import {
   OrgMembership,
   ChallengeReadme,
   ChallengeReadmeCreateRequest,
+  ChallengeReadmeUpdateRequest,
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
@@ -335,19 +336,33 @@ export class DatabaseSeedComponent implements OnInit {
         .pipe(
           map((res) => _merge(res, rawChallenge) as Challenge),
           switchMap((challenge) => {
-            const readme: ChallengeReadmeCreateRequest | undefined =
+            const readme: ChallengeReadmeUpdateRequest | undefined =
               challengeReadmeList.challengeReadmes.find(
                 (readme) => readme.challengeId === rawChallenge.id
               );
-            if (readme === undefined) {
-              throw new Error(
-                'Challenge with tmpId ' + rawChallenge.id + ' has no readme'
-              );
+            if (readme !== undefined) {
+              return this.challengeService.updateChallengeReadme(accountName, challenge.name, readme).pipe(
+                mapTo(challenge)
+              )
+            } else {
+              return of(challenge);
             }
-            return this.challengeService
-              .createChallengeReadme(accountName, challenge.name, readme)
-              .pipe(mapTo(challenge));
           })
+
+          // switchMap((challenge) => {
+          //   const readme: ChallengeReadmeCRequest | undefined =
+          //     challengeReadmeList.challengeReadmes.find(
+          //       (readme) => readme.challengeId === rawChallenge.id
+          //     );
+          //   if (readme === undefined) {
+          //     throw new Error(
+          //       'Challenge with tmpId ' + rawChallenge.id + ' has no readme'
+          //     );
+          //   }
+          //   return this.challengeService
+          //     .createChallengeReadme(accountName, challenge.name, readme)
+          //     .pipe(mapTo(challenge));
+          // })
         );
     };
 
