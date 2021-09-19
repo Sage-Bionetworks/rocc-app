@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, merge } from 'rxjs';
 import { filter, switchMap, tap } from 'rxjs/operators';
 import {
   Challenge,
@@ -7,7 +7,6 @@ import {
   ChallengeReadme,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isDefined, isUndefined } from '@app/type-guards';
-import { merge } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',

@@ -1,14 +1,9 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { isDefined, isUndefined } from '@app/type-guards';
+import { Observable } from 'rxjs';
 import {
   Challenge,
-  ChallengeService,
   ChallengeReadme,
 } from '@sage-bionetworks/rocc-client-angular';
-import { merge, of } from 'rxjs';
-import { Observable } from 'rxjs';
-import { filter, switchMap, tap } from 'rxjs/operators';
 import { ChallengeDataService } from '../challenge-data.service';
 
 @Component({
