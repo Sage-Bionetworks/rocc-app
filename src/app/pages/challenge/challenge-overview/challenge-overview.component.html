@@ -1,2 +1,3 @@
-<p>challenge-overview works!</p>
-<p>{{challenge | json}}</p>
+<ng-container *ngIf="readme$ | async as readme">
+  <p>{{readme.text}}</p>
+</ng-container>

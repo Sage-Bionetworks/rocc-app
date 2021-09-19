@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Challenge } from '@sage-bionetworks/rocc-client-angular';
+import { Observable } from 'rxjs';
+import {
+  Challenge,
+  ChallengeReadme,
+} from '@sage-bionetworks/rocc-client-angular';
 import { ChallengeDataService } from '../challenge-data.service';
 
 @Component({
@@ -8,13 +12,13 @@ import { ChallengeDataService } from '../challenge-data.service';
   styleUrls: ['./challenge-overview.component.scss'],
 })
 export class ChallengeOverviewComponent implements OnInit {
-  challenge!: Challenge | undefined;
+  challenge$!: Observable<Challenge>;
+  readme$!: Observable<ChallengeReadme>;
 
   constructor(private challengeDataService: ChallengeDataService) {}
 
   ngOnInit(): void {
-    this.challengeDataService.getChallenge().subscribe((challenge) => {
-      this.challenge = challenge;
-    });
+    this.challenge$ = this.challengeDataService.getChallenge();
+    this.readme$ = this.challengeDataService.getReadme();
   }
 }
