@@ -14,8 +14,10 @@
   </div>
   <div class="rocc-people-view-orgs-container">
     <div *ngFor="let org of orgs; let isLast=last">
-        <img src="{{org.avatarUrl}}" alt="">
-        <a href="{{org.websiteUrl}}" target="_blank">
+        <img *ngIf="org.avatarUrl" src="{{org.avatarUrl}}" alt="">
+        <a *ngIf="org.websiteUrl" 
+          href="{{org.websiteUrl}}" 
+          target="_blank">
           {{org.name}}
         <span>{{isLast ? '' : '·'}}</span>
       </a>
