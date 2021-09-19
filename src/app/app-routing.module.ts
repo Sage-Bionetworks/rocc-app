@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@shared/auth/auth-guard.service';
 
 export const routes: Routes = [
   // {
@@ -20,15 +21,18 @@ export const routes: Routes = [
   },
   {
     path: 'new',
-    loadChildren: () => import('./pages/challenge/challenge-new').then(m => m.ChallengeNewModule)
+    loadChildren: () => import('./pages/challenge/challenge-new').then(m => m.ChallengeNewModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'notifications',
-    loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule)
+    loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'settings',
-    loadChildren: () => import('./pages/settings').then(m => m.SettingsModule)
+    loadChildren: () => import('./pages/settings').then(m => m.SettingsModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'orgs',
