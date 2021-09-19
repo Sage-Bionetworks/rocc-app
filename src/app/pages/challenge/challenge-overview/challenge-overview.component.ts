@@ -16,7 +16,7 @@ import { ChallengeDataService } from '../challenge-data.service';
   styleUrls: ['./challenge-overview.component.scss'],
 })
 export class ChallengeOverviewComponent implements OnInit {
-  challenge!: Challenge | undefined;
+  challenge$!: Observable<Challenge | undefined>;
   readme$!: Observable<ChallengeReadme | null>;
 
   constructor(
@@ -25,18 +25,14 @@ export class ChallengeOverviewComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.challengeDataService.getChallenge().subscribe((challenge) => {
-      this.challenge = challenge;
-    });
+    this.challenge$ = this.challengeDataService.getChallenge();
 
     this.readme$ = this.challengeDataService.getReadme().pipe(
-      tap(readme => console.log('PLOP')),
       switchMap((readme) => {
         if (readme === null) {
-          console.log('README is null');
-          return this.challengeDataService.getChallenge().pipe(
-            tap(challenge => console.log('challenge is', challenge)),
+          return this.challenge$.pipe(
             filter(isDefined),
+            tap(() => console.log('fetch readme')),
             switchMap((challenge) =>
               this.challengeService
                 .getChallengeReadme(
@@ -44,12 +40,13 @@ export class ChallengeOverviewComponent implements OnInit {
                   challenge.name
                 )
                 .pipe(
+                  // cache the readme
                   tap((readme_) => this.challengeDataService.setReadme(readme_))
                 )
             )
           );
         } else {
-          return of(readme)
+          return of(readme);
         }
       })
     );
