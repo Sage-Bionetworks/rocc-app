@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Challenge } from '@sage-bionetworks/rocc-client-angular';
-import { ChallengeReadme } from 'rocc-client-angular/projects/rocc-client/src';
+import { filter, switchMap, tap } from 'rxjs/operators';
+import {
+  Challenge,
+  ChallengeService,
+  ChallengeReadme,
+} from '@sage-bionetworks/rocc-client-angular';
+import { isDefined, isUndefined } from '@app/type-guards';
+import { merge } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -12,22 +18,43 @@ export class ChallengeDataService {
   private readme: BehaviorSubject<ChallengeReadme | null> =
     new BehaviorSubject<ChallengeReadme | null>(null);
 
-  constructor() {}
+  constructor(private challengeService: ChallengeService) {}
 
   setChallenge(challenge: Challenge | undefined): void {
+    this.readme.next(null);
     this.challenge.next(challenge);
   }
 
-  getChallenge(): Observable<Challenge | undefined> {
-    return this.challenge.asObservable();
-    // .pipe(filter((challenge) => challenge !== undefined));
+  getChallenge(): Observable<Challenge> {
+    return this.challenge.pipe(filter(isDefined));
   }
 
   setReadme(readme: ChallengeReadme | null): void {
     this.readme.next(readme);
   }
 
-  getReadme(): Observable<ChallengeReadme | null> {
-    return this.readme.asObservable();
+  getReadme(): Observable<ChallengeReadme> {
+    const getReadmeFromCache = this.readme.pipe(filter(isDefined));
+
+    const getReadmeFromApi = (
+      challenge: Challenge
+    ): Observable<ChallengeReadme> => {
+      return this.readme.pipe(
+        filter(isUndefined),
+        switchMap(() =>
+          this.challengeService.getChallengeReadme(
+            challenge.fullName.split('/')[0],
+            challenge.name
+          )
+        ),
+        tap((readme) => this.readme.next(readme))
+      );
+    };
+
+    return this.getChallenge().pipe(
+      switchMap((challenge) =>
+        merge(getReadmeFromCache, getReadmeFromApi(challenge))
+      )
+    );
   }
 }
