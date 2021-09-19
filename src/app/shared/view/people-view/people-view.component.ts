@@ -25,7 +25,7 @@ export class PeopleViewComponent implements OnInit {
         ? (this.person.name as string)
         : this.person.login.replace(/-/g, ' '),
       src: this.person.avatarUrl!,
-      size: 200,
+      size: 150,
     };
 
     this.userService

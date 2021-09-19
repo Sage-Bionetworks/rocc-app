@@ -5,7 +5,7 @@
       "email": "awesome-user@example.org",
       "login": "awesome-user",
       "name": "Awesome User",
-      "bio": "A great bio"
+      "bio": "Lorem ipsum dolors amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor."
     },
     {
       "id": "61391334790dbc2726b9d37f",
@@ -18,7 +18,7 @@
     {
       "id": "613913b20f2bccc6d225ceef",
       "avatarUrl": "https://avatars.githubusercontent.com/u/73901500",
-      "email": "thomas.schaffter@sagebionetworks.org",
+      "email": "rchai@sagebionetworks.org",
       "login": "rrchai",
       "name": "Rongrong Chai",
       "bio": "A great bio"

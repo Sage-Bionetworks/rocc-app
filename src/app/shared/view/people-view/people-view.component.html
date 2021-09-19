@@ -1,17 +1,24 @@
 
-
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{person.name}}</mat-card-title>
-    <mat-card-subtitle>{{person.email}}</mat-card-subtitle>
-  </mat-card-header>
-  <sage-avatar [avatar]="userAvatar"></sage-avatar>
-  <mat-card-content>
-    <p>{{person.bio}}</p>
-  </mat-card-content>
-  <mat-card-actions>
-   <span *ngFor="let org of orgs; let isLast=last">
-    {{org.name}}{{isLast ? '' : ', '}}
-  </span>
-  </mat-card-actions>
+<mat-card>
+  <div class = "rocc-peope-view-content-container">
+    <sage-avatar [avatar]="userAvatar"></sage-avatar>
+    <div class="rocc-peope-view-info-container">
+      <mat-card-header>
+        <mat-card-title>{{person.name}}</mat-card-title>
+        <mat-card-subtitle>{{person.email}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{person.bio}}</p>
+      </mat-card-content>
+    </div>
+  </div>
+  <div class="rocc-people-view-orgs-container">
+    <div *ngFor="let org of orgs; let isLast=last">
+        <img src="{{org.avatarUrl}}" alt="">
+        <a href="{{org.websiteUrl}}" target="_blank">
+          {{org.name}}
+        <span>{{isLast ? '' : '·'}}</span>
+      </a>
+    </div>  
+  </div>
 </mat-card>
