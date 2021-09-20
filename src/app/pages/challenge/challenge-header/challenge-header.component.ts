@@ -99,6 +99,7 @@ export class ChallengeHeaderComponent implements OnInit {
         .toggleStarred()
         .subscribe((starred) => console.log('Challenge starred', starred));
     } else {
+      this.authService.setRedirectUrl(this.router.url);
       this.router.navigate(['signin']);
     }
   }
