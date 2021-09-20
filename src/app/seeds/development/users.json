@@ -38,6 +38,22 @@
       "login": "jiaxinmachine88",
       "name": "Jiaxin Zheng",
       "bio": "A great bio"
+    },
+    {
+      "id": "6148c569f57a85fb53d4d7b0",
+      "avatarUrl": "https://twitter.com/annika_re/photo",
+      "email": "contact@email.com",
+      "login": "areinke",
+      "name": "Annika Reinke",
+      "bio": "A great bio"
+    },
+    {
+      "id": "6148c5b6f57a85fb53d4d7b1",
+      "avatarUrl": "https://twitter.com/SpyridonBakas/photo",
+      "email": "sbakas@upenn.edu",
+      "login": "sbakas",
+      "name": "Spyridon Bakas",
+      "bio": "A great bio"
     }
   ]
 }
