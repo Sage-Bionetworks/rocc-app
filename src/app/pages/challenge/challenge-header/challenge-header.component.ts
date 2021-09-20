@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {
   ChallengePlatformService,
   Challenge,
   ChallengePlatform,
 } from '@sage-bionetworks/rocc-client-angular';
 import { Observable } from 'rxjs';
+import { ChallengeDataService } from '../challenge-data.service';
 
 @Component({
   selector: 'rocc-challenge-header',
@@ -14,19 +15,25 @@ import { Observable } from 'rxjs';
 export class ChallengeHeaderComponent implements OnInit {
   @Input() accountName = '';
   @Input() challenge!: Challenge;
-  @Input() isFavorite!: boolean;
-  @Output() selectedChange = new EventEmitter<boolean>();
+  starred = false;
 
   progressValue!: number;
   remainDays!: number | undefined;
   platform$!: Observable<ChallengePlatform>;
 
-  constructor(private challengePlatformService: ChallengePlatformService) {}
+  constructor(
+    private challengePlatformService: ChallengePlatformService,
+    private challengeDataService: ChallengeDataService
+  ) {}
 
   ngOnInit(): void {
     this.platform$ = this.challengePlatformService.getChallengePlatform(
       this.challenge?.platformId!
     );
+
+    this.challengeDataService
+      .getStarred()
+      .subscribe((starred) => (this.starred = starred));
 
     this.progressValue =
       this.challenge.status == 'active'
@@ -61,8 +68,10 @@ export class ChallengeHeaderComponent implements OnInit {
     );
   }
 
-  public toggleSelected() {
-    this.isFavorite = !this.isFavorite;
-    this.selectedChange.emit(this.isFavorite);
+  toggleStarred() {
+    this.starred = !this.starred;
+    this.challengeDataService
+      .toggleStarred()
+      .subscribe((starred) => console.log('Challenge starred', starred));
   }
 }
