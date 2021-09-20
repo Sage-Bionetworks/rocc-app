@@ -3,13 +3,14 @@
   flex-direction: column;
   width: 500px;
   margin-bottom: 20px;
+  margin: 0 1em 20px 1em;
 }
 
 .rocc-peope-view-content-container {
   display: flex;
   align-items: center;
   margin: 10px 10px;
-  height: 200px;
+  height: 210px;
   border-bottom: 1px #0000008a solid;
   box-sizing: border-box;
 }
@@ -21,6 +22,10 @@
   height: 100%;
   margin-top: 15px;
   padding: 0 15px;
+
+  .mat-card-subtitle {
+    margin-bottom: 10px;
+  }
 
   .mat-card-content {
     margin-left: 16px;
