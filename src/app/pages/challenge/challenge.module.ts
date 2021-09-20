@@ -9,6 +9,7 @@ import { ChallengeHeaderComponent } from './challenge-header/challenge-header.co
 import { ChallengeOverviewComponent } from './challenge-overview/challenge-overview.component';
 import { ChallengeSettingsComponent } from './challenge-settings/challenge-settings.component';
 import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
+import { AuthModule } from '@shared/auth/auth.module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
     FooterModule,
     MaterialModule,
     NotFoundModule,
+    AuthModule
   ],
   declarations: [
     ChallengeComponent,
