@@ -52,19 +52,20 @@
   }
 
   a {
+    color: #0000008a;
     white-space: nowrap;
     text-decoration: none;
-    color: #0000008a;
 
     &:hover {
       text-decoration: underline;
       cursor: pointer;
     }
+  }
 
-    span {
-      margin: 0 10px;
-      font-size: 18px;
-      font-weight: 900;
-    }
+  span {
+    margin: 0 10px;
+    color: #0000008a;
+    font-size: 18px;
+    font-weight: 900;
   }
 }
