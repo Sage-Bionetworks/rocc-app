@@ -95,9 +95,7 @@ export class ChallengeHeaderComponent implements OnInit {
   toggleStarred(): void {
     if (this.loggedIn) {
       this.starred = !this.starred;
-      this.challengeDataService
-        .toggleStarred()
-        .subscribe((starred) => console.log('Challenge starred', starred));
+      this.challengeDataService.toggleStarred().subscribe();
     } else {
       this.authService.setRedirectUrl(this.router.url);
       this.router.navigate(['signin']);
