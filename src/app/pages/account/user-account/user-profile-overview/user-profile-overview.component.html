@@ -1,8 +1,10 @@
-<p>user-profile-overview works!</p>
-<p>{{user | json}}</p>
+<ng-container *ngIf="user">
+  <h2>Bio</h2>
+  <p>{{user.bio}}</p>
 
-<h2>Organizations</h2>
-<mat-nav-list>
-  <a mat-list-item [routerLink]="['/', org.login]"
-    *ngFor="let org of orgs">{{org.login}}</a>
-</mat-nav-list>
+  <h2>Organizations</h2>
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="['/', org.login]"
+      *ngFor="let org of orgs">{{org.login}}</a>
+  </mat-nav-list>
+</ng-container>
