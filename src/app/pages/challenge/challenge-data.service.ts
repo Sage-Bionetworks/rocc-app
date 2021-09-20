@@ -55,6 +55,7 @@ export class ChallengeDataService {
 
   setChallenge(challenge: Challenge | undefined): void {
     this.readme.next(null);
+    this.starred.next(false);
     this.challenge.next(challenge);
   }
 
