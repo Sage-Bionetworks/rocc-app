@@ -9,14 +9,14 @@
       </div>
       <div class="rocc-challenge-detail-title-container">
         <span>{{challenge.displayName}}</span>
-        <button mat-icon-button (click)="toggleSelected()">
-          <mat-icon *ngIf="isFavorite" class="rocc-challenge-favorite-icon" inline=true>
+        <button mat-icon-button (click)="toggleStarred()" [matTooltip]="getStarredTooltip()">
+          <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
             star
           </mat-icon>
-          <mat-icon *ngIf="!isFavorite" inline=true>
+          <mat-icon *ngIf="!starred" inline=true>
             star_border
           </mat-icon>
-        </button> 
+        </button>
       </div>
       <div class="rocc-challenge-detail-header-status-container">
         <span>{{challenge.status | titlecase}}</span>

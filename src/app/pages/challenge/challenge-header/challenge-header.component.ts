@@ -1,32 +1,63 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import {
   ChallengePlatformService,
   Challenge,
   ChallengePlatform,
 } from '@sage-bionetworks/rocc-client-angular';
-import { Observable } from 'rxjs';
+import { AuthService } from '@shared/auth/auth.service';
+import { ChallengeDataService } from '../challenge-data.service';
+import {
+  MatTooltipDefaultOptions,
+  MAT_TOOLTIP_DEFAULT_OPTIONS,
+} from '@angular/material/tooltip';
+
+// TODO Make this object re-usable across the app
+/** Custom options the configure the tooltip's default show/hide delays. */
+export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
+  showDelay: 500,
+  hideDelay: 0,
+  touchendHideDelay: 1000,
+};
 
 @Component({
   selector: 'rocc-challenge-header',
   templateUrl: './challenge-header.component.html',
   styleUrls: ['./challenge-header.component.scss'],
+  providers: [
+    { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults },
+  ],
 })
 export class ChallengeHeaderComponent implements OnInit {
   @Input() accountName = '';
   @Input() challenge!: Challenge;
-  @Input() isFavorite!: boolean;
-  @Output() selectedChange = new EventEmitter<boolean>();
+  starred = false;
+  loggedIn = false;
 
   progressValue!: number;
   remainDays!: number | undefined;
   platform$!: Observable<ChallengePlatform>;
 
-  constructor(private challengePlatformService: ChallengePlatformService) {}
+  constructor(
+    private router: Router,
+    private challengePlatformService: ChallengePlatformService,
+    private challengeDataService: ChallengeDataService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.platform$ = this.challengePlatformService.getChallengePlatform(
       this.challenge?.platformId!
     );
+
+    this.challengeDataService
+      .getStarred()
+      .subscribe((starred) => (this.starred = starred));
+
+    this.authService
+      .isSignedIn()
+      .subscribe((loggedIn) => (this.loggedIn = loggedIn));
 
     this.progressValue =
       this.challenge.status == 'active'
@@ -61,8 +92,21 @@ export class ChallengeHeaderComponent implements OnInit {
     );
   }
 
-  public toggleSelected() {
-    this.isFavorite = !this.isFavorite;
-    this.selectedChange.emit(this.isFavorite);
+  toggleStarred(): void {
+    if (this.loggedIn) {
+      this.starred = !this.starred;
+      this.challengeDataService.toggleStarred().subscribe();
+    } else {
+      this.authService.setRedirectUrl(this.router.url);
+      this.router.navigate(['signin']);
+    }
+  }
+
+  getStarredTooltip(): string {
+    if (this.loggedIn) {
+      return `${this.starred ? 'Star' : 'Unstar'} ${this.challenge.name};`;
+    } else {
+      return 'You must be logged in to star a challenge';
+    }
   }
 }
