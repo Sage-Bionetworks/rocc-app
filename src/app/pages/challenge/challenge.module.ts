@@ -10,6 +10,7 @@ import { ChallengeOverviewComponent } from './challenge-overview/challenge-overv
 import { ChallengeSettingsComponent } from './challenge-settings/challenge-settings.component';
 import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 import { AuthModule } from '@shared/auth/auth.module';
+import { ChallengeStargazersComponent } from './challenge-stargazers/challenge-stargazers.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { AuthModule } from '@shared/auth/auth.module';
     ChallengeHeaderComponent,
     ChallengeOverviewComponent,
     ChallengeSettingsComponent,
+    ChallengeStargazersComponent,
   ],
 })
 export class ChallengeModule {}
