@@ -11,6 +11,7 @@ import { ChallengeSettingsComponent } from './challenge-settings/challenge-setti
 import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 import { AuthModule } from '@shared/auth/auth.module';
 import { ChallengeStargazersComponent } from './challenge-stargazers/challenge-stargazers.component';
+import { UserCardModule } from '@app/shared/cards/user-card/user-card.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ChallengeStargazersComponent } from './challenge-stargazers/challenge-s
     FooterModule,
     MaterialModule,
     NotFoundModule,
-    AuthModule
+    AuthModule,
+    UserCardModule
   ],
   declarations: [
     ChallengeComponent,
