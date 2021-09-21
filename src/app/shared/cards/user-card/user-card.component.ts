@@ -8,11 +8,11 @@ import { Avatar } from '@sage-bionetworks/sage-angular';
 import { map, switchMap, tap } from 'rxjs/operators';
 
 @Component({
-  selector: 'rocc-people-view',
-  templateUrl: './people-view.component.html',
-  styleUrls: ['./people-view.component.scss'],
+  selector: 'rocc-user-card',
+  templateUrl: './user-card.component.html',
+  styleUrls: ['./user-card.component.scss'],
 })
-export class PeopleViewComponent implements OnInit {
+export class UserCardComponent implements OnInit {
   @Input() person!: User;
   @Input() userAvatar!: Avatar;
   orgs!: Organization[];

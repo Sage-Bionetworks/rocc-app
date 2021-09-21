@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PeopleViewComponent } from './people-view.component';
+import { UserCardComponent } from './user-card.component';
 import { MaterialModule } from '@shared/material/material.module';
 import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 
 @NgModule({
-  declarations: [PeopleViewComponent],
+  declarations: [UserCardComponent],
   imports: [CommonModule, MaterialModule, AvatarModule],
-  exports: [PeopleViewComponent],
+  exports: [UserCardComponent],
 })
-export class PeopleViewModule {}
+export class UserCardModule {}

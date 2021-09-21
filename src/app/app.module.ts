@@ -19,8 +19,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { TokenService } from '@shared/auth/token.service';
-import { ChallengeViewModule } from '@shared/view/challenge-view/challenge-view.module';
-import { PeopleViewModule } from '@shared/view/people-view/people-view.module';
+import { ChallengeViewModule } from '@app/shared/cards/challenge-view/challenge-view.module';
+import { UserCardModule } from '@shared/cards/user-card/user-card.module';
 
 // export function apiConfigFactory(): Configuration {
 //   const params: ConfigurationParameters = {
@@ -46,7 +46,7 @@ import { PeopleViewModule } from '@shared/view/people-view/people-view.module';
     FiltersModule,
     PageTitleModule,
     ChallengeViewModule,
-    PeopleViewModule,
+    UserCardModule,
   ],
   declarations: [AppComponent],
   providers: [
