@@ -14,7 +14,7 @@ import { ChallengeDataService } from '../challenge-data.service';
 export class ChallengeOverviewComponent implements OnInit {
   challenge$!: Observable<Challenge>;
   readme$!: Observable<ChallengeReadme>;
-
+  mockTopics = ['ehr', 'cancer', 'disease', 'covid', 'health', 'sage'];
   constructor(private challengeDataService: ChallengeDataService) {}
 
   ngOnInit(): void {
