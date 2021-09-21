@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChallengeViewComponent } from '@shared/view/challenge-view/challenge-view.component';
+import { ChallengeCardComponent } from '@app/shared/cards/challenge-card/challenge-card.component';
 import { MaterialModule } from '@shared/material/material.module';
 
 @NgModule({
-  declarations: [ChallengeViewComponent],
+  declarations: [ChallengeCardComponent],
   imports: [CommonModule, MaterialModule],
-  exports: [ChallengeViewComponent],
+  exports: [ChallengeCardComponent],
   providers: [],
 })
-export class ChallengeViewModule {}
+export class ChallengeCardModule {}

@@ -1,8 +1,8 @@
 <div class="rocc-org-challenges-container" *ngIf="challenges$ | async as challenges">
   <div *ngFor="let challenge of challenges">
-    <rocc-challenge-view 
+    <rocc-challenge-card 
       [challenge]="challenge" 
       routerLink="/{{accountName}}/{{challenge.name}}">
-    </rocc-challenge-view>
+    </rocc-challenge-card>
   </div>
 </div> 

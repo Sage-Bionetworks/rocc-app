@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChallengeViewComponent } from './challenge-view.component';
+import { ChallengeCardComponent } from './challenge-card.component';
 
 describe('CardPreviewComponent', () => {
-  let component: ChallengeViewComponent;
-  let fixture: ComponentFixture<ChallengeViewComponent>;
+  let component: ChallengeCardComponent;
+  let fixture: ComponentFixture<ChallengeCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ChallengeViewComponent],
+      declarations: [ChallengeCardComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChallengeViewComponent);
+    fixture = TestBed.createComponent(ChallengeCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
