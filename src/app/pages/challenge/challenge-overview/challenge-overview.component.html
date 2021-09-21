@@ -1,3 +1,4 @@
 <ng-container *ngIf="readme$ | async as readme">
   <p>{{readme.text}}</p>
+  <p>{{challenge$ | async | json}}</p>
 </ng-container>

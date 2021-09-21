@@ -11,7 +11,14 @@
       "startDate": "2020-11-10",
       "status": "active",
       "websiteUrl": "https://synapse.org/awesome-challenge",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "61466846a88b82c714a8c140",
@@ -23,7 +30,14 @@
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "completed",
       "platformId": "61393be2ebf3a87e774058d9",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146684d63800504219b6c59",
@@ -35,7 +49,14 @@
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "completed",
       "platformId": "61393be2ebf3a87e774058d9",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146685339019791d4ed02c3",
@@ -47,7 +68,14 @@
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "completed",
       "platformId": "61393be2ebf3a87e774058d9",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "61466862936797ac6aa4766f",
@@ -58,7 +86,14 @@
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "active",
       "platformId": "61393be2ebf3a87e774058d9",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146686700074606972e6160",
@@ -70,7 +105,14 @@
       "websiteUrl": "https://genomeinterpretation.org/cagi5-sickkids5.html",
       "status": "completed",
       "platformId": "613a2d6d3084347fbc8efc06",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146686cac291ca180d619b5",
@@ -82,7 +124,14 @@
       "websiteUrl": "https://genomeinterpretation.org/cagi6-annotate-all-missense.html",
       "status": "active",
       "platformId": "613a2d6d3084347fbc8efc06",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "61466873706dfe76a66d1718",
@@ -92,7 +141,14 @@
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#metasub_forensics_challenge",
       "status": "completed",
       "platformId": "613a2da13084347fbc8efc07",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "61466879791c026916a0e24c",
@@ -102,7 +158,14 @@
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#cmap_drug_safety_challenge",
       "status": "completed",
       "platformId": "613a2da13084347fbc8efc07",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146687e64b6819871d04f3f",
@@ -114,7 +177,14 @@
       "websiteUrl": "https://www.biofunctionprediction.org/cafa/",
       "status": "completed",
       "platformId": "613a2d6d3084347fbc8efc05",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "61466884bd04880366c3c940",
@@ -126,7 +196,14 @@
       "websiteUrl": "https://predictioncenter.org/casp13/index.cgi",
       "status": "completed",
       "platformId": "613a2db23084347fbc8efc08",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146688ab2b9d436e767614f",
@@ -138,7 +215,14 @@
       "websiteUrl": "https://predictioncenter.org/casp14/index.cgi",
       "status": "completed",
       "platformId": "613a2db23084347fbc8efc08",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146688e7018a9ad63dcfe92",
@@ -150,7 +234,14 @@
       "websiteUrl": "https://precision.fda.gov/challenges/3",
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "61466896b1af018b223901ee",
@@ -162,7 +253,14 @@
       "websiteUrl": "https://precision.fda.gov/challenges/8/",
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "6146689cb4b7cd53a6669943",
@@ -174,7 +272,14 @@
       "websiteUrl": "https://precision.fda.gov/challenges/12/",
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
       "id": "614668a2487ee5fd5cbeb335",
@@ -186,7 +291,14 @@
       "websiteUrl": "https://precision.fda.gov/challenges/18",
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
-      "ownerId": "613931b5ae0267da3f0275c7"
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     }
   ]
 }
