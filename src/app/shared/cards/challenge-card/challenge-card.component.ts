@@ -7,11 +7,11 @@ import {
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'rocc-challenge-view',
-  templateUrl: './challenge-view.component.html',
-  styleUrls: ['./challenge-view.component.scss'],
+  selector: 'rocc-challenge-card',
+  templateUrl: './challenge-card.component.html',
+  styleUrls: ['./challenge-card.component.scss'],
 })
-export class ChallengeViewComponent implements OnInit {
+export class ChallengeCardComponent implements OnInit {
   @Input() challenge!: Challenge;
   platform$!: Observable<ChallengePlatform>;
 

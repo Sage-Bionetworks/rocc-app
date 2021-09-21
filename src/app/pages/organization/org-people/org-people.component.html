@@ -1,6 +1,6 @@
 <div class="rocc-org-persons-container" *ngIf="persons$ | async as persons">
-  <rocc-people-view 
+  <rocc-user-card
     *ngFor="let person of persons"
     [person]="person">
-  </rocc-people-view>
+  </rocc-user-card>
 </div>

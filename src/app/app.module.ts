@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { TokenService } from '@shared/auth/token.service';
-import { ChallengeViewModule } from '@app/shared/cards/challenge-view/challenge-view.module';
+import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
 import { UserCardModule } from '@shared/cards/user-card/user-card.module';
 
 // export function apiConfigFactory(): Configuration {
@@ -45,7 +45,7 @@ import { UserCardModule } from '@shared/cards/user-card/user-card.module';
     DatabaseSeedModule,
     FiltersModule,
     PageTitleModule,
-    ChallengeViewModule,
+    ChallengeCardModule,
     UserCardModule,
   ],
   declarations: [AppComponent],
