@@ -1,6 +1,4 @@
-<div class="rocc-org-persons-container" *ngIf="stargazers$ | async as stargazers">
-  <rocc-user-card
-    *ngFor="let stargazer of stargazers"
-    [person]="stargazer">
+<div class="rocc-stagazers-container" *ngIf="stargazers$ | async as stargazers">
+  <rocc-user-card *ngFor="let stargazer of stargazers" [person]="stargazer">
   </rocc-user-card>
 </div>
