@@ -1,8 +1,8 @@
 
 <mat-card>
-  <div class = "rocc-peope-view-content-container">
+  <div class = "rocc-user-content-container">
     <sage-avatar [avatar]="userAvatar"></sage-avatar>
-    <div class="rocc-peope-view-info-container">
+    <div class="rocc-user-info-container">
       <mat-card-header>
         <mat-card-title>{{person.name}}</mat-card-title>
         <mat-card-subtitle>{{person.email}}</mat-card-subtitle>
@@ -12,7 +12,7 @@
       </mat-card-content>
     </div>
   </div>
-  <div class="rocc-people-view-orgs-container">
+  <div class="rocc-user-orgs-container">
     <div *ngFor="let org of orgs; let isLast=last">
         <img *ngIf="org.avatarUrl" src="{{org.avatarUrl}}" alt="">
         <a *ngIf="org.websiteUrl" href="{{org.websiteUrl}}" target="_blank">

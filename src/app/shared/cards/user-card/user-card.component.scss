@@ -6,7 +6,7 @@
   margin: 0 1em 20px 1em;
 }
 
-.rocc-peope-view-content-container {
+.rocc-user-content-container {
   display: flex;
   align-items: center;
   margin: 10px 10px;
@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-.rocc-peope-view-info-container {
+.rocc-user-info-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -32,7 +32,7 @@
   }
 }
 
-.rocc-people-view-orgs-container {
+.rocc-user-orgs-container {
   display: flex;
   height: 18px;
   margin-top: auto;
