@@ -12,7 +12,7 @@ export const routes: Routes = [
   //   loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule)
   // },
   {
-    path: 'signin',
+    path: 'login',
     loadChildren: () => import('./pages/signin').then(m => m.SigninModule)
   },
   {

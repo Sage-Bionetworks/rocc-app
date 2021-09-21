@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
       icon: 'account_circle',
     },
     {
-      name: 'Sign out',
+      name: 'Log out',
       icon: 'exit_to_app',
     },
   ];
@@ -75,7 +75,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   selectUserMenuItem(menuItem: MenuItem): void {
     console.log('Navbar user menu item selected', menuItem);
-    if (menuItem.name === 'Sign out') {
+    if (menuItem.name === 'Log out') {
       // TODO DRY
       this.authService.signout();
     }
