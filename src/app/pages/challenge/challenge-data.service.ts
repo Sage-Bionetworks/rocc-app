@@ -20,6 +20,7 @@ import {
   ChallengeReadme,
   ModelError as RoccClientError,
   UserService,
+  User,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isDefined, isUndefined } from '@app/type-guards';
 import { of } from 'rxjs';
@@ -29,9 +30,6 @@ import { isRoccClientError } from '@app/shared/rocc-client-error';
   providedIn: 'root',
 })
 export class ChallengeDataService {
-  // private challengeData: BehaviorSubject<ChallengeData | undefined> =
-  //   new BehaviorSubject<ChallengeData | undefined>(undefined);
-
   private challenge: BehaviorSubject<Challenge | undefined> =
     new BehaviorSubject<Challenge | undefined>(undefined);
   private readme: BehaviorSubject<ChallengeReadme | null> =

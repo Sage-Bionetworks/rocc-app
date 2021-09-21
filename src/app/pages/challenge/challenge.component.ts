@@ -38,6 +38,10 @@ export class ChallengeComponent implements OnInit {
       path: '.',
     },
     {
+      label: 'Stargazers',
+      path: 'stargazers',
+    },
+    {
       label: 'Settings',
       path: 'settings',
     },
@@ -74,7 +78,7 @@ export class ChallengeComponent implements OnInit {
     );
 
     const starred$ = this.authService.isSignedIn().pipe(
-      filter(isSignedIn => isSignedIn),
+      filter((isSignedIn) => isSignedIn),
       switchMap(() => this.challengeDataService.fetchStarred())
     );
 

@@ -1,19 +1,16 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-
-// TODO: fix import from @sage-bionetworks/sage-angular
+import { Subscription } from 'rxjs';
 import {
   Section,
   MenuItem,
   Avatar,
   MOCK_AVATAR_32,
 } from '@sage-bionetworks/sage-angular';
+import { AuthService } from '@shared/auth/auth.service';
 import { AppConfigService } from './app-config.service';
 import { SECTIONS } from './app-sections';
-import { AuthService } from '@shared/auth/auth.service';
-import { Subscription } from 'rxjs';
-import { OnDestroy } from 'rocc-client-angular/node_modules/@angular/core/core';
-import { filter, map } from 'rxjs/operators';
+import { User } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({
   selector: 'rocc-app',
@@ -34,10 +31,11 @@ export class AppComponent implements OnInit, OnDestroy {
       icon: 'account_circle',
     },
     {
-      name: 'Sign out',
+      name: 'Log out',
       icon: 'exit_to_app',
     },
   ];
+  user!: User | undefined;
   private subscriptions: Subscription[] = [];
 
   constructor(
@@ -58,6 +56,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subscriptions.push(signedInSub);
 
     const userSub = this.authService.getUser().subscribe((user) => {
+      this.user = user;
       if (user) {
         this.userAvatar.name = user.name ? user.name : user.login;
         this.userAvatar.src = user.avatarUrl ? user.avatarUrl : '';
@@ -75,9 +74,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   selectUserMenuItem(menuItem: MenuItem): void {
     console.log('Navbar user menu item selected', menuItem);
-    if (menuItem.name === 'Sign out') {
-      // TODO DRY
+    // TODO DRY selected item, no not make comparison with string that way
+    if (menuItem.name === 'Log out') {
       this.authService.signout();
+    } else if (menuItem.name === 'Profile') {
+      this.router.navigate([this.user?.login]);
     }
   }
 

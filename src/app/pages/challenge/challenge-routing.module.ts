@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 import { ChallengeOverviewComponent } from './challenge-overview/challenge-overview.component';
 import { ChallengeSettingsComponent } from './challenge-settings/challenge-settings.component';
+import { ChallengeStargazersComponent } from './challenge-stargazers/challenge-stargazers.component';
 import { ChallengeComponent } from './challenge.component';
 
 const routes: Routes = [
@@ -17,6 +17,10 @@ const routes: Routes = [
       {
         path: 'settings',
         component: ChallengeSettingsComponent,
+      },
+      {
+        path: 'stargazers',
+        component: ChallengeStargazersComponent,
       },
       {
         path: 'overview',

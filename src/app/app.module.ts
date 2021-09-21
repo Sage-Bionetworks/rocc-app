@@ -19,7 +19,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { TokenService } from '@shared/auth/token.service';
-import { ChallengeViewModule } from '@shared/view/challenge-view/challenge-view.module';
+import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
+import { UserCardModule } from '@shared/cards/user-card/user-card.module';
 
 // export function apiConfigFactory(): Configuration {
 //   const params: ConfigurationParameters = {
@@ -44,7 +45,8 @@ import { ChallengeViewModule } from '@shared/view/challenge-view/challenge-view.
     DatabaseSeedModule,
     FiltersModule,
     PageTitleModule,
-    ChallengeViewModule,
+    ChallengeCardModule,
+    UserCardModule,
   ],
   declarations: [AppComponent],
   providers: [
