@@ -37,7 +37,7 @@
       <span *ngIf="!!challenge.startDate">
         {{challenge.startDate | date: "yyyy-MM-dd":"UTC"}}
       </span>
-      <span><strong>{{remainDays}}</strong> days left</span>
+      <span *ngIf="challenge.status === 'active'"><strong>{{remainDays}}</strong> days left</span>
       <span *ngIf="!!challenge.endDate">
         {{challenge.endDate | date: "yyyy-MM-dd":"UTC"}}
       </span>
