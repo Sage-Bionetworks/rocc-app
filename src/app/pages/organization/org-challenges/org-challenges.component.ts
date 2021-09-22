@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import {
   Challenge,
   ChallengeService,
@@ -7,6 +7,8 @@ import { OrgDataService } from '../org-data.service';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { AuthService } from '@shared/auth/auth.service';
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
@@ -21,7 +23,9 @@ export class OrgChallengesComponent implements OnInit {
   constructor(
     private orgDataService: OrgDataService,
     private challengeService: ChallengeService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
@@ -36,5 +40,12 @@ export class OrgChallengesComponent implements OnInit {
     this.authService
       .isSignedIn()
       .subscribe((loggedIn) => (this.loggedIn = loggedIn));
+  }
+
+  onClick(url: string): void {
+    // ignore click if text is selected
+    if (!this.document.getSelection()!.toString()) {
+      this.router.navigateByUrl(url);
+    }
   }
 }

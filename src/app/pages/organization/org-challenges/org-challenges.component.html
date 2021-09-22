@@ -1,11 +1,8 @@
-<div class="rocc-org-challenges-container" *ngIf="challenges$ | async as challenges">
+<main *ngIf="challenges$ | async as challenges">
   <rocc-challenge-card 
     *ngFor="let challenge of challenges"
-    routerLink="/{{accountName}}/{{challenge.name}}"
+    (click)="onClick('/' + challenge.fullName)"
     [challenge]="challenge"
     [loggedIn]="loggedIn">
   </rocc-challenge-card>
-</div> 
-
-
-<!-- routerLink="/{{accountName}}/{{challenge.name}}" -->
+</main>
