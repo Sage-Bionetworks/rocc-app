@@ -81,6 +81,22 @@
       "updatedAt": ""
     },
     {
+      "id": "614b2fe148ad2f13b0d22690",
+      "name": "international-brain-tumor-segmentation",
+      "displayName": "International Brain Tumor Segmentation (BraTs)",
+      "description": "This challenge is an awesome challenge.",
+      "startDate": "2021-07-07",
+      "endDate": "2021-09-23",
+      "websiteUrl": "https://www.synapse.org/#!Synapse:syn25829067/",
+      "status": "active",
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": ["brats", "brain-tumor", "segmentation"],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
       "id": "6146686700074606972e6160",
       "name": "cagi5-sickkids-clinical-genomes",
       "displayName": "CAGI5: SickKids clinical genomes",
