@@ -7,8 +7,18 @@ import {
 } from '@angular/core';
 import { FilterValue } from '@shared/filters/filter-value.model';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
-import { Challenge, ChallengePlatformService, ChallengeService, DateRange } from '@sage-bionetworks/rocc-client-angular';
-import { challengeStartDateRangeFilterValues, challengeStatusFilterValues } from './challenge-search-filters-values';
+import {
+  Challenge,
+  ChallengePlatformService,
+  ChallengeService,
+  DateRange,
+} from '@sage-bionetworks/rocc-client-angular';
+import {
+  challengeStartDateRangeFilterValues,
+  challengeStatusFilterValues,
+  previewTypeFilterValues,
+  searchTermsFilterValues,
+} from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
 import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
@@ -18,6 +28,8 @@ import mapValues from 'lodash/fp/mapValues';
 import { ChallengeSearchQuery } from './challenge-search-query';
 import deepEqual from 'deep-equal';
 import { BehaviorSubject } from 'rxjs';
+import { ButtonToggleFilterValue } from '@app/shared/filters/button-toggle-filter/button-toggle-filter-value';
+import assign from 'lodash-es/assign';
 
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
@@ -45,8 +57,11 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   limit = 10;
   offset = 0;
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
-  challengeStartDateRangeFilterValues: FilterValue[] = challengeStartDateRangeFilterValues;
+  challengeStartDateRangeFilterValues: FilterValue[] =
+    challengeStartDateRangeFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
+  previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
+  searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
 
   constructor(
@@ -139,7 +154,7 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
             (platform) =>
               ({
                 value: platform.id,
-                title: platform.name,
+                title: platform.displayName,
                 active: false,
               } as FilterValue)
           );
@@ -147,5 +162,13 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
         (err) => console.log(err),
         () => console.log('Get platforms complete')
       );
+  }
+
+  showMoreResults(): void {
+    const query = assign(this.query.getValue(), {
+      offset: this.offset + this.limit,
+      limit: this.limit,
+    });
+    this.query.next(query);
   }
 }

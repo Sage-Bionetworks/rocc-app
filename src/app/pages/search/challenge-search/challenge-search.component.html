@@ -3,20 +3,35 @@
     <h3>Status</h3>
     <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
     </sage-checkbox-filter>
-
     <h3>Start Date</h3>
     <sage-date-range-filter name="startDateRange"
       [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
-
     <h3>Platforms</h3>
     <sage-checkbox-filter name="platformIds"
       [values]="challengePlatformFilterValues"></sage-checkbox-filter>
+    <!-- <h3>Preview</h3>
+    <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
+    </sage-button-toggle-filter> -->
   </div>
   <div class="search-content-container">
+    <sage-search-filter class="rocc-challenge-list-content-search-filter"
+      name="searchTerms" [values]="searchTermsFilterValues">
+    </sage-search-filter>
+    <span
+      class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
+      results</span>
+
     <mat-nav-list class="challenge-search-results">
       <rocc-challenge-card *ngFor="let challenge of challenges"
         [challenge]="challenge" [routerLink]="['/' + challenge.fullName]">
       </rocc-challenge-card>
     </mat-nav-list>
+
+    <div class="rocc-challenge-list-more-results">
+      <a *ngIf="searchResultsCount - challenges.length > 0" mat-raised-button
+        class="rocc-challenge-list-more-results-btn" color="primary"
+        (click)="showMoreResults()">More Results
+      </a>
+    </div>
   </div>
 </div>
