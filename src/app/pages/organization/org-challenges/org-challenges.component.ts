@@ -21,10 +21,10 @@ export class OrgChallengesComponent implements OnInit {
   challenges$!: Observable<Challenge[] | []>;
 
   constructor(
+    private router: Router,
+    private authService: AuthService,
     private orgDataService: OrgDataService,
     private challengeService: ChallengeService,
-    private authService: AuthService,
-    private router: Router,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
@@ -44,6 +44,7 @@ export class OrgChallengesComponent implements OnInit {
 
   onClick(url: string): void {
     // ignore click if text is selected
+    console.log(url);
     if (!this.document.getSelection()!.toString()) {
       this.router.navigateByUrl(url);
     }
