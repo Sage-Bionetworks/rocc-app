@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { FilterValue } from '@shared/filters/filter-value.model';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
-import { Challenge, ChallengeService, DateRange } from '@sage-bionetworks/rocc-client-angular';
+import { Challenge, ChallengePlatformService, ChallengeService, DateRange } from '@sage-bionetworks/rocc-client-angular';
 import { challengeStartDateRangeFilterValues, challengeStatusFilterValues } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
@@ -46,15 +46,18 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   offset = 0;
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] = challengeStartDateRangeFilterValues;
+  challengePlatformFilterValues: FilterValue[] = [];
   searchResultsCount = 0;
 
   constructor(
     private pageTitleService: PageTitleService,
-    private challengeService: ChallengeService
+    private challengeService: ChallengeService,
+    private challengePlatformService: ChallengePlatformService
   ) {}
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
+    this.listChallengePlatforms();
   }
 
   ngAfterViewInit(): void {
@@ -117,6 +120,32 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
           }
         },
         (err) => console.log(err)
+      );
+  }
+
+  private listChallengePlatforms(): void {
+    // TODO: Get all pages
+    this.challengePlatformService
+      .listChallengePlatforms(100)
+      .pipe(
+        map((page) => page.challengePlatforms),
+        map((platforms) =>
+          platforms.sort((a, b) => a.name.localeCompare(b.name))
+        )
+      )
+      .subscribe(
+        (platforms) => {
+          this.challengePlatformFilterValues = platforms.map(
+            (platform) =>
+              ({
+                value: platform.id,
+                title: platform.name,
+                active: false,
+              } as FilterValue)
+          );
+        },
+        (err) => console.log(err),
+        () => console.log('Get platforms complete')
       );
   }
 }
