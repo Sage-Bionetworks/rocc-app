@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  Organization,
-  ChallengeService,
   Challenge,
+  ChallengeService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
-
+import { AuthService } from '@shared/auth/auth.service';
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
@@ -16,11 +15,13 @@ import { map, switchMap, tap } from 'rxjs/operators';
 export class OrgChallengesComponent implements OnInit {
   // org!: Organization | undefined;
   accountName: string = '';
+  loggedIn!: boolean;
   challenges$!: Observable<Challenge[] | []>;
 
   constructor(
     private orgDataService: OrgDataService,
-    private challengeService: ChallengeService
+    private challengeService: ChallengeService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -31,5 +32,9 @@ export class OrgChallengesComponent implements OnInit {
       ),
       map((page) => page.challenges)
     );
+
+    this.authService
+      .isSignedIn()
+      .subscribe((loggedIn) => (this.loggedIn = loggedIn));
   }
 }

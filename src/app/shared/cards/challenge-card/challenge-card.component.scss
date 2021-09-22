@@ -14,10 +14,24 @@
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
       0 4px 15px 0 rgba(0, 0, 0, 0.15);
   }
+}
+
+.mat-card-header {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -16px;
 
   .mat-card-title {
-    margin-left: -16px;
     font-size: 2em;
+  }
+
+  .mat-icon-button {
+    margin-bottom: 12px;
+    font-size: 2em;
+
+    .rocc-challenge-favorite-icon {
+      color: #f1d07e;
+    }
   }
 }
 
