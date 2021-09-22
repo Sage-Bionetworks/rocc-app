@@ -68,9 +68,9 @@ export class ChallengeCardComponent implements OnInit {
       .subscribe((starred) => (this.starred = starred));
   }
 
-  toggleStar(): void {
+  toggleStar(event: Event): void {
+    event.stopPropagation();
     this.starred = !this.starred;
-
     (this.starred
       ? this.userService.starChallenge(
           this.challenge.fullName.split('/')[0],

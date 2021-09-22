@@ -3,7 +3,7 @@
     src="{{platform.avatarUrl}}" alt="platform-logo"> 
   <mat-card-header>
     <mat-card-title>{{challenge.displayName}}</mat-card-title>
-    <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar()">
+    <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
       <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon">
         star
       </mat-icon>
