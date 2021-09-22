@@ -1,7 +1,7 @@
 import { ChallengeStatus, DateRange } from '@sage-bionetworks/rocc-client-angular';
 // import { DateRange } from 'src/app/components/filters/date-range-filter/date-range';
 
-export interface ChallengeListQuery {
+export interface ChallengeSearchQuery {
   limit?: number;
   offset?: number;
   sort?: 'createdAt' | 'updatedAt';

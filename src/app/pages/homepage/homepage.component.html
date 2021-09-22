@@ -1,6 +1,6 @@
 <main>
   <div class="header">
-    <div class="mat-display-2">Welcome back, {{ username }}!</div>
+    <div *ngIf="!!user" class="mat-display-2">Welcome back, {{ user?.login }}!</div>
 
     <div class="button-group">
       <table class="GeneratedTable">
