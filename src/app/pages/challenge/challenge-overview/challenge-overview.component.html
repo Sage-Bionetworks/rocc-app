@@ -1,4 +1,20 @@
-<ng-container *ngIf="readme$ | async as readme">
-  <p>{{readme.text}}</p>
-  <p>{{challenge$ | async | json}}</p>
-</ng-container>
+<section>
+  <div *ngIf="challenge$ | async as challenge"
+    class="rocc-challenge-overview-top-container">
+    <!-- <p>{{challenge.description}}</p>
+    <mat-divider></mat-divider> -->
+    <div class="rocc-challenge-overview-topics-container">
+      <button
+        mat-raised-button class="rocc-challenge-overview-topics"
+        *ngFor="let topic of challenge.topics">
+        {{topic}}
+      </button>
+    </div>
+  </div>
+  <div class="rocc-challenge-overview-bottom-container">
+    <span>Introduction</span>
+    <div *ngIf="readme$ | async as readme">
+      <p>{{readme.text}}</p>
+    </div>
+  </div>
+</section>

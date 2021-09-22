@@ -1,7 +1,6 @@
 @import '~@angular/material/theming';
 
 // Styles of the pages
-@import 'challenges/challenges-theme';
 @import 'homepage/homepage-theme';
 @import 'signin/signin-theme';
 @import 'signup/signup-theme';
@@ -37,7 +36,6 @@
   //   background: mat-color($next-theme, 900) !important;
   // }
 
-  @include challenges-theme($theme);
   @include homepage-theme($theme);
   @include signin-theme($theme);
   @include signup-theme($theme);

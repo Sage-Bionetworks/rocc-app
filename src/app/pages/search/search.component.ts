@@ -1,11 +1,11 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'rocc-challenges',
-  templateUrl: './challenges.component.html',
-  styleUrls: ['./challenges.component.scss'],
+  selector: 'rocc-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.scss'],
 })
-export class ChallengesComponent {
+export class SearchComponent {
   @HostBinding('class.main-content') readonly mainContentClass = true;
 
   constructor() {}
