@@ -2,7 +2,7 @@
   <img class="rocc-challenge-platform-logo" *ngIf="platform$ | async as platform" 
     src="{{platform.avatarUrl}}" alt="platform-logo"> 
   <mat-card-header>
-    <mat-card-title>{{challenge.name}}</mat-card-title>
+    <mat-card-title>{{challenge.displayName}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <!-- <div class="rocc-challenge-tags-container">
