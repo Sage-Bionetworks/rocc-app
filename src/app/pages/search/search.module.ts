@@ -6,7 +6,7 @@ import { FiltersModule } from '@shared/filters/filters.module';
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 import { ChallengeSearchComponent } from './challenge-search/challenge-search.component';
-import { ChallengeCardComponent } from './challenge-search/challenge-card/challenge-card.component';
+import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
 
 @NgModule({
   imports: [
@@ -14,12 +14,9 @@ import { ChallengeCardComponent } from './challenge-search/challenge-card/challe
     FooterModule,
     MaterialModule,
     FiltersModule,
+    ChallengeCardModule,
     SearchRoutingModule,
   ],
-  declarations: [
-    SearchComponent,
-    ChallengeSearchComponent,
-    ChallengeCardComponent,
-  ],
+  declarations: [SearchComponent, ChallengeSearchComponent],
 })
 export class SearchModule {}

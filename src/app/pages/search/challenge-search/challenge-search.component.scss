@@ -1,6 +1,6 @@
 .container {
   width: 1200px;
-  height: 1000px;
+  // min-height: 1000px;
   background-color: rgb(216, 216, 216);
 
   display: flex;
@@ -11,4 +11,8 @@
   width: 260px;
   height: 100%;
   background-color: #f3f3f3;
+}
+
+.search-content-container {
+  padding: 40px 20px;
 }
