@@ -1,10 +1,8 @@
 <div class="rocc-org-challenges-container" *ngIf="challenges$ | async as challenges">
-  <div *ngFor="let challenge of challenges">
-    <rocc-challenge-card 
-      [challenge]="challenge"
-      [loggedIn]="loggedIn">
-    </rocc-challenge-card>
-  </div>
+  <rocc-challenge-card *ngFor="let challenge of challenges" 
+    [challenge]="challenge"
+    [loggedIn]="loggedIn">
+  </rocc-challenge-card>
 </div> 
 
 
