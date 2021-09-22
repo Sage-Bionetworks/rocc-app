@@ -1,6 +1,6 @@
 <div class="rocc-challenge-detail-header-container">
   <div class="rocc-challenge-detail-header-top">
-    <div class="rocc-challenge-detail-header-top-box-left">
+    <div class="rocc-challenge-detail-header-top-left-container">
       <div class="rocc-challenge-detail-header-top-routerlink-container">
         <mat-icon>share</mat-icon>
         <a class="button-go-back" routerLink="/{{accountName}}">{{accountName}}</a>
@@ -9,37 +9,37 @@
       </div>
       <div class="rocc-challenge-detail-title-container">
         <span>{{challenge.displayName}}</span>
-        <button mat-icon-button (click)="toggleSelected()">
-          <mat-icon *ngIf="isFavorite" class="rocc-challenge-favorite-icon" inline=true>
+        <button mat-icon-button (click)="toggleStarred()" [matTooltip]="getStarredTooltip()">
+          <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
             star
           </mat-icon>
-          <mat-icon *ngIf="!isFavorite" inline=true>
+          <mat-icon *ngIf="!starred" inline=true>
             star_border
           </mat-icon>
-        </button> 
+        </button>
+      </div>
+      <div class="rocc-challenge-detail-header-status-container">
+        <span>{{challenge.status | titlecase}}</span>
+        <a href="{{challenge.websiteUrl}}" target="_blank">Go to challenge</a>
       </div>
     </div>
-    <div class="rocc-challenge-detail-header-top-box-right" *ngIf="platform$ | async as platform">
+    <div class="rocc-challenge-detail-header-logo-container" *ngIf="platform$ | async as platform">
       <img src="{{platform.avatarUrl}}" alt="platform-logo">
-      <span>{{platform.displayName}}</span>
     </div>
-  </div>
-  <div class="rocc-challenge-detail-header-middle">
-    <span>{{challenge.status | titlecase}}</span>
-    <a href="{{challenge.websiteUrl}}" target="_blank">Go to challenge</a>
   </div>
   <div class="rocc-challenge-detail-header-bottom">
     <mat-progress-bar
       mode="determinate"
       color="accent"
-      value="{{getProgress(challenge)}}">
+      value="{{progressValue}}">
     </mat-progress-bar>
     <div class="rocc-challenge-detail-dates-box">
       <span *ngIf="!!challenge.startDate">
-        {{challenge.startDate | date: "yyyy-MM-dd"}}
+        {{challenge.startDate | date: "yyyy-MM-dd":"UTC"}}
       </span>
+      <span *ngIf="challenge.status === 'active'"><strong>{{remainDays}}</strong> days left</span>
       <span *ngIf="!!challenge.endDate">
-        {{challenge.endDate | date: "yyyy-MM-dd"}}
+        {{challenge.endDate | date: "yyyy-MM-dd":"UTC"}}
       </span>
     </div>
   </div>

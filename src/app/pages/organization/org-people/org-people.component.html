@@ -1,2 +1,6 @@
-<p>org-people works!</p>
-<p>{{org | json}}</p>
+<div class="rocc-org-persons-container" *ngIf="persons$ | async as persons">
+  <rocc-user-card
+    *ngFor="let person of persons"
+    [person]="person">
+  </rocc-user-card>
+</div>

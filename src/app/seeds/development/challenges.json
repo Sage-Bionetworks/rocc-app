@@ -10,19 +10,37 @@
       "platformId": "61393be2ebf3a87e774058d9",
       "startDate": "2020-11-10",
       "status": "active",
-      "websiteUrl": "https://synapse.org/awesome-challenge"
+      "websiteUrl": "https://synapse.org/awesome-challenge",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "61466846a88b82c714a8c140",
       "name": "astrazeneca-sanger-drug-combination-prediction",
       "displayName": "AstraZeneca-Sanger Drug Combination Prediction",
-      "description": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
       "startDate": "2015-09-03",
       "endDate": "2016-03-14",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "completed",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146684d63800504219b6c59",
       "name": "multi-targeting-drug",
       "displayName": "Multi-Targeting Drug",
       "description": "",
@@ -30,9 +48,18 @@
       "endDate": "2018-02-26",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "completed",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146685339019791d4ed02c3",
       "name": "anti-pd1-response-prediction",
       "displayName": "Anti-PD1 Response Prediction",
       "description": "",
@@ -40,18 +67,36 @@
       "endDate": "2021-02-25",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "completed",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "61466862936797ac6aa4766f",
       "name": "ehr-covid-19",
       "displayName": "EHR COVID-19",
       "description": "",
       "startDate": "2020-04-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "active",
-      "platformId": "61393be2ebf3a87e774058d9"
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146686700074606972e6160",
       "name": "cagi5-sickkids-clinical-genomes",
       "displayName": "CAGI5: SickKids clinical genomes",
       "description": "",
@@ -59,9 +104,18 @@
       "endDate": "2018-04-26",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-sickkids5.html",
       "status": "completed",
-      "platformId": "613a2d6d3084347fbc8efc06"
+      "platformId": "613a2d6d3084347fbc8efc06",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146686cac291ca180d619b5",
       "name": "gagi6-annotate-all-missense",
       "displayName": "GAGI6: Annotate All Missense",
       "description": "",
@@ -69,25 +123,52 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-annotate-all-missense.html",
       "status": "active",
-      "platformId": "613a2d6d3084347fbc8efc06"
+      "platformId": "613a2d6d3084347fbc8efc06",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "61466873706dfe76a66d1718",
       "name": "camda18-metasub-forensics",
       "displayName": "CAMDA18: MetaSUB Forensics",
       "description": "",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#metasub_forensics_challenge",
       "status": "completed",
-      "platformId": "613a2da13084347fbc8efc07"
+      "platformId": "613a2da13084347fbc8efc07",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "61466879791c026916a0e24c",
       "name": "camda18-cmap-drug-safety",
       "displayName": "CAMDA18: CMap Drug Safety",
       "description": "",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#cmap_drug_safety_challenge",
       "status": "completed",
-      "platformId": "613a2da13084347fbc8efc07"
+      "platformId": "613a2da13084347fbc8efc07",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146687e64b6819871d04f3f",
       "name": "cafa-4",
       "displayName": "CAFA 4",
       "description": "",
@@ -95,9 +176,18 @@
       "endDate": "2020-02-12",
       "websiteUrl": "https://www.biofunctionprediction.org/cafa/",
       "status": "completed",
-      "platformId": "613a2d6d3084347fbc8efc05"
+      "platformId": "613a2d6d3084347fbc8efc05",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "61466884bd04880366c3c940",
       "name": "casp13",
       "displayName": "CASP13",
       "description": "",
@@ -105,9 +195,18 @@
       "endDate": "2018-08-20",
       "websiteUrl": "https://predictioncenter.org/casp13/index.cgi",
       "status": "completed",
-      "platformId": "613a2db23084347fbc8efc08"
+      "platformId": "613a2db23084347fbc8efc08",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146688ab2b9d436e767614f",
       "name": "casp14",
       "displayName": "CASP14",
       "description": "",
@@ -115,9 +214,18 @@
       "endDate": "2020-09-07",
       "websiteUrl": "https://predictioncenter.org/casp14/index.cgi",
       "status": "completed",
-      "platformId": "613a2db23084347fbc8efc08"
+      "platformId": "613a2db23084347fbc8efc08",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146688e7018a9ad63dcfe92",
       "name": "cdrh-biothreat",
       "displayName": "CDRH Biothreat",
       "description": "",
@@ -125,9 +233,18 @@
       "endDate": "2018-10-18",
       "websiteUrl": "https://precision.fda.gov/challenges/3",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "61466896b1af018b223901ee",
       "name": "brain-cancer-predictive-modeling-and-biomarker-discovery",
       "displayName": "Brain Cancer Predictive Modeling and Biomarker Discovery",
       "description": "",
@@ -135,9 +252,18 @@
       "endDate": "2020-02-14",
       "websiteUrl": "https://precision.fda.gov/challenges/8/",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "6146689cb4b7cd53a6669943",
       "name": "covid-19-precision-immunology-app-a-thon",
       "displayName": "COVID-19 Precision Immunology App-a-thon",
       "description": "",
@@ -145,9 +271,18 @@
       "endDate": "2021-01-29",
       "websiteUrl": "https://precision.fda.gov/challenges/12/",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     },
     {
+      "id": "614668a2487ee5fd5cbeb335",
       "name": "tumor-mutational-burden-challenge-phase-2",
       "displayName": "Tumor Mutational Burden Challenge Phase 2",
       "description": "",
@@ -155,7 +290,15 @@
       "endDate": "2021-09-13",
       "websiteUrl": "https://precision.fda.gov/challenges/18",
       "status": "completed",
-      "platformId": "613a2dbe3084347fbc8efc09"
+      "platformId": "613a2dbe3084347fbc8efc09",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": [
+        "ehr",
+        "breast-cancer"
+      ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
     }
   ]
 }

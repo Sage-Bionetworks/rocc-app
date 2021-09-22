@@ -1,0 +1,76 @@
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-bottom: 20px;
+  margin: 0 1em 20px 1em;
+}
+
+.rocc-user-content-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+  height: 210px;
+  border-bottom: 1px #0000008a solid;
+  box-sizing: border-box;
+}
+
+.rocc-user-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  margin-top: 15px;
+  padding: 0 15px;
+
+  .mat-card-subtitle {
+    margin-bottom: 10px;
+  }
+
+  .mat-card-content {
+    margin-left: 16px;
+  }
+}
+
+.rocc-user-orgs-container {
+  display: flex;
+  height: 18px;
+  margin-top: auto;
+  margin-left: 10px;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  div {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+
+  a {
+    color: #0000008a;
+    white-space: nowrap;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  span {
+    margin: 0 10px;
+    color: #0000008a;
+    font-size: 18px;
+    font-weight: 900;
+  }
+}

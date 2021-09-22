@@ -1,0 +1,5 @@
+<h2>Starred</h2>
+<mat-nav-list>
+  <a mat-list-item [routerLink]="['/' + star.fullName]"
+    *ngFor="let star of stars">{{star.fullName}}</a>
+</mat-nav-list>

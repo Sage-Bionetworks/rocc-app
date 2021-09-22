@@ -16,7 +16,7 @@ export class UserProfileChallengesComponent implements OnInit {
 
   ngOnInit(): void {
     this.challenges$ = this.userService
-      .getUserStarredChallenges(this.userId)
+      .listUserStarredChallenges(this.userId)
       .pipe(map((page) => page.challenges));
   }
 }

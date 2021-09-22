@@ -11,6 +11,7 @@ import {
 } from 'rxjs/operators';
 import { merge as _merge } from 'lodash-es';
 import {
+  AccountService,
   ChallengeService,
   ChallengePlatformService,
   GrantService,
@@ -40,6 +41,9 @@ import {
   OrgMembershipService,
   OrgMembershipCreateRequest,
   OrgMembership,
+  ChallengeReadme,
+  ChallengeReadmeCreateRequest,
+  ChallengeReadmeUpdateRequest,
 } from '@sage-bionetworks/rocc-client-angular';
 import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
@@ -47,6 +51,7 @@ import { DocumentsCreateResult } from './documents-create-result';
 
 import challengeList from '@app/seeds/development/challenges.json';
 import challengePlatformList from '@app/seeds/development/challenge-platforms.json';
+import challengeReadmeList from '@app/seeds/development/challenge-readmes.json';
 import organizationList from '@app/seeds/development/organizations.json';
 import orgMembershipList from '@app/seeds/development/org-memberships.json';
 import userList from '@app/seeds/development/users.json';
@@ -58,6 +63,7 @@ import userList from '@app/seeds/development/users.json';
 })
 export class DatabaseSeedComponent implements OnInit {
   constructor(
+    private accountService: AccountService,
     private challengePlatformService: ChallengePlatformService,
     private challengeService: ChallengeService,
     private organizationService: OrganizationService,
@@ -85,9 +91,11 @@ export class DatabaseSeedComponent implements OnInit {
       tap(() => console.log('Creating users')),
       mergeMap((users) =>
         forkJoinConcurrent(
-          users.map((user) =>
-            this.userService.createUser(omit(user, ['id']) as UserCreateRequest)
-          ),
+          users.map((user) => {
+            let userRequest = omit(user, ['id']) as UserCreateRequest;
+            userRequest.password = 'yourpassword';
+            return this.userService.createUser(userRequest);
+          }),
           10
         )
       ),
@@ -321,25 +329,54 @@ export class DatabaseSeedComponent implements OnInit {
     // Creates a Challenge
     const createChallenge = (
       accountName: string,
-      rawChallenge: ChallengeCreateRequest
+      rawChallenge: Challenge
     ): Observable<Challenge> => {
       return this.challengeService
         .createChallenge(accountName, rawChallenge)
-        .pipe(map((res) => _merge(res, rawChallenge) as Challenge));
+        .pipe(
+          map((res) => _merge(res, rawChallenge) as Challenge),
+          switchMap((challenge) => {
+            const readme: ChallengeReadmeUpdateRequest | undefined =
+              challengeReadmeList.challengeReadmes.find(
+                (readme) => readme.challengeId === rawChallenge.id
+              );
+            if (readme !== undefined) {
+              return this.challengeService.updateChallengeReadme(accountName, challenge.name, readme).pipe(
+                mapTo(challenge)
+              )
+            } else {
+              return of(challenge);
+            }
+          })
+
+          // switchMap((challenge) => {
+          //   const readme: ChallengeReadmeCRequest | undefined =
+          //     challengeReadmeList.challengeReadmes.find(
+          //       (readme) => readme.challengeId === rawChallenge.id
+          //     );
+          //   if (readme === undefined) {
+          //     throw new Error(
+          //       'Challenge with tmpId ' + rawChallenge.id + ' has no readme'
+          //     );
+          //   }
+          //   return this.challengeService
+          //     .createChallengeReadme(accountName, challenge.name, readme)
+          //     .pipe(mapTo(challenge));
+          // })
+        );
     };
 
     // Creates Challenges
     const createChallenges = (
-      challengeCreateRequests: ChallengeCreateRequest[],
-      challengePlatformsCreateResult: DocumentsCreateResult<ChallengePlatform>
-      // grantsCreateResult: DocumentsCreateResult<Grant>,
-      // personsCreateResult: DocumentsCreateResult<Person>
+      challengeCreateRequests: Challenge[],
+      challengePlatformsCreateResult: DocumentsCreateResult<ChallengePlatform>,
+      orgsCreateResult: DocumentsCreateResult<Organization>
     ): Observable<Challenge[]> => {
       return of(challengeCreateRequests).pipe(
         tap(() => console.log('Creating challenges')),
         mergeMap((rawChallenges) =>
           forkJoinConcurrent(
-            rawChallenges.map((rawChallenge: ChallengeCreateRequest) =>
+            rawChallenges.map((rawChallenge: Challenge) =>
               of(rawChallenge).pipe(
                 mergeMap(() =>
                   forkJoin({
@@ -347,13 +384,20 @@ export class DatabaseSeedComponent implements OnInit {
                       rawChallenge.platformId,
                       challengePlatformsCreateResult
                     ),
-                    // grantIds: getGrantIds(rawChallenge, grantsCreateResult),
-                    // organizerIds: getOrganizerIds(rawChallenge, personsCreateResult)
+                    org: getObjectIdFromTmpId(
+                      rawChallenge.ownerId,
+                      orgsCreateResult
+                    ).pipe(
+                      switchMap((orgId) =>
+                        this.organizationService.getOrganization(orgId)
+                      )
+                    ),
                   })
                 ),
                 mergeMap((res) => {
-                  _merge(rawChallenge, res);
-                  return createChallenge('awesome-org', rawChallenge); // TODO: don't use always awesome-org
+                  const org: Organization = res.org;
+                  _merge(rawChallenge, omit(res, ['org']));
+                  return createChallenge(org.login, rawChallenge);
                 })
               )
             ),
@@ -426,7 +470,7 @@ export class DatabaseSeedComponent implements OnInit {
       map(([orgMembershipsCreateResult, docs]) => {
         return {
           orgMembershipsCreateResult: orgMembershipsCreateResult,
-          ...docs
+          ...docs,
         };
       }),
       share()
@@ -435,8 +479,9 @@ export class DatabaseSeedComponent implements OnInit {
     const createChallenges$ = createOrgMemberships$.pipe(
       mergeMap((docs) => {
         return createChallenges(
-          challengeList.challenges as ChallengeCreateRequest[],
-          docs.challengePlatformsCreateResult as DocumentsCreateResult<ChallengePlatform>
+          challengeList.challenges as Challenge[],
+          docs.challengePlatformsCreateResult as DocumentsCreateResult<ChallengePlatform>,
+          docs.organizationsCreateResult as DocumentsCreateResult<Organization>
         );
       }),
       withLatestFrom(createOrgMemberships$),

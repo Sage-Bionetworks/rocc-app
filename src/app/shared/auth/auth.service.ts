@@ -38,7 +38,7 @@ export class AuthService {
   >(undefined);
   private initialized = false;
 
-  private loginUrl = '/signin';
+  private loginUrl = '/login';
   private redirectUrl = '/';
 
   constructor(

@@ -31,7 +31,8 @@ a {
     justify-content: space-between;
     align-items: center;
 
-    .rocc-challenge-detail-header-top-box-left {
+    // top left section
+    .rocc-challenge-detail-header-top-left-container {
       display: flex;
       flex-direction: column;
 
@@ -78,40 +79,31 @@ a {
           }
         }
       }
+
+      .rocc-challenge-detail-header-status-container {
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+
+        span {
+          margin: 10px 0;
+          padding-right: 15px;
+          border-right: 1px #fff solid;
+        }
+
+        a {
+          margin: 10px 0;
+          padding-left: 15px;
+        }
+      }
     }
 
-    .rocc-challenge-detail-header-top-box-right {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
+    // top right section
+    .rocc-challenge-detail-header-logo-container {
       img {
-        height: 6em;
-        width: 6em;
+        height: 100px;
+        max-width: 100px;
       }
-
-      span {
-        margin-top: 5px;
-        font-size: 1.52em;
-      }
-    }
-  }
-
-  .rocc-challenge-detail-header-middle {
-    display: flex;
-    align-items: center;
-    margin-top: -10px;
-    font-size: 1.5em;
-
-    span {
-      margin: 10px 0;
-      padding-right: 15px;
-      border-right: 1px #fff solid;
-    }
-
-    a {
-      margin: 10px 0;
-      padding-left: 15px;
     }
   }
 

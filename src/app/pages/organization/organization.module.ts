@@ -10,6 +10,8 @@ import { OrgHeaderModule } from '../account/org-account/org-header/org-header.mo
 import { OrgPeopleComponent } from './org-people/org-people.component';
 import { OrgSettingsComponent } from './org-settings/org-settings.component';
 import { OrgNewModule } from './org-new/org-new.module';
+import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
+import { UserCardModule } from '@shared/cards/user-card/user-card.module';
 
 @NgModule({
   imports: [
@@ -20,6 +22,8 @@ import { OrgNewModule } from './org-new/org-new.module';
     OrgHeaderModule,
     OrganizationRoutingModule,
     OrgNewModule,
+    ChallengeCardModule,
+    UserCardModule,
   ],
   declarations: [
     OrganizationComponent,
