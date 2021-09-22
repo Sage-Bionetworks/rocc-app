@@ -66,6 +66,10 @@
     height: 100%;
 
     .rocc-challenge-descriptions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
       margin-bottom: 0.5em;
     }
 
