@@ -1,10 +1,10 @@
 <section>
   <div *ngIf="challenge$ | async as challenge"
     class="rocc-challenge-overview-top-container">
-    <p>{{challenge.description}}</p>
-    <mat-divider></mat-divider>
+    <!-- <p>{{challenge.description}}</p>
+    <mat-divider></mat-divider> -->
     <div class="rocc-challenge-overview-topics-container">
-      <button 
+      <button
         mat-raised-button class="rocc-challenge-overview-topics"
         *ngFor="let topic of challenge.topics">
         {{topic}}
