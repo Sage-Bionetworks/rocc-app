@@ -8,7 +8,7 @@ import {
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { Observable, of, throwError } from 'rxjs';
-import { catchError, mapTo } from 'rxjs/operators';
+import { catchError, mapTo, switchMap } from 'rxjs/operators';
 import { isRoccClientError } from '@app/shared/rocc-client-error';
 
 @Component({
@@ -80,6 +80,8 @@ export class ChallengeCardComponent implements OnInit {
           this.challenge.fullName.split('/')[0],
           this.challenge.name
         )
-    ).subscribe(console.log);
+    ).subscribe(() =>
+      this.starred ? (this.numberStarred += 1) : (this.numberStarred -= 1)
+    );
   }
 }
