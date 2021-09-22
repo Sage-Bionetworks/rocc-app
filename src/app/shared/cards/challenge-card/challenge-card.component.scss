@@ -2,9 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 120px;
+  height: 100%;
   margin-bottom: 20px;
-  padding: 20px 20px 15px;
+  padding: 2em 1.5em 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
 
@@ -18,17 +18,17 @@
 .mat-card-header {
   display: inline-flex;
   align-items: center;
+  height: 2em;
   margin-left: -16px;
 
   .mat-card-title {
     font-size: 2em;
-    margin-bottom: 0;
   }
 
-  .mat-icon {
+  .mat-icon-button {
     font-size: 2em;
 
-    &.rocc-challenge-favorite-icon {
+    .rocc-challenge-favorite-icon {
       color: #f1d07e;
     }
   }
@@ -36,7 +36,7 @@
 
 .rocc-challenge-topics-container {
   display: inline-flex;
-  margin-bottom: 5px;
+  margin-bottom: 0.5em;
 
   a {
     margin-right: 8px;
@@ -52,7 +52,6 @@
 }
 
 .mat-card-content {
-  position: relative;
   display: grid;
   grid-template-columns: 3.5fr 1fr;
   grid-gap: 2em;
@@ -61,15 +60,35 @@
 
   .rocc-challenge-left-content-container {
     justify-self: left;
+
+    .rocc-challenge-descriptions {
+      margin-bottom: 0.5em;
+    }
+
+    .rocc-challenge-stats-container {
+      display: flex;
+      margin-top: auto;
+
+      div {
+        display: inline-flex;
+        align-items: center;
+
+        strong {
+          margin-left: 5px;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 
   .rocc-challenge-dates-container {
+    justify-self: right;
     display: flex;
     flex-direction: column;
-    justify-self: right;
+    justify-content: flex-end;
     width: 100%;
-    min-height: 60px;
-    padding-top: 20px;
+    height: 100%;
+    min-height: 4em;
     text-align: right;
 
     span {
@@ -79,23 +98,6 @@
     b {
       text-align: right;
       padding-right: 10px;
-    }
-  }
-}
-
-.rocc-challenge-stats-container {
-  position: absolute;
-  display: flex;
-  left: 0;
-  bottom: -5px;
-
-  div {
-    display: inline-flex;
-    align-items: center;
-
-    strong {
-      margin-left: 5px;
-      margin-right: 10px;
     }
   }
 }
@@ -111,11 +113,12 @@
 .rocc-challenge-completed {
   color: grey;
 }
+
 .rocc-challenge-platform-logo {
   position: absolute;
-  right: 40px;
-  top: 10px;
-  height: 60px;
-  width: 60px;
+  right: 1.5em;
+  top: 2em;
+  height: 4em;
+  width: 4em;
   z-index: 2;
 }

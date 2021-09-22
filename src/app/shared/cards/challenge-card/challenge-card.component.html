@@ -4,10 +4,10 @@
   <mat-card-header>
     <mat-card-title>{{challenge.displayName}}</mat-card-title>
     <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
-      <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon">
+      <mat-icon mat-card-avatar *ngIf="starred" class="rocc-challenge-favorite-icon">
         star
       </mat-icon>
-      <mat-icon *ngIf="!starred">
+      <mat-icon  mat-card-avatar *ngIf="!starred">
         star_border
       </mat-icon>
     </button>
@@ -20,7 +20,6 @@
         </a>
       </div>
       <div class="rocc-challenge-descriptions">{{challenge.description}}</div>
-      <mat-card-actions>
       <div class="rocc-challenge-stats-container">
         <div>
           <mat-icon class="rocc-challenge-{{challenge.status}}">circle</mat-icon> 
@@ -39,7 +38,6 @@
           <strong>{{numberStarred}}</strong>
         </div>
       </div>
-    </mat-card-actions>
     </div>
     <div class="rocc-challenge-dates-container">
       <span *ngIf="!!challenge.startDate">
