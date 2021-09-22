@@ -12,10 +12,7 @@
       "status": "active",
       "websiteUrl": "https://synapse.org/awesome-challenge",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -31,10 +28,7 @@
       "status": "completed",
       "platformId": "61393be2ebf3a87e774058d9",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -50,10 +44,7 @@
       "status": "completed",
       "platformId": "61393be2ebf3a87e774058d9",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -69,10 +60,7 @@
       "status": "completed",
       "platformId": "61393be2ebf3a87e774058d9",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -87,10 +75,7 @@
       "status": "active",
       "platformId": "61393be2ebf3a87e774058d9",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -106,10 +91,7 @@
       "status": "completed",
       "platformId": "613a2d6d3084347fbc8efc06",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -125,10 +107,7 @@
       "status": "active",
       "platformId": "613a2d6d3084347fbc8efc06",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -142,10 +121,7 @@
       "status": "completed",
       "platformId": "613a2da13084347fbc8efc07",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -159,10 +135,7 @@
       "status": "completed",
       "platformId": "613a2da13084347fbc8efc07",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -178,10 +151,7 @@
       "status": "completed",
       "platformId": "613a2d6d3084347fbc8efc05",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -197,10 +167,7 @@
       "status": "completed",
       "platformId": "613a2db23084347fbc8efc08",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -216,10 +183,7 @@
       "status": "completed",
       "platformId": "613a2db23084347fbc8efc08",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -235,10 +199,7 @@
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -254,10 +215,7 @@
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -273,10 +231,7 @@
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
       "ownerId": "613931b5ae0267da3f0275c7",
-      "topics": [
-        "ehr",
-        "breast-cancer"
-      ],
+      "topics": ["ehr", "breast-cancer"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
@@ -292,10 +247,108 @@
       "status": "completed",
       "platformId": "613a2dbe3084347fbc8efc09",
       "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": ["ehr", "breast-cancer"],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": "614668a2487ee5fd5cbba115",
+      "name": "kidney-and-kidney-tumor-segmentation",
+      "displayName": "Kidney and Kidney Tumor Segmentation",
+      "description": "",
+      "startDate": "2021-08-23",
+      "endDate": "2021-09-17",
+      "websiteUrl": "https://kits21.kits-challenge.org/",
+      "status": "completed",
+      "platformId": "614acf0b7d6075b015976d4b",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": ["kits21", "kidney", "kidney-tumor", "segmentation"],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": "614acb08d8d6365f211b6321",
+      "name": "rsna-asnr-miccai-brain-tumor-segmentation",
+      "displayName": "RSNA-ASNR-MICCAI Brain Tumor Segmentation",
+      "description": "",
+      "startDate": "2021-07-07",
+      "endDate": "2021-10-15",
+      "websiteUrl": "https://www.rsna.org/education/ai-resources-and-training/ai-image-challenge/brain-tumor-ai-challenge-2021",
+      "status": "active",
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": ["brats", "brain-tumor", "segmentation"],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": "614acaf3d3e2c4f6753c6892",
+      "name": "rsna-asnr-miccai-brain-tumor-classification",
+      "displayName": "RSNA-ASNR-MICCAI Brain Tumor Classification",
+      "description": "",
+      "startDate": "2021-10-08",
+      "endDate": "2021-10-15",
+      "websiteUrl": "https://www.rsna.org/education/ai-resources-and-training/ai-image-challenge/brain-tumor-ai-challenge-2021",
+      "status": "active",
+      "platformId": "614ace3cdd5fdecce3312b80",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": ["brats", "brain-tumor", "segmentation"],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": "614acb910baadc65b239545f",
+      "name": "cross-modality-domain-adaptation-for-medical-image-segmentation",
+      "displayName": "Cross-Modality Domain Adaptation for Medical Image Segmentation",
+      "description": "",
+      "startDate": "2021-04-05",
+      "endDate": "2021-09-27",
+      "websiteUrl": "https://crossmoda-challenge.ml/",
+      "status": "active",
+      "platformId": "61393c9fb7acf212886c9b53",
+      "ownerId": "613931b5ae0267da3f0275c7",
       "topics": [
-        "ehr",
-        "breast-cancer"
+        "cross-modality",
+        "domain-adaptation",
+        "segmentation",
+        "crossmoda"
       ],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": "614accd8f7a3f1f493fdd475",
+      "name": "real-noise-mri",
+      "displayName": "Real Noise MRI",
+      "description": "",
+      "startDate": "2021-09-21",
+      "endDate": "2021-12-06",
+      "websiteUrl": "https://realnoisemri.grand-challenge.org/Description/",
+      "status": "upcoming",
+      "platformId": "61393c9fb7acf212886c9b53",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": ["realnoisemri", "brain", "mri", "reconstruction"],
+      "fullName": "",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": "614acd75786ae89316197384",
+      "name": "adaptor-deep-generative-model-challenge-for-domain-adaptation-in-surgery",
+      "displayName": "AdaptOR: Deep Generative Model Challenge for Domain Adaptation in Surgery",
+      "description": "",
+      "startDate": "2021-04-01",
+      "endDate": "2021-07-16",
+      "websiteUrl": "https://adaptor2021.github.io/",
+      "status": "completed",
+      "platformId": "61393be2ebf3a87e774058d9",
+      "ownerId": "613931b5ae0267da3f0275c7",
+      "topics": ["deep-generative-model", "domain-adaptation", "surgery"],
       "fullName": "",
       "createdAt": "",
       "updatedAt": ""
