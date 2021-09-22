@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {
   Challenge,
+  ChallengeService,
   ChallengePlatformService,
   ChallengePlatform,
   UserService,
@@ -18,9 +19,10 @@ import { isRoccClientError } from '@app/shared/rocc-client-error';
 export class ChallengeCardComponent implements OnInit {
   @Input() challenge!: Challenge;
   @Input() loggedIn!: boolean;
-  starred: boolean = false;
-
   platform$!: Observable<ChallengePlatform>;
+
+  starred: boolean = false;
+  numberStarred: number = 0;
 
   // mock up data
   numberSubmissions: number = 200;
@@ -28,13 +30,22 @@ export class ChallengeCardComponent implements OnInit {
 
   constructor(
     private challengePlatformService: ChallengePlatformService,
-    private userService: UserService
+    private userService: UserService,
+    private challengeService: ChallengeService
   ) {}
 
   ngOnInit(): void {
     this.platform$ = this.challengePlatformService.getChallengePlatform(
       this.challenge.platformId!
     );
+
+    this.challengeService
+      .listChallengeStargazers(
+        this.challenge.fullName.split('/')[0],
+        this.challenge.name,
+        100
+      )
+      .subscribe((page) => (this.numberStarred = page.totalResults));
 
     this.userService
       .isStarredChallenge(
