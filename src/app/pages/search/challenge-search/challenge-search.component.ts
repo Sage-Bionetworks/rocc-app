@@ -8,7 +8,7 @@ import {
 import { FilterValue } from '@shared/filters/filter-value.model';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import { Challenge, ChallengeService, DateRange } from '@sage-bionetworks/rocc-client-angular';
-import { challengeStatusFilterValues } from './challenge-search-filters-values';
+import { challengeStartDateRangeFilterValues, challengeStatusFilterValues } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
 import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
@@ -45,6 +45,7 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   limit = 10;
   offset = 0;
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
+  challengeStartDateRangeFilterValues: FilterValue[] = challengeStartDateRangeFilterValues;
   searchResultsCount = 0;
 
   constructor(

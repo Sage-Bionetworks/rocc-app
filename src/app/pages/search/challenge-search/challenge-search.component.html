@@ -3,6 +3,10 @@
     <h3>Status</h3>
     <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
     </sage-checkbox-filter>
+
+    <h3>Start Date</h3>
+    <sage-date-range-filter name="startDateRange"
+      [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
   </div>
   <div class="search-content-container">
     <mat-nav-list class="challenge-search-results">
