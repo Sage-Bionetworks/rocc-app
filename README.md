@@ -4,13 +4,11 @@
 
 TBA
 
-
 ## Specification
 
-- ROCC app version: 0.4.0
-- ROCC schemas version: 0.4.0
+- ROCC app version: 0.5.0
+- ROCC schemas version: 0.5.0
 - Docker image: [sagebionetworks/rocc-app]
-
 
 ## Usage
 
