@@ -4,6 +4,7 @@ import {
   OnInit,
   QueryList,
   ViewChildren,
+  Inject,
 } from '@angular/core';
 import { FilterValue } from '@shared/filters/filter-value.model';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
@@ -30,7 +31,9 @@ import deepEqual from 'deep-equal';
 import { BehaviorSubject } from 'rxjs';
 import { ButtonToggleFilterValue } from '@app/shared/filters/button-toggle-filter/button-toggle-filter-value';
 import assign from 'lodash-es/assign';
-
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
+import { AuthService } from '@shared/auth/auth.service';
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
   offset: 0,
@@ -63,16 +66,23 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
-
+  loggedIn = false;
   constructor(
+    private router: Router,
+    private authService: AuthService,
     private pageTitleService: PageTitleService,
     private challengeService: ChallengeService,
-    private challengePlatformService: ChallengePlatformService
+    private challengePlatformService: ChallengePlatformService,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
     this.listChallengePlatforms();
+
+    this.authService
+      .isSignedIn()
+      .subscribe((loggedIn) => (this.loggedIn = loggedIn));
   }
 
   ngAfterViewInit(): void {
@@ -170,5 +180,14 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
       limit: this.limit,
     });
     this.query.next(query);
+  }
+
+  onClick(url: string): void {
+    console.log(url);
+    // ignore click if text is selected
+    if (!this.document.getSelection()!.toString()) {
+      this.router.navigateByUrl(url);
+      console.log(url + 'hah');
+    }
   }
 }

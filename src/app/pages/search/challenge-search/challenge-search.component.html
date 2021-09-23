@@ -23,7 +23,7 @@
 
     <mat-nav-list class="challenge-search-results">
       <rocc-challenge-card *ngFor="let challenge of challenges"
-        [challenge]="challenge" [routerLink]="['/' + challenge.fullName]">
+        [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
       </rocc-challenge-card>
     </mat-nav-list>
 

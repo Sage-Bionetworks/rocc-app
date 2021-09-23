@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import {
-  Organization,
-  ChallengeService,
   Challenge,
+  ChallengeService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
-
+import { AuthService } from '@shared/auth/auth.service';
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
@@ -16,11 +17,15 @@ import { map, switchMap, tap } from 'rxjs/operators';
 export class OrgChallengesComponent implements OnInit {
   // org!: Organization | undefined;
   accountName: string = '';
+  loggedIn!: boolean;
   challenges$!: Observable<Challenge[] | []>;
 
   constructor(
+    private router: Router,
+    private authService: AuthService,
     private orgDataService: OrgDataService,
-    private challengeService: ChallengeService
+    private challengeService: ChallengeService,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
@@ -31,5 +36,17 @@ export class OrgChallengesComponent implements OnInit {
       ),
       map((page) => page.challenges)
     );
+
+    this.authService
+      .isSignedIn()
+      .subscribe((loggedIn) => (this.loggedIn = loggedIn));
+  }
+
+  onClick(url: string): void {
+    // ignore click if text is selected
+    console.log(url);
+    if (!this.document.getSelection()!.toString()) {
+      this.router.navigateByUrl(url);
+    }
   }
 }

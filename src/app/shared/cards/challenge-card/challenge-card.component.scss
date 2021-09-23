@@ -2,10 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100px;
+  height: 11.5em;
   margin-bottom: 20px;
-  padding: 30px 20px 15px 20px;
+  padding: 2em 1.5em 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
 
@@ -14,46 +13,90 @@
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
       0 4px 15px 0 rgba(0, 0, 0, 0.15);
   }
+}
+
+.mat-card-header {
+  height: 2em;
+  margin-left: -16px;
+  margin-bottom: 0.5em;
 
   .mat-card-title {
-    margin-left: -16px;
     font-size: 2em;
+  }
+
+  .mat-icon {
+    font-size: 2em;
+
+    &.rocc-challenge-favorite-icon {
+      color: #f1d07e;
+    }
   }
 }
 
-// .rocc-challenge-tags-container {
-//   display: inline-flex;
+.rocc-challenge-topics-container {
+  display: inline-flex;
+  margin-bottom: 0.5em;
 
-//   .rocc-challenge-tags {
-//     margin: 8px;
-//     background-color: #e55a17; // #8e92de
-//     color: #fff;
-//     border-radius: 20px;
-//   }
-// }
+  a {
+    margin-right: 8px;
+    color: #8e92de; // #e55a17
+    font-size: 1em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
 
 .mat-card-content {
-  position: relative;
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 3.5fr 1fr;
   grid-gap: 2em;
   align-items: center;
+  height: 100%;
   font-size: 1.2em;
 
   .rocc-challenge-left-content-container {
     justify-self: left;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     height: 100%;
-    width: 100%;
+
+    .rocc-challenge-descriptions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      margin-bottom: 0.5em;
+    }
+
+    .rocc-challenge-stats-container {
+      display: flex;
+      margin-top: auto;
+
+      div {
+        display: inline-flex;
+        align-items: center;
+
+        strong {
+          margin-left: 5px;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 
   .rocc-challenge-dates-container {
+    justify-self: right;
     display: flex;
     flex-direction: column;
-    justify-self: right;
+    justify-content: flex-end;
     width: 100%;
-    min-height: 60px;
-    padding-top: 20px;
+    height: 100%;
+    min-height: 4em;
     text-align: right;
 
     span {
@@ -63,23 +106,6 @@
     b {
       text-align: right;
       padding-right: 10px;
-    }
-  }
-}
-
-.rocc-challenge-stats-container {
-  position: absolute;
-  display: flex;
-  left: 0;
-  bottom: -5px;
-
-  div {
-    display: inline-flex;
-    align-items: center;
-
-    strong {
-      margin-left: 5px;
-      margin-right: 10px;
     }
   }
 }
@@ -95,11 +121,12 @@
 .rocc-challenge-completed {
   color: grey;
 }
+
 .rocc-challenge-platform-logo {
   position: absolute;
-  right: 40px;
-  top: 10px;
-  height: 60px;
-  width: 60px;
+  right: 1.5em;
+  top: 2em;
+  height: 4em;
+  width: 4em;
   z-index: 2;
 }

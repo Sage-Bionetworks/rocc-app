@@ -3,32 +3,41 @@
     src="{{platform.avatarUrl}}" alt="platform-logo"> 
   <mat-card-header>
     <mat-card-title>{{challenge.displayName}}</mat-card-title>
+    <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
+      <mat-icon mat-card-avatar *ngIf="starred" class="rocc-challenge-favorite-icon">
+        star
+      </mat-icon>
+      <mat-icon  mat-card-avatar *ngIf="!starred">
+        star_border
+      </mat-icon>
+    </button>
   </mat-card-header>
   <mat-card-content>
-    <!-- <div class="rocc-challenge-tags-container">
-      <button mat-raised-button class="rocc-challenge-tags" *ngFor="let tag of challenge.tagIds">
-        {{tag}}
-      </button>
-    </div> -->
     <div class="rocc-challenge-left-content-container">
+      <div class="rocc-challenge-topics-container">
+        <a href="" class="rocc-challenge-topic" *ngFor="let topic of challenge.topics">
+          #{{topic}}
+        </a>
+      </div>
       <div class="rocc-challenge-descriptions">{{challenge.description}}</div>
-      <mat-card-actions>
       <div class="rocc-challenge-stats-container">
         <div>
           <mat-icon class="rocc-challenge-{{challenge.status}}">circle</mat-icon> 
           <strong>{{challenge.status}}</strong>
         </div>
-        <div>
+        <div *ngIf="!!numberSubmissions" matTooltip="number of submissions">
           <mat-icon>trending_up</mat-icon>: 
           <strong>{{numberSubmissions}}</strong>
         </div>
-        <div>
+        <div *ngIf="!!numberRegistrants" matTooltip="number of registrants">
           <mat-icon>face</mat-icon>: 
           <strong>{{numberRegistrants}}</strong>
         </div>
-        <!-- <div class="rocc-challenge-tags-container">lots of tags</div> -->
+        <div matTooltip="number of stargazers">
+          <mat-icon>auto_awesome</mat-icon>: 
+          <strong>{{numberStarred}}</strong>
+        </div>
       </div>
-    </mat-card-actions>
     </div>
     <div class="rocc-challenge-dates-container">
       <span *ngIf="!!challenge.startDate">
