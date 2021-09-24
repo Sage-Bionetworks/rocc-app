@@ -25,7 +25,7 @@ export class OrgPeopleComponent implements OnInit {
   ngOnInit(): void {
     this.persons$ = this.orgDataService.getOrg().pipe(
       switchMap((org) =>
-        this.orgMembershipService.listOrgMemberships(50, 0, org!.id, undefined)
+        this.orgMembershipService.listOrgMemberships(20, 0, org!.id, undefined)
       ),
       switchMap((page) => {
         return forkJoin(
