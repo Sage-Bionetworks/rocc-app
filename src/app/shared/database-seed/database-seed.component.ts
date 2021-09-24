@@ -440,7 +440,7 @@ export class DatabaseSeedComponent implements OnInit {
                   })
                 )
             ),
-            concurrency
+            1
           )
         )
       );
