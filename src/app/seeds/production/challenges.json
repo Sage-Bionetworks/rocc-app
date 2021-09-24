@@ -1,7 +1,7 @@
 {
   "challenges": [
     {
-      "id": "614dc8340d2e64c3302dd7f9",
+      "id": "614e0a04f480ac6f7562a026",
       "name": "network-topology-and-parameter-inference",
       "displayName": "Network Topology and Parameter Inference",
       "description": "This challenge is an awesome challenge.",
@@ -9,8 +9,8 @@
       "endDate": "2012-10-01",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2821735",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "network-topology",
         "parameter-inference"
@@ -20,7 +20,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd7fa",
+      "id": "614e0a04f480ac6f7562a027",
       "name": "breast-cancer-prognosis",
       "displayName": "Breast Cancer Prognosis",
       "description": "This challenge is an awesome challenge.",
@@ -28,8 +28,8 @@
       "endDate": "2012-10-15",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2813426",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "breast",
         "cancer"
@@ -39,7 +39,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd7fb",
+      "id": "614e0a04f480ac6f7562a028",
       "name": "phil-bowen-als-prediction-prize4life",
       "displayName": "Phil Bowen ALS Prediction Prize4Life",
       "description": "This challenge is an awesome challenge.",
@@ -47,8 +47,8 @@
       "endDate": "2012-10-01",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2826267",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "als"
       ],
@@ -57,7 +57,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd7fc",
+      "id": "614e0a04f480ac6f7562a029",
       "name": "drug-sensitivity-and-drug-synergy-prediction",
       "displayName": "Drug Sensitivity and Drug Synergy Prediction",
       "description": "This challenge is an awesome challenge.",
@@ -65,8 +65,8 @@
       "endDate": "2012-10-01",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2785778",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "drug",
         "drug-sensitivity",
@@ -77,7 +77,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd7fd",
+      "id": "614e0a04f480ac6f7562a02a",
       "name": "niehs-ncats-unc-toxicogenetics",
       "displayName": "NIEHS-NCATS-UNC Toxicogenetics",
       "description": "This challenge is an awesome challenge.",
@@ -85,8 +85,8 @@
       "endDate": "2013-09-15",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn1761567",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "drug",
         "toxicogenenetics"
@@ -96,7 +96,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd7fe",
+      "id": "614e0a04f480ac6f7562a02b",
       "name": "whole-cell-parameter-estimation",
       "displayName": "Whole-Cell Parameter Estimation",
       "description": "This challenge is an awesome challenge.",
@@ -104,8 +104,8 @@
       "endDate": "2013-09-23",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn1876068",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "whole-cell-parameter"
       ],
@@ -114,7 +114,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd7ff",
+      "id": "614e0a04f480ac6f7562a02c",
       "name": "hpn-dream-breast-cancer-network-inference",
       "displayName": "HPN-DREAM Breast Cancer Network Inference",
       "description": "This challenge is an awesome challenge.",
@@ -122,8 +122,8 @@
       "endDate": "2013-09-16",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn1720047",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "breast-cancer",
@@ -135,7 +135,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd800",
+      "id": "614e0a04f480ac6f7562a02d",
       "name": "rheumatoid-arthritis-responder",
       "displayName": "Rheumatoid Arthritis Responder",
       "description": "This challenge is an awesome challenge.",
@@ -143,8 +143,8 @@
       "endDate": "2014-06-04",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn1734172",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "arthritis",
         "rheumatoid-arthritis"
@@ -154,7 +154,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd801",
+      "id": "614e0a04f480ac6f7562a02e",
       "name": "smc-dna",
       "displayName": "SMC-DNA",
       "description": "This challenge is an awesome challenge.",
@@ -162,8 +162,8 @@
       "endDate": "2016-04-22",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn312572",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "mutation-calling"
@@ -173,7 +173,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd802",
+      "id": "614e0a04f480ac6f7562a02f",
       "name": "acute-myeloid-leukemia-outcome-prediction",
       "displayName": "Acute Myeloid Leukemia Outcome Prediction",
       "description": "This challenge is an awesome challenge.",
@@ -181,8 +181,8 @@
       "endDate": "2014-09-15",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2455683",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "aml"
@@ -192,7 +192,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd803",
+      "id": "614e0a04f480ac6f7562a030",
       "name": "broad-dream-gene-essentiality-prediction",
       "displayName": "Broad-DREAM Gene Essentiality Prediction",
       "description": "This challenge is an awesome challenge.",
@@ -200,8 +200,8 @@
       "endDate": "2014-09-29",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2384331",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "targeted-cancer-therapy"
@@ -211,7 +211,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd804",
+      "id": "614e0a04f480ac6f7562a031",
       "name": "alzheimer-s-disease-big-data",
       "displayName": "Alzheimer's Disease Big Data",
       "description": "This challenge is an awesome challenge.",
@@ -219,8 +219,8 @@
       "endDate": "2014-10-17",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2290704",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "alzheimers"
       ],
@@ -229,7 +229,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd805",
+      "id": "614e0a04f480ac6f7562a032",
       "name": "olfaction-prediction",
       "displayName": "Olfaction Prediction",
       "description": "This challenge is an awesome challenge.",
@@ -237,8 +237,8 @@
       "endDate": "2015-05-01",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2811262",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "olfaction"
       ],
@@ -247,7 +247,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd806",
+      "id": "614e0a04f480ac6f7562a033",
       "name": "prostate-cancer",
       "displayName": "Prostate Cancer",
       "description": "This challenge is an awesome challenge.",
@@ -255,8 +255,8 @@
       "endDate": "2015-07-27",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2813558",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "prostate-cancer"
@@ -266,7 +266,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd807",
+      "id": "614e0a04f480ac6f7562a034",
       "name": "als-stratification-prize4life",
       "displayName": "ALS Stratification Prize4Life",
       "description": "This challenge is an awesome challenge.",
@@ -274,8 +274,8 @@
       "endDate": "2015-10-04",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2873386",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "als"
       ],
@@ -284,7 +284,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd808",
+      "id": "614e0a04f480ac6f7562a035",
       "name": "astrazeneca-sanger-drug-combination-prediction",
       "displayName": "AstraZeneca-Sanger Drug Combination Prediction",
       "description": "This challenge is an awesome challenge.",
@@ -292,8 +292,8 @@
       "endDate": "2016-03-14",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4231880",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "drug",
         "drug-synergy"
@@ -303,7 +303,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd809",
+      "id": "614e0a04f480ac6f7562a036",
       "name": "smc-dna-meta",
       "displayName": "SMC-DNA Meta",
       "description": "This challenge is an awesome challenge.",
@@ -311,8 +311,8 @@
       "endDate": "2016-04-10",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4588939",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "somatic-mutation-calling"
@@ -322,7 +322,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd80a",
+      "id": "614e0a04f480ac6f7562a037",
       "name": "smc-het",
       "displayName": "SMC-Het",
       "description": "This challenge is an awesome challenge.",
@@ -330,8 +330,8 @@
       "endDate": "2016-06-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2813581",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "somatic-mutation-calling",
@@ -342,7 +342,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd80b",
+      "id": "614e0a04f480ac6f7562a038",
       "name": "respiratory-viral",
       "displayName": "Respiratory Viral",
       "description": "This challenge is an awesome challenge.",
@@ -350,8 +350,8 @@
       "endDate": "2016-09-28",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn5647810",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "viral",
         "respiratory-viral"
@@ -361,7 +361,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd80c",
+      "id": "614e0a04f480ac6f7562a039",
       "name": "disease-module-identification",
       "displayName": "Disease Module Identification",
       "description": "This challenge is an awesome challenge.",
@@ -369,8 +369,8 @@
       "endDate": "2016-10-01",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn6156761",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "module-identification"
       ],
@@ -379,7 +379,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd80d",
+      "id": "614e0a04f480ac6f7562a03a",
       "name": "encode",
       "displayName": "ENCODE",
       "description": "This challenge is an awesome challenge.",
@@ -387,8 +387,8 @@
       "endDate": "2017-01-11",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn6131484",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "transcription-factor"
       ],
@@ -397,7 +397,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd80e",
+      "id": "614e0a04f480ac6f7562a03b",
       "name": "idea",
       "displayName": "Idea",
       "description": "This challenge is an awesome challenge.",
@@ -405,8 +405,8 @@
       "endDate": "2017-04-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn5659209",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "proposals",
         "human-health"
@@ -416,7 +416,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd80f",
+      "id": "614e0a04f480ac6f7562a03c",
       "name": "smc-rna",
       "displayName": "SMC-RNA",
       "description": "This challenge is an awesome challenge.",
@@ -424,8 +424,8 @@
       "endDate": "2017-05-02",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn2813589",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "somatic-mutation-calling"
@@ -435,7 +435,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd810",
+      "id": "614e0a04f480ac6f7562a03d",
       "name": "digital-mammography",
       "displayName": "Digital Mammography",
       "description": "This challenge is an awesome challenge.",
@@ -443,8 +443,8 @@
       "endDate": "2017-05-16",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn4224222",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "breast-cancer",
@@ -455,7 +455,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd811",
+      "id": "614e0a04f480ac6f7562a03e",
       "name": "multiple-myeloma",
       "displayName": "Multiple Myeloma",
       "description": "This challenge is an awesome challenge.",
@@ -463,8 +463,8 @@
       "endDate": "2017-11-08",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn6187098",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "myeloma"
@@ -474,7 +474,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd812",
+      "id": "614e0a04f480ac6f7562a03f",
       "name": "ga4gh-dream-workflow-execution",
       "displayName": "GA4GH/DREAM Workflow Execution",
       "description": "This challenge is an awesome challenge.",
@@ -482,8 +482,8 @@
       "endDate": "2017-12-31",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8507133",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "workflow-execution"
       ],
@@ -492,7 +492,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd813",
+      "id": "614e0a04f480ac6f7562a040",
       "name": "parkinsons-disease-digital-biomarker",
       "displayName": "Parkinsons Disease Digital Biomarker",
       "description": "This challenge is an awesome challenge.",
@@ -500,8 +500,8 @@
       "endDate": "2017-11-10",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8717496",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "parkinsons"
       ],
@@ -510,7 +510,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd814",
+      "id": "614e0a04f480ac6f7562a041",
       "name": "nci-cptac-proteogenomics",
       "displayName": "NCI-CPTAC Proteogenomics",
       "description": "This challenge is an awesome challenge.",
@@ -518,8 +518,8 @@
       "endDate": "2017-11-20",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8228304",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "proteogenomics"
       ],
@@ -528,7 +528,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd815",
+      "id": "614e0a04f480ac6f7562a042",
       "name": "multi-targeting-drug",
       "displayName": "Multi-Targeting Drug",
       "description": "This challenge is an awesome challenge.",
@@ -536,8 +536,8 @@
       "endDate": "2018-02-26",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn8404040",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "drug",
         "multi-targeting-drug"
@@ -547,7 +547,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd816",
+      "id": "614e0a04f480ac6f7562a043",
       "name": "single-cell-transcriptomics",
       "displayName": "Single Cell Transcriptomics",
       "description": "This challenge is an awesome challenge.",
@@ -555,8 +555,8 @@
       "endDate": "2018-11-21",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn15665609",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "transcriptomics",
         "single-cell"
@@ -566,7 +566,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd817",
+      "id": "614e0a04f480ac6f7562a044",
       "name": "idg-drug-kinase-binding",
       "displayName": "IDG Drug-Kinase Binding",
       "description": "This challenge is an awesome challenge.",
@@ -574,8 +574,8 @@
       "endDate": "2019-04-18",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn15667962",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "drug",
         "drug-kinase-binding"
@@ -585,7 +585,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd818",
+      "id": "614e0a04f480ac6f7562a045",
       "name": "malaria",
       "displayName": "Malaria",
       "description": "This challenge is an awesome challenge.",
@@ -593,8 +593,8 @@
       "endDate": "2019-08-15",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn16924919",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "malaria"
       ],
@@ -603,7 +603,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd819",
+      "id": "614e0a04f480ac6f7562a046",
       "name": "preterm-birth-prediction-challenge-transcriptomics",
       "displayName": "Preterm Birth Prediction Challenge: Transcriptomics",
       "description": "This challenge is an awesome challenge.",
@@ -611,8 +611,8 @@
       "endDate": "2019-12-05",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18380862",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "preterm-birth"
       ],
@@ -621,7 +621,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd81a",
+      "id": "614e0a04f480ac6f7562a047",
       "name": "single-cell-signaling-in-breast-cancer",
       "displayName": "Single Cell Signaling in Breast Cancer",
       "description": "This challenge is an awesome challenge.",
@@ -629,8 +629,8 @@
       "endDate": "2019-11-15",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn20366914",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "single-cell",
         "signaling",
@@ -642,7 +642,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd81b",
+      "id": "614e0a04f480ac6f7562a048",
       "name": "ehr-mortality-prediction",
       "displayName": "EHR Mortality Prediction",
       "description": "This challenge is an awesome challenge.",
@@ -650,8 +650,8 @@
       "endDate": "2020-01-23",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18405991",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "ehr",
         "nlp"
@@ -661,7 +661,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd81c",
+      "id": "614e0a04f480ac6f7562a049",
       "name": "allen-institute-cell-lineage-reconstruction",
       "displayName": "Allen Institute Cell Lineage Reconstruction",
       "description": "This challenge is an awesome challenge.",
@@ -669,8 +669,8 @@
       "endDate": "2020-02-06",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn20692755",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "crispr",
         "cell-lineage"
@@ -680,7 +680,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd81d",
+      "id": "614e0a04f480ac6f7562a04a",
       "name": "tumor-deconvolution",
       "displayName": "Tumor Deconvolution",
       "description": "This challenge is an awesome challenge.",
@@ -688,8 +688,8 @@
       "endDate": "2020-04-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn15589870",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "tumor-deconvolution"
@@ -699,7 +699,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd81e",
+      "id": "614e0a04f480ac6f7562a04b",
       "name": "ctd2-pancancer-drug-activity",
       "displayName": "CTD2 Pancancer Drug Activity",
       "description": "This challenge is an awesome challenge.",
@@ -707,8 +707,8 @@
       "endDate": "2020-02-13",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn20968331",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "panacea",
         "drug",
@@ -719,7 +719,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd81f",
+      "id": "614e0a04f480ac6f7562a04c",
       "name": "ctd2-beataml",
       "displayName": "CTD2 BeatAML",
       "description": "This challenge is an awesome challenge.",
@@ -727,8 +727,8 @@
       "endDate": "2020-04-28",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn20940518",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "aml"
@@ -738,7 +738,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd820",
+      "id": "614e0a04f480ac6f7562a04d",
       "name": "metadata-automation",
       "displayName": "Metadata Automation",
       "description": "This challenge is an awesome challenge.",
@@ -746,8 +746,8 @@
       "endDate": "2020-06-02",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18065891",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "metadata"
       ],
@@ -756,7 +756,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd821",
+      "id": "614e0a04f480ac6f7562a04e",
       "name": "automated-scoring-of-radiographic-joint-damage",
       "displayName": "Automated Scoring of Radiographic Joint Damage",
       "description": "This challenge is an awesome challenge.",
@@ -764,8 +764,8 @@
       "endDate": "2020-05-21",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn20545111",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "arthritis",
         "rheumatoid-arthritis"
@@ -775,7 +775,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd822",
+      "id": "614e0a04f480ac6f7562a04f",
       "name": "beat-pd",
       "displayName": "BEAT-PD",
       "description": "This challenge is an awesome challenge.",
@@ -783,8 +783,8 @@
       "endDate": "2020-05-13",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn20825169",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "parkinsons"
       ],
@@ -793,7 +793,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd823",
+      "id": "614e0a04f480ac6f7562a050",
       "name": "ctd2-pancancer-chemosensitivity",
       "displayName": "CTD2 Pancancer Chemosensitivity",
       "description": "This challenge is an awesome challenge.",
@@ -801,8 +801,8 @@
       "endDate": "2020-07-27",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn21763589",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "panacea",
         "drug",
@@ -813,15 +813,15 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd824",
+      "id": "614e0a04f480ac6f7562a051",
       "name": "ehr-covid-19",
       "displayName": "EHR COVID-19",
       "description": "This challenge is an awesome challenge.",
       "startDate": "2020-04-30",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn21849255",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "covid-19",
         "ehr",
@@ -832,7 +832,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd825",
+      "id": "614e0a04f480ac6f7562a052",
       "name": "anti-pd1-response-prediction",
       "displayName": "Anti-PD1 Response Prediction",
       "description": "This challenge is an awesome challenge.",
@@ -840,8 +840,8 @@
       "endDate": "2021-02-25",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18404605",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "cancer",
         "drug",
@@ -852,14 +852,14 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd826",
+      "id": "614e0a04f480ac6f7562a053",
       "name": "cancer-data-registry-nlp",
       "displayName": "Cancer Data Registry NLP",
       "description": "This challenge is an awesome challenge.",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn18361217",
       "status": "upcoming",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "ehr",
         "nlp"
@@ -869,7 +869,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd827",
+      "id": "614e0a04f480ac6f7562a054",
       "name": "international-brain-tumor-segmentation",
       "displayName": "International Brain Tumor Segmentation",
       "description": "This challenge is an awesome challenge.",
@@ -877,8 +877,8 @@
       "endDate": "2021-10-15",
       "websiteUrl": "https://www.synapse.org/#!Synapse:syn25829067",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd533",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d60",
       "topics": [
         "brats",
         "brain-tumor",
@@ -889,7 +889,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd828",
+      "id": "614e0a04f480ac6f7562a055",
       "name": "cagi5-regulation-saturation",
       "displayName": "CAGI5: Regulation saturation",
       "description": "This challenge is an awesome challenge.",
@@ -897,8 +897,8 @@
       "endDate": "2018-05-03",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-regulation-saturation.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "mutation",
         "single-nucleotide-variants",
@@ -912,7 +912,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd829",
+      "id": "614e0a04f480ac6f7562a056",
       "name": "cagi5-calm1",
       "displayName": "CAGI5: CALM1",
       "description": "This challenge is an awesome challenge.",
@@ -920,8 +920,8 @@
       "endDate": "2017-12-20",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-calm1.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -933,7 +933,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd82a",
+      "id": "614e0a04f480ac6f7562a057",
       "name": "cagi5-pcm1",
       "displayName": "CAGI5: PCM1",
       "description": "This challenge is an awesome challenge.",
@@ -941,8 +941,8 @@
       "endDate": "2018-04-19",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-pcm1.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -954,7 +954,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd82b",
+      "id": "614e0a04f480ac6f7562a058",
       "name": "cagi5-frataxin",
       "displayName": "CAGI5: Frataxin",
       "description": "This challenge is an awesome challenge.",
@@ -962,8 +962,8 @@
       "endDate": "2018-04-18",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-frataxin.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants"
@@ -973,7 +973,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd82c",
+      "id": "614e0a04f480ac6f7562a059",
       "name": "cagi5-tpmt-and-p10",
       "displayName": "CAGI5: TPMT and p10",
       "description": "This challenge is an awesome challenge.",
@@ -981,8 +981,8 @@
       "endDate": "2017-12-01",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-tpmt.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -994,7 +994,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd82d",
+      "id": "614e0a04f480ac6f7562a05a",
       "name": "cagi5-annotate-all-nonsynonymous-variants",
       "displayName": "CAGI5: Annotate all nonsynonymous variants",
       "description": "This challenge is an awesome challenge.",
@@ -1002,8 +1002,8 @@
       "endDate": "2018-05-09",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-annotate-all-missense.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "nssnvs",
@@ -1014,7 +1014,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd82e",
+      "id": "614e0a04f480ac6f7562a05b",
       "name": "cagi5-gaa",
       "displayName": "CAGI5: GAA",
       "description": "This challenge is an awesome challenge.",
@@ -1022,8 +1022,8 @@
       "endDate": "2018-04-25",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-gaa.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "rare-disease",
         "enzyme",
@@ -1036,7 +1036,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd82f",
+      "id": "614e0a04f480ac6f7562a05c",
       "name": "cagi5-chek2",
       "displayName": "CAGI5: CHEK2",
       "description": "This challenge is an awesome challenge.",
@@ -1044,8 +1044,8 @@
       "endDate": "2018-04-24",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-chek2.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "breast-cancer",
         "variants",
@@ -1056,7 +1056,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd830",
+      "id": "614e0a04f480ac6f7562a05d",
       "name": "cagi5-enigma",
       "displayName": "CAGI5: ENIGMA",
       "description": "This challenge is an awesome challenge.",
@@ -1064,8 +1064,8 @@
       "endDate": "2018-05-01",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-enigma.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "breast-cancer",
         "variants",
@@ -1076,7 +1076,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd831",
+      "id": "614e0a04f480ac6f7562a05e",
       "name": "cagi5-mapsy",
       "displayName": "CAGI5: MaPSy",
       "description": "This challenge is an awesome challenge.",
@@ -1084,8 +1084,8 @@
       "endDate": "2018-05-07",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-mapsy.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "splicing",
         "mapsy",
@@ -1096,7 +1096,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd832",
+      "id": "614e0a04f480ac6f7562a05f",
       "name": "cagi5-vex-seq",
       "displayName": "CAGI5: Vex-seq",
       "description": "This challenge is an awesome challenge.",
@@ -1104,8 +1104,8 @@
       "endDate": "2018-05-02",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-vex-seq.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "splicing",
         "variant-exon-sequencing",
@@ -1116,7 +1116,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd833",
+      "id": "614e0a04f480ac6f7562a060",
       "name": "cagi5-sickkids-clinical-genomes",
       "displayName": "CAGI5: SickKids clinical genomes",
       "description": "This challenge is an awesome challenge.",
@@ -1124,8 +1124,8 @@
       "endDate": "2018-04-26",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-sickkids5.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "clinical-genomes",
         "variants"
@@ -1135,7 +1135,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd834",
+      "id": "614e0a04f480ac6f7562a061",
       "name": "cagi5-id-panel",
       "displayName": "CAGI5: ID Panel",
       "description": "This challenge is an awesome challenge.",
@@ -1143,8 +1143,8 @@
       "endDate": "2018-04-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-intellectual-disability.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "clinical-genomes",
         "variants"
@@ -1154,7 +1154,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd835",
+      "id": "614e0a04f480ac6f7562a062",
       "name": "cagi5-clotting-disease-exomes",
       "displayName": "CAGI5: Clotting disease exomes",
       "description": "This challenge is an awesome challenge.",
@@ -1162,8 +1162,8 @@
       "endDate": "2018-04-28",
       "websiteUrl": "https://genomeinterpretation.org/cagi5-clotting-disease.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "clotting-disease",
         "exome",
@@ -1175,7 +1175,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd836",
+      "id": "614e0a04f480ac6f7562a063",
       "name": "cagi6-rare-genomes-project",
       "displayName": "CAGI6: Rare Genomes Project",
       "description": "This challenge is an awesome challenge.",
@@ -1183,8 +1183,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-rgp.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "rare-disease",
         "clinical",
@@ -1195,7 +1195,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd837",
+      "id": "614e0a04f480ac6f7562a064",
       "name": "cagi6-intellectual-disability-panel",
       "displayName": "CAGI6: Intellectual Disability Panel",
       "description": "This challenge is an awesome challenge.",
@@ -1203,8 +1203,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-id-panel.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "rare-disease",
         "clinical",
@@ -1215,7 +1215,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd838",
+      "id": "614e0a04f480ac6f7562a065",
       "name": "cagi6-sickkids-clinical-genomes-and-transcriptomes",
       "displayName": "CAGI6: SickKids clinical genomes and transcriptomes",
       "description": "This challenge is an awesome challenge.",
@@ -1223,8 +1223,8 @@
       "endDate": "2021-10-15",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-sickkids.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "rare-disease",
         "clinical",
@@ -1235,7 +1235,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd839",
+      "id": "614e0a04f480ac6f7562a066",
       "name": "cagi6-polygenic-risk-scores",
       "displayName": "CAGI6: Polygenic Risk Scores",
       "description": "This challenge is an awesome challenge.",
@@ -1243,8 +1243,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-prs.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "polygenic-diseases"
       ],
@@ -1253,7 +1253,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd83a",
+      "id": "614e0a04f480ac6f7562a067",
       "name": "cagi6-hmbs",
       "displayName": "CAGI6: HMBS",
       "description": "This challenge is an awesome challenge.",
@@ -1261,8 +1261,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-hmbs.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -1274,7 +1274,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd83b",
+      "id": "614e0a04f480ac6f7562a068",
       "name": "cagi6-cam",
       "displayName": "CAGI6: CaM",
       "description": "This challenge is an awesome challenge.",
@@ -1282,8 +1282,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-cam.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -1295,7 +1295,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd83c",
+      "id": "614e0a04f480ac6f7562a069",
       "name": "cagi6-annotate-all-missense",
       "displayName": "CAGI6: Annotate All Missense",
       "description": "This challenge is an awesome challenge.",
@@ -1303,8 +1303,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-annotate-all-missense.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -1315,7 +1315,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd83d",
+      "id": "614e0a04f480ac6f7562a06a",
       "name": "cagi6-stk11",
       "displayName": "CAGI6: STK11",
       "description": "This challenge is an awesome challenge.",
@@ -1323,8 +1323,8 @@
       "endDate": "2021-09-01",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-stk11.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -1338,7 +1338,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd83e",
+      "id": "614e0a04f480ac6f7562a06b",
       "name": "cagi6-mapk1",
       "displayName": "CAGI6: MAPK1",
       "description": "This challenge is an awesome challenge.",
@@ -1346,8 +1346,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-mapk1.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -1360,7 +1360,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd83f",
+      "id": "614e0a04f480ac6f7562a06c",
       "name": "cagi6-mapk3",
       "displayName": "CAGI6: MAPK3",
       "description": "This challenge is an awesome challenge.",
@@ -1368,8 +1368,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-mapk3.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -1382,7 +1382,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd840",
+      "id": "614e0a04f480ac6f7562a06d",
       "name": "cagi6-mthfr",
       "displayName": "CAGI6: MTHFR",
       "description": "This challenge is an awesome challenge.",
@@ -1390,8 +1390,8 @@
       "endDate": "2021-06-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-mthfr.html",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "nonsynonymous-variants",
         "variants",
@@ -1403,15 +1403,15 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd841",
+      "id": "614e0a04f480ac6f7562a06e",
       "name": "cagi6-splicing-vus",
       "displayName": "CAGI6: Splicing VUS",
       "description": "This challenge is an awesome challenge.",
       "startDate": "2021-06-08",
       "endDate": "2021-09-30",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "splicing",
         "variants",
@@ -1424,7 +1424,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd842",
+      "id": "614e0a04f480ac6f7562a06f",
       "name": "cagi6-sherloc-clinical-classification",
       "displayName": "CAGI6: Sherloc clinical classification",
       "description": "This challenge is an awesome challenge.",
@@ -1432,8 +1432,8 @@
       "endDate": "2021-09-30",
       "websiteUrl": "https://genomeinterpretation.org/cagi6-invitae.html",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f0",
-      "ownerId": "614dc8330d2e64c3302dd52c",
+      "platformId": "614e0a04f480ac6f7562a01d",
+      "ownerId": "614e0a01f480ac6f75629d59",
       "topics": [
         "variants",
         "clinical"
@@ -1443,7 +1443,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd843",
+      "id": "614e0a04f480ac6f7562a070",
       "name": "cami-iia",
       "displayName": "CAMI IIa",
       "description": "This challenge is an awesome challenge.",
@@ -1451,8 +1451,8 @@
       "endDate": "2019-06-30",
       "websiteUrl": "https://www.microbiome-cosi.org/cami/cami/cami2",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f8",
-      "ownerId": "614dc8330d2e64c3302dd534",
+      "platformId": "614e0a04f480ac6f7562a025",
+      "ownerId": "614e0a01f480ac6f75629d61",
       "topics": [
         "shotgun-metagenomics",
         "taxonomic-binning",
@@ -1472,7 +1472,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd844",
+      "id": "614e0a04f480ac6f7562a071",
       "name": "cami-iib",
       "displayName": "CAMI IIb",
       "description": "This challenge is an awesome challenge.",
@@ -1480,8 +1480,8 @@
       "endDate": "2021-01-31",
       "websiteUrl": "https://www.microbiome-cosi.org/cami/cami/cami2",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f8",
-      "ownerId": "614dc8330d2e64c3302dd534",
+      "platformId": "614e0a04f480ac6f7562a025",
+      "ownerId": "614e0a01f480ac6f75629d61",
       "topics": [
         "shotgun-metagenomics",
         "taxonomic-binning",
@@ -1501,14 +1501,14 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd845",
+      "id": "614e0a04f480ac6f7562a072",
       "name": "camda18-metasub-forensics",
       "displayName": "CAMDA18: MetaSUB Forensics",
       "description": "This challenge is an awesome challenge.",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#metasub_forensics_challenge",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f1",
-      "ownerId": "614dc8330d2e64c3302dd52d",
+      "platformId": "614e0a04f480ac6f7562a01e",
+      "ownerId": "614e0a01f480ac6f75629d5a",
       "topics": [
         "metagenomics",
         "wgs",
@@ -1520,14 +1520,14 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd846",
+      "id": "614e0a04f480ac6f7562a073",
       "name": "camda18-cmap-drug-safety",
       "displayName": "CAMDA18: CMap Drug Safety",
       "description": "This challenge is an awesome challenge.",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#cmap_drug_safety_challenge",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f1",
-      "ownerId": "614dc8330d2e64c3302dd52d",
+      "platformId": "614e0a04f480ac6f7562a01e",
+      "ownerId": "614e0a01f480ac6f75629d5a",
       "topics": [
         "drug-discovery",
         "liver"
@@ -1537,14 +1537,14 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd847",
+      "id": "614e0a04f480ac6f7562a074",
       "name": "camda18-cancer-data-integration",
       "displayName": "CAMDA18: Cancer Data Integration",
       "description": "This challenge is an awesome challenge.",
       "websiteUrl": "http://camda2018.bioinf.jku.at/doku.php/contest_dataset#cancer_data_integration_challenge",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f1",
-      "ownerId": "614dc8330d2e64c3302dd52d",
+      "platformId": "614e0a04f480ac6f7562a01e",
+      "ownerId": "614e0a01f480ac6f75629d5a",
       "topics": [
         "rna-seq",
         "data-integration",
@@ -1556,7 +1556,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd848",
+      "id": "614e0a04f480ac6f7562a075",
       "name": "cafa-4",
       "displayName": "CAFA 4",
       "description": "This challenge is an awesome challenge.",
@@ -1564,8 +1564,8 @@
       "endDate": "2020-02-12",
       "websiteUrl": "https://www.biofunctionprediction.org/cafa/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f2",
-      "ownerId": "614dc8330d2e64c3302dd51b",
+      "platformId": "614e0a04f480ac6f7562a01f",
+      "ownerId": "614e0a01f480ac6f75629d48",
       "topics": [
         "protein-function",
         "gene-ontology"
@@ -1575,7 +1575,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd849",
+      "id": "614e0a04f480ac6f7562a076",
       "name": "casp13",
       "displayName": "CASP13",
       "description": "This challenge is an awesome challenge.",
@@ -1583,8 +1583,8 @@
       "endDate": "2018-08-20",
       "websiteUrl": "https://predictioncenter.org/casp13/index.cgi",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f3",
-      "ownerId": "614dc8330d2e64c3302dd52e",
+      "platformId": "614e0a04f480ac6f7562a020",
+      "ownerId": "614e0a01f480ac6f75629d5b",
       "topics": [
         "protein-structure",
         "modeling"
@@ -1594,7 +1594,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd84a",
+      "id": "614e0a04f480ac6f7562a077",
       "name": "casp14",
       "displayName": "CASP14",
       "description": "This challenge is an awesome challenge.",
@@ -1602,8 +1602,8 @@
       "endDate": "2020-09-07",
       "websiteUrl": "https://predictioncenter.org/casp14/index.cgi",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f3",
-      "ownerId": "614dc8330d2e64c3302dd52e",
+      "platformId": "614e0a04f480ac6f7562a020",
+      "ownerId": "614e0a01f480ac6f75629d5b",
       "topics": [
         "protein-structure",
         "modeling"
@@ -1613,7 +1613,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd84b",
+      "id": "614e0a04f480ac6f7562a078",
       "name": "cfsan-pathogen-detection",
       "displayName": "CFSAN Pathogen Detection",
       "description": "This challenge is an awesome challenge.",
@@ -1621,8 +1621,8 @@
       "endDate": "2018-04-26",
       "websiteUrl": "https://precision.fda.gov/challenges/2",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "pathogens",
         "outbreak",
@@ -1637,7 +1637,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd84c",
+      "id": "614e0a04f480ac6f7562a079",
       "name": "cdrh-biothreat",
       "displayName": "CDRH Biothreat",
       "description": "This challenge is an awesome challenge.",
@@ -1645,8 +1645,8 @@
       "endDate": "2018-10-18",
       "websiteUrl": "https://precision.fda.gov/challenges/3",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "infectious-diseases",
         "microbe",
@@ -1657,7 +1657,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd84d",
+      "id": "614e0a04f480ac6f7562a07a",
       "name": "multi-omics-enabled-sample-mislabeling-correction-1",
       "displayName": "Multi-omics Enabled Sample Mislabeling Correction 1",
       "description": "This challenge is an awesome challenge.",
@@ -1665,8 +1665,8 @@
       "endDate": "2018-11-04",
       "websiteUrl": "https://precision.fda.gov/challenges/4",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "tcga",
         "cptac",
@@ -1678,7 +1678,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd84e",
+      "id": "614e0a04f480ac6f7562a07b",
       "name": "multi-omics-enabled-sample-mislabeling-correction-2",
       "displayName": "Multi-omics Enabled Sample Mislabeling Correction 2",
       "description": "This challenge is an awesome challenge.",
@@ -1686,8 +1686,8 @@
       "endDate": "2018-12-19",
       "websiteUrl": "https://precision.fda.gov/challenges/5/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "tcga",
         "cptac",
@@ -1699,7 +1699,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd84f",
+      "id": "614e0a04f480ac6f7562a07c",
       "name": "biocompute-object-app-a-thon",
       "displayName": "BioCompute Object  App-a-thon",
       "description": "This challenge is an awesome challenge.",
@@ -1707,8 +1707,8 @@
       "endDate": "2019-10-18",
       "websiteUrl": "https://precision.fda.gov/challenges/7/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "clinical",
         "hts",
@@ -1720,7 +1720,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd850",
+      "id": "614e0a04f480ac6f7562a07d",
       "name": "brain-cancer-predictive-modeling-and-biomarker-discovery",
       "displayName": "Brain Cancer Predictive Modeling and Biomarker Discovery",
       "description": "This challenge is an awesome challenge.",
@@ -1728,8 +1728,8 @@
       "endDate": "2020-02-14",
       "websiteUrl": "https://precision.fda.gov/challenges/8/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "brain-cancer",
         "idh",
@@ -1742,7 +1742,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd851",
+      "id": "614e0a04f480ac6f7562a07e",
       "name": "gaining-new-insights-by-detecting-adverse-event-anomalies",
       "displayName": "Gaining New Insights by Detecting Adverse Event Anomalies",
       "description": "This challenge is an awesome challenge.",
@@ -1750,8 +1750,8 @@
       "endDate": "2020-05-18",
       "websiteUrl": "https://precision.fda.gov/challenges/9/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "nlp",
         "anomalies",
@@ -1762,7 +1762,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd852",
+      "id": "614e0a04f480ac6f7562a07f",
       "name": "calling-variants-in-difficult-to-map-regions",
       "displayName": "Calling Variants in Difficult-to-Map Regions",
       "description": "This challenge is an awesome challenge.",
@@ -1770,8 +1770,8 @@
       "endDate": "2020-06-15",
       "websiteUrl": "https://precision.fda.gov/challenges/10/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "variant-calling",
         "benchmarking",
@@ -1782,7 +1782,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd853",
+      "id": "614e0a04f480ac6f7562a080",
       "name": "vha-innovation-ecosystem-and-covid-19-risk-factor-modeling",
       "displayName": "VHA Innovation Ecosystem and COVID-19 Risk Factor Modeling",
       "description": "This challenge is an awesome challenge.",
@@ -1790,8 +1790,8 @@
       "endDate": "2020-07-03",
       "websiteUrl": "https://precision.fda.gov/challenges/11/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "covid-19",
         "coronavirus-disease",
@@ -1802,7 +1802,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd854",
+      "id": "614e0a04f480ac6f7562a081",
       "name": "covid-19-precision-immunology-app-a-thon",
       "displayName": "COVID-19 Precision Immunology App-a-thon",
       "description": "This challenge is an awesome challenge.",
@@ -1810,8 +1810,8 @@
       "endDate": "2021-01-29",
       "websiteUrl": "https://precision.fda.gov/challenges/12/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "covid-19",
         "coronavirus-disease",
@@ -1822,7 +1822,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd855",
+      "id": "614e0a04f480ac6f7562a082",
       "name": "smarter-food-safety-low-cost-tech-enabled-traceability",
       "displayName": "Smarter Food Safety Low Cost Tech-Enabled Traceability",
       "description": "This challenge is an awesome challenge.",
@@ -1830,8 +1830,8 @@
       "endDate": "2021-07-30",
       "websiteUrl": "https://precision.fda.gov/challenges/13",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "food",
         "cost"
@@ -1841,7 +1841,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd856",
+      "id": "614e0a04f480ac6f7562a083",
       "name": "tumor-mutational-burden-challenge-phase-1",
       "displayName": "Tumor Mutational Burden Challenge Phase 1",
       "description": "This challenge is an awesome challenge.",
@@ -1849,8 +1849,8 @@
       "endDate": "2021-07-19",
       "websiteUrl": "https://precision.fda.gov/challenges/17",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "tmb",
         "tumor-mutation-burden"
@@ -1860,7 +1860,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd857",
+      "id": "614e0a04f480ac6f7562a084",
       "name": "tumor-mutational-burden-challenge-phase-2",
       "displayName": "Tumor Mutational Burden Challenge Phase 2",
       "description": "This challenge is an awesome challenge.",
@@ -1868,8 +1868,8 @@
       "endDate": "2021-09-13",
       "websiteUrl": "https://precision.fda.gov/challenges/18",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7f4",
-      "ownerId": "614dc8330d2e64c3302dd522",
+      "platformId": "614e0a04f480ac6f7562a021",
+      "ownerId": "614e0a01f480ac6f75629d4f",
       "topics": [
         "tmb",
         "tumor-mutation-burden"
@@ -1879,16 +1879,16 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd858",
+      "id": "614e0a04f480ac6f7562a085",
       "name": "kidney-and-kidney-tumor-segmentation",
       "displayName": "Kidney and Kidney Tumor Segmentation",
       "description": "This challenge is an awesome challenge.",
       "startDate": "2021-08-23",
       "endDate": "2021-09-17",
       "websiteUrl": "https://kits21.kits-challenge.org/",
-      "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f5",
-      "ownerId": "614dc8330d2e64c3302dd532",
+      "status": "completed",
+      "platformId": "614e0a04f480ac6f7562a022",
+      "ownerId": "614e0a01f480ac6f75629d5f",
       "topics": [
         "kits21",
         "kidney",
@@ -1900,16 +1900,16 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd859",
+      "id": "614e0a04f480ac6f7562a086",
       "name": "rsna-asnr-miccai-brain-tumor-classification",
       "displayName": "RSNA-ASNR-MICCAI Brain Tumor Classification",
       "description": "This challenge is an awesome challenge.",
       "startDate": "2021-10-08",
       "endDate": "2021-10-15",
       "websiteUrl": "https://www.rsna.org/education/ai-resources-and-training/ai-image-challenge/brain-tumor-ai-challenge-2021",
-      "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f6",
-      "ownerId": "614dc8330d2e64c3302dd532",
+      "status": "upcoming",
+      "platformId": "614e0a04f480ac6f7562a023",
+      "ownerId": "614e0a01f480ac6f75629d5f",
       "topics": [
         "brats",
         "brain-tumor",
@@ -1920,7 +1920,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd85a",
+      "id": "614e0a04f480ac6f7562a087",
       "name": "cross-modality-da-for-medical-image-segmentation",
       "displayName": "Cross-Modality DA for Medical Image Segmentation",
       "description": "This challenge is an awesome challenge.",
@@ -1928,8 +1928,8 @@
       "endDate": "2021-09-27",
       "websiteUrl": "https://crossmoda-challenge.ml/",
       "status": "active",
-      "platformId": "614dc8340d2e64c3302dd7f7",
-      "ownerId": "614dc8330d2e64c3302dd532",
+      "platformId": "614e0a04f480ac6f7562a024",
+      "ownerId": "614e0a01f480ac6f75629d5f",
       "topics": [
         "cross-modality",
         "domain-adaptation",
@@ -1941,7 +1941,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd85b",
+      "id": "614e0a04f480ac6f7562a088",
       "name": "real-noise-mri",
       "displayName": "Real Noise MRI",
       "description": "This challenge is an awesome challenge.",
@@ -1949,8 +1949,8 @@
       "endDate": "2021-12-06",
       "websiteUrl": "https://realnoisemri.grand-challenge.org/Description/",
       "status": "upcoming",
-      "platformId": "614dc8340d2e64c3302dd7f7",
-      "ownerId": "614dc8330d2e64c3302dd532",
+      "platformId": "614e0a04f480ac6f7562a024",
+      "ownerId": "614e0a01f480ac6f75629d5f",
       "topics": [
         "realnoisemri",
         "brain",
@@ -1962,7 +1962,7 @@
       "updatedAt": ""
     },
     {
-      "id": "614dc8340d2e64c3302dd85c",
+      "id": "614e0a04f480ac6f7562a089",
       "name": "deep-generative-model-challenge-for-da-in-surgery",
       "displayName": "Deep Generative Model Challenge for DA in Surgery",
       "description": "This challenge is an awesome challenge.",
@@ -1970,8 +1970,8 @@
       "endDate": "2021-07-16",
       "websiteUrl": "https://adaptor2021.github.io/",
       "status": "completed",
-      "platformId": "614dc8340d2e64c3302dd7ef",
-      "ownerId": "614dc8330d2e64c3302dd532",
+      "platformId": "614e0a04f480ac6f7562a01c",
+      "ownerId": "614e0a01f480ac6f75629d5f",
       "topics": [
         "deep-generative-model",
         "domain-adaptation",
