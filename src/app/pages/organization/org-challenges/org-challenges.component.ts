@@ -32,7 +32,7 @@ export class OrgChallengesComponent implements OnInit {
     this.challenges$ = this.orgDataService.getOrg().pipe(
       tap((org) => (this.accountName = org ? org.login : '')),
       switchMap((org) =>
-        this.challengeService.listAccountChallenges(org!.login, 50, 0)
+        this.challengeService.listAccountChallenges(org!.login, 20, 0)
       ),
       map((page) => page.challenges)
     );
@@ -44,7 +44,6 @@ export class OrgChallengesComponent implements OnInit {
 
   onClick(url: string): void {
     // ignore click if text is selected
-    console.log(url);
     if (!this.document.getSelection()!.toString()) {
       this.router.navigateByUrl(url);
     }

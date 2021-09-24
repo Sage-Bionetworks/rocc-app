@@ -1,13 +1,15 @@
 <mat-card *ngIf="challenge">
-  <img class="rocc-challenge-platform-logo" *ngIf="platform$ | async as platform" 
-    src="{{platform.avatarUrl}}" alt="platform-logo"> 
+  <a href="{{platform.websiteUrl}}" *ngIf="platform$ | async as platform">
+    <img class="rocc-challenge-platform-logo" (click)="toggleLink($event)"
+      src="{{platform.avatarUrl}}" alt="platform-logo"> 
+  </a>
   <mat-card-header>
     <mat-card-title>{{challenge.displayName}}</mat-card-title>
     <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
-      <mat-icon mat-card-avatar *ngIf="starred" class="rocc-challenge-favorite-icon">
+      <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
         star
       </mat-icon>
-      <mat-icon  mat-card-avatar *ngIf="!starred">
+      <mat-icon *ngIf="!starred" inline=true >
         star_border
       </mat-icon>
     </button>
