@@ -16,15 +16,21 @@
 }
 
 .mat-card-header {
+  display: inline-flex;
+  align-items: center;
   height: 2em;
   margin-left: -16px;
   margin-bottom: 0.5em;
 
   .mat-card-title {
+    margin: 0;
     font-size: 2em;
   }
 
   .mat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2em;
 
     &.rocc-challenge-favorite-icon {
