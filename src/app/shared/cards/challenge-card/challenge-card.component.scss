@@ -2,9 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 11.5em;
+  height: 14em;
   margin-bottom: 20px;
-  padding: 2em 1.5em 0.5em;
+  padding: 1.5em 1.5em 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
 
@@ -43,8 +43,9 @@
   align-items: center;
   margin-bottom: 0.5em;
   max-width: 600px;
-  height: 2em;
+  height: 1.8em;
   overflow-x: auto;
+  overflow-y: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 
@@ -55,7 +56,6 @@
   a {
     margin-right: 8px;
     color: #8e92de; // #e55a17
-    font-size: 1em;
     white-space: nowrap;
     text-decoration: none;
 
@@ -83,9 +83,9 @@
 
     .rocc-challenge-descriptions {
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
       justify-content: center;
-      height: 100%;
       margin-bottom: 0.5em;
     }
 
@@ -143,8 +143,8 @@
   position: absolute;
   right: 1.5em;
   top: 2em;
-  height: 4em;
-  width: 4em;
+  height: 5em;
+  width: 5em;
   z-index: 2;
   cursor: pointer;
 }
