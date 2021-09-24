@@ -401,7 +401,7 @@ export class DatabaseSeedComponent implements OnInit {
                 })
               )
             ),
-            concurrency
+            1
           )
         ),
         tap((challenges) => console.log('Challenge created', challenges))
