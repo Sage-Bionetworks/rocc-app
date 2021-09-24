@@ -1,0 +1,74 @@
+{
+  "challengePlatforms": [
+    {
+      "id": "614dc8340d2e64c3302dd7f2",
+      "name": "cafa",
+      "displayName": "CAFA",
+      "websiteUrl": "https://www.biofunctionprediction.org/cafa",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/cafa.png"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f0",
+      "name": "cagi",
+      "displayName": "CAGI",
+      "websiteUrl": "https://genomeinterpretation.org",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/cagi.png"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f1",
+      "name": "camda",
+      "displayName": "CAMDA",
+      "websiteUrl": "http://camda.info",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/camda.png"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f8",
+      "name": "cami",
+      "displayName": "CAMI",
+      "websiteUrl": "https://www.microbiome-cosi.org/",
+      "avatarUrl": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f3",
+      "name": "casp",
+      "displayName": "CASP",
+      "websiteUrl": "https://predictioncenter.org",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/casp.png"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f7",
+      "name": "grand-challenges",
+      "displayName": "Grand Challenges",
+      "websiteUrl": "https://grand-challenge.org",
+      "avatarUrl": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f6",
+      "name": "kaggle",
+      "displayName": "Kaggle",
+      "websiteUrl": "https://www.kaggle.com/",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/kaggle.png"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f5",
+      "name": "kits",
+      "displayName": "KiTS",
+      "websiteUrl": "https://kits21.kits-challenge.org/",
+      "avatarUrl": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7f4",
+      "name": "precisionfda",
+      "displayName": "precisionFDA",
+      "websiteUrl": "https://precision.fda.gov",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/precisionfda.png"
+    },
+    {
+      "id": "614dc8340d2e64c3302dd7ef",
+      "name": "synapse",
+      "displayName": "Synapse",
+      "websiteUrl": "https://synapse.org",
+      "avatarUrl": "https://github.com/Sage-Bionetworks/rocc-app/raw/main/images/logo/synapse.png"
+    }
+  ]
+}
