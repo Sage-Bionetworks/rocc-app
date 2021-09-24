@@ -49,12 +49,12 @@ import { forkJoinConcurrent } from '../../forkJoinConcurrent';
 import { omit } from '../../omit';
 import { DocumentsCreateResult } from './documents-create-result';
 
-import challengeList from '@app/seeds/development/challenges.json';
-import challengePlatformList from '@app/seeds/development/challenge-platforms.json';
-import challengeReadmeList from '@app/seeds/development/challenge-readmes.json';
-import organizationList from '@app/seeds/development/organizations.json';
-import orgMembershipList from '@app/seeds/development/org-memberships.json';
-import userList from '@app/seeds/development/users.json';
+import challengeList from '@app/seeds/production/challenges.json';
+import challengePlatformList from '@app/seeds/production/challenge-platforms.json';
+import challengeReadmeList from '@app/seeds/production/challenge-readmes.json';
+import organizationList from '@app/seeds/production/organizations.json';
+import orgMembershipList from '@app/seeds/production/org-memberships.json';
+import userList from '@app/seeds/production/users.json';
 
 @Component({
   selector: 'rocc-database-seed',
@@ -74,7 +74,7 @@ export class DatabaseSeedComponent implements OnInit {
   ngOnInit(): void {
     // Maximum number of concurrent requests sent to the ROCC API service
     // TODO: Add to configuration file
-    const concurrency = 1;
+    const concurrency = 100;
 
     const removeDocuments$ = forkJoin([
       this.challengeService.deleteAllChallenges(),
@@ -96,7 +96,7 @@ export class DatabaseSeedComponent implements OnInit {
             userRequest.password = 'yourpassword';
             return this.userService.createUser(userRequest);
           }),
-          10
+          concurrency
         )
       ),
       map((userCreateResponses: UserCreateResponse[]) => {
@@ -124,7 +124,7 @@ export class DatabaseSeedComponent implements OnInit {
               omit(org, ['id']) as OrganizationCreateRequest
             )
           ),
-          10
+          concurrency
         )
       ),
       map((orgCreateResponses: OrganizationCreateResponse[]) => {
@@ -158,7 +158,7 @@ export class DatabaseSeedComponent implements OnInit {
               omit(challengePlatform, ['id']) as ChallengePlatformCreateRequest
             )
           ),
-          10
+          concurrency
         )
       ),
       map(
@@ -341,9 +341,9 @@ export class DatabaseSeedComponent implements OnInit {
                 (readme) => readme.challengeId === rawChallenge.id
               );
             if (readme !== undefined) {
-              return this.challengeService.updateChallengeReadme(accountName, challenge.name, readme).pipe(
-                mapTo(challenge)
-              )
+              return this.challengeService
+                .updateChallengeReadme(accountName, challenge.name, readme)
+                .pipe(mapTo(challenge));
             } else {
               return of(challenge);
             }
