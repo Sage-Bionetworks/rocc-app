@@ -8,7 +8,7 @@ import {
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { Observable, of, throwError } from 'rxjs';
-import { catchError, mapTo, switchMap } from 'rxjs/operators';
+import { catchError, mapTo, tap } from 'rxjs/operators';
 import { isRoccClientError } from '@app/shared/rocc-client-error';
 
 @Component({
@@ -63,26 +63,27 @@ export class ChallengeCardComponent implements OnInit {
           }
           throwError(err);
           return of(false);
-        })
-      )
-      .subscribe((starred) => (this.starred = starred));
+        }),
+        tap((starred: boolean) => (this.starred = starred))
+      );
   }
 
   toggleStar(event: Event): void {
     event.stopPropagation();
     this.starred = !this.starred;
-    (this.starred
-      ? this.userService.starChallenge(
-          this.challenge.fullName.split('/')[0],
-          this.challenge.name
-        )
-      : this.userService.unstarChallenge(
-          this.challenge.fullName.split('/')[0],
-          this.challenge.name
-        )
-    ).subscribe(() =>
-      this.starred ? (this.numberStarred += 1) : (this.numberStarred -= 1)
-    );
+    if (this.starred) {
+      this.userService.starChallenge(
+        this.challenge.fullName.split('/')[0],
+        this.challenge.name
+      );
+      this.numberStarred += 1;
+    } else {
+      this.userService.unstarChallenge(
+        this.challenge.fullName.split('/')[0],
+        this.challenge.name
+      );
+      this.numberStarred -= 1;
+    }
   }
 
   toggleLink(event: Event): void {
