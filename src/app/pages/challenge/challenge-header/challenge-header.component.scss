@@ -27,7 +27,6 @@ a {
 
   .rocc-challenge-detail-header-top {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
@@ -38,11 +37,10 @@ a {
 
       .rocc-challenge-detail-header-top-routerlink-container {
         display: inline-flex;
+        align-items: center;
         margin: 10px 0;
 
         .mat-icon {
-          width: 20px;
-          height: 20px;
           margin-right: 5px;
           font-size: 20px;
         }
@@ -67,14 +65,11 @@ a {
           line-height: 1em;
         }
 
-        .mat-icon {
-          margin-bottom: 10px;
-          height: 30px;
-          width: 30px;
+        .mat-icon-button {
           font-size: 30px;
-          align-self: center;
+          line-height: unset;
 
-          &.rocc-challenge-favorite-icon {
+          .rocc-challenge-favorite-icon {
             color: #f1d07e;
           }
         }
