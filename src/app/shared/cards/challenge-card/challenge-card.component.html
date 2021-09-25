@@ -17,7 +17,8 @@
   <mat-card-content>
     <div class="rocc-challenge-left-content-container">
       <div class="rocc-challenge-topics-container">
-        <a href="" class="rocc-challenge-topic" *ngFor="let topic of challenge.topics">
+        <a href="" class="rocc-challenge-topic" 
+          *ngFor="let topic of challenge.topics | slice: 0:4" >
           #{{topic}}
         </a>
       </div>
