@@ -2,13 +2,16 @@ import { Component, Inject, OnInit } from '@angular/core';
 import {
   Challenge,
   ChallengeService,
+  Organization,
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { Observable } from 'rxjs';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { isDefined } from '@app/type-guards';
+import { map, switchMap, tap, filter } from 'rxjs/operators';
 import { AuthService } from '@shared/auth/auth.service';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+import { of } from 'rxjs';
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
@@ -16,9 +19,8 @@ import { DOCUMENT } from '@angular/common';
 })
 export class OrgChallengesComponent implements OnInit {
   // org!: Organization | undefined;
-  accountName: string = '';
   loggedIn!: boolean;
-  challenges$!: Observable<Challenge[] | []>;
+  challenges$!: Observable<Challenge[] | undefined>;
 
   constructor(
     private router: Router,
@@ -29,17 +31,23 @@ export class OrgChallengesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.challenges$ = this.orgDataService.getOrg().pipe(
-      tap((org) => (this.accountName = org ? org.login : '')),
-      switchMap((org) =>
-        this.challengeService.listAccountChallenges(org!.login, 20, 0)
-      ),
-      map((page) => page.challenges)
-    );
+    this.challenges$ = this.orgDataService
+      .getOrg()
+      .pipe(
+        switchMap((org) =>
+          org !== undefined ? this.getChallenges(org) : of(undefined)
+        )
+      );
 
     this.authService
       .isSignedIn()
       .subscribe((loggedIn) => (this.loggedIn = loggedIn));
+  }
+
+  getChallenges(org: Organization): Observable<Challenge[]> {
+    return this.challengeService
+      .listAccountChallenges(org.login, 20, 0)
+      .pipe(map((page) => page.challenges));
   }
 
   onClick(url: string): void {
