@@ -42,16 +42,16 @@
   display: inline-flex;
   align-items: center;
   margin-bottom: 0.5em;
-  max-width: 600px;
+  // max-width: 600px;
   height: 1.8em;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  // overflow-x: auto;
+  // overflow-y: hidden;
+  // -ms-overflow-style: none; /* IE and Edge */
+  // scrollbar-width: none; /* Firefox */
 
-  &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
-  }
+  // &::-webkit-scrollbar {
+  //   display: none; /* Chrome, Safari and Opera */
+  // }
 
   a {
     margin-right: 8px;
