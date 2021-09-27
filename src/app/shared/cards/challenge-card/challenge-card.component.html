@@ -21,8 +21,8 @@
       </div>
       <div class="rocc-challenge-descriptions">{{challenge.description}}</div>
       <div class="rocc-challenge-stats-container">
-        <div>
-          <mat-icon class="rocc-challenge-{{challenge.status}}">circle</mat-icon> 
+        <div class="rocc-challenge-status">
+          <mat-icon class="{{challenge.status}}">circle</mat-icon> 
           <strong>{{challenge.status}}</strong>
         </div>
         <div *ngIf="!!numberSubmissions" matTooltip="number of submissions">

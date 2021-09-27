@@ -76,7 +76,10 @@
     .rocc-challenge-stats-container {
       display: flex;
       margin-top: auto;
-      cursor: help;
+
+      & > div:not(.rocc-challenge-status) {
+        cursor: help;
+      }
 
       div {
         display: inline-flex;
@@ -111,16 +114,16 @@
   }
 }
 
-.rocc-challenge-active {
-  color: green;
-}
-
-.rocc-challenge-upcoming {
-  color: yellow;
-}
-
-.rocc-challenge-completed {
-  color: grey;
+.rocc-challenge-status {
+  .active {
+    color: green;
+  }
+  .upcoming {
+    color: orange;
+  }
+  .completed {
+    color: gray;
+  }
 }
 
 .rocc-challenge-platform-logo {
