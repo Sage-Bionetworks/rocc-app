@@ -1,6 +1,8 @@
 <mat-card *ngIf="challenge">
-  <a href="{{platform.websiteUrl}}" *ngIf="platform$ | async as platform">
-    <img class="rocc-challenge-platform-logo" (click)="toggleLink($event)"
+  <a *ngIf="platform$ | async as platform" 
+    href="{{platform.websiteUrl}}"
+    (click)="toggleLink($event)">
+    <img class="rocc-challenge-platform-logo"
       src="{{platform.avatarUrl}}" alt="platform-logo"> 
   </a>
   <mat-card-title>
@@ -29,11 +31,11 @@
           <mat-icon inline=true class="rocc-challenge-{{challenge.status}}">circle</mat-icon> 
           <strong>{{challenge.status | titlecase }}</strong>
         </div>
-        <div *ngIf="!!numberSubmissions" matTooltip="number of submissions">
+        <div *ngIf="numberSubmissions" matTooltip="number of submissions">
           <mat-icon inline=true>trending_up</mat-icon>: 
           <strong>{{numberSubmissions}}</strong>
         </div>
-        <div *ngIf="!!numberRegistrants" matTooltip="number of registrants">
+        <div *ngIf="numberRegistrants" matTooltip="number of registrants">
           <mat-icon inline=true>face</mat-icon>: 
           <strong>{{numberRegistrants}}</strong>
         </div>

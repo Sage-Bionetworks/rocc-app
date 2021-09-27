@@ -33,20 +33,11 @@
   display: inline-flex;
   align-items: center;
   margin-bottom: 0.5em;
-  // max-width: 600px;
   height: 1.8em;
-  // overflow-x: auto;
-  // overflow-y: hidden;
-  // -ms-overflow-style: none; /* IE and Edge */
-  // scrollbar-width: none; /* Firefox */
-
-  // &::-webkit-scrollbar {
-  //   display: none; /* Chrome, Safari and Opera */
-  // }
 
   a {
     margin-right: 8px;
-    color: #8e92de; // #e55a17
+    color: #8e92de;
     white-space: nowrap;
     text-decoration: none;
 
@@ -119,11 +110,11 @@
 }
 
 .rocc-challenge-active {
-  color: lightgreen;
+  color: green;
 }
 
 .rocc-challenge-upcoming {
-  color: cyan;
+  color: orange;
 }
 
 .rocc-challenge-completed {
