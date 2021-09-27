@@ -7,8 +7,7 @@
   <h2>Organizations</h2>
     <rocc-org-card
       *ngFor="let org of orgs"
-      [org]="org"
-      [routerLink]="['/', org.login]">
+      [org]="org">
     </rocc-org-card>
   </section>
 </main>
