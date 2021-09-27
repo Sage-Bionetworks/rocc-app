@@ -22,19 +22,19 @@
       <div class="rocc-challenge-descriptions">{{challenge.description}}</div>
       <div class="rocc-challenge-stats-container">
         <div class="rocc-challenge-status">
-          <mat-icon class="{{challenge.status}}">circle</mat-icon> 
-          <strong>{{challenge.status}}</strong>
+          <mat-icon class="{{challenge.status}}" inline=true>circle</mat-icon> 
+          <strong>{{challenge.status | titlecase}}</strong>
         </div>
-        <div *ngIf="!!numberSubmissions" matTooltip="number of submissions">
-          <mat-icon>trending_up</mat-icon>: 
+        <div *ngIf="numberSubmissions" matTooltip="number of submissions">
+          <mat-icon inline=true>trending_up</mat-icon>: 
           <strong>{{numberSubmissions}}</strong>
         </div>
-        <div *ngIf="!!numberRegistrants" matTooltip="number of registrants">
-          <mat-icon>face</mat-icon>: 
+        <div *ngIf="numberRegistrants" matTooltip="number of registrants">
+          <mat-icon inline=true>face</mat-icon>: 
           <strong>{{numberRegistrants}}</strong>
         </div>
         <div matTooltip="number of stargazers">
-          <mat-icon>auto_awesome</mat-icon>: 
+          <mat-icon inline=true>auto_awesome</mat-icon>: 
           <strong>{{numberStarred}}</strong>
         </div>
       </div>
