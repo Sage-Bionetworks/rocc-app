@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 11.5em;
+  height: 13em;
   margin-bottom: 20px;
   padding: 2em 1.5em 0.5em;
   transition: 0.2s;
@@ -16,19 +16,29 @@
 }
 
 .mat-card-header {
-  height: 2em;
-  margin-left: -16px;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 0.5em;
 
   .mat-card-title {
+    display: inline-flex;
+    align-items: baseline;
+    margin-left: -16px;
+    margin-bottom: 0;
     font-size: 2em;
-  }
 
-  .mat-icon {
-    font-size: 2em;
+    .mat-icon-button {
+      height: inherit;
+      font-size: 1em;
 
-    &.rocc-challenge-favorite-icon {
-      color: #f1d07e;
+      .mat-icon {
+        display: inline-flex;
+        align-items: center;
+
+        &.rocc-challenge-favorite-icon {
+          color: #f1d07e;
+        }
+      }
     }
   }
 }
