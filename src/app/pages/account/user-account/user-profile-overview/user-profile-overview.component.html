@@ -1,10 +1,14 @@
-<ng-container *ngIf="user">
-  <h2>Bio</h2>
-  <p>{{user.bio}}</p>
+<main *ngIf="user">
+  <section>
+    <h2>About Me</h2>
+    <p>{{user.bio}}</p>
+  </section>
+  <section>
   <h2>Organizations</h2>
-  <rocc-org-card
-    *ngFor="let org of orgs"
-    [org]="org"
-    [routerLink]="['/', org.login]">
-  </rocc-org-card>
-</ng-container>
+    <rocc-org-card
+      *ngFor="let org of orgs"
+      [org]="org"
+      [routerLink]="['/', org.login]">
+    </rocc-org-card>
+  </section>
+</main>
