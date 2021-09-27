@@ -2,8 +2,9 @@
   <h2>Bio</h2>
   <p>{{user.bio}}</p>
   <h2>Organizations</h2>
-  <rocc-org-card>
-    <a mat-list-item [routerLink]="['/', org.login]"
-      *ngFor="let org of orgs">{{org.login}}</a>
+  <rocc-org-card
+    *ngFor="let org of orgs"
+    [org]="org"
+    [routerLink]="['/', org.login]">
   </rocc-org-card>
 </ng-container>

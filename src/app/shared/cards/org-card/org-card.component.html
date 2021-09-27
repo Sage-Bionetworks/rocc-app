@@ -1,1 +1,8 @@
-<p>org-card works!</p>
+<mat-card *ngIf="org">
+  <img src="https://via.placeholder.com/100x100" alt="">
+  <div class="rocc-org-content-container">
+    <mat-card-title>{{org.name}}</mat-card-title>
+    <mat-card-content>{{org.description}}</mat-card-content>
+  </div>
+
+</mat-card>
