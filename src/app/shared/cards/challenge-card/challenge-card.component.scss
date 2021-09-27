@@ -2,9 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 11.5em;
+  height: 13em;
   margin-bottom: 20px;
-  padding: 2em 1.5em 0.5em;
+  padding: 1.5em 1.5em 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
 
@@ -43,7 +43,6 @@
   a {
     margin-right: 8px;
     color: #8e92de;
-    font-size: 1em;
     white-space: nowrap;
     text-decoration: none;
 
@@ -59,7 +58,7 @@
   grid-template-columns: 3.5fr 1fr;
   grid-gap: 1em;
   align-items: center;
-  height: 100% !important;
+  height: 100%;
   font-size: 1.2em;
 
   .rocc-challenge-left-content-container {
