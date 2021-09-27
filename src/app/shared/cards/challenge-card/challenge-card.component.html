@@ -5,17 +5,20 @@
     <img class="rocc-challenge-platform-logo"
       src="{{platform.avatarUrl}}" alt="platform-logo"> 
   </a>
-  <mat-card-title>
-    {{challenge.displayName}}
-    <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
-      <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
-        star
-      </mat-icon>
-      <mat-icon *ngIf="!starred" inline=true >
-        star_border
-      </mat-icon>
-    </button>
-  </mat-card-title>
+  <mat-card-header>
+    <mat-card-title>
+      {{challenge.displayName}}
+      <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
+        <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
+          star
+        </mat-icon>
+        <mat-icon *ngIf="!starred" inline=true >
+          star_border
+        </mat-icon>
+      </button>
+    </mat-card-title>
+  </mat-card-header>
+  
  
   <mat-card-content>
     <div class="rocc-challenge-left-content-container">

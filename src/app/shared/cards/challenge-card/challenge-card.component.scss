@@ -15,20 +15,40 @@
   }
 }
 
-.mat-card-title {
+.mat-card-header {
   display: inline-flex;
   align-items: center;
-  margin: 0;
+  margin-bottom: 0.5em;
 
-  .mat-icon-button {
-    font-size: 0.8em;
+  .mat-card-title {
+    display: inline-flex;
+    align-items: center;
+    margin-left: -16px;
+    margin-bottom: 0;
+    font-size: 2em;
 
-    .rocc-challenge-favorite-icon {
-      color: #f1d07e;
+    // hard code 20px to match title div
+    .mat-icon-button {
+      display: inline-flex;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+      font-size: 20px;
+
+      .mat-icon {
+        display: inline-flex;
+        align-items: center;
+        height: 20px;
+        width: 20px;
+
+        &.rocc-challenge-favorite-icon {
+          color: #f1d07e;
+        }
+      }
     }
   }
 }
-
 .rocc-challenge-topics-container {
   display: inline-flex;
   align-items: center;
