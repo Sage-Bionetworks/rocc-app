@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 14em;
+  height: 12em;
   margin-bottom: 20px;
   padding: 1.5em 1.5em 0.5em;
   transition: 0.2s;
@@ -15,21 +15,13 @@
   }
 }
 
-.mat-card-header {
+.mat-card-title {
   display: inline-flex;
   align-items: center;
-  height: 2em;
-  margin-left: -16px;
-  margin-bottom: 0.5em;
-
-  .mat-card-title {
-    margin: 0;
-    font-size: 2em;
-  }
+  margin: 0;
 
   .mat-icon-button {
-    font-size: 2em;
-    line-height: unset;
+    font-size: 0.8em;
 
     .rocc-challenge-favorite-icon {
       color: #f1d07e;

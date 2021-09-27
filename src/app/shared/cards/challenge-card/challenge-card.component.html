@@ -3,8 +3,8 @@
     <img class="rocc-challenge-platform-logo" (click)="toggleLink($event)"
       src="{{platform.avatarUrl}}" alt="platform-logo"> 
   </a>
-  <mat-card-header>
-    <mat-card-title>{{challenge.displayName}}</mat-card-title>
+  <mat-card-title>
+    {{challenge.displayName}}
     <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
       <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
         star
@@ -13,7 +13,8 @@
         star_border
       </mat-icon>
     </button>
-  </mat-card-header>
+  </mat-card-title>
+ 
   <mat-card-content>
     <div class="rocc-challenge-left-content-container">
       <div class="rocc-challenge-topics-container">
