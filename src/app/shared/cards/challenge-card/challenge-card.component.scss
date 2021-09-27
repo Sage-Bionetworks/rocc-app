@@ -29,13 +29,8 @@
       height: inherit;
       font-size: 1.2em;
 
-      .mat-icon {
-        display: inline-flex;
-        align-items: center;
-
-        &.rocc-challenge-favorite-icon {
-          color: #f1d07e;
-        }
+      .rocc-challenge-favorite-icon {
+        color: #f1d07e;
       }
     }
   }
