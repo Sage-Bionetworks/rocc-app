@@ -21,6 +21,7 @@
   margin-bottom: 0.5em;
 
   .mat-card-title {
+    margin-bottom: 0;
     font-size: 2em;
   }
 
@@ -35,12 +36,15 @@
 
 .rocc-challenge-topics-container {
   display: inline-flex;
+  align-items: center;
   margin-bottom: 0.5em;
+  height: 1.8em;
 
   a {
     margin-right: 8px;
-    color: #8e92de; // #e55a17
+    color: #8e92de;
     font-size: 1em;
+    white-space: nowrap;
     text-decoration: none;
 
     &:hover {
@@ -53,9 +57,9 @@
 .mat-card-content {
   display: grid;
   grid-template-columns: 3.5fr 1fr;
-  grid-gap: 2em;
+  grid-gap: 1em;
   align-items: center;
-  height: 100%;
+  height: 100% !important;
   font-size: 1.2em;
 
   .rocc-challenge-left-content-container {
