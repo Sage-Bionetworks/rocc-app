@@ -76,6 +76,7 @@
     .rocc-challenge-stats-container {
       display: flex;
       margin-top: auto;
+      cursor: help;
 
       div {
         display: inline-flex;
@@ -129,4 +130,5 @@
   height: 4em;
   width: 4em;
   z-index: 2;
+  cursor: pointer;
 }
