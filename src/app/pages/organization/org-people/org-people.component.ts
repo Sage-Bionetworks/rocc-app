@@ -8,6 +8,7 @@ import {
 import { OrgDataService } from '../org-data.service';
 import { forkJoin, Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { of } from 'rxjs';
 @Component({
   selector: 'rocc-org-people',
   templateUrl: './org-people.component.html',
@@ -15,7 +16,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class OrgPeopleComponent implements OnInit {
   // org!: Organization | undefined;
-  persons$!: Observable<User[]>;
+  persons$!: Observable<User[] | undefined>;
   constructor(
     private orgDataService: OrgDataService,
     private userService: UserService,
@@ -23,17 +24,26 @@ export class OrgPeopleComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.persons$ = this.orgDataService.getOrg().pipe(
-      switchMap((org) =>
-        this.orgMembershipService.listOrgMemberships(50, 0, org!.id, undefined)
-      ),
-      switchMap((page) => {
-        return forkJoin(
-          page.orgMemberships.map((orgMember) =>
-            this.userService.getUser(orgMember.userId)
-          )
-        );
-      })
-    );
+    this.persons$ = this.orgDataService
+      .getOrg()
+      .pipe(
+        switchMap((org) =>
+          org !== undefined ? this.getPersons(org) : of(undefined)
+        )
+      );
+  }
+
+  getPersons(org: Organization): Observable<User[]> {
+    return this.orgMembershipService
+      .listOrgMemberships(20, 0, org.id, undefined)
+      .pipe(
+        switchMap((page) => {
+          return forkJoin(
+            page!.orgMemberships.map((orgMember) =>
+              this.userService.getUser(orgMember.userId)
+            )
+          );
+        })
+      );
   }
 }
