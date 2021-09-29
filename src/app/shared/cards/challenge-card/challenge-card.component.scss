@@ -80,6 +80,10 @@
       display: flex;
       margin-top: auto;
 
+      & > div:not(.rocc-challenge-status) {
+        cursor: help;
+      }
+
       div {
         display: inline-flex;
         align-items: center;
@@ -113,23 +117,24 @@
   }
 }
 
-.rocc-challenge-active {
-  color: green;
-}
-
-.rocc-challenge-upcoming {
-  color: yellow;
-}
-
-.rocc-challenge-completed {
-  color: grey;
+.rocc-challenge-status {
+  .active {
+    color: green;
+  }
+  .upcoming {
+    color: orange;
+  }
+  .completed {
+    color: gray;
+  }
 }
 
 .rocc-challenge-platform-logo {
   position: absolute;
   right: 1.5em;
   top: 2em;
-  height: 4em;
-  width: 4em;
+  height: 5em;
+  width: 5em;
   z-index: 2;
+  cursor: pointer;
 }

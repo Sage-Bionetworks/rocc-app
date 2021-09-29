@@ -85,4 +85,8 @@ export class ChallengeCardComponent implements OnInit {
       this.numberStarred -= 1;
     }
   }
+
+  toggleLink(event: Event): void {
+    event.stopPropagation();
+  }
 }
