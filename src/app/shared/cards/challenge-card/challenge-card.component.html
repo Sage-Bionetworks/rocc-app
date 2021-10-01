@@ -4,8 +4,11 @@
   <mat-card-header>
     <mat-card-title>
       {{challenge.displayName}}
-      <button mat-icon-button *ngIf="loggedIn" (click)="toggleStar($event)">
-        <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
+      <button mat-icon-button *ngIf="loggedIn" 
+        (click)="toggleStar($event)" 
+        [matTooltip]="getStarredTooltip()"
+        matTooltipPosition="above">
+        <mat-icon *ngIf="starred" class="starred-icon" inline=true>
           star
         </mat-icon>
         <mat-icon *ngIf="!starred" inline=true >

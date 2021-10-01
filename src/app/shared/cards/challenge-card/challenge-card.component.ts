@@ -86,6 +86,12 @@ export class ChallengeCardComponent implements OnInit {
     }
   }
 
+  getStarredTooltip(): string {
+    return `${'Click the star to'} ${
+      this.starred ? 'unstar' : 'star'
+    } ${'this from your favorites'}`;
+  }
+
   toggleLink(event: Event): void {
     event.stopPropagation();
   }

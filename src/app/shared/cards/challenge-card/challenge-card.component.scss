@@ -1,3 +1,11 @@
+$float-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+  0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+.circle-shadow-hover {
+  border-radius: 50%;
+  box-shadow: $float-shadow;
+}
+
 .mat-card {
   position: relative;
   display: flex;
@@ -7,11 +15,12 @@
   padding: 2em 1.5em 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
+  cursor: pointer;
 
   &:hover,
   &:focus {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
-      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+    box-shadow: $float-shadow;
   }
 }
 
@@ -27,9 +36,14 @@
 
     .mat-icon-button {
       height: inherit;
+      margin-left: 5px;
       font-size: 1.2em;
 
-      .rocc-challenge-favorite-icon {
+      &:hover {
+        @extend .circle-shadow-hover;
+      }
+
+      .starred-icon {
         color: #f1d07e;
       }
     }
@@ -79,10 +93,6 @@
     .rocc-challenge-stats-container {
       display: flex;
       margin-top: auto;
-
-      & > div:not(.rocc-challenge-status) {
-        cursor: help;
-      }
 
       div {
         display: inline-flex;
@@ -136,5 +146,8 @@
   height: 5em;
   width: 5em;
   z-index: 2;
-  cursor: pointer;
+
+  &:hover {
+    @extend .circle-shadow-hover;
+  }
 }
