@@ -10,7 +10,8 @@ import {
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, mapTo, tap } from 'rxjs/operators';
 import { isRoccClientError } from '@app/shared/rocc-client-error';
-
+import { Router } from '@angular/router';
+import { AuthService } from '@shared/auth/auth.service';
 @Component({
   selector: 'rocc-challenge-card',
   templateUrl: './challenge-card.component.html',
@@ -29,6 +30,8 @@ export class ChallengeCardComponent implements OnInit {
   numberRegistrants: number = 100;
 
   constructor(
+    private router: Router,
+    private authService: AuthService,
     private challengePlatformService: ChallengePlatformService,
     private userService: UserService,
     private challengeService: ChallengeService
@@ -70,7 +73,16 @@ export class ChallengeCardComponent implements OnInit {
 
   toggleStar(event: Event): void {
     event.stopPropagation();
-    this.starred = !this.starred;
+    if (this.loggedIn) {
+      this.starred = !this.starred;
+      this.starService();
+    } else {
+      this.authService.setRedirectUrl(this.router.url);
+      this.router.navigate(['login']);
+    }
+  }
+
+  starService(): void {
     if (this.starred) {
       this.userService.starChallenge(
         this.challenge.fullName.split('/')[0],
@@ -87,9 +99,13 @@ export class ChallengeCardComponent implements OnInit {
   }
 
   getStarredTooltip(): string {
-    return `${'Click the star to'} ${
-      this.starred ? 'unstar' : 'star'
-    } ${'this from your favorites'}`;
+    if (this.loggedIn) {
+      return `${'Click the star to'} ${
+        this.starred ? 'unstar' : 'star'
+      } ${'this from your favorites'}`;
+    } else {
+      return 'You must be logged in to star a challenge';
+    }
   }
 
   toggleLink(event: Event): void {

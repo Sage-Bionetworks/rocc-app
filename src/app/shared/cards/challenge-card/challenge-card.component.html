@@ -4,7 +4,7 @@
   <mat-card-header>
     <mat-card-title>
       {{challenge.displayName}}
-      <button mat-icon-button *ngIf="loggedIn" 
+      <button mat-icon-button
         (click)="toggleStar($event)" 
         [matTooltip]="getStarredTooltip()"
         matTooltipPosition="above">
