@@ -101,9 +101,11 @@ export class ChallengeCardComponent implements OnInit {
 
   getStarredTooltip(): string {
     if (this.loggedIn) {
-      return `${'Click the star to'} ${
-        this.starred ? 'unstar' : 'star'
-      } ${'this from your favorites'}`;
+      return (
+        'Click to ' +
+        (this.starred ? 'unstar' : 'star') +
+        ' this from your favorites'
+      );
     } else {
       return 'You must be logged in to star a challenge';
     }
