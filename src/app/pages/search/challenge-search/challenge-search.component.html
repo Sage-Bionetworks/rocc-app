@@ -22,16 +22,18 @@
       results</span>
 
     <mat-nav-list class="challenge-search-results">
-      <rocc-challenge-card *ngFor="let challenge of challenges"
+      <mat-paginator [length]="searchResultsCount" [pageSizeOptions]=[limit]>
+      </mat-paginator>
+      <rocc-challenge-card *ngFor="let challenge of obs | async"
         [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
       </rocc-challenge-card>
     </mat-nav-list>
 
-    <div class="rocc-challenge-list-more-results">
+    <!-- <div class="rocc-challenge-list-more-results">
       <a *ngIf="searchResultsCount - challenges.length > 0" mat-raised-button
         class="rocc-challenge-list-more-results-btn" color="primary"
         (click)="showMoreResults()">More Results
       </a>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -3,6 +3,7 @@ import {
   Component,
   OnInit,
   QueryList,
+  ViewChild,
   ViewChildren,
   Inject,
 } from '@angular/core';
@@ -34,6 +35,9 @@ import assign from 'lodash-es/assign';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { Observable } from 'rxjs';
+import { MatTableDataSource } from '@angular/material/table';
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
   offset: 0,
@@ -54,6 +58,8 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
 export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   challenges: Challenge[] = [];
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   private query: BehaviorSubject<ChallengeSearchQuery> =
     new BehaviorSubject<ChallengeSearchQuery>(defaultChallengeSearchQuery);
 
@@ -67,6 +73,9 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
   loggedIn = false;
+  obs!: Observable<any>;
+  pageLength!: number;
+
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -142,6 +151,11 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
           if (page) {
             this.searchResultsCount = page.totalResults ? page.totalResults : 0;
             this.challenges.push(...page.challenges);
+            let dataSource: MatTableDataSource<Challenge> =
+              new MatTableDataSource<Challenge>(this.challenges);
+            console.log(dataSource);
+            dataSource.paginator = this.paginator;
+            this.obs = dataSource.connect();
           }
         },
         (err) => console.log(err)
