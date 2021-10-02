@@ -35,7 +35,7 @@ import assign from 'lodash-es/assign';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { Observable } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
@@ -65,6 +65,7 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
 
   limit = 10;
   offset = 0;
+  total = 96;
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
@@ -73,8 +74,9 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
   loggedIn = false;
-  obs!: Observable<any>;
-  pageLength!: number;
+  challengeList!: Observable<any>;
+  dataSource!: MatTableDataSource<Challenge>;
+  ran = true;
 
   constructor(
     private router: Router,
@@ -151,15 +153,23 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
           if (page) {
             this.searchResultsCount = page.totalResults ? page.totalResults : 0;
             this.challenges.push(...page.challenges);
-            let dataSource: MatTableDataSource<Challenge> =
-              new MatTableDataSource<Challenge>(this.challenges);
-            console.log(dataSource);
-            dataSource.paginator = this.paginator;
-            this.obs = dataSource.connect();
+            this.dataSource = new MatTableDataSource<Challenge>(
+              this.challenges
+            );
+            // prevent total results from being overwritten in dataSource
+            setTimeout(() => (this.paginator.length = this.searchResultsCount));
+            this.dataSource.paginator = this.paginator;
+            this.challengeList = this.dataSource.connect();
           }
         },
         (err) => console.log(err)
       );
+  }
+
+  ngOnDestroy(): void {
+    if (this.dataSource) {
+      this.dataSource.disconnect();
+    }
   }
 
   private listChallengePlatforms(): void {
@@ -188,13 +198,13 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
       );
   }
 
-  showMoreResults(): void {
-    const query = assign(this.query.getValue(), {
-      offset: this.offset + this.limit,
-      limit: this.limit,
-    });
-    this.query.next(query);
-  }
+  // showMoreResults(): void {
+  //   const query = assign(this.query.getValue(), {
+  //     offset: this.offset + this.limit,
+  //     limit: this.limit,
+  //   });
+  //   this.query.next(query);
+  // }
 
   onClick(url: string): void {
     console.log(url);
@@ -202,6 +212,17 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
     if (!this.document.getSelection()!.toString()) {
       this.router.navigateByUrl(url);
       console.log(url + 'hah');
+    }
+  }
+
+  pageChanged(event: PageEvent): void {
+    if (event.previousPageIndex! < event.pageIndex) {
+      this.offset = this.offset + this.limit;
+      const query = assign(this.query.getValue(), {
+        offset: this.offset,
+        limit: this.limit,
+      });
+      this.query.next(query);
     }
   }
 }

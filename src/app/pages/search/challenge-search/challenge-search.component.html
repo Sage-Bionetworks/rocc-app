@@ -17,14 +17,18 @@
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
       name="searchTerms" [values]="searchTermsFilterValues">
     </sage-search-filter>
-    <span
+    <!-- <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
-      results</span>
+      results</span> -->
 
     <mat-nav-list class="challenge-search-results">
-      <mat-paginator [length]="searchResultsCount" [pageSizeOptions]=[limit]>
+      <mat-paginator 
+        [length]="searchResultsCount" 
+        [hidePageSize]="true"
+        [pageSizeOptions]="[limit]"
+        (page)="pageChanged($event)">
       </mat-paginator>
-      <rocc-challenge-card *ngFor="let challenge of obs | async"
+      <rocc-challenge-card *ngFor="let challenge of challengeList | async"
         [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
       </rocc-challenge-card>
     </mat-nav-list>
