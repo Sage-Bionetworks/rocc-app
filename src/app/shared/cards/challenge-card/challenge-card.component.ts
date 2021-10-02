@@ -22,8 +22,8 @@ export class ChallengeCardComponent implements OnInit {
   @Input() loggedIn!: boolean;
   platform$!: Observable<ChallengePlatform>;
 
-  starred: boolean = false;
-  numberStarred: number = 0;
+  starred!: boolean;
+  numberStarred!: number;
 
   // mock up data
   numberSubmissions: number = 200;
@@ -68,33 +68,34 @@ export class ChallengeCardComponent implements OnInit {
           return of(false);
         }),
         tap((starred: boolean) => (this.starred = starred))
-      );
+      )
+      .subscribe();
   }
 
   toggleStar(event: Event): void {
-    event.stopPropagation();
     if (this.loggedIn) {
       this.starred = !this.starred;
-      this.starService();
+      this.starService().subscribe();
     } else {
       this.authService.setRedirectUrl(this.router.url);
       this.router.navigate(['login']);
     }
+    event.stopPropagation();
   }
 
-  starService(): void {
+  starService(): any {
     if (this.starred) {
-      this.userService.starChallenge(
-        this.challenge.fullName.split('/')[0],
-        this.challenge.name
-      );
       this.numberStarred += 1;
-    } else {
-      this.userService.unstarChallenge(
+      return this.userService.starChallenge(
         this.challenge.fullName.split('/')[0],
         this.challenge.name
       );
+    } else {
       this.numberStarred -= 1;
+      return this.userService.unstarChallenge(
+        this.challenge.fullName.split('/')[0],
+        this.challenge.name
+      );
     }
   }
 
