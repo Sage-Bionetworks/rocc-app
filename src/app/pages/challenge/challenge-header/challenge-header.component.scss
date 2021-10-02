@@ -70,13 +70,13 @@ a {
         .mat-icon-button {
           height: inherit;
           font-size: 3em;
+          margin-left: 10px;
 
           .mat-icon {
             display: inline-flex;
             align-items: center;
-            margin-left: 10px;
 
-            &.rocc-challenge-favorite-icon {
+            &.starred-icon {
               color: #f1d07e;
             }
           }
