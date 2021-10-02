@@ -22,11 +22,10 @@
       results</span> -->
 
     <mat-nav-list class="challenge-search-results">
-      <mat-paginator 
+      <mat-paginator
         [length]="searchResultsCount" 
-        [hidePageSize]="true"
-        [pageSizeOptions]="[limit]"
-        (page)="pageChanged($event)">
+        [pageSizeOptions]="[10, 25, 50]"
+        (page)="onPaginate($event)">
       </mat-paginator>
       <rocc-challenge-card *ngFor="let challenge of challengeList | async"
         [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">

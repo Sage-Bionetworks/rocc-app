@@ -29,14 +29,13 @@ import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
 import { ChallengeSearchQuery } from './challenge-search-query';
 import deepEqual from 'deep-equal';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ButtonToggleFilterValue } from '@app/shared/filters/button-toggle-filter/button-toggle-filter-value';
 import assign from 'lodash-es/assign';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
-import { Observable } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
@@ -65,7 +64,6 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
 
   limit = 10;
   offset = 0;
-  total = 96;
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
@@ -206,6 +204,14 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   //   this.query.next(query);
   // }
 
+  updateQuery(): void {
+    const query = assign(this.query.getValue(), {
+      offset: this.offset,
+      limit: this.limit,
+    });
+    this.query.next(query);
+  }
+
   onClick(url: string): void {
     console.log(url);
     // ignore click if text is selected
@@ -215,14 +221,15 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
     }
   }
 
-  pageChanged(event: PageEvent): void {
+  onPaginate(event: PageEvent): void {
+    if (this.limit !== event.pageSize) {
+      this.limit = event.pageSize;
+      this.updateQuery();
+    }
+
     if (event.previousPageIndex! < event.pageIndex) {
       this.offset = this.offset + this.limit;
-      const query = assign(this.query.getValue(), {
-        offset: this.offset,
-        limit: this.limit,
-      });
-      this.query.next(query);
+      this.updateQuery();
     }
   }
 }
