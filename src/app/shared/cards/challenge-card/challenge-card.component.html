@@ -1,6 +1,7 @@
 <mat-card *ngIf="challenge">
-  <img class="rocc-challenge-platform-logo" *ngIf="platform$ | async as platform" 
-    src="{{platform.avatarUrl}}" alt="platform-logo"> 
+  <a href="{{platform.websiteUrl}}" *ngIf="platform$ | async as platform" (click)="toggleLink($event)">
+    <img class="rocc-challenge-platform-logo" src="{{platform.avatarUrl}}"> 
+  </a>
   <mat-card-header>
     <mat-card-title>
       {{challenge.displayName}}
