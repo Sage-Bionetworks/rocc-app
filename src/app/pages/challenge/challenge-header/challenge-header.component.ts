@@ -104,11 +104,9 @@ export class ChallengeHeaderComponent implements OnInit {
 
   getStarredTooltip(): string {
     if (this.loggedIn) {
-      return (
-        'Click to ' +
-        (this.starred ? 'unstar' : 'star') +
-        ' this from your favorites'
-      );
+      return this.starred
+        ? 'Click to remove this from your favorites!'
+        : 'Click to add this to your favorites!';
     } else {
       return 'You must be logged in to star a challenge';
     }
