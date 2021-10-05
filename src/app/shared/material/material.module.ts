@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
@@ -29,6 +30,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatInputModule,
     MatListModule,
     MatNativeDateModule,
+    MatPaginatorModule,
     MatProgressBarModule,
     MatRadioModule,
     MatSelectModule,
@@ -46,6 +48,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatInputModule,
     MatListModule,
     MatNativeDateModule,
+    MatPaginatorModule,
     MatProgressBarModule,
     MatRadioModule,
     MatSelectModule,
