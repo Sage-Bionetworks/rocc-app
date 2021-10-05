@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   OnInit,
+  OnDestroy,
   QueryList,
   ViewChild,
   ViewChildren,
@@ -54,7 +55,9 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   templateUrl: './challenge-search.component.html',
   styleUrls: ['./challenge-search.component.scss'],
 })
-export class ChallengeSearchComponent implements OnInit, AfterViewInit {
+export class ChallengeSearchComponent
+  implements OnInit, AfterViewInit, OnDestroy
+{
   challenges: Challenge[] = [];
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
