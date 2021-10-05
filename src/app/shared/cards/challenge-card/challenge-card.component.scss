@@ -7,6 +7,7 @@
   padding: 2em 1.5em 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -27,9 +28,10 @@
 
     .mat-icon-button {
       height: inherit;
+      margin-left: 5px;
       font-size: 1.2em;
 
-      .rocc-challenge-favorite-icon {
+      .starred-icon {
         color: #f1d07e;
       }
     }
@@ -79,10 +81,6 @@
     .rocc-challenge-stats-container {
       display: flex;
       margin-top: auto;
-
-      & > div:not(.rocc-challenge-status) {
-        cursor: help;
-      }
 
       div {
         display: inline-flex;
@@ -136,5 +134,4 @@
   height: 5em;
   width: 5em;
   z-index: 2;
-  cursor: pointer;
 }
