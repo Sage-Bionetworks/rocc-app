@@ -3,6 +3,7 @@
     "outDir": "./dist",
     "sourceMap": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

@@ -1,8 +1,8 @@
 // import { Schema, model, connect } from 'mongoose';
 import mongoose from 'mongoose';
-import { User } from '@sage-bionetworks/rocc-client-angular';
 import { config } from './config';
-import StarredChallenge from './models/starred-challenge';
+import { AccountModel } from './models';
+import userList from './seeds/development/users.json';
 
 
 let message: string = 'Hello World';
@@ -11,6 +11,7 @@ console.log(message);
 console.log(config);
 
 
+console.log(userList.users);
 
 // let user: User = {
 //   id: '615e5b572797c126680142e5',
@@ -24,11 +25,12 @@ console.log(config);
 
 async function run(): Promise<void> {
 
-  await mongoose.connect('mongodb://localhost:27017/rocc', config.mongo.options);
+  const dbUri = 'mongodb://localhost:27017/rocc';
+  await mongoose.connect(dbUri, config.mongo.options);
 
-  await StarredChallenge.find({})
-    .deleteMany()
-    .catch(err => console.log('Error populating starred challenges', err));
+  // await StarredChallenge.find({})
+  //   .deleteMany()
+  //   .catch(err => console.log('Error populating starred challenges', err));
 
   // const doc = new UserModel({
   //   name: 'Bill',
@@ -42,4 +44,8 @@ async function run(): Promise<void> {
 
 run()
   .then(plop => console.log('Connected to DB', plop))
+  .then(() => {
+    return AccountModel.find({})
+      .deleteMany();
+  })
   .catch(err => console.log(err));

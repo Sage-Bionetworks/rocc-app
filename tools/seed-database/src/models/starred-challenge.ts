@@ -5,9 +5,19 @@ interface StarredChallenge {
   challengeId: string;
 }
 
-const StarredChallengeSchema = new Schema<StarredChallenge>({
-  userId: { type: String, required: true },
-  challengeId: { type: String, required: true }
-});
+const options = {
+  collection: 'starred_challenge',
+};
 
-export default model('starred_challenge', StarredChallengeSchema);
+const StarredChallengeSchema = new Schema<StarredChallenge>(
+  {
+    userId: { type: String, required: true },
+    challengeId: { type: String, required: true },
+  },
+  options
+);
+
+export const StarredChallengeModel = model(
+  'StarredChallenge',
+  StarredChallengeSchema
+);
