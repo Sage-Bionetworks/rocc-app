@@ -8,6 +8,12 @@ Install the dependencies
 npm ci
 ```
 
+Export the configuration to environment variables
+
+```console
+export $(grep -v '^#' .env | xargs)
+```
+
 Build and start the program (development mode)
 
 ```console

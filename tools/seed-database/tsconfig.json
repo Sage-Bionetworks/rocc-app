@@ -3,6 +3,9 @@
     "outDir": "./dist",
     "sourceMap": true,
     "moduleResolution": "node",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "target": "es2015",
     "module": "commonjs",
     "lib": [
