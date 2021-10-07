@@ -2,14 +2,16 @@
 
 ## Usage
 
-Build the program:
+Install the dependencies
 
 ```console
-tsc
+npm ci
 ```
 
-Run the program:
+Build and start the program (development mode)
 
 ```console
-node dist/seed-database.js
+npm run start
 ```
+
+Press `Ctrl+C` to exit the program.
