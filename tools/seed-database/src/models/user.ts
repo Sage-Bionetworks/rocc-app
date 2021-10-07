@@ -1,5 +1,5 @@
 import { Schema } from 'mongoose';
-import AccountModel from './account';
+import { AccountModel } from './account';
 
 interface User {
   login: string;

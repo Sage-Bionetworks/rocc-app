@@ -1,5 +1,5 @@
 export const config = {
-  environment: process.env.ENVIRONMENT || 'development',
+  dbSeedName: process.env.SEED_NAME || 'development',
 
   mongo: {
     options: {
