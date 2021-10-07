@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@sage-bionetworks/rocc-client-angular": "file:../../rocc-client-angular/dist/rocc-client",
+    "commander": "^8.2.0",
     "lodash-es": "^4.17.21",
     "mongoose": "^6.0.9"
   },
