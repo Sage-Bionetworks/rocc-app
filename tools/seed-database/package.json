@@ -11,6 +11,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@sage-bionetworks/rocc-client-angular": "file:../../rocc-client-angular/dist/rocc-client"
+  },
   "devDependencies": {
     "@types/node": "^16.10.3",
     "mongoose": "^6.0.9",
