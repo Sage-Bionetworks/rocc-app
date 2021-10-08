@@ -2,6 +2,7 @@ import { connect, connection } from 'mongoose';
 import { Command } from 'commander';
 import { dropCollections } from './database';
 import { config } from './config';
+import * as Pkg from '../package.json';
 
 export class App {
   private program: any;
@@ -14,7 +15,7 @@ export class App {
       .usage("[global options] command");
 
     this.program
-      .version('0.0.1', '-v, --version', 'output the current version');
+      .version(Pkg.version, '-v, --version', 'output the current version');
 
     this.program
       .command('ping', 'ping the MongoDB instance')

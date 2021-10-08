@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "sourceMap": true,
     "moduleResolution": "node",
-    // "resolveJsonModule": true,
+    "resolveJsonModule": true,
     "strict": true,
     // "allowSyntheticDefaultImports": false,
     // "esModuleInterop": true,
@@ -11,8 +11,10 @@
     "target": "ES2020",
     "module": "commonjs",
     "lib": [
-      "ES2020",
-      // "dom"
+      "ES2020"
     ],
-  }
+  },
+  // "include": [
+  //   "package.json"
+  // ]
 }

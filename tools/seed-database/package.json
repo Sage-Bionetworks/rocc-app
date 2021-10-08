@@ -2,14 +2,14 @@
   "name": "@sage-bionetworks/rocc-db-client",
   "version": "0.1.0",
   "description": "Client for ROCC DB instances",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "start": "npm run build:live",
     "build": "tsc -p .",
     "config": "export $(grep -v '^#' .env | xargs)",
     "build:live": "npm run config && nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts",
-    "test": "npm run build && node dist/index.js --help",
+    "test": "npm run build && node dist/src/index.js --help",
     "package": "pkg ."
   },
   "keywords": [],
