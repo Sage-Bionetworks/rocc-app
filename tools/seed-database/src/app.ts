@@ -22,11 +22,12 @@ export class App {
       .action(() => this.ping());
 
     this.program
-      .command('start <service>', 'start named service')
-      .command(
-        'stop [service]',
-        'stop named service, or all if no name supplied'
-      );
+      .command('seed')
+      .description(
+        'seed the db with the JSON files from the directory specified'
+      )
+      .argument('<directory>')
+      .action((directory: string) => this.seed(directory));
 
     this.program
       .option('--uri <uri>', 'MongoDB uri', 'mongodb://localhost:27017/rocc')
@@ -34,17 +35,24 @@ export class App {
       .option('--password <password>', 'MongoDB password', 'roccmongo');
   }
 
+  private async seed(directory: string): Promise<void> {
+    return this.connect()
+      .then(dropCollections)
+      .then((success) => {
+        process.exit(success ? 0 : -1);
+      })
+      .catch((err: any) => {
+        console.log(err);
+        process.exit(-1);
+      });
+  }
+
   private async ping(): Promise<void> {
     return this.connect()
       .then(pingDatabase)
       .then((pong) => {
-        if (pong) {
-          console.log('pong');
-          process.exit(0);
-        } else {
-          console.log('No pong received');
-          process.exit(-1);
-        }
+        console.log(pong ? 'pong' : 'No pong received');
+        process.exit(pong ? 0 : -1);
       })
       .catch((err: any) => {
         console.log(err);
@@ -68,23 +76,5 @@ export class App {
 
   public async run(): Promise<void> {
     await this.program.parseAsync(process.argv);
-
-    const options = this.program.opts();
-    console.log('options:', options);
-
-    // config.mongo.uri =
-
-    // const mongooseConnection = connect(config.mongo.uri, config.mongo.options);
-    // connection.on('error', (err: any) => {
-    //   console.error(`MongoDB connection error: ${err}`);
-    //   process.exit(-1);
-    // });
-
-    // return mongooseConnection
-    //   .then(() => console.log('Connected to DB'))
-    //   .then(dropCollections)
-    //   // .then(seedDatabase)
-    //   .then(() => console.log('DB seeding complete'))
-    //   .catch((err: any) => console.log(err));
   }
 }
