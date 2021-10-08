@@ -1,6 +1,6 @@
-import { connect, connection } from 'mongoose';
+import { connect, connection, Mongoose } from 'mongoose';
 import { Command } from 'commander';
-import { dropCollections } from './database';
+import { dropCollections, pingDatabase } from './database';
 import { config } from './config';
 import * as Pkg from '../package.json';
 
@@ -11,36 +11,70 @@ export class App {
     this.program = new Command();
 
     this.program
-      .name("rocc-client")
-      .usage("[global options] command");
+      .name('rocc-client')
+      .usage('[global options] command')
+      .version(Pkg.version, '-v, --version', 'output the current version')
+      .description(Pkg.description);
 
     this.program
-      .version(Pkg.version, '-v, --version', 'output the current version');
-
-    this.program
-      .command('ping', 'ping the MongoDB instance')
-      .action(() => {
-        console.log('pong');
-      });
+      .command('ping')
+      .description('ping the MongoDB instance')
+      .action(() => this.ping());
 
     this.program
       .command('start <service>', 'start named service')
-      .command('stop [service]', 'stop named service, or all if no name supplied');
+      .command(
+        'stop [service]',
+        'stop named service, or all if no name supplied'
+      );
 
-    // this.program
-    //   .option('--uri <uri>', 'MongoDB uri', 'mongodb://localhost:27017/rocc')
-    //   .option('--username <username>', 'MongoDB username', 'roccmongo')
-    //   .option('--password <password>', 'MongoDB password', 'roccmongo')
-    //   .option('--input <path>', 'directory that contains the JSON files');
+    this.program
+      .option('--uri <uri>', 'MongoDB uri', 'mongodb://localhost:27017/rocc')
+      .option('--username <username>', 'MongoDB username', 'roccmongo')
+      .option('--password <password>', 'MongoDB password', 'roccmongo');
   }
 
-  public run(): void {
-    this.program.parse(process.argv);
+  private async ping(): Promise<void> {
+    return this.connect()
+      .then(pingDatabase)
+      .then((pong) => {
+        if (pong) {
+          console.log('pong');
+          process.exit(0);
+        } else {
+          console.log('No pong received');
+          process.exit(-1);
+        }
+      })
+      .catch((err: any) => {
+        console.log(err);
+        process.exit(-1);
+      });
+  }
+
+  private plop(): void {
+    console.log('plop');
+  }
+
+  private async connect(): Promise<Mongoose> {
+    const options = this.program.opts();
+    const connectOptions = {
+      user: options.username,
+      pass: options.password,
+    };
+    const mongooseConnection = connect(options.uri, connectOptions);
+    connection.on('error', (err: any) => {
+      console.error(`MongoDB connection error: ${err}`);
+      process.exit(-1);
+    });
+    return mongooseConnection;
+  }
+
+  public async run(): Promise<void> {
+    await this.program.parseAsync(process.argv);
 
     const options = this.program.opts();
     console.log('options:', options);
-
-
 
     // config.mongo.uri =
 
@@ -58,4 +92,3 @@ export class App {
     //   .catch((err: any) => console.log(err));
   }
 }
-

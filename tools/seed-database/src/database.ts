@@ -11,6 +11,13 @@ export const dropCollections = async (): Promise<boolean[]> => {
     .then((promises: Promise<boolean>[]) => Promise.all(promises));
 };
 
+export const pingDatabase = async (): Promise<boolean> => {
+  const db: any = connection.db;
+  return db.admin().ping()
+    .then((res: any) => !!res && res?.ok === 1);
+
+}
+
 // const seedDatabase = async (): Promise<any> => {
 //   console.log(`Initializing db with seed: ${config.dbSeedName}`);
 
