@@ -52,10 +52,6 @@ export class App {
       });
   }
 
-  private plop(): void {
-    console.log('plop');
-  }
-
   private async connect(): Promise<Mongoose> {
     const options = this.program.opts();
     const connectOptions = {
