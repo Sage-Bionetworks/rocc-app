@@ -10,10 +10,27 @@ export class App {
     this.program = new Command();
 
     this.program
-      .option('--uri <uri>', 'MongoDB uri', 'mongodb://localhost:27017/rocc')
-      .option('--username <username>', 'MongoDB username', 'roccmongo')
-      .option('--password <password>', 'MongoDB password', 'roccmongo')
-      .option('--input <path>', 'directory that contains the JSON files');
+      .name("rocc-client")
+      .usage("[global options] command");
+
+    this.program
+      .version('0.0.1', '-v, --version', 'output the current version');
+
+    this.program
+      .command('ping', 'ping the MongoDB instance')
+      .action(() => {
+        console.log('pong');
+      });
+
+    this.program
+      .command('start <service>', 'start named service')
+      .command('stop [service]', 'stop named service, or all if no name supplied');
+
+    // this.program
+    //   .option('--uri <uri>', 'MongoDB uri', 'mongodb://localhost:27017/rocc')
+    //   .option('--username <username>', 'MongoDB username', 'roccmongo')
+    //   .option('--password <password>', 'MongoDB password', 'roccmongo')
+    //   .option('--input <path>', 'directory that contains the JSON files');
   }
 
   public run(): void {
@@ -21,6 +38,8 @@ export class App {
 
     const options = this.program.opts();
     console.log('options:', options);
+
+
 
     // config.mongo.uri =
 
