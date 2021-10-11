@@ -51,7 +51,6 @@ export class OrgChallengesComponent implements OnInit {
 
   onClick(url: string): void {
     // ignore click if text is selected
-    console.log(url);
     if (!this.document.getSelection()!.toString()) {
       this.router.navigateByUrl(url);
     }

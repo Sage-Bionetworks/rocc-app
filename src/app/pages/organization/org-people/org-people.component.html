@@ -1,6 +1,7 @@
 <div class="rocc-org-persons-container" *ngIf="persons$ | async as persons">
   <rocc-user-card
     *ngFor="let person of persons"
-    [person]="person">
+    [person]="person"
+    (click)="onClick('/' + person.login)">
   </rocc-user-card>
 </div>
