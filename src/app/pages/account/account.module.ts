@@ -14,6 +14,7 @@ import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 import { OrgHeaderModule } from './org-account/org-header/org-header.module';
 import { OrgOverviewComponent } from './org-account/org-overview/org-overview.component';
 import { UserProfileStarredComponent } from './user-account/user-profile-starred/user-profile-starred.component';
+import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { UserProfileStarredComponent } from './user-account/user-profile-starred
     AccountRoutingModule,
     OrgHeaderModule,
     AvatarModule,
+    OrgCardModule,
   ],
   declarations: [
     AccountComponent,

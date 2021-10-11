@@ -10,7 +10,8 @@ import {
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, mapTo, tap } from 'rxjs/operators';
 import { isRoccClientError } from '@app/shared/rocc-client-error';
-
+import { Router } from '@angular/router';
+import { AuthService } from '@shared/auth/auth.service';
 @Component({
   selector: 'rocc-challenge-card',
   templateUrl: './challenge-card.component.html',
@@ -21,14 +22,16 @@ export class ChallengeCardComponent implements OnInit {
   @Input() loggedIn!: boolean;
   platform$!: Observable<ChallengePlatform>;
 
-  starred: boolean = false;
-  numberStarred: number = 0;
+  starred!: boolean;
+  numberStarred!: number;
 
   // mock up data
   numberSubmissions: number = 200;
   numberRegistrants: number = 100;
 
   constructor(
+    private router: Router,
+    private authService: AuthService,
     private challengePlatformService: ChallengePlatformService,
     private userService: UserService,
     private challengeService: ChallengeService
@@ -65,24 +68,48 @@ export class ChallengeCardComponent implements OnInit {
           return of(false);
         }),
         tap((starred: boolean) => (this.starred = starred))
-      );
+      )
+      .subscribe();
   }
 
   toggleStar(event: Event): void {
-    event.stopPropagation();
-    this.starred = !this.starred;
-    if (this.starred) {
-      this.userService.starChallenge(
-        this.challenge.fullName.split('/')[0],
-        this.challenge.name
-      );
-      this.numberStarred += 1;
+    if (this.loggedIn) {
+      this.starred = !this.starred;
+      this.starService().subscribe();
     } else {
-      this.userService.unstarChallenge(
+      this.authService.setRedirectUrl(this.router.url);
+      this.router.navigate(['login']);
+    }
+    event.stopPropagation();
+  }
+
+  starService(): any {
+    if (this.starred) {
+      this.numberStarred += 1;
+      return this.userService.starChallenge(
         this.challenge.fullName.split('/')[0],
         this.challenge.name
       );
+    } else {
       this.numberStarred -= 1;
+      return this.userService.unstarChallenge(
+        this.challenge.fullName.split('/')[0],
+        this.challenge.name
+      );
     }
+  }
+
+  getStarredTooltip(): string {
+    if (this.loggedIn) {
+      return this.starred
+        ? 'Click to remove this from your favorites'
+        : 'Click to add this to your favorites';
+    } else {
+      return 'You must be logged in to star a challenge';
+    }
+  }
+
+  toggleLink(event: Event): void {
+    event.stopPropagation();
   }
 }

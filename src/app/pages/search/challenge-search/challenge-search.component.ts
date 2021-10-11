@@ -2,7 +2,9 @@ import {
   AfterViewInit,
   Component,
   OnInit,
+  OnDestroy,
   QueryList,
+  ViewChild,
   ViewChildren,
   Inject,
 } from '@angular/core';
@@ -28,12 +30,14 @@ import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
 import { ChallengeSearchQuery } from './challenge-search-query';
 import deepEqual from 'deep-equal';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ButtonToggleFilterValue } from '@app/shared/filters/button-toggle-filter/button-toggle-filter-value';
 import assign from 'lodash-es/assign';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
   offset: 0,
@@ -51,9 +55,13 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   templateUrl: './challenge-search.component.html',
   styleUrls: ['./challenge-search.component.scss'],
 })
-export class ChallengeSearchComponent implements OnInit, AfterViewInit {
+export class ChallengeSearchComponent
+  implements OnInit, AfterViewInit, OnDestroy
+{
   challenges: Challenge[] = [];
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   private query: BehaviorSubject<ChallengeSearchQuery> =
     new BehaviorSubject<ChallengeSearchQuery>(defaultChallengeSearchQuery);
 
@@ -67,6 +75,10 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
   searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
   loggedIn = false;
+  challengeList!: Observable<any>;
+  dataSource!: MatTableDataSource<Challenge>;
+  ran = true;
+
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -142,10 +154,23 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
           if (page) {
             this.searchResultsCount = page.totalResults ? page.totalResults : 0;
             this.challenges.push(...page.challenges);
+            this.dataSource = new MatTableDataSource<Challenge>(
+              this.challenges
+            );
+            // prevent total results from being overwritten in dataSource
+            setTimeout(() => (this.paginator.length = this.searchResultsCount));
+            this.dataSource.paginator = this.paginator;
+            this.challengeList = this.dataSource.connect();
           }
         },
         (err) => console.log(err)
       );
+  }
+
+  ngOnDestroy(): void {
+    if (this.dataSource) {
+      this.dataSource.disconnect();
+    }
   }
 
   private listChallengePlatforms(): void {
@@ -174,9 +199,17 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
       );
   }
 
-  showMoreResults(): void {
+  // showMoreResults(): void {
+  //   const query = assign(this.query.getValue(), {
+  //     offset: this.offset + this.limit,
+  //     limit: this.limit,
+  //   });
+  //   this.query.next(query);
+  // }
+
+  updateQuery(): void {
     const query = assign(this.query.getValue(), {
-      offset: this.offset + this.limit,
+      offset: this.offset,
       limit: this.limit,
     });
     this.query.next(query);
@@ -188,6 +221,18 @@ export class ChallengeSearchComponent implements OnInit, AfterViewInit {
     if (!this.document.getSelection()!.toString()) {
       this.router.navigateByUrl(url);
       console.log(url + 'hah');
+    }
+  }
+
+  onPaginate(event: PageEvent): void {
+    if (this.limit !== event.pageSize) {
+      this.limit = event.pageSize;
+      this.updateQuery();
+    }
+
+    if (event.previousPageIndex! < event.pageIndex) {
+      this.offset = this.offset + this.limit;
+      this.updateQuery();
     }
   }
 }

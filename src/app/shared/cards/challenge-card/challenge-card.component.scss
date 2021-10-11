@@ -7,6 +7,7 @@
   padding: 1.5em 1.5em 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -27,9 +28,10 @@
 
     .mat-icon-button {
       height: inherit;
+      margin-left: 5px;
       font-size: 1.2em;
 
-      .rocc-challenge-favorite-icon {
+      .starred-icon {
         color: #f1d07e;
       }
     }
@@ -115,23 +117,23 @@
   }
 }
 
-.rocc-challenge-active {
-  color: green;
-}
-
-.rocc-challenge-upcoming {
-  color: yellow;
-}
-
-.rocc-challenge-completed {
-  color: grey;
+.rocc-challenge-status {
+  .active {
+    color: green;
+  }
+  .upcoming {
+    color: orange;
+  }
+  .completed {
+    color: gray;
+  }
 }
 
 .rocc-challenge-platform-logo {
   position: absolute;
   right: 1.5em;
   top: 2em;
-  height: 4em;
-  width: 4em;
+  height: 5em;
+  width: 5em;
   z-index: 2;
 }

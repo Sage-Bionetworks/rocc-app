@@ -17,21 +17,26 @@
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
       name="searchTerms" [values]="searchTermsFilterValues">
     </sage-search-filter>
-    <span
+    <!-- <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
-      results</span>
+      results</span> -->
 
     <mat-nav-list class="challenge-search-results">
-      <rocc-challenge-card *ngFor="let challenge of challenges"
+      <rocc-challenge-card *ngFor="let challenge of challengeList | async"
         [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
       </rocc-challenge-card>
+      <mat-paginator
+      [length]="searchResultsCount" 
+      [pageSizeOptions]="[10, 25, 50]"
+      (page)="onPaginate($event)">
+    </mat-paginator>
     </mat-nav-list>
 
-    <div class="rocc-challenge-list-more-results">
+    <!-- <div class="rocc-challenge-list-more-results">
       <a *ngIf="searchResultsCount - challenges.length > 0" mat-raised-button
         class="rocc-challenge-list-more-results-btn" color="primary"
         (click)="showMoreResults()">More Results
       </a>
-    </div>
+    </div> -->
   </div>
 </div>

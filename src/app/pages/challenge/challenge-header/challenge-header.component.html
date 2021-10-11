@@ -10,7 +10,7 @@
       <div class="rocc-challenge-detail-title-container">
         <span>{{challenge.displayName}}</span>
         <button mat-icon-button (click)="toggleStarred()" [matTooltip]="getStarredTooltip()">
-          <mat-icon *ngIf="starred" class="rocc-challenge-favorite-icon" inline=true>
+          <mat-icon *ngIf="starred" class="starred-icon" inline=true>
             star
           </mat-icon>
           <mat-icon *ngIf="!starred" inline=true>
