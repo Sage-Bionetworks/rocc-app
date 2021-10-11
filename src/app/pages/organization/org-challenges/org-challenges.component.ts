@@ -20,6 +20,8 @@ import { DOCUMENT } from '@angular/common';
 import { of } from 'rxjs';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import assign from 'lodash-es/assign';
+
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
