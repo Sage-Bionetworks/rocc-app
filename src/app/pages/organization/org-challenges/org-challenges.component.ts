@@ -13,14 +13,13 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { AuthService } from '@shared/auth/auth.service';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { of } from 'rxjs';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import assign from 'lodash-es/assign';
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
@@ -45,7 +44,7 @@ export class OrgChallengesComponent
   dataSource!: MatTableDataSource<Challenge>;
   loggedIn!: boolean;
   challenges: Challenge[] = [];
-  challenges$!: Observable<Challenge[] | undefined>;
+  challenges$!: Observable<Challenge[]>;
 
   constructor(
     private router: Router,
