@@ -40,8 +40,8 @@
 }
 
 .rocc-challenge-topics-container {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 0.5em;
   // height: 1.8em;
 
