@@ -45,7 +45,7 @@ export class OrgChallengesComponent
   dataSource!: MatTableDataSource<Challenge>;
   loggedIn!: boolean;
   challenges: Challenge[] = [];
-  challenges$!: Observable<Challenge[]>;
+  challenges$!: Observable<Challenge[] | undefined>;
 
   constructor(
     private router: Router,
@@ -79,7 +79,7 @@ export class OrgChallengesComponent
         })
       )
       .subscribe((page) => {
-        if (page) {
+        if (page && page.totalResults != 0) {
           this.searchResultsCount = page.totalResults ? page.totalResults : 0;
           this.challenges.push(...page.challenges);
           this.dataSource = new MatTableDataSource<Challenge>(this.challenges);
