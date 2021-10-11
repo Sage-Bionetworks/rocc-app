@@ -75,9 +75,8 @@ export class ChallengeSearchComponent
   searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
   loggedIn = false;
-  challengeList!: Observable<any>;
+  challengeList!: Observable<Challenge[]>;
   dataSource!: MatTableDataSource<Challenge>;
-  ran = true;
 
   constructor(
     private router: Router,
@@ -216,7 +215,6 @@ export class ChallengeSearchComponent
   }
 
   onClick(url: string): void {
-    console.log(url);
     // ignore click if text is selected
     if (!this.document.getSelection()!.toString()) {
       this.router.navigateByUrl(url);
