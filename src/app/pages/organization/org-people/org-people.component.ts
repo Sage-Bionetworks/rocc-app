@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import {
   Organization,
   User,
@@ -8,6 +8,8 @@ import {
 import { OrgDataService } from '../org-data.service';
 import { forkJoin, Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 import { of } from 'rxjs';
 @Component({
   selector: 'rocc-org-people',
@@ -18,9 +20,11 @@ export class OrgPeopleComponent implements OnInit {
   // org!: Organization | undefined;
   persons$!: Observable<User[] | undefined>;
   constructor(
+    private router: Router,
     private orgDataService: OrgDataService,
     private userService: UserService,
-    private orgMembershipService: OrgMembershipService
+    private orgMembershipService: OrgMembershipService,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
@@ -45,5 +49,11 @@ export class OrgPeopleComponent implements OnInit {
           );
         })
       );
+  }
+
+  onClick(url: string): void {
+    if (!this.document.getSelection()!.toString()) {
+      this.router.navigateByUrl(url);
+    }
   }
 }
