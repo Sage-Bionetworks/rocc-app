@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ViewChild,
-  OnInit,
-  Input,
-} from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 
@@ -26,7 +20,7 @@ import { Avatar } from '@sage-bionetworks/sage-angular';
   templateUrl: './challenge-overview.component.html',
   styleUrls: ['./challenge-overview.component.scss'],
 })
-export class ChallengeOverviewComponent implements OnInit, AfterViewInit {
+export class ChallengeOverviewComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   accountName!: string;
@@ -56,21 +50,20 @@ export class ChallengeOverviewComponent implements OnInit, AfterViewInit {
         )
       )
       .subscribe((organizerList: ChallengeOrganizerList) => {
-        const organizers: any = organizerList.challengeOrganizers;
+        const organizers = organizerList.challengeOrganizers;
         this.organizers = organizers;
         this.dataSource =
           organizers.length > 0
             ? new MatTableDataSource(organizers)
             : undefined;
+        setTimeout(() => {
+          if (this.dataSource) {
+            this.dataSource.sort = this.sort;
+          }
+        });
       });
 
     this.readme$ = this.challengeDataService.getReadme();
-  }
-
-  ngAfterViewInit() {
-    if (this.dataSource) {
-      this.dataSource.sort = this.sort;
-    }
   }
 
   // TODO: use avatarUrl once we can access
