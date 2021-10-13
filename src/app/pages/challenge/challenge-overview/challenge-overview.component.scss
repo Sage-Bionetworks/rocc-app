@@ -85,7 +85,7 @@ section {
         transform: translateY(0px) !important;
       }
 
-      ::ng-deep.mat-sort-header-sorted.mat-sort-header-arrow {
+      ::ng-deep .mat-sort-header-sorted .mat-sort-header-arrow {
         color: #000 !important;
       }
 
