@@ -41,9 +41,7 @@
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/app/pages"
-              ]
+              "includePaths": ["src/app/pages"]
             },
             "scripts": [],
             "preserveSymlinks": true,
@@ -61,13 +59,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "3kb",
-                  "maximumError": "6kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -112,9 +110,7 @@
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/app/pages"
-              ]
+              "includePaths": ["src/app/pages"]
             },
             "scripts": []
           }
@@ -122,10 +118,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "e2e": {
