@@ -43,8 +43,39 @@ section {
   margin-top: 30px;
 
   span {
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-size: 2em;
     font-weight: 600;
+  }
+
+  .rocc-challenge-organizers-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    table {
+      width: 100%;
+
+      .mat-header-cell {
+        color: #000;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+
+      .mat-header-cell,
+      .mat-cell {
+        padding-left: 20px;
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

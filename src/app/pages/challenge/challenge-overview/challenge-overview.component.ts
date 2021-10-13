@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 
@@ -22,6 +22,7 @@ export class ChallengeOverviewComponent implements OnInit {
   challenge!: Challenge;
   organizers!: ChallengeOrganizer[];
   readme$!: Observable<ChallengeReadme>;
+  displayedColumns: string[] = ['name', 'login', 'roles'];
 
   constructor(
     private route: ActivatedRoute,
