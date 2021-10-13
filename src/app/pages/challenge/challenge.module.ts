@@ -12,6 +12,7 @@ import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 import { AuthModule } from '@shared/auth/auth.module';
 import { ChallengeStargazersComponent } from './challenge-stargazers/challenge-stargazers.component';
 import { UserCardModule } from '@app/shared/cards/user-card/user-card.module';
+import { AvatarModule } from '@sage-bionetworks/sage-angular';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { UserCardModule } from '@app/shared/cards/user-card/user-card.module';
     MaterialModule,
     NotFoundModule,
     AuthModule,
-    UserCardModule
+    UserCardModule,
+    AvatarModule,
   ],
   declarations: [
     ChallengeComponent,

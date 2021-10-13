@@ -1,4 +1,10 @@
-import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ViewChild,
+  OnInit,
+  Input,
+} from '@angular/core';
 import { Observable } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 
@@ -13,6 +19,7 @@ import { ChallengeDataService } from '../challenge-data.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import { Avatar } from '@sage-bionetworks/sage-angular';
 
 @Component({
   selector: 'rocc-challenge-overview',
@@ -20,13 +27,14 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./challenge-overview.component.scss'],
 })
 export class ChallengeOverviewComponent implements OnInit, AfterViewInit {
+  @ViewChild(MatSort) sort!: MatSort;
+
   accountName!: string;
   challenge!: Challenge;
   organizers!: ChallengeOrganizer[];
   readme$!: Observable<ChallengeReadme>;
   displayedColumns: string[] = ['name', 'login', 'roles'];
-  dataSource!: MatTableDataSource<ChallengeOrganizer> | undefined;
-  @ViewChild(MatSort) sort!: MatSort;
+  dataSource!: MatTableDataSource<any> | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -48,7 +56,7 @@ export class ChallengeOverviewComponent implements OnInit, AfterViewInit {
         )
       )
       .subscribe((organizerList: ChallengeOrganizerList) => {
-        const organizers = organizerList.challengeOrganizers;
+        const organizers: any = organizerList.challengeOrganizers;
         this.organizers = organizers;
         this.dataSource =
           organizers.length > 0
@@ -63,5 +71,14 @@ export class ChallengeOverviewComponent implements OnInit, AfterViewInit {
     if (this.dataSource) {
       this.dataSource.sort = this.sort;
     }
+  }
+
+  // TODO: use avatarUrl once we can access
+  getAvatar(name: string): Avatar {
+    return {
+      name: name,
+      src: '',
+      size: 30,
+    };
   }
 }

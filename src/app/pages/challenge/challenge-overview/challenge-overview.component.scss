@@ -68,6 +68,15 @@ section {
         border-right: 1px solid rgba(0, 0, 0, 0.12);
       }
 
+      .mat-column-name div {
+        display: flex;
+        align-items: center;
+
+        sage-avatar {
+          margin-right: 10px;
+        }
+      }
+
       a {
         text-decoration: none;
 
