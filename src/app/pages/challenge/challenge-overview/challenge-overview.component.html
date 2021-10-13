@@ -1,5 +1,5 @@
 <section>
-  <div *ngIf="challenge$ | async as challenge"
+  <div *ngIf="challenge"
     class="rocc-challenge-overview-top-container">
     <!-- <p>{{challenge.description}}</p>
     <mat-divider></mat-divider> -->
@@ -17,7 +17,7 @@
       <p>{{readme.text}}</p>
     </div>
     <div class="rocc-challenge-organizers-container">
-      
+      {{organizers}}
     </div>
   </div>
 </section>
