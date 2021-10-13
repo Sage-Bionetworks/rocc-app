@@ -27,7 +27,7 @@ export class ChallengeOverviewComponent implements OnInit {
   challenge!: Challenge;
   organizers!: ChallengeOrganizer[];
   readme$!: Observable<ChallengeReadme>;
-  displayedColumns: string[] = ['name', 'login', 'roles'];
+  displayedColumns: string[] = ['name', 'login', 'role'];
   dataSource!: MatTableDataSource<any> | undefined;
 
   constructor(

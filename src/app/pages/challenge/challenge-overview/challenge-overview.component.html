@@ -31,13 +31,13 @@
         </ng-container>
         <!-- Login Column -->
         <ng-container matColumnDef="login">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>UserId</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>User ID</th>
           <td mat-cell *matCellDef="let element"> 
             <a routerLink="/{{element.login}}">@{{element.login}}</a>
           </td>
         </ng-container>
         <!-- Roles Column -->
-        <ng-container matColumnDef="roles">
+        <ng-container matColumnDef="role">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
           <td mat-cell *matCellDef="let element">{{element.roles.join(', ')}}</td>
         </ng-container>
