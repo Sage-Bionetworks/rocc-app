@@ -13,7 +13,6 @@ import {
   ConfigurationParameters,
 } from '@sage-bionetworks/rocc-client-angular';
 import { BASE_PATH } from '@sage-bionetworks/rocc-client-angular';
-import { DatabaseSeedModule } from '@shared/database-seed/database-seed.module';
 import { FiltersModule } from '@shared/filters/filters.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -43,7 +42,6 @@ import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
     FooterModule,
     ApiModule,
     // ApiModule.forRoot(apiConfigFactory),
-    DatabaseSeedModule,
     FiltersModule,
     PageTitleModule,
     ChallengeCardModule,
