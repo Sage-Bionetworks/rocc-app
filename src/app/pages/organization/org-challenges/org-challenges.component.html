@@ -5,4 +5,10 @@
     [challenge]="challenge"
     [loggedIn]="loggedIn">
   </rocc-challenge-card>
+  <mat-paginator
+    [length]="searchResultsCount" 
+    [pageSizeOptions]="[10]"
+    [hidePageSize]="true"
+    (page)="onPaginate($event)">
+</mat-paginator>
 </main>
