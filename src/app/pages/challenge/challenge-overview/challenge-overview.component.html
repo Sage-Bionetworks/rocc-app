@@ -18,7 +18,7 @@
     </div>
     <span>Organizers</span>
     <div class="rocc-challenge-organizers-container">
-      <table mat-table matSort [dataSource]="dataSource" *ngIf="dataSource">
+      <table mat-table matSort *ngIf="dataSource" [dataSource]="dataSource">
         <!-- Name Column -->
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
