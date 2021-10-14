@@ -14,8 +14,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSortModule } from '@angular/material/sort';
 @NgModule({
   declarations: [],
   imports: [
@@ -34,8 +36,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatProgressBarModule,
     MatRadioModule,
     MatSelectModule,
+    MatTableModule,
     MatTabsModule,
     MatTooltipModule,
+    MatSortModule,
   ],
   exports: [
     MatButtonModule,
@@ -52,8 +56,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatProgressBarModule,
     MatRadioModule,
     MatSelectModule,
+    MatTableModule,
     MatTabsModule,
     MatTooltipModule,
+    MatSortModule,
   ],
 })
 export class MaterialModule {}
