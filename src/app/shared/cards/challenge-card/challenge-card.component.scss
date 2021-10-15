@@ -63,13 +63,15 @@
 }
 
 .mat-card-content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+  grid-gap: 2em;
   align-items: center;
   height: 100%;
   font-size: 1em;
 
   .rocc-challenge-left-content-container {
+    justify-self: left;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -96,6 +98,7 @@
   }
 
   .rocc-challenge-dates-container {
+    justify-self: right;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
