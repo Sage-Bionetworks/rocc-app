@@ -1,30 +1,32 @@
 <mat-card *ngIf="challenge">
-  <a href="{{platform.websiteUrl}}" *ngIf="platform$ | async as platform" (click)="toggleLink($event)">
-    <img class="rocc-challenge-platform-logo" src="{{platform.avatarUrl}}"> 
-  </a>
-  <mat-card-header>
-    <mat-card-title>
-      {{challenge.displayName}}
-      <button mat-icon-button
-        (click)="toggleStar($event)" 
-        [matTooltip]="getStarredTooltip()"
-        matTooltipPosition="above">
-        <mat-icon *ngIf="starred" class="starred-icon" inline=true>
-          star
-        </mat-icon>
-        <mat-icon *ngIf="!starred" inline=true >
-          star_border
-        </mat-icon>
-      </button>
-    </mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <div class="rocc-challenge-left-content-container">
-      <div class="rocc-challenge-topics-container">
+  <div class="header-container">
+    <mat-card-header>
+      <mat-card-title>
+        {{challenge.displayName}}
+        <button mat-icon-button
+          (click)="toggleStar($event)" 
+          [matTooltip]="getStarredTooltip()"
+          matTooltipPosition="above">
+          <mat-icon *ngIf="starred" class="starred-icon" inline=true>
+            star
+          </mat-icon>
+          <mat-icon *ngIf="!starred" inline=true >
+            star_border
+          </mat-icon>
+        </button>
+      </mat-card-title>
+      <mat-card-subtitle class="rocc-challenge-topics-container">
         <a href="" *ngFor="let topic of challenge.topics" >
           #{{topic}}
         </a>
-      </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <a href="{{platform.websiteUrl}}" *ngIf="platform$ | async as platform" (click)="toggleLink($event)">
+      <img class="rocc-challenge-platform-logo" src="{{platform.avatarUrl}}"> 
+    </a>
+  </div>
+  <mat-card-content>
+    <div class="rocc-challenge-left-content-container">
       <div class="rocc-challenge-descriptions">{{challenge.description}}</div>
       <div class="rocc-challenge-stats-container">
         <div class="rocc-challenge-status">
