@@ -2,9 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // height: 13em;
   margin-bottom: 20px;
-  // padding: 1.5em 1.5em 0.5em;
   padding-bottom: 0.5em;
   transition: 0.2s;
   transition-property: box-shadow;
@@ -16,46 +14,51 @@
       0 4px 15px 0 rgba(0, 0, 0, 0.15);
   }
 }
-
-.mat-card-header {
-  margin-bottom: 0.5em;
+.header-container {
+  display: flex;
+  justify-content: space-between;
 
   .mat-card-title {
     display: inline-flex;
     align-items: baseline;
     margin-left: -16px;
     margin-bottom: 0;
-    font-size: 2em;
+    font-size: 1.6em;
 
     .mat-icon-button {
       height: inherit;
       margin-left: 5px;
-      font-size: 1.2em;
+      font-size: 1em;
 
       .starred-icon {
         color: #f1d07e;
       }
     }
   }
-}
 
-.rocc-challenge-topics-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 0.5em;
-  // height: 1.8em;
+  .mat-card-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 -16px;
 
-  a {
-    margin-right: 8px;
-    color: #8e92de;
-    font-size: 1em;
-    white-space: nowrap;
-    text-decoration: none;
+    a {
+      margin-right: 8px;
+      color: #8e92de;
+      font-size: 1em;
+      white-space: nowrap;
+      text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
+  }
+
+  .rocc-challenge-platform-logo {
+    height: 4.5em;
+    width: 4.5em;
+    z-index: 2;
   }
 }
 
@@ -65,7 +68,7 @@
   grid-gap: 2em;
   align-items: center;
   height: 100%;
-  font-size: 1.2em;
+  font-size: 1em;
 
   .rocc-challenge-left-content-container {
     justify-self: left;
@@ -75,10 +78,6 @@
     height: 100%;
 
     .rocc-challenge-descriptions {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // height: 100%;
       margin-bottom: 0.5em;
     }
 
@@ -128,13 +127,4 @@
   .completed {
     color: gray;
   }
-}
-
-.rocc-challenge-platform-logo {
-  position: absolute;
-  right: 20px;
-  top: 16px;
-  height: 5em;
-  width: 5em;
-  z-index: 2;
 }
