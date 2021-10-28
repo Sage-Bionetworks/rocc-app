@@ -5,11 +5,14 @@ import {
   Inject,
   OnInit,
   ViewChild,
+  ViewChildren,
+  QueryList,
 } from '@angular/core';
 import {
   Challenge,
   ChallengeService,
   Organization,
+  DateRange,
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -21,7 +24,21 @@ import { of } from 'rxjs';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import assign from 'lodash-es/assign';
+import { ChallengeSearchQuery } from './challenge-search-query';
+import { FilterComponent } from '@shared/filters/filter.component';
+import { searchTermsFilterValues } from './challenge-search-filters-values';
 
+const defaultChallengeSearchQuery: ChallengeSearchQuery = {
+  limit: 10,
+  offset: 0,
+  sort: 'createdAt',
+  direction: 'asc',
+  searchTerms: undefined,
+  tagIds: [],
+  status: [],
+  platformIds: [],
+  startDateRange: {} as DateRange,
+};
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
@@ -30,17 +47,17 @@ import assign from 'lodash-es/assign';
 export class OrgChallengesComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
+  @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  private query: BehaviorSubject<{ limit?: number; offset?: number }> =
-    new BehaviorSubject<{ limit?: number; offset?: number }>({
-      limit: 10,
-      offset: 0,
-    });
+  private query: BehaviorSubject<ChallengeSearchQuery> =
+    new BehaviorSubject<ChallengeSearchQuery>(defaultChallengeSearchQuery);
 
   limit = 10;
   offset = 0;
   searchResultsCount = 0;
+  searchTermsFilterValues = searchTermsFilterValues;
 
   org!: Organization | undefined;
   dataSource!: MatTableDataSource<Challenge>;
@@ -73,6 +90,7 @@ export class OrgChallengesComponent
               this.org.login,
               query.limit,
               query.offset
+              // query.searchTerms
             );
           } else {
             return of(undefined);

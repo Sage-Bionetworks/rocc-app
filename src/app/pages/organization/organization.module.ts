@@ -12,17 +12,21 @@ import { OrgSettingsComponent } from './org-settings/org-settings.component';
 import { OrgNewModule } from './org-new/org-new.module';
 import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
 import { UserCardModule } from '@shared/cards/user-card/user-card.module';
+import { FiltersModule } from '@shared/filters/filters.module';
+import { SearchRoutingModule } from './search-routing.module';
 
 @NgModule({
   imports: [
+    ChallengeCardModule,
     CommonModule,
+    FiltersModule,
     FooterModule,
     MaterialModule,
     NotFoundModule,
     OrgHeaderModule,
     OrganizationRoutingModule,
     OrgNewModule,
-    ChallengeCardModule,
+    SearchRoutingModule,
     UserCardModule,
   ],
   declarations: [
