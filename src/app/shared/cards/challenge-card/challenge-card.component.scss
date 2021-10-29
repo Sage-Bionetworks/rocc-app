@@ -20,7 +20,7 @@
 
   .mat-card-title {
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
     margin-left: -16px;
     margin-bottom: 0;
     font-size: 1.6em;
@@ -30,8 +30,12 @@
       margin-left: 5px;
       font-size: 1em;
 
-      .starred-icon {
-        color: #f1d07e;
+      .mat-icon {
+        vertical-align: top;
+
+        &.starred-icon {
+          color: #f1d07e;
+        }
       }
     }
   }
