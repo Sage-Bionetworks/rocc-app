@@ -15,9 +15,11 @@ import { OrgHeaderModule } from './org-account/org-header/org-header.module';
 import { OrgOverviewComponent } from './org-account/org-overview/org-overview.component';
 import { UserProfileStarredComponent } from './user-account/user-profile-starred/user-profile-starred.component';
 import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
+import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
 
 @NgModule({
   imports: [
+    ChallengeCardModule,
     CommonModule,
     FooterModule,
     MaterialModule,
