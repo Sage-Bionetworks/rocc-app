@@ -109,7 +109,7 @@ export class SigninComponent implements OnInit, OnDestroy {
       .signin(this.username?.value, this.password?.value)
       .subscribe(
         () => {
-          this.router.navigate([this.authService.getRedirectUrl()]);
+          this.router.navigateByUrl(this.authService.getRedirectUrl());
           this.authService.setRedirectUrl('/');
         },
         (err) => {
