@@ -26,12 +26,10 @@ export class ChallengeOverviewComponent implements OnInit {
 
   accountName!: string;
   challenge!: Challenge;
-  organizers!: ChallengeOrganizer[];
-  sponsors!: ChallengeSponsor[];
   readme$!: Observable<ChallengeReadme>;
   displayedColumns: string[] = ['name', 'login', 'role'];
-  organizerList!: MatTableDataSource<any> | undefined;
-  sponsorList!: MatTableDataSource<any> | undefined;
+  organizerList!: MatTableDataSource<ChallengeOrganizer> | undefined;
+  sponsorList!: MatTableDataSource<ChallengeSponsor> | undefined;
 
   constructor(
     private route: ActivatedRoute,
