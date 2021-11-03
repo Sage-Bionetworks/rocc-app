@@ -18,7 +18,36 @@
     </div>
     <span>Organizers</span>
     <div class="rocc-challenge-organizers-container">
-      <table mat-table matSort *ngIf="dataSource" [dataSource]="dataSource">
+      <table mat-table matSort *ngIf="organizerList" [dataSource]="organizerList">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+          <td mat-cell *matCellDef="let element">
+            <div>
+              <sage-avatar [avatar]="getAvatar(element.name)"></sage-avatar>
+              {{element.name}} 
+            </div>
+          </td>
+        </ng-container>
+        <!-- Login Column -->
+        <ng-container matColumnDef="login">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>User ID</th>
+          <td mat-cell *matCellDef="let element"> 
+            <a routerLink="/{{element.login}}">@{{element.login}}</a>
+          </td>
+        </ng-container>
+        <!-- Roles Column -->
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
+          <td mat-cell *matCellDef="let element">{{element.roles.join(', ')}}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <span>Supporting Organizations</span>
+    <div class="rocc-challenge-sponsors-container">
+      <table mat-table matSort *ngIf="sponsorList" [dataSource]="sponsorList">
         <!-- Name Column -->
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>

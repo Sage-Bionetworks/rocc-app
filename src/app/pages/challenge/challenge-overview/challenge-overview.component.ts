@@ -8,6 +8,7 @@ import {
   ChallengeService,
   ChallengeOrganizerList,
   ChallengeOrganizer,
+  ChallengeSponsor,
 } from '@sage-bionetworks/rocc-client-angular';
 import { ChallengeDataService } from '../challenge-data.service';
 import { ActivatedRoute } from '@angular/router';
@@ -26,9 +27,11 @@ export class ChallengeOverviewComponent implements OnInit {
   accountName!: string;
   challenge!: Challenge;
   organizers!: ChallengeOrganizer[];
+  sponsors!: ChallengeSponsor[];
   readme$!: Observable<ChallengeReadme>;
   displayedColumns: string[] = ['name', 'login', 'role'];
-  dataSource!: MatTableDataSource<any> | undefined;
+  organizerList!: MatTableDataSource<any> | undefined;
+  sponsorList!: MatTableDataSource<any> | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -43,6 +46,22 @@ export class ChallengeOverviewComponent implements OnInit {
         switchMap(() => this.challengeDataService.getChallenge()),
         tap((challenge) => (this.challenge = challenge)),
         switchMap(() =>
+          this.challengeService.listChallengeSponsors(
+            this.accountName,
+            this.challenge.name
+          )
+        ),
+        tap((sponsorList) => {
+          const sponsors = sponsorList.challengeSponsors;
+          this.sponsorList =
+            sponsors.length > 0 ? new MatTableDataSource(sponsors) : undefined;
+          setTimeout(() => {
+            if (this.sponsorList) {
+              this.sponsorList.sort = this.sort;
+            }
+          });
+        }),
+        switchMap(() =>
           this.challengeService.listChallengeOrganizers(
             this.accountName,
             this.challenge.name
@@ -51,14 +70,13 @@ export class ChallengeOverviewComponent implements OnInit {
       )
       .subscribe((organizerList: ChallengeOrganizerList) => {
         const organizers = organizerList.challengeOrganizers;
-        this.organizers = organizers;
-        this.dataSource =
+        this.organizerList =
           organizers.length > 0
             ? new MatTableDataSource(organizers)
             : undefined;
         setTimeout(() => {
-          if (this.dataSource) {
-            this.dataSource.sort = this.sort;
+          if (this.organizerList) {
+            this.organizerList.sort = this.sort;
           }
         });
       });

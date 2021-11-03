@@ -44,14 +44,17 @@ section {
 
   span {
     margin: 20px 0;
+    color: #000;
     font-size: 2em;
     font-weight: 600;
   }
 
-  .rocc-challenge-organizers-container {
+  .rocc-challenge-organizers-container,
+  .rocc-challenge-sponsors-container {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 12px;
 
     table {
       width: 100%;
