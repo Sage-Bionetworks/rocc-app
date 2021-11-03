@@ -16,15 +16,18 @@ import {
 import { OrgDataService } from '../org-data.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthService } from '@shared/auth/auth.service';
-import { Router } from '@angular/router';
+import { Router, Event, NavigationStart } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { of } from 'rxjs';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import assign from 'lodash-es/assign';
-import { ChallengeSearchQuery } from './challenge-search-query';
+import {
+  ChallengeSearchQuery,
+  defaultChallengeSearchQuery,
+  searchTermsFilterValues,
+} from './org-challenge-search-query';
 import { FilterComponent } from '@shared/filters/filter.component';
-import { searchTermsFilterValues } from './challenge-search-filters-values';
 import { combineLatest } from 'rxjs';
 import { distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
@@ -32,11 +35,6 @@ import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
 import deepEqual from 'deep-equal';
 
-const defaultChallengeSearchQuery: ChallengeSearchQuery = {
-  limit: 10,
-  offset: 0,
-  searchTerms: '',
-};
 @Component({
   selector: 'rocc-org-challenges',
   templateUrl: './org-challenges.component.html',
