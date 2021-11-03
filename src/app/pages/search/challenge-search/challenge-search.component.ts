@@ -218,7 +218,6 @@ export class ChallengeSearchComponent
     // ignore click if text is selected
     if (!this.document.getSelection()!.toString()) {
       this.router.navigateByUrl(url);
-      console.log(url + 'hah');
     }
   }
 

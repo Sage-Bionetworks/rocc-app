@@ -9,6 +9,7 @@ import { Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Tab } from './tab.model';
 import { TABS } from './user-account-tabs';
+import { AuthService } from '@shared/auth/auth.service';
 
 @Component({
   selector: 'rocc-user-account',
@@ -22,9 +23,11 @@ export class UserAccountComponent implements OnInit, OnDestroy {
   tabs = TABS;
   tabKeys: string[] = Object.keys(this.tabs);
   activeTab: Tab = this.tabs['overview'];
+  loggedIn = false;
   private subscriptions: Subscription[] = [];
 
   constructor(
+    private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
     private userService: UserService
@@ -32,6 +35,10 @@ export class UserAccountComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.user$ = this.userService.getUser(this.accountId);
+
+    this.authService
+      .isSignedIn()
+      .subscribe((loggedIn) => (this.loggedIn = loggedIn));
 
     const orgsSub = this.userService
       .listUserOrganizations(this.accountId)
