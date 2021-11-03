@@ -12,7 +12,6 @@ import {
   Challenge,
   ChallengeService,
   Organization,
-  DateRange,
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -27,7 +26,7 @@ import { ChallengeSearchQuery } from './challenge-search-query';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { searchTermsFilterValues } from './challenge-search-filters-values';
 import { combineLatest } from 'rxjs';
-import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
+import { distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
@@ -36,7 +35,7 @@ import deepEqual from 'deep-equal';
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 10,
   offset: 0,
-  searchTerms: undefined,
+  searchTerms: '',
 };
 @Component({
   selector: 'rocc-org-challenges',
@@ -47,7 +46,6 @@ export class OrgChallengesComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
-
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   private query: BehaviorSubject<ChallengeSearchQuery> =
@@ -62,7 +60,7 @@ export class OrgChallengesComponent
   dataSource!: MatTableDataSource<Challenge>;
   loggedIn!: boolean;
   challenges: Challenge[] = [];
-  challenges$!: Observable<Challenge[]>;
+  challengeList$!: Observable<Challenge[]>;
 
   constructor(
     private router: Router,
@@ -94,7 +92,7 @@ export class OrgChallengesComponent
           }
           return {
             limit: this.limit,
-            offset: (this.offset = 0),
+            offset: this.offset,
             ...query,
           } as ChallengeSearchQuery;
         }),
@@ -120,17 +118,21 @@ export class OrgChallengesComponent
           }
         })
       )
-      .subscribe((page) => {
-        if (page && page.totalResults != 0) {
-          this.searchResultsCount = page.totalResults ? page.totalResults : 0;
-          this.challenges.push(...page.challenges);
-          this.dataSource = new MatTableDataSource<Challenge>(this.challenges);
-          // prevent total results from being overwritten in dataSource
-          setTimeout(() => (this.paginator.length = this.searchResultsCount));
-          this.dataSource.paginator = this.paginator;
-          this.challenges$ = this.dataSource.connect();
-        }
-      });
+      .subscribe(
+        (page) => {
+          if (page) {
+            this.searchResultsCount = page.totalResults ? page.totalResults : 0;
+            this.challenges.push(...page.challenges);
+            this.dataSource = new MatTableDataSource<Challenge>(
+              this.challenges
+            );
+            setTimeout(() => (this.paginator.length = this.searchResultsCount));
+            this.dataSource.paginator = this.paginator;
+            this.challengeList$ = this.dataSource.connect();
+          }
+        },
+        (err) => console.log(err)
+      );
   }
 
   ngOnDestroy(): void {
