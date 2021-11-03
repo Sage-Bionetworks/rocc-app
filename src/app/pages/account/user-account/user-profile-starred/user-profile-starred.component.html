@@ -1,5 +1,8 @@
-<h2>Starred</h2>
-<mat-nav-list>
-  <a mat-list-item [routerLink]="['/' + star.fullName]"
-    *ngFor="let star of stars">{{star.fullName}}</a>
-</mat-nav-list>
+<main>
+  <h2>{{user.name}}'s Favorites</h2>
+  <div class="rocc-user-profile-starred-container">
+    <rocc-challenge-card *ngFor="let star of stars"
+      [challenge]="star"  [loggedIn]="loggedIn" (click)="onClick('/' + star.fullName)">
+    </rocc-challenge-card>
+  </div>
+</main>
