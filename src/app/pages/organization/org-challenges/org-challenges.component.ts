@@ -16,7 +16,6 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 import { AuthService } from '@shared/auth/auth.service';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
@@ -27,17 +26,17 @@ import assign from 'lodash-es/assign';
 import { ChallengeSearchQuery } from './challenge-search-query';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { searchTermsFilterValues } from './challenge-search-filters-values';
+import { combineLatest } from 'rxjs';
+import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
+import flow from 'lodash/fp/flow';
+import keyBy from 'lodash/fp/keyBy';
+import mapValues from 'lodash/fp/mapValues';
+import deepEqual from 'deep-equal';
 
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 10,
   offset: 0,
-  sort: 'createdAt',
-  direction: 'asc',
   searchTerms: undefined,
-  tagIds: [],
-  status: [],
-  platformIds: [],
-  startDateRange: {} as DateRange,
 };
 @Component({
   selector: 'rocc-org-challenges',
@@ -82,6 +81,30 @@ export class OrgChallengesComponent
   }
 
   ngAfterViewInit(): void {
+    const selectedFilters = this.filters
+      .filter((f) => f.name !== 'previewType')
+      .map((f) => f.getStateAsObservable()); // use f to prevent shadow name
+
+    combineLatest(selectedFilters)
+      .pipe(
+        map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
+        map((query): ChallengeSearchQuery => {
+          if (query.searchTerms === '') {
+            query.searchTerms = undefined;
+          }
+          return {
+            limit: this.limit,
+            offset: (this.offset = 0),
+            ...query,
+          } as ChallengeSearchQuery;
+        }),
+        distinctUntilChanged(deepEqual)
+      )
+      .subscribe((query: ChallengeSearchQuery) => {
+        this.challenges = [];
+        this.query.next(query);
+      });
+
     this.query
       .pipe(
         switchMap((query) => {
@@ -89,8 +112,8 @@ export class OrgChallengesComponent
             return this.challengeService.listAccountChallenges(
               this.org.login,
               query.limit,
-              query.offset
-              // query.searchTerms
+              query.offset,
+              query.searchTerms
             );
           } else {
             return of(undefined);
