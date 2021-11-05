@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, Inject } from '@angular/core';
 import {
   Challenge,
   User,
@@ -6,7 +6,8 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
-
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'rocc-user-profile-starred',
   templateUrl: './user-profile-starred.component.html',
@@ -14,10 +15,17 @@ import { map } from 'rxjs/operators';
 })
 export class UserProfileStarredComponent implements OnInit, OnDestroy {
   @Input() user!: User;
+  @Input() loggedIn!: boolean;
+
   stars: Challenge[] = [];
+  starred!: boolean;
   private subscriptions: Subscription[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
 
   ngOnInit(): void {
     const starsSub = this.userService
@@ -29,5 +37,11 @@ export class UserProfileStarredComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptions.forEach((sub) => sub.unsubscribe());
+  }
+
+  onClick(url: string): void {
+    if (!this.document.getSelection()!.toString()) {
+      this.router.navigateByUrl(url);
+    }
   }
 }
