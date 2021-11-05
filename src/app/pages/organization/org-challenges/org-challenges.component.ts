@@ -16,7 +16,7 @@ import {
 import { OrgDataService } from '../org-data.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthService } from '@shared/auth/auth.service';
-import { Router, Event, NavigationStart } from '@angular/router';
+import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { of } from 'rxjs';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
