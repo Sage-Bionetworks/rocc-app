@@ -28,8 +28,8 @@ export class ChallengeOverviewComponent implements OnInit {
   challenge!: Challenge;
   readme$!: Observable<ChallengeReadme>;
   displayedColumns: string[] = ['name', 'login', 'role'];
-  organizerList!: MatTableDataSource<ChallengeOrganizer> | undefined;
-  sponsorList!: MatTableDataSource<ChallengeSponsor> | undefined;
+  organizers!: MatTableDataSource<ChallengeOrganizer> | undefined;
+  sponsors!: ChallengeSponsor[];
 
   constructor(
     private route: ActivatedRoute,
@@ -49,16 +49,16 @@ export class ChallengeOverviewComponent implements OnInit {
             this.challenge.name
           )
         ),
-        tap((sponsorList) => {
-          const sponsors = sponsorList.challengeSponsors;
-          this.sponsorList =
-            sponsors.length > 0 ? new MatTableDataSource(sponsors) : undefined;
-          setTimeout(() => {
-            if (this.sponsorList) {
-              this.sponsorList.sort = this.sort;
-            }
-          });
-        }),
+        tap(
+          (sponsorList) => (this.sponsors = sponsorList.challengeSponsors)
+          // this.sponsors =
+          //   sponsors.length > 0 ? new MatTableDataSource(sponsors) : undefined;
+          // setTimeout(() => {
+          //   if (this.sponsorList) {
+          //     this.sponsorList.sort = this.sort;
+          //   }
+          // });
+        ),
         switchMap(() =>
           this.challengeService.listChallengeOrganizers(
             this.accountName,
@@ -68,13 +68,13 @@ export class ChallengeOverviewComponent implements OnInit {
       )
       .subscribe((organizerList: ChallengeOrganizerList) => {
         const organizers = organizerList.challengeOrganizers;
-        this.organizerList =
+        this.organizers =
           organizers.length > 0
             ? new MatTableDataSource(organizers)
             : undefined;
         setTimeout(() => {
-          if (this.organizerList) {
-            this.organizerList.sort = this.sort;
+          if (this.organizers) {
+            this.organizers.sort = this.sort;
           }
         });
       });
@@ -83,11 +83,11 @@ export class ChallengeOverviewComponent implements OnInit {
   }
 
   // TODO: use avatarUrl once we can access
-  getAvatar(name: string): Avatar {
+  getAvatar(name: string, size: number): Avatar {
     return {
       name: name,
       src: '',
-      size: 30,
+      size: size,
     };
   }
 }

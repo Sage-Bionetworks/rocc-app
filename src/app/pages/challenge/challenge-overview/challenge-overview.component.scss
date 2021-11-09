@@ -42,15 +42,13 @@ section {
   width: 100%;
   margin-top: 30px;
 
-  span {
+  h2 {
     margin: 20px 0;
     color: #000;
-    font-size: 2em;
     font-weight: 600;
   }
 
-  .rocc-challenge-organizers-container,
-  .rocc-challenge-sponsors-container {
+  .rocc-challenge-organizers-container {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -99,6 +97,34 @@ section {
           text-decoration: underline;
           cursor: pointer;
         }
+      }
+    }
+  }
+
+  .rocc-challenge-sponsors-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .rocc-challenge-sponsor-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 12px;
+      flex: 0 1 20%;
+
+      sage-avatar {
+        margin-bottom: 12px;
+      }
+
+      span {
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      .sponsor-name {
+        color: #000;
+        font-size: 1.2em;
       }
     }
   }
