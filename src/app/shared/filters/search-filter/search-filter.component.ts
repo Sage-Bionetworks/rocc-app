@@ -50,6 +50,7 @@ export class SearchFilterComponent
 
   ngOnDestroy(): void {
     this.searchSub.unsubscribe();
+    this.values[0].value = '';
   }
 
   getState(): FilterState {
