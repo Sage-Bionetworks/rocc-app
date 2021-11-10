@@ -1,6 +1,10 @@
-<main *ngIf="challenges$ | async as challenges">
+
+<main>
+  <sage-search-filter class="rocc-challenge-search-filter"
+    name="searchTerms" [values]="searchTermsFilterValues">
+  </sage-search-filter>
   <rocc-challenge-card 
-    *ngFor="let challenge of challenges"
+    *ngFor="let challenge of challengeList$ | async"
     (click)="onClick('/' + challenge.fullName)"
     [challenge]="challenge"
     [loggedIn]="loggedIn">
@@ -10,5 +14,5 @@
     [pageSizeOptions]="[10]"
     [hidePageSize]="true"
     (page)="onPaginate($event)">
-</mat-paginator>
+  </mat-paginator>
 </main>
