@@ -10,9 +10,9 @@
     <h2>Introduction</h2>
     <p>{{readme.text}}</p>
   </div>
-  <div class="rocc-challenge-organizers-container">
+  <div class="rocc-challenge-organizers-container" *ngIf="organizers">
     <h2>Organizers</h2>
-    <table mat-table matSort *ngIf="organizers" [dataSource]="organizers">
+    <table mat-table matSort [dataSource]="organizers">
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>User Name</th>
