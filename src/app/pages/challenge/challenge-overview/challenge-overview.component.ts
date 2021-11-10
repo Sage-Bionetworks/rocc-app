@@ -49,16 +49,7 @@ export class ChallengeOverviewComponent implements OnInit {
             this.challenge.name
           )
         ),
-        tap(
-          (sponsorList) => (this.sponsors = sponsorList.challengeSponsors)
-          // this.sponsors =
-          //   sponsors.length > 0 ? new MatTableDataSource(sponsors) : undefined;
-          // setTimeout(() => {
-          //   if (this.sponsorList) {
-          //     this.sponsorList.sort = this.sort;
-          //   }
-          // });
-        ),
+        tap((sponsorList) => (this.sponsors = sponsorList.challengeSponsors)),
         switchMap(() =>
           this.challengeService.listChallengeOrganizers(
             this.accountName,
@@ -82,7 +73,7 @@ export class ChallengeOverviewComponent implements OnInit {
     this.readme$ = this.challengeDataService.getReadme();
   }
 
-  // TODO: use avatarUrl once we can access
+  // TODO: use avatarUrl of sponsor once we can access
   getAvatar(name: string, size: number): Avatar {
     return {
       name: name,
