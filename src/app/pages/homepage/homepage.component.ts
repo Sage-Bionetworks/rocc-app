@@ -1,9 +1,10 @@
 import { Component, HostBinding, OnInit, Input } from '@angular/core';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
-import { User } from '@sage-bionetworks/rocc-client-angular';
+import { Registry, RegistryService, User } from '@sage-bionetworks/rocc-client-angular';
 import { AppConfigService } from 'src/app/app-config.service';
 import { AppConfig } from 'src/app/app.config';
 import { AuthService } from '@shared/auth/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'rocc-homepage',
@@ -13,17 +14,17 @@ import { AuthService } from '@shared/auth/auth.service';
 export class HomepageComponent implements OnInit {
   @HostBinding('class.main-content') readonly mainContentClass = true;
   user!: User | undefined;
+  registry$!: Observable<Registry>;
 
   appConfig!: AppConfig;
 
   // TODO: remove once login/user is implemented
-  @Input()
-  // user = true;
-  username = 'rocc-user';
+  @Input() username = 'rocc-user';
 
   constructor(
     private appConfigService: AppConfigService,
     private pageTitleService: PageTitleService,
+    private registryService: RegistryService,
     private authService: AuthService
   ) {}
 
@@ -31,6 +32,8 @@ export class HomepageComponent implements OnInit {
     this.appConfigService
       .getAppConfig()
       .subscribe((config) => (this.appConfig = config));
+
+    this.registry$ = this.registryService.getRegistry();
 
     this.authService.getUser().subscribe((user) => (this.user = user));
 
