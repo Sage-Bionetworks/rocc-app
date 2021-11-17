@@ -2,6 +2,12 @@
   <div class="header">
     <div *ngIf="!!user" class="mat-display-2">Welcome back, {{ user?.login }}!</div>
 
+    <div *ngIf="registry$ | async as registry">
+      <h1>Challenges: {{registry.challengeCount}}</h1>
+      <h1>Users: {{registry.userCount}}</h1>
+      <h1>Orgs: {{registry.orgCount}}</h1>
+    </div>
+
     <div class="button-group">
       <table class="GeneratedTable">
         <thead>
