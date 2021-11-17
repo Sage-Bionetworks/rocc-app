@@ -1,101 +1,113 @@
-section {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 60px;
 }
 
-.mat-divider {
-  width: 100%;
-  margin: 5px 0;
+.rocc-challenge-overview-topics-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .rocc-challenge-overview-topics {
+    margin: 8px 8px 8px 0;
+    height: 36px;
+    background-color: #e55a17;
+    color: #fff;
+    border-radius: 20px;
+  }
 }
 
-.rocc-challenge-overview-top-container {
+h2 {
+  margin: 20px 0;
+  color: #000;
+  font-weight: 600;
+}
+
+.rocc-challenge-organizers-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 80%;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 12px;
 
-  p {
-    font-size: 1.5em;
-  }
+  table {
+    width: 100%;
 
-  .rocc-challenge-overview-topics-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    .mat-header-cell {
+      color: #000;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
 
-    .rocc-challenge-overview-topics {
-      margin: 8px 8px 8px 0;
-      height: 36px;
-      background-color: #e55a17;
-      color: #fff;
-      border-radius: 20px;
+    .mat-header-cell,
+    .mat-cell {
+      padding-left: 20px;
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .mat-column-name div {
+      display: flex;
+      align-items: center;
+
+      sage-avatar {
+        margin-right: 10px;
+      }
+    }
+
+    // force arrow always visible
+    ::ng-deep
+      .mat-sort-header-container:not(.mat-sort-header-sorted)
+      .mat-sort-header-arrow {
+      opacity: 0.2 !important;
+      transform: translateY(0px) !important;
+    }
+
+    ::ng-deep .mat-sort-header-sorted .mat-sort-header-arrow {
+      color: #000 !important;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
   }
 }
 
-.rocc-challenge-overview-bottom-container {
+.rocc-challenge-sponsors-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   width: 100%;
-  margin-top: 30px;
 
-  span {
-    margin: 20px 0;
-    font-size: 2em;
-    font-weight: 600;
-  }
-
-  .rocc-challenge-organizers-container {
+  .rocc-challenge-sponsor-card-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
 
-    table {
-      width: 100%;
+    .rocc-challenge-sponsor-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 12px;
+      flex: 0 1 20%;
 
-      .mat-header-cell {
+      sage-avatar {
+        margin-bottom: 12px;
+      }
+
+      span {
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      .sponsor-name {
         color: #000;
-        font-size: 1.1em;
-        font-weight: bold;
-      }
-
-      .mat-header-cell,
-      .mat-cell {
-        padding-left: 20px;
-        border-right: 1px solid rgba(0, 0, 0, 0.12);
-      }
-
-      .mat-column-name div {
-        display: flex;
-        align-items: center;
-
-        sage-avatar {
-          margin-right: 10px;
-        }
-      }
-
-      // force arrow always visible
-      ::ng-deep
-        .mat-sort-header-container:not(.mat-sort-header-sorted)
-        .mat-sort-header-arrow {
-        opacity: 0.2 !important;
-        transform: translateY(0px) !important;
-      }
-
-      ::ng-deep .mat-sort-header-sorted .mat-sort-header-arrow {
-        color: #000 !important;
-      }
-
-      a {
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-          cursor: pointer;
-        }
+        font-size: 1.2em;
       }
     }
   }
