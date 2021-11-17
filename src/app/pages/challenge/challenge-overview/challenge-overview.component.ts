@@ -9,12 +9,18 @@ import {
   ChallengeOrganizerList,
   ChallengeOrganizer,
   ChallengeSponsor,
+  UserService,
+  OrganizationService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { ChallengeDataService } from '../challenge-data.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { Avatar } from '@sage-bionetworks/sage-angular';
+import {
+  Organization,
+  User,
+} from 'rocc-client-angular/projects/rocc-client/src';
 
 @Component({
   selector: 'rocc-challenge-overview',
@@ -30,14 +36,23 @@ export class ChallengeOverviewComponent implements OnInit {
   displayedColumns: string[] = ['name', 'login', 'role'];
   organizers!: MatTableDataSource<ChallengeOrganizer> | undefined;
   sponsors!: ChallengeSponsor[];
+  users: User[] = [];
+  orgs: Organization[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private challengeDataService: ChallengeDataService,
-    private challengeService: ChallengeService
+    private challengeService: ChallengeService,
+    private userService: UserService,
+    private orgService: OrganizationService
   ) {}
 
   ngOnInit(): void {
+    this.userService.listUsers().subscribe((page) => (this.users = page.users));
+    this.orgService
+      .listOrganizations()
+      .subscribe((page) => (this.orgs = page.organizations));
+
     this.route.params
       .pipe(
         tap((params) => (this.accountName = params.login)),
@@ -73,12 +88,25 @@ export class ChallengeOverviewComponent implements OnInit {
     this.readme$ = this.challengeDataService.getReadme();
   }
 
-  // TODO: use avatarUrl of sponsor once we can access
-  getAvatar(name: string, size: number): Avatar {
+  getOrganizerAvatar(organizer: ChallengeOrganizer): Avatar {
+    const user = this.users.find((user) => user.login === organizer.login) || {
+      avatarUrl: '',
+    };
     return {
-      name: name,
-      src: '',
-      size: size,
+      name: organizer.name,
+      src: user.avatarUrl!,
+      size: 30,
+    };
+  }
+
+  getSponsorAvatar(sponsor: ChallengeSponsor): Avatar {
+    const org = this.orgs.find((org) => org.login === sponsor.login) || {
+      avatarUrl: '',
+    };
+    return {
+      name: sponsor.name,
+      src: org.avatarUrl!,
+      size: 80,
     };
   }
 }

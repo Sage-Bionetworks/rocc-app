@@ -18,7 +18,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>User Name</th>
         <td mat-cell *matCellDef="let element">
           <div>
-            <sage-avatar [avatar]="getAvatar(element.name, 30)"></sage-avatar>
+            <sage-avatar [avatar]="getOrganizerAvatar(element)"></sage-avatar>
             {{element.name}} 
           </div>
         </td>
@@ -27,7 +27,7 @@
       <ng-container matColumnDef="login">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>User ID</th>
         <td mat-cell *matCellDef="let element"> 
-          <a routerLink="/{{element.login}}">@{{element.login}}</a>
+          <a *ngIf="element.login" routerLink="/{{element.login}}">@{{element.login}}</a>
         </td>
       </ng-container>
       <!-- Roles Column -->
@@ -43,7 +43,7 @@
     <h2>Sponsors</h2>
     <div class="rocc-challenge-sponsor-card-container">
       <div class="rocc-challenge-sponsor-card" *ngFor="let sponsor of sponsors">
-        <sage-avatar [avatar]="getAvatar(sponsor.name, 80)"></sage-avatar>
+        <sage-avatar [avatar]="getSponsorAvatar(sponsor)"></sage-avatar>
         <span class="sponsor-name">{{sponsor.name}}</span>
         <span *ngIf="sponsor.roles">{{sponsor.roles.join(', ')}}</span>
       </div>
