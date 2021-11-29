@@ -64,13 +64,75 @@ export const challengeStartDateRangeFilterValues: FilterValue[] = [
   {
     value: {
       start: '2010-07-21',
-      end: '2030-07-21'
+      end: '2030-07-21',
     },
     title: '',
-    active: true
-  }
+    active: true,
+  },
 ];
 
+export const challengeDifficultyFilterValues: FilterValue[] = [
+  {
+    value: 'GoodForBeginners',
+    title: 'Good For Beginners',
+    active: false,
+  },
+  {
+    value: 'Intermediate',
+    title: 'Intermediate',
+    active: false,
+  },
+  {
+    value: 'Advanced',
+    title: 'Advanced',
+    active: false,
+  },
+];
+
+export const challengeSubmissionTypesFilterValues: FilterValue[] = [
+  {
+    value: 'DockerImage',
+    title: 'Docker Image',
+    active: false,
+  },
+  {
+    value: 'PredictionFile',
+    title: 'Prediction File',
+    active: false,
+  },
+  {
+    value: 'Other',
+    title: 'Other',
+    active: false,
+  },
+];
+
+// export const challengeInputDataTypesFilterValues: FilterValue[] = [
+
+// ];
+
+export const challengeIncentiveTypesFilterValues: FilterValue[] = [
+  {
+    value: 'Monetary',
+    title: 'Monetary',
+    active: false,
+  },
+  {
+    value: 'Publication',
+    title: 'Publication',
+    active: false,
+  },
+  {
+    value: 'SpeakingEngagement',
+    title: 'Speaking Engagement',
+    active: false,
+  },
+  {
+    value: 'Other',
+    title: 'Other',
+    active: false,
+  },
+];
 // export const tagFilterValues: FilterValue[] = [
 //   {
 //     value: 'a',
@@ -88,6 +150,6 @@ export const searchTermsFilterValues: FilterValue[] = [
   {
     value: '',
     title: '',
-    active: true
+    active: true,
   },
 ];

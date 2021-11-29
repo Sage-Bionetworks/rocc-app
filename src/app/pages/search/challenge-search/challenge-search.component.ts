@@ -19,6 +19,10 @@ import {
 import {
   challengeStartDateRangeFilterValues,
   challengeStatusFilterValues,
+  challengeDifficultyFilterValues,
+  challengeSubmissionTypesFilterValues,
+  // challengeInputDataTypesFilterValues,
+  challengeIncentiveTypesFilterValues,
   previewTypeFilterValues,
   searchTermsFilterValues,
 } from './challenge-search-filters-values';
@@ -44,10 +48,17 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   sort: 'createdAt',
   direction: 'asc',
   searchTerms: '',
-  tagIds: [],
+  topics: [],
+  inputDataTypes: [],
   status: [],
   platformIds: [],
+  difficulty: [],
+  submissionTypes: [],
+  incentiveTypes: [],
   startDateRange: {} as DateRange,
+  orgIds: [],
+  organizerIds: [],
+  sponsorIds: [],
 };
 
 @Component({
@@ -70,6 +81,14 @@ export class ChallengeSearchComponent
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
+  challengeDifficultyFilterValues: FilterValue[] =
+    challengeDifficultyFilterValues;
+  challengeSubmissionTypesFilterValues: FilterValue[] =
+    challengeSubmissionTypesFilterValues;
+  challengeIncentiveTypesFilterValues: FilterValue[] =
+    challengeIncentiveTypesFilterValues;
+  // challengeInputDataTypesFilterValues: FilterValue[] =
+  // challengeInputDataTypesFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
@@ -141,10 +160,17 @@ export class ChallengeSearchComponent
             query.sort,
             query.direction,
             query.searchTerms,
-            query.tagIds,
+            query.topics,
+            query.inputDataTypes,
             query.status,
             query.platformIds,
-            query.startDateRange
+            query.difficulty,
+            query.submissionTypes,
+            query.incentiveTypes,
+            query.startDateRange,
+            query.orgIds,
+            query.organizerIds,
+            query.sponsorIds
           )
         )
       )
