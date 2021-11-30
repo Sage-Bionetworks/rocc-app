@@ -21,6 +21,7 @@ import { TokenService } from '@shared/auth/token.service';
 import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
 import { UserCardModule } from '@shared/cards/user-card/user-card.module';
 import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
+import { DatePipe } from '@angular/common';
 
 // export function apiConfigFactory(): Configuration {
 //   const params: ConfigurationParameters = {
@@ -55,6 +56,7 @@ import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
     //   useFactory: (config: AppConfig) => config.apiUrl,
     //   deps: [APP_CONFIG],
     // },
+    DatePipe,
     {
       provide: Configuration,
       useFactory: (config: AppConfig, tokenService: TokenService) =>

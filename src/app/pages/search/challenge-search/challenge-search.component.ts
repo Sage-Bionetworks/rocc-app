@@ -8,6 +8,7 @@ import {
   ViewChildren,
   Inject,
 } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { FilterValue } from '@shared/filters/filter-value.model';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
@@ -17,11 +18,12 @@ import {
   DateRange,
 } from '@sage-bionetworks/rocc-client-angular';
 import {
+  challengeStartYearRangeFilterValues,
   challengeStartDateRangeFilterValues,
   challengeStatusFilterValues,
   challengeDifficultyFilterValues,
   challengeSubmissionTypesFilterValues,
-  // challengeInputDataTypesFilterValues,
+  challengeInputDataTypesFilterValues,
   challengeIncentiveTypesFilterValues,
   previewTypeFilterValues,
   searchTermsFilterValues,
@@ -75,10 +77,13 @@ export class ChallengeSearchComponent
 
   private query: BehaviorSubject<ChallengeSearchQuery> =
     new BehaviorSubject<ChallengeSearchQuery>(defaultChallengeSearchQuery);
-
+  a = true;
+  b = false;
   limit = 10;
   offset = 0;
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
+  challengeStartYearRangeFilterValues: FilterValue[] =
+    challengeStartYearRangeFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
   challengeDifficultyFilterValues: FilterValue[] =
@@ -87,8 +92,8 @@ export class ChallengeSearchComponent
     challengeSubmissionTypesFilterValues;
   challengeIncentiveTypesFilterValues: FilterValue[] =
     challengeIncentiveTypesFilterValues;
-  // challengeInputDataTypesFilterValues: FilterValue[] =
-  // challengeInputDataTypesFilterValues;
+  challengeInputDataTypesFilterValues: FilterValue[] =
+    challengeInputDataTypesFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
@@ -101,6 +106,7 @@ export class ChallengeSearchComponent
     private router: Router,
     private authService: AuthService,
     private pageTitleService: PageTitleService,
+    private datepipe: DatePipe,
     private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
     @Inject(DOCUMENT) private document: Document
@@ -230,7 +236,7 @@ export class ChallengeSearchComponent
   //     limit: this.limit,
   //   });
   //   this.query.next(query);
-  // }
+  // } {}
 
   updateQuery(): void {
     const query = assign(this.query.getValue(), {

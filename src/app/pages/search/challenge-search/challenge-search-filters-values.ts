@@ -1,6 +1,73 @@
 import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
 import { FilterValue } from '@shared/filters/filter-value.model';
 
+const rawInputDataTypes = [
+  'genomic',
+  'proteomic',
+  'other',
+  'gene-expression',
+  'microarray',
+  'mass-spectrometry',
+  'fluorescence',
+  'demographic',
+  'clinical',
+  'survival',
+  'mutation',
+  'copy-number-variation',
+  'whole-exome-sequencing',
+  'rna-sequencing',
+  'dna-methylation',
+  'reverse-phase-protein-array',
+  'protein-expression',
+  'drug-response',
+  'snp',
+  'cytotoxicity',
+  'metabolomic',
+  'dna-sequencing',
+  'chip-sequencing',
+  'dosages',
+  'genotype-probabilities',
+  'whole-genome-sequencing',
+  'gene-essentiality',
+  'molecular-characterization',
+  'gene-annotations',
+  'nia-reagan-score',
+  'mmse-score',
+  'imaging',
+  'mri',
+  'odor-perceptual-ratings',
+  'molecular-descriptors',
+  'synergy',
+  'molecular',
+  'chemistry',
+  'mono-therapies',
+  'drug-target',
+  'snv-calling',
+  'granular-symptom',
+  'microarry',
+  'gene-and-protein-networks',
+  'dnase-sequencing',
+  'images-crosswalk',
+  'digital-imaging',
+  'workflow',
+  'ehr',
+  'walking-activity',
+  'upper-limb-action',
+  'upper-limb-resting',
+  'copy-number-alteration',
+  'chemical-structure',
+  'scrna-sequencing',
+  'cell-lineage',
+  'dose-response',
+  'suvival',
+  'drug-sensitivity',
+  'x-rays',
+  'svh-score',
+  'sensor',
+  'tmb',
+  'ihc',
+];
+
 export const orderByFilterValues: FilterValue[] = [
   {
     value: '-createdAt',
@@ -60,6 +127,57 @@ export const challengeStatusFilterValues: FilterValue[] = [
   },
 ];
 
+export const challengeStartYearRangeFilterValues: FilterValue[] = [
+  {
+    value: {
+      start: new Date(new Date().setFullYear(new Date().getFullYear() - 10)),
+      end: new Date(),
+    },
+    title: 'Last Ten Years',
+    active: false,
+  },
+  {
+    value: {
+      start: new Date(new Date().setFullYear(new Date().getFullYear() - 5)),
+      end: new Date(),
+    },
+    title: 'Last Five Years',
+    active: false,
+  },
+  {
+    value: {
+      start: new Date(new Date().setFullYear(new Date().getFullYear() - 1)),
+      end: new Date(),
+    },
+    title: 'Last Year',
+    active: false,
+  },
+  {
+    value: {
+      start: new Date(new Date().getFullYear(), 0, 1),
+      end: new Date(new Date().getFullYear(), 11, 31),
+    },
+    title: 'This Year',
+    active: false,
+  },
+  {
+    value: {
+      start: new Date(),
+      end: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
+    },
+    title: 'Next Year',
+    active: false,
+  },
+  {
+    value: {
+      start: new Date(),
+      end: new Date(new Date().setFullYear(new Date().getFullYear() + 3)),
+    },
+    title: 'Next Three years',
+    active: false,
+  },
+];
+
 export const challengeStartDateRangeFilterValues: FilterValue[] = [
   {
     value: {
@@ -107,9 +225,19 @@ export const challengeSubmissionTypesFilterValues: FilterValue[] = [
   },
 ];
 
-// export const challengeInputDataTypesFilterValues: FilterValue[] = [
+const inputDataTypes: FilterValue[] = [];
 
-// ];
+rawInputDataTypes.map((datatype) => {
+  const x = {
+    value: datatype,
+    title: datatype,
+    active: false,
+  };
+  inputDataTypes.push(x);
+});
+
+export const challengeInputDataTypesFilterValues: FilterValue[] =
+  inputDataTypes;
 
 export const challengeIncentiveTypesFilterValues: FilterValue[] = [
   {

@@ -1,5 +1,11 @@
 <div class="container">
   <div class="search-bar-container">
+    <h3>Year</h3>
+    <sage-radio-button-filter 
+      name="startYearRange" 
+      [values]="challengeStartYearRangeFilterValues"  
+      (change)="changeStartDate($event)">
+    </sage-radio-button-filter>
     <h3>Start Date</h3>
     <sage-date-range-filter name="startDateRange"
       [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
@@ -12,9 +18,9 @@
     <h3>Submission Type</h3>
     <sage-checkbox-filter name="submissionTypes" [values]="challengeSubmissionTypesFilterValues">
     </sage-checkbox-filter>
-    <!-- <h3>Input Data Type</h3> -->
-    <!-- <sage-checkbox-filter name="inputDataTypes" [values]="challengeInputDataTypesFilterValues">
-    </sage-checkbox-filter> -->
+    <h3>Input Data Type</h3>
+    <sage-checkbox-filter name="inputDataTypes" [values]="challengeInputDataTypesFilterValues">
+    </sage-checkbox-filter>
     <h3>Incentive Type</h3>
     <sage-checkbox-filter name="incentiveTypes" [values]="challengeIncentiveTypesFilterValues">
     </sage-checkbox-filter>
