@@ -36,3 +36,10 @@
   margin-top: 25px;
   width: 400px;
 }
+
+.scroll-box ::ng-deep {
+  ul {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}

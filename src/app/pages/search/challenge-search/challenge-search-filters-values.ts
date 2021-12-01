@@ -1,6 +1,8 @@
 import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
 import { FilterValue } from '@shared/filters/filter-value.model';
 
+// tmp: hardcode input data types
+// TO-DO: use enum when ontology is applied
 const rawInputDataTypes = [
   'genomic',
   'proteomic',
@@ -70,6 +72,12 @@ const rawInputDataTypes = [
 
 const updateDate = (date: Date, year: number): Date =>
   new Date(date.setFullYear(date.getFullYear() + year));
+
+const titleCase = (string: string, split: string): string =>
+  string
+    .split(split)
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
 
 export const orderByFilterValues: FilterValue[] = [
   {
@@ -232,8 +240,8 @@ const inputDataTypes: FilterValue[] = [];
 
 rawInputDataTypes.map((datatype) => {
   const x = {
-    value: datatype,
-    title: datatype,
+    value: titleCase(datatype, '-'),
+    title: titleCase(datatype, '-'),
     active: false,
   };
   inputDataTypes.push(x);
