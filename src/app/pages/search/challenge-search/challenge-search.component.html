@@ -3,12 +3,17 @@
     <h3>Year</h3>
     <sage-radio-button-filter 
       name="startYearRange" 
-      [values]="challengeStartYearRangeFilterValues"  
-      (change)="changeStartDate($event)">
+      [values]="challengeStartYearRangeFilterValues"
+      [range]="selectedYearRange"
+      (timeOfChanged)="yearRangeChanged($event)">
     </sage-radio-button-filter>
     <h3>Start Date</h3>
-    <sage-date-range-filter name="startDateRange"
-      [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
+    <sage-date-range-filter
+      name="startDateRange"
+      [values]="challengeStartDateRangeFilterValues"
+      [range]= "selectedDateRange"
+      (timeOfChanged)="dateRangeChanged($event)">
+    </sage-date-range-filter>
     <h3>Status</h3>
     <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
     </sage-checkbox-filter>

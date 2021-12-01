@@ -1,4 +1,12 @@
-import { Component, ViewChild, forwardRef } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  ViewChild,
+  forwardRef,
+  EventEmitter,
+} from '@angular/core';
+import { DateRange } from '@sage-bionetworks/rocc-client-angular';
 import { MatRadioChange, MatRadioGroup } from '@angular/material/radio';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
@@ -16,6 +24,8 @@ import { FilterComponent } from '../filter.component';
 })
 export class RadioButtonFilterComponent extends FilterComponent {
   @ViewChild(MatRadioGroup, { static: true }) radioGroup!: MatRadioGroup;
+  @Output() timeOfChanged = new EventEmitter<number>();
+  @Input() range!: DateRange | null;
 
   constructor() {
     super();
@@ -33,6 +43,7 @@ export class RadioButtonFilterComponent extends FilterComponent {
     this._values.forEach((value) => {
       value.active = value.value === event.value;
     });
+    this.timeOfChanged.emit(new Date().getTime());
     this.emitState();
   }
 }

@@ -8,7 +8,6 @@ import {
   ViewChildren,
   Inject,
 } from '@angular/core';
-import { DatePipe } from '@angular/common';
 import { FilterValue } from '@shared/filters/filter-value.model';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
@@ -44,6 +43,8 @@ import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { FormGroup, FormControl } from '@angular/forms';
+
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
   offset: 0,
@@ -58,6 +59,7 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   submissionTypes: [],
   incentiveTypes: [],
   startDateRange: {} as DateRange,
+  startYearRange: {} as DateRange,
   orgIds: [],
   organizerIds: [],
   sponsorIds: [],
@@ -77,10 +79,16 @@ export class ChallengeSearchComponent
 
   private query: BehaviorSubject<ChallengeSearchQuery> =
     new BehaviorSubject<ChallengeSearchQuery>(defaultChallengeSearchQuery);
-  a = true;
-  b = false;
+
   limit = 10;
   offset = 0;
+  dateTimeOfChanged = 0;
+  yearTimeOfChanged = 0;
+  selectedYearRange!: DateRange | null;
+  selectedDateRange = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl(),
+  });
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartYearRangeFilterValues: FilterValue[] =
     challengeStartYearRangeFilterValues;
@@ -106,7 +114,6 @@ export class ChallengeSearchComponent
     private router: Router,
     private authService: AuthService,
     private pageTitleService: PageTitleService,
-    private datepipe: DatePipe,
     private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
     @Inject(DOCUMENT) private document: Document
@@ -115,7 +122,6 @@ export class ChallengeSearchComponent
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
     this.listChallengePlatforms();
-
     this.authService
       .isSignedIn()
       .subscribe((loggedIn) => (this.loggedIn = loggedIn));
@@ -132,6 +138,10 @@ export class ChallengeSearchComponent
         map((query): ChallengeSearchQuery => {
           query.sort = undefined;
           query.direction = undefined;
+          if (this.yearTimeOfChanged > this.dateTimeOfChanged) {
+            query.startDateRange = query.startYearRange;
+            this.selectedYearRange = query.startYearRange;
+          }
           if (query.orderBy !== undefined) {
             query.sort = query.orderBy.substring(
               ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
@@ -158,7 +168,8 @@ export class ChallengeSearchComponent
 
     this.query
       .pipe(
-        tap((query) => console.log('List challenges', query)),
+        // tap((query) => console.log('List challenges', query)),
+        tap((query) => console.log('List challenges', query.startDateRange)),
         switchMap((query) =>
           this.challengeService.listChallenges(
             query.limit,
@@ -214,20 +225,29 @@ export class ChallengeSearchComponent
           platforms.sort((a, b) => a.name.localeCompare(b.name))
         )
       )
-      .subscribe(
-        (platforms) => {
-          this.challengePlatformFilterValues = platforms.map(
-            (platform) =>
-              ({
-                value: platform.id,
-                title: platform.displayName,
-                active: false,
-              } as FilterValue)
-          );
-        },
-        (err) => console.log(err),
-        () => console.log('Get platforms complete')
-      );
+      .subscribe((platforms) => {
+        this.challengePlatformFilterValues = platforms.map(
+          (platform) =>
+            ({
+              value: platform.id,
+              title: platform.displayName,
+              active: false,
+            } as FilterValue)
+        );
+      });
+  }
+
+  dateRangeChanged(time: number) {
+    this.selectedYearRange = null;
+    this.dateTimeOfChanged = time;
+    console.log('Date Change');
+  }
+
+  yearRangeChanged(time: number) {
+    this.selectedDateRange.get('start')?.setValue('2010-07-21');
+    this.selectedDateRange.get('end')?.setValue('2030-07-21');
+    this.yearTimeOfChanged = time;
+    console.log('Year Change');
   }
 
   // showMoreResults(): void {

@@ -68,6 +68,9 @@ const rawInputDataTypes = [
   'ihc',
 ];
 
+const updateDate = (date: Date, year: number): Date =>
+  new Date(date.setFullYear(date.getFullYear() + year));
+
 export const orderByFilterValues: FilterValue[] = [
   {
     value: '-createdAt',
@@ -130,7 +133,7 @@ export const challengeStatusFilterValues: FilterValue[] = [
 export const challengeStartYearRangeFilterValues: FilterValue[] = [
   {
     value: {
-      start: new Date(new Date().setFullYear(new Date().getFullYear() - 10)),
+      start: updateDate(new Date(), -10),
       end: new Date(),
     },
     title: 'Last Ten Years',
@@ -138,7 +141,7 @@ export const challengeStartYearRangeFilterValues: FilterValue[] = [
   },
   {
     value: {
-      start: new Date(new Date().setFullYear(new Date().getFullYear() - 5)),
+      start: updateDate(new Date(), -5),
       end: new Date(),
     },
     title: 'Last Five Years',
@@ -146,7 +149,7 @@ export const challengeStartYearRangeFilterValues: FilterValue[] = [
   },
   {
     value: {
-      start: new Date(new Date().setFullYear(new Date().getFullYear() - 1)),
+      start: updateDate(new Date(), -1),
       end: new Date(),
     },
     title: 'Last Year',
@@ -163,7 +166,7 @@ export const challengeStartYearRangeFilterValues: FilterValue[] = [
   {
     value: {
       start: new Date(),
-      end: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
+      end: updateDate(new Date(), 1),
     },
     title: 'Next Year',
     active: false,
@@ -171,7 +174,7 @@ export const challengeStartYearRangeFilterValues: FilterValue[] = [
   {
     value: {
       start: new Date(),
-      end: new Date(new Date().setFullYear(new Date().getFullYear() + 3)),
+      end: updateDate(new Date(), 3),
     },
     title: 'Next Three years',
     active: false,

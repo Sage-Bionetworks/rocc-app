@@ -1,5 +1,12 @@
-import { Component, forwardRef, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import {
+  Component,
+  Input,
+  Output,
+  forwardRef,
+  OnInit,
+  EventEmitter,
+} from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { combineLatest } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { FilterState } from '../filter-state.model';
@@ -22,10 +29,9 @@ export class DateRangeFilterComponent
   extends FilterComponent
   implements OnInit
 {
-  range = new FormGroup({
-    start: new FormControl(),
-    end: new FormControl(),
-  });
+  @Input() range!: FormGroup;
+
+  @Output() timeOfChanged = new EventEmitter<number>();
 
   constructor() {
     super();
@@ -67,5 +73,9 @@ export class DateRangeFilterComponent
       name: this.name,
       value: activeValue !== undefined ? activeValue.value : '',
     };
+  }
+
+  getTimeChanged(): void {
+    this.timeOfChanged.emit(new Date().getTime());
   }
 }
