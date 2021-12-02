@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, forwardRef } from '@angular/core';
+import { Component, ViewChild, forwardRef } from '@angular/core';
+import { MultiSelect } from 'primeng/multiselect';
 import { FilterState } from '../filter-state.model';
 import { FilterValue } from '../filter-value.model';
 import { FilterComponent } from '../filter.component';
@@ -14,24 +15,25 @@ import { FilterComponent } from '../filter.component';
     },
   ],
 })
-export class SearchDropdownFilterComponent
-  extends FilterComponent
-  implements OnInit
-{
-  cities!: FilterValue[];
-
-  activeValue!: FilterValue[];
-
+export class SearchDropdownFilterComponent extends FilterComponent {
+  @ViewChild(MultiSelect, { static: true }) select!: MultiSelect;
+  activeValues!: FilterValue[];
   constructor() {
     super();
   }
-  ngOnInit(): void {}
+
   getState(): FilterState {
+    this.activeValues = this.values.filter((value) => value.active == true);
     return {
       name: this.name,
-      value: this.values
-        .filter((value) => value.active)
-        .map((value) => value.value),
+      value: this.activeValues.map((value) => value.value),
     };
+  }
+
+  updateState(): void {
+    this._values.forEach((value) => {
+      value.active = this.select.value.includes(value);
+    });
+    this.emitState();
   }
 }

@@ -17,6 +17,9 @@
     <h3>Status</h3>
     <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
     </sage-checkbox-filter>
+    <h3>Organizations</h3>
+    <sage-search-dropdown-filter name="organizations" [values]="orgFilterValues">
+    </sage-search-dropdown-filter>
     <h3>Difficulty</h3>
     <sage-checkbox-filter name="difficulty" [values]="challengeDifficultyFilterValues">
     </sage-checkbox-filter>
@@ -30,15 +33,13 @@
     <sage-checkbox-filter name="incentiveTypes" [values]="challengeIncentiveTypesFilterValues">
     </sage-checkbox-filter>
     <h3>Platforms</h3>
-    <sage-checkbox-filter name="platformIds"
-      [values]="challengePlatformFilterValues"></sage-checkbox-filter>
+    <sage-checkbox-filter class="scroll-box" name="platformIds" [values]="challengePlatformFilterValues">
+    </sage-checkbox-filter>
     <!-- <h3>Preview</h3>
     <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
     </sage-button-toggle-filter> -->
   </div>
   <div class="search-content-container">
-    <sage-search-dropdown-filter name="organizations" [values]="orgFilterValues">
-    </sage-search-dropdown-filter>
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
       name="searchTerms" [values]="searchTermsFilterValues">
     </sage-search-filter>

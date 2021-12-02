@@ -1,5 +1,17 @@
 <p-multiSelect 
-  [options]="values" 
-  [(ngModel)]="activeValue" 
-  optionLabel="title">
+  [options]="values"
+  optionLabel="title"
+  defaultLabel="Select an organization"
+  display="chip"
+  (onChange)="updateState()"
+  [showTransitionOptions]="'0ms'"
+  [hideTransitionOptions]="'0ms'"
+  class="multiselect-custom">
+  <!-- custom list items -->
+  <ng-template let-value pTemplate="values">
+      <div class="list-values-container">
+        <img src="https://via.placeholder.com/150"/>
+        <span>{{value.title}}</span>
+      </div>
+  </ng-template>
 </p-multiSelect>

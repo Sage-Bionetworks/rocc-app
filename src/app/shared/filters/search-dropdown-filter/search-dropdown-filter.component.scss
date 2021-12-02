@@ -1,0 +1,55 @@
+$base-size: 14px;
+
+:host ::ng-deep .p-multiselect {
+  width: 250px;
+  font-size: $base-size;
+
+  .p-multiselect-trigger {
+    width: 3em;
+    span {
+      font-size: $base-size;
+    }
+  }
+
+  .p-multiselect-token {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+:host ::ng-deep .p-multiselect-header {
+  padding: (0.5 * $base-size) $base-size;
+
+  .p-multiselect-filter {
+    padding: 0.5rem;
+  }
+
+  .p-multiselect-filter-container {
+    input {
+      font-size: $base-size;
+    }
+  }
+
+  .p-multiselect-close {
+    display: none;
+  }
+}
+
+:host ::ng-deep .p-multiselect-item {
+  font-size: $base-size;
+  padding: (0.5 * $base-size) $base-size !important;
+
+  .list-values-container {
+    display: inline-flex;
+
+    img {
+      width: 18px;
+      margin-right: 5px;
+    }
+  }
+}
+
+:host ::ng-deep .p-multiselect-empty-message {
+  padding: 0 !important;
+  font-size: $base-size;
+  text-align: center;
+}
