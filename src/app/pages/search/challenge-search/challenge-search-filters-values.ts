@@ -240,7 +240,7 @@ const inputDataTypes: FilterValue[] = [];
 
 rawInputDataTypes.map((datatype) => {
   const x = {
-    value: titleCase(datatype, '-'),
+    value: datatype,
     title: titleCase(datatype, '-'),
     active: false,
   };

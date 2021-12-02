@@ -37,6 +37,8 @@
     </sage-button-toggle-filter> -->
   </div>
   <div class="search-content-container">
+    <sage-search-dropdown-filter name="organizations" [values]="orgFilterValues">
+    </sage-search-dropdown-filter>
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
       name="searchTerms" [values]="searchTermsFilterValues">
     </sage-search-filter>

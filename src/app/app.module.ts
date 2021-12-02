@@ -18,9 +18,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { TokenService } from '@shared/auth/token.service';
-import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
-import { UserCardModule } from '@shared/cards/user-card/user-card.module';
-import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
 
 // export function apiConfigFactory(): Configuration {
 //   const params: ConfigurationParameters = {
@@ -44,9 +41,6 @@ import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
     // ApiModule.forRoot(apiConfigFactory),
     FiltersModule,
     PageTitleModule,
-    ChallengeCardModule,
-    UserCardModule,
-    OrgCardModule,
   ],
   declarations: [AppComponent],
   providers: [

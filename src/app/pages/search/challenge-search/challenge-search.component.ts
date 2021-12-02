@@ -14,6 +14,7 @@ import {
   Challenge,
   ChallengePlatformService,
   ChallengeService,
+  OrganizationService,
   DateRange,
 } from '@sage-bionetworks/rocc-client-angular';
 import {
@@ -103,6 +104,7 @@ export class ChallengeSearchComponent
   challengeInputDataTypesFilterValues: FilterValue[] =
     challengeInputDataTypesFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
+  orgFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
@@ -116,12 +118,14 @@ export class ChallengeSearchComponent
     private pageTitleService: PageTitleService,
     private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
+    private organizationService: OrganizationService,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
     this.listChallengePlatforms();
+    this.listOrganizations();
     this.authService
       .isSignedIn()
       .subscribe((loggedIn) => (this.loggedIn = loggedIn));
@@ -230,6 +234,26 @@ export class ChallengeSearchComponent
             ({
               value: platform.id,
               title: platform.displayName,
+              active: false,
+            } as FilterValue)
+        );
+      });
+  }
+
+  private listOrganizations(): void {
+    // TODO: Get all pages
+    this.organizationService
+      .listOrganizations(100)
+      .pipe(
+        map((page) => page.organizations),
+        map((orgs) => orgs.sort((a, b) => a.login.localeCompare(b.login)))
+      )
+      .subscribe((orgs) => {
+        this.orgFilterValues = orgs.map(
+          (orgs) =>
+            ({
+              value: orgs.id,
+              title: orgs.name,
               active: false,
             } as FilterValue)
         );
