@@ -3,7 +3,7 @@ import { MultiSelect } from 'primeng/multiselect';
 import { FilterState } from '../filter-state.model';
 import { FilterValue } from '../filter-value.model';
 import { FilterComponent } from '../filter.component';
-
+import { Avatar } from '@sage-bionetworks/sage-angular';
 @Component({
   selector: 'sage-search-dropdown-filter',
   templateUrl: './search-dropdown-filter.component.html',
@@ -17,6 +17,7 @@ import { FilterComponent } from '../filter.component';
 })
 export class SearchDropdownFilterComponent extends FilterComponent {
   @ViewChild(MultiSelect, { static: true }) select!: MultiSelect;
+
   activeValues!: FilterValue[];
   constructor() {
     super();
@@ -34,6 +35,15 @@ export class SearchDropdownFilterComponent extends FilterComponent {
     this._values.forEach((value) => {
       value.active = this.select.value.includes(value);
     });
+    console.log(this.values);
     this.emitState();
+  }
+
+  getAvatar(value: FilterValue): Avatar {
+    return {
+      name: value.title,
+      src: value.avatarUrl ? value.avatarUrl : '',
+      size: 32,
+    };
   }
 }

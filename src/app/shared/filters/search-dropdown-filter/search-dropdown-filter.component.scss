@@ -37,13 +37,29 @@ $base-size: 14px;
 :host ::ng-deep .p-multiselect-item {
   font-size: $base-size;
   padding: (0.5 * $base-size) $base-size !important;
+  border-bottom: 1px solid #e9ecef !important;
 
-  .list-values-container {
+  .value-card-container {
     display: inline-flex;
+    align-items: center;
 
-    img {
-      width: 18px;
-      margin-right: 5px;
+    sage-avatar {
+      margin-right: 14px;
+    }
+
+    .value-card-title {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        max-width: 120px;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+
+      .value-card-subtitle {
+        font-size: 0.8 * $base-size;
+      }
     }
   }
 }

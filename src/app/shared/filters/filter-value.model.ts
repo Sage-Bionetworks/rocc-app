@@ -7,4 +7,6 @@ export interface FilterValue {
   title: string;
   /* Whether this filter value is active. */
   active: boolean;
+  login?: string;
+  avatarUrl?: string;
 }

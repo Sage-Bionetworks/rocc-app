@@ -11,6 +11,7 @@ import { SearchFilterComponent } from './search-filter/search-filter.component';
 import { SelectFilterComponent } from './select-filter/select-filter.component';
 import { SearchDropdownFilterComponent } from './search-dropdown-filter/search-dropdown-filter.component';
 import { PrimengModule } from '../primeng/primeng.module';
+import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +20,7 @@ import { PrimengModule } from '../primeng/primeng.module';
     RouterModule,
     MaterialModule,
     PrimengModule,
+    AvatarModule,
   ],
   declarations: [
     ButtonToggleFilterComponent,
