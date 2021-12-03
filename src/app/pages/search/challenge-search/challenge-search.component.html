@@ -1,44 +1,64 @@
 <div class="container">
   <div class="search-bar-container">
-    <h3>Year</h3>
-    <sage-radio-button-filter 
-      name="startYearRange" 
-      [values]="challengeStartYearRangeFilterValues"
-      [range]="selectedYearRange"
-      (timeOfChanged)="yearRangeChanged($event)">
-    </sage-radio-button-filter>
-    <h3>Start Date</h3>
-    <sage-date-range-filter
-      name="startDateRange"
-      [values]="challengeStartDateRangeFilterValues"
-      [range]= "selectedDateRange"
-      (timeOfChanged)="dateRangeChanged($event)">
-    </sage-date-range-filter>
-    <h3>Status</h3>
-    <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
-    </sage-checkbox-filter>
-    <h3>Difficulty</h3>
-    <sage-checkbox-filter name="difficulty" [values]="challengeDifficultyFilterValues">
-    </sage-checkbox-filter>
-    <h3>Submission Type</h3>
-    <sage-checkbox-filter name="submissionTypes" [values]="challengeSubmissionTypesFilterValues">
-    </sage-checkbox-filter>
-    <h3>Input Data Type</h3>
-    <sage-checkbox-filter class="scroll-box" name="inputDataTypes" [values]="challengeInputDataTypesFilterValues">
-    </sage-checkbox-filter>
-    <h3>Incentive Type</h3>
-    <sage-checkbox-filter name="incentiveTypes" [values]="challengeIncentiveTypesFilterValues">
-    </sage-checkbox-filter>
-    <h3>Platforms</h3>
-    <sage-checkbox-filter class="scroll-box" name="platformIds" [values]="challengePlatformFilterValues">
-    </sage-checkbox-filter>
-    <h3>Organizations</h3>
-    <sage-search-dropdown-filter name="organizations" [values]="orgFilterValues">
-    </sage-search-dropdown-filter>
-    <h3>Users (tmp)</h3>
-    <sage-search-dropdown-filter name="organizers" [values]="userFilterValues">
-    </sage-search-dropdown-filter>
-    <!-- <h3>Preview</h3>
+    <div class="filter-container">
+    <h2>Year</h2>
+      <sage-radio-button-filter 
+        name="startYearRange" 
+        [values]="challengeStartYearRangeFilterValues"
+        [range]="selectedYearRange"
+        (timeOfChanged)="yearRangeChanged($event)">
+      </sage-radio-button-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Start Date</h2>
+      <sage-date-range-filter
+        name="startDateRange"
+        [values]="challengeStartDateRangeFilterValues"
+        [range]= "selectedDateRange"
+        (timeOfChanged)="dateRangeChanged($event)">
+      </sage-date-range-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Status</h2>
+      <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Difficulty</h2>
+      <sage-checkbox-filter name="difficulty" [values]="challengeDifficultyFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Submission Type</h2>
+      <sage-checkbox-filter name="submissionTypes" [values]="challengeSubmissionTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Input Data Type</h2>
+      <sage-checkbox-filter class="scroll-box" name="inputDataTypes" [values]="challengeInputDataTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Incentive Type</h2>
+      <sage-checkbox-filter name="incentiveTypes" [values]="challengeIncentiveTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Platforms</h2>
+      <sage-checkbox-filter class="scroll-box" name="platformIds" [values]="challengePlatformFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Organizations</h2>
+      <sage-search-dropdown-filter name="organizations" [values]="orgFilterValues">
+      </sage-search-dropdown-filter>
+    </div>
+    <div class="filter-container">
+    <h2>Users (tmp)</h2>
+      <sage-search-dropdown-filter name="organizers" [values]="userFilterValues">
+      </sage-search-dropdown-filter>
+    </div>
+    <!-- <h2>Preview</h2>
     <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
     </sage-button-toggle-filter> -->
   </div>
@@ -46,6 +66,7 @@
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
       name="searchTerms" [values]="searchTermsFilterValues">
     </sage-search-filter>
+    <br>
     <!-- <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
       results</span> -->

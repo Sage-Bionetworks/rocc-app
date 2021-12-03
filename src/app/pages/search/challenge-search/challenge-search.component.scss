@@ -2,20 +2,43 @@
   width: 1200px;
   // min-height: 1000px;
   background-color: rgb(216, 216, 216);
-
   display: flex;
   flex-direction: row;
+  font-size: 16px;
 }
 
 .search-bar-container {
+  padding: 40px 20px;
   min-width: 260px;
   min-height: 100%;
-  background-color: #f3f3f3;
+  color: #000;
+  background-color: #fff;
+}
+
+.filter-container {
+  padding: 20px 0;
+  border-top: 1px solid #e6e5e5;
+
+  h2 {
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+
+  .scroll-box {
+    ::ng-deep ul {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  }
 }
 
 .search-content-container {
   padding: 40px 20px;
   flex-grow: 1;
+
+  .rocc-challenge-list-content-search-filter {
+    margin-bottom: 20px;
+  }
 }
 
 // .rocc-challenge-list-content-results-count {
@@ -35,11 +58,4 @@
 .rocc-challenge-list-more-results-btn {
   margin-top: 25px;
   width: 400px;
-}
-
-.scroll-box ::ng-deep {
-  ul {
-    max-height: 200px;
-    overflow-y: auto;
-  }
 }

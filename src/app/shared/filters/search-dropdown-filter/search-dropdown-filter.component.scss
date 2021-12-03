@@ -1,7 +1,7 @@
 $base-size: 14px;
 
 :host ::ng-deep .p-multiselect {
-  width: 250px;
+  min-width: 260px;
   font-size: $base-size;
 
   .p-multiselect-trigger {
@@ -10,7 +10,9 @@ $base-size: 14px;
       font-size: $base-size;
     }
   }
-
+  .p-multiselect-label {
+    width: 215px;
+  }
   .p-multiselect-token {
     padding: 0.25rem 0.5rem;
   }
