@@ -6,15 +6,28 @@ $base-size: 14px;
 
   .p-multiselect-trigger {
     width: 3em;
+
     span {
       font-size: $base-size;
     }
   }
+
   .p-multiselect-label {
     width: 215px;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+    &.p-placeholder {
+      padding-top: 0.7rem !important;
+      padding-bottom: 0.7rem !important;
+    }
   }
+
   .p-multiselect-token {
-    padding: 0.25rem 0.5rem;
+    padding: 0.3rem;
+
+    .p-multiselect-token-icon {
+      font-size: $base-size;
+    }
   }
 }
 

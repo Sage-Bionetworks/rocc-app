@@ -177,7 +177,7 @@ export class ChallengeSearchComponent
 
     this.query
       .pipe(
-        // tap((query) => console.log('List challenges', query)),
+        tap((query) => console.log('List challenges', query)),
         switchMap((query) =>
           this.challengeService.listChallenges(
             query.limit,
