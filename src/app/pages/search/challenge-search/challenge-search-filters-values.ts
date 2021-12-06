@@ -79,6 +79,44 @@ const titleCase = (string: string, split: string): string =>
     .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
 
+export const sortByFilterValues: FilterValue[] = [
+  {
+    value: 'featured',
+    title: 'Featured',
+    active: true,
+  },
+  {
+    value: 'startDate',
+    title: 'Start Date',
+    active: false,
+  },
+  {
+    value: 'participantCount',
+    title: 'Participants',
+    active: false,
+  },
+  {
+    value: 'viewCount',
+    title: 'Views',
+    active: false,
+  },
+  {
+    value: 'name',
+    title: 'Alphabetic',
+    active: false,
+  },
+  // {
+  //   value: 'createdAt',
+  //   title: 'Created',
+  //   active: false,
+  // },
+  // {
+  //   value: 'updatedAt',
+  //   title: 'Last Updated',
+  //   active: false,
+  // },
+];
+
 export const orderByFilterValues: FilterValue[] = [
   {
     value: '-createdAt',

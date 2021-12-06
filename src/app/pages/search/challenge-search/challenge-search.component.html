@@ -70,7 +70,7 @@
     <!-- <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
       results</span> -->
-
+    <sage-sort-filter name="sort" [values]="sortByFilterValues"></sage-sort-filter>
     <mat-nav-list class="challenge-search-results">
       <rocc-challenge-card *ngFor="let challenge of challengeList | async"
         [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">

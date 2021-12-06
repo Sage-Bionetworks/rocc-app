@@ -21,9 +21,11 @@
   .mat-card-title {
     display: inline-flex;
     align-items: center;
+    max-width: 650px;
     margin-left: -16px;
     margin-bottom: 0;
     font-size: 1.6em;
+    line-height: 1em;
 
     .mat-icon-button {
       height: inherit;
@@ -43,6 +45,7 @@
   .mat-card-subtitle {
     display: flex;
     flex-wrap: wrap;
+    max-width: 650px;
     margin: 0 0 0 -16px;
 
     a {

@@ -12,6 +12,7 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
 import { SearchDropdownFilterComponent } from './search-dropdown-filter/search-dropdown-filter.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
+import { SortFilterComponent } from './sort-filter/sort-filter.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -30,6 +31,7 @@ import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
     SearchFilterComponent,
     SelectFilterComponent,
     SearchDropdownFilterComponent,
+    SortFilterComponent,
   ],
   exports: [
     ButtonToggleFilterComponent,
@@ -39,6 +41,7 @@ import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
     SearchFilterComponent,
     SelectFilterComponent,
     SearchDropdownFilterComponent,
+    SortFilterComponent,
   ],
 })
 export class FiltersModule {}

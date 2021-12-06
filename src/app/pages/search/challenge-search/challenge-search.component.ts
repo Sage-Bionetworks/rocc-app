@@ -29,6 +29,7 @@ import {
   challengeIncentiveTypesFilterValues,
   previewTypeFilterValues,
   searchTermsFilterValues,
+  sortByFilterValues,
 } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
@@ -110,11 +111,15 @@ export class ChallengeSearchComponent
   userFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
+  sortByFilterValues: FilterValue[] = sortByFilterValues;
+
   searchResultsCount = 0;
+  ResultsCount = 0;
   loggedIn = false;
   challengeList!: Observable<Challenge[]>;
   dataSource!: MatTableDataSource<Challenge>;
   users: User[] = [];
+
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -137,6 +142,7 @@ export class ChallengeSearchComponent
   }
 
   ngAfterViewInit(): void {
+    
     const selectedFilters = this.filters
       .filter((f) => f.name !== 'previewType')
       .map((f) => f.getStateAsObservable()); // use f to prevent shadow name
@@ -145,19 +151,21 @@ export class ChallengeSearchComponent
       .pipe(
         map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
         map((query): ChallengeSearchQuery => {
-          query.sort = undefined;
           query.direction = undefined;
           if (this.yearTimeOfChanged > this.dateTimeOfChanged) {
             query.startDateRange = query.startYearRange;
             this.selectedYearRange = query.startYearRange;
           }
-          if (query.orderBy !== undefined) {
-            query.sort = query.orderBy.substring(
-              ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
-            );
-            query.direction =
-              query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
-            delete query.orderBy;
+          // if (query.orderBy !== undefined) {
+          //   query.sort = query.orderBy.substring(
+          //     ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
+          //   );
+          //   query.direction =
+          //     query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
+          //   delete query.orderBy;
+          // }
+          if (query.sort !== undefined) {
+            query.direction = 'desc';
           }
           if (query.searchTerms === '') {
             query.searchTerms = undefined;
