@@ -315,18 +315,6 @@ export const challengeIncentiveTypesFilterValues: FilterValue[] = [
     active: false,
   },
 ];
-// export const tagFilterValues: FilterValue[] = [
-//   {
-//     value: 'a',
-//     title: 'A',
-//     active: false
-//   },
-//   {
-//     value: 'b',
-//     title: 'B',
-//     active: false
-//   }
-// ];
 
 export const searchTermsFilterValues: FilterValue[] = [
   {

@@ -58,17 +58,12 @@
       <sage-search-dropdown-filter name="organizers" [values]="userFilterValues">
       </sage-search-dropdown-filter>
     </div>
-    <!-- <h2>Preview</h2>
-    <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
-    </sage-button-toggle-filter> -->
   </div>
   <div class="search-content-container">
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
       name="searchTerms" [values]="searchTermsFilterValues">
     </sage-search-filter>
-    <br>
     <div class="search-content-filter-container">
-
       <div class="view-filter-container">
         <span>View as</span>
         <mat-button-toggle-group #group="matButtonToggleGroup" (change)="changeDisplay(group.value)">
