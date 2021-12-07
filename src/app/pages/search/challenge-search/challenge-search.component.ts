@@ -107,7 +107,7 @@ export class ChallengeSearchComponent
     challengeInputDataTypesFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
   orgFilterValues: FilterValue[] = [];
-  userFilterValues: FilterValue[] = [];
+  organizerFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
   searchResultsCount = 0;
@@ -282,8 +282,6 @@ export class ChallengeSearchComponent
   }
 
   private listOrganizers(): void {
-    // placeholders to get organizers who has created accounts
-    // temporarily use users for testing
     this.userService
       .listUsers(100)
       .pipe(
@@ -291,7 +289,7 @@ export class ChallengeSearchComponent
         map((users) => users.sort((a, b) => a.login.localeCompare(b.login)))
       )
       .subscribe((user) => {
-        this.userFilterValues = user.map(
+        this.organizerFilterValues = user.map(
           (user) =>
             ({
               value: user.id,
