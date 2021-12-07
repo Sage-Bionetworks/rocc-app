@@ -1,15 +1,6 @@
 <div class="container">
   <div class="search-bar-container">
     <div class="filter-container">
-    <h2>Year</h2>
-      <sage-radio-button-filter 
-        name="startYearRange" 
-        [values]="challengeStartYearRangeFilterValues"
-        [range]="selectedYearRange"
-        (timeOfChanged)="yearRangeChanged($event)">
-      </sage-radio-button-filter>
-    </div>
-    <div class="filter-container">
       <h2>Start Date</h2>
       <sage-date-range-filter
         name="startDateRange"
@@ -17,6 +8,14 @@
         [range]= "selectedDateRange"
         (timeOfChanged)="dateRangeChanged($event)">
       </sage-date-range-filter>
+      <div class="filter-container">
+        <sage-radio-button-filter 
+          name="startYearRange" 
+          [values]="challengeStartYearRangeFilterValues"
+          [range]="selectedYearRange"
+          (timeOfChanged)="yearRangeChanged($event)">
+        </sage-radio-button-filter>
+      </div>
     </div>
     <div class="filter-container">
       <h2>Status</h2>

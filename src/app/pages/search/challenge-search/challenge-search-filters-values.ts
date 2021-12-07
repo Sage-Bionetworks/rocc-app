@@ -140,51 +140,28 @@ export const challengeStatusFilterValues: FilterValue[] = [
 
 export const challengeStartYearRangeFilterValues: FilterValue[] = [
   {
-    value: {
-      start: updateDate(new Date(), -10),
-      end: new Date(),
-    },
-    title: 'Last Ten Years',
-    active: false,
-  },
-  {
-    value: {
-      start: updateDate(new Date(), -5),
-      end: new Date(),
-    },
-    title: 'Last Five Years',
-    active: false,
-  },
-  {
-    value: {
-      start: updateDate(new Date(), -1),
-      end: new Date(),
-    },
-    title: 'Last Year',
-    active: false,
-  },
-  {
-    value: {
-      start: new Date(new Date().getFullYear(), 0, 1),
-      end: new Date(new Date().getFullYear(), 11, 31),
-    },
-    title: 'This Year',
-    active: false,
-  },
-  {
-    value: {
-      start: new Date(),
-      end: updateDate(new Date(), 1),
-    },
+    value: 1,
     title: 'Next Year',
     active: false,
   },
   {
-    value: {
-      start: new Date(),
-      end: updateDate(new Date(), 3),
-    },
-    title: 'Next Three years',
+    value: 0,
+    title: 'This Year',
+    active: false,
+  },
+  {
+    value: -1,
+    title: 'Last Year',
+    active: false,
+  },
+  {
+    value: -5,
+    title: 'Last Five Years',
+    active: false,
+  },
+  {
+    value: -10,
+    title: 'Last Ten Years',
     active: false,
   },
 ];

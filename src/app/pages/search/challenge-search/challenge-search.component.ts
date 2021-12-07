@@ -115,6 +115,8 @@ export class ChallengeSearchComponent
   challengeList!: Observable<Challenge[]>;
   dataSource!: MatTableDataSource<Challenge>;
   users: User[] = [];
+  today = new Date();
+
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -128,6 +130,19 @@ export class ChallengeSearchComponent
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
+
+    this.challengeStartYearRangeFilterValues =
+      this.challengeStartYearRangeFilterValues.map((value) => {
+        const yearRange = this.updateYear(this.today, value.value as number);
+        return {
+          value: {
+            start: yearRange.start + '-01-01',
+            end: yearRange.end + '-01-01',
+          },
+          title: yearRange.start + ' - ' + yearRange.end,
+          active: value.active,
+        };
+      });
     this.listChallengePlatforms();
     this.listUsers();
     this.listOrganizers();
@@ -302,13 +317,16 @@ export class ChallengeSearchComponent
     console.log('Year Change');
   }
 
-  // showMoreResults(): void {
-  //   const query = assign(this.query.getValue(), {
-  //     offset: this.offset + this.limit,
-  //     limit: this.limit,
-  //   });
-  //   this.query.next(query);
-  // } {}
+  updateYear(date: Date, year: number): { start: number; end: number } {
+    const thisYear = date.getFullYear();
+    const newYear = thisYear + year;
+    return year < 0
+      ? { start: newYear, end: thisYear }
+      : {
+          start: newYear,
+          end: newYear + 1,
+        };
+  }
 
   updateQuery(): void {
     const query = assign(this.query.getValue(), {
