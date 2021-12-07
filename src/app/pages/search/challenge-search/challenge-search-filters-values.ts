@@ -81,40 +81,45 @@ const titleCase = (string: string, split: string): string =>
 
 export const sortByFilterValues: FilterValue[] = [
   {
-    value: 'featured',
+    value: '-featured',
     title: 'Featured',
     active: true,
   },
   {
-    value: 'startDate',
-    title: 'Start Date',
+    value: '-startDate',
+    title: 'Newest',
     active: false,
   },
   {
-    value: 'participantCount',
+    value: 'startDate',
+    title: 'Oldest',
+    active: false,
+  },
+  {
+    value: '-participantCount',
     title: 'Participants',
     active: false,
   },
+  // {
+  //   value: '-participantCount',
+  //   title: 'Participants: Least to Most',
+  //   active: false,
+  // },
   {
-    value: 'viewCount',
+    value: '-viewCount',
     title: 'Views',
     active: false,
   },
   {
-    value: 'name',
-    title: 'Alphabetic',
+    value: '-name',
+    title: 'Alphabetic: Z to A',
     active: false,
   },
-  // {
-  //   value: 'createdAt',
-  //   title: 'Created',
-  //   active: false,
-  // },
-  // {
-  //   value: 'updatedAt',
-  //   title: 'Last Updated',
-  //   active: false,
-  // },
+  {
+    value: 'name',
+    title: 'Alphabetic: A to Z',
+    active: false,
+  },
 ];
 
 export const orderByFilterValues: FilterValue[] = [

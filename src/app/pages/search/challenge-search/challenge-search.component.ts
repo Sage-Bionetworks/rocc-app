@@ -52,8 +52,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
   offset: 0,
-  sort: 'createdAt',
-  direction: 'asc',
+  sort: undefined,
+  direction: undefined,
   searchTerms: '',
   topics: [],
   inputDataTypes: [],
@@ -142,7 +142,6 @@ export class ChallengeSearchComponent
   }
 
   ngAfterViewInit(): void {
-    
     const selectedFilters = this.filters
       .filter((f) => f.name !== 'previewType')
       .map((f) => f.getStateAsObservable()); // use f to prevent shadow name
@@ -151,21 +150,17 @@ export class ChallengeSearchComponent
       .pipe(
         map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
         map((query): ChallengeSearchQuery => {
-          query.direction = undefined;
           if (this.yearTimeOfChanged > this.dateTimeOfChanged) {
             query.startDateRange = query.startYearRange;
             this.selectedYearRange = query.startYearRange;
           }
-          // if (query.orderBy !== undefined) {
-          //   query.sort = query.orderBy.substring(
-          //     ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
-          //   );
-          //   query.direction =
-          //     query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
-          //   delete query.orderBy;
-          // }
           if (query.sort !== undefined) {
-            query.direction = 'desc';
+            query.sort = query.sort.toString();
+            query.direction =
+              query.sort.substring(0, 1) === '-' ? 'desc' : 'asc';
+            query.sort = query.sort.substring(
+              ['+', '-'].includes(query.sort.substring(0, 1)) ? 1 : 0
+            );
           }
           if (query.searchTerms === '') {
             query.searchTerms = undefined;

@@ -67,10 +67,14 @@
       name="searchTerms" [values]="searchTermsFilterValues">
     </sage-search-filter>
     <br>
-    <!-- <span
-      class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
-      results</span> -->
+    <div class = "search-content-filter-container">
+        <!-- <div class = "view-filter-container">
+          <span>View as: </span>
+          <mat-icon >view_headline</mat-icon>
+          <mat-icon >grid_view</mat-icon>
+        </div> -->
     <sage-sort-filter name="sort" [values]="sortByFilterValues"></sage-sort-filter>
+  </div>
     <mat-nav-list class="challenge-search-results">
       <rocc-challenge-card *ngFor="let challenge of challengeList | async"
         [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">

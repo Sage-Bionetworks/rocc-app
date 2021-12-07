@@ -10,7 +10,15 @@ import {
 export interface ChallengeSearchQuery {
   limit?: number;
   offset?: number;
-  sort?: 'createdAt' | 'updatedAt';
+  sort?:
+    | 'featured'
+    | 'startDate'
+    | 'participantCount'
+    | 'viewCount'
+    | 'starredCount'
+    | 'name'
+    | 'createdAt'
+    | 'updatedAt';
   direction?: 'asc' | 'desc';
   searchTerms?: string;
   topics?: string[];

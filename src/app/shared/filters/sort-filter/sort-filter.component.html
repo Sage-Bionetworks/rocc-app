@@ -1,0 +1,10 @@
+<div class="sage-sort-filter-container">
+  <span>sort by</span>
+  <mat-form-field appearance="fill">
+    <mat-select [(ngModel)]="activeValue" (selectionChange)="updateState($event)">
+      <mat-option *ngFor="let value of values" [value]="value.value">
+        {{value.title}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
