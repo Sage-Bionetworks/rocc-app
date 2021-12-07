@@ -36,11 +36,29 @@
   padding: 40px 20px;
   width: 100%;
 
-  ::ng-deep sage-sort-filter {
+  .search-content-filter-container {
     display: flex;
+    align-items: center;
     padding-bottom: 20px !important;
 
-    .sage-sort-filter-container {
+    .view-filter-container {
+      display: inline-flex;
+      align-items: center;
+
+      span {
+        margin-right: 16px;
+      }
+
+      ::ng-deep .mat-button-toggle-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    sage-sort-filter {
       margin-left: auto !important;
     }
   }

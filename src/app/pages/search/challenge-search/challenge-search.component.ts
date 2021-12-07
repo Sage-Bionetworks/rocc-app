@@ -119,6 +119,7 @@ export class ChallengeSearchComponent
   challengeList!: Observable<Challenge[]>;
   dataSource!: MatTableDataSource<Challenge>;
   users: User[] = [];
+  display = 'list';
 
   constructor(
     private router: Router,
@@ -319,6 +320,10 @@ export class ChallengeSearchComponent
       limit: this.limit,
     });
     this.query.next(query);
+  }
+
+  changeDisplay(mode: string) {
+    this.display = mode;
   }
 
   onClick(url: string): void {
