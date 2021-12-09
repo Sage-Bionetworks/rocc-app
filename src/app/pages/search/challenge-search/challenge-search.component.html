@@ -4,8 +4,15 @@
     <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
     </sage-checkbox-filter>
     <h3>Start Date</h3>
-    <sage-date-range-filter name="startDateRange"
-      [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
+    <sage-radio-button-filter
+      name="startYearRange" 
+      [values]="challengeStartYearRangeFilterValues">
+    </sage-radio-button-filter>
+    <sage-date-range-filter 
+      name="startDateRange"
+      [values]="challengeStartDateRangeFilterValues"
+      (timeOfChanged)="dateRangeChanged($event)">
+    </sage-date-range-filter>
     <h3>Platforms</h3>
     <sage-checkbox-filter name="platformIds"
       [values]="challengePlatformFilterValues"></sage-checkbox-filter>

@@ -1,8 +1,16 @@
-import { Component, forwardRef, OnInit } from '@angular/core';
+import {
+  Component,
+  forwardRef,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { combineLatest } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { FilterState } from '../filter-state.model';
+import { FilterValue } from '../filter-value.model';
 import { FilterComponent } from '../filter.component';
 import { DateRange } from './date-range';
 
@@ -27,6 +35,7 @@ export class DateRangeFilterComponent
     end: new FormControl(),
   });
 
+  @Output() timeOfChanged = new EventEmitter<number>();
   constructor() {
     super();
   }
@@ -37,6 +46,7 @@ export class DateRangeFilterComponent
     this.range.get('start')?.setValue(startDateRange.start);
     this.range.get('end')?.setValue(startDateRange.end);
 
+    // TODO: detect change individually
     combineLatest([
       this.range.controls.start.valueChanges,
       this.range.controls.end.valueChanges,
@@ -67,5 +77,9 @@ export class DateRangeFilterComponent
       name: this.name,
       value: activeValue !== undefined ? activeValue.value : '',
     };
+  }
+
+  getTimeChanged(): void {
+    this.timeOfChanged.emit(new Date().getTime());
   }
 }

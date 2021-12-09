@@ -21,6 +21,7 @@ import {
   challengeStatusFilterValues,
   previewTypeFilterValues,
   searchTermsFilterValues,
+  challengeStartYearRangeFilterValues,
 } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
@@ -38,6 +39,9 @@ import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { FormGroup, FormControl } from '@angular/forms';
+import { filter } from 'lodash';
+
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
   offset: 0,
@@ -51,6 +55,7 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   difficulty: [],
   submissionTypes: [],
   incentiveTypes: [],
+  startYearRange: {} as DateRange | string,
   startDateRange: {} as DateRange,
   orgIds: [],
   organizerIds: [],
@@ -74,16 +79,21 @@ export class ChallengeSearchComponent
 
   limit = 10;
   offset = 0;
-  challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
-  challengeStartDateRangeFilterValues: FilterValue[] =
-    challengeStartDateRangeFilterValues;
-  challengePlatformFilterValues: FilterValue[] = [];
-  previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
-  searchTermsFilterValues = searchTermsFilterValues;
+  dateTimeOfChanged = 0;
+  selectedRange!: DateRange | string;
   searchResultsCount = 0;
   loggedIn = false;
   challengeList!: Observable<Challenge[]>;
   dataSource!: MatTableDataSource<Challenge>;
+
+  challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
+  challengeStartDateRangeFilterValues: FilterValue[] =
+    challengeStartDateRangeFilterValues;
+  challengePlatformFilterValues: FilterValue[] = [];
+  challengeStartYearRangeFilterValues: FilterValue[] =
+    challengeStartYearRangeFilterValues;
+  previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
+  searchTermsFilterValues = searchTermsFilterValues;
 
   constructor(
     private router: Router,
@@ -114,6 +124,14 @@ export class ChallengeSearchComponent
         map((query): ChallengeSearchQuery => {
           query.sort = undefined;
           query.direction = undefined;
+          if (
+            this.selectedRange !== 'custom' &&
+            query.startYearRange !== 'custom'
+          ) {
+            query.startDateRange = query.startYearRange;
+          }
+          this.selectedRange = query.startDateRange;
+
           if (query.orderBy !== undefined) {
             query.sort = query.orderBy.substring(
               ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
@@ -219,6 +237,15 @@ export class ChallengeSearchComponent
   //   });
   //   this.query.next(query);
   // }
+
+  dateRangeChanged(time: number) {
+    this.challengeStartYearRangeFilterValues.map((value) => {
+      value.active = value.value === 'custom';
+    });
+    this.selectedRange = 'custom';
+    this.dateTimeOfChanged = time;
+    console.log('Date Change');
+  }
 
   updateQuery(): void {
     const query = assign(this.query.getValue(), {
