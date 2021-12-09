@@ -5,13 +5,13 @@
       <sage-radio-button-filter
         name="startYearRange" 
         [values]="challengeStartYearRangeFilterValues"
-        (onChange)="yearRangeChanged($event)">
+        (isChanged)="yearRangeChanged($event)">
       </sage-radio-button-filter>
       <div class="start-date-range-filter">
         <sage-date-range-filter 
           name="startDateRange"
           [values]="challengeStartDateRangeFilterValues"
-          (onChange)="dateRangeChanged($event)">
+          (isChanged)="dateRangeChanged($event)">
         </sage-date-range-filter>
       </div>
     </div>

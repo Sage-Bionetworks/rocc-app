@@ -22,7 +22,7 @@ import { FilterComponent } from '../filter.component';
 })
 export class RadioButtonFilterComponent extends FilterComponent {
   @ViewChild(MatRadioGroup, { static: true }) radioGroup!: MatRadioGroup;
-  @Output() onChange = new EventEmitter<boolean>();
+  @Output() isChanged = new EventEmitter<boolean>();
 
   constructor() {
     super();
@@ -40,7 +40,7 @@ export class RadioButtonFilterComponent extends FilterComponent {
     this._values.forEach((value) => {
       value.active = value.value === event.value;
     });
-    this.onChange.emit(true);
+    this.isChanged.emit(true);
     this.emitState();
   }
 }
