@@ -81,6 +81,7 @@ export class ChallengeSearchComponent
   searchResultsCount = 0;
   loggedIn = false;
   useYearRange = true;
+  display = 'list';
   challengeList!: Observable<Challenge[]>;
   dataSource!: MatTableDataSource<Challenge>;
 
@@ -250,6 +251,10 @@ export class ChallengeSearchComponent
       limit: this.limit,
     });
     this.query.next(query);
+  }
+
+  changeDisplay(mode: string) {
+    this.display = mode;
   }
 
   onClick(url: string): void {
