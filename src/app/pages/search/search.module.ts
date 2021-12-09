@@ -7,7 +7,7 @@ import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 import { ChallengeSearchComponent } from './challenge-search/challenge-search.component';
 import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
-
+import { PrimengModule } from '@shared/primeng/primeng.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +16,7 @@ import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-
     FiltersModule,
     ChallengeCardModule,
     SearchRoutingModule,
+    PrimengModule,
   ],
   declarations: [SearchComponent, ChallengeSearchComponent],
 })

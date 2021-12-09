@@ -199,7 +199,7 @@ const updateYear = (
 
 export const challengeStartYearRangeFilterValues: FilterValue[] = [
   {
-    value: challengeStartDateRangeFilterValues[0].value,
+    value: undefined,
     title: 'All',
     active: true,
   },

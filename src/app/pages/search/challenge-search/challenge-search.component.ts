@@ -15,6 +15,8 @@ import {
   ChallengePlatformService,
   ChallengeService,
   DateRange,
+  OrganizationService,
+  UserService,
 } from '@sage-bionetworks/rocc-client-angular';
 import {
   challengeStartDateRangeFilterValues,
@@ -103,6 +105,8 @@ export class ChallengeSearchComponent
   challengeInputDataTypesFilterValues: FilterValue[] =
     challengeInputDataTypesFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
+  orgFilterValues: FilterValue[] = [];
+  organizerFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
   sortByFilterValues: FilterValue[] = sortByFilterValues;
@@ -113,13 +117,16 @@ export class ChallengeSearchComponent
     private pageTitleService: PageTitleService,
     private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
+    private organizationService: OrganizationService,
+    private userService: UserService,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
     this.listChallengePlatforms();
-
+    this.listOrganizations();
+    this.listOrganizers();
     this.authService
       .isSignedIn()
       .subscribe((loggedIn) => (this.loggedIn = loggedIn));
@@ -237,6 +244,47 @@ export class ChallengeSearchComponent
       );
   }
 
+  private listOrganizations(): void {
+    this.organizationService
+      .listOrganizations(10)
+      .pipe(
+        map((page) => page.organizations),
+        map((orgs) => orgs.sort((a, b) => a.login.localeCompare(b.login)))
+      )
+      .subscribe((orgs) => {
+        this.orgFilterValues = orgs.map(
+          (org) =>
+            ({
+              value: org.id,
+              title: org.name,
+              active: false,
+              login: org.login,
+              avatarUrl: org.avatarUrl,
+            } as FilterValue)
+        );
+      });
+  }
+
+  private listOrganizers(): void {
+    this.userService
+      .listUsers(100)
+      .pipe(
+        map((page) => page.users),
+        map((users) => users.sort((a, b) => a.login.localeCompare(b.login)))
+      )
+      .subscribe((user) => {
+        this.organizerFilterValues = user.map(
+          (user) =>
+            ({
+              value: user.id,
+              title: user.name,
+              active: false,
+              login: user.login,
+              avatarUrl: user.avatarUrl,
+            } as FilterValue)
+        );
+      });
+  }
   // showMoreResults(): void {
   //   const query = assign(this.query.getValue(), {
   //     offset: this.offset + this.limit,
