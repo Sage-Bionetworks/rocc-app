@@ -1,0 +1,19 @@
+::ng-deep .sage-date-range-mat-form-field {
+  width: 260px;
+  color: #000;
+
+  .mat-form-field-flex {
+    align-items: center !important;
+    padding-top: 0 !important;
+  }
+
+  .mat-date-range-input-container {
+    align-items: start;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-form-field-underline {
+    bottom: 0;
+  }
+}
