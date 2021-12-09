@@ -9,6 +9,10 @@ import { DateRangeFilterComponent } from './date-range-filter/date-range-filter.
 import { RadioButtonFilterComponent } from './radio-button-filter/radio-button-filter.component';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
 import { SelectFilterComponent } from './select-filter/select-filter.component';
+import { SortFilterComponent } from './sort-filter/sort-filter.component';
+import { SearchDropdownFilterComponent } from './search-dropdown-filter/search-dropdown-filter.component';
+import { PrimengModule } from '../primeng/primeng.module';
+import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 
 @NgModule({
   imports: [
@@ -17,6 +21,8 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
     ReactiveFormsModule,
     RouterModule,
     MaterialModule,
+    PrimengModule,
+    AvatarModule,
   ],
   declarations: [
     ButtonToggleFilterComponent,
@@ -25,6 +31,8 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
     RadioButtonFilterComponent,
     SearchFilterComponent,
     SelectFilterComponent,
+    SortFilterComponent,
+    SearchDropdownFilterComponent,
   ],
   exports: [
     ButtonToggleFilterComponent,
@@ -33,6 +41,8 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
     RadioButtonFilterComponent,
     SearchFilterComponent,
     SelectFilterComponent,
+    SortFilterComponent,
+    SearchDropdownFilterComponent,
   ],
 })
 export class FiltersModule {}

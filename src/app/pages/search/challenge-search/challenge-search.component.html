@@ -1,17 +1,60 @@
 <div class="container">
   <div class="search-bar-container">
-    <h3>Status</h3>
-    <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
-    </sage-checkbox-filter>
-    <h3>Start Date</h3>
-    <sage-date-range-filter name="startDateRange"
-      [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
-    <h3>Platforms</h3>
-    <sage-checkbox-filter name="platformIds"
-      [values]="challengePlatformFilterValues"></sage-checkbox-filter>
-    <!-- <h3>Preview</h3>
-    <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
-    </sage-button-toggle-filter> -->
+    <div class="filter-container">
+      <h2>Start Date</h2>
+      <sage-radio-button-filter
+        name="startYearRange" 
+        [values]="challengeStartYearRangeFilterValues"
+        (isChanged)="yearRangeChanged($event)">
+      </sage-radio-button-filter>
+      <div class="start-date-range-filter">
+        <sage-date-range-filter 
+          name="startDateRange"
+          [values]="challengeStartDateRangeFilterValues"
+          (isChanged)="dateRangeChanged($event)">
+        </sage-date-range-filter>
+      </div>
+    </div>
+    <div class="filter-container">
+      <h2>Status</h2>
+      <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Difficulty</h2>
+      <sage-checkbox-filter name="difficulty" [values]="challengeDifficultyFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Submission Type</h2>
+      <sage-checkbox-filter name="submissionTypes" [values]="challengeSubmissionTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Input Data Type</h2>
+      <sage-checkbox-filter class="scroll-box" name="inputDataTypes" [values]="challengeInputDataTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Incentive Type</h2>
+      <sage-checkbox-filter name="incentiveTypes" [values]="challengeIncentiveTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Platform</h2>
+      <sage-checkbox-filter class="scroll-box" name="platformIds" [values]="challengePlatformFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Organization</h2>
+      <sage-search-dropdown-filter name="orgIds" [values]="orgFilterValues">
+      </sage-search-dropdown-filter>
+    </div>
+    <div class="filter-container">
+    <h2>Organizer</h2>
+      <sage-search-dropdown-filter name="organizerIds" [values]="organizerFilterValues">
+      </sage-search-dropdown-filter>
+    </div>
   </div>
   <div class="search-content-container">
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
@@ -20,18 +63,41 @@
     <!-- <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
       results</span> -->
-
-    <mat-nav-list class="challenge-search-results">
-      <rocc-challenge-card *ngFor="let challenge of challengeList | async"
-        [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
-      </rocc-challenge-card>
-      <mat-paginator
+    <div class="search-content-filter-container">
+      <div class="view-filter-container">
+        <span>View as</span>
+        <mat-button-toggle-group #group="matButtonToggleGroup" (change)="changeDisplay(group.value)">
+          <mat-button-toggle value="list">
+            <mat-icon>view_list</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="grid">
+            <mat-icon>grid_view</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <sage-sort-filter name="sort" [values]="sortByFilterValues"></sage-sort-filter>
+    </div>
+    <div class="challenge-search-results" [ngSwitch]="display">
+      <div *ngSwitchCase="'list'">
+        <mat-nav-list class="challenge-search-results">
+          <rocc-challenge-card *ngFor="let challenge of challengeList | async"
+            [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
+          </rocc-challenge-card>
+        </mat-nav-list>
+      </div>
+      <div *ngSwitchCase="'grid'">
+        <mat-grid-list cols="3" rowHeight="2:1" gutterSize="20px">
+          <mat-grid-tile *ngFor="let challenge of challengeList | async">
+            {{challenge.displayName}}
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+    <mat-paginator
       [length]="searchResultsCount" 
       [pageSizeOptions]="[10, 25, 50]"
       (page)="onPaginate($event)">
     </mat-paginator>
-    </mat-nav-list>
-
     <!-- <div class="rocc-challenge-list-more-results">
       <a *ngIf="searchResultsCount - challenges.length > 0" mat-raised-button
         class="rocc-challenge-list-more-results-btn" color="primary"

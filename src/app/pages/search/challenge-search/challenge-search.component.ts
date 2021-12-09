@@ -15,12 +15,20 @@ import {
   ChallengePlatformService,
   ChallengeService,
   DateRange,
+  OrganizationService,
+  UserService,
 } from '@sage-bionetworks/rocc-client-angular';
 import {
   challengeStartDateRangeFilterValues,
+  challengeStartYearRangeFilterValues,
   challengeStatusFilterValues,
-  previewTypeFilterValues,
+  challengeDifficultyFilterValues,
+  challengeSubmissionTypesFilterValues,
+  challengeInputDataTypesFilterValues,
+  challengeIncentiveTypesFilterValues,
   searchTermsFilterValues,
+  sortByFilterValues,
+  previewTypeFilterValues,
 } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
@@ -38,11 +46,12 @@ import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
   offset: 0,
-  sort: 'createdAt',
-  direction: 'asc',
+  sort: undefined,
+  direction: undefined,
   searchTerms: '',
   topics: [],
   inputDataTypes: [],
@@ -51,6 +60,7 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   difficulty: [],
   submissionTypes: [],
   incentiveTypes: [],
+  startYearRange: {} as DateRange | string,
   startDateRange: {} as DateRange,
   orgIds: [],
   organizerIds: [],
@@ -74,16 +84,32 @@ export class ChallengeSearchComponent
 
   limit = 10;
   offset = 0;
+  searchResultsCount = 0;
+  loggedIn = false;
+  useYearRange = true;
+  display = 'list';
+  challengeList!: Observable<Challenge[]>;
+  dataSource!: MatTableDataSource<Challenge>;
+
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
+  challengeStartYearRangeFilterValues: FilterValue[] =
+    challengeStartYearRangeFilterValues;
+  challengeDifficultyFilterValues: FilterValue[] =
+    challengeDifficultyFilterValues;
+  challengeSubmissionTypesFilterValues: FilterValue[] =
+    challengeSubmissionTypesFilterValues;
+  challengeIncentiveTypesFilterValues: FilterValue[] =
+    challengeIncentiveTypesFilterValues;
+  challengeInputDataTypesFilterValues: FilterValue[] =
+    challengeInputDataTypesFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
+  orgFilterValues: FilterValue[] = [];
+  organizerFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
-  searchResultsCount = 0;
-  loggedIn = false;
-  challengeList!: Observable<Challenge[]>;
-  dataSource!: MatTableDataSource<Challenge>;
+  sortByFilterValues: FilterValue[] = sortByFilterValues;
 
   constructor(
     private router: Router,
@@ -91,13 +117,16 @@ export class ChallengeSearchComponent
     private pageTitleService: PageTitleService,
     private challengeService: ChallengeService,
     private challengePlatformService: ChallengePlatformService,
+    private organizationService: OrganizationService,
+    private userService: UserService,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
     this.pageTitleService.setTitle('Search Challenges • ROCC');
     this.listChallengePlatforms();
-
+    this.listOrganizations();
+    this.listOrganizers();
     this.authService
       .isSignedIn()
       .subscribe((loggedIn) => (this.loggedIn = loggedIn));
@@ -112,15 +141,17 @@ export class ChallengeSearchComponent
       .pipe(
         map((filters) => flow([keyBy('name'), mapValues('value')])(filters)),
         map((query): ChallengeSearchQuery => {
-          query.sort = undefined;
-          query.direction = undefined;
-          if (query.orderBy !== undefined) {
-            query.sort = query.orderBy.substring(
-              ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
-            );
+          // if not custom selected, replace dateRange with yearRange
+          if (this.useYearRange && query.startYearRange !== 'custom') {
+            query.startDateRange = query.startYearRange;
+          }
+          if (query.sort !== undefined) {
+            query.sort = query.sort.toString();
             query.direction =
-              query.orderBy.substring(0, 1) === '-' ? 'desc' : 'asc';
-            delete query.orderBy;
+              query.sort.substring(0, 1) === '-' ? 'desc' : 'asc';
+            query.sort = query.sort.substring(
+              ['+', '-'].includes(query.sort.substring(0, 1)) ? 1 : 0
+            );
           }
           if (query.searchTerms === '') {
             query.searchTerms = undefined;
@@ -170,6 +201,7 @@ export class ChallengeSearchComponent
             this.dataSource = new MatTableDataSource<Challenge>(
               this.challenges
             );
+            this.challenges.map((c) => console.log(c.fullName));
             // prevent total results from being overwritten in dataSource
             setTimeout(() => (this.paginator.length = this.searchResultsCount));
             this.dataSource.paginator = this.paginator;
@@ -212,6 +244,47 @@ export class ChallengeSearchComponent
       );
   }
 
+  private listOrganizations(): void {
+    this.organizationService
+      .listOrganizations(10)
+      .pipe(
+        map((page) => page.organizations),
+        map((orgs) => orgs.sort((a, b) => a.login.localeCompare(b.login)))
+      )
+      .subscribe((orgs) => {
+        this.orgFilterValues = orgs.map(
+          (org) =>
+            ({
+              value: org.id,
+              title: org.name,
+              active: false,
+              login: org.login,
+              avatarUrl: org.avatarUrl,
+            } as FilterValue)
+        );
+      });
+  }
+
+  private listOrganizers(): void {
+    this.userService
+      .listUsers(100)
+      .pipe(
+        map((page) => page.users),
+        map((users) => users.sort((a, b) => a.login.localeCompare(b.login)))
+      )
+      .subscribe((user) => {
+        this.organizerFilterValues = user.map(
+          (user) =>
+            ({
+              value: user.id,
+              title: user.name,
+              active: false,
+              login: user.login,
+              avatarUrl: user.avatarUrl,
+            } as FilterValue)
+        );
+      });
+  }
   // showMoreResults(): void {
   //   const query = assign(this.query.getValue(), {
   //     offset: this.offset + this.limit,
@@ -220,12 +293,28 @@ export class ChallengeSearchComponent
   //   this.query.next(query);
   // }
 
+  dateRangeChanged(isChanged: boolean) {
+    // change radio button checked value
+    this.challengeStartYearRangeFilterValues.map((value) => {
+      value.active = value.value === 'custom';
+    });
+    this.useYearRange = !isChanged;
+  }
+
+  yearRangeChanged(isChanged: boolean) {
+    this.useYearRange = isChanged;
+  }
+
   updateQuery(): void {
     const query = assign(this.query.getValue(), {
       offset: this.offset,
       limit: this.limit,
     });
     this.query.next(query);
+  }
+
+  changeDisplay(mode: string) {
+    this.display = mode;
   }
 
   onClick(url: string): void {

@@ -1,4 +1,10 @@
-import { Component, ViewChild, forwardRef } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  forwardRef,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { MatRadioChange, MatRadioGroup } from '@angular/material/radio';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
@@ -16,6 +22,7 @@ import { FilterComponent } from '../filter.component';
 })
 export class RadioButtonFilterComponent extends FilterComponent {
   @ViewChild(MatRadioGroup, { static: true }) radioGroup!: MatRadioGroup;
+  @Output() isChanged = new EventEmitter<boolean>();
 
   constructor() {
     super();
@@ -33,6 +40,7 @@ export class RadioButtonFilterComponent extends FilterComponent {
     this._values.forEach((value) => {
       value.active = value.value === event.value;
     });
+    this.isChanged.emit(true);
     this.emitState();
   }
 }
