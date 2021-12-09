@@ -3,18 +3,23 @@ import { FilterValue } from '@shared/filters/filter-value.model';
 
 export const sortByFilterValues: FilterValue[] = [
   {
-    value: '-featured',
-    title: 'Featured',
-    active: true,
-  },
-  {
     value: '-startDate',
-    title: 'Newest',
-    active: false,
+    title: 'Latest',
+    active: true,
   },
   {
     value: 'startDate',
     title: 'Oldest',
+    active: false,
+  },
+  {
+    value: '-featured',
+    title: 'Featured',
+    active: false,
+  },
+  {
+    value: '-starredCount',
+    title: 'Likes',
     active: false,
   },
   {
@@ -28,13 +33,8 @@ export const sortByFilterValues: FilterValue[] = [
     active: false,
   },
   {
-    value: '-name',
-    title: 'Alphabetic: Z to A',
-    active: false,
-  },
-  {
     value: 'name',
-    title: 'Alphabetic: A to Z',
+    title: 'Alphabetical',
     active: false,
   },
 ];

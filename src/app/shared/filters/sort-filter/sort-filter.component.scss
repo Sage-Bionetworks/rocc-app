@@ -3,6 +3,7 @@
 
   .mat-form-field-flex {
     background-color: #fff !important;
+    max-width: 10em;
     padding-top: 0 !important;
     border-radius: 6px !important;
   }
@@ -27,4 +28,9 @@
 
 span {
   margin-right: 16px;
+}
+
+// display all options
+::ng-deep .mat-select-panel {
+  max-height: none !important;
 }

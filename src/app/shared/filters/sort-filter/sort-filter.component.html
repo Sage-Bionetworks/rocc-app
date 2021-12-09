@@ -2,7 +2,7 @@
 <div class="sage-sort-filter-container">
   <span>Sort by</span>
   <mat-form-field appearance="fill">
-    <mat-select [(ngModel)]="activeValue" (selectionChange)="updateState($event)">
+    <mat-select [(ngModel)]="activeValue" (selectionChange)="updateState($event)" disableOptionCentering>
       <mat-option *ngFor="let value of values" [value]="value.value">
         {{value.title}}
       </mat-option>

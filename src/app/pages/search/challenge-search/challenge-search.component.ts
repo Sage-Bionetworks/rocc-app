@@ -181,6 +181,7 @@ export class ChallengeSearchComponent
             this.dataSource = new MatTableDataSource<Challenge>(
               this.challenges
             );
+            this.challenges.map((c) => console.log(c.fullName));
             // prevent total results from being overwritten in dataSource
             setTimeout(() => (this.paginator.length = this.searchResultsCount));
             this.dataSource.paginator = this.paginator;

@@ -1,4 +1,5 @@
 <mat-card *ngIf="challenge">
+  <div [ngClass]="{'featured-bg' : challenge.featured}"></div>
   <div class="header-container">
     <mat-card-header>
       <mat-card-title>
@@ -33,13 +34,17 @@
           <mat-icon class="{{challenge.status}}" inline=true>circle</mat-icon> 
           <strong>{{challenge.status | titlecase}}</strong>
         </div>
-        <div *ngIf="numberSubmissions" matTooltip="number of submissions">
+        <div matTooltip="number of views">
           <mat-icon inline=true>trending_up</mat-icon>: 
-          <strong>{{numberSubmissions}}</strong>
+          <strong>{{challenge.viewCount}}</strong>
         </div>
-        <div *ngIf="numberRegistrants" matTooltip="number of registrants">
+        <div matTooltip="number of participants">
           <mat-icon inline=true>face</mat-icon>: 
-          <strong>{{numberRegistrants}}</strong>
+          <strong>{{challenge.participantCount}}</strong>
+        </div>
+        <div *ngIf="numberSubmissions" matTooltip="number of submissions">
+          <mat-icon inline=true>upload</mat-icon>: 
+          <strong>{{numberSubmissions}}</strong>
         </div>
         <div matTooltip="number of stargazers">
           <mat-icon inline=true>auto_awesome</mat-icon>: 
