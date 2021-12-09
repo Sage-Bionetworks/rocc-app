@@ -1,4 +1,3 @@
-import { DateRange } from '@angular/material/datepicker';
 import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
 import { FilterValue } from '@shared/filters/filter-value.model';
 
@@ -14,19 +13,6 @@ export const orderByFilterValues: FilterValue[] = [
     active: false,
   },
 ];
-
-const thisYear = new Date().getFullYear();
-
-const updateYear = (
-  thisYear: number,
-  startYearDiff: number,
-  endYearDiff: number
-) => {
-  return {
-    start: new Date(thisYear + startYearDiff, 0, 1),
-    end: new Date(thisYear + endYearDiff, 11, 31),
-  };
-};
 
 export const challengeTypeFilterValues: FilterValue[] = [
   {
@@ -84,6 +70,19 @@ export const challengeStartDateRangeFilterValues: FilterValue[] = [
     active: true,
   },
 ];
+
+const thisYear = new Date().getFullYear();
+
+const updateYear = (
+  thisYear: number,
+  startYearDiff: number,
+  endYearDiff: number
+) => {
+  return {
+    start: new Date(thisYear + startYearDiff, 0, 1),
+    end: new Date(thisYear + endYearDiff, 11, 31),
+  };
+};
 
 export const challengeStartYearRangeFilterValues: FilterValue[] = [
   {

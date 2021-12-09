@@ -2,7 +2,6 @@ import {
   Component,
   forwardRef,
   OnInit,
-  Input,
   Output,
   EventEmitter,
 } from '@angular/core';
