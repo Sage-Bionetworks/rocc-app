@@ -1,0 +1,23 @@
+
+  <p-multiSelect 
+  [options]="values"
+  optionLabel="title"
+  defaultLabel="Search for {{name.slice(0, -1) + '(s)'}}"
+  display="chip"
+  (onChange)="updateState()"
+  [showTransitionOptions]="'0ms'"
+  [hideTransitionOptions]="'0ms'"
+  class="multiselect-custom">
+  <!-- custom list items -->
+  <ng-template let-value pTemplate="values">
+    <div class="value-card-container">
+      <sage-avatar [avatar]="getAvatar(value)"></sage-avatar>
+      <div class="value-card-title">
+        <span>{{value.title}}</span>
+        <div *ngIf="value.login" class="value-card-subtitle">
+          @{{value.login}}
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-multiSelect>
