@@ -2,7 +2,7 @@ import { DateRange } from './date-range-filter/date-range';
 
 export interface FilterValue {
   /* The value of the filter. */
-  value: number | string | DateRange;
+  value: number | string | DateRange | undefined;
   /* The display name of the filter value. */
   title: string;
   /* Whether this filter value is active. */
