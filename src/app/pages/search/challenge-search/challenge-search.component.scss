@@ -38,11 +38,20 @@
 
 .search-content-container {
   padding: 40px 20px;
-  flex-grow: 1;
   width: 100%;
 
-  .rocc-challenge-list-content-search-filter {
-    margin-bottom: 20px;
+  .search-content-filter-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px !important;
+
+    sage-sort-filter {
+      margin-left: auto !important;
+    }
+
+    .rocc-challenge-list-content-search-filter {
+      margin-bottom: 20px;
+    }
   }
 }
 

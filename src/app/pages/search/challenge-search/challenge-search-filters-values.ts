@@ -1,6 +1,44 @@
 import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
 import { FilterValue } from '@shared/filters/filter-value.model';
 
+export const sortByFilterValues: FilterValue[] = [
+  {
+    value: '-featured',
+    title: 'Featured',
+    active: true,
+  },
+  {
+    value: '-startDate',
+    title: 'Newest',
+    active: false,
+  },
+  {
+    value: 'startDate',
+    title: 'Oldest',
+    active: false,
+  },
+  {
+    value: '-participantCount',
+    title: 'Participants',
+    active: false,
+  },
+  {
+    value: '-viewCount',
+    title: 'Views',
+    active: false,
+  },
+  {
+    value: '-name',
+    title: 'Alphabetic: Z to A',
+    active: false,
+  },
+  {
+    value: 'name',
+    title: 'Alphabetic: A to Z',
+    active: false,
+  },
+];
+
 export const orderByFilterValues: FilterValue[] = [
   {
     value: '-createdAt',

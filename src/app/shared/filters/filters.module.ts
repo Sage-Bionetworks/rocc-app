@@ -9,6 +9,7 @@ import { DateRangeFilterComponent } from './date-range-filter/date-range-filter.
 import { RadioButtonFilterComponent } from './radio-button-filter/radio-button-filter.component';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
 import { SelectFilterComponent } from './select-filter/select-filter.component';
+import { SortFilterComponent } from './sort-filter/sort-filter.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
     RadioButtonFilterComponent,
     SearchFilterComponent,
     SelectFilterComponent,
+    SortFilterComponent,
   ],
   exports: [
     ButtonToggleFilterComponent,
@@ -33,6 +35,7 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
     RadioButtonFilterComponent,
     SearchFilterComponent,
     SelectFilterComponent,
+    SortFilterComponent,
   ],
 })
 export class FiltersModule {}
