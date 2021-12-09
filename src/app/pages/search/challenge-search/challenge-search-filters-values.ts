@@ -1,6 +1,81 @@
 import { ButtonToggleFilterValue } from '@shared/filters/button-toggle-filter/button-toggle-filter-value';
 import { FilterValue } from '@shared/filters/filter-value.model';
 
+// tmp: hardcode input data types
+// TO-DO: use enum when ontology is applied
+const rawInputDataTypes = [
+  'genomic',
+  'proteomic',
+  'other',
+  'gene-expression',
+  'microarray',
+  'mass-spectrometry',
+  'fluorescence',
+  'demographic',
+  'clinical',
+  'survival',
+  'mutation',
+  'copy-number-variation',
+  'whole-exome-sequencing',
+  'rna-sequencing',
+  'dna-methylation',
+  'reverse-phase-protein-array',
+  'protein-expression',
+  'drug-response',
+  'snp',
+  'cytotoxicity',
+  'metabolomic',
+  'dna-sequencing',
+  'chip-sequencing',
+  'dosages',
+  'genotype-probabilities',
+  'whole-genome-sequencing',
+  'gene-essentiality',
+  'molecular-characterization',
+  'gene-annotations',
+  'nia-reagan-score',
+  'mmse-score',
+  'imaging',
+  'mri',
+  'odor-perceptual-ratings',
+  'molecular-descriptors',
+  'synergy',
+  'molecular',
+  'chemistry',
+  'mono-therapies',
+  'drug-target',
+  'snv-calling',
+  'granular-symptom',
+  'microarry',
+  'gene-and-protein-networks',
+  'dnase-sequencing',
+  'images-crosswalk',
+  'digital-imaging',
+  'workflow',
+  'ehr',
+  'walking-activity',
+  'upper-limb-action',
+  'upper-limb-resting',
+  'copy-number-alteration',
+  'chemical-structure',
+  'scrna-sequencing',
+  'cell-lineage',
+  'dose-response',
+  'suvival',
+  'drug-sensitivity',
+  'x-rays',
+  'svh-score',
+  'sensor',
+  'tmb',
+  'ihc',
+];
+
+const titleCase = (string: string, split: string): string =>
+  string
+    .split(split)
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+
 export const orderByFilterValues: FilterValue[] = [
   {
     value: '-createdAt',
@@ -136,6 +211,80 @@ export const challengeStartYearRangeFilterValues: FilterValue[] = [
     active: false,
   },
 ];
+
+export const challengeDifficultyFilterValues: FilterValue[] = [
+  {
+    value: 'GoodForBeginners',
+    title: 'Good For Beginners',
+    active: false,
+  },
+  {
+    value: 'Intermediate',
+    title: 'Intermediate',
+    active: false,
+  },
+  {
+    value: 'Advanced',
+    title: 'Advanced',
+    active: false,
+  },
+];
+
+export const challengeSubmissionTypesFilterValues: FilterValue[] = [
+  {
+    value: 'DockerImage',
+    title: 'Docker Image',
+    active: false,
+  },
+  {
+    value: 'PredictionFile',
+    title: 'Prediction File',
+    active: false,
+  },
+  {
+    value: 'Other',
+    title: 'Other',
+    active: false,
+  },
+];
+
+const inputDataTypes: FilterValue[] = [];
+
+rawInputDataTypes.map((datatype) => {
+  const x = {
+    value: datatype,
+    title: titleCase(datatype, '-'),
+    active: false,
+  };
+  inputDataTypes.push(x);
+});
+
+export const challengeInputDataTypesFilterValues: FilterValue[] =
+  inputDataTypes;
+
+export const challengeIncentiveTypesFilterValues: FilterValue[] = [
+  {
+    value: 'Monetary',
+    title: 'Monetary',
+    active: false,
+  },
+  {
+    value: 'Publication',
+    title: 'Publication',
+    active: false,
+  },
+  {
+    value: 'SpeakingEngagement',
+    title: 'Speaking Engagement',
+    active: false,
+  },
+  {
+    value: 'Other',
+    title: 'Other',
+    active: false,
+  },
+];
+
 // export const tagFilterValues: FilterValue[] = [
 //   {
 //     value: 'a',
