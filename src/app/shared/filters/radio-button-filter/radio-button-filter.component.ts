@@ -1,16 +1,7 @@
-import {
-  Component,
-  ViewChild,
-  forwardRef,
-  Input,
-  Output,
-  EventEmitter,
-} from '@angular/core';
+import { Component, ViewChild, forwardRef } from '@angular/core';
 import { MatRadioChange, MatRadioGroup } from '@angular/material/radio';
 import { FilterState } from '../filter-state.model';
-import { FilterValue } from '../filter-value.model';
 import { FilterComponent } from '../filter.component';
-import { DateRange } from '@sage-bionetworks/rocc-client-angular';
 
 @Component({
   selector: 'sage-radio-button-filter',

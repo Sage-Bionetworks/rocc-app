@@ -39,8 +39,6 @@ import { DOCUMENT } from '@angular/common';
 import { AuthService } from '@shared/auth/auth.service';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { FormGroup, FormControl } from '@angular/forms';
-import { filter } from 'lodash';
 
 const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   limit: 0,
@@ -79,7 +77,6 @@ export class ChallengeSearchComponent
 
   limit = 10;
   offset = 0;
-  dateTimeOfChanged = 0;
   selectedRange!: DateRange | string;
   searchResultsCount = 0;
   loggedIn = false;
@@ -124,6 +121,7 @@ export class ChallengeSearchComponent
         map((query): ChallengeSearchQuery => {
           query.sort = undefined;
           query.direction = undefined;
+          // if not custom selected, replace dateRange with yearRange
           if (
             this.selectedRange !== 'custom' &&
             query.startYearRange !== 'custom'
@@ -238,13 +236,12 @@ export class ChallengeSearchComponent
   //   this.query.next(query);
   // }
 
-  dateRangeChanged(time: number) {
+  dateRangeChanged() {
+    // change radio button checked value
     this.challengeStartYearRangeFilterValues.map((value) => {
       value.active = value.value === 'custom';
     });
     this.selectedRange = 'custom';
-    this.dateTimeOfChanged = time;
-    console.log('Date Change');
   }
 
   updateQuery(): void {

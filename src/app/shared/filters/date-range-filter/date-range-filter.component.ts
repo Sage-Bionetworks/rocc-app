@@ -10,7 +10,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { combineLatest } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { FilterState } from '../filter-state.model';
-import { FilterValue } from '../filter-value.model';
 import { FilterComponent } from '../filter.component';
 import { DateRange } from './date-range';
 
@@ -30,12 +29,13 @@ export class DateRangeFilterComponent
   extends FilterComponent
   implements OnInit
 {
+  @Output() dateChange = new EventEmitter<number>();
+
   range = new FormGroup({
     start: new FormControl(),
     end: new FormControl(),
   });
 
-  @Output() timeOfChanged = new EventEmitter<number>();
   constructor() {
     super();
   }
@@ -80,6 +80,7 @@ export class DateRangeFilterComponent
   }
 
   getTimeChanged(): void {
-    this.timeOfChanged.emit(new Date().getTime());
+    // emit the time when either of start or end date changes
+    this.dateChange.emit(new Date().getTime());
   }
 }

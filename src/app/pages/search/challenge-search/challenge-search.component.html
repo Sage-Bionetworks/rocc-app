@@ -11,7 +11,7 @@
     <sage-date-range-filter 
       name="startDateRange"
       [values]="challengeStartDateRangeFilterValues"
-      (timeOfChanged)="dateRangeChanged($event)">
+      (dateChange)="dateRangeChanged()">
     </sage-date-range-filter>
     <h3>Platforms</h3>
     <sage-checkbox-filter name="platformIds"
