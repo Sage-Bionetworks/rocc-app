@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AvatarModule, FooterModule } from '@sage-bionetworks/sage-angular';
 import { HomepageComponent } from './homepage.component';
 import { MaterialModule } from '@shared/material/material.module';
+import { NgxTypedJsModule } from 'ngx-typed-js-public';
+import { CountUpModule } from 'ngx-countup';
+
 
 const routes: Routes = [
   { path: '', component: HomepageComponent }
@@ -16,7 +19,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FooterModule,
     MaterialModule,
-    AvatarModule
+    AvatarModule,
+    NgxTypedJsModule,
+    CountUpModule,
   ],
   exports: [HomepageComponent]
 })
