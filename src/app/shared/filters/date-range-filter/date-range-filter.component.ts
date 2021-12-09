@@ -29,7 +29,7 @@ export class DateRangeFilterComponent
   extends FilterComponent
   implements OnInit
 {
-  @Output() dateChange = new EventEmitter<number>();
+  @Output() onChange = new EventEmitter<boolean>();
 
   range = new FormGroup({
     start: new FormControl(),
@@ -79,8 +79,7 @@ export class DateRangeFilterComponent
     };
   }
 
-  getTimeChanged(): void {
-    // emit the time when either of start or end date changes
-    this.dateChange.emit(new Date().getTime());
+  onChanged(): void {
+    this.onChange.emit(true);
   }
 }

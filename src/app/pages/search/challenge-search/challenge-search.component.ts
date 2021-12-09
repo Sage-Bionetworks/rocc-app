@@ -77,9 +77,9 @@ export class ChallengeSearchComponent
 
   limit = 10;
   offset = 0;
-  selectedRange!: DateRange | string;
   searchResultsCount = 0;
   loggedIn = false;
+  useYearRange = true;
   challengeList!: Observable<Challenge[]>;
   dataSource!: MatTableDataSource<Challenge>;
 
@@ -121,15 +121,11 @@ export class ChallengeSearchComponent
         map((query): ChallengeSearchQuery => {
           query.sort = undefined;
           query.direction = undefined;
+          console.log(this.useYearRange);
           // if not custom selected, replace dateRange with yearRange
-          if (
-            this.selectedRange !== 'custom' &&
-            query.startYearRange !== 'custom'
-          ) {
+          if (this.useYearRange && query.startYearRange !== 'custom') {
             query.startDateRange = query.startYearRange;
           }
-          this.selectedRange = query.startDateRange;
-
           if (query.orderBy !== undefined) {
             query.sort = query.orderBy.substring(
               ['+', '-'].includes(query.orderBy.substring(0, 1)) ? 1 : 0
@@ -236,12 +232,16 @@ export class ChallengeSearchComponent
   //   this.query.next(query);
   // }
 
-  dateRangeChanged() {
+  dateRangeChanged(isChanged: boolean) {
     // change radio button checked value
     this.challengeStartYearRangeFilterValues.map((value) => {
       value.active = value.value === 'custom';
     });
-    this.selectedRange = 'custom';
+    this.useYearRange = !isChanged;
+  }
+
+  yearRangeChanged(isChanged: boolean) {
+    this.useYearRange = isChanged;
   }
 
   updateQuery(): void {
