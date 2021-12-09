@@ -15,7 +15,7 @@ services:
       - rocc-networks
 
   rocc-service:
-    image: sagebionetworks/rocc-service:0.7.0
+    image: sagebionetworks/rocc-service:0.8.0
     container_name: rocc-service
     restart: always
     environment:
