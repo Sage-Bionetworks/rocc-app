@@ -38,6 +38,8 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "ngx-avatar": "^4.1.0",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.0.2",
     "rxjs": "^6.6.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

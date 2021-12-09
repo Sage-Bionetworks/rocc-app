@@ -1,0 +1,87 @@
+$base-size: 14px;
+
+:host ::ng-deep .p-multiselect {
+  min-width: 260px;
+  font-size: $base-size;
+
+  .p-multiselect-trigger {
+    width: 3em;
+
+    span {
+      font-size: $base-size;
+    }
+  }
+
+  .p-multiselect-label {
+    width: 215px;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+
+    &.p-placeholder {
+      padding-top: 0.7rem !important;
+      padding-bottom: 0.7rem !important;
+    }
+  }
+
+  .p-multiselect-token {
+    padding: 0.3rem;
+
+    .p-multiselect-token-icon {
+      font-size: $base-size;
+    }
+  }
+}
+
+:host ::ng-deep .p-multiselect-header {
+  padding: (0.5 * $base-size) $base-size;
+
+  .p-multiselect-filter {
+    padding: 0.5rem;
+  }
+
+  .p-multiselect-filter-container {
+    input {
+      font-size: $base-size;
+    }
+  }
+
+  .p-multiselect-close {
+    display: none;
+  }
+}
+
+:host ::ng-deep .p-multiselect-item {
+  font-size: $base-size;
+  padding: (0.5 * $base-size) $base-size !important;
+  border-bottom: 1px solid #e9ecef !important;
+
+  .value-card-container {
+    display: inline-flex;
+    align-items: center;
+
+    sage-avatar {
+      margin-right: 14px;
+    }
+
+    .value-card-title {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        max-width: 120px;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+
+      .value-card-subtitle {
+        font-size: 0.8 * $base-size;
+      }
+    }
+  }
+}
+
+:host ::ng-deep .p-multiselect-empty-message {
+  padding: 0 !important;
+  font-size: $base-size;
+  text-align: center;
+}

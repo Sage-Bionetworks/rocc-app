@@ -25,6 +25,16 @@
       <sage-checkbox-filter class="scroll-box" name="platformIds" [values]="challengePlatformFilterValues">
       </sage-checkbox-filter>
     </div>
+    <div class="filter-container">
+      <h2>Organization</h2>
+      <sage-search-dropdown-filter name="organizations" [values]="orgFilterValues">
+      </sage-search-dropdown-filter>
+    </div>
+    <div class="filter-container">
+    <h2>Organizer</h2>
+      <sage-search-dropdown-filter name="organizerIds" [values]="organizerFilterValues">
+      </sage-search-dropdown-filter>
+    </div>
   </div>
   <div class="search-content-container">
     <sage-search-filter class="rocc-challenge-list-content-search-filter"
