@@ -21,6 +21,26 @@
       </sage-checkbox-filter>
     </div>
     <div class="filter-container">
+      <h2>Difficulty</h2>
+      <sage-checkbox-filter name="difficulty" [values]="challengeDifficultyFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Submission Type</h2>
+      <sage-checkbox-filter name="submissionTypes" [values]="challengeSubmissionTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Input Data Type</h2>
+      <sage-checkbox-filter class="scroll-box" name="inputDataTypes" [values]="challengeInputDataTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Incentive Type</h2>
+      <sage-checkbox-filter name="incentiveTypes" [values]="challengeIncentiveTypesFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
       <h2>Platform</h2>
       <sage-checkbox-filter class="scroll-box" name="platformIds" [values]="challengePlatformFilterValues">
       </sage-checkbox-filter>
