@@ -140,7 +140,6 @@ export class ChallengeSearchComponent
         map((query): ChallengeSearchQuery => {
           query.sort = undefined;
           query.direction = undefined;
-          console.log(this.useYearRange);
           // if not custom selected, replace dateRange with yearRange
           if (this.useYearRange && query.startYearRange !== 'custom') {
             query.startDateRange = query.startYearRange;
@@ -245,7 +244,7 @@ export class ChallengeSearchComponent
 
   private listOrganizations(): void {
     this.organizationService
-      .listOrganizations(100)
+      .listOrganizations(10)
       .pipe(
         map((page) => page.organizations),
         map((orgs) => orgs.sort((a, b) => a.login.localeCompare(b.login)))
