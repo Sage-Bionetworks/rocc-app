@@ -4,6 +4,7 @@
   background-color: rgb(216, 216, 216);
   display: flex;
   flex-direction: row;
+  color: #000;
   font-size: 16px;
 }
 
@@ -38,11 +39,33 @@
 
 .search-content-container {
   padding: 40px 20px;
-  flex-grow: 1;
   width: 100%;
 
-  .rocc-challenge-list-content-search-filter {
-    margin-bottom: 20px;
+  .search-content-filter-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px !important;
+
+    .view-filter-container {
+      display: inline-flex;
+      align-items: center;
+
+      span {
+        margin-right: 16px;
+      }
+
+      ::ng-deep .mat-button-toggle-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    sage-sort-filter {
+      margin-left: auto !important;
+    }
   }
 }
 
@@ -63,4 +86,10 @@
 .rocc-challenge-list-more-results-btn {
   margin-top: 25px;
   width: 400px;
+}
+
+.mat-grid-tile {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
 }

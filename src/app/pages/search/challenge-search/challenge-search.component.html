@@ -63,18 +63,41 @@
     <!-- <span
       class="rocc-challenge-list-content-results-count">{{searchResultsCount}}
       results</span> -->
-
-    <mat-nav-list class="challenge-search-results">
-      <rocc-challenge-card *ngFor="let challenge of challengeList | async"
-        [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
-      </rocc-challenge-card>
-      <mat-paginator
+    <div class="search-content-filter-container">
+      <div class="view-filter-container">
+        <span>View as</span>
+        <mat-button-toggle-group #group="matButtonToggleGroup" (change)="changeDisplay(group.value)">
+          <mat-button-toggle value="list">
+            <mat-icon>view_list</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="grid">
+            <mat-icon>grid_view</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <sage-sort-filter name="sort" [values]="sortByFilterValues"></sage-sort-filter>
+    </div>
+    <div class="challenge-search-results" [ngSwitch]="display">
+      <div *ngSwitchCase="'list'">
+        <mat-nav-list class="challenge-search-results">
+          <rocc-challenge-card *ngFor="let challenge of challengeList | async"
+            [challenge]="challenge"  [loggedIn]="loggedIn" (click)="onClick('/' + challenge.fullName)">
+          </rocc-challenge-card>
+        </mat-nav-list>
+      </div>
+      <div *ngSwitchCase="'grid'">
+        <mat-grid-list cols="3" rowHeight="2:1" gutterSize="20px">
+          <mat-grid-tile *ngFor="let challenge of challengeList | async">
+            {{challenge.displayName}}
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+    <mat-paginator
       [length]="searchResultsCount" 
       [pageSizeOptions]="[10, 25, 50]"
       (page)="onPaginate($event)">
     </mat-paginator>
-    </mat-nav-list>
-
     <!-- <div class="rocc-challenge-list-more-results">
       <a *ngIf="searchResultsCount - challenges.length > 0" mat-raised-button
         class="rocc-challenge-list-more-results-btn" color="primary"
