@@ -18,10 +18,14 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import {
   challengeStartDateRangeFilterValues,
-  challengeStatusFilterValues,
-  previewTypeFilterValues,
-  searchTermsFilterValues,
   challengeStartYearRangeFilterValues,
+  challengeStatusFilterValues,
+  challengeDifficultyFilterValues,
+  challengeSubmissionTypesFilterValues,
+  challengeInputDataTypesFilterValues,
+  challengeIncentiveTypesFilterValues,
+  searchTermsFilterValues,
+  previewTypeFilterValues,
 } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest } from 'rxjs';
@@ -86,9 +90,17 @@ export class ChallengeSearchComponent
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
-  challengePlatformFilterValues: FilterValue[] = [];
   challengeStartYearRangeFilterValues: FilterValue[] =
     challengeStartYearRangeFilterValues;
+  challengeDifficultyFilterValues: FilterValue[] =
+    challengeDifficultyFilterValues;
+  challengeSubmissionTypesFilterValues: FilterValue[] =
+    challengeSubmissionTypesFilterValues;
+  challengeIncentiveTypesFilterValues: FilterValue[] =
+    challengeIncentiveTypesFilterValues;
+  challengeInputDataTypesFilterValues: FilterValue[] =
+    challengeInputDataTypesFilterValues;
+  challengePlatformFilterValues: FilterValue[] = [];
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
 
