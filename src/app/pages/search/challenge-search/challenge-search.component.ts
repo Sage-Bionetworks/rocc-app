@@ -44,10 +44,17 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   sort: 'createdAt',
   direction: 'asc',
   searchTerms: '',
-  tagIds: [],
+  topics: [],
+  inputDataTypes: [],
   status: [],
   platformIds: [],
+  difficulty: [],
+  submissionTypes: [],
+  incentiveTypes: [],
   startDateRange: {} as DateRange,
+  orgIds: [],
+  organizerIds: [],
+  sponsorIds: [],
 };
 
 @Component({
@@ -141,10 +148,17 @@ export class ChallengeSearchComponent
             query.sort,
             query.direction,
             query.searchTerms,
-            query.tagIds,
+            query.topics,
+            query.inputDataTypes,
             query.status,
             query.platformIds,
-            query.startDateRange
+            query.difficulty,
+            query.submissionTypes,
+            query.incentiveTypes,
+            query.startDateRange,
+            query.orgIds,
+            query.organizerIds,
+            query.sponsorIds
           )
         )
       )
