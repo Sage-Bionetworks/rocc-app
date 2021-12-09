@@ -101,6 +101,8 @@ export class ChallengeSearchComponent
   challengeInputDataTypesFilterValues: FilterValue[] =
     challengeInputDataTypesFilterValues;
   challengePlatformFilterValues: FilterValue[] = [];
+  challengeStartYearRangeFilterValues: FilterValue[] =
+    challengeStartYearRangeFilterValues;
   previewTypeFilterValues: ButtonToggleFilterValue[] = previewTypeFilterValues;
   searchTermsFilterValues = searchTermsFilterValues;
 
