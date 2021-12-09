@@ -1,17 +1,30 @@
 <div class="container">
   <div class="search-bar-container">
-    <h3>Status</h3>
-    <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
-    </sage-checkbox-filter>
-    <h3>Start Date</h3>
-    <sage-date-range-filter name="startDateRange"
-      [values]="challengeStartDateRangeFilterValues"></sage-date-range-filter>
-    <h3>Platforms</h3>
-    <sage-checkbox-filter name="platformIds"
-      [values]="challengePlatformFilterValues"></sage-checkbox-filter>
-    <!-- <h3>Preview</h3>
-    <sage-button-toggle-filter name="previewType" [values]="previewTypeFilterValues">
-    </sage-button-toggle-filter> -->
+    <div class="filter-container">
+      <h2>Start Date</h2>
+      <sage-radio-button-filter
+        name="startYearRange" 
+        [values]="challengeStartYearRangeFilterValues"
+        (isChanged)="yearRangeChanged($event)">
+      </sage-radio-button-filter>
+      <div class="start-date-range-filter">
+        <sage-date-range-filter 
+          name="startDateRange"
+          [values]="challengeStartDateRangeFilterValues"
+          (isChanged)="dateRangeChanged($event)">
+        </sage-date-range-filter>
+      </div>
+    </div>
+    <div class="filter-container">
+      <h2>Status</h2>
+      <sage-checkbox-filter name="status" [values]="challengeStatusFilterValues">
+      </sage-checkbox-filter>
+    </div>
+    <div class="filter-container">
+      <h2>Platform</h2>
+      <sage-checkbox-filter class="scroll-box" name="platformIds" [values]="challengePlatformFilterValues">
+      </sage-checkbox-filter>
+    </div>
   </div>
   <div class="search-content-container">
     <sage-search-filter class="rocc-challenge-list-content-search-filter"

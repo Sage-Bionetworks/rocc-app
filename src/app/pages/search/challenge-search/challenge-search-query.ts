@@ -16,6 +16,7 @@ export interface ChallengeSearchQuery {
   topics?: string[];
   status?: ChallengeStatus[];
   platformIds?: string[];
+  startYearRange?: DateRange | string;
   startDateRange?: DateRange;
   inputDataTypes?: string[];
   difficulty?: ChallengeDifficulty[];
