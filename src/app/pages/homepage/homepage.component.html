@@ -69,7 +69,7 @@
           
           <div class="card trending-card text-center" *ngFor="let trend in trendList | async">
             <div class="card-inner">
-              <h4 class="card-title h3-mobile">{{ trend.title }}</h4>
+              <h4 class="card-title">{{ trend.title }}</h4>
               <p class="text-sm">{{ trend.count }} active challenges</p>
             </div>
           </div>
@@ -137,10 +137,8 @@
             </div>
           </div>
           <div class="col org-card text-center">
-
             <img src="https://raw.githubusercontent.com/Sage-Bionetworks/rocc-app/main/images/logo/precisionfda.png"
               alt="precisionfda">
-
             <h4>PrecisionFDA</h4>
             <div class="card-footer">
               <a href="#">@precisionfda</a>
@@ -162,6 +160,7 @@
             <h2 class="section-title text-left">Are you a challenge organizer?</h2>
             <p>Add your challenges to the ROCC database and see the participant numbers roll in.</p>
             <div class="control">
+              <!-- TODO: update path -->
               <a class="btn btn-block" href="#">Add a challenge</a>
             </div>
           </div>
@@ -175,7 +174,7 @@
       <div class="cards-inner section-inner">
         <div class="cards-header text-center">
           <h3 class="section-title">Featured challenges</h3>
-          <p class="text-sm">Not sure where to start? Try one of these featured challenges!</p>
+          <p class="text-sm">Not sure where to start? Try one of the following featured challenges!</p>
         </div>
         <div class="cards-wrap">
           <!-- TODO: replace hard-coded cards with qngFor -->
