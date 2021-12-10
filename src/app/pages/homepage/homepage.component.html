@@ -34,17 +34,17 @@
           Current landscape
         </h3>
         <!-- TODO: replace hard-coded numbers -->
-        <div class="row">
+        <div class="row" *ngIf="registry$ | async as registry">
           <div class="col text-center">
-            <h2 [countUp]="1500">0</h2>
+            <h2 [countUp]="registry.challengeCount">0</h2>
             <p>annotated challenges</p>
           </div>
           <div class="col text-center">
-            <h2 [countUp]="8">0</h2>
+            <h2 [countUp]="registry.orgCount">0</h2>
             <p>organizations & hosting societies</p>
           </div>
           <div class="col text-center">
-            <h2 [countUp]="15">0</h2>
+            <h2 [countUp]="registry.userCount">0</h2>
             <p>registered users</p>
           </div>
         </div>
@@ -60,7 +60,7 @@
         </div>
         <div class="cards-wrap">
           <!-- TODO: replace hard-coded cards with ngFor, e.g.
-          
+
           <div class="card trending-card text-center" *ngFor="let trend in trendList | async">
             <div class="card-inner">
               <h4 class="card-title">{{ trend.title }}</h4>
