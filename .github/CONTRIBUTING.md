@@ -108,11 +108,11 @@ Maintainers are required to follow the procedure below when creating a new
 release. Releases are created with the npm package [release-it].
 
 1. [Identify whether the release is a major, minor or patch release.]
-2. Bump the project version in the files listed below but not in `package.json`
-   (updated automatically by `release-it`).
+2. Bump the project version in the files listed below.
    - `README.md`
    - `docker-compose.yml`
    - `src/config/config.json`
+   - `package.json`
 3. Obtain a [personal access token] (release-it only needs "repo" access; no
    "admin" or other scopes).
 4. Make sure the token is [available as an environment variable].
