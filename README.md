@@ -14,12 +14,12 @@ TBA
 
 ### Running with Docker
 
-1. Clone this repository, as well as the two linked repositories.  This is done
-with the `--recursive` flag.
+1. Clone this repository, as well as the two linked repositories.  This can be
+done with the `--recursive` flag.
 
        git clone --recursive https://github.com/Sage-Bionetworks/rocc-app.git
 
-Refer to **Updating a Linked Repository** section below if you need to update one
+Refer to **[Updating a Linked Repository]** section below if you need to update one
 or more of the linked repositories.
 
 2. Create the configuration file.
@@ -43,7 +43,9 @@ This section describes how to start the ROCC API service and the ROCC Angular
 app in development environment. After each step, you need to come back to the
 project root folder.
 
-1. git clone --recursive https://github.com/Sage-Bionetworks/rocc-app.git
+1. Clone this repository, along with the linked repositories.
+
+       git clone --recursive https://github.com/Sage-Bionetworks/rocc-app.git
 
 2. Install the dependencies.
 
@@ -59,8 +61,8 @@ project root folder.
 
 The ROCC app is dependent on two linked repositories (a.k.a. submodules):
 
-* rocc-client-angular
-* sage-angular
+* [rocc-client-angular]
+* [sage-angular]
 
 When an update is pushed to one or more of the linked repository(ies), you
 will need to update those references on your end as well.  The steps are:
@@ -80,8 +82,8 @@ configuration files for the linked repos.
        npm run build:rocc-client-angular
        npm run build:sage-angular
 
-4. If new packages have been added to the client, those packages will need
-to be installed.
+4. (optional) If new packages have been added to the client, those packages
+will need to be installed.
 
        npm ci
 
@@ -120,6 +122,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <!-- Links -->
 
+[Updating a Linked Repository]: #updating-a-linked-repository
 [rocc-client-angular]: https://github.com/Sage-Bionetworks/rocc-client-angular
 [sage-angular]: https://github.com/Sage-Bionetworks/sage-angular
 [ROCC API service]: https://github.com/Sage-Bionetworks/rocc-service
