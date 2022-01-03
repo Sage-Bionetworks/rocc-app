@@ -13,6 +13,8 @@ services:
       - MONGO_PASSWORD
     networks:
       - rocc-networks
+    volumes:
+      - rocc-data:/data/db
 
   rocc-service:
     image: sagebionetworks/rocc-service:0.8.0
@@ -56,3 +58,7 @@ services:
 
 networks:
   rocc-networks:
+
+volumes:
+  rocc-data:
+    name: rocc-data
