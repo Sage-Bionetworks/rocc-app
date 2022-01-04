@@ -12,6 +12,10 @@ export const routes: Routes = [
   //   loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule)
   // },
   {
+    path: 'about',
+    loadChildren: () => import('./pages/about').then(m => m.AboutModule),
+  },
+  {
     path: 'search',
     loadChildren: () => import('./pages/search').then(m => m.SearchModule)
   },
@@ -63,31 +67,31 @@ export const routes: Routes = [
 
 
 
-//   {path: 'categories', redirectTo: '/components/categories'},
-//   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
-//   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
-//   {
-//     path: 'guides',
-//     loadChildren: () => import('./pages/guide-list').then(m => m.GuideListModule)
-//   },
+  //   {path: 'categories', redirectTo: '/components/categories'},
+  //   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
+  //   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
+  //   {
+  //     path: 'guides',
+  //     loadChildren: () => import('./pages/guide-list').then(m => m.GuideListModule)
+  //   },
   // Since https://github.com/angular/components/pull/9574, the cdk-table guide became the overview
   // document for the cdk table. To avoid any dead / broken links, we redirect to the new location.
-//   {path: 'guide/cdk-table', redirectTo: '/cdk/table/overview'},
-//   {
-//     path: 'guide/:id',
-//     loadChildren: () => import('./pages/guide-viewer').then(m => m.GuideViewerModule)
-//   },
+  //   {path: 'guide/cdk-table', redirectTo: '/cdk/table/overview'},
+  //   {
+  //     path: 'guide/:id',
+  //     loadChildren: () => import('./pages/guide-viewer').then(m => m.GuideViewerModule)
+  //   },
   // Needs to be defined before `:section` so it gets picked first when redirecting a missing page.
-//   {
-//     path: '404',
-//     loadChildren: () => import('./pages/not-found').then(m => m.NotFoundModule)
-//   },
-//   {
-//     path: ':section',
-//     canActivate: [CanActivateComponentSidenav],
-//     loadChildren: () =>
-//       import('./pages/component-sidenav/component-sidenav').then(m => m.ComponentSidenavModule)
-//   },
+  //   {
+  //     path: '404',
+  //     loadChildren: () => import('./pages/not-found').then(m => m.NotFoundModule)
+  //   },
+  //   {
+  //     path: ':section',
+  //     canActivate: [CanActivateComponentSidenav],
+  //     loadChildren: () =>
+  //       import('./pages/component-sidenav/component-sidenav').then(m => m.ComponentSidenavModule)
+  //   },
   {
     path: '**', redirectTo: '/404'
   }
@@ -101,4 +105,4 @@ export const routes: Routes = [
   providers: [],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
