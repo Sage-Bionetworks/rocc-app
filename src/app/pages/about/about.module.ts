@@ -5,8 +5,6 @@ import { AvatarModule, FooterModule } from '@sage-bionetworks/sage-angular';
 import { AboutComponent } from './about.component';
 import { MaterialModule } from '@shared/material/material.module';
 
-
-
 const routes: Routes = [
   { path: '', component: AboutComponent }
 ];
