@@ -107,11 +107,11 @@ need to be created:
 
 This will add a new sub-folder to the `src/app/pages/` and will include 5 files:
 
-* <new page name>.component.html
-* <new page name>.component.scss
-* <new page name>.component.spec.ts
-* <new page name>.component.ts
-* <new page name>.module.ts
+* `<new page name>.component.html`
+* `<new page name>.component.scss`
+* `<new page name>.component.spec.ts`
+* `<new page name>.component.ts`
+* `<new page name>.module.ts`
 
 A new TypeScript file will also need to be manually created within the sub-folder
 called `index.ts`, so that both the component and module are exported, e.g.
