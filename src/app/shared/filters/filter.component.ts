@@ -5,7 +5,7 @@ import { FilterState } from './filter-state.model';
 
 export const emptyFilterState: FilterState = {
   name: '',
-  value: ''
+  value: '',
 };
 
 @Component({
@@ -18,8 +18,6 @@ export abstract class FilterComponent {
   protected _values: FilterValue[] = [];
   /* Emits each time the selected filter value changes. */
   protected state = new BehaviorSubject<FilterState>(emptyFilterState);
-
-  constructor() {}
 
   getStateAsObservable(): Observable<FilterState> {
     return this.state.asObservable();
