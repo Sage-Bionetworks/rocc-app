@@ -10,10 +10,13 @@
     "build:sage-angular": "cd sage-angular && npm ci && npm run build",
     "install:dependencies": "npm run build:rocc-client-angular && npm run build:sage-angular && npm ci --legacy-peer-deps",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e",
     "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/rocc-app/stats.json",
-    "release": "release-it"
+    "release": "release-it",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">=14.16.1",
@@ -38,10 +41,10 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "ngx-avatar": "^4.1.0",
-    "primeicons": "^5.0.0",
-    "primeng": "^13.0.2",
     "ngx-countup": "^7.3.3",
     "ngx-typed-js-public": "^1.2.0",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.0.2",
     "rxjs": "^6.6.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -60,9 +63,15 @@
     "@types/lodash": "^4.14.171",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "^16.0.0",
-    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "4.28.2",
     "eslint": "^7.26.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^25.3.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^7.0.4",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.4",
@@ -70,10 +79,16 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.6.0",
+    "lint-staged": "^12.1.5",
     "protractor": "~7.0.0",
     "release-it": "^14.10.0",
     "ts-node": "~10.2.0",
     "typescript": "~4.3.5",
     "webpack-bundle-analyzer": "^4.4.2"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "npm run lint"
+    ]
   }
 }
