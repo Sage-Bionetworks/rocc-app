@@ -94,15 +94,77 @@ will need to be installed.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app
+will automatically reload if you change any of the source files.
+
+### Adding a new page
+
+To add a new page to the web client, both an Angular component and module will
+need to be created:
+
+       ng generate c pages/<new page name>
+       ng generate m pages/<new page name>
+
+This will add a new sub-folder to the `src/app/pages/` and will include 5 files:
+
+* <new page name>.component.html
+* <new page name>.component.scss
+* <new page name>.component.spec.ts
+* <new page name>.component.ts
+* <new page name>.module.ts
+
+A new TypeScript file will also need to be manually created within the sub-folder
+called `index.ts`, so that both the component and module are exported, e.g.
+
+```typescript
+export * from './<new page name>.component';
+export * from './<new page name>.module';
+```
+
+### Adding or modifying a route
+
+Routing within the ROCC app is found within `src/app/app-routing.module.ts`. Edit
+any `path`s as needed.
+
+To add a new route, use the following structure:
+
+```typescript
+{
+  path: '<some new path>',
+  loadChildren: () => import('./pages/<new page name>').then(m => m.<NewPageName>),
+  canActivate: [AuthGuard]
+}
+```
+
+Please remember that the routing order does matter.  We follow Angular's standard
+of more-specific first, less-specific later; that is, paths with static routes
+are placed first, followed by paths with parameters.
+
+### Editing the top navigation bar
+
+rocc-app is utilizing a shared component from the [sage-angular] library for
+its navigation bar. To edit the navbar contents, e.g. the links displayed, navigate
+to `src/app/app-section.ts` and modify as needed.
+
+To add a new section, use the following structure:
+
+```typescript
+<new path name>: {
+  name: '<text to be displayed',
+  summary: '<description of the path'
+}
+```
+
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component. You can
+also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the
+`dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
@@ -114,7 +176,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the 
+[Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## License
 
