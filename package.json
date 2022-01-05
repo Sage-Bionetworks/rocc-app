@@ -13,8 +13,8 @@
     "e2e": "ng e2e",
     "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/rocc-app/stats.json",
     "release": "release-it",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
