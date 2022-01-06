@@ -72,7 +72,8 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   styleUrls: ['./challenge-search.component.scss'],
 })
 export class ChallengeSearchComponent
-implements OnInit, AfterViewInit, OnDestroy {
+  implements OnInit, AfterViewInit, OnDestroy
+{
   challenges: Challenge[] = [];
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;

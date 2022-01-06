@@ -113,7 +113,7 @@ export class SignupComponent implements OnInit {
       login: this.username?.value,
       email: this.email?.value,
       password: this.password?.value,
-      name: ''
+      name: '',
     };
 
     this.userService.createUser(userCreateRequest).subscribe(

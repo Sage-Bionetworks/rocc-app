@@ -1,11 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
-import {
-  catchError,
-  filter,
-  switchMap,
-} from 'rxjs/operators';
+import { catchError, filter, switchMap } from 'rxjs/operators';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
   ChallengeService,

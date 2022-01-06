@@ -5,7 +5,7 @@ import {
   merge,
   throwError,
   combineLatest,
-  of
+  of,
 } from 'rxjs';
 import {
   catchError,
@@ -20,7 +20,7 @@ import {
   ChallengeService,
   ChallengeReadme,
   ModelError as RoccClientError,
-  UserService
+  UserService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isDefined, isUndefined } from '@app/type-guards';
 import { isRoccClientError } from '@app/shared/rocc-client-error';

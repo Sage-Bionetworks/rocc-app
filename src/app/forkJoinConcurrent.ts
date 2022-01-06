@@ -10,19 +10,25 @@ export function forkJoinConcurrent(
   return from(observables).pipe(
     // Merge each of the observables in the higher-order observable
     // into a single stream:
-    mergeMap((observable, observableIndex) => observable.pipe(
-      // Like forkJoin, we're interested only in the last value:
-      last(),
-      // Combine the value with the index so that the stream of merged
-      // values - which could be in any order - can be sorted to match
-      // the order of the source observables:
-      map(value => ({ index: observableIndex, value }))
-    ), concurrent),
+    mergeMap(
+      (observable, observableIndex) =>
+        observable.pipe(
+          // Like forkJoin, we're interested only in the last value:
+          last(),
+          // Combine the value with the index so that the stream of merged
+          // values - which could be in any order - can be sorted to match
+          // the order of the source observables:
+          map((value) => ({ index: observableIndex, value }))
+        ),
+      concurrent
+    ),
     // Convert the stream of last values to an array:
     toArray(),
     // Sort the array of value/index pairs by index - so the value
     // indices correspond to the source observable indices and then
     // map the pair to the value:
-    map(pairs => pairs.sort((l, r) => l.index - r.index).map(pair => pair.value))
+    map((pairs) =>
+      pairs.sort((l, r) => l.index - r.index).map((pair) => pair.value)
+    )
   );
 }

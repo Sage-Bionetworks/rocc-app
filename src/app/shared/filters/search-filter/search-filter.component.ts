@@ -18,7 +18,8 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 })
 export class SearchFilterComponent
   extends FilterComponent
-  implements OnInit, OnDestroy {
+  implements OnInit, OnDestroy
+{
   searchForm: FormGroup;
   private searchSub!: Subscription;
 

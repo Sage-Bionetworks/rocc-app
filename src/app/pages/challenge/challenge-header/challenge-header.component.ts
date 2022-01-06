@@ -65,14 +65,14 @@ export class ChallengeHeaderComponent implements OnInit {
             this.challenge.startDate !== undefined &&
             this.challenge.endDate !== undefined
               ? this.calcProgress(
-                new Date().toUTCString(),
+                  new Date().toUTCString(),
                   this.challenge.startDate!,
                   this.challenge.endDate!
-              )
+                )
               : 0)
         : this.challenge.status === 'completed'
-          ? 100
-          : 0;
+        ? 100
+        : 0;
 
     this.remainDays =
       this.challenge.endDate !== undefined

@@ -7,9 +7,7 @@ import { MaterialModule } from '@shared/material/material.module';
 import { NgxTypedJsModule } from 'ngx-typed-js-public';
 import { CountUpModule } from 'ngx-countup';
 
-const routes: Routes = [
-  { path: '', component: HomepageComponent }
-];
+const routes: Routes = [{ path: '', component: HomepageComponent }];
 
 @NgModule({
   declarations: [HomepageComponent],
@@ -22,6 +20,6 @@ const routes: Routes = [
     NgxTypedJsModule,
     CountUpModule,
   ],
-  exports: [HomepageComponent]
+  exports: [HomepageComponent],
 })
-export class HomepageModule { }
+export class HomepageModule {}

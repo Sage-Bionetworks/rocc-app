@@ -13,38 +13,44 @@ export const routes: Routes = [
   // },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about').then(m => m.AboutModule),
+    loadChildren: () => import('./pages/about').then((m) => m.AboutModule),
   },
   {
     path: 'search',
-    loadChildren: () => import('./pages/search').then(m => m.SearchModule)
+    loadChildren: () => import('./pages/search').then((m) => m.SearchModule),
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/signin').then(m => m.SigninModule)
+    loadChildren: () => import('./pages/signin').then((m) => m.SigninModule),
   },
   {
     path: 'signup',
-    loadChildren: () => import('./pages/signup').then(m => m.SignupModule)
+    loadChildren: () => import('./pages/signup').then((m) => m.SignupModule),
   },
   {
     path: 'new',
-    loadChildren: () => import('./pages/challenge/challenge-new').then(m => m.ChallengeNewModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./pages/challenge/challenge-new').then(
+        (m) => m.ChallengeNewModule
+      ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'notifications',
-    loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./pages/notifications').then((m) => m.NotificationsModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'settings',
-    loadChildren: () => import('./pages/settings').then(m => m.SettingsModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./pages/settings').then((m) => m.SettingsModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'orgs',
-    loadChildren: () => import('./pages/organization').then(m => m.OrganizationModule)
+    loadChildren: () =>
+      import('./pages/organization').then((m) => m.OrganizationModule),
   },
   // {
   //   path: '404',
@@ -53,11 +59,12 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
+    loadChildren: () =>
+      import('./pages/homepage').then((m) => m.HomepageModule),
   },
   {
     path: ':login',
-    loadChildren: () => import('./pages/account').then(m => m.AccountModule),
+    loadChildren: () => import('./pages/account').then((m) => m.AccountModule),
   },
   // {
   //   path: ':username',
@@ -91,16 +98,15 @@ export const routes: Routes = [
   //       import('./pages/component-sidenav/component-sidenav').then(m => m.ComponentSidenavModule)
   //   },
   {
-    path: '**', redirectTo: '/404'
-  }
+    path: '**',
+    redirectTo: '/404',
+  },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
+  imports: [RouterModule.forRoot(routes)],
   declarations: [],
   providers: [],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

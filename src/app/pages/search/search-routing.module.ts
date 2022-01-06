@@ -14,8 +14,8 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'challenges'
-      }
+        redirectTo: 'challenges',
+      },
     ],
   },
 ];

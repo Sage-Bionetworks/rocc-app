@@ -39,7 +39,8 @@ import deepEqual from 'deep-equal';
   styleUrls: ['./org-challenges.component.scss'],
 })
 export class OrgChallengesComponent
-implements OnInit, AfterViewInit, OnDestroy {
+  implements OnInit, AfterViewInit, OnDestroy
+{
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 

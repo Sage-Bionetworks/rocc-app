@@ -26,7 +26,8 @@ import { DateRange } from './date-range';
 // TODO: Setting a different [values] programmatically should update the UI
 export class DateRangeFilterComponent
   extends FilterComponent
-  implements OnInit {
+  implements OnInit
+{
   @Output() isChanged = new EventEmitter<boolean>();
 
   range = new FormGroup({
