@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
-import { catchError, switchMap, tap } from 'rxjs/operators';
+import { catchError, switchMap } from 'rxjs/operators';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
   AccountService,
@@ -40,7 +40,7 @@ export class OrganizationComponent implements OnInit {
       catchError((err) => {
         const error = err.error as RoccClientError;
         if (isRoccClientError(error)) {
-          if (error.status == 404) {
+          if (error.status === 404) {
             return of(undefined);
           }
         }
@@ -61,15 +61,15 @@ export class OrganizationComponent implements OnInit {
         },
         {
           label: 'Challenges',
-          path: `challenges`,
+          path: 'challenges',
         },
         {
           label: 'People',
-          path: `people`,
+          path: 'people',
         },
         {
           label: 'Settings',
-          path: `settings`,
+          path: 'settings',
         },
       ];
     });

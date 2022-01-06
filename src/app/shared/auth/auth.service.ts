@@ -7,8 +7,7 @@ import {
   User,
   UserService,
 } from '@sage-bionetworks/rocc-client-angular';
-import { pipe } from 'rxjs';
-import { map, mergeMap, subscribeOn, switchMap, tap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { TokenService } from './token.service';
 
 // const _loginWithTokenResponse = (authService: AuthService) =>
@@ -36,6 +35,7 @@ export class AuthService {
   private user: BehaviorSubject<User | undefined> = new BehaviorSubject<
     User | undefined
   >(undefined);
+
   private initialized = false;
 
   private loginUrl = '/login';

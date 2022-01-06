@@ -7,7 +7,6 @@ import { MaterialModule } from '@shared/material/material.module';
 import { NgxTypedJsModule } from 'ngx-typed-js-public';
 import { CountUpModule } from 'ngx-countup';
 
-
 const routes: Routes = [
   { path: '', component: HomepageComponent }
 ];

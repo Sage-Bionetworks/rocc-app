@@ -7,6 +7,4 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class SearchComponent {
   @HostBinding('class.main-content') readonly mainContentClass = true;
-
-  constructor() {}
 }

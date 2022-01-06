@@ -1,11 +1,9 @@
-import { Component, forwardRef } from '@angular/core';
+import { Component, forwardRef, OnInit, OnDestroy } from '@angular/core';
 import { FilterState } from '../filter-state.model';
 import { FilterComponent } from '../filter.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { OnInit } from '@angular/core';
-import { OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'sage-search-filter',
@@ -20,8 +18,7 @@ import { OnDestroy } from '@angular/core';
 })
 export class SearchFilterComponent
   extends FilterComponent
-  implements OnInit, OnDestroy
-{
+  implements OnInit, OnDestroy {
   searchForm: FormGroup;
   private searchSub!: Subscription;
 

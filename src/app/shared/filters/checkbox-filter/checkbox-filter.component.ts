@@ -14,10 +14,6 @@ import { FilterComponent } from '../filter.component';
   ],
 })
 export class CheckboxFilterComponent extends FilterComponent {
-  constructor() {
-    super();
-  }
-
   getState(): FilterState {
     return {
       name: this.name,

@@ -24,10 +24,6 @@ export class RadioButtonFilterComponent extends FilterComponent {
   @ViewChild(MatRadioGroup, { static: true }) radioGroup!: MatRadioGroup;
   @Output() isChanged = new EventEmitter<boolean>();
 
-  constructor() {
-    super();
-  }
-
   getState(): FilterState {
     const activeValue = this.values.find((value) => value.active);
     return {

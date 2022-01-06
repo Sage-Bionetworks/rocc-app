@@ -60,7 +60,7 @@ export class ChallengeCardComponent implements OnInit {
         catchError((err) => {
           const error = err.error as RoccClientError;
           if (isRoccClientError(error)) {
-            if (error.status == 404) {
+            if (error.status === 404) {
               return of(false);
             }
           }

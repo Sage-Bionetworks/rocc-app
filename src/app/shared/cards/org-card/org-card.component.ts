@@ -11,8 +11,6 @@ export class OrgCardComponent implements OnInit {
   @Input() org!: Organization;
   @Input() orgAvatar!: Avatar;
 
-  constructor() {}
-
   ngOnInit(): void {
     this.orgAvatar = {
       name: this.org.name

@@ -17,9 +17,8 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'rocc-challenge-new',
@@ -32,6 +31,7 @@ export class ChallengeNewComponent implements OnInit, OnDestroy {
   errors = {
     other: undefined,
   } as { other?: string };
+
   submitted = false;
   orgs: Organization[] = [];
   private subscriptions: Subscription[] = [];
@@ -148,7 +148,7 @@ export class ChallengeNewComponent implements OnInit, OnDestroy {
         (err) => {
           const error = err.error as RoccClientError;
           if (isRoccClientError(error)) {
-            if (error.status == 409) {
+            if (error.status === 409) {
               this.name?.setErrors({
                 alreadyExists: true,
               });

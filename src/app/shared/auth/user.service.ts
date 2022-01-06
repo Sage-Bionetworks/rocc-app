@@ -4,8 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UserService {
-  constructor() {}
-
   // get(): Observable<User> {
   //   return this.httpClient.get<User>(`/api/users/${userId}`);
   // }

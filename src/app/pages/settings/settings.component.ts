@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'rocc-settings',
@@ -7,6 +7,4 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 })
 export class SettingsComponent {
   @HostBinding('class.main-content') readonly mainContentClass = true;
-
-  constructor() {}
 }

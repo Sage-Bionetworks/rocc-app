@@ -5,6 +5,7 @@ import {
   merge,
   throwError,
   combineLatest,
+  of
 } from 'rxjs';
 import {
   catchError,
@@ -19,11 +20,9 @@ import {
   ChallengeService,
   ChallengeReadme,
   ModelError as RoccClientError,
-  UserService,
-  User,
+  UserService
 } from '@sage-bionetworks/rocc-client-angular';
 import { isDefined, isUndefined } from '@app/type-guards';
-import { of } from 'rxjs';
 import { isRoccClientError } from '@app/shared/rocc-client-error';
 
 @Injectable({
@@ -32,8 +31,10 @@ import { isRoccClientError } from '@app/shared/rocc-client-error';
 export class ChallengeDataService {
   private challenge: BehaviorSubject<Challenge | undefined> =
     new BehaviorSubject<Challenge | undefined>(undefined);
+
   private readme: BehaviorSubject<ChallengeReadme | null> =
     new BehaviorSubject<ChallengeReadme | null>(null);
+
   private starred: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
     false
   );
@@ -103,7 +104,7 @@ export class ChallengeDataService {
       catchError((err) => {
         const error = err.error as RoccClientError;
         if (isRoccClientError(error)) {
-          if (error.status == 404) {
+          if (error.status === 404) {
             return of(false);
           }
         }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
+// import { ChallengeNewComponent } from './challenge-new/challenge-new.component';
 import { ChallengeOverviewComponent } from './challenge-overview/challenge-overview.component';
 import { ChallengeSettingsComponent } from './challenge-settings/challenge-settings.component';
 import { ChallengeComponent } from './challenge.component';

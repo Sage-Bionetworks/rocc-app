@@ -10,8 +10,6 @@ export class OrgDataService {
     Organization | undefined
   >(undefined);
 
-  constructor() {}
-
   setOrg(org: Organization | undefined): void {
     this.org.next(org);
   }

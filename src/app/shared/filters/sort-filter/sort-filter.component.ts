@@ -15,18 +15,15 @@ import { FilterComponent } from '../filter.component';
   ],
 })
 export class SortFilterComponent extends FilterComponent implements OnInit {
-  constructor() {
-    super();
-  }
   activeValue: string = '';
 
   ngOnInit(): void {
-    const activeValues = this.values.filter((value) => value.active == true);
+    const activeValues = this.values.filter((value) => value.active === true);
     this.activeValue = activeValues[0].value as string;
   }
 
   getState(): FilterState {
-    const activeValues = this.values.filter((value) => value.active == true);
+    const activeValues = this.values.filter((value) => value.active === true);
     return {
       name: this.name,
       value: activeValues.map((value) => value.value),

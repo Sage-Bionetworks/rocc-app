@@ -31,14 +31,13 @@ import {
   previewTypeFilterValues,
 } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
-import { combineLatest } from 'rxjs';
+import { combineLatest, BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
 import { ChallengeSearchQuery } from './challenge-search-query';
 import deepEqual from 'deep-equal';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { ButtonToggleFilterValue } from '@app/shared/filters/button-toggle-filter/button-toggle-filter-value';
 import assign from 'lodash-es/assign';
 import { Router } from '@angular/router';
@@ -73,8 +72,7 @@ const defaultChallengeSearchQuery: ChallengeSearchQuery = {
   styleUrls: ['./challenge-search.component.scss'],
 })
 export class ChallengeSearchComponent
-  implements OnInit, AfterViewInit, OnDestroy
-{
+implements OnInit, AfterViewInit, OnDestroy {
   challenges: Challenge[] = [];
   @ViewChildren(FilterComponent) filters!: QueryList<FilterComponent>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -94,16 +92,22 @@ export class ChallengeSearchComponent
   challengeStatusFilterValues: FilterValue[] = challengeStatusFilterValues;
   challengeStartDateRangeFilterValues: FilterValue[] =
     challengeStartDateRangeFilterValues;
+
   challengeStartYearRangeFilterValues: FilterValue[] =
     challengeStartYearRangeFilterValues;
+
   challengeDifficultyFilterValues: FilterValue[] =
     challengeDifficultyFilterValues;
+
   challengeSubmissionTypesFilterValues: FilterValue[] =
     challengeSubmissionTypesFilterValues;
+
   challengeIncentiveTypesFilterValues: FilterValue[] =
     challengeIncentiveTypesFilterValues;
+
   challengeInputDataTypesFilterValues: FilterValue[] =
     challengeInputDataTypesFilterValues;
+
   challengePlatformFilterValues: FilterValue[] = [];
   orgFilterValues: FilterValue[] = [];
   organizerFilterValues: FilterValue[] = [];
@@ -297,6 +301,7 @@ export class ChallengeSearchComponent
     // change radio button checked value
     this.challengeStartYearRangeFilterValues.map((value) => {
       value.active = value.value === 'custom';
+      return value;
     });
     this.useYearRange = !isChanged;
   }
