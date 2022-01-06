@@ -43,7 +43,6 @@
     "ngx-avatar": "^4.1.0",
     "ngx-countup": "^7.3.3",
     "ngx-typed-js-public": "^1.2.0",
-    "node-fetch": "^3.1.0",
     "primeicons": "^5.0.0",
     "primeng": "^13.0.2",
     "rxjs": "^6.6.7",
