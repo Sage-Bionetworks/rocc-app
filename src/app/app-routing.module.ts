@@ -12,6 +12,10 @@ export const routes: Routes = [
   //   loadChildren: () => import('./pages/organizations').then(m => m.OrganizationsModule)
   // },
   {
+    path: 'about',
+    loadChildren: () => import('./pages/about').then(m => m.AboutModule),
+  },
+  {
     path: 'search',
     loadChildren: () => import('./pages/search').then(m => m.SearchModule)
   },
