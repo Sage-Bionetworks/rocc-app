@@ -5,6 +5,9 @@
 - This project uses [eslint] to validate TypeScript and JavaScript files. The
   configuration file of `eslint` is `.eslintrc.json`. The behavior of `eslint`
   can be extended using plugins and custom rules.
+- This project runs [prettier] via `eslint` for additional flexibility in
+  validating files. The configuration of `prettier` is located in
+  `.eslintrc.json`.
 - TypeScript and JavaScript files are automatically validated and the lint
   issues fixed upon saving. This behavior is controled by the VS Code workspace
   settings file `.vscode/settings.json`.
@@ -23,3 +26,4 @@
 [eslint]: https://www.npmjs.com/package/eslint
 [husky]: https://www.npmjs.com/package/husky
 [stage-lint]: https://www.npmjs.com/package/lint-staged
+[prettier]: https://www.npmjs.com/package/prettier
