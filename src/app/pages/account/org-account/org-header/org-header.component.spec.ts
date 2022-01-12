@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrgHeaderComponent } from './org-header.component';
-import { MaterialModule } from '@shared/material/material.module';
 
 describe('OrgHeaderComponent', () => {
   let component: OrgHeaderComponent;
@@ -9,9 +8,9 @@ describe('OrgHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MaterialModule],
-      declarations: [OrgHeaderComponent],
-    }).compileComponents();
+      declarations: [ OrgHeaderComponent ]
+    })
+    .compileComponents();
   });
 
   beforeEach(() => {

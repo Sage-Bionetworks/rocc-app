@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrgCardComponent } from './org-card.component';
-import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
-import { MaterialModule } from '@shared/material/material.module';
 
 describe('OrgCardComponent', () => {
   let component: OrgCardComponent;
@@ -10,9 +8,9 @@ describe('OrgCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AvatarModule, MaterialModule],
-      declarations: [OrgCardComponent],
-    }).compileComponents();
+      declarations: [ OrgCardComponent ]
+    })
+    .compileComponents();
   });
 
   beforeEach(() => {

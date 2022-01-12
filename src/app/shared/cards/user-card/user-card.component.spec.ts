@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserCardComponent } from './user-card.component';
-import { MaterialModule } from '@shared/material/material.module';
 
 describe('PeopleViewComponent', () => {
   let component: UserCardComponent;
@@ -9,7 +8,6 @@ describe('PeopleViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MaterialModule],
       declarations: [UserCardComponent],
     }).compileComponents();
   });

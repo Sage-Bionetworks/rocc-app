@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomepageComponent } from './homepage.component';
-import { FooterModule } from '@sage-bionetworks/sage-angular';
 
 describe('HomepageComponent', () => {
   let component: HomepageComponent;
@@ -9,9 +8,9 @@ describe('HomepageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FooterModule],
-      declarations: [HomepageComponent],
-    }).compileComponents();
+      declarations: [ HomepageComponent ]
+    })
+    .compileComponents();
   });
 
   beforeEach(() => {

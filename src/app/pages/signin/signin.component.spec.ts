@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SigninComponent } from './signin.component';
-import { MaterialModule } from '@shared/material/material.module';
-import { FooterModule } from '@sage-bionetworks/sage-angular';
 
 describe('SigninComponent', () => {
   let component: SigninComponent;
@@ -10,9 +8,9 @@ describe('SigninComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MaterialModule, FooterModule],
-      declarations: [SigninComponent],
-    }).compileComponents();
+      declarations: [ SigninComponent ]
+    })
+    .compileComponents();
   });
 
   beforeEach(() => {
