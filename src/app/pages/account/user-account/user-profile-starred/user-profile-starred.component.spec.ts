@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserProfileStarredComponent } from './user-profile-starred.component';
+import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
 
 describe('UserProfileStarredComponent', () => {
   let component: UserProfileStarredComponent;
@@ -8,9 +9,9 @@ describe('UserProfileStarredComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserProfileStarredComponent ]
-    })
-    .compileComponents();
+      imports: [ChallengeCardModule],
+      declarations: [UserProfileStarredComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

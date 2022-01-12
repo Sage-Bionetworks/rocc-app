@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserProfileOverviewComponent } from './user-profile-overview.component';
+import { OrgCardModule } from '@shared/cards/org-card/org-card.module';
 
 describe('UserProfileOverviewComponent', () => {
   let component: UserProfileOverviewComponent;
@@ -8,9 +9,9 @@ describe('UserProfileOverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserProfileOverviewComponent ]
-    })
-    .compileComponents();
+      imports: [OrgCardModule],
+      declarations: [UserProfileOverviewComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

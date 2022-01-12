@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChallengeHeaderComponent } from './challenge-header.component';
+import { MaterialModule } from '@shared/material/material.module';
 
 describe('ChallengeHeaderComponent', () => {
   let component: ChallengeHeaderComponent;
@@ -8,9 +9,9 @@ describe('ChallengeHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChallengeHeaderComponent ]
-    })
-    .compileComponents();
+      imports: [MaterialModule],
+      declarations: [ChallengeHeaderComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

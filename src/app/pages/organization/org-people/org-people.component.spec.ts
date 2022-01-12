@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrgPeopleComponent } from './org-people.component';
+import { UserCardModule } from '@shared/cards/user-card/user-card.module';
 
 describe('OrgPeopleComponent', () => {
   let component: OrgPeopleComponent;
@@ -8,9 +9,9 @@ describe('OrgPeopleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrgPeopleComponent ]
-    })
-    .compileComponents();
+      imports: [UserCardModule],
+      declarations: [OrgPeopleComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

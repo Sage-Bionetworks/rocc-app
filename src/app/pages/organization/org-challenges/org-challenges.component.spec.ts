@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { OrgChallengesComponent } from './org-challenges.component';
+import { ChallengeCardModule } from '@app/shared/cards/challenge-card/challenge-card.module';
+import { FiltersModule } from '@shared/filters/filters.module';
+import { MaterialModule } from '@shared/material/material.module';
 
 describe('OrgChallengesComponent', () => {
   let component: OrgChallengesComponent;
@@ -8,9 +10,9 @@ describe('OrgChallengesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrgChallengesComponent ]
-    })
-    .compileComponents();
+      imports: [ChallengeCardModule, FiltersModule, MaterialModule],
+      declarations: [OrgChallengesComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

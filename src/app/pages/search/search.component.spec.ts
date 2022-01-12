@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SearchComponent } from './search.component';
+import { SearchRoutingModule } from './search-routing.module';
+import { FooterModule } from '@sage-bionetworks/sage-angular';
+import { ChallengeSearchComponent } from './challenge-search/challenge-search.component';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -8,9 +10,9 @@ describe('SearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchComponent ]
-    })
-    .compileComponents();
+      imports: [SearchRoutingModule, FooterModule],
+      declarations: [SearchComponent, ChallengeSearchComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserProfileBarComponent } from './user-profile-bar.component';
+import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
+import { MaterialModule } from '@shared/material/material.module';
 
 describe('UserProfileBarComponent', () => {
   let component: UserProfileBarComponent;
@@ -8,9 +10,9 @@ describe('UserProfileBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserProfileBarComponent ]
-    })
-    .compileComponents();
+      imports: [AvatarModule, MaterialModule],
+      declarations: [UserProfileBarComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

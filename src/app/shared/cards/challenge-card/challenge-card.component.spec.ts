@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChallengeCardComponent } from './challenge-card.component';
+import { MaterialModule } from '@shared/material/material.module';
 
 describe('CardPreviewComponent', () => {
   let component: ChallengeCardComponent;
@@ -8,6 +9,7 @@ describe('CardPreviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [MaterialModule],
       declarations: [ChallengeCardComponent],
     }).compileComponents();
   });
