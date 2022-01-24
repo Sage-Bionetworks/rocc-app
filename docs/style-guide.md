@@ -1,5 +1,14 @@
 # Project Style Guide
 
+## Requirements
+
+- [Visual Studio Code]
+- [Node.js] >= v14.x
+
+## Overview
+
+TODO
+
 ## Setup
 
 - This project uses [eslint] to validate TypeScript and JavaScript files. The
@@ -27,3 +36,5 @@
 [husky]: https://www.npmjs.com/package/husky
 [stage-lint]: https://www.npmjs.com/package/lint-staged
 [prettier]: https://www.npmjs.com/package/prettier
+[Visual Studio Code]: https://code.visualstudio.com/
+[Node.js]: https://nodejs.org/en/
