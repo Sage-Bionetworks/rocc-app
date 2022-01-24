@@ -60,7 +60,7 @@ export class ChallengeHeaderComponent implements OnInit {
       .subscribe((loggedIn) => (this.loggedIn = loggedIn));
 
     this.progressValue =
-      this.challenge.status == 'active'
+      this.challenge.status === 'active'
         ? (this.progressValue =
             this.challenge.startDate !== undefined &&
             this.challenge.endDate !== undefined
@@ -70,7 +70,7 @@ export class ChallengeHeaderComponent implements OnInit {
                   this.challenge.endDate!
                 )
               : 0)
-        : this.challenge.status == 'completed'
+        : this.challenge.status === 'completed'
         ? 100
         : 0;
 
@@ -81,7 +81,7 @@ export class ChallengeHeaderComponent implements OnInit {
   }
 
   calcDays(startDate: string, endDate: string): number {
-    let timeDiff = +new Date(endDate) - +new Date(startDate);
+    const timeDiff = +new Date(endDate) - +new Date(startDate);
     return Math.round(timeDiff / (1000 * 60 * 60 * 24));
   }
 

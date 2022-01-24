@@ -17,10 +17,6 @@ import { FilterState } from '../filter-state.model';
 export class SelectFilterComponent extends FilterComponent implements OnInit {
   @ViewChild(MatSelect, { static: true }) select!: MatSelect;
 
-  constructor() {
-    super();
-  }
-
   ngOnInit(): void {
     const activeValue = this.values.find((value) => value.active);
     if (activeValue !== undefined) {

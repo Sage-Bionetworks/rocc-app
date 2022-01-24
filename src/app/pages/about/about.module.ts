@@ -5,11 +5,7 @@ import { AvatarModule, FooterModule } from '@sage-bionetworks/sage-angular';
 import { AboutComponent } from './about.component';
 import { MaterialModule } from '@shared/material/material.module';
 
-
-
-const routes: Routes = [
-  { path: '', component: AboutComponent }
-];
+const routes: Routes = [{ path: '', component: AboutComponent }];
 
 @NgModule({
   declarations: [AboutComponent],
@@ -20,6 +16,6 @@ const routes: Routes = [
     MaterialModule,
     AvatarModule,
   ],
-  exports: [AboutComponent]
+  exports: [AboutComponent],
 })
-export class AboutModule { }
+export class AboutModule {}

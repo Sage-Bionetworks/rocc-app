@@ -27,6 +27,7 @@ export class SignupComponent implements OnInit {
     alreadyExists: false,
     other: undefined,
   } as { other?: string };
+
   submitted = false;
 
   constructor(
@@ -112,17 +113,17 @@ export class SignupComponent implements OnInit {
       login: this.username?.value,
       email: this.email?.value,
       password: this.password?.value,
-      name: ''
+      name: '',
     };
 
     this.userService.createUser(userCreateRequest).subscribe(
-      (res) => {
+      () => {
         this.router.navigate(['login']);
       },
       (err) => {
         const error = err.error as RoccClientError;
         if (isRoccClientError(error)) {
-          if (error.status == 409) {
+          if (error.status === 409) {
             this.username?.setErrors({
               alreadyExists: true,
             });

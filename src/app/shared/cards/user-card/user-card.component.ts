@@ -5,7 +5,7 @@ import {
   Organization,
 } from '@sage-bionetworks/rocc-client-angular';
 import { Avatar } from '@sage-bionetworks/sage-angular';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'rocc-user-card',

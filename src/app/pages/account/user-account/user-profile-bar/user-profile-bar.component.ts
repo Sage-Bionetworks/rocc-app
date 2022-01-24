@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { map as _map, uniqBy as _uniqBy } from 'lodash-es';
 import { Avatar } from '@sage-bionetworks/sage-angular';
 import { User, UserService } from '@sage-bionetworks/rocc-client-angular';
 

@@ -1,25 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChallengeOverviewComponent } from './challenge-overview.component';
+// import { ChallengeOverviewComponent } from './challenge-overview.component';
 
-describe('ChallengeOverviewComponent', () => {
-  let component: ChallengeOverviewComponent;
-  let fixture: ComponentFixture<ChallengeOverviewComponent>;
+// describe('ChallengeOverviewComponent', () => {
+//   let component: ChallengeOverviewComponent;
+//   let fixture: ComponentFixture<ChallengeOverviewComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ChallengeOverviewComponent ]
-    })
-    .compileComponents();
-  });
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ChallengeOverviewComponent]
+//     })
+//       .compileComponents();
+//   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ChallengeOverviewComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(ChallengeOverviewComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

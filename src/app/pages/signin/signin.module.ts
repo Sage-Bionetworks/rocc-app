@@ -7,9 +7,7 @@ import { SigninComponent } from './signin.component';
 import { MaterialModule } from '@shared/material/material.module';
 import { AuthModule } from '@shared/auth/auth.module';
 
-const routes: Routes = [
-  { path: '', component: SigninComponent }
-];
+const routes: Routes = [{ path: '', component: SigninComponent }];
 
 @NgModule({
   imports: [
@@ -19,9 +17,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FooterModule,
     MaterialModule,
-    AuthModule
+    AuthModule,
   ],
   declarations: [SigninComponent],
-  exports: [SigninComponent]
+  exports: [SigninComponent],
 })
 export class SigninModule {}

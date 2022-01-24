@@ -17,10 +17,6 @@ import { ButtonToggleFilterValue } from './button-toggle-filter-value';
   ],
 })
 export class ButtonToggleFilterComponent extends FilterComponent {
-  constructor() {
-    super();
-  }
-
   getState(): FilterState {
     const activeValue = this.values.find((value) => value.active);
     return {

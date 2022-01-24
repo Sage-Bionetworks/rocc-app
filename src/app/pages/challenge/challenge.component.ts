@@ -1,14 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
-import {
-  catchError,
-  filter,
-  map,
-  mapTo,
-  share,
-  switchMap,
-} from 'rxjs/operators';
+import { catchError, filter, switchMap } from 'rxjs/operators';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
   ChallengeService,
@@ -18,7 +11,6 @@ import {
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
 import { ChallengeDataService } from './challenge-data.service';
-import { isDefined } from '@app/type-guards';
 import { AuthService } from '@shared/auth/auth.service';
 
 @Component({
@@ -47,6 +39,7 @@ export class ChallengeComponent implements OnInit {
     },
   ];
 
+  // TODO find eslint rule to throw error for unused var for this case
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -69,7 +62,7 @@ export class ChallengeComponent implements OnInit {
       catchError((err) => {
         const error = err.error as RoccClientError;
         if (isRoccClientError(error)) {
-          if (error.status == 404) {
+          if (error.status === 404) {
             return of(undefined);
           }
         }

@@ -26,6 +26,7 @@ export class OrgNewComponent implements OnInit {
   errors = {
     other: undefined,
   } as { other?: string };
+
   submitted = false;
 
   constructor(
@@ -114,7 +115,7 @@ export class OrgNewComponent implements OnInit {
       (err) => {
         const error = err.error as RoccClientError;
         if (isRoccClientError(error)) {
-          if (error.status == 409) {
+          if (error.status === 409) {
             this.name?.setErrors({
               alreadyExists: true,
             });

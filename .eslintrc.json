@@ -1,8 +1,66 @@
 {
-  "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
+  "env": {
+    "es2021": true,
+    "node": true,
+    "browser": true
+    // "jest/globals": true
+  },
+  "extends": [
+    "standard",
+    "prettier"
   ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+    // "jest"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "printWidth": 80
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_"
+      }
+    ],
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": [
+      "error"
+    ]
+  },
+  // "root": true,
+  // "ignorePatterns": [
+  //     "projects/**/*"
+  // ],
   "overrides": [
     {
       "files": [
@@ -47,6 +105,9 @@
     {
       "files": [
         "*.html"
+      ],
+      "excludedFiles": [
+        "*inline-template-*.component.html"
       ],
       "extends": [
         "plugin:@angular-eslint/template/recommended"

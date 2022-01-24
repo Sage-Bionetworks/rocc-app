@@ -14,11 +14,10 @@ import {
   Organization,
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of, combineLatest } from 'rxjs';
 import { AuthService } from '@shared/auth/auth.service';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { of } from 'rxjs';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import assign from 'lodash-es/assign';
@@ -28,7 +27,6 @@ import {
   searchTermsFilterValues,
 } from './org-challenge-search-query';
 import { FilterComponent } from '@shared/filters/filter.component';
-import { combineLatest } from 'rxjs';
 import { distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';

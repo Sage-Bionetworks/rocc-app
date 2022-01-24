@@ -8,6 +8,4 @@ import { Organization } from '@sage-bionetworks/rocc-client-angular';
 })
 export class OrgOverviewComponent {
   @Input() org!: Organization;
-
-  constructor() {}
 }

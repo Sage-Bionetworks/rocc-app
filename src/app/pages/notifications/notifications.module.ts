@@ -5,9 +5,7 @@ import { FooterModule } from '@sage-bionetworks/sage-angular';
 import { MaterialModule } from '@shared/material/material.module';
 import { NotificationsComponent } from './notifications.component';
 
-const routes: Routes = [
-  { path: '', component: NotificationsComponent }
-];
+const routes: Routes = [{ path: '', component: NotificationsComponent }];
 
 @NgModule({
   declarations: [NotificationsComponent],
@@ -15,8 +13,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     FooterModule,
-    MaterialModule
+    MaterialModule,
   ],
-  exports: [NotificationsComponent]
+  exports: [NotificationsComponent],
 })
-export class NotificationsModule { }
+export class NotificationsModule {}

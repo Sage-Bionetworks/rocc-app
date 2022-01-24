@@ -19,12 +19,9 @@ export class SearchDropdownFilterComponent extends FilterComponent {
   @ViewChild(MultiSelect, { static: true }) select!: MultiSelect;
 
   activeValues!: FilterValue[];
-  constructor() {
-    super();
-  }
 
   getState(): FilterState {
-    this.activeValues = this.values.filter((value) => value.active == true);
+    this.activeValues = this.values.filter((value) => value.active === true);
     return {
       name: this.name,
       value: this.activeValues.map((value) => value.value),

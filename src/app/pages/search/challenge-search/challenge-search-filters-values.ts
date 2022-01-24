@@ -117,12 +117,12 @@ export const sortByFilterValues: FilterValue[] = [
 export const orderByFilterValues: FilterValue[] = [
   {
     value: '-createdAt',
-    title: `Newest challenges`,
+    title: 'Newest challenges',
     active: true,
   },
   {
     value: 'createdAt',
-    title: `Oldest challenges`,
+    title: 'Oldest challenges',
     active: false,
   },
 ];
@@ -158,17 +158,17 @@ export const previewTypeFilterValues: ButtonToggleFilterValue[] = [
 export const challengeStatusFilterValues: FilterValue[] = [
   {
     value: 'active',
-    title: `Active`,
+    title: 'Active',
     active: false,
   },
   {
     value: 'upcoming',
-    title: `Upcoming`,
+    title: 'Upcoming',
     active: false,
   },
   {
     value: 'completed',
-    title: `Completed`,
+    title: 'Completed',
     active: false,
   },
 ];
@@ -288,7 +288,7 @@ export const challengeSubmissionTypesFilterValues: FilterValue[] = [
 
 const inputDataTypes: FilterValue[] = [];
 
-rawInputDataTypes.map((datatype) => {
+rawInputDataTypes.forEach((datatype) => {
   const x = {
     value: datatype,
     title: titleCase(datatype, '-'),

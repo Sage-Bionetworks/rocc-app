@@ -10,9 +10,9 @@ import {
 import {
   ApiModule,
   Configuration,
-  ConfigurationParameters,
+  // ConfigurationParameters,
+  // BASE_PATH
 } from '@sage-bionetworks/rocc-client-angular';
-import { BASE_PATH } from '@sage-bionetworks/rocc-client-angular';
 import { FiltersModule } from '@shared/filters/filters.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';

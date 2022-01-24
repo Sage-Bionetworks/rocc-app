@@ -35,6 +35,7 @@ export class AppComponent implements OnInit, OnDestroy {
       icon: 'exit_to_app',
     },
   ];
+
   user!: User | undefined;
   private subscriptions: Subscription[] = [];
 

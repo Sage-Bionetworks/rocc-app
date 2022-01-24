@@ -9,6 +9,4 @@ import { Organization, User } from '@sage-bionetworks/rocc-client-angular';
 export class UserProfileOverviewComponent {
   @Input() user!: User;
   @Input() orgs: Organization[] = [];
-
-  constructor() {}
 }

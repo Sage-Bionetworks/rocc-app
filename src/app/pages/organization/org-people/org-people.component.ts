@@ -6,11 +6,10 @@ import {
   OrgMembershipService,
 } from '@sage-bionetworks/rocc-client-angular';
 import { OrgDataService } from '../org-data.service';
-import { forkJoin, Observable } from 'rxjs';
+import { forkJoin, Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { of } from 'rxjs';
 @Component({
   selector: 'rocc-org-people',
   templateUrl: './org-people.component.html',

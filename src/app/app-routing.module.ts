@@ -13,38 +13,44 @@ export const routes: Routes = [
   // },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about').then(m => m.AboutModule),
+    loadChildren: () => import('./pages/about').then((m) => m.AboutModule),
   },
   {
     path: 'search',
-    loadChildren: () => import('./pages/search').then(m => m.SearchModule)
+    loadChildren: () => import('./pages/search').then((m) => m.SearchModule),
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/signin').then(m => m.SigninModule)
+    loadChildren: () => import('./pages/signin').then((m) => m.SigninModule),
   },
   {
     path: 'signup',
-    loadChildren: () => import('./pages/signup').then(m => m.SignupModule)
+    loadChildren: () => import('./pages/signup').then((m) => m.SignupModule),
   },
   {
     path: 'new',
-    loadChildren: () => import('./pages/challenge/challenge-new').then(m => m.ChallengeNewModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./pages/challenge/challenge-new').then(
+        (m) => m.ChallengeNewModule
+      ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'notifications',
-    loadChildren: () => import('./pages/notifications').then(m => m.NotificationsModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./pages/notifications').then((m) => m.NotificationsModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'settings',
-    loadChildren: () => import('./pages/settings').then(m => m.SettingsModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./pages/settings').then((m) => m.SettingsModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'orgs',
-    loadChildren: () => import('./pages/organization').then(m => m.OrganizationModule)
+    loadChildren: () =>
+      import('./pages/organization').then((m) => m.OrganizationModule),
   },
   // {
   //   path: '404',
@@ -53,11 +59,12 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
+    loadChildren: () =>
+      import('./pages/homepage').then((m) => m.HomepageModule),
   },
   {
     path: ':login',
-    loadChildren: () => import('./pages/account').then(m => m.AccountModule),
+    loadChildren: () => import('./pages/account').then((m) => m.AccountModule),
   },
   // {
   //   path: ':username',
@@ -65,44 +72,41 @@ export const routes: Routes = [
   //   // canActivate: [CanActivateUser]
   // },
 
-
-
-//   {path: 'categories', redirectTo: '/components/categories'},
-//   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
-//   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
-//   {
-//     path: 'guides',
-//     loadChildren: () => import('./pages/guide-list').then(m => m.GuideListModule)
-//   },
+  //   {path: 'categories', redirectTo: '/components/categories'},
+  //   {path: 'cdk', pathMatch: 'full', redirectTo: '/cdk/categories'},
+  //   {path: 'components', pathMatch: 'full', redirectTo: '/components/categories'},
+  //   {
+  //     path: 'guides',
+  //     loadChildren: () => import('./pages/guide-list').then(m => m.GuideListModule)
+  //   },
   // Since https://github.com/angular/components/pull/9574, the cdk-table guide became the overview
   // document for the cdk table. To avoid any dead / broken links, we redirect to the new location.
-//   {path: 'guide/cdk-table', redirectTo: '/cdk/table/overview'},
-//   {
-//     path: 'guide/:id',
-//     loadChildren: () => import('./pages/guide-viewer').then(m => m.GuideViewerModule)
-//   },
+  //   {path: 'guide/cdk-table', redirectTo: '/cdk/table/overview'},
+  //   {
+  //     path: 'guide/:id',
+  //     loadChildren: () => import('./pages/guide-viewer').then(m => m.GuideViewerModule)
+  //   },
   // Needs to be defined before `:section` so it gets picked first when redirecting a missing page.
-//   {
-//     path: '404',
-//     loadChildren: () => import('./pages/not-found').then(m => m.NotFoundModule)
-//   },
-//   {
-//     path: ':section',
-//     canActivate: [CanActivateComponentSidenav],
-//     loadChildren: () =>
-//       import('./pages/component-sidenav/component-sidenav').then(m => m.ComponentSidenavModule)
-//   },
+  //   {
+  //     path: '404',
+  //     loadChildren: () => import('./pages/not-found').then(m => m.NotFoundModule)
+  //   },
+  //   {
+  //     path: ':section',
+  //     canActivate: [CanActivateComponentSidenav],
+  //     loadChildren: () =>
+  //       import('./pages/component-sidenav/component-sidenav').then(m => m.ComponentSidenavModule)
+  //   },
   {
-    path: '**', redirectTo: '/404'
-  }
+    path: '**',
+    redirectTo: '/404',
+  },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
+  imports: [RouterModule.forRoot(routes)],
   declarations: [],
   providers: [],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

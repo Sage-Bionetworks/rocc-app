@@ -35,10 +35,6 @@ export class DateRangeFilterComponent
     end: new FormControl(),
   });
 
-  constructor() {
-    super();
-  }
-
   ngOnInit(): void {
     // TODO: Add validation
     const startDateRange = this.values[0].value as DateRange;

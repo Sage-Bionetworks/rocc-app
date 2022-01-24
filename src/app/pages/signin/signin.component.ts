@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import { PageTitleService } from '@sage-bionetworks/sage-angular';
 import {
   // AuthService,
-  LocalAuthRequest,
+  // LocalAuthRequest,
   ModelError as RoccClientError,
 } from '@sage-bionetworks/rocc-client-angular';
 import { isRoccClientError } from '@shared/rocc-client-error';
@@ -28,6 +28,7 @@ export class SigninComponent implements OnInit, OnDestroy {
   errors = {
     other: undefined,
   } as { other?: string };
+
   submitted = false;
   private subscriptions: Subscription[] = [];
 
@@ -115,7 +116,7 @@ export class SigninComponent implements OnInit, OnDestroy {
         (err) => {
           const error = err.error as RoccClientError;
           if (isRoccClientError(error)) {
-            if (error.status == 409) {
+            if (error.status === 409) {
               this.username?.setErrors({
                 alreadyExists: true,
               });

@@ -22,7 +22,7 @@ export class UserAccountComponent implements OnInit, OnDestroy {
   orgs: Organization[] = [];
   tabs = TABS;
   tabKeys: string[] = Object.keys(this.tabs);
-  activeTab: Tab = this.tabs['overview'];
+  activeTab: Tab = this.tabs.overview;
   loggedIn = false;
   private subscriptions: Subscription[] = [];
 
