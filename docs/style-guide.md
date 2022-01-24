@@ -33,7 +33,7 @@ The workflow is the following:
   and the package [stage-lint], which lint only the files that have been staged
   for the sake of saving time.
 
-## MarkDown
+## Markdown
 
 - Lines must not be longer than 80 characters. To rewrap text, place your cursor
   in a paragraph or highlight multiple paragraph and press `ALT+Q` provided by
