@@ -17,20 +17,21 @@ The workflow is the following:
 ## Setup
 
 - VS Code invites you to install the recommended extensions, which include
-  `dbaeumer.vscode-eslint`. This extension is used in the VS Code workspace
-  settings file `settings.json` available in this repository.
+  `dbaeumer.vscode-eslint`. This extension shows style issues as you type
+  TypeScript/JavaScript code. This extension is specified in the VS Code
+  workspace settings file `settings.json` available in this repository.
 - This project uses [eslint] to validate TypeScript and JavaScript files. The
   configuration file of `eslint` is `.eslintrc.json`. The behavior of `eslint`
   can be extended using plugins and custom rules.
 - This project runs [prettier] via `eslint` for additional flexibility in
   validating files. The configuration of `prettier` is located in
   `.eslintrc.json`.
-- TypeScript and JavaScript files are automatically validated and the lint
-  issues fixed upon saving. This behavior is controled by the VS Code workspace
+- TypeScript and JavaScript files are automatically validated and their style is
+  fixed upon saving. This behavior is controled by the VS Code workspace
   settings file `.vscode/settings.json`.
 - Staged files are automatically validated before the creation of a commit. This
   is possible thanks to the package [husky], which manages the pre-commit hook,
-  and the package [stage-lint], which lint only the files that have been staged
+  and the package [stage-lint], which lints only the files that have been staged
   for the sake of saving time.
 
 ## Markdown
