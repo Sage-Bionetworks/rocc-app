@@ -10,7 +10,9 @@
 The workflow is the following:
 
 - VS Code shows immediately style issues when editing TypeScript files.
-- VS Code automatically fix style issues when saving files.
+- VS Code automatically fixes style issues when saving files.
+  - Manually lint all files with `npm run lint`.
+  - Manually fix all style issues with `npm run lint:fix`.
 - The style of staged files is validated upon creating a new commit.
 - The style of files pushed to GitHub is validated using a GitHub workflow.
 
