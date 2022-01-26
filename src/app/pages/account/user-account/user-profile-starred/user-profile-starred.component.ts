@@ -28,11 +28,13 @@ export class UserProfileStarredComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    const starsSub = this.userService
-      .listUserStarredChallenges(this.user.id)
-      .pipe(map((page) => page.challenges))
-      .subscribe((stars) => (this.stars = stars));
-    this.subscriptions.push(starsSub);
+    if (this.user) {
+      const starsSub = this.userService
+        .listUserStarredChallenges(this.user.id)
+        .pipe(map((page) => page.challenges))
+        .subscribe((stars) => (this.stars = stars));
+      this.subscriptions.push(starsSub);
+    }
   }
 
   ngOnDestroy(): void {

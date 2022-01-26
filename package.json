@@ -9,7 +9,7 @@
     "build:rocc-client-angular": "cd rocc-client-angular && npm ci --legacy-peer-deps && npm run build",
     "build:sage-angular": "cd sage-angular && npm ci && npm run build",
     "install:dependencies": "npm run build:rocc-client-angular && npm run build:sage-angular && npm ci --legacy-peer-deps",
-    "test": "jest --runInBand || true",
+    "test": "jest",
     "test:watch": "jest --runInBand --watch || true",
     "test:coverage": "jest --runInBand --coverage || true",
     "lint": "ng lint",

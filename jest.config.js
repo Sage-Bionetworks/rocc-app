@@ -6,6 +6,7 @@ module.exports = {
     '^src/(.*)$': '<rootDir>/src/$1',
     '^@app/(.*)$': '<rootDir>/src/app/$1',
     '^@shared/(.*)$': '<rootDir>/src/app/shared/$1',
+    '^@angular/(.*)$': '<rootDir>/node_modules/@angular/$1',
   },
   transformIgnorePatterns: ['node_modules/(?!lodash-es/.*|.*\\.mjs)'],
 };
