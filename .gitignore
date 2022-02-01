@@ -1,4 +1,5 @@
 # https://raw.githubusercontent.com/angular/angular-cli/master/.gitignore
+.angular/
 
 # Outputs
 bazel-*
