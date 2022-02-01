@@ -44,7 +44,10 @@
               "node_modules/primeng/resources/primeng.min.css"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/app/pages"]
+              "includePaths": [
+                "src/app/pages",
+                "node_modules/@sage-bionetworks"
+              ]
             },
             "scripts": [],
             "preserveSymlinks": true,

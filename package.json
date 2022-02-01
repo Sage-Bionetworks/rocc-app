@@ -7,8 +7,7 @@
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build --configuration production",
     "build:rocc-client-angular": "cd rocc-client-angular && npm ci --legacy-peer-deps && npm run build",
-    "build:sage-angular": "cd sage-angular && npm ci && npm run build",
-    "install:dependencies": "npm run build:rocc-client-angular && npm run build:sage-angular && npm ci --legacy-peer-deps",
+    "build:sage-angular": "cd sage-angular && npm ci --legacy-peer-deps && npm run build",
     "test": "ng test",
     "e2e": "ng e2e",
     "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/rocc-app/stats.json",
@@ -16,7 +15,8 @@
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' --fix",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "npm run build:rocc-client-angular && npm run build:sage-angular"
   },
   "engines": {
     "node": ">=14.16.1",

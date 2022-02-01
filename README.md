@@ -35,7 +35,7 @@ or more of the linked repositories.
        docker compose up --build
 
    - access the app on http://localhost:80 by default
-   - access the swagger UI on http://localhost:8080/api/v1
+   - access the swagger UI on http://localhost:80/api/v1/ui
 
 ### Running with Angular CLI
 
@@ -49,9 +49,9 @@ project root folder.
 
 2. Install the dependencies.
 
-       npm run install:dependencies
+       npm ci
 
-3. Start the [ROCC API service] on http://localhost:8080/api/v1
+3. Start the [ROCC API service] using Python on http://localhost:8080/api/v1
 
 4. Start the web client (uses Angular CLI).
 
@@ -65,9 +65,9 @@ The ROCC app is dependent on two linked repositories (a.k.a. submodules):
 * [sage-angular]
 
 When an update is pushed to one or more of the linked repository(ies), you
-will need to update those references on your end as well.  The steps are:
+will need to update those references on your end as well. The steps are:
 
-1. Pull the latest changes, which will also fetch the updates made to the 
+1. Pull the latest changes, which will also fetch the updates made to the
 configuration files for the linked repos.
 
        git checkout main
@@ -77,17 +77,12 @@ configuration files for the linked repos.
 
        git submodule update
 
-3. Re-build the appropriate client(s).
-
-       npm run build:rocc-client-angular
-       npm run build:sage-angular
-
-4. (optional) If new packages have been added to the client, those packages
+3. (optional) If new packages have been added to the client, those packages
 will need to be installed.
 
        npm ci
 
-5. To test, start the web client.
+4. To test, start the web client.
 
        npm start
 
@@ -175,7 +170,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the 
+To get more help on the Angular CLI use `ng help` or go check out the
 [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## License
