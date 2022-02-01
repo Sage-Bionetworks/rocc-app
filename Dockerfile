@@ -1,16 +1,17 @@
 # Build the Angular app
-FROM node:16.2.0-alpine3.12 as build
+FROM node:16.10.0-slim as build
 WORKDIR /app
 COPY rocc-client-angular rocc-client-angular/
 COPY sage-angular sage-angular/
 COPY src src/
 COPY angular.json package.json package-lock.json tsconfig.app.json \
     tsconfig.json tsconfig.spec.json .eslintrc.json ./
-RUN npm run install:dependencies \
-    && npm run build
+RUN npm install -g npm@8.4.0
+RUN npm ci
+RUN npm run build
 
 # Setup nginx
-FROM nginx:1.21.0-alpine
+FROM nginx:1.21.6-alpine
 COPY --from=build /app/dist/rocc-app /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/templates /etc/nginx/templates
