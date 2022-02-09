@@ -23,9 +23,21 @@
       "dom"
     ],
     "paths": {
-      "@app/*": ["./src/app/*"],
-      "@pages/*": ["./src/app/pages/*"],
-      "@shared/*": ["./src/app/shared/*"],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@pages/*": [
+        "./src/app/pages/*"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "rxjs": [
+        "node_modules/rxjs"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
+      ]
     },
   },
   "angularCompilerOptions": {
