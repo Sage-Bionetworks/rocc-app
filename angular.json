@@ -116,7 +116,10 @@
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/app/pages"]
+              "includePaths": [
+                "src/app/pages",
+                "node_modules/@sage-bionetworks"
+              ]
             },
             "scripts": []
           }
