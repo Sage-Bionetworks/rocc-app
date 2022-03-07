@@ -12,7 +12,7 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
 import { SortFilterComponent } from './sort-filter/sort-filter.component';
 import { SearchDropdownFilterComponent } from './search-dropdown-filter/search-dropdown-filter.component';
 import { PrimengModule } from '../primeng/primeng.module';
-import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
+// import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
 
 @NgModule({
   imports: [
@@ -22,7 +22,7 @@ import { AvatarModule } from '@sage-bionetworks/sage-angular/src/lib/avatar';
     RouterModule,
     MaterialModule,
     PrimengModule,
-    AvatarModule,
+    // AvatarModule,
   ],
   declarations: [
     ButtonToggleFilterComponent,

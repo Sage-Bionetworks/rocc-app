@@ -15,6 +15,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'challenges',
+        pathMatch: 'full',
       },
     ],
   },

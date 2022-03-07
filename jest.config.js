@@ -1,7 +1,13 @@
+// const { pathsToModuleNameMapper } = require('ts-jest');
+// const { compilerOptions } = require('./tsconfig');
 module.exports = {
   preset: 'jest-preset-angular',
-  roots: ['<rootDir>/src/'],
+  roots: [
+    '<rootDir>/src/app/shared/cards/challenge-card',
+    '<rootDir>/src/app/pages/search/challenge-search',
+  ],
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
+  testMatch: ['**/*.spec.ts'],
   moduleNameMapper: {
     '^src/(.*)$': '<rootDir>/src/$1',
     '^@app/(.*)$': '<rootDir>/src/app/$1',
@@ -14,11 +20,11 @@ module.exports = {
   },
   transformIgnorePatterns: ['node_modules/(?!lodash-es/.*|.*\\.mjs)'],
   moduleFileExtensions: ['ts', 'html', 'js', 'json', 'mjs'],
-  moduleDirectories: ['node_modules', 'src'],
-  collectCoverage: true,
-  coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
-  // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ['src/app/**/*.spec.ts'],
-  coverageReporters: ['text'],
+  moduleDirectories: ['node_modules'],
+  // collectCoverage: true,
+  // coverageDirectory: 'coverage',
+  // // coveragePathIgnorePatterns: ,
+  // // An array of glob patterns indicating a set of files for which coverage information should be collected
+  // collectCoverageFrom: ['src/**/*.spec.ts', '!**/node_modules/**'],
+  // coverageReporters: ['text'],
 };
