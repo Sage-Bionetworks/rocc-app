@@ -32,7 +32,7 @@ import {
 } from './challenge-search-filters-values';
 import { FilterComponent } from '@shared/filters/filter.component';
 import { combineLatest, BehaviorSubject, Observable } from 'rxjs';
-import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
+import { distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 import flow from 'lodash/fp/flow';
 import keyBy from 'lodash/fp/keyBy';
 import mapValues from 'lodash/fp/mapValues';
@@ -176,7 +176,7 @@ export class ChallengeSearchComponent
 
     this.query
       .pipe(
-        tap((query) => console.log('List challenges', query)),
+        // tap((query) => console.log('List challenges', query)),
         switchMap((query) =>
           this.challengeService.listChallenges(
             query.limit,

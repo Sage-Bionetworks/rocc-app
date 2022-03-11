@@ -38,38 +38,39 @@ export class ChallengeCardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.platform$ = this.challengePlatformService.getChallengePlatform(
-      this.challenge.platformId!
-    );
+    if (this.challenge) {
+      this.platform$ = this.challengePlatformService.getChallengePlatform(
+        this.challenge.platformId!
+      );
 
-    this.challengeService
-      .listChallengeStargazers(
-        this.challenge.fullName.split('/')[0],
-        this.challenge.name,
-        100
-      )
-      .subscribe((page) => (this.numberStarred = page.totalResults));
-
-    this.userService
-      .isStarredChallenge(
-        this.challenge.fullName.split('/')[0],
-        this.challenge.name
-      )
-      .pipe(
-        mapTo(true),
-        catchError((err) => {
-          const error = err.error as RoccClientError;
-          if (isRoccClientError(error)) {
-            if (error.status === 404) {
-              return of(false);
+      this.challengeService
+        .listChallengeStargazers(
+          this.challenge.fullName.split('/')[0],
+          this.challenge.name,
+          100
+        )
+        .subscribe((page) => (this.numberStarred = page.totalResults));
+      this.userService
+        .isStarredChallenge(
+          this.challenge.fullName.split('/')[0],
+          this.challenge.name
+        )
+        .pipe(
+          mapTo(true),
+          catchError((err) => {
+            const error = err.error as RoccClientError;
+            if (isRoccClientError(error)) {
+              if (error.status === 404) {
+                return of(false);
+              }
             }
-          }
-          throwError(err);
-          return of(false);
-        }),
-        tap((starred: boolean) => (this.starred = starred))
-      )
-      .subscribe();
+            throwError(err);
+            return of(false);
+          }),
+          tap((starred: boolean) => (this.starred = starred))
+        )
+        .subscribe();
+    }
   }
 
   toggleStar(event: Event): void {
